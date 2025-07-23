@@ -21,13 +21,13 @@ If you have any questions, please get in touch with us at cncf-tag-contributor-s
 **Note**: This document is open source. If we missed anything, please submit a pull request or issue so we can update it — thank you! 
 
 <div class="section-group">
-{{% blocks/section color="gray-300" %}}
+<!-- {{% blocks/section color="gray-300" %}} -->
   <h3>Get your Accessbile Conference Checklist</h3>
   <p>To make it really easy, we've captured everything in this document in an event checklist.</p>
     <a class="cncf-button-primary" href="https://docs.google.com/spreadsheets/d/1lC1woVTu8YNWykCJ2FwBgy3aJEWbVUP0cZT3-Nw1hj0/edit#gid=0">
     Download Checklist
     </a>
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 </div>
 
 ## General information
@@ -109,7 +109,7 @@ Captions at the bottom of the screen are not visible unless attendees are sittin
 
 Not everyone feels comfortable sitting at the front, but captions are only visible from the front. This goes back to the "please add captions at the top" recommendation. 
 
-<img width="906" alt="Captions on top vs bottom of screen" src="https://github.com/cncf/tag-contributor-strategy/assets/74001907/b8a08ec0-162b-4465-84d5-a082ed078154">
+![Captions on top vs bottom of screen](https://github.com/cncf/tag-contributor-strategy/assets/74001907/b8a08ec0-162b-4465-84d5-a082ed078154)
 
 *Captions at the top of the screen vs. captions at the bottom are truly accessible.*
 

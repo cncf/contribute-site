@@ -4,28 +4,28 @@ linkTitle: Governance
 url: /about/governance/
 ---
 
-{{% blocks/lead color="primary" align="left" %}}
+<!-- {{% blocks/lead color="primary" align="left" %}} -->
 
 Want to implement good open source governance? We can assist you with best practices, resources, and guidance on how!
 
 Read our [Charter](https://github.com/cncf/tag-contributor-strategy/blob/main/governance/README.md)
 
-{{% /blocks/lead %}}
+<!-- {{% /blocks/lead %}} -->
 
 <div class="section-group">
 
-{{% blocks/section color="dark" %}}
+<!-- {{% blocks/section color="dark" %}} -->
 
 The Governance Working Group assists CNCF projects with implementing good open source governance practices.
 
 We provide best practices and resources for managing and interacting with contributors to CNCF projects.
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 
 <div class="section-group">
 
-{{% blocks/section color="secondary" %}}
+<!-- {{% blocks/section color="secondary" %}} -->
 
 ## Goals
 
@@ -37,12 +37,12 @@ We provide best practices and resources for managing and interacting with contri
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 
 <div class="section-group">
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
 ## How your community can benefit
 
@@ -54,11 +54,11 @@ We provide best practices and resources for managing and interacting with contri
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 </div>
 
 <div class="section-group">
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
 ## How you can contribute
 
@@ -72,16 +72,16 @@ We are happy to see that you are interested in helping with this working group. 
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 </div>
 
 <div class="section-group">
 
 ## Get involved
 
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
-{{% blocks/feature title="Meetings" icon="fas fa-video" %}}
+<!-- {{% blocks/feature title="Meetings" icon="fas fa-video" %}} -->
 
 <div>
 
@@ -91,27 +91,27 @@ View our [calendar](https://tockify.com/cncf.public.events/monthly?search=Govern
 <a href="https://zoom.us/my/cncftagcontributorstrategy?pwd=TnI0WU9Eb2I1RlRWdkl1R0k1WkZXUT09">Meeting Link</a>
 
 </div>
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{% blocks/feature icon="fas fa-envelope" title="Mailing List"
+<!-- {{% blocks/feature icon="fas fa-envelope" title="Mailing List"
 url="https://lists.cncf.io/g/cncf-tag-contributor-strategy" url_text="Sign Up"
-%}}
+%}} -->
 Keep up-to-date on governance guides and templates.
 
-{{% /blocks/feature %}}
-{{< /blocks/section >}}
+<!-- {{% /blocks/feature %}} -->
+<!-- {{< /blocks/section >}} -->
 
-{{< blocks/section color="gray-300" >}}
+<!-- {{< blocks/section color="gray-300" >}} -->
 
-{{% blocks/feature title="Slack" icon="fab fa-slack" %}}
+<!-- {{% blocks/feature title="Slack" icon="fab fa-slack" %}} -->
 Reach out for any immediate matters at [#tag-contributor-strategy](https://cloud-native.slack.com/archives/CT6CWS1JN) on [CNCF Slack](https://slack.cncf.io)
 
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{% blocks/feature icon="fas fa-info" title="Find out more" %}}
+<!-- {{% blocks/feature icon="fas fa-info" title="Find out more" %}} -->
 More resources are available on our [Charter Document](https://github.com/cncf/tag-contributor-strategy/blob/main/governance/README.md), [Governance Guide](/maintainers/governance/) and [Governance Templates](/maintainers/templates/governance-intro/).
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{< /blocks/section >}}
+<!-- {{< /blocks/section >}} -->
 
 </div>

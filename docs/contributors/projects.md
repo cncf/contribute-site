@@ -13,18 +13,18 @@ All projects of the Cloud Native Computing Foundation are classified with one of
 Graduated Projects
 ------------------
 
-{{< projects-details level="graduated" >}}
+<!-- {{< projects-details level="graduated" >}} -->
 
 
 Incubating Projects
 -------------------
 
-{{< projects-details level="incubating" >}}
+<!-- {{< projects-details level="incubating" >}} -->
 
 Sandbox Projects
 -------------------
 
-{{< projects-details level="sandbox" >}}
+<!-- {{< projects-details level="sandbox" >}} -->
 
 
 Non-code Projects
@@ -42,4 +42,4 @@ Non-code Projects
 Archived Projects
 -----------------
 
-{{< projects-details level="archived" >}}
+<!-- {{< projects-details level="archived" >}} -->

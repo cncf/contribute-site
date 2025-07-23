@@ -4,15 +4,15 @@ linkTitle: "Maintainers Circle"
 url: /about/maintainers-circle
 ---
 
-{{% blocks/lead color="primary" align="left" %}}
+<!-- {{% blocks/lead color="primary" align="left" %}} -->
 
 Connect with other maintainers, share best practices, commiserate and grow.
 
-{{% /blocks/lead %}}
+<!-- {{% /blocks/lead %}} -->
 
 <div class="section-group">
 
-{{% blocks/section color="dark" %}}
+<!-- {{% blocks/section color="dark" %}} -->
 
 Once a month, we welcome you to a maintainers circle: a peer group that will
 meet with scheduled topics, ample discussion, and networking time for fellow
@@ -27,12 +27,12 @@ Conduct, be kind, open as you'd like, and committed to hearing others out.
 Everyone will have a chance to participate in whatever activity is set forth in
 that meeting.
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 <div class="section-group">
 
-{{% blocks/section color="secondary" %}}
+<!-- {{% blocks/section color="secondary" %}} -->
 
 ## Goals
 
@@ -42,12 +42,12 @@ that meeting.
 - Participate in peer coaching and seek guidance
 - Highlight successes
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 <div class="section-group">
 
-{{% blocks/section color="white" %}}
+<!-- {{% blocks/section color="white" %}} -->
 ## Who is a maintainer?
 
 <div class="text-left">
@@ -73,32 +73,32 @@ on behalf of their project in TOC elections. Some projects have more maintainer
 roles than this and the Circle welcomes all decision makers.
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 <div class="section-group">
 
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
-{{% blocks/feature title="Meetings" icon="fas fa-video" %}}
+<!-- {{% blocks/feature title="Meetings" icon="fas fa-video" %}} -->
 
 <div class="text-left">
     Meetings are scheduled ad-hoc when we have a topic and speaker.
     Join the our <a href="https://lists.cncf.io/g/cncf-tag-contributor-strategy">mailing list</a> or our #maintainers-circle channel in the CNCF Slack to be notified of the next event.
 
 </div>
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{% blocks/feature title="Slack" icon="fab fa-slack" %}}
+<!-- {{% blocks/feature title="Slack" icon="fab fa-slack" %}} -->
 [#maintainers-circle](https://cloud-native.slack.com/archives/C014YQ8CDCG) on [CNCF Slack](https://slack.cncf.io)
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{< /blocks/section >}}
+<!-- {{< /blocks/section >}} -->
 
 </div>
 <div class="section-group">
 
-{{% blocks/section color="secondary" %}}
+<!-- {{% blocks/section color="secondary" %}} -->
 
 ## Schedule
 
@@ -107,12 +107,12 @@ roles than this and the Circle welcomes all decision makers.
     visit the <a href="https://github.com/cncf/tag-contributor-strategy/blob/main/maintainers-circle/README.md#what">Maintainer's Circle README</a>.
 
 </div>
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 <div class="section-group">
 
-{{% blocks/section color="white" %}}
+<!-- {{% blocks/section color="white" %}} -->
 ### General Circle Structure
 
 <div class="text-left">
@@ -129,6 +129,6 @@ share with the group, reach out to us on slack directly
 [#tag-contributor-strategy](https://cloud-native.slack.com/archives/CT6CWS1JN).
 
 </div>
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>

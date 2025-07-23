@@ -4,27 +4,27 @@ linkTitle: "Deaf & Hard of Hearing"
 url: /about/deaf-and-hard-of-hearing
 ---
 
-{{% blocks/lead color="primary" align="left" %}}
+<!-- {{% blocks/lead color="primary" align="left" %}} -->
 
 Want to help empower deaf and hard of hearing individuals? Join our effort!
 
 Read our [Charter](https://github.com/cncf/tag-contributor-strategy/tree/main/deaf-and-hard-of-hearing)
 
-{{% /blocks/lead %}}
+<!-- {{% /blocks/lead %}} -->
 
 <div class="section-group">
 
-{{% blocks/section color="dark" %}}
+<!-- {{% blocks/section color="dark" %}} -->
 
 The CNCF Deaf and Hard of Hearing (deaf/hoh) working group aims to empower and include individuals who are deaf or hard of hearing in the cloud native and open source communities.
 Our group's mission is to create a supportive and inclusive environment within the cloud native and open source community.
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 <div class="section-group">
 
-{{% blocks/section color="secondary" %}}
+<!-- {{% blocks/section color="secondary" %}} -->
 
 ## Goals
 
@@ -37,12 +37,12 @@ Our group's mission is to create a supportive and inclusive environment within t
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 <div class="section-group">
 
-{{% blocks/section color="white" %}}
+<!-- {{% blocks/section color="white" %}} -->
 
 ## Benefits
 
@@ -71,11 +71,11 @@ You may find resources of our working group [here](/accessibility/).
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 </div>
 
 <div class="section-group">
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
 ## How you can contribute
 
@@ -89,7 +89,7 @@ We are happy to see that you are interested in helping with this working group. 
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 </div>
 
 
@@ -97,9 +97,9 @@ We are happy to see that you are interested in helping with this working group. 
 
 ## Get involved
 
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
-{{% blocks/feature title="Meetings" icon="fas fa-video" %}}
+<!-- {{% blocks/feature title="Meetings" icon="fas fa-video" %}} -->
 
 <div>
 
@@ -107,13 +107,13 @@ View our [calendar](https://tockify.com/cncf.public.events/monthly?search=deaf%2
 
 </div>
 
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{% blocks/feature title="Slack" icon="fab fa-slack" %}}
+<!-- {{% blocks/feature title="Slack" icon="fab fa-slack" %}} -->
 Reach out for any immediate matters at [#deaf-and-hard-of-hearing](https://cloud-native.slack.com/archives/C05BYNK8A3V) on [CNCF Slack](https://slack.cncf.io)
 
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{< /blocks/section >}}
+<!-- {{< /blocks/section >}} -->
 
 </div>

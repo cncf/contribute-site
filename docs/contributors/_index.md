@@ -71,15 +71,15 @@ The Cloud Native Computing Foundation projects are listed below with information
 
 ## Graduated Projects
 
-{{< projects level="graduated" >}}
+<!-- {{< projects level="graduated" >}} -->
 
 ## Incubating Projects
 
-{{< projects level="incubating" >}}
+<!-- {{< projects level="incubating" >}} -->
 
 ## Sandbox Projects
 
-{{< projects level="sandbox" >}}
+<!-- {{< projects level="sandbox" >}} -->
 
 
 ## Non-code Projects

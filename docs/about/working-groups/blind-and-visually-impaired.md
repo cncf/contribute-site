@@ -4,27 +4,27 @@ linkTitle: "Blind and Visually Impaired"
 url: /about/blind-and-visually-impaired
 ---
 
-{{% blocks/lead color="primary" align="left" %}}
+<!-- {{% blocks/lead color="primary" align="left" %}} -->
 
 Want to help empower blind or visually impaired individuals? Join our effort!
 
 Read our [Charter](https://github.com/cncf/tag-contributor-strategy/tree/main/blind-and-visually-impaired)
 
-{{% /blocks/lead %}}
+<!-- {{% /blocks/lead %}} -->
 
 <div class="section-group">
 
-{{% blocks/section color="dark" %}}
+<!-- {{% blocks/section color="dark" %}} -->
 
 The CNCF Blind and Visually Impaired (BVI) initiative aims to empower individuals who are blind or visually impaired in the cloud native and open source communities.
 Our group's mission is to create a supportive environment within the cloud native and open source community.
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 <div class="section-group">
 
-{{% blocks/section color="secondary" %}}
+<!-- {{% blocks/section color="secondary" %}} -->
 
 ## Goals
 
@@ -37,12 +37,12 @@ Our group's mission is to create a supportive environment within the cloud nativ
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 <div class="section-group">
 
-{{% blocks/section color="white" %}}
+<!-- {{% blocks/section color="white" %}} -->
 
 ## Benefits
 
@@ -71,12 +71,12 @@ You may find resources of our working group [here](/accessibility/).
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 
 <div class="section-group">
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
 ## How you can contribute
 
@@ -90,7 +90,7 @@ We are happy to see that you are interested in helping with this working group. 
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 
@@ -98,9 +98,9 @@ We are happy to see that you are interested in helping with this working group. 
 
 ## Get involved
 
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
-{{% blocks/feature title="Meetings" icon="fas fa-video" %}}
+<!-- {{% blocks/feature title="Meetings" icon="fas fa-video" %}} -->
 
 <div>
 
@@ -108,13 +108,13 @@ View our [calendar](https://tockify.com/cncf.public.events/monthly?search=blind%
 
 </div>
 
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{% blocks/feature title="Slack" icon="fab fa-slack" %}}
+<!-- {{% blocks/feature title="Slack" icon="fab fa-slack" %}} -->
 Reach out for any immediate matters at [#blind-and-visually-impaired](https://cloud-native.slack.com/archives/C07CPG6AFC7) on [CNCF Slack](https://slack.cncf.io)
 
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{< /blocks/section >}}
+<!-- {{< /blocks/section >}} -->
 
 </div>

@@ -4,26 +4,26 @@ linkTitle: "Mentoring"
 url: /about/mentoring
 ---
 
-{{% blocks/lead color="primary" align="left" %}}
+<!-- {{% blocks/lead color="primary" align="left" %}} -->
 
 Want to help new contributors get started? We participate in and run several mentorship programs!
 
 Read our [Charter](https://github.com/cncf/tag-contributor-strategy/blob/main/mentoring/README.md)
 
-{{% /blocks/lead %}}
+<!-- {{% /blocks/lead %}} -->
 
 <div class="section-group">
 
-{{% blocks/section color="dark" %}}
+<!-- {{% blocks/section color="dark" %}} -->
 
 Mentoring Working Group is a group of people who focus on mentorship initiatives to encourage the adoption of cloud native computing. Our mission is to provide opportunities for new contributors to work on CNCF projects with experienced mentorship, which helps promote project growth and sustainability. We also offer support and advice to CNCF projects around mentorship initiatives.
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 <div class="section-group">
 
-{{% blocks/section color="secondary" %}}
+<!-- {{% blocks/section color="secondary" %}} -->
 
 ## Goals
 
@@ -39,12 +39,12 @@ Mentoring Working Group is a group of people who focus on mentorship initiatives
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 
 </div>
 <div class="section-group">
 
-{{% blocks/section color="white" %}}
+<!-- {{% blocks/section color="white" %}} -->
 
 ## Mentoring Programs
 
@@ -57,11 +57,11 @@ Mentoring WG manages the following mentorship initiatives:
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 </div>
 
 <div class="section-group">
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
 ## How your community can benefit
 
@@ -78,11 +78,11 @@ You may find links to resources in our [repository](https://github.com/cncf/tag-
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 </div>
 
 <div class="section-group">
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
 ## How you can contribute
 
@@ -97,7 +97,7 @@ We are happy to see that you are interested in helping with this working group. 
 
 </div>
 
-{{% /blocks/section %}}
+<!-- {{% /blocks/section %}} -->
 </div>
 
 
@@ -105,49 +105,49 @@ We are happy to see that you are interested in helping with this working group. 
 
 ## Get involved
 
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
-{{% blocks/feature title="Meetings" icon="fas fa-video" %}}
+<!-- {{% blocks/feature title="Meetings" icon="fas fa-video" %}} -->
 
 <div>
 
 View our [calendar](https://tockify.com/cncf.public.events/monthly?search=CNCF%20TAG%20Contributor%20Strategy%20Mentoring%20WG) to see when we meet next.
 
 </div>
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{% blocks/feature icon="fas fa-envelope" title="Mailing List"
+<!-- {{% blocks/feature icon="fas fa-envelope" title="Mailing List"
 url="https://lists.cncf.io/g/tag-cs-mentoring-wg/" url_text="Sign Up"
-%}}
+%}} -->
 Keep up-to-date on mentoring programs we manage.
 
-{{% /blocks/feature %}}
-{{< /blocks/section >}}
+<!-- {{% /blocks/feature %}} -->
+<!-- {{< /blocks/section >}} -->
 
-{{< blocks/section color="gray-300" >}}
+<!-- {{< blocks/section color="gray-300" >}} -->
 
-{{% blocks/feature icon="fas fa-comments" title="Discuss" url="https://github.com/cncf/mentoring/discussions" url_text="Start a discussion"
-%}}
+<!-- {{% blocks/feature icon="fas fa-comments" title="Discuss" url="https://github.com/cncf/mentoring/discussions" url_text="Start a discussion"
+%}} -->
 
 Have a look at existing discussions or start a new one on our discussion board.
 
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{% blocks/feature title="Slack" icon="fab fa-slack" %}}
+<!-- {{% blocks/feature title="Slack" icon="fab fa-slack" %}} -->
 Reach out for any immediate matters at [#mentoring](https://cloud-native.slack.com/archives/CGPK98JNQ) on [CNCF Slack](https://slack.cncf.io)
 
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{< /blocks/section >}}
+<!-- {{< /blocks/section >}} -->
 
-{{< blocks/section color="primary" >}}
+<!-- {{< blocks/section color="primary" >}} -->
 
-{{% blocks/feature icon="fas fa-info" title="Find out more"
+<!-- {{% blocks/feature icon="fas fa-info" title="Find out more"
 url="https://github.com/cncf/mentoring" url_text="More information"
-%}}
+%}} -->
 More resources are available on our [GitHub repository](https://github.com/cncf/mentoring).
-{{% /blocks/feature %}}
+<!-- {{% /blocks/feature %}} -->
 
-{{< /blocks/section >}}
+<!-- {{< /blocks/section >}} -->
 
 </div>
