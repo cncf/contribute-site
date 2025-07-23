@@ -18,7 +18,7 @@ Projects are welcome to use their own tools in the CNCF, we are a strong support
 
 ### I have a project I want to donate to the CNCF
 
-Awesome! To contribute your project to CNCF or discuss how CNCF can help your project, email <info@cncf.io> and read the [TOC repo](https://github.com/cncf/toc#projects) for further information. 
+Awesome! To contribute your project to CNCF or discuss how CNCF can help your project, email info@cncf.io and read the [TOC repo](https://github.com/cncf/toc#projects) for further information. 
 
 ### Is there an SLA for Service Desk issues?
 
@@ -30,18 +30,18 @@ The CNCF doesn't set a fixed amount of budget for each project and will work wit
 
 ### How do I file a security CVE as a project?
 
-GitHub has also recently improved the ability to do security disclosures and generate CVEs, we recommend projects use this: <https://help.github.com/en/github/managing-security-vulnerabilities/about-github-security-advisories#cve-identification-numbers> - As a backup, you can submit a CVE using the MITRE CVE submission form: <https://cve.mitre.org/cve/request_id.html> (The CNCF is currently not a CNA).
+GitHub has also recently improved the ability to do security disclosures and generate CVEs, we recommend projects use this: https://help.github.com/en/github/managing-security-vulnerabilities/about-github-security-advisories#cve-identification-numbers - As a backup, you can submit a CVE using the MITRE CVE submission form: https://cve.mitre.org/cve/request_id.html (The CNCF is currently not a CNA).
 
 ### How do I create a security disclosure process, e.g., SECURITY.MD file?
 
 It is recommended that CNCF projects create a security disclosure process to make it easier for adopters to report issues.
 
 There is no one set way, you can look at other CNCF projects for examples:
-<https://github.com/envoyproxy/envoy/blob/main/SECURITY.md>
-<https://github.com/etcd-io/etcd/blob/main/security/README.md>
+- https://github.com/envoyproxy/envoy/blob/main/SECURITY.md
+- https://github.com/etcd-io/etcd/blob/main/security/README.md
 
 Google has also put together a set of templates that may be useful:
-<https://github.com/google/oss-vulnerability-guide>
+- https://github.com/google/oss-vulnerability-guide
 
 ### How do I share credentials, passwords, or other confidential information?
 
@@ -71,10 +71,10 @@ NOTE: To have your application processed correctly by Docker, please explicitly 
 
 Each CNCF project can decide on its own how to manage GitHub invites and teams. Some are small enough and just do it manually, others use automated systems like these:
 
-- <https://github.com/kubernetes/org>
-- <https://github.com/cilium/team-manager>
-- <https://github.com/apps/settings>
-- <https://github.com/github/safe-settings>
+- https://github.com/kubernetes/org
+- https://github.com/cilium/team-manager
+- https://github.com/apps/settings
+- https://github.com/github/safe-settings
 
 ### My builds are slow, I would like to have expanded capacity for GitHub Actions, what can I do?
 
@@ -82,7 +82,7 @@ The CNCF has a special partnership with GitHub, please file a [Service Desk](htt
 
 ### I don't have a Service Desk account
 
-If you are a maintainer, head to the [Service Desk](https://cncfservicedesk.atlassian.net/servicedesk/customer/portal/1/user/login) website and try to log in, if you can't find an account, email <info@cncf.io> and one will be created for you.
+If you are a maintainer, head to the [Service Desk](https://cncfservicedesk.atlassian.net/servicedesk/customer/portal/1/user/login) website and try to log in, if you can't find an account, email info@cncf.io and one will be created for you.
 
 #### I am a Kubernetes SIG chair and I don't have a Service Desk account
 
@@ -90,7 +90,7 @@ The CNCF Service Desk policy for the Kubernetes community is defined at [Kuberne
 
 ### I changed my email and lost my Service Desk access. What can I do to get it back?
 
-Email <info@cncf.io> and one will be created for you.
+Email info@cncf.io and one will be created for you.
 
 ### I am not happy with the level of service from CNCF staff, what can I do to escalate?
 
