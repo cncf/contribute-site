@@ -16,7 +16,7 @@ Security Guidelines for New Projects aims to provide recommendations for new pro
 4. Incident management
 5. Badging
 
-![](../images/SecurityGuidelines.png)
+![Security guidelines](/img/maintainers/SecurityGuidelines.png)
 
 **Figure 1**. An overview of security guidelines for new projects
 
