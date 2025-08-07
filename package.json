@@ -51,7 +51,6 @@
   "author": "CNCF",
   "license": "CC-BY-4.0",
   "dependencies": {
-    "@algolia/autocomplete-js": "^1.7.3",
     "@docusaurus/core": "3.8.1",
     "@docusaurus/preset-classic": "3.8.1",
     "@mdx-js/react": "^3.1.0",
