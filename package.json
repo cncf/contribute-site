@@ -50,7 +50,7 @@
   },
   "author": "CNCF",
   "license": "CC-BY-4.0",
-  "dependencies": {
+"dependencies": {
     "@docusaurus/core": "3.8.1",
     "@docusaurus/preset-classic": "3.8.1",
     "@mdx-js/react": "^3.1.0",
@@ -58,7 +58,7 @@
     "docusaurus-plugin-search-local": "^2.1.2",
     "prism-react-renderer": "^2.4.1",
     "react-dom": "^19.1.0",
-    "react": "^19.1.0"    
+    "react": "^19.1.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.8.1",
