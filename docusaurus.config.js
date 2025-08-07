@@ -174,6 +174,10 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+  plugins: [
+    require.resolve('docusaurus-plugin-search-local'),
+  ],
+
   scripts: [
     {
       src: 'https://www.cncf.io/wp-content/themes/cncf-twenty-two/source/js/on-demand/hello-bar-embed.js',
