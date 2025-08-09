@@ -81,39 +81,39 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'contributorsSidebar',
-            position: 'left',
-            label: 'New Contributors',
-          },
-          {
-            type: 'docSidebar',
             sidebarId: 'maintainersSidebar',
             position: 'left',
             label: 'Maintainers'
           },
-          {
+            {
             type: 'docSidebar',
             sidebarId: 'projectsSidebar',
             position: 'left',
             label: 'Projects'
           },
-//          {
-//            type: 'docSidebar',
-//            sidebarId: 'communitySidebar',
-//            position: 'left',
-//            label: 'Community'
-//          },
+            {
+           type: 'docSidebar',
+           sidebarId: 'communitySidebar',
+           position: 'left',
+           label: 'Community'
+         },
           {
             type: 'docSidebar',
             sidebarId: 'resourcesSidebar',
             position: 'left',
             label: 'Resources'
           },
-                    {
+           {
             type: 'docSidebar',
             sidebarId: 'eventsSidebar',
             position: 'left',
             label: 'Events'
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'contributorsSidebar',
+            position: 'left',
+            label: 'New Contributors',
           },
           {to: '/blog', label: 'Blog', position: 'right'}
         ],
