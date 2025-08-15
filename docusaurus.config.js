@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -44,8 +44,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl:
-            'https://github.com/cncf/contribute-site/tree/main',
+          editUrl: 'https://github.com/cncf/contribute-site/tree/main',
         },
         blog: {
           showReadingTime: true,
@@ -53,8 +52,7 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl:
-            'https://github.com/cncf/contribute-site/tree/main/',
+          editUrl: 'https://github.com/cncf/contribute-site/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -79,43 +77,46 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'contributorsSidebar',
-            position: 'left',
-            label: 'New Contributors',
-          },
+          // Left
           {
             type: 'docSidebar',
             sidebarId: 'maintainersSidebar',
             position: 'left',
-            label: 'Maintainers'
+            label: 'Maintainers',
           },
           {
             type: 'docSidebar',
             sidebarId: 'projectsSidebar',
             position: 'left',
-            label: 'Projects'
+            label: 'Projects',
           },
-//          {
-//            type: 'docSidebar',
-//            sidebarId: 'communitySidebar',
-//            position: 'left',
-//            label: 'Community'
-//          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'communitySidebar',
+            position: 'left',
+            label: 'Community',
+          },
+
+          // Right
+          {
+            type: 'docSidebar',
+            sidebarId: 'contributorsSidebar',
+            position: 'right',
+            label: 'New Contributors',
+          },
           {
             type: 'docSidebar',
             sidebarId: 'resourcesSidebar',
-            position: 'left',
-            label: 'Resources'
+            position: 'right',
+            label: 'Resources',
           },
-                    {
+          {
             type: 'docSidebar',
             sidebarId: 'eventsSidebar',
-            position: 'left',
-            label: 'Events'
+            position: 'right',
+            label: 'Events',
           },
-          {to: '/blog', label: 'Blog', position: 'right'}
+          { to: '/blog', label: 'Blog', position: 'right' },
         ],
       },
       footer: {
@@ -174,9 +175,7 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-  plugins: [
-    require.resolve('docusaurus-plugin-search-local'),
-  ],
+  plugins: [require.resolve('docusaurus-plugin-search-local')],
 
   scripts: [
     {
