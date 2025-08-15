@@ -13,7 +13,7 @@ Most services can be requested through a Service Desk ticket, unless otherwise n
 - [Zoom](https://zoom.us/) video conferencing Pro accounts for video meetings, recordings, and scheduling.
 - [LastPass](https://www.lastpass.com/), [1Password](https://github.com/1Password/1password-teams-open-source), and [Keybase](https://keybase.io) to manage access to shared secrets.
 - [Netlify](https://netlify.com) for website hosting, DNS management, and improved workflow/automation around documentation and websites.
-- [Discourse](https://www.discourse.org/) for community discussion (e.g., <https://discuss.kubernetes.io>)
+- [Discourse](https://www.discourse.org/) for community discussion (e.g., https://discuss.kubernetes.io)
 - [Slack](https://slack.com) for communication for all projects in the Cloud Native Computing Foundation Slack.
 - [FOSSA](https://fossa.io) for license and security scanning.
 - [Snyk](https://snyk.io) for container image scanning.
