@@ -130,7 +130,7 @@ const config = {
           { to: '/blog', label: 'Blog', position: 'right' },
           {
             type: 'localeDropdown',
-            position: 'left',
+            position: 'right',
           },
         ],
       },
