@@ -1,8 +1,4 @@
 ---
-title: Do you want to start contributing to open source and need help figuring out where to begin?
-sidebar_position: 1
----
-=======
 id: getting-started
 title: Start Contributing to Open Source
 description: "Do you want to start contributing to open source and need help figuring out where to begin?"

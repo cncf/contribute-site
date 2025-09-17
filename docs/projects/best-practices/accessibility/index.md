@@ -1,9 +1,5 @@
 ---
-title: Cloud Native Accessibility
-linkTitle: "Accessibility"
-menu:
-  main:
-    weight: 50
+title: Accessibility
 ---
 
 ## Welcome to the Cloud Native Accessibility Initiative

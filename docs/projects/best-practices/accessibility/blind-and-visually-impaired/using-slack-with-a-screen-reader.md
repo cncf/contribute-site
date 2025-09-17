@@ -1,8 +1,6 @@
 ---
 title: "Using Slack With a Screen Reader"
-date: 2025-06-31
-description: >
-  Tips to help screen reader users use the Slack messaging application
+description: Tips to help screen reader users use the Slack messaging application
 ---
 
 The [Slack screen reader web page](https://slack.com/intl/en-in/help/articles/360000411963-Use-Slack-with-a-screen-reader) provides a good introduction to Slack concepts and walks through navigating, replying to, and adding a reaction to messages and screen reader-specific preferences in the Slack application.

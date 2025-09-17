@@ -1,9 +1,6 @@
 ---
 title: "Recruiting Playbook"
-date: 2020-12-02
-draft: true
-description: >
-  How to recruit more contributors to your project.
+description: How to recruit more contributors to your project
 ---
 
 ## Recruiting Contributors

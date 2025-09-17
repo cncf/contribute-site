@@ -11,22 +11,6 @@ All projects of the Cloud Native Computing Foundation are classified with one of
 
 ---
 
-Graduated Projects
-------------------
-
-<!-- {{< projects-details level="graduated" >}} -->
-
-
-Incubating Projects
--------------------
-
-<!-- {{< projects-details level="incubating" >}} -->
-
-Sandbox Projects
--------------------
-
-<!-- {{< projects-details level="sandbox" >}} -->
-
 
 Non-code Projects
 ------------------
@@ -39,8 +23,3 @@ Non-code Projects
  -   **Contributor Guide**: https://glossary.cncf.io/contribute/
  -   **Chat:** CNCF Slack: `#glossary` and `#glossary-localizations` in [cloudnative.slack.com](https://cloud-native.slack.com/)
  -   **License:** Apache 2.0 license. Documentation is distributed under CC BY 4.0.
-
-Archived Projects
------------------
-
-<!-- {{< projects-details level="archived" >}} -->
