@@ -71,6 +71,12 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/cloud-native-contributors.jpg',
+      announcementBar: {
+        id: `hello-bar`,
+        content: `🎉️ Meet us in Atlanta for KubeCon + CloudNativeCon North America · Nov 10-13 ·<b><a target="_blank" href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/?utm_source=contribute-cncf-io&utm_medium=subpage&utm_campaign=10608228-KubeCon-NA-2025&utm_content=hello-bar">Register Today!</b> 🥳️`,
+        backgroundColor: 'rgb(1, 117, 228)', // Defaults to `#fff`
+        textColor: '#fff', // Defaults to `#000`
+      },
       navbar: {
         title: '',
         logo: {
@@ -177,13 +183,6 @@ const config = {
       },
     }),
   plugins: [require.resolve('docusaurus-plugin-search-local')],
-
-  scripts: [
-    {
-      src: 'https://www.cncf.io/wp-content/themes/cncf-twenty-two/source/js/on-demand/hello-bar-embed.js',
-      defer: true,
-    },
-  ],
 };
 
 export default config;
