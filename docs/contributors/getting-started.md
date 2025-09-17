@@ -1,8 +1,21 @@
 ---
 title: Do you want to start contributing to open source and need help figuring out where to begin?
-slug: "getting-started"
 sidebar_position: 1
-
+---
+=======
+id: getting-started
+title: Start Contributing to Open Source
+description: "Do you want to start contributing to open source and need help figuring out where to begin?"
+sidebar_position: 2
+keywords:
+  - getting started
+  - new contributor
+  - open source
+  - cncf
+tags:
+  - getting started
+  - open source
+  - new contributor
 ---
 
 ### Introduction
@@ -140,3 +153,5 @@ Open source projects always need new contributors because they rely on the commu
 ### In conclusion
 
 Contributing to open source is a great way to improve your skills, learn new technologies, and give back to the community. Whether you're a technical or non-technical contributor, there are many ways to get involved. Remember to start small, collaborate with other contributors, and always be respectful and courteous in your interactions with the community. Good luck on your journey!
+
+>>>>>>> 3a687c9 (Move new contributor content)
