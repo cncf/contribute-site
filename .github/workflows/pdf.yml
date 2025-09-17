@@ -23,9 +23,9 @@ jobs:
       - name: Upload results
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: bluefin
+          name: contribute-cncf-io
           # The output filename can be specified with --output option
-          path: pdf/bluefin.pdf
+          path: pdf/contribute-cncf-io.pdf
           if-no-files-found: error
           overwrite: true
       - name: Upload Release Artifact
