@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Contributors',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/CNCF-Contributor-Icons-Contributor.svg').default,
     description: (
       <>
         Navigate the Cloud Native as an individual contributor. Get started, find new friends, forge your path.
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Projects',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/CNCF-Contributor-Icons-Projects.svg').default,
     description: (
       <>
         Over 220 Projects choose the CNCF as their home. These resources document how we work together as a team. 
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'Community',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/CNCF-Contributor-Icons-Community.svg').default,
     description: (
       <>
         Stronger, together. Contributors and Projects collaborate to get larger goals accomplished. 
