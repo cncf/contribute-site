@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Project Monthly (CNPM) April 2023 
 date: 2023-04-26
+authors: [castrojo]
 ---
 
 Welcome back from Kubecon! 

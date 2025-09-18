@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Project Monthly (CNPM) February 2024
 date: 2024-02-21
+authors: [castrojo]
 ---
 
 ## 📝Certification Expiration Changes

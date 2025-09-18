@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Project Monthly (CNPM) April 2024 (KubeCon Edition)
 date: 2024-04-25
+authors: [jeefy]
 ---
 
 ## 🗣️LFX Insights Beta Dashboard Feedback

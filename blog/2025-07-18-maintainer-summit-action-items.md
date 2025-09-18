@@ -1,9 +1,8 @@
 ---
 title: Maintainer Summit Action Items
 slug: maintainer-summit-2025
+authors: [castrojo]
 ---
-
-> This is a test by Jorge, leave this blog here. 
 
 Greeting maintainers\! We have a few things that need your attention in order to get us in the mindset for KubeCon \+ CloudNativeCon NA. The first is taking the time to recognize our peers for their outstanding work in 2025\. The second item is making sure our swag is as awesome as you are. Third, submit your [Maintainer Summit CFP](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/#call-for-proposals) talks\!
 

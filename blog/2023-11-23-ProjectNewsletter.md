@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Project Monthly (CNPM) November 2023
 date: 2023-11-23
+authors: [castrojo]
 ---
 
 ## 📈Maintainers Survey 2023 H2

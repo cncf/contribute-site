@@ -1,6 +1,7 @@
 --- 
 title: Cloud Native Project Monthly (CNPM) July 2023 
-date: 2023-07-20 
+date: 2023-07-20
+authors: [castrojo]
 ---
 
 ## Mentoring

@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Project Monthly (CNPM) September 2023
 date: 2023-09-20
+authors: [castrojo]
 --- 
 
 ## 📝Updates from the Blog

@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Project Monthly (CNPM) Feb 2023 
 date: 2023-02-22
+authors: [castrojo]
 ---
 
 Welcome into a new year! 

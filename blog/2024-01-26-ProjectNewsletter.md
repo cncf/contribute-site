@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Project Monthly (CNPM) January 2024
 date: 2024-01-26
+authors: [castrojo]
 ---
 
 ## 🏨KubeCon + CloudNativeCon EU Hotels Now Available
