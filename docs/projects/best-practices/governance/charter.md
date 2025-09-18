@@ -1,6 +1,7 @@
 ---
 title: "Charter: Mission, Scope, Values, and Principles"
 sidebar_label: "Charter"
+sidebar_position: 2
 ---
 
 The purpose of having a charter for your open source project is to help people

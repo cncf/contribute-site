@@ -1,5 +1,7 @@
 ---
-title: "Governance: Leadership Selection"
+title: "Leadership Selection"
+sidebar_label: Leadership Selection
+sidebar_position: 3
 ---
 
 CNCF does not require its hosted projects to follow any specific governance

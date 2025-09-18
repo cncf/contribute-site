@@ -1,6 +1,9 @@
 ---
-title: "Overview"
+title: Governance
+sidebar_label: Governance
+sidebar_position: 2
 ---
+
 
 ## What is Governance?
 

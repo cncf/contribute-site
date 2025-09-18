@@ -1,5 +1,6 @@
 ---
 title: Accessibility
+sidebar_label: Accessibility
 ---
 
 ## Welcome to the Cloud Native Accessibility Initiative
