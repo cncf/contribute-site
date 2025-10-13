@@ -11,7 +11,7 @@ As a CNCF project maintainer, KubeCon is more than just a conference; it's your 
 -   **Contributor Engagement:** Meet face-to-face with your current contributors and recruit new, passionate developers. Host a project meeting or a "getting started" session to lower the barrier to entry.
 -   **End-User Feedback:** Gain invaluable, direct feedback from the enterprises and startups that rely on your software every day. Understand their challenges, use cases, and what features they need most.
 -   **Ecosystem Integration:** Connect with maintainers from other CNCF projects to foster collaboration and build powerful integrations. Find your project's next great synergy in the hallway track.
--   **CNCF Resources:** The CNCF Teams are on sight, a perfect opportunity to ensure you're taking advantage of all of the benefits CNCF Member Companies donate to CNCF Projects
+-   **CNCF Resources:** The CNCF Teams are on site, a perfect opportunity to ensure you're taking advantage of all of the benefits CNCF Member Companies donate to CNCF Projects
 
 ![kubecon](https://github.com/user-attachments/assets/68c717d3-071d-4372-a0bd-8b6afdb31765)
 
