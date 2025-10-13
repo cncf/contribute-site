@@ -11,7 +11,7 @@ Programming is focused on sharing best practices, diving into contributing proce
 
 ---
 
-![banner](https://github.com/user-attachments/assets/72b55574-ebbd-4168-93c3-44b11daf179b)
+![2025 CNCF Maintainer Summit banner](https://github.com/user-attachments/assets/72b55574-ebbd-4168-93c3-44b11daf179b)
 
 ## Event Details
 
