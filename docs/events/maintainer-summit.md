@@ -128,5 +128,5 @@ If you have questions, need assistance, or believe your registration was incorre
 
 All attendees are expected to adhere to the Code of Conduct. If an issue should arise, please contact the event staff or the program chairs.
 
-![london](https://github.com/user-attachments/assets/91aef680-27a7-49f9-8a90-91d65c73c4d6)
+![London cityscape for 2025 Maintainer Summit location](https://github.com/user-attachments/assets/91aef680-27a7-49f9-8a90-91d65c73c4d6)
 
