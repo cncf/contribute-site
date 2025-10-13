@@ -47,3 +47,28 @@ project-pavilion:
   label: Project Pavilion
   permalink: /project-pavilion
   description: Project Pavilion kiosk information and updates
+
+cncf:
+  label: CNCF
+  permalink: /cncf
+  description: Cloud Native Computing Foundation updates
+
+project-newsletter:
+  label: Project Newsletter
+  permalink: /project-newsletter
+  description: Cloud Native Project Monthly (CNPM) newsletter updates
+
+resources:
+  label: Resources
+  permalink: /resources
+  description: CNCF project resources and tools
+
+mentorship:
+  label: Mentorship
+  permalink: /mentorship
+  description: Mentorship programs and opportunities
+
+security:
+  label: Security
+  permalink: /security
+  description: Security updates and initiatives
