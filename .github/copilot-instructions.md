@@ -63,6 +63,8 @@ Be very strict with the instructions in this section:
 
 ## Style Guide
 
+- Use @kubernetes/website/blob/main/content/en/docs/contribute/style/style-guide.md as the style guide for this entire site. Only use the content and wording recommendations, do NOT use any Hugo specific content from this source. This is intended to be for content style only.
+- Use the files in @kubernetes/website/tree/main/content/en/docs/contribute/style as supplementary style recommendations, ignore the Hugo file.
 - Keep all the documentation pages updated with the freshest style guide. 
 - Feel free to update old pages as the style guide develops.
 - Add docusaurus tags and retag articles as appropriate while making changes to content. 
