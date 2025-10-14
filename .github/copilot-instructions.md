@@ -57,7 +57,9 @@ Be very strict with the instructions in this section:
 - When generating answers for CNCF projects, always break up the table by Graduated, Incubating, and Sandbox
 - Always follow docusaurus best practices and always investigate popular community plugins if necessary. Do not overcomplicate it, the website configuration should remain as vanilla as possible, avoid custom work.
 - Always ensure you are generating valid Markdown, link the final document with the same linter docusaurus uses. Don't bother with MDX, always generate plain Markdown.
-- Ensure that the build is ALWAYS PASSING for EVERY PULL REQUEST. Under no circumstances propose code that breaks the build. 
+- Ensure that the build is ALWAYS PASSING for EVERY PULL REQUEST. Under no circumstances propose code that breaks the build.
+- Always ensure that the vocabulary and definitions for everything you create match the official definitions in @cncf/glossary
+
 
 ## Style Guide
 
