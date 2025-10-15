@@ -20,18 +20,18 @@ To define and advance practices and standards for fundamental cloud native workl
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
 | Danielle Tal | [@miao0miao](https://github.com/miao0miao) | - | 2025-07-01 to 2026-06-30 |
-| Paco Xu | [@pacoxu](https://github.com/pacoxu) | - | 2025-07-01 to 2027-06-30 |
-| Yuan Tang | [@terrytangyuan](https://github.com/terrytangyuan) | - | 2025-07-01 to 2027-06-30 |
+| Paco Xu | [@pacoxu](https://github.com/pacoxu) | DaoCloud | 2025-07-01 to 2027-06-30 |
+| Yuan Tang | [@terrytangyuan](https://github.com/terrytangyuan) | Red Hat | 2025-07-01 to 2027-06-30 |
 
 ### Tech Leads
 
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
-| Alexander D. Kanevskiy | [@kad](https://github.com/kad) | - | 2025-07-02 to 2026-06-30 |
-| Hongcai Ren | [@RainbowMango](https://github.com/RainbowMango) | - | 2025-07-02 to 2027-06-30 |
-| Kante Yin | [@kerthcet](https://github.com/kerthcet) | - | 2025-07-02 to 2027-06-30 |
-| Rajas Kakodkar | [@rajaskakodkar](https://github.com/rajaskakodkar) | - | 2025-07-02 to 2027-06-30 |
-| Stephen Rust | [@srust](https://github.com/srust) | - | 2025-07-02 to 2026-06-30 |
+| Alexander D. Kanevskiy | [@kad](https://github.com/kad) | Intel | 2025-07-02 to 2026-06-30 |
+| Hongcai Ren | [@RainbowMango](https://github.com/RainbowMango) | Huawei | 2025-07-02 to 2027-06-30 |
+| Kante Yin | [@kerthcet](https://github.com/kerthcet) | Hiverge | 2025-07-02 to 2027-06-30 |
+| Rajas Kakodkar | [@rajaskakodkar](https://github.com/rajaskakodkar) | Broadcom | 2025-07-02 to 2027-06-30 |
+| Stephen Rust | [@srust](https://github.com/srust) | Akamai | 2025-07-02 to 2026-06-30 |
 
 ### TOC Liaisons
 

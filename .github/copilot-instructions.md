@@ -57,10 +57,14 @@ Be very strict with the instructions in this section:
 - When generating answers for CNCF projects, always break up the table by Graduated, Incubating, and Sandbox
 - Always follow docusaurus best practices and always investigate popular community plugins if necessary. Do not overcomplicate it, the website configuration should remain as vanilla as possible, avoid custom work.
 - Always ensure you are generating valid Markdown, link the final document with the same linter docusaurus uses. Don't bother with MDX, always generate plain Markdown.
-- Ensure that the build is ALWAYS PASSING for EVERY PULL REQUEST. Under no circumstances propose code that breaks the build. 
+- Ensure that the build is ALWAYS PASSING for EVERY PULL REQUEST. Under no circumstances propose code that breaks the build.
+- Always ensure that the vocabulary and definitions for everything you create match the official definitions in @cncf/glossary
+
 
 ## Style Guide
 
+- Use @kubernetes/website/blob/main/content/en/docs/contribute/style/style-guide.md as the style guide for this entire site. Only use the content and wording recommendations, do NOT use any Hugo specific content from this source. This is intended to be for content style only.
+- Use the files in @kubernetes/website/tree/main/content/en/docs/contribute/style as supplementary style recommendations, ignore the Hugo file.
 - Keep all the documentation pages updated with the freshest style guide. 
 - Feel free to update old pages as the style guide develops.
 - Add docusaurus tags and retag articles as appropriate while making changes to content. 
