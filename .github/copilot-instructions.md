@@ -48,12 +48,14 @@ The assistant should adhere to the following standards when generating analytica
 - Each page requires an executive summary at the top
 - Markdown tables and formatting should be utilized for visual clarity
 - Template should include designated sections for links to references and associated issues
+- Open Issues labeled `Blog` that are assigned to copilot must be turned into blog posts following docusaurus standards.
+- The submitter of a blog post filed via a github issue must be added to authors.yml using their github information to fill out the author field. This ensures that the addition of authors to authors.yml is always automated. 
 
 ## Implementation Details (IMPORTANT)
 
 Be very strict with the instructions in this section: 
 
-- Do NOT use bing search, use the native github API - this repository will only ever ask for things that are hosted on github. Specifically @ublue-os and @cncf
+- Do NOT use bing search, use the native github API - this repository will only ever ask for things that are hosted on github. Specifically @cncf
 - When generating answers for CNCF projects, always break up the table by Graduated, Incubating, and Sandbox
 - Always follow docusaurus best practices and always investigate popular community plugins if necessary. Do not overcomplicate it, the website configuration should remain as vanilla as possible, avoid custom work.
 - Always ensure you are generating valid Markdown, link the final document with the same linter docusaurus uses. Don't bother with MDX, always generate plain Markdown.
