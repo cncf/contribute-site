@@ -1,5 +1,5 @@
 # This workflow checks for broken links on the live site (https://contribute.cncf.io)
-# 
+#
 # Features:
 # - Runs weekly every Monday at 9:00 UTC
 # - Can be manually triggered with a custom URL
@@ -8,8 +8,10 @@
 # - Automatically closes issues when all links are fixed
 # - Uploads detailed results as artifacts for review
 #
-# The workflow uses linkinator to crawl the site and check all links.
-# Social media links are skipped to avoid rate limiting issues.
+# Configuration:
+# - Uses linkinator.config.json for skip patterns and other settings
+# - Skips social media links to avoid rate limiting
+# - Retries failed links automatically
 
 name: Check Links on Live Site
 
@@ -48,17 +50,11 @@ jobs:
           SITE_URL="${{ github.event.inputs.url || 'https://contribute.cncf.io' }}"
           echo "Checking links on: $SITE_URL"
 
-          # Run linkinator and save results
-          npx linkinator "$SITE_URL" \
-            --recurse \
-            --skip 'linkedin.com|twitter.com|facebook.com|youtube.com|medium.com|instagram.com' \
-            --format json > linkinator-results.json
+          # Run linkinator and save results (uses linkinator.config.json)
+          npx linkinator "$SITE_URL" --format json > linkinator-results.json
 
           # Also output in readable format
-          npx linkinator "$SITE_URL" \
-            --recurse \
-            --skip 'linkedin.com|twitter.com|facebook.com|youtube.com|medium.com|instagram.com' \
-            > linkinator-output.txt || echo "Link check completed with errors"
+          npx linkinator "$SITE_URL" > linkinator-output.txt || echo "Link check completed with errors"
 
       - name: Process and analyze results
         id: analyze
@@ -109,8 +105,9 @@ jobs:
                 const url = link.url;
                 const status = link.status;
 
-                // Email links
-                if (url.includes('@') && !url.startsWith('mailto:')) {
+                // Email links - check if the URL is actually an email address (not just containing @)
+                const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+                if (emailRegex.test(url) && !url.startsWith('mailto:')) {
                   suggestions.set(url, 'Prepend "mailto:" to email address: `mailto:' + url + '`');
                 }
 
@@ -157,7 +154,7 @@ jobs:
             // Set output
             fs.writeFileSync('link-check-summary.txt', 'Broken links: ' + broken.length);
 
-            // Exit with error if broken links found
+            // Exit with error code 1 if any broken links are detected
             if (broken.length > 0) {
               process.exit(1);
             }

@@ -1,0 +1,14 @@
+{
+  "recurse": true,
+  "skip": [
+    "linkedin.com",
+    "twitter.com",
+    "facebook.com",
+    "youtube.com",
+    "medium.com",
+    "instagram.com"
+  ],
+  "timeout": 10000,
+  "retryErrors": true,
+  "retryErrorsCount": 2
+}

@@ -63,6 +63,14 @@ Feel free to start diving in with PRs, we want to remain opinionated on this gol
 
 This repository includes an automated link checking workflow that runs weekly to ensure all links on the live site (https://contribute.cncf.io) are working properly.
 
+### Configuration
+
+Link checking is configured in `linkinator.config.json`:
+- **Recursive crawling**: Enabled to check all pages
+- **Skip patterns**: Social media sites (LinkedIn, Twitter, Facebook, etc.) to avoid rate limiting
+- **Timeout**: 10 seconds per link
+- **Retry**: Automatically retries failed links 2 times
+
 ### How it works
 
 - **Schedule**: The workflow runs every Monday at 9:00 UTC
@@ -90,6 +98,8 @@ npm run check:links:live
 
 Or check a custom URL:
 ```bash
-npx linkinator https://your-custom-url.com --recurse
+npx linkinator https://your-custom-url.com
 ```
+
+The configuration in `linkinator.config.json` will be automatically used.
  
