@@ -49,7 +49,7 @@ check-links-only:
 	$(HTMLTEST) $(HTMLTEST_ARGS)
 
 clean:
-	rm -rf $(HTMLTEST_DIR) public/* resources
+	rm -rf $(HTMLTEST_DIR)
 
 get-link-checker:
 	rm -Rf $(HTMLTEST_DIR)/bin
