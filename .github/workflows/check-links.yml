@@ -1,3 +1,16 @@
+# This workflow checks for broken links on the live site (https://contribute.cncf.io)
+# 
+# Features:
+# - Runs weekly every Monday at 9:00 UTC
+# - Can be manually triggered with a custom URL
+# - Analyzes broken links and provides actionable suggestions
+# - Creates/updates GitHub issues when broken links are found
+# - Automatically closes issues when all links are fixed
+# - Uploads detailed results as artifacts for review
+#
+# The workflow uses linkinator to crawl the site and check all links.
+# Social media links are skipped to avoid rate limiting issues.
+
 name: Check Links on Live Site
 
 on:

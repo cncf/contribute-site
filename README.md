@@ -57,4 +57,39 @@ This will start the development server on the default port, typically `http://lo
 
 ## ChillOps
 
-Feel free to start diving in with PRs, we want to remain opinionated on this golden path for now, and then add branches and side quests after we've shipped more meat. We want people to feel good when they read this site because they found something useful, so feel free to file issues with your ideas! 
+Feel free to start diving in with PRs, we want to remain opinionated on this golden path for now, and then add branches and side quests after we've shipped more meat. We want people to feel good when they read this site because they found something useful, so feel free to file issues with your ideas!
+
+## Automated Link Checking
+
+This repository includes an automated link checking workflow that runs weekly to ensure all links on the live site (https://contribute.cncf.io) are working properly.
+
+### How it works
+
+- **Schedule**: The workflow runs every Monday at 9:00 UTC
+- **Manual trigger**: You can also run it manually from the Actions tab with a custom URL
+- **What it checks**: All links on the site, recursively crawling from the homepage
+- **What it skips**: Social media links (LinkedIn, Twitter, Facebook, etc.) to avoid rate limiting
+
+### When broken links are found
+
+The workflow will:
+1. Generate a detailed analysis with suggestions for fixing each broken link
+2. Create or update a GitHub issue with the `broken-links` label
+3. Upload detailed results as downloadable artifacts
+
+### When all links are fixed
+
+The workflow will automatically close any open broken-links issues.
+
+### Running the check manually
+
+You can check links on the live site locally with:
+```bash
+npm run check:links:live
+```
+
+Or check a custom URL:
+```bash
+npx linkinator https://your-custom-url.com --recurse
+```
+ 
