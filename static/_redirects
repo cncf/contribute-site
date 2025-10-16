@@ -1,0 +1,21 @@
+# Redirects from old cncf-contribute.netlify.app to new contribute-cncf-io.netlify.app
+# This file handles migration from the archived cncf/contribute repository
+# to the new contribute-site repository
+#
+# The old site (Hugo-based) had a simple structure:
+# - /contributors/ - Main contributor information page
+# - /contributors/projects - List of all CNCF projects with contribution info
+#
+# The new site (Docusaurus-based) has reorganized this content:
+# - /contributors/ - Main contributor information (similar content)
+# - /contributors/getting-started/ - Getting started guide for new contributors
+# - Project information moved to CNCF Landscape (landscape.cncf.io)
+
+# Old projects page redirect
+# The old /contributors/projects page contained a comprehensive list of all CNCF projects
+# with contribution information. This is now better served by:
+# 1. The official CNCF Landscape for project discovery: https://landscape.cncf.io
+# 2. The getting-started guide for contribution workflow: /contributors/getting-started/
+# We redirect to getting-started as it's the most relevant for the "how to contribute" intent
+/contributors/projects /contributors/getting-started/ 301
+/contributors/projects/ /contributors/getting-started/ 301
