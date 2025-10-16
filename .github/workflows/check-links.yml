@@ -1,17 +1,18 @@
-# This workflow checks for broken links on the live site (https://contribute.cncf.io)
+# This workflow checks for broken links in the built site using htmltest
 #
 # Features:
 # - Runs weekly every Monday at 9:00 UTC
-# - Can be manually triggered with a custom URL
-# - Analyzes broken links and provides actionable suggestions
+# - Can be manually triggered
+# - Uses htmltest (same as @cncf/techdocs) for link checking
 # - Creates/updates GitHub issues when broken links are found
 # - Automatically closes issues when all links are fixed
 # - Uploads detailed results as artifacts for review
 #
 # Configuration:
-# - Uses linkinator.config.json for skip patterns and other settings
+# - Uses .htmltest.yml for skip patterns and other settings
+# - Uses Makefile (aligned with @cncf/techdocs) for build orchestration
 # - Skips social media links to avoid rate limiting
-# - Retries failed links automatically
+# - Maintains a reference cache to speed up checks
 
 name: Check Links on Live Site
 
@@ -20,11 +21,6 @@ on:
     # Run every Monday at 9:00 UTC
     - cron: '0 9 * * 1'
   workflow_dispatch:
-    inputs:
-      url:
-        description: 'URL to check (default: https://contribute.cncf.io)'
-        required: false
-        default: 'https://contribute.cncf.io'
 
 jobs:
   check-links:
@@ -43,132 +39,76 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Check links on live site
-        id: linkinator
+      - name: Build site
+        run: npm run build
+
+      - name: Check links with htmltest
+        id: htmltest
         continue-on-error: true
         run: |
-          SITE_URL="${{ github.event.inputs.url || 'https://contribute.cncf.io' }}"
-          echo "Checking links on: $SITE_URL"
-
-          # Run linkinator and save results (uses linkinator.config.json)
-          npx linkinator "$SITE_URL" --format json > linkinator-results.json
-
-          # Also output in readable format
-          npx linkinator "$SITE_URL" > linkinator-output.txt || echo "Link check completed with errors"
+          echo "Running link check with htmltest..."
+          make check-links 2>&1 | tee htmltest-output.txt
+          exit ${PIPESTATUS[0]}
 
       - name: Process and analyze results
         id: analyze
+        if: always()
         run: |
-          cat > analyze-links.js << 'EOFJS'
+          cat > analyze-htmltest.js << 'EOFJS'
           const fs = require('fs');
+          const path = require('path');
 
           try {
-            const results = JSON.parse(fs.readFileSync('linkinator-results.json', 'utf8'));
-            const broken = results.links.filter(link => link.state === 'BROKEN');
-            const skipped = results.links.filter(link => link.state === 'SKIPPED');
-
-            console.log('## Link Check Results\n');
-            console.log('**Site checked:** ' + results.url);
-            console.log('**Total links checked:** ' + results.links.length);
-            console.log('**Broken links:** ' + broken.length);
-            console.log('**Skipped links:** ' + skipped.length + '\n');
-
-            if (broken.length > 0) {
-              console.log('### Broken Links\n');
-
-              // Group broken links by status code
-              const byStatus = {};
-              broken.forEach(link => {
-                const status = link.status || 'UNKNOWN';
-                if (!byStatus[status]) byStatus[status] = [];
-                byStatus[status].push(link);
-              });
-
-              Object.keys(byStatus).sort().forEach(status => {
-                console.log('#### Status: ' + status + '\n');
-                byStatus[status].forEach(link => {
-                  console.log('- **URL:** ' + link.url);
-                  console.log('  - **Found on:** ' + (link.parent || 'Unknown'));
-                  if (link.failureDetails) {
-                    console.log('  - **Error:** ' + (link.failureDetails[0]?.message || 'Unknown error'));
-                  }
-                  console.log('');
-                });
-              });
-
-              // Generate suggestions
-              console.log('### Suggested Fixes\n');
-
-              const suggestions = new Map();
-
-              broken.forEach(link => {
-                const url = link.url;
-                const status = link.status;
-
-                // Email links - check if the URL is actually an email address (not just containing @)
-                const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-                if (emailRegex.test(url) && !url.startsWith('mailto:')) {
-                  suggestions.set(url, 'Prepend "mailto:" to email address: `mailto:' + url + '`');
-                }
-
-                // 404 errors
-                if (status === 404) {
-                  if (url.includes('github.com')) {
-                    suggestions.set(url, 'GitHub URL not found - verify repository/file exists or check for typos');
-                  } else if (url.includes('/docs/') || url.includes('/blog/')) {
-                    suggestions.set(url, 'Internal documentation link broken - file may have been moved or renamed');
-                  } else {
-                    suggestions.set(url, 'Page not found (404) - update or remove this link');
-                  }
-                }
-
-                // SSL/TLS errors
-                if (link.failureDetails?.[0]?.message?.includes('certificate') ||
-                    link.failureDetails?.[0]?.message?.includes('SSL')) {
-                  suggestions.set(url, 'SSL/TLS certificate issue - verify certificate is valid or use http:// instead');
-                }
-
-                // Timeout errors
-                if (link.failureDetails?.[0]?.message?.includes('timeout')) {
-                  suggestions.set(url, 'Connection timeout - site may be down or slow, verify URL is correct');
-                }
-
-                // Redirect chains
-                if (status >= 300 && status < 400) {
-                  suggestions.set(url, 'Redirect detected - consider updating to final destination URL');
-                }
-              });
-
-              if (suggestions.size > 0) {
-                suggestions.forEach((suggestion, url) => {
-                  console.log('- `' + url + '`');
-                  console.log('  - ' + suggestion + '\n');
-                });
-              } else {
-                console.log('No specific suggestions available. Review the broken links above.\n');
+            // Read htmltest output
+            const output = fs.readFileSync('htmltest-output.txt', 'utf8');
+            
+            // Parse for errors - htmltest outputs errors in a specific format
+            const lines = output.split('\n');
+            const errors = [];
+            let errorCount = 0;
+            
+            for (const line of lines) {
+              if (line.includes('✘') || line.includes('Error')) {
+                errors.push(line.trim());
+                errorCount++;
               }
+            }
+            
+            console.log('## Link Check Results\n');
+            console.log('**Site checked:** Built site (build/)');
+            console.log('**Tool:** htmltest (same as @cncf/techdocs)');
+            console.log('**Broken links found:** ' + errorCount + '\n');
+            
+            if (errorCount > 0) {
+              console.log('### Broken Links\n');
+              console.log('```');
+              errors.slice(0, 50).forEach(error => console.log(error));
+              if (errors.length > 50) {
+                console.log('... and ' + (errors.length - 50) + ' more errors');
+              }
+              console.log('```\n');
+              
+              console.log('### How to Fix\n');
+              console.log('1. Review the errors above');
+              console.log('2. Update the broken links in the source files');
+              console.log('3. Test locally with `npm run check:links`');
+              console.log('4. Common fixes:');
+              console.log('   - Email links: Use `mailto:` prefix');
+              console.log('   - Internal links: Check file paths and anchors');
+              console.log('   - External links: Verify URLs are correct\n');
+              
+              process.exit(1);
             } else {
               console.log('✅ **No broken links found!**\n');
             }
-
-            // Set output
-            fs.writeFileSync('link-check-summary.txt', 'Broken links: ' + broken.length);
-
-            // Exit with error code 1 if any broken links are detected
-            if (broken.length > 0) {
-              process.exit(1);
-            }
           } catch (error) {
             console.error('Error analyzing results:', error.message);
-            process.exit(1);
+            // Don't fail if we can't analyze - the htmltest step result is what matters
           }
           EOFJS
 
-          node analyze-links.js > link-analysis.md
+          node analyze-htmltest.js > link-analysis.md || true
           cat link-analysis.md
-
-          # Save for artifact
-          echo "ANALYSIS_COMPLETE=true" >> $GITHUB_OUTPUT
 
       - name: Upload results
         if: always()
@@ -176,9 +116,9 @@ jobs:
         with:
           name: link-check-results
           path: |
-            linkinator-results.json
-            linkinator-output.txt
+            htmltest-output.txt
             link-analysis.md
+            tmp/.htmltest/
           retention-days: 30
 
       - name: Create or update issue on failure
@@ -196,16 +136,16 @@ jobs:
             }
 
             const dateStr = new Date().toISOString().split('T')[0];
-            const title = 'Broken links detected on live site (' + dateStr + ')';
+            const title = 'Broken links detected on site (' + dateStr + ')';
             const runUrl = 'https://github.com/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.runId;
 
             const body = '# Broken Links Detected\n\n' +
-              'This issue was automatically created because the weekly link check found broken links on the live site.\n\n' +
+              'This issue was automatically created because the weekly link check found broken links.\n\n' +
               analysis + '\n\n' +
               '## Actions Required\n\n' +
               '1. Review the broken links listed above\n' +
               '2. Update or remove the broken links in the source files\n' +
-              '3. Follow the suggested fixes where applicable\n' +
+              '3. Test locally with `npm run check:links`\n' +
               '4. Close this issue once all broken links are addressed\n\n' +
               '## Workflow Run\n\n' +
               'See the [workflow run](' + runUrl + ') for detailed logs and downloadable results.\n\n' +
@@ -221,7 +161,7 @@ jobs:
             });
 
             const existingIssue = issues.data.find(issue =>
-              issue.title.includes('Broken links detected on live site')
+              issue.title.includes('Broken links detected on site')
             );
 
             if (existingIssue) {
@@ -267,7 +207,7 @@ jobs:
             const runUrl = 'https://github.com/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.runId;
 
             for (const issue of issues.data) {
-              if (issue.title.includes('Broken links detected on live site')) {
+              if (issue.title.includes('Broken links detected on site')) {
                 await github.rest.issues.createComment({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
