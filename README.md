@@ -61,27 +61,27 @@ Feel free to start diving in with PRs, we want to remain opinionated on this gol
 
 ## Automated Link Checking
 
-This repository includes an automated link checking workflow that runs weekly to ensure all links on the live site (https://contribute.cncf.io) are working properly.
+This repository includes automated link checking using `htmltest`, aligned with the [@cncf/techdocs](https://github.com/cncf/techdocs) setup.
 
 ### Configuration
 
-Link checking is configured in `linkinator.config.json`:
-- **Recursive crawling**: Enabled to check all pages
-- **Skip patterns**: Social media sites (LinkedIn, Twitter, Facebook, etc.) to avoid rate limiting
-- **Timeout**: 10 seconds per link
-- **Retry**: Automatically retries failed links 2 times
+Link checking is configured in `.htmltest.yml`:
+- **Tool**: htmltest (same as @cncf/techdocs)
+- **Build orchestration**: Makefile (same as @cncf/techdocs)
+- **Cache**: Maintains a reference cache to speed up subsequent checks
+- **Skip patterns**: Social media sites to avoid rate limiting
 
 ### How it works
 
-- **Schedule**: The workflow runs every Monday at 9:00 UTC
-- **Manual trigger**: You can also run it manually from the Actions tab with a custom URL
-- **What it checks**: All links on the site, recursively crawling from the homepage
-- **What it skips**: Social media links (LinkedIn, Twitter, Facebook, etc.) to avoid rate limiting
+- **Schedule**: A GitHub Actions workflow runs every Monday at 9:00 UTC
+- **Manual trigger**: You can also run it manually from the Actions tab
+- **What it checks**: All links in the built site (build/ directory)
+- **What it skips**: Social media links and localhost URLs
 
 ### When broken links are found
 
 The workflow will:
-1. Generate a detailed analysis with suggestions for fixing each broken link
+1. Generate a detailed report with all broken links
 2. Create or update a GitHub issue with the `broken-links` label
 3. Upload detailed results as downloadable artifacts
 
@@ -89,17 +89,12 @@ The workflow will:
 
 The workflow will automatically close any open broken-links issues.
 
-### Running the check manually
+### Running the check locally
 
-You can check links on the live site locally with:
+You can check links locally with:
 ```bash
-npm run check:links:live
+npm run check:links
 ```
 
-Or check a custom URL:
-```bash
-npx linkinator https://your-custom-url.com
-```
-
-The configuration in `linkinator.config.json` will be automatically used.
+This will build the site and run htmltest against it, just like the CI workflow.
  
