@@ -1,21 +1,78 @@
-# Redirects from old cncf-contribute.netlify.app to new contribute-cncf-io.netlify.app
-# This file handles migration from the archived cncf/contribute repository
-# to the new contribute-site repository
+# Redirects for contribute.cncf.io
+# This file handles redirects from multiple legacy sites:
+# 1. Old cncf-contribute.netlify.app (archived cncf/contribute repo)
+# 2. Old contribute.cncf.io (tag-contributor-strategy/website)
 #
-# The old site (Hugo-based) had a simple structure:
-# - /contributors/ - Main contributor information page
-# - /contributors/projects - List of all CNCF projects with contribution info
-#
-# The new site (Docusaurus-based) has reorganized this content:
-# - /contributors/ - Main contributor information (similar content)
-# - /contributors/getting-started/ - Getting started guide for new contributors
-# - Project information moved to CNCF Landscape (landscape.cncf.io)
+# The new site (Docusaurus-based) has reorganized and consolidated content from both sources.
+# New site takes precedence where there are path conflicts.
+
+# ============================================================================
+# Redirects from archived cncf/contribute repository (cncf-contribute.netlify.app)
+# ============================================================================
 
 # Old projects page redirect
-# The old /contributors/projects page contained a comprehensive list of all CNCF projects
-# with contribution information. This is now better served by:
-# 1. The official CNCF Landscape for project discovery: https://landscape.cncf.io
-# 2. The getting-started guide for contribution workflow: /contributors/getting-started/
-# We redirect to getting-started as it's the most relevant for the "how to contribute" intent
+# The old /contributors/projects page contained a list of all CNCF projects with contribution info
 /contributors/projects /contributors/getting-started/ 301
 /contributors/projects/ /contributors/getting-started/ 301
+
+# ============================================================================
+# Redirects from tag-contributor-strategy/website (old contribute.cncf.io)
+# ============================================================================
+
+# About section - no direct equivalent, redirect to community
+/about /community/ 301
+/about/ /community/ 301
+/about/charter /community/governance/ 301
+
+# Accessibility content moved to projects/best-practices
+/accessibility /projects/best-practices/accessibility/ 301
+/accessibility/ /projects/best-practices/accessibility/ 301
+/accessibility/blind-and-visually-impaired /projects/best-practices/accessibility/blind-and-visually-impaired/ 301
+/accessibility/blind-and-visually-impaired/ /projects/best-practices/accessibility/blind-and-visually-impaired/ 301
+/accessibility/deaf-and-hard-of-hearing /projects/best-practices/accessibility/deaf-and-hard-of-hearing/ 301
+/accessibility/deaf-and-hard-of-hearing/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/ 301
+/accessibility/deaf-and-hard-of-hearing/best-practices-interviewing-deaf-hoh-candidates /projects/best-practices/accessibility/deaf-and-hard-of-hearing/interviewing/ 301
+/accessibility/deaf-and-hard-of-hearing/best-practices-interviewing-deaf-hoh-candidates/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/interviewing/ 301
+
+# Maintainer content reorganized
+/maintainers/community /projects/best-practices/community/ 301
+/maintainers/community/ /projects/best-practices/community/ 301
+/maintainers/community/contributor-growth-framework /projects/best-practices/community/contributor-growth/ 301
+/maintainers/community/contributor-growth-framework/ /projects/best-practices/community/contributor-growth/ 301
+/maintainers/community/crm-runbook /projects/best-practices/community/crm-runbook/ 301
+/maintainers/community/project-health /projects/best-practices/community/project-health/ 301
+/maintainers/community/recruiting-playbook /projects/best-practices/community/recruiting-playbook/ 301
+/maintainers/community/vendor-neutrality /projects/best-practices/community/vendor-neutrality/ 301
+
+/maintainers/governance /projects/best-practices/governance/ 301
+/maintainers/governance/ /projects/best-practices/governance/ 301
+/maintainers/governance/charter /projects/best-practices/governance/charter/ 301
+/maintainers/governance/leadership-selection /projects/best-practices/governance/leadership-selection/ 301
+
+/maintainers/security /projects/best-practices/security/ 301
+/maintainers/security/ /projects/best-practices/security/ 301
+
+/maintainers/templates /resources/templates/ 301
+/maintainers/templates/ /resources/templates/ 301
+
+# Resources how-to content moved
+/resources/how-to/change-affiliation /maintainers/lifecycle/change-affiliation/ 301
+/resources/how-to/change-email /maintainers/lifecycle/change-email/ 301
+/resources/how-to/submit-presentations /maintainers/lifecycle/submit-presentations/ 301
+/resources/how-to/submit-license-exception-request /projects/submit-license-exception-request/ 301
+
+# Resources project-services renamed to services
+/resources/project-services /resources/services/ 301
+/resources/project-services/ /resources/services/ 301
+/resources/project-services/audits /resources/services/audits/ 301
+/resources/project-services/audits/ /resources/services/audits/ 301
+/resources/project-services/cncf-support /resources/services/cncf-support/ 301
+/resources/project-services/cncf-support/ /resources/services/cncf-support/ 301
+/resources/project-services/hosted-tools /resources/services/hosted-tools/ 301
+/resources/project-services/hosted-tools/ /resources/services/hosted-tools/ 301
+/resources/project-services/maturity-levels /resources/services/maturity-levels/ 301
+/resources/project-services/maturity-levels/ /resources/services/maturity-levels/ 301
+/resources/project-services/outreach-events /resources/services/outreach-events/ 301
+/resources/project-services/outreach-events/ /resources/services/outreach-events/ 301
+/resources/project-services/technical-writing /resources/services/technical-writing/ 301
+/resources/project-services/technical-writing/ /resources/services/technical-writing/ 301
