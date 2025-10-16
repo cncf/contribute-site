@@ -1,0 +1,277 @@
+name: Check Links on Live Site
+
+on:
+  schedule:
+    # Run every Monday at 9:00 UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'URL to check (default: https://contribute.cncf.io)'
+        required: false
+        default: 'https://contribute.cncf.io'
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check links on live site
+        id: linkinator
+        continue-on-error: true
+        run: |
+          SITE_URL="${{ github.event.inputs.url || 'https://contribute.cncf.io' }}"
+          echo "Checking links on: $SITE_URL"
+
+          # Run linkinator and save results
+          npx linkinator "$SITE_URL" \
+            --recurse \
+            --skip 'linkedin.com|twitter.com|facebook.com|youtube.com|medium.com|instagram.com' \
+            --format json > linkinator-results.json
+
+          # Also output in readable format
+          npx linkinator "$SITE_URL" \
+            --recurse \
+            --skip 'linkedin.com|twitter.com|facebook.com|youtube.com|medium.com|instagram.com' \
+            > linkinator-output.txt || echo "Link check completed with errors"
+
+      - name: Process and analyze results
+        id: analyze
+        run: |
+          cat > analyze-links.js << 'EOFJS'
+          const fs = require('fs');
+
+          try {
+            const results = JSON.parse(fs.readFileSync('linkinator-results.json', 'utf8'));
+            const broken = results.links.filter(link => link.state === 'BROKEN');
+            const skipped = results.links.filter(link => link.state === 'SKIPPED');
+
+            console.log('## Link Check Results\n');
+            console.log('**Site checked:** ' + results.url);
+            console.log('**Total links checked:** ' + results.links.length);
+            console.log('**Broken links:** ' + broken.length);
+            console.log('**Skipped links:** ' + skipped.length + '\n');
+
+            if (broken.length > 0) {
+              console.log('### Broken Links\n');
+
+              // Group broken links by status code
+              const byStatus = {};
+              broken.forEach(link => {
+                const status = link.status || 'UNKNOWN';
+                if (!byStatus[status]) byStatus[status] = [];
+                byStatus[status].push(link);
+              });
+
+              Object.keys(byStatus).sort().forEach(status => {
+                console.log('#### Status: ' + status + '\n');
+                byStatus[status].forEach(link => {
+                  console.log('- **URL:** ' + link.url);
+                  console.log('  - **Found on:** ' + (link.parent || 'Unknown'));
+                  if (link.failureDetails) {
+                    console.log('  - **Error:** ' + (link.failureDetails[0]?.message || 'Unknown error'));
+                  }
+                  console.log('');
+                });
+              });
+
+              // Generate suggestions
+              console.log('### Suggested Fixes\n');
+
+              const suggestions = new Map();
+
+              broken.forEach(link => {
+                const url = link.url;
+                const status = link.status;
+
+                // Email links
+                if (url.includes('@') && !url.startsWith('mailto:')) {
+                  suggestions.set(url, 'Prepend "mailto:" to email address: `mailto:' + url + '`');
+                }
+
+                // 404 errors
+                if (status === 404) {
+                  if (url.includes('github.com')) {
+                    suggestions.set(url, 'GitHub URL not found - verify repository/file exists or check for typos');
+                  } else if (url.includes('/docs/') || url.includes('/blog/')) {
+                    suggestions.set(url, 'Internal documentation link broken - file may have been moved or renamed');
+                  } else {
+                    suggestions.set(url, 'Page not found (404) - update or remove this link');
+                  }
+                }
+
+                // SSL/TLS errors
+                if (link.failureDetails?.[0]?.message?.includes('certificate') ||
+                    link.failureDetails?.[0]?.message?.includes('SSL')) {
+                  suggestions.set(url, 'SSL/TLS certificate issue - verify certificate is valid or use http:// instead');
+                }
+
+                // Timeout errors
+                if (link.failureDetails?.[0]?.message?.includes('timeout')) {
+                  suggestions.set(url, 'Connection timeout - site may be down or slow, verify URL is correct');
+                }
+
+                // Redirect chains
+                if (status >= 300 && status < 400) {
+                  suggestions.set(url, 'Redirect detected - consider updating to final destination URL');
+                }
+              });
+
+              if (suggestions.size > 0) {
+                suggestions.forEach((suggestion, url) => {
+                  console.log('- `' + url + '`');
+                  console.log('  - ' + suggestion + '\n');
+                });
+              } else {
+                console.log('No specific suggestions available. Review the broken links above.\n');
+              }
+            } else {
+              console.log('✅ **No broken links found!**\n');
+            }
+
+            // Set output
+            fs.writeFileSync('link-check-summary.txt', 'Broken links: ' + broken.length);
+
+            // Exit with error if broken links found
+            if (broken.length > 0) {
+              process.exit(1);
+            }
+          } catch (error) {
+            console.error('Error analyzing results:', error.message);
+            process.exit(1);
+          }
+          EOFJS
+
+          node analyze-links.js > link-analysis.md
+          cat link-analysis.md
+
+          # Save for artifact
+          echo "ANALYSIS_COMPLETE=true" >> $GITHUB_OUTPUT
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-results
+          path: |
+            linkinator-results.json
+            linkinator-output.txt
+            link-analysis.md
+          retention-days: 30
+
+      - name: Create or update issue on failure
+        if: failure() && github.event_name == 'schedule'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let analysis = 'Link check failed. See workflow run for details.';
+
+            try {
+              analysis = fs.readFileSync('link-analysis.md', 'utf8');
+            } catch (error) {
+              console.log('Could not read analysis file:', error.message);
+            }
+
+            const dateStr = new Date().toISOString().split('T')[0];
+            const title = 'Broken links detected on live site (' + dateStr + ')';
+            const runUrl = 'https://github.com/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.runId;
+
+            const body = '# Broken Links Detected\n\n' +
+              'This issue was automatically created because the weekly link check found broken links on the live site.\n\n' +
+              analysis + '\n\n' +
+              '## Actions Required\n\n' +
+              '1. Review the broken links listed above\n' +
+              '2. Update or remove the broken links in the source files\n' +
+              '3. Follow the suggested fixes where applicable\n' +
+              '4. Close this issue once all broken links are addressed\n\n' +
+              '## Workflow Run\n\n' +
+              'See the [workflow run](' + runUrl + ') for detailed logs and downloadable results.\n\n' +
+              '---\n' +
+              '*This issue was automatically created by the [Check Links workflow](.github/workflows/check-links.yml)*';
+
+            // Check if a similar issue already exists
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'broken-links'
+            });
+
+            const existingIssue = issues.data.find(issue =>
+              issue.title.includes('Broken links detected on live site')
+            );
+
+            if (existingIssue) {
+              // Update existing issue with new comment
+              const commentBody = '## Updated Link Check Results (' + dateStr + ')\n\n' +
+                analysis + '\n\n' +
+                'See the [latest workflow run](' + runUrl + ') for details.';
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existingIssue.number,
+                body: commentBody
+              });
+
+              console.log('Updated existing issue #' + existingIssue.number);
+            } else {
+              // Create new issue
+              const issue = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['broken-links', 'maintenance']
+              });
+
+              console.log('Created new issue #' + issue.data.number);
+            }
+
+      - name: Close issue on success
+        if: success() && github.event_name == 'schedule'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Close any open broken-links issues
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'broken-links'
+            });
+
+            const runUrl = 'https://github.com/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.runId;
+
+            for (const issue of issues.data) {
+              if (issue.title.includes('Broken links detected on live site')) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: '✅ All broken links have been fixed! No broken links detected in the [latest check](' + runUrl + ').'
+                });
+
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  state: 'closed'
+                });
+
+                console.log('Closed issue #' + issue.number);
+              }
+            }

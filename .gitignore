@@ -221,3 +221,7 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/node,docusaurus
 
+# Link checker results
+linkinator-results.json
+linkinator-output.txt
+link-analysis.md
