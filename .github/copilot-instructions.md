@@ -61,6 +61,7 @@ Be very strict with the instructions in this section:
 - Always ensure you are generating valid Markdown, link the final document with the same linter docusaurus uses. Don't bother with MDX, always generate plain Markdown.
 - Ensure that the build is ALWAYS PASSING for EVERY PULL REQUEST. Under no circumstances propose code that breaks the build.
 - Always ensure that the vocabulary and definitions for everything you create match the official definitions in @cncf/glossary
+- Use https://github.com/cncf/toc/blob/main/tags.yaml as the source of truth for individuals who participate in CNCF activities. When modifying any page that lists people, positions, or affiliations, verify against this file and update the page accordingly; if the upstream data is outdated, also submit a PR to @cncf/toc to correct it. 
 
 
 ## Style Guide
