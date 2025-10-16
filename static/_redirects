@@ -12,8 +12,9 @@
 
 # Old projects page redirect
 # The old /contributors/projects page contained a list of all CNCF projects with contribution info
-/contributors/projects /contributors/getting-started/ 301
-/contributors/projects/ /contributors/getting-started/ 301
+# Redirect to /projects/ which is the main projects section on the new site
+/contributors/projects /projects/ 301
+/contributors/projects/ /projects/ 301
 
 # ============================================================================
 # Redirects from tag-contributor-strategy/website (old contribute.cncf.io)
