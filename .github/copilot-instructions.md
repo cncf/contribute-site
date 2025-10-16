@@ -49,7 +49,7 @@ The assistant should adhere to the following standards when generating analytica
 - Markdown tables and formatting should be utilized for visual clarity
 - Template should include designated sections for links to references and associated issues
 - Open Issues labeled `Blog` that are assigned to copilot must be turned into blog posts following docusaurus standards.
-- The submitter of a blog post filed via a github issue must be added to authors.yml using their github information to fill out the author field. This ensures that the addition of authors to authors.yml is always automated. 
+- The submitter of a blog post filed via a GitHub issue must be added to authors.yml using their github information to fill out the author field. This ensures that the addition of authors to authors.yml is always automated. 
 
 ## Implementation Details (IMPORTANT)
 
