@@ -44,5 +44,15 @@ clean:
 	rm -rf $(HTMLTEST_DIR)
 
 get-link-checker:
-	rm -Rf $(HTMLTEST_DIR)/bin
-	curl https://htmltest.wjdp.uk | bash -s -- -b $(HTMLTEST_DIR)/bin
+	@echo "Installing htmltest from source..."
+	@if ! command -v go >/dev/null 2>&1; then \
+		echo "Error: Go is not installed. Please install Go to build htmltest."; \
+		echo "Alternative: Install htmltest binary directly from https://github.com/wjdp/htmltest/releases"; \
+		exit 1; \
+	fi
+	rm -Rf $(HTMLTEST_DIR)/htmltest-src
+	git clone --depth 1 --branch dev/main https://github.com/chalin/htmltest.git $(HTMLTEST_DIR)/htmltest-src
+	cd $(HTMLTEST_DIR)/htmltest-src && make build
+	mkdir -p $(HTMLTEST_DIR)/bin
+	cp $(HTMLTEST_DIR)/htmltest-src/bin/htmltest $(HTMLTEST_DIR)/bin/htmltest
+	rm -rf $(HTMLTEST_DIR)/htmltest-src

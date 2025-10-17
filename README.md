@@ -66,8 +66,9 @@ This repository includes automated link checking using `htmltest`, aligned with 
 ### Configuration
 
 Link checking is configured in `.htmltest.yml`:
-- **Tool**: htmltest (same as @cncf/techdocs)
+- **Tool**: htmltest from [@chalin's maintained fork](https://github.com/chalin/htmltest) with latest updates
 - **Build orchestration**: Makefile (same as @cncf/techdocs)
+- **Installation**: Built from source using Go for latest patches and improvements
 - **Cache**: Maintains a reference cache to speed up subsequent checks
 - **Skip patterns**: Social media sites to avoid rate limiting
 
@@ -97,4 +98,6 @@ npm run check:links
 ```
 
 This will build the site and run htmltest against it, just like the CI workflow.
+
+**Note**: Running locally requires Go to be installed, as htmltest is built from source. If you don't have Go installed, you can install the htmltest binary directly from the [releases page](https://github.com/wjdp/htmltest/releases).
  
