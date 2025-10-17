@@ -30,7 +30,6 @@ https://contribute-cncf-io.netlify.app/* https://contribute.cncf.io/:splat 301!
 # About section - no direct equivalent, redirect to community
 /about /community/ 301
 /about/ /community/ 301
-/about/charter /community/governance/ 301
 
 # Accessibility content moved to projects/best-practices
 /accessibility /projects/best-practices/accessibility/ 301
