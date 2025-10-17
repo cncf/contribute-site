@@ -10,8 +10,6 @@
 # Redirects from archived cncf/contribute repository (cncf-contribute.netlify.app)
 # ============================================================================
 
-# Contributors section redirects
-/contributors/getting-started /contributors/getting-started/ 301
 
 # Old projects page redirect
 # The old /contributors/projects page contained a list of all CNCF projects with contribution info
