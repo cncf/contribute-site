@@ -11,7 +11,6 @@
 # ============================================================================
 
 # Contributors section redirects
-/contributors /contributors/ 301
 /contributors/getting-started /contributors/getting-started/ 301
 
 # Old projects page redirect
