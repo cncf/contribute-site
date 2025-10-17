@@ -10,7 +10,6 @@
 # Redirects from archived cncf/contribute repository (cncf-contribute.netlify.app)
 # ============================================================================
 
-
 # Old projects page redirect
 # The old /contributors/projects page contained a list of all CNCF projects with contribution info
 # Redirect to /projects/ which is the main projects section on the new site
@@ -126,7 +125,6 @@
 
 # Resources section redirects
 /resources/templates /resources/templates/ 301
-
 # Resources how-to content moved
 /resources/how-to/change-affiliation /maintainers/lifecycle/change-affiliation/ 301
 /resources/how-to/change-affiliation/ /maintainers/lifecycle/change-affiliation/ 301
