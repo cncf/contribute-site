@@ -36,6 +36,8 @@ https://contribute-cncf-io.netlify.app/* https://contribute.cncf.io/:splat 301!
 /accessibility/ /projects/best-practices/accessibility/ 301
 /accessibility/blind-and-visually-impaired /projects/best-practices/accessibility/blind-and-visually-impaired/ 301
 /accessibility/blind-and-visually-impaired/ /projects/best-practices/accessibility/blind-and-visually-impaired/ 301
+/accessibility/blind-and-visually-impaired/using-slack-with-a-screen-reader /projects/best-practices/accessibility/blind-and-visually-impaired/using-slack-with-a-screen-reader/ 301
+/accessibility/blind-and-visually-impaired/using-slack-with-a-screen-reader/ /projects/best-practices/accessibility/blind-and-visually-impaired/using-slack-with-a-screen-reader/ 301
 /accessibility/deaf-and-hard-of-hearing /projects/best-practices/accessibility/deaf-and-hard-of-hearing/ 301
 /accessibility/deaf-and-hard-of-hearing/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/ 301
 /accessibility/deaf-and-hard-of-hearing/best-practices-interviewing-deaf-hoh-candidates /projects/best-practices/accessibility/deaf-and-hard-of-hearing/interviewing/ 301
