@@ -7,6 +7,13 @@
 # New site takes precedence where there are path conflicts.
 
 # ============================================================================
+# Domain redirect - ensure canonical domain usage
+# ============================================================================
+
+# Redirect Netlify preview domain to canonical domain
+https://contribute-cncf-io.netlify.app/* https://contribute.cncf.io/:splat 301!
+
+# ============================================================================
 # Redirects from archived cncf/contribute repository (cncf-contribute.netlify.app)
 # ============================================================================
 
