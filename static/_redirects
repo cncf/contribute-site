@@ -60,6 +60,22 @@ https://contribute-cncf-io.netlify.app/* https://contribute.cncf.io/:splat 301!
 /maintainers/community/ /projects/best-practices/community/ 301
 /maintainers/community/contributor-growth-framework /projects/best-practices/community/contributor-growth/ 301
 /maintainers/community/contributor-growth-framework/ /projects/best-practices/community/contributor-growth/ 301
+/maintainers/community/contributor-growth-framework/engagement /projects/best-practices/community/contributor-growth/engagement/ 301
+/maintainers/community/contributor-growth-framework/engagement/ /projects/best-practices/community/contributor-growth/engagement/ 301
+/maintainers/community/contributor-growth-framework/incentivizing-contributors /projects/best-practices/community/contributor-growth/incentivizing-contributors/ 301
+/maintainers/community/contributor-growth-framework/incentivizing-contributors/ /projects/best-practices/community/contributor-growth/incentivizing-contributors/ 301
+/maintainers/community/contributor-growth-framework/incentivizing-non-code /projects/best-practices/community/contributor-growth/incentivizing-non-code/ 301
+/maintainers/community/contributor-growth-framework/incentivizing-non-code/ /projects/best-practices/community/contributor-growth/incentivizing-non-code/ 301
+/maintainers/community/contributor-growth-framework/long-term-contributors /projects/best-practices/community/contributor-growth/long-term-contributors/ 301
+/maintainers/community/contributor-growth-framework/long-term-contributors/ /projects/best-practices/community/contributor-growth/long-term-contributors/ 301
+/maintainers/community/contributor-growth-framework/meeting-moderation /projects/best-practices/community/contributor-growth/meeting-moderation/ 301
+/maintainers/community/contributor-growth-framework/meeting-moderation/ /projects/best-practices/community/contributor-growth/meeting-moderation/ 301
+/maintainers/community/contributor-growth-framework/motivation /projects/best-practices/community/contributor-growth/motivation/ 301
+/maintainers/community/contributor-growth-framework/motivation/ /projects/best-practices/community/contributor-growth/motivation/ 301
+/maintainers/community/contributor-growth-framework/open-source-roadmaps /projects/best-practices/community/contributor-growth/open-source-roadmaps/ 301
+/maintainers/community/contributor-growth-framework/open-source-roadmaps/ /projects/best-practices/community/contributor-growth/open-source-roadmaps/ 301
+/maintainers/community/contributor-growth-framework/pr-workflow /projects/best-practices/community/contributor-growth/pr-workflow/ 301
+/maintainers/community/contributor-growth-framework/pr-workflow/ /projects/best-practices/community/contributor-growth/pr-workflow/ 301
 /maintainers/community/crm-runbook /projects/best-practices/community/crm-runbook/ 301
 /maintainers/community/project-health /projects/best-practices/community/project-health/ 301
 /maintainers/community/recruiting-playbook /projects/best-practices/community/recruiting-playbook/ 301
@@ -72,9 +88,27 @@ https://contribute-cncf-io.netlify.app/* https://contribute.cncf.io/:splat 301!
 
 /maintainers/security /projects/best-practices/security/ 301
 /maintainers/security/ /projects/best-practices/security/ 301
+/maintainers/security/security-guidelines /projects/best-practices/security/security-hygine/ 301
+/maintainers/security/security-guidelines/ /projects/best-practices/security/security-hygine/ 301
 
 /maintainers/templates /resources/templates/ 301
 /maintainers/templates/ /resources/templates/ 301
+/maintainers/templates/contributing /resources/templates/contributing/ 301
+/maintainers/templates/contributing/ /resources/templates/contributing/ 301
+/maintainers/templates/governance-elections /resources/templates/governance-elections/ 301
+/maintainers/templates/governance-elections/ /resources/templates/governance-elections/ 301
+/maintainers/templates/governance-intro /resources/templates/governance-intro/ 301
+/maintainers/templates/governance-intro/ /resources/templates/governance-intro/ 301
+/maintainers/templates/governance-maintainer /resources/templates/governance-maintainer/ 301
+/maintainers/templates/governance-maintainer/ /resources/templates/governance-maintainer/ 301
+/maintainers/templates/governance-subprojects /resources/templates/governance-subprojects/ 301
+/maintainers/templates/governance-subprojects/ /resources/templates/governance-subprojects/ 301
+/maintainers/templates/issue-labels /resources/templates/issue-labels/ 301
+/maintainers/templates/issue-labels/ /resources/templates/issue-labels/ 301
+/maintainers/templates/maintainers /resources/templates/maintainers/ 301
+/maintainers/templates/maintainers/ /resources/templates/maintainers/ 301
+/maintainers/templates/reviewing /resources/templates/reviewing/ 301
+/maintainers/templates/reviewing/ /resources/templates/reviewing/ 301
 
 # Resources how-to content moved
 /resources/how-to/change-affiliation /maintainers/lifecycle/change-affiliation/ 301
