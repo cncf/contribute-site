@@ -3,7 +3,7 @@
 # Features:
 # - Runs weekly every Monday at 9:00 UTC
 # - Can be manually triggered
-# - Uses htmltest (same as @cncf/techdocs) for link checking
+# - Uses htmltest from @chalin's maintained fork with latest updates
 # - Creates/updates GitHub issues when broken links are found
 # - Automatically closes issues when all links are fixed
 # - Uploads detailed results as artifacts for review
@@ -11,6 +11,7 @@
 # Configuration:
 # - Uses .htmltest.yml for skip patterns and other settings
 # - Uses Makefile (aligned with @cncf/techdocs) for build orchestration
+# - Builds htmltest from source using Go for latest updates
 # - Skips social media links to avoid rate limiting
 # - Maintains a reference cache to speed up checks
 
@@ -35,6 +36,23 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: 'npm'
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Install htmltest
+        run: |
+          HTMLTEST_REPO=github.com/chalin/htmltest
+          BRANCH=dev/main
+          REPO_DIR=tmp/htmltest
+          git clone --branch $BRANCH https://$HTMLTEST_REPO.git $REPO_DIR
+          pushd $REPO_DIR
+          make build
+          popd
+          HTMLTEST=$REPO_DIR/bin/htmltest
+          echo "HTMLTEST=$HTMLTEST" >> $GITHUB_ENV
 
       - name: Install dependencies
         run: npm ci
