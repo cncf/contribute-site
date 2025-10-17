@@ -125,7 +125,6 @@
 /maintainers/templates/reviewing/ /resources/templates/reviewing/ 301
 
 # Resources section redirects
-/resources /resources/ 301
 /resources/templates /resources/templates/ 301
 
 # Resources how-to content moved
