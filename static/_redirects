@@ -105,9 +105,13 @@
 
 # Resources how-to content moved
 /resources/how-to/change-affiliation /maintainers/lifecycle/change-affiliation/ 301
+/resources/how-to/change-affiliation/ /maintainers/lifecycle/change-affiliation/ 301
 /resources/how-to/change-email /maintainers/lifecycle/change-email/ 301
+/resources/how-to/change-email/ /maintainers/lifecycle/change-email/ 301
 /resources/how-to/submit-presentations /maintainers/lifecycle/submit-presentations/ 301
+/resources/how-to/submit-presentations/ /maintainers/lifecycle/submit-presentations/ 301
 /resources/how-to/submit-license-exception-request /projects/submit-license-exception-request/ 301
+/resources/how-to/submit-license-exception-request/ /projects/submit-license-exception-request/ 301
 
 # Resources project-services renamed to services
 /resources/project-services /resources/services/ 301
