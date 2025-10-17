@@ -10,6 +10,12 @@
 # Redirects from archived cncf/contribute repository (cncf-contribute.netlify.app)
 # ============================================================================
 
+# Contributors section redirects
+/contributors /contributors/ 301
+/contributors/ /contributors/ 301
+/contributors/getting-started /contributors/getting-started/ 301
+/contributors/getting-started/ /contributors/getting-started/ 301
+
 # Old projects page redirect
 # The old /contributors/projects page contained a list of all CNCF projects with contribution info
 # Redirect to /projects/ which is the main projects section on the new site
@@ -23,6 +29,18 @@
 # About section - no direct equivalent, redirect to community
 /about /community/ 301
 /about/ /community/ 301
+/about/contributing /resources/templates/contributing/ 301
+/about/contributing/ /resources/templates/contributing/ 301
+
+# About/working-groups redirects to relevant sections
+/about/working-groups/blind-and-visually-impaired /projects/best-practices/accessibility/blind-and-visually-impaired/ 301
+/about/working-groups/blind-and-visually-impaired/ /projects/best-practices/accessibility/blind-and-visually-impaired/ 301
+/about/working-groups/contributor-growth /projects/best-practices/community/contributor-growth/ 301
+/about/working-groups/contributor-growth/ /projects/best-practices/community/contributor-growth/ 301
+/about/working-groups/deaf-and-hard-of-hearing /projects/best-practices/accessibility/deaf-and-hard-of-hearing/ 301
+/about/working-groups/deaf-and-hard-of-hearing/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/ 301
+/about/working-groups/governance /projects/best-practices/governance/ 301
+/about/working-groups/governance/ /projects/best-practices/governance/ 301
 
 # Accessibility content moved to projects/best-practices
 /accessibility /projects/best-practices/accessibility/ 301
@@ -49,6 +67,8 @@
 /accessibility/deaf-and-hard-of-hearing/tips-when-attending-or-speaking-at-a-conference/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/tips-when-attending-or-speaking-at-a-conference/ 301
 
 # Maintainer content reorganized
+/maintainers /maintainers/ 301
+/maintainers/ /maintainers/ 301
 /maintainers/community /projects/best-practices/community/ 301
 /maintainers/community/ /projects/best-practices/community/ 301
 /maintainers/community/contributor-growth-framework /projects/best-practices/community/contributor-growth/ 301
@@ -84,6 +104,10 @@
 /maintainers/governance/charter/ /projects/best-practices/governance/charter/ 301
 /maintainers/governance/leadership-selection /projects/best-practices/governance/leadership-selection/ 301
 /maintainers/governance/leadership-selection/ /projects/best-practices/governance/leadership-selection/ 301
+/maintainers/governance/overview /projects/best-practices/governance/ 301
+/maintainers/governance/overview/ /projects/best-practices/governance/ 301
+/maintainers/governance/paperwork-checklist /projects/best-practices/governance/ 301
+/maintainers/governance/paperwork-checklist/ /projects/best-practices/governance/ 301
 
 /maintainers/security /projects/best-practices/security/ 301
 /maintainers/security/ /projects/best-practices/security/ 301
@@ -109,7 +133,15 @@
 /maintainers/templates/reviewing /resources/templates/reviewing/ 301
 /maintainers/templates/reviewing/ /resources/templates/reviewing/ 301
 
+# Resources section redirects
+/resources /resources/ 301
+/resources/ /resources/ 301
+/resources/templates /resources/templates/ 301
+/resources/templates/ /resources/templates/ 301
+
 # Resources how-to content moved
+/resources/how-to /maintainers/lifecycle/ 301
+/resources/how-to/ /maintainers/lifecycle/ 301
 /resources/how-to/change-affiliation /maintainers/lifecycle/change-affiliation/ 301
 /resources/how-to/change-affiliation/ /maintainers/lifecycle/change-affiliation/ 301
 /resources/how-to/change-email /maintainers/lifecycle/change-email/ 301
