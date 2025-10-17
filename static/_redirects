@@ -12,9 +12,7 @@
 
 # Contributors section redirects
 /contributors /contributors/ 301
-/contributors/ /contributors/ 301
 /contributors/getting-started /contributors/getting-started/ 301
-/contributors/getting-started/ /contributors/getting-started/ 301
 
 # Old projects page redirect
 # The old /contributors/projects page contained a list of all CNCF projects with contribution info
@@ -68,7 +66,6 @@
 
 # Maintainer content reorganized
 /maintainers /maintainers/ 301
-/maintainers/ /maintainers/ 301
 /maintainers/community /projects/best-practices/community/ 301
 /maintainers/community/ /projects/best-practices/community/ 301
 /maintainers/community/contributor-growth-framework /projects/best-practices/community/contributor-growth/ 301
@@ -135,9 +132,7 @@
 
 # Resources section redirects
 /resources /resources/ 301
-/resources/ /resources/ 301
 /resources/templates /resources/templates/ 301
-/resources/templates/ /resources/templates/ 301
 
 # Resources how-to content moved
 /resources/how-to /maintainers/lifecycle/ 301
