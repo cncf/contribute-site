@@ -2,15 +2,13 @@
 CacheExpires: 9000h # ~ 12 months
 DirectoryPath: build
 TestFilesConcurrently: true
-IgnoreDirs:
-IgnoreInternalURLs: # list of paths
 IgnoreURLs: # list of regexes of URLs or path to be ignored
   - ^https?://localhost
   - \?no-link-check
   # Social media links that may be rate-limited
-  - linkedin\.com
-  - twitter\.com
-  - facebook\.com
-  - youtube\.com
-  - medium\.com
-  - instagram\.com
+  - ^https://(www\.)?linkedin\.com
+  - ^https://(www\.)?twitter\.com
+  - ^https://(www\.)?facebook\.com
+  - ^https://(www\.)?youtube\.com
+  - ^https://(www\.)?medium\.com
+  - ^https://(www\.)?instagram\.com
