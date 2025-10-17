@@ -1,0 +1,152 @@
+# Redirects for contribute.cncf.io
+# This file handles redirects from multiple legacy sites:
+# 1. Old cncf-contribute.netlify.app (archived cncf/contribute repo)
+# 2. Old contribute.cncf.io (tag-contributor-strategy/website)
+#
+# The new site (Docusaurus-based) has reorganized and consolidated content from both sources.
+# New site takes precedence where there are path conflicts.
+
+# ============================================================================
+# Redirects from archived cncf/contribute repository (cncf-contribute.netlify.app)
+# ============================================================================
+
+# Old projects page redirect
+# The old /contributors/projects page contained a list of all CNCF projects with contribution info
+# Redirect to /projects/ which is the main projects section on the new site
+/contributors/projects /projects/ 301
+/contributors/projects/ /projects/ 301
+
+# ============================================================================
+# Redirects from tag-contributor-strategy/website (old contribute.cncf.io)
+# ============================================================================
+
+# About section - no direct equivalent, redirect to community
+/about /community/ 301
+/about/ /community/ 301
+/about/contributing /resources/templates/contributing/ 301
+/about/contributing/ /resources/templates/contributing/ 301
+
+# About/working-groups redirects to relevant sections
+/about/working-groups/blind-and-visually-impaired /projects/best-practices/accessibility/blind-and-visually-impaired/ 301
+/about/working-groups/blind-and-visually-impaired/ /projects/best-practices/accessibility/blind-and-visually-impaired/ 301
+/about/working-groups/contributor-growth /projects/best-practices/community/contributor-growth/ 301
+/about/working-groups/contributor-growth/ /projects/best-practices/community/contributor-growth/ 301
+/about/working-groups/deaf-and-hard-of-hearing /projects/best-practices/accessibility/deaf-and-hard-of-hearing/ 301
+/about/working-groups/deaf-and-hard-of-hearing/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/ 301
+/about/working-groups/governance /projects/best-practices/governance/ 301
+/about/working-groups/governance/ /projects/best-practices/governance/ 301
+
+# Accessibility content moved to projects/best-practices
+/accessibility /projects/best-practices/accessibility/ 301
+/accessibility/ /projects/best-practices/accessibility/ 301
+/accessibility/blind-and-visually-impaired /projects/best-practices/accessibility/blind-and-visually-impaired/ 301
+/accessibility/blind-and-visually-impaired/ /projects/best-practices/accessibility/blind-and-visually-impaired/ 301
+/accessibility/blind-and-visually-impaired/using-slack-with-a-screen-reader /projects/best-practices/accessibility/blind-and-visually-impaired/using-slack-with-a-screen-reader/ 301
+/accessibility/blind-and-visually-impaired/using-slack-with-a-screen-reader/ /projects/best-practices/accessibility/blind-and-visually-impaired/using-slack-with-a-screen-reader/ 301
+/accessibility/deaf-and-hard-of-hearing /projects/best-practices/accessibility/deaf-and-hard-of-hearing/ 301
+/accessibility/deaf-and-hard-of-hearing/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/ 301
+/accessibility/deaf-and-hard-of-hearing/best-practices-interviewing-deaf-hoh-candidates /projects/best-practices/accessibility/deaf-and-hard-of-hearing/interviewing/ 301
+/accessibility/deaf-and-hard-of-hearing/best-practices-interviewing-deaf-hoh-candidates/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/interviewing/ 301
+/accessibility/deaf-and-hard-of-hearing/best-practices-interviewing-deaf-hoh-candidates/interpreter-guide /projects/best-practices/accessibility/deaf-and-hard-of-hearing/interviewing/interpreter-guide/ 301
+/accessibility/deaf-and-hard-of-hearing/best-practices-interviewing-deaf-hoh-candidates/interpreter-guide/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/interviewing/interpreter-guide/ 301
+/accessibility/deaf-and-hard-of-hearing/best-practices-interviewing-deaf-hoh-candidates/interview-stage-specific-guide /projects/best-practices/accessibility/deaf-and-hard-of-hearing/interviewing/interview-stage-specific-guide/ 301
+/accessibility/deaf-and-hard-of-hearing/best-practices-interviewing-deaf-hoh-candidates/interview-stage-specific-guide/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/interviewing/interview-stage-specific-guide/ 301
+/accessibility/deaf-and-hard-of-hearing/best-practices-interviewing-deaf-hoh-candidates/interviewer-and-hiring-manager-guide /projects/best-practices/accessibility/deaf-and-hard-of-hearing/interviewing/interviewer-and-hiring-manager-guide/ 301
+/accessibility/deaf-and-hard-of-hearing/best-practices-interviewing-deaf-hoh-candidates/interviewer-and-hiring-manager-guide/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/interviewing/interviewer-and-hiring-manager-guide/ 301
+/accessibility/deaf-and-hard-of-hearing/conference-best-practices /projects/best-practices/accessibility/deaf-and-hard-of-hearing/conference-best-practices/ 301
+/accessibility/deaf-and-hard-of-hearing/conference-best-practices/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/conference-best-practices/ 301
+/accessibility/deaf-and-hard-of-hearing/live-captions-for-community-events /projects/best-practices/accessibility/deaf-and-hard-of-hearing/live-captions-for-community-events/ 301
+/accessibility/deaf-and-hard-of-hearing/live-captions-for-community-events/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/live-captions-for-community-events/ 301
+/accessibility/deaf-and-hard-of-hearing/tips-when-attending-or-speaking-at-a-conference /projects/best-practices/accessibility/deaf-and-hard-of-hearing/tips-when-attending-or-speaking-at-a-conference/ 301
+/accessibility/deaf-and-hard-of-hearing/tips-when-attending-or-speaking-at-a-conference/ /projects/best-practices/accessibility/deaf-and-hard-of-hearing/tips-when-attending-or-speaking-at-a-conference/ 301
+
+# Maintainer content reorganized
+/maintainers/community/contributor-growth-framework /projects/best-practices/community/contributor-growth/ 301
+/maintainers/community/contributor-growth-framework/ /projects/best-practices/community/contributor-growth/ 301
+/maintainers/community/contributor-growth-framework/engagement /projects/best-practices/community/contributor-growth/engagement/ 301
+/maintainers/community/contributor-growth-framework/engagement/ /projects/best-practices/community/contributor-growth/engagement/ 301
+/maintainers/community/contributor-growth-framework/incentivizing-contributors /projects/best-practices/community/contributor-growth/incentivizing-contributors/ 301
+/maintainers/community/contributor-growth-framework/incentivizing-contributors/ /projects/best-practices/community/contributor-growth/incentivizing-contributors/ 301
+/maintainers/community/contributor-growth-framework/incentivizing-non-code /projects/best-practices/community/contributor-growth/incentivizing-non-code/ 301
+/maintainers/community/contributor-growth-framework/incentivizing-non-code/ /projects/best-practices/community/contributor-growth/incentivizing-non-code/ 301
+/maintainers/community/contributor-growth-framework/long-term-contributors /projects/best-practices/community/contributor-growth/long-term-contributors/ 301
+/maintainers/community/contributor-growth-framework/long-term-contributors/ /projects/best-practices/community/contributor-growth/long-term-contributors/ 301
+/maintainers/community/contributor-growth-framework/meeting-moderation /projects/best-practices/community/contributor-growth/meeting-moderation/ 301
+/maintainers/community/contributor-growth-framework/meeting-moderation/ /projects/best-practices/community/contributor-growth/meeting-moderation/ 301
+/maintainers/community/contributor-growth-framework/motivation /projects/best-practices/community/contributor-growth/motivation/ 301
+/maintainers/community/contributor-growth-framework/motivation/ /projects/best-practices/community/contributor-growth/motivation/ 301
+/maintainers/community/contributor-growth-framework/open-source-roadmaps /projects/best-practices/community/contributor-growth/open-source-roadmaps/ 301
+/maintainers/community/contributor-growth-framework/open-source-roadmaps/ /projects/best-practices/community/contributor-growth/open-source-roadmaps/ 301
+/maintainers/community/contributor-growth-framework/pr-workflow /projects/best-practices/community/contributor-growth/pr-workflow/ 301
+/maintainers/community/contributor-growth-framework/pr-workflow/ /projects/best-practices/community/contributor-growth/pr-workflow/ 301
+/maintainers/community/crm-runbook /projects/best-practices/community/crm-runbook/ 301
+/maintainers/community/crm-runbook/ /projects/best-practices/community/crm-runbook/ 301
+/maintainers/community/project-health /projects/best-practices/community/project-health/ 301
+/maintainers/community/project-health/ /projects/best-practices/community/project-health/ 301
+/maintainers/community/recruiting-playbook /projects/best-practices/community/recruiting-playbook/ 301
+/maintainers/community/recruiting-playbook/ /projects/best-practices/community/recruiting-playbook/ 301
+/maintainers/community/vendor-neutrality /projects/best-practices/community/vendor-neutrality/ 301
+/maintainers/community/vendor-neutrality/ /projects/best-practices/community/vendor-neutrality/ 301
+
+/maintainers/governance /projects/best-practices/governance/ 301
+/maintainers/governance/ /projects/best-practices/governance/ 301
+/maintainers/governance/charter /projects/best-practices/governance/charter/ 301
+/maintainers/governance/charter/ /projects/best-practices/governance/charter/ 301
+/maintainers/governance/leadership-selection /projects/best-practices/governance/leadership-selection/ 301
+/maintainers/governance/leadership-selection/ /projects/best-practices/governance/leadership-selection/ 301
+/maintainers/governance/overview /projects/best-practices/governance/ 301
+/maintainers/governance/overview/ /projects/best-practices/governance/ 301
+/maintainers/governance/paperwork-checklist /projects/best-practices/governance/ 301
+/maintainers/governance/paperwork-checklist/ /projects/best-practices/governance/ 301
+
+/maintainers/security /projects/best-practices/security/ 301
+/maintainers/security/ /projects/best-practices/security/ 301
+/maintainers/security/security-guidelines /projects/best-practices/security/security-hygine/ 301
+/maintainers/security/security-guidelines/ /projects/best-practices/security/security-hygine/ 301
+
+/maintainers/templates /resources/templates/ 301
+/maintainers/templates/ /resources/templates/ 301
+/maintainers/templates/contributing /resources/templates/contributing/ 301
+/maintainers/templates/contributing/ /resources/templates/contributing/ 301
+/maintainers/templates/governance-elections /resources/templates/governance-elections/ 301
+/maintainers/templates/governance-elections/ /resources/templates/governance-elections/ 301
+/maintainers/templates/governance-intro /resources/templates/governance-intro/ 301
+/maintainers/templates/governance-intro/ /resources/templates/governance-intro/ 301
+/maintainers/templates/governance-maintainer /resources/templates/governance-maintainer/ 301
+/maintainers/templates/governance-maintainer/ /resources/templates/governance-maintainer/ 301
+/maintainers/templates/governance-subprojects /resources/templates/governance-subprojects/ 301
+/maintainers/templates/governance-subprojects/ /resources/templates/governance-subprojects/ 301
+/maintainers/templates/issue-labels /resources/templates/issue-labels/ 301
+/maintainers/templates/issue-labels/ /resources/templates/issue-labels/ 301
+/maintainers/templates/maintainers /resources/templates/maintainers/ 301
+/maintainers/templates/maintainers/ /resources/templates/maintainers/ 301
+/maintainers/templates/reviewing /resources/templates/reviewing/ 301
+/maintainers/templates/reviewing/ /resources/templates/reviewing/ 301
+
+# Resources section redirects
+/resources/templates /resources/templates/ 301
+# Resources how-to content moved
+/resources/how-to/change-affiliation /maintainers/lifecycle/change-affiliation/ 301
+/resources/how-to/change-affiliation/ /maintainers/lifecycle/change-affiliation/ 301
+/resources/how-to/change-email /maintainers/lifecycle/change-email/ 301
+/resources/how-to/change-email/ /maintainers/lifecycle/change-email/ 301
+/resources/how-to/submit-presentations /maintainers/lifecycle/submit-presentations/ 301
+/resources/how-to/submit-presentations/ /maintainers/lifecycle/submit-presentations/ 301
+/resources/how-to/submit-license-exception-request /projects/submit-license-exception-request/ 301
+/resources/how-to/submit-license-exception-request/ /projects/submit-license-exception-request/ 301
+
+# Resources project-services renamed to services
+/resources/project-services /resources/services/ 301
+/resources/project-services/ /resources/services/ 301
+/resources/project-services/audits /resources/services/audits/ 301
+/resources/project-services/audits/ /resources/services/audits/ 301
+/resources/project-services/cncf-support /resources/services/cncf-support/ 301
+/resources/project-services/cncf-support/ /resources/services/cncf-support/ 301
+/resources/project-services/hosted-tools /resources/services/hosted-tools/ 301
+/resources/project-services/hosted-tools/ /resources/services/hosted-tools/ 301
+/resources/project-services/maturity-levels /resources/services/maturity-levels/ 301
+/resources/project-services/maturity-levels/ /resources/services/maturity-levels/ 301
+/resources/project-services/outreach-events /resources/services/outreach-events/ 301
+/resources/project-services/outreach-events/ /resources/services/outreach-events/ 301
+/resources/project-services/technical-writing /resources/services/technical-writing/ 301
+/resources/project-services/technical-writing/ /resources/services/technical-writing/ 301
