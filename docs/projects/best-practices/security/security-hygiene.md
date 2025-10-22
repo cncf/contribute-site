@@ -1,6 +1,6 @@
 ---
 title: Security Hygiene Guide for Project Maintainers
-sidebar_label: Security Hygine
+sidebar_label: Security Hygiene
 sidebar_position: 2
 ---
 
