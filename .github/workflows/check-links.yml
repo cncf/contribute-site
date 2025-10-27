@@ -65,7 +65,8 @@ jobs:
         continue-on-error: true
         run: |
           echo "Running link check with htmltest..."
-          npm run check:links 2>&1 | tee htmltest-output.txt
+          mkdir -p tmp
+          npm run check:links 2>&1 | tee tmp/htmltest-output.txt
           exit ${PIPESTATUS[0]}
 
       - name: Process and analyze results
