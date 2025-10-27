@@ -23,7 +23,6 @@ check-links-only:
 	$(HTMLTEST) $(HTMLTEST_ARGS)
 
 refcache-restore: $(LINK_CACHE_FILE_DEST_DIR)/$(LINK_CACHE_FILE) $(LINK_CACHE_FILE_SRC_DIR)
-ifeq (refcache, $(REFCACHE))
 	cp $(LINK_CACHE_FILE_DEST_DIR)/$(LINK_CACHE_FILE) $(LINK_CACHE_FILE_SRC_DIR)/
 endif
 
