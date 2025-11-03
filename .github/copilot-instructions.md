@@ -48,19 +48,26 @@ The assistant should adhere to the following standards when generating analytica
 - Each page requires an executive summary at the top
 - Markdown tables and formatting should be utilized for visual clarity
 - Template should include designated sections for links to references and associated issues
+- Open Issues labeled `Blog` that are assigned to copilot must be turned into blog posts following docusaurus standards.
+- The submitter of a blog post filed via a GitHub issue must be added to authors.yml using their github information to fill out the author field. This ensures that the addition of authors to authors.yml is always automated. 
 
 ## Implementation Details (IMPORTANT)
 
 Be very strict with the instructions in this section: 
 
-- Do NOT use bing search, use the native github API - this repository will only ever ask for things that are hosted on github. Specifically @ublue-os and @cncf
+- Do NOT use bing search, use the native github API - this repository will only ever ask for things that are hosted on github. Specifically @cncf
 - When generating answers for CNCF projects, always break up the table by Graduated, Incubating, and Sandbox
 - Always follow docusaurus best practices and always investigate popular community plugins if necessary. Do not overcomplicate it, the website configuration should remain as vanilla as possible, avoid custom work.
 - Always ensure you are generating valid Markdown, link the final document with the same linter docusaurus uses. Don't bother with MDX, always generate plain Markdown.
-- Ensure that the build is ALWAYS PASSING for EVERY PULL REQUEST. Under no circumstances propose code that breaks the build. 
+- Ensure that the build is ALWAYS PASSING for EVERY PULL REQUEST. Under no circumstances propose code that breaks the build.
+- Always ensure that the vocabulary and definitions for everything you create match the official definitions in @cncf/glossary
+- Use https://github.com/cncf/toc/blob/main/tags.yaml as the source of truth for individuals who participate in CNCF activities. When modifying any page that lists people, positions, or affiliations, verify against this file and update the page accordingly; if the upstream data is outdated, also submit a PR to @cncf/toc to correct it. 
+
 
 ## Style Guide
 
+- Use @kubernetes/website/blob/main/content/en/docs/contribute/style/style-guide.md as the style guide for this entire site. Only use the content and wording recommendations, do NOT use any Hugo specific content from this source. This is intended to be for content style only.
+- Use the files in @kubernetes/website/tree/main/content/en/docs/contribute/style as supplementary style recommendations, ignore the Hugo file.
 - Keep all the documentation pages updated with the freshest style guide. 
 - Feel free to update old pages as the style guide develops.
 - Add docusaurus tags and retag articles as appropriate while making changes to content. 

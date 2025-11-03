@@ -11,6 +11,8 @@ Programming is focused on sharing best practices, diving into contributing proce
 
 ---
 
+![2025 CNCF Maintainer Summit banner](https://github.com/user-attachments/assets/72b55574-ebbd-4168-93c3-44b11daf179b)
+
 ## Event Details
 
 _The following details are specific to the 2025 Maintainer Summit._
@@ -125,3 +127,6 @@ If you have questions, need assistance, or believe your registration was incorre
 ### Conduct
 
 All attendees are expected to adhere to the Code of Conduct. If an issue should arise, please contact the event staff or the program chairs.
+
+![London cityscape for 2025 Maintainer Summit location](https://github.com/user-attachments/assets/91aef680-27a7-49f9-8a90-91d65c73c4d6)
+

@@ -74,7 +74,7 @@ We traditionally have the following awards, rewarded at different times of each 
 ### 2025
 
 #### 2025 Top End User
-  - [ANT Group](https://www.cncf.io/announcements/2025/04/03/cloud-native-computing-foundation-announces-ant-group-as-the-top-end-user-award-winner/)
+  - [Ant Group](https://www.cncf.io/announcements/2025/04/03/cloud-native-computing-foundation-announces-ant-group-as-the-top-end-user-award-winner/)
 
 ### 2024
 
