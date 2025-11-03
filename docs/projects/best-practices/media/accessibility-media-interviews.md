@@ -1,5 +1,5 @@
 ---
-title: "Media interview best practices for deaf or hard of hearing guests"
+title: "Media interviews with deaf or hard of hearing guests"
 date: 2024-02-20
 description: >
   Tips when doing media interviews with deaf or hard of hearing individuals
