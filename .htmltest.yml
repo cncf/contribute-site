@@ -8,6 +8,7 @@ IgnoreURLs: # list of regexes of URLs or path to be ignored
   # Social media links that may be rate-limited
   - ^https://(www\.)?linkedin\.com
   - ^https://(www\.)?twitter\.com
+  - ^https://(www\.)?x\.com
   - ^https://(www\.)?facebook\.com
   - ^https://(www\.)?youtube\.com
   - ^https://(www\.)?medium\.com

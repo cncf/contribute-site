@@ -24,13 +24,12 @@ check-links-only:
 
 refcache-restore: $(LINK_CACHE_FILE_DEST_DIR)/$(LINK_CACHE_FILE) $(LINK_CACHE_FILE_SRC_DIR)
 	cp $(LINK_CACHE_FILE_DEST_DIR)/$(LINK_CACHE_FILE) $(LINK_CACHE_FILE_SRC_DIR)/
-endif
 
 refcache-save:
-ifeq (refcache, $(REFCACHE))
-	cp $(LINK_CACHE_FILE_SRC_DIR)/$(LINK_CACHE_FILE) $(LINK_CACHE_FILE_DEST_DIR)/
-	npx prettier --prose-wrap=always --write $(LINK_CACHE_FILE_DEST_DIR)/$(LINK_CACHE_FILE)
-endif
+	@if [ -f $(LINK_CACHE_FILE_SRC_DIR)/$(LINK_CACHE_FILE) ]; then \
+		cp $(LINK_CACHE_FILE_SRC_DIR)/$(LINK_CACHE_FILE) $(LINK_CACHE_FILE_DEST_DIR)/; \
+		npx prettier --prose-wrap=always --write $(LINK_CACHE_FILE_DEST_DIR)/$(LINK_CACHE_FILE); \
+	fi
 
 $(LINK_CACHE_FILE_SRC_DIR):
 	mkdir -p $(LINK_CACHE_FILE_SRC_DIR)

@@ -1,9 +1,8 @@
 const fs = require('fs');
-const path = require('path');
 
 try {
   // Read htmltest output
-  const output = fs.readFileSync('htmltest-output.txt', 'utf8');
+  const output = fs.readFileSync('tmp/htmltest-output.txt', 'utf8');
   
   // Parse for errors - htmltest outputs errors in a specific format
   const lines = output.split('\n');
