@@ -548,7 +548,7 @@ For projects applying to move maturity levels:
 
 ### Supporting Documentation
 
-- [CNCF Licensing Policy](https://github.com/cncf/foundation/blob/main/allowed-third-party-license-policy.md) - Dependency licensing
+- [CNCF Licensing Policy](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md) - Dependency licensing
 - [OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/) - Security badge program
 - [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md) - Community expectations
 - [Vendor Neutrality Guide](https://contribute.cncf.io/maintainers/community/vendor-neutrality/) - Governance expectations
