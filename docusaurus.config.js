@@ -43,7 +43,7 @@ const config = {
         htmlLang: 'en-US',
         calendar: 'gregory',
         path: 'en',
-      }
+      },
     },
   },
 
@@ -84,6 +84,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/cloud-native-contributors.jpg',
+      metadata: [
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@CloudNativeFdn' },
+        { name: 'twitter:creator', content: '@CloudNativeFdn' },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:site_name', content: 'CNCF Contributors' },
+      ],
       announcementBar: {
         id: `hello-bar`,
         content: `🎉️ Meet us in Atlanta for KubeCon + CloudNativeCon North America · Nov 10-13 ·<b><a target="_blank" href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/?utm_source=contribute-cncf-io&utm_medium=subpage&utm_campaign=10608228-KubeCon-NA-2025&utm_content=hello-bar">Register Today!</b> 🥳️`,
@@ -104,7 +111,7 @@ const config = {
             position: 'left',
             label: 'Maintainers',
           },
-            {
+          {
             type: 'docSidebar',
             sidebarId: 'projectsSidebar',
             position: 'left',
