@@ -12,13 +12,11 @@
 
 .featureLink {
   text-decoration: none;
-  color: inherit;
+  color: #000;
   display: block;
-  transition: transform 0.2s ease-in-out;
 }
 
 .featureLink:hover {
   text-decoration: none;
-  color: inherit;
-  transform: translateY(-4px);
+  color: #000;
 }
