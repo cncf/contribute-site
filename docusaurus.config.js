@@ -88,8 +88,8 @@ const config = {
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@CloudNativeFdn' },
         { name: 'twitter:creator', content: '@CloudNativeFdn' },
-        { name: 'og:type', content: 'website' },
-        { name: 'og:site_name', content: 'CNCF Contributors' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'CNCF Contributors' },
       ],
       announcementBar: {
         id: `hello-bar`,
