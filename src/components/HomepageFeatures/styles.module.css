@@ -11,12 +11,12 @@
 }
 
 .featureLink {
-  text-decoration: none;
-  color: #000;
+  text-decoration: none !important;
+  color: #000 !important;
   display: block;
 }
 
 .featureLink:hover {
-  text-decoration: none;
-  color: #000;
+  text-decoration: none !important;
+  color: #000 !important;
 }
