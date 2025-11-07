@@ -10,13 +10,13 @@
   width: 200px;
 }
 
-.featureLink {
-  text-decoration: none !important;
-  color: #000 !important;
+.features .featureLink {
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
   display: block;
 }
 
-.featureLink:hover {
-  text-decoration: none !important;
-  color: #000 !important;
+.features .featureLink:hover {
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
 }
