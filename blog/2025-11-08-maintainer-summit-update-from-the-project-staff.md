@@ -39,7 +39,7 @@ And please make sure to take the [maintainer survey](http://maintainers.cncf.io)
 
 **Please fill out the survey so we can serve you better**
 
-* And please make sure to take the [maintainer survey](http://maintainers-survey.cncf.io)\! This is your chance to tell us how we're doing, gauge
+* And please make sure to take the [maintainer survey](http://maintainers-survey.cncf.io)! This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and to help influence our priorities in 2026.
 
 **Other news**
 
