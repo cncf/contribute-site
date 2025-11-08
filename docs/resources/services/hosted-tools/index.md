@@ -10,7 +10,7 @@ CNCF Projects may freely select their own tools, produce their own documentation
 
 Most services can be requested through a Service Desk ticket, unless otherwise noted below.
 
-- GitHub Copilot. Maintainers get access to Copilot Enterprise.
+- [GitHub Copilot](https://docs.github.com/en/copilot). Maintainers get access to Copilot Enterprise.
 - [Docker Hub and other services](https://www.cncf.io/announcements/2025/09/18/cncf-expands-infrastructure-support-for-project-maintainers-through-partnership-with-docker/). Projects get direct access to Docker's Sponsored Open Source (DSOS) program, unlocking upgraded registry, security, and support services.
 - [Zoom](https://zoom.us/) video conferencing Pro accounts for video meetings, recordings, and scheduling.
 - [LastPass](https://www.lastpass.com/), [1Password](https://github.com/1Password/1password-teams-open-source), and [Keybase](https://keybase.io) to manage access to shared secrets.
