@@ -72,3 +72,12 @@ riaankleinhans:
   socials:
     github: riaankleinhans
     linkedin: riaankleinhans
+robertkielty:
+  name: Robert Kielty
+  page: true
+  title: Projects Team
+  image_url: https://github.com/robertkielty.png
+  email: todo
+  socials:
+    github: robertkielty
+    linkedin: rkielty

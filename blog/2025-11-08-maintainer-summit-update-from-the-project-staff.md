@@ -1,7 +1,7 @@
 ---
 title: Maintainer Summit Update from the Projects Staff
 date: 2025-11-08
-authors: [krook, idvoretskyi, castrojo, jeefy, mrbobbytables, nate-double-u, riaankleinhans]
+authors: [krook, idvoretskyi, castrojo, jeefy, mrbobbytables, nate-double-u, riaankleinhans, robertkielty]
 tags: [maintainers, community, projects, services]
 ---
 
