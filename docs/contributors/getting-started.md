@@ -150,4 +150,4 @@ Open source projects always need new contributors because they rely on the commu
 
 Contributing to open source is a great way to improve your skills, learn new technologies, and give back to the community. Whether you're a technical or non-technical contributor, there are many ways to get involved. Remember to start small, collaborate with other contributors, and always be respectful and courteous in your interactions with the community. Good luck on your journey!
 
->>>>>>> 3a687c9 (Move new contributor content)
+
