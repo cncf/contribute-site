@@ -7,11 +7,11 @@ tags: [maintainers, community, projects, services]
 
 Greetings maintainers! We have some exciting updates about resources newly available to you and your projects.
 
-And please make sure to take the [maintainer survey](http://maintainers.cncf.io)! This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and to help influence our priorities in 2026.
+And please make sure to take the [maintainer survey](http://maintainers-survey.cncf.io)! This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and influence our priorities in 2026.
 
 :::tip Take the Maintainer Survey
 
-**Maintainer Survey**: [maintainers.cncf.io](http://maintainers.cncf.io)
+**Help us help you**: [maintainers-survey.cncf.io](http://maintainers-survey.cncf.io)
 
 :::
 
@@ -37,13 +37,17 @@ The latest version of [Insights was launched at Open Source Summit in June](http
 
 [The CNCF has moved its community calendar to PCC](https://www.cncf.io/blog/2025/10/23/cncf-embraces-lfx-self-service-for-calendar-management/) which now enables maintainers to publish and update their own entries on the [CNCF community calendar](https://www.cncf.io/calendar/). This eliminates a project and staff bottleneck as entries were previously handled as Service Desk tickets. PCC also recently added an often-requested feature: the automatic upload of project meetings to the project's designated YouTube channel. Projects have control over any video changes before publication.
 
-[**ask.cncf.io**](http://ask.cncf.io) - ask.cncf.io is an AI assistant built with Dosu designed to answer questions about the Cloud Native Computing Foundation (CNCF) ecosystem, including projects, governance, events, and contributor information. This is not a general LLM chatbot. It only contains information from official repositories and documentation across the CNCF. Give it a try and come back often to see how it improves over time.
+### [ask.cncf.io](http://ask.cncf.io)
 
-[**contribute.cncf.io**](http://contribute.cncf.io) - We've relaunched the [contribute.cncf.io](http://contribute.cncf.io) site 🎉. This site serves as the primary place for maintainers to learn about what benefits they have as a CNCF project and helps expand our funnel of new maintainers for your projects. You can also [submit pull requests](https://github.com/cncf/contribute-site) to improve content.
+[ask.cncf.io](http://ask.cncf.io) is an AI assistant built with Dosu designed to answer questions about the Cloud Native Computing Foundation (CNCF) ecosystem, including projects, governance, events, and contributor information. This is not a general LLM chatbot. It only contains information from official repositories and documentation across the CNCF. Give it a try and come back often to see how it improves over time.
+
+### [contribute.cncf.io](http://contribute.cncf.io)
+
+We've relaunched the [contribute.cncf.io](http://contribute.cncf.io) site 🎉. This site serves as the primary place for maintainers to learn about what benefits they have as a CNCF project and helps expand our funnel of new maintainers for your projects. You can also [submit pull requests](https://github.com/cncf/contribute-site) to improve content.
 
 ## Reminder about other services available to you
 
-* The [contribute.cncf.io resource page](https://contribute.cncf.io/resources/) is up to date with everything that's available to you.
+* The [contribute.cncf.io resource page](https://contribute.cncf.io/resources/) is up to date with everything that's available to projects and maintainers.
 * [Service Desk](https://servicedesk.cncf.io/) is where you can make a variety of requests, ask questions, and connect with CNCF staff.
 * Please make sure all of your maintainers are up to date on [maintainers.cncf.io](http://maintainers.cncf.io). This is how we validate Maintainer Summit registrations, send invites to Service Desk, and make sure projects are up to speed on upcoming event opportunities.
 
@@ -54,11 +58,11 @@ The latest version of [Insights was launched at Open Source Summit in June](http
 
 ## Please fill out the survey so we can serve you better
 
-* Yes, another reminder 🙂. Please make sure to take the [maintainer survey](http://maintainers-survey.cncf.io)! This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and to help influence our priorities in 2026.
+* Yes, another reminder 🙂. Please make sure to take the [maintainer survey](http://maintainers-survey.cncf.io)! This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and influence our priorities in 2026.
 
 :::tip Take the Maintainer Survey
 
-**Maintainer Survey**: [maintainers.cncf.io](http://maintainers.cncf.io)
+**Help us help you**: [maintainers-survey.cncf.io](http://maintainers-survey.cncf.io)
 
 :::
 
