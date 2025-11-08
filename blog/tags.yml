@@ -47,3 +47,18 @@ project-pavilion:
   label: Project Pavilion
   permalink: /project-pavilion
   description: Project Pavilion kiosk information and updates
+
+maintainers:
+  label: Maintainers
+  permalink: /maintainers
+  description: Of interest to maintainers
+
+projects:
+  label: Projects
+  permalink: /projects
+  description: Of interest to projects
+
+services:
+  label: Services
+  permalink: /services
+  description: About services for maintainers
