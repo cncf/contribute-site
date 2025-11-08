@@ -5,7 +5,7 @@ authors: [krook, idvoretskyi, castrojo, jeefy, mrbobbytables, nate-double-u, ria
 tags: [maintainers, community, projects, services]
 ---
 
-Greeting maintainers! We have some exciting updates about resources newly available to you and your projects.
+Greetings maintainers! We have some exciting updates about resources newly available to you and your projects.
 
 And please make sure to take the [maintainer survey](http://maintainers.cncf.io)! This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and to help influence our priorities in 2026.
 
