@@ -221,3 +221,5 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/node,docusaurus
 
+# Link checker (htmltest) artifacts
+tmp/
