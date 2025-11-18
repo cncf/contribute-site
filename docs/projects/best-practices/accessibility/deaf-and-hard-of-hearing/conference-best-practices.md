@@ -1,5 +1,5 @@
 ---
-title: "Best practices for an inclusive and welcoming conference"
+title: "Event organizers"
 sidebar_label: "Inclusive conference best practices"
 description: This is a living document, so please be sure to check regularly for updates.
 ---
