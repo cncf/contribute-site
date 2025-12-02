@@ -1,7 +1,7 @@
 ---
 title: Initiatives
 sidebar_label: Initiatives
-sidebar_position: 8
+sidebar_position: 6
 tags:
   - initiatives
   - cncf
