@@ -1,7 +1,7 @@
 ---
 title: Technical Community Groups (TCGs)
 sidebar_label: Technical Community Groups
-sidebar_position: 6
+sidebar_position: 5
 tags:
   - tcgs
   - cncf

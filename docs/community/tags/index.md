@@ -1,7 +1,7 @@
 ---
 title: Technical Advisory Groups (TAGs)
 sidebar_label: Technical Advisory Groups
-sidebar_position: 5
+sidebar_position: 4
 tags:
   - tags
   - cncf

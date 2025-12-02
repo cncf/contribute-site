@@ -1,7 +1,7 @@
 ---
 title: Technical Oversight Committee (TOC)
 sidebar_label: Technical Oversight Committee
-sidebar_position: 5
+sidebar_position: 3
 tags:
   - toc
   - cncf
