@@ -4,7 +4,7 @@ In September 2025, the "Shai-Hulud" self-replicating worm was discovered by Sock
 After gaining initial access to an account, malware scanned for sensitive credentials, which were then exfiltrated.
 The credentials were then used to publish a new version of packages that the developers maintained or could access.
 Hence, users of the package were then infected and replicated the malware.
-The name of the attack comes from the `shai-hulud.yaml`, a reference to the sandworms in Dune.
+The name of the attack comes from a configuration file named `shai-hulud.yaml` found within the malware, which references the sandworms in Dune.
 
 ## Impact
 
