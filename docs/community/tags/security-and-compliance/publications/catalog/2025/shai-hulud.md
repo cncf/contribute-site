@@ -12,7 +12,7 @@ The name of the attack comes from the `shai-hulud.yaml`, a reference to the sand
 * The US Cybersecurity and Infrastructure Security Agency (CISA) released an alert about the attack.
 * npm acted to harden publishing by local publishing with required two-factor authentication (2FA), granular tokens with limited lifetime, and trusted publishing.
 
-## Type of Compromise
+## Type of compromise
 
 **Attack Chaining** was used throughout the attack.
 
