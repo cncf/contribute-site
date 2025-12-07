@@ -1,7 +1,7 @@
 # npm phishing campaign
 
 In September 2025, an npm maintainer (Qix) was compromised by a phishing email `support [at] npmjs [dot] help` (created three days before the attack).
-The adversaries uploaded malicious code to 18 npm packages maintained by the developer, with more than 2 billion downloads per week.
+The attackers uploaded malicious code to 18 npm packages maintained by the developer, with more than 2 billion downloads per week.
 The malware injects itself within the browser, watches for cryptocurrency wallets transfers, rewrites destinations to attacker controlled addresses, hijacks the transactions, and remains stealthy.
 
 ## Impact
