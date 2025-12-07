@@ -12,7 +12,7 @@ Note, that even broken Pickle files could execute malicious code on a developer 
 
 ## Type of compromise
 
-The attack leveraged the trust of models available in Hugging face. Hence, is a leveraged **Trust and Signing**.
+The attack leveraged the trust of models available in Hugging Face. Hence, is a leveraged **Trust and Signing**.
 
 ## References
 
