@@ -10,7 +10,7 @@ The malware injects itself within the browser, watches for cryptocurrency wallet
 * Although the packages compromised were quite popular, the economic impact of the attack was not severe. Only $500 was stolen as of September 9, 2025.
 * The attack may have inspired similar campaigns in other package managers such as [crates.io](https://blog.rust-lang.org/2025/09/12/crates-io-phishing-campaign/) and [PyPi](https://blog.pypi.org/posts/2025-09-23-plenty-of-phish-in-the-sea/).
 
-## Type of Compromise
+## Type of compromise
 
 The attack started through **Social Engineering/Phishing Attack**. Then **Attack Chaining** was used to introduce malware within the packages.
 
