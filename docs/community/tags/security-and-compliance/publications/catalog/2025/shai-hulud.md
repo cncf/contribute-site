@@ -3,7 +3,7 @@
 In September 2025, the "Shai-Hulud" self-replicating worm was discovered by Socket.
 After gaining initial access to an account, malware scanned for sensitive credentials, which were then exfiltrated.
 The credentials were then used to publish a new version of packages that the developers maintained or could access.
-Hence, users of the package were then infected and were replicating the malware.
+Hence, users of the package were then infected and replicated the malware.
 The name of the attack comes from the `shai-hulud.yaml`, a reference to the sandworms in Dune.
 
 ## Impact
