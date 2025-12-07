@@ -3,7 +3,7 @@
 Two malicious pickles were discovered by ReversingLab in February, 2025.
 Pickle is a commonly and popularly used to serialize and deserialize ML model data, supported in platforms such as Hugging Face.
 The malware contained a reverse shell that connected to a hardcoded IP address.
-Note, that even broken Pickle files could execute malicious code on a developer system.
+Note that even broken Pickle files could execute malicious code on a developer system.
 
 ## Impact
 
