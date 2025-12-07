@@ -10,7 +10,7 @@ Note, that even broken Pickle files could execute malicious code on a developer 
 * HuggingFace removed the malicious models within 24 hours of disclosure.
 * The Picklescan tool was improved to identify threats in “broken” Pickle files.
 
-## Type of Compromise
+## Type of compromise
 
 The attack leveraged the trust of models available in Hugging face. Hence, is a leveraged **Trust and Signing**.
 
