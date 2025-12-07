@@ -10,7 +10,7 @@ The name of the attack comes from the `shai-hulud.yaml`, a reference to the sand
 
 * The compromised npm packages and packages with Indicators of Compromise were removed.
 * The US Cybersecurity and Infrastructure Security Agency (CISA) released an alert about the attack.
-* npm acted to harden publishing by local publishing with required two-factor authentication (2FA), granular tokens with limited lifetime, and trusted publishing.
+* npm implemented hardening measures including requiring two-factor authentication (2FA) for publishing, using granular tokens with limited lifetimes, and enabling trusted publishing.
 
 ## Type of compromise
 
