@@ -5,9 +5,9 @@
 ## Description
 
 According to [Retool](https://retool.com/blog/mfa-isnt-mfa) (a development
-platform) the compromise (through spear phishing and voice deepfaking) of an
-employee's Google account (used for MFA cloud synchronization) allowed an
-attacker to control a number of customer accounts.
+platform) the compromise (through spear phishing and voice deepfaking) of
+an employee's Google account (used for MFA cloud synchronization) allowed
+an attacker to control a number of customer accounts.
 
 ## Impact
 
@@ -18,8 +18,8 @@ attacker to control end customer funds.
 ## Type of Compromise
 
 This compromise of **Dev Tooling**, possibly via **Source Code** changes
-impersonating an employee (rooted on the spear-phishing and voice deepfaking),
-exhibits various **Chaining** characteristics.
+impersonating an employee (rooted on the spear-phishing and voice
+deepfaking), exhibits various **Chaining** characteristics.
 
 ## Additional references
 

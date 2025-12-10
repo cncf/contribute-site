@@ -1,46 +1,42 @@
 ---
-title: 'The Steering Committee Elections Template'
-linkTitle: 'Elections Governance'
+title: "The Steering Committee Elections Template"
+linkTitle: "Elections Governance"
 date: 2022-09-15
 draft: false
 weight: 32
 aliases:
-  - /maintainers/github/templates/required/governance-elections
+- /maintainers/github/templates/required/governance-elections
 ---
 
-| Audience of this HowTo | Audience of The Document | Required by CNCF |
-| ---------------------- | ------------------------ | ---------------- |
-| Maintainers            | Contributors             | Yes, graduated   |
+| Audience of this HowTo | Audience of The Document    | Required by CNCF      |
+| ---------------------- | --------------------------- | --------------------- |
+| Maintainers            | Contributors                | Yes, graduated        |
 
-This HowTo is for project maintainers who need Governance documentation for
-their project. The goal of a GOVERNANCE.md file is to inform contributors about
-how your project is run, and encourage them to get involved in project
-leadership.
+
+This HowTo is for project maintainers who need Governance documentation for their project.
+The goal of a GOVERNANCE.md file is to inform contributors about how your
+project is run, and encourage them to get involved in project leadership.
 
 Great governance docs will:
 
-- Show potential contributors that their contributions will be treated fairly
-- Show contributors that leadership positions are attainable
-- Provide a framework for decision making and resolving disagreements
-- Define a process for promoting contributors and improving maintainer
-  continuity
+* Show potential contributors that their contributions will be treated fairly
+* Show contributors that leadership positions are attainable
+* Provide a framework for decision making and resolving disagreements
+* Define a process for promoting contributors and improving maintainer continuity
 
 ## Fill out the template
 
-The [GOVERNANCE-elections.md template] is located in the CNCF [project-template
-repository].
+The [GOVERNANCE-elections.md template] is located in the CNCF [project-template repository].
 
 Copy the template file into your repository, and rename it `GOVERNANCE.md`.
 
-There are instructions for filling out the template that look like the example
-below:
+There are instructions for filling out the template that look like the example below:
 
 ![screenshot of the CONTRIBUTING.md template, there is a link to instructions, and a warning emoji with text explaining how to fill out this section of the template](/img/maintainers/sample-instructions.png)
 
-Some links are specific to your project. Search for the word TODO in the
-markdown for links that need to be customized. When you finish editing the
-template, remove the Instruction links that explain how to fill out the
-template. Also remove any ⚠️ prompts and their explanatory text.
+Some links are specific to your project.
+Search for the word TODO in the markdown for links that need to be customized.
+When you finish editing the template, remove the Instruction links that explain how to fill out the template. Also remove any ⚠️ prompts and their explanatory text.
 
 # Steering Committee Election Governance
 
@@ -51,93 +47,78 @@ committee or similar elected body is required to make project-wide decisions
 that span across multiple groups or to make decisions when multiple groups are
 in disagreement. In particular, some projects may also benefit from a steering
 committee to bring cohesion in the project's direction, structure, and
-governance across all groups, particularly in areas that are prone to
-inconsistencies (e.g., software development practices, testing). It may also be
-used as a way to enforce employer representation limits to ensure that a project
-has leadership representation from a variety or organizations.
+governance across all groups, particularly in areas that are
+prone to inconsistencies (e.g., software development practices, testing). It may
+also be used as a way to enforce employer representation limits to ensure that a
+project has leadership representation from a variety or organizations.
 
-This model was based mostly on a simplified verion of the [Kubernetes
-governance] and another example of this model is the [Knative governance].
+This model was based mostly on a simplified verion of the [Kubernetes governance]
+and another example of this model is the [Knative governance].
 
 # Is This Template For Us?
 
-An election-based steering committee governance model is for you if your
-project:
+An election-based steering committee governance model is for you if your project:
 
-1. Is organized into distinct groups, like SIGs, WGs, subprojects or multiple
-   repos that might have competing priorities
-2. Wants to enforce employer representation limits for leadership
-3. Has a large number of maintainers (20+) who cannot easily attend the same
-   meetings or make rapid decisions
+1) Is organized into distinct groups, like SIGs, WGs, subprojects or multiple repos
+that might have competing priorities
+2) Wants to enforce employer representation limits for leadership
+3) Has a large number of maintainers (20+) who cannot easily attend the same meetings or make rapid decisions
 
 If you don’t yet meet these conditions, we recommend that you start with a
-simpler governance template, like the [Maintainer Council] template, and move to
-this template later when you actually need it. Starting with a complicated
-governance structure before you need it creates overhead and extra work for
-project members and maintainers whose time is often better spent on project
-development, rather than governance.
+simpler governance template, like the [Maintainer Council] template, and move
+to this template later when you actually need it. Starting with a
+complicated governance structure before you need it creates overhead and extra
+work for project members and maintainers whose time is often better spent on
+project development, rather than governance.
 
-We strongly recommend that you reach out to [TAG Contributor Strategy] with
-questions, assistance, or reviews before you implement this governance
-structure.
+We strongly recommend that you reach out to [TAG Contributor Strategy] with questions,
+assistance, or reviews before you implement this governance structure.
 
 ## Requirements
 
 ### What Do I Need To Know?
 
 There are quite a few things you need to know before creating a governance model
-of this complexity. Here is a partial list, but there are likely others
-depending on exactly how your project plans to operate:
-
-- A list of your current maintainers
-- Locations of your repositories and files
-- Details on your project's existing developer meetings
-- Details on mailing lists or other official communications channels, including
-  both public and private channels for the Maintainers
-- Other committees that the Steering Committee may choose to delegate its
-  authority to as-needed (security, code of conduct, etc).
-- Steering Committee meeting logistics - how often, when, where meeting notes
-  will be published, etc.
-- Contact details for how community members can contact the Steering Committee
-- Composition - Number of seats, terms, etc.
-- How you will bootstrap the first steering committee
-- Eligibility criteria for members to run for seats on the Steering Committee
-- Election procedures for timing, election officers, eligibility of voters, etc.
-- Employer representation limits
-- Procedure for handling vacancies
+of this complexity. Here is a partial list, but there are likely others depending
+on exactly how your project plans to operate:
+* A list of your current maintainers
+* Locations of your repositories and files
+* Details on your project's existing developer meetings
+* Details on mailing lists or other official communications channels, including both public and private channels for the Maintainers
+* Other committees that the Steering Committee may choose to delegate its authority to as-needed (security, code of conduct, etc).
+* Steering Committee meeting logistics - how often, when, where meeting notes will be published, etc.
+* Contact details for how community members can contact the Steering Committee
+* Composition - Number of seats, terms, etc.
+* How you will bootstrap the first steering committee
+* Eligibility criteria for members to run for seats on the Steering Committee
+* Election procedures for timing, election officers, eligibility of voters, etc.
+* Employer representation limits
+* Procedure for handling vacancies
 
 ### What Do I Need to Customize?
 
-All sections of this template will likely need to be customized, so we recommend
-that you review the
-[Knative Steering Committee](https://github.com/knative/community/blob/main/STEERING-COMMITTEE.md)
+All sections of this template will likely need to be customized, so we recommend 
+that you review the [Knative Steering Committee](https://github.com/knative/community/blob/main/STEERING-COMMITTEE.md)
 as an example of how to customize this template.
 
 ### What Else Is Required?
 
-This template assumes that you have already adopted the [Code of Conduct], added
-the CNCF-required [security practices], and added a
-[Scope section](../governance/charter/) to your README.
+This template assumes that you have already adopted the [Code of Conduct], 
+added the CNCF-required [security practices], and added a [Scope section](../governance/charter/) to your README. 
 
-It assumes that you are using the [Contributor Ladder], since it is a good way
-to provide guidance about eligibility requirements. It is possible to implement
-this without a [Contributor Ladder], but it is not recommended.
+It assumes that you are using the [Contributor Ladder], since it is a good way to provide
+guidance about eligibility requirements. It is possible to implement this without a
+[Contributor Ladder], but it is not recommended.
 
 ## Glossary
 
-**Project**: Your entire CNCF project, rather than individual repositories or
-subprojects.
+**Project**: Your entire CNCF project, rather than individual repositories or subprojects.
 
-**Steering Committee**: The overall governing body for your project, and the
-list of maintainers by CNCF definition.
+**Steering Committee**: The overall governing body for your project, and the list of maintainers by CNCF definition.
 
-**Maintainers**: The actual approvers/technical leadership of the project, which
-might be different from the membership of the Steering Committee.
+**Maintainers**:  The actual approvers/technical leadership of the project, which might be different from the membership of the Steering Committee. 
 
-**CNCF Maintainers**: The list of "maintainers" per CNCF rules, as in people who
-are allowed to make decisions for the project that the CNCF will carry out. In a
-Steering Committee project, this is the Steering Committee instead of the list
-of approvers.
+**CNCF Maintainers**: The list of "maintainers" per CNCF rules, as in people who are allowed to make decisions for the project that the CNCF will carry out.  In a Steering Committee project, this is the Steering Committee instead of the list of approvers.
 
 ## Template Details
 
@@ -149,11 +130,11 @@ Committee and the scope of its oversight / decision-making.
 ### Values
 
 Like the other templates, you need to place a list of values here that define
-what your project strives for. Some of these will be general (like "fairness")
+what your project strives for.  Some of these will be general (like "fairness")
 and some will be specific to your problem domain (like "asyncronous operation").
 The Values are listed in your governance template because all project leaders
-are expected to follow these values. Deciding your values is a good topic for a
-general community meeting.
+are expected to follow these values.  Deciding your values is a good topic
+for a general community meeting.
 
 See our documentation on [Charters](../governance/charter/) for some examples.
 
@@ -192,51 +173,50 @@ based on who is currently making project decisions. This group will be
 responsible for running the project, but with a set deadline for how they will
 be replaced by an elected steering committee.
 
-For example, Kubernetes started with a
-[Bootstrap Governance Committee](https://www.cncf.io/blog/2017/10/16/kubernetes-community-steering-committee-election-results/)
+For example, Kubernetes started with a [Bootstrap Governance Committee](https://www.cncf.io/blog/2017/10/16/kubernetes-community-steering-committee-election-results/)
 
 ### Decision Process
 
-We recommend using [Lazy Consensus] as the primary decision-making method, but
-you will also need to determine the list of things that requires a vote, such as
-issuing or amending policies, spending, etc. This section will also specify how
-you determine quorum for voting with recommended language found in the template.
+We recommend using [Lazy Consensus] as the primary decision-making method, but you will
+also need to determine the list of things that requires a vote, such as issuing
+or amending policies, spending, etc. This section will also specify how you
+determine quorum for voting with recommended language found in the template.
 
-You will need to also come up with a process for documenting these decisions and
-have a consistent place where the community can get more information about past
-decisions that were made.
+You will need to also come up with a process for documenting these decisions
+and have a consistent place where the community can get more information about
+past decisions that were made.
 
 ### Getting in touch
 
-Your governance document should specify how community members can raise issues
-to the steering committee for decision. Common ways to do this are via an email
+Your governance document should specify how community members can raise issues to
+the steering committee for decision. Common ways to do this are via an email
 alias for the Steering Committee, filing an issue in a specific repository, or
 posting in a Steering Committee Slack channel.
 
 ### Composition
 
-This section requires some extra work and additional thought put into how you
-plan to handle election terms and replacing Steering Committee members whose
-terms are up for election.
+This section requires some extra work and additional thought put into how you plan
+to handle election terms and replacing Steering Committee members whose terms
+are up for election.
 
 We recommend using staggered 2-year terms where only half of the seats are up
 for election in any given year to maintain continuity. This keeps enough people
 on the Steering Committee to provide context and onboarding for new members.
 
 If you are starting from scratch with a bootstrapped committee, and need a
-transition period, but plan to have staggered 2-year terms, we recommend that
-for the first year of the Steering Committee half of the seats should be elected
-for a 1-year term, and the other half should be elected for a 2-year term.
+transition period, but plan to have staggered 2-year terms, we recommend that for
+the first year of the Steering Committee half of the seats should be elected for a
+1-year term, and the other half should be elected for a 2-year term.
 
-While not recommended, an alternative to staggered terms is that you can have
-all of the members elected at the same time to serve for a specified term. This
-can introduce hardship on the newly elected members attempting to pick-up where
-the previous Committee left off if there is no formal overlap or handoff.
+While not recommended, an alternative to staggered terms is that you can 
+have all of the members elected at the same time to serve for a specified term. 
+This can introduce hardship on the newly elected members attempting to pick-up
+where the previous Committee left off if there is no formal overlap or handoff.
 
 ### Election Procedure
 
 Note: CNCF may soon have a better, GitOps-driven, online election tool
-available. At that time, projects will want to revise portions of this
+available.  At that time, projects will want to revise portions of this
 procedure.
 
 The template contains recommended text for timelines, election officers, and
@@ -254,12 +234,11 @@ approver in one or more OWNERS files, or similar.
 
 **Voting Procedure**
 
-For most elections, we recommend using
-[Condorcet](https://en.wikipedia.org/wiki/Condorcet_method) ranking using the
-IRV method as specified in the template. [Elekto](https://elekto.dev/),
-[OpaVote](https://www.opavote.com/), and
-[Helios](https://vote.heliosvoting.org/) are all options for running an
-election.
+For most elections, we recommend using 
+[Condorcet](https://en.wikipedia.org/wiki/Condorcet_method) ranking 
+using the IRV method as specified in the template. [Elekto](https://elekto.dev/),
+[OpaVote](https://www.opavote.com/), and [Helios](https://vote.heliosvoting.org/)
+are all options for running an election.
 
 **Limitations on Company Representation**
 
@@ -286,26 +265,19 @@ community, you might want to give people more time.
 
 ## Authority, Facilitation, and Decision Making
 
-We recommend making decisions at the lowest possible level within the project,
-so you will need to provide some context for this based on your project needs.
-Recommended text can be found in the template.
+We recommend making decisions at the lowest possible level within the
+project, so you will need to provide some context for this based on your project
+needs. Recommended text can be found in the template.
 
-[GOVERNANCE-elections.md template]:
-  https://github.com/cncf/project-template/blob/main/GOVERNANCE-elections.md
+
+[GOVERNANCE-elections.md template]: https://github.com/cncf/project-template/blob/main/GOVERNANCE-elections.md
 [project-template repository]: https://github.com/cncf/project-template
-[Kubernetes governance]:
-  https://github.com/kubernetes/community/blob/master/governance.md
-[Knative governance]:
-  https://github.com/knative/community/blob/main/GOVERNANCE.md
-[Maintainer Council]:
-  https://contribute.cncf.io/maintainers/templates/governance-maintainer/
+[Kubernetes governance]: https://github.com/kubernetes/community/blob/master/governance.md
+[Knative governance]: https://github.com/knative/community/blob/main/GOVERNANCE.md
+[Maintainer Council]: https://contribute.cncf.io/maintainers/templates/governance-maintainer/
 [TAG Contributor Strategy]: https://github.com/cncf/tag-contributor-strategy
-[Contributor Ladder]:
-  https://github.com/cncf/project-template/blob/main/CONTRIBUTOR_LADDER.md
-[Code of Conduct]:
-  https://github.com/cncf/project-template/blob/main/CODE_OF_CONDUCT.md
-[security practices]:
-  https://github.com/cncf/tag-security/tree/main/project-resources
+[Contributor Ladder]: https://github.com/cncf/project-template/blob/main/CONTRIBUTOR_LADDER.md
+[Code of Conduct]: https://github.com/cncf/project-template/blob/main/CODE_OF_CONDUCT.md
+[security practices]: https://github.com/cncf/tag-security/tree/main/project-resources
 [Lazy Consensus]: https://community.apache.org/committers/lazyConsensus.html
-
 [Charters]: [/maintainers/governance/charter/]

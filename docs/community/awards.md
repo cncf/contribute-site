@@ -1,40 +1,18 @@
 ---
 title: Community Awards
-description:
-  Individuals and organizations that have made significant contributions to the
-  cloud native ecosystem
+description: Individuals and organizations that have made significant contributions to the cloud native ecosystem
 sidebar_position: 7
 ---
 
-CNCF Community Awards will reward the community members, developers and
-advocates working hardest to advance cloud native.
+CNCF Community Awards will reward the community members, developers and advocates working hardest to advance cloud native.
 
-We traditionally have the following awards, rewarded at different times of each
-calendar year:
+We traditionally have the following awards, rewarded at different times of each calendar year:
 
-- **Top Committer**: This award recognizes excellence in technical contributions
-  to CNCF and its hosted projects. The CNCF Top Committer has made key commits
-  to projects and, more importantly, contributes in a way that benefits the
-  project as a whole.
-- **Top End User**: The special award for the
-  [CNCF End User Community](https://www.cncf.io/enduser/) representatives in
-  recognition of major contributions to the cloud native ecosystem. All end
-  users can be nominated, but end user members can not win two consecutive years
-  in a row.
-- **Lorem Ipsum (prev. Top Documentarian)** (since 2021): This award recognizes
-  excellence in documentation contributions to CNCF and its projects. Excellent
-  technical documentation is one of the best ways projects can lower the barrier
-  to contribution.
-- **Chop Wood Carry Water Award**: This award is given to community members
-  helping behind the scenes, dedicating countless hours to open source projects,
-  hosting and building community meetups, and often completing thankless tasks
-  for the benefit of the community.
-- **The TAGGIE**: This award is presented to the person who has done the most to
-  advance CNCF’s
-  [Technical Advisory Groups](https://github.com/cncf/toc/tree/main/tags)
-  (TAGs). TAGs scale contributions by the CNCF technical and user community,
-  while retaining integrity and increasing quality in support of CNCF’s mission
-  of making cloud native ubiquitous.
+- **Top Committer**: This award recognizes excellence in technical contributions to CNCF and its hosted projects. The CNCF Top Committer has made key commits to projects and, more importantly, contributes in a way that benefits the project as a whole.
+- **Top End User**: The special award for the [CNCF End User Community](https://www.cncf.io/enduser/) representatives in recognition of major contributions to the cloud native ecosystem. All end users can be nominated, but end user members can not win two consecutive years in a row.
+- **Lorem Ipsum (prev. Top Documentarian)** (since 2021): This award recognizes excellence in documentation contributions to CNCF and its projects. Excellent technical documentation is one of the best ways projects can lower the barrier to contribution.
+- **Chop Wood Carry Water Award**: This award is given to community members helping behind the scenes, dedicating countless hours to open source projects, hosting and building community meetups, and often completing thankless tasks for the benefit of the community.
+- **The TAGGIE**: This award is presented to the person who has done the most to advance CNCF’s [Technical Advisory Groups](https://github.com/cncf/toc/tree/main/tags) (TAGs). TAGs scale contributions by the CNCF technical and user community, while retaining integrity and increasing quality in support of CNCF’s mission of making cloud native ubiquitous.
 
 ## Table of contents
 
@@ -96,8 +74,7 @@ calendar year:
 ### 2025
 
 #### 2025 Top End User
-
-- [Ant Group](https://www.cncf.io/announcements/2025/04/03/cloud-native-computing-foundation-announces-ant-group-as-the-top-end-user-award-winner/)
+  - [Ant Group](https://www.cncf.io/announcements/2025/04/03/cloud-native-computing-foundation-announces-ant-group-as-the-top-end-user-award-winner/)
 
 ### 2024
 

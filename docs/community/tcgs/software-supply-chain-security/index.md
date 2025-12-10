@@ -9,18 +9,11 @@ tags:
 
 # Software Supply Chain Security Technical Community Group
 
-The Software Supply Chain Security Technical Community Group (TCG) addresses the
-security of the software supply chain, from source code to production
-deployment, including build processes, artifact signing, provenance tracking,
-and vulnerability management.
+The Software Supply Chain Security Technical Community Group (TCG) addresses the security of the software supply chain, from source code to production deployment, including build processes, artifact signing, provenance tracking, and vulnerability management.
 
 ## Mission
 
-The Software Supply Chain Security TCG serves as a community rallying point for
-discussing, sharing knowledge, and coordinating initiatives related to securing
-the software supply chain in cloud native environments. We aim to make supply
-chain security accessible, understandable, and actionable for all CNCF projects
-and the broader community.
+The Software Supply Chain Security TCG serves as a community rallying point for discussing, sharing knowledge, and coordinating initiatives related to securing the software supply chain in cloud native environments. We aim to make supply chain security accessible, understandable, and actionable for all CNCF projects and the broader community.
 
 ## Focus Areas
 
@@ -86,24 +79,19 @@ Understanding and mitigating supply chain threats:
 
 ## Getting Involved
 
-The Software Supply Chain Security TCG welcomes participation from anyone
-interested in securing the software supply chain:
+The Software Supply Chain Security TCG welcomes participation from anyone interested in securing the software supply chain:
 
 ### Join the Community
 
-- **CNCF Community Groups**: Find us on
-  [community.cncf.io](https://community.cncf.io)
-- **CNCF Slack**: Join [slack.cncf.io](https://slack.cncf.io) and look for
-  supply chain security channels
+- **CNCF Community Groups**: Find us on [community.cncf.io](https://community.cncf.io)
+- **CNCF Slack**: Join [slack.cncf.io](https://slack.cncf.io) and look for supply chain security channels
 - **Meetings**: Check community.cncf.io for meeting schedules and join links
 
 ### Contribute
 
-- **Share Experiences**: Present supply chain security implementations and
-  lessons learned
+- **Share Experiences**: Present supply chain security implementations and lessons learned
 - **Case Studies**: Document real-world supply chain security examples
-- **Participate in Initiatives**: Help create guides, best practices, or tooling
-  assessments
+- **Participate in Initiatives**: Help create guides, best practices, or tooling assessments
 - **Ask Questions**: Learn from others facing similar challenges
 - **Provide Feedback**: Shape the direction of supply chain security practices
 
@@ -122,13 +110,9 @@ Areas where community input is valuable:
 
 ## Organizers
 
-Technical Community Groups are led by community organizers who facilitate
-meetings, coordinate activities, and ensure the group delivers value to
-participants.
+Technical Community Groups are led by community organizers who facilitate meetings, coordinate activities, and ensure the group delivers value to participants.
 
-To become an organizer or learn more about current organizers, check the group's
-page on [community.cncf.io](https://community.cncf.io) or reach out via the CNCF
-Slack.
+To become an organizer or learn more about current organizers, check the group's page on [community.cncf.io](https://community.cncf.io) or reach out via the CNCF Slack.
 
 ## Key Standards and Frameworks
 
@@ -162,12 +146,9 @@ Progressive levels of supply chain security assurance:
 
 ### Related CNCF Groups
 
-- [TAG Security and Compliance](../../tags/security-and-compliance/index.md) -
-  Broader security topics
-- [TAG Developer Experience](../../tags/developer-experience/index.md) -
-  Developer workflows
-- [TAG Infrastructure](../../tags/infrastructure/index.md) - Infrastructure
-  security
+- [TAG Security and Compliance](../../tags/security-and-compliance/index.md) - Broader security topics
+- [TAG Developer Experience](../../tags/developer-experience/index.md) - Developer workflows
+- [TAG Infrastructure](../../tags/infrastructure/index.md) - Infrastructure security
 
 ### External Resources
 
@@ -175,8 +156,7 @@ Progressive levels of supply chain security assurance:
 - [Sigstore Project](https://www.sigstore.dev/)
 - [in-toto Project](https://in-toto.io/)
 - [OpenSSF](https://openssf.org/) - Open Source Security Foundation
-- [NIST SSDF](https://csrc.nist.gov/Projects/ssdf) - Secure Software Development
-  Framework
+- [NIST SSDF](https://csrc.nist.gov/Projects/ssdf) - Secure Software Development Framework
 
 ## Related CNCF Projects
 
@@ -215,14 +195,11 @@ Several CNCF and related projects focus on supply chain security:
 
 ## Evolution and Future
 
-As a Technical Community Group, the Software Supply Chain Security TCG may
-evolve based on community needs:
+As a Technical Community Group, the Software Supply Chain Security TCG may evolve based on community needs:
 
 - **Current State**: Discussion and knowledge-sharing forum
-- **Near Term**: Deliver initiatives like implementation guides, tooling
-  assessments, or best practices
-- **Long Term**: Potentially evolve into a TAG subproject or merge with TAG
-  Security and Compliance if sustained value is demonstrated
+- **Near Term**: Deliver initiatives like implementation guides, tooling assessments, or best practices
+- **Long Term**: Potentially evolve into a TAG subproject or merge with TAG Security and Compliance if sustained value is demonstrated
 
 The community drives the direction and pace of this evolution.
 
@@ -232,14 +209,9 @@ For questions or to get involved:
 
 - **CNCF Community Groups**: community-groups@cncf.io
 - **CNCF Slack**: [slack.cncf.io](https://slack.cncf.io)
-- **TAG Security and Compliance**: For related questions, see
-  [TAG Security and Compliance](../../tags/security-and-compliance/index.md)
-- **TOC**: For governance questions, reach out via
-  [#toc](https://cloud-native.slack.com/archives/C0MP69YF4)
+- **TAG Security and Compliance**: For related questions, see [TAG Security and Compliance](../../tags/security-and-compliance/index.md)
+- **TOC**: For governance questions, reach out via [#toc](https://cloud-native.slack.com/archives/C0MP69YF4)
 
 ## Code of Conduct
 
-All participants in the Software Supply Chain Security TCG must adhere to the
-[CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
-We are committed to providing a welcoming and inclusive environment for all
-community members.
+All participants in the Software Supply Chain Security TCG must adhere to the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md). We are committed to providing a welcoming and inclusive environment for all community members.

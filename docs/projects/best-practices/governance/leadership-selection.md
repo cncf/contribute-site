@@ -1,5 +1,5 @@
 ---
-title: 'Leadership Selection'
+title: "Leadership Selection"
 sidebar_label: Leadership Selection
 sidebar_position: 3
 ---
@@ -44,9 +44,9 @@ maintainer and seconded by two other maintainers.
 Elected leadership is often used for the highest levels of leadership in larger
 projects, since defining the election criteria and process can require more
 effort than some of the other options, although there are simpler ways of
-conducting votes. The
-[Kubernetes Steering Committee](https://github.com/kubernetes/steering/blob/master/elections.md)
-has a robust, but more complicated process where they are elected by a vote of
+conducting votes. The [Kubernetes Steering
+Committee](https://github.com/kubernetes/steering/blob/master/elections.md) has
+a robust, but more complicated process where they are elected by a vote of
 eligible contributors with a maximum of one-third representation from any one
 company. New maintainers for
 [Harbor](https://github.com/goharbor/community/blob/master/GOVERNANCE.md) are
@@ -59,7 +59,7 @@ voting to select maintainers, but votes are based on organizations with each
 organization getting one vote to prevent any one organization from dominating
 the vote.
 
-### Organization-based
+### Organization-based 
 
 Leadership can be defined in a way that is tied to the organization where the
 contributor works. In
@@ -69,7 +69,7 @@ maintainers from their organization as needed. In the case of Envoy, new
 maintainers are approved by the group of senior maintainers, so it also uses
 maintainer-based leadership selection.
 
-### Self-Selected
+### Self-Selected 
 
 Leadership may also be self-selected, which is how many projects define their
 first set of leaders. While this is common early in a project's lifecycle, most
@@ -83,8 +83,8 @@ of these. As mentioned earlier, Envoy has both organization-based leadership and
 maintainer-based leadership. It is also common for projects to use voting for
 senior leadership roles and committer / maintainer-based for entry level
 leadership roles; for example, Kubernetes uses voting for the steering
-committee, but other roles on the
-[contributor ladder](https://github.com/cncf/project-template/blob/main/CONTRIBUTOR_LADDER.md)
+committee, but other roles on the [contributor
+ladder](https://github.com/cncf/project-template/blob/main/CONTRIBUTOR_LADDER.md)
 simply need sponsorship from a couple of existing leaders.
 
 ## Best Practices for Leadership Selection
@@ -102,26 +102,28 @@ your existing leaders might fill at least some of the new positions.
 
 Regardless of the method of leadership selection, all projects should have
 regular leadership turnover, both through the addition of new leaders and the
-retirement of old ones. This benefits not only the community around the project,
-but the leaders themselves; projects with low turnover tend to have serious
-problems with leadership burnout. Ideally, your leadership selection should
-allow leaders to "step away" from the project when they have conflicts or
+retirement of old ones.  This benefits not only the community around the
+project, but the leaders themselves; projects with low turnover tend to have
+serious problems with leadership burnout.  Ideally, your leadership selection
+should allow leaders to "step away" from the project when they have conflicts or
 personal issues, but be eligible to apply or run for leadership positions again.
 
 It's also critically important for contributor recruitment for every contributor
-to think of themselves as a potential project leader. If there is no advancement
-of new leaders, contributors will regard the project as "closed" and project
-leadership as increasingly irrelevant to their interests. Whereas contributors
-looking to become project leaders will put in additional effort to accomplish
-project goals.
+to think of themselves as a potential project leader.  If there is no
+advancement of new leaders, contributors will regard the project as "closed" and
+project leadership as increasingly irrelevant to their interests.  Whereas
+contributors looking to become project leaders will put in additional effort to
+accomplish project goals.
 
 To ensure rotation, implement the following steps:
 
-- New leader selection/election should happen at some regular interval
-- Criteria for new leaders should be explicit and clear to the entire community
-- Leadership positions should be theoretically open to all project contributors
-- Existing project leadership should look for potential community leaders and
-  encourage them to step forwards
+-   New leader selection/election should happen at some regular interval
+-   Criteria for new leaders should be explicit and clear to the entire
+    community
+-   Leadership positions should be theoretically open to all project
+    contributors
+-   Existing project leadership should look for potential community leaders and
+    encourage them to step forwards
 
 ### Mentoring and Shadowing
 

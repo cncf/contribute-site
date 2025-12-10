@@ -25,8 +25,8 @@ to tackle, with the space of solutions for them being intertwined:
 
 This document is intended as a high-level overview of policies for package
 maintainers who have responsibilities for libraries and/or dependent projects.
-For another take on the subject, see
-[this article](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html).
+For another take on the subject, see [this
+article](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html).
 
 ## Mitigations
 
@@ -52,9 +52,10 @@ Reports should be thoroughly investigated, with frequent updates to the
 reporting party, and acknowledgement of their contribution following the public
 disclosure.
 
-More in-depth information can be found in
-[the guide for coordinated vulnerability disclosure for open source software](https://github.com/ossf/oss-vulnerability-guide)
-created by the OpenSSF.
+More in-depth information can be found in [the guide for coordinated
+vulnerability disclosure for open source
+software](https://github.com/ossf/oss-vulnerability-guide) created by the
+OpenSSF.
 
 ### Disclosing vulnerabilities in your library
 
@@ -65,8 +66,8 @@ also provides a thorough discussion of disclosure policies.
 
 This is one of the few cases in which an industry-wide solution exists: issuing
 a [Common Vulnerabilities and Exposures (CVE)](https://cve.mitre.org/) report,
-usually stored in an official database, such as the
-[National Vulnerability Database](https://nvd.nist.gov/).
+usually stored in an official database, such as the [National Vulnerability
+Database](https://nvd.nist.gov/).
 
 Alternative databases and report formats exist, mostly on an ecosystem level -
 you can see a list of OpenSSF-endorsed alternatives for specific ecosystems
@@ -104,12 +105,12 @@ When it comes to actually mitigating the vulnerability, the exact course of
 action should be dictated by:
 
 - The severity of the vulnerability and how relevant it is in the context of
-  your project.
+   your project.
 - Whether there are options for updating your dependency tree to a version of
-  the library that is not subject to the vulnerability, or that avoids the
-  vulnerable library.
+   the library that is not subject to the vulnerability, or that avoids the
+   vulnerable library.
 - Whether there are other mitigation steps that users of your project can take
-  to avoid the vulnerability, particularly when a patch is not available.
+   to avoid the vulnerability, particularly when a patch is not available.
 
 Mitigations should be aligned with the severity of the issue, and should be as
 comprehensive as possible.

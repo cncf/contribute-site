@@ -7,35 +7,31 @@ tags:
 
 # TAG Operational Resilience
 
-TAG Operational Resilience is dedicated to operational resilience and
-reliability practices in cloud native systems, covering observability,
-management, business continuity, resource optimization, cost efficiency, energy,
-performance, troubleshooting, reliability, and Day 2 operations.
+TAG Operational Resilience is dedicated to operational resilience and reliability practices in cloud native systems, covering observability, management, business continuity, resource optimization, cost efficiency, energy, performance, troubleshooting, reliability, and Day 2 operations.
 
 ## Mission Statement
 
-Observability, Management, Business Continuity, Resource Optimization, Cost
-Efficiency, Energy, Performance, Troubleshooting, Reliability, Day 2 Ops
+Observability, Management, Business Continuity, Resource Optimization, Cost Efficiency, Energy, Performance, Troubleshooting, Reliability, Day 2 Ops
 
 ## Leadership
 
 ### Chairs
 
-| Name           | GitHub                                       | Organization | Term                     |
-| -------------- | -------------------------------------------- | ------------ | ------------------------ |
-| Mario Fahlandt | [@mfahlandt](https://github.com/mfahlandt)   | -            | 2025-07-01 to 2027-06-30 |
-| Rafael Brito   | [@brito-rafa](https://github.com/brito-rafa) | -            | 2025-07-01 to 2026-06-30 |
-| Saiyam Pathak  | [@saiyam1814](https://github.com/saiyam1814) | -            | 2025-07-01 to 2027-06-30 |
+| Name | GitHub | Organization | Term |
+|------|--------|--------------|------|
+| Mario Fahlandt | [@mfahlandt](https://github.com/mfahlandt) | - | 2025-07-01 to 2027-06-30 |
+| Rafael Brito | [@brito-rafa](https://github.com/brito-rafa) | - | 2025-07-01 to 2026-06-30 |
+| Saiyam Pathak | [@saiyam1814](https://github.com/saiyam1814) | - | 2025-07-01 to 2027-06-30 |
 
 ### Tech Leads
 
-| Name              | GitHub                                                   | Organization | Term                     |
-| ----------------- | -------------------------------------------------------- | ------------ | ------------------------ |
-| Alolita Sharma    | [@alolita](https://github.com/alolita)                   | -            | 2025-07-02 to 2026-06-30 |
-| Carol Valencia    | [@krol3](https://github.com/krol3)                       | -            | 2025-07-02 to 2027-06-30 |
-| Raffaele Spazzoli | [@raffaelespazzoli](https://github.com/raffaelespazzoli) | -            | 2025-07-02 to 2026-06-30 |
-| Matt Young        | [@halcyondude](https://github.com/halcyondude)           | -            | 2025-07-02 to 2027-06-30 |
-| Nabarun Pal       | [@palnabarun](https://github.com/palnabarun)             | -            | 2025-07-02 to 2027-06-30 |
+| Name | GitHub | Organization | Term |
+|------|--------|--------------|------|
+| Alolita Sharma | [@alolita](https://github.com/alolita) | - | 2025-07-02 to 2026-06-30 |
+| Carol Valencia | [@krol3](https://github.com/krol3) | - | 2025-07-02 to 2027-06-30 |
+| Raffaele Spazzoli | [@raffaelespazzoli](https://github.com/raffaelespazzoli) | - | 2025-07-02 to 2026-06-30 |
+| Matt Young | [@halcyondude](https://github.com/halcyondude) | - | 2025-07-02 to 2027-06-30 |
+| Nabarun Pal | [@palnabarun](https://github.com/palnabarun) | - | 2025-07-02 to 2027-06-30 |
 
 ### TOC Liaison
 
@@ -45,13 +41,10 @@ Efficiency, Energy, Performance, Troubleshooting, Reliability, Day 2 Ops
 
 **TAG Operational Resilience Meetings**
 
-- **Calendar**:
-  [View and join meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-operational-resilience?view=list)
-- **Recordings**:
-  [YouTube Channel](https://www.youtube.com/@TAGOperationalResilience)
+- **Calendar**: [View and join meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-operational-resilience?view=list)
+- **Recordings**: [YouTube Channel](https://www.youtube.com/@TAGOperationalResilience)
 
-All meetings are open to the public. No registration required - simply join the
-meeting from the calendar link.
+All meetings are open to the public. No registration required - simply join the meeting from the calendar link.
 
 ## Communication Channels
 
@@ -59,14 +52,12 @@ meeting from the calendar link.
 
 Join the CNCF Slack workspace and connect with the TAG:
 
-- **Channel**:
-  [#tag-operational-resilience](https://cloud-native.slack.com/archives/C08KGDENK34)
+- **Channel**: [#tag-operational-resilience](https://cloud-native.slack.com/archives/C08KGDENK34)
 - **CNCF Slack Invite**: [slack.cncf.io](https://slack.cncf.io)
 
 ### Mailing List
 
-- **Subscribe**:
-  [cncf-tag-operational-resilience](https://lists.cncf.io/g/cncf-tag-operational-resilience)
+- **Subscribe**: [cncf-tag-operational-resilience](https://lists.cncf.io/g/cncf-tag-operational-resilience)
 - Use for announcements, discussions, and coordination
 
 ## Focus Areas
@@ -138,8 +129,7 @@ TAG Operational Resilience works on several key operational domains:
 
 ## Subprojects
 
-- **Operational Resilience-sub-foo**:
-  [Mailing List](https://lists.cncf.io/g/cncf-tag-operational-resilience)
+- **Operational Resilience-sub-foo**: [Mailing List](https://lists.cncf.io/g/cncf-tag-operational-resilience)
 
 ## Initiatives
 
@@ -150,21 +140,15 @@ View current and past initiatives:
 
 ## Getting Involved
 
-We welcome contributions from anyone interested in operational resilience and
-reliability:
+We welcome contributions from anyone interested in operational resilience and reliability:
 
 ### Attend Meetings
 
-Join our regular meetings to hear about ongoing work and participate in
-discussions. Check the
-[meeting calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-operational-resilience?view=list)
-for details.
+Join our regular meetings to hear about ongoing work and participate in discussions. Check the [meeting calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-operational-resilience?view=list) for details.
 
 ### Contribute to Initiatives
 
-Browse
-[active initiatives](https://github.com/cncf/toc/issues?q=state%3Aopen+label%3Akind%2Finitiative+label%3Atag%2Foperational-resilience)
-and volunteer to help with specific deliverables.
+Browse [active initiatives](https://github.com/cncf/toc/issues?q=state%3Aopen+label%3Akind%2Finitiative+label%3Atag%2Foperational-resilience) and volunteer to help with specific deliverables.
 
 ### Share Your Experience
 
@@ -174,10 +158,8 @@ and volunteer to help with specific deliverables.
 
 ### Join the Conversation
 
-- Participate in
-  [Slack discussions](https://cloud-native.slack.com/archives/C08KGDENK34)
-- Engage on the
-  [mailing list](https://lists.cncf.io/g/cncf-tag-operational-resilience)
+- Participate in [Slack discussions](https://cloud-native.slack.com/archives/C08KGDENK34)
+- Engage on the [mailing list](https://lists.cncf.io/g/cncf-tag-operational-resilience)
 - Comment on GitHub issues in the [TOC repository](https://github.com/cncf/toc)
 
 ## Resources
@@ -189,7 +171,5 @@ and volunteer to help with specific deliverables.
 
 ## Related TAGs
 
-- [TAG Infrastructure](../infrastructure/index.md) - Infrastructure supporting
-  resilient operations
-- [TAG Security and Compliance](../security-and-compliance/index.md) - Security
-  aspects of operations
+- [TAG Infrastructure](../infrastructure/index.md) - Infrastructure supporting resilient operations
+- [TAG Security and Compliance](../security-and-compliance/index.md) - Security aspects of operations

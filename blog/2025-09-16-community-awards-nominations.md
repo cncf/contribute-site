@@ -5,8 +5,7 @@ authors: [mrbobbytables]
 tags: [awards, community, nominations]
 ---
 
-It's that time again! We're starting the nomination process for our community
-awards.
+It's that time again! We're starting the nomination process for our community awards.
 
 :::info Timeline
 
@@ -34,8 +33,8 @@ for the ecosystem's benefit.
 ### Lorem Ipsum (prev. Top Documentarian)
 
 Given to a community member who has shown excellence in documentation
-contributions to CNCF and its projects. Excellent technical documentation is one
-of the best ways projects can lower the barrier for contribution.
+contributions to CNCF and its projects. Excellent technical documentation is
+one of the best ways projects can lower the barrier for contribution.
 
 ### TAGGIE
 
@@ -45,8 +44,7 @@ TAG ecosystem.
 
 :::tip Submit Your Nomination
 
-**Nomination Form**:
-[https://forms.gle/Cish6XYPUhN5Lpqx7](https://forms.gle/Cish6XYPUhN5Lpqx7)
+**Nomination Form**: [https://forms.gle/Cish6XYPUhN5Lpqx7](https://forms.gle/Cish6XYPUhN5Lpqx7)
 
 Nominations close on **September 29, 2025**
 

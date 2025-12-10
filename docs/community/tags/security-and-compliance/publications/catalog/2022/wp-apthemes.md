@@ -1,24 +1,14 @@
 # WordPress theme publisher compromised, backdoor introduced in several products
-
 <!-- cSpell:ignore webshell -->
-
-A popular plugin and theme publisher for WordPress was reportedly compromised
-during the second half of 2021. While the WordPress codebase itself appears
-unaffected, a webshell was injected, published and distributed in dozens of
-themes and plugins.
+A popular plugin and theme publisher for WordPress was reportedly compromised during the second half of 2021. While the WordPress codebase itself appears unaffected, a webshell was injected, published and distributed in dozens of themes and plugins.
 
 ## Impact
 
 According to the researchers:
 
-> This suggests to us that the files from the AccessPress Themes’ website were
-> modified intentionally, and as a coordinated action after they were originally
-> released. The compromise seems to have been performed in two stages, one for
-> the plugins and a later one for the themes. Each of them with some earlier
-> attempts, possibly to fine tune the process.
+> This suggests to us that the files from the AccessPress Themes’ website were modified intentionally, and as a coordinated action after they were originally released. The compromise seems to have been performed in two stages, one for the plugins and a later one for the themes. Each of them with some earlier attempts, possibly to fine tune the process.
 
-The response timeline suggests early discovery, and additional reporting
-indicates that the payloads have been in the wild for several years.
+The response timeline suggests early discovery, and additional reporting indicates that the payloads have been in the wild for several years.
 
 ## Type of Compromise
 

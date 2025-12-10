@@ -9,17 +9,11 @@ tags:
 
 # Platform Engineering Technical Community Group
 
-The Platform Engineering Technical Community Group (TCG) focuses on platform
-engineering practices, tools, and patterns that enable development teams to
-self-service their infrastructure needs while maintaining consistency, security,
-and governance across the organization.
+The Platform Engineering Technical Community Group (TCG) focuses on platform engineering practices, tools, and patterns that enable development teams to self-service their infrastructure needs while maintaining consistency, security, and governance across the organization.
 
 ## Mission
 
-The Platform Engineering TCG serves as a community rallying point for
-discussing, sharing knowledge, and coordinating initiatives related to building
-and operating internal developer platforms. We aim to help organizations deliver
-better developer experiences while maintaining operational excellence.
+The Platform Engineering TCG serves as a community rallying point for discussing, sharing knowledge, and coordinating initiatives related to building and operating internal developer platforms. We aim to help organizations deliver better developer experiences while maintaining operational excellence.
 
 ## Focus Areas
 
@@ -27,8 +21,7 @@ better developer experiences while maintaining operational excellence.
 
 Exploring the design, implementation, and operation of internal platforms:
 
-- **Platform Architecture**: Designing platforms that balance flexibility and
-  standardization
+- **Platform Architecture**: Designing platforms that balance flexibility and standardization
 - **Service Catalogs**: Creating discoverable, self-service capabilities
 - **Platform APIs**: Designing intuitive interfaces for platform services
 - **Multi-Tenancy**: Supporting multiple teams and workloads safely
@@ -46,11 +39,9 @@ Establishing and maintaining preferred patterns:
 
 Enabling developer autonomy through platform features:
 
-- **Environment Provisioning**: On-demand creation of development, test, and
-  production environments
+- **Environment Provisioning**: On-demand creation of development, test, and production environments
 - **CI/CD Integration**: Streamlined build, test, and deployment pipelines
-- **Service Dependencies**: Easy provisioning of databases, caches, message
-  queues, etc.
+- **Service Dependencies**: Easy provisioning of databases, caches, message queues, etc.
 - **Observability Tools**: Built-in monitoring, logging, and tracing
 
 ### Platform as a Product
@@ -85,24 +76,19 @@ Operational aspects of running platforms:
 
 ## Getting Involved
 
-The Platform Engineering TCG welcomes participation from anyone building or
-using internal developer platforms:
+The Platform Engineering TCG welcomes participation from anyone building or using internal developer platforms:
 
 ### Join the Community
 
-- **CNCF Community Groups**: Find us on
-  [community.cncf.io](https://community.cncf.io)
-- **CNCF Slack**: Join [slack.cncf.io](https://slack.cncf.io) and look for
-  platform engineering channels
+- **CNCF Community Groups**: Find us on [community.cncf.io](https://community.cncf.io)
+- **CNCF Slack**: Join [slack.cncf.io](https://slack.cncf.io) and look for platform engineering channels
 - **Meetings**: Check community.cncf.io for meeting schedules and join links
 
 ### Contribute
 
-- **Share Your Platform**: Present your platform architecture and lessons
-  learned
+- **Share Your Platform**: Present your platform architecture and lessons learned
 - **Case Studies**: Document real-world platform engineering examples
-- **Participate in Initiatives**: Help create guides, reference architectures,
-  or maturity models
+- **Participate in Initiatives**: Help create guides, reference architectures, or maturity models
 - **Ask Questions**: Learn from others facing similar challenges
 - **Provide Feedback**: Shape the direction of platform engineering practices
 
@@ -111,8 +97,7 @@ using internal developer platforms:
 Areas where community input is valuable:
 
 - Platform team structures and staffing models
-- Technology choices for platform components (Backstage, Crossplane, Kratix,
-  etc.)
+- Technology choices for platform components (Backstage, Crossplane, Kratix, etc.)
 - Measuring platform ROI and developer productivity
 - Balancing standardization with team autonomy
 - Legacy application migration to platforms
@@ -121,13 +106,9 @@ Areas where community input is valuable:
 
 ## Organizers
 
-Technical Community Groups are led by community organizers who facilitate
-meetings, coordinate activities, and ensure the group delivers value to
-participants.
+Technical Community Groups are led by community organizers who facilitate meetings, coordinate activities, and ensure the group delivers value to participants.
 
-To become an organizer or learn more about current organizers, check the group's
-page on [community.cncf.io](https://community.cncf.io) or reach out via the CNCF
-Slack.
+To become an organizer or learn more about current organizers, check the group's page on [community.cncf.io](https://community.cncf.io) or reach out via the CNCF Slack.
 
 ## Use Cases
 
@@ -167,12 +148,9 @@ Platform engineering addresses various organizational needs:
 
 ### Related CNCF Groups
 
-- [TAG Developer Experience](../../tags/developer-experience/index.md) -
-  Developer tools and frameworks
-- [TAG Infrastructure](../../tags/infrastructure/index.md) - Infrastructure
-  patterns
-- [TAG Operational Resilience](../../tags/operational-resilience/index.md) -
-  Platform operations
+- [TAG Developer Experience](../../tags/developer-experience/index.md) - Developer tools and frameworks
+- [TAG Infrastructure](../../tags/infrastructure/index.md) - Infrastructure patterns
+- [TAG Operational Resilience](../../tags/operational-resilience/index.md) - Platform operations
 
 ### External Resources
 
@@ -193,14 +171,11 @@ Several CNCF projects are commonly used in platform engineering:
 
 ## Evolution and Future
 
-As a Technical Community Group, the Platform Engineering TCG may evolve based on
-community needs:
+As a Technical Community Group, the Platform Engineering TCG may evolve based on community needs:
 
 - **Current State**: Discussion and knowledge-sharing forum
-- **Near Term**: Deliver initiatives like maturity models, best practices
-  guides, or reference architectures
-- **Long Term**: Potentially evolve into a TAG or subproject if sustained value
-  and formal oversight is needed
+- **Near Term**: Deliver initiatives like maturity models, best practices guides, or reference architectures
+- **Long Term**: Potentially evolve into a TAG or subproject if sustained value and formal oversight is needed
 
 The community drives the direction and pace of this evolution.
 
@@ -210,12 +185,8 @@ For questions or to get involved:
 
 - **CNCF Community Groups**: community-groups@cncf.io
 - **CNCF Slack**: [slack.cncf.io](https://slack.cncf.io)
-- **TOC**: For governance questions, reach out via
-  [#toc](https://cloud-native.slack.com/archives/C0MP69YF4)
+- **TOC**: For governance questions, reach out via [#toc](https://cloud-native.slack.com/archives/C0MP69YF4)
 
 ## Code of Conduct
 
-All participants in the Platform Engineering TCG must adhere to the
-[CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
-We are committed to providing a welcoming and inclusive environment for all
-community members.
+All participants in the Platform Engineering TCG must adhere to the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md). We are committed to providing a welcoming and inclusive environment for all community members.

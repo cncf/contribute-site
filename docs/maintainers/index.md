@@ -6,7 +6,6 @@ sidebar_position: 1
 
 import DocCardList from '@theme/DocCardList';
 
-This section contains guidance, lifecycle documents, and resources for project
-maintainers in the CNCF ecosystem.
+This section contains guidance, lifecycle documents, and resources for project maintainers in the CNCF ecosystem.
 
 <DocCardList />

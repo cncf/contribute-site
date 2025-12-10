@@ -7,10 +7,10 @@ configured Jenkins instance and used it to deface 7 Github projects.
 
 ## Impact
 
-- "We immediately shut down the Jenkins instance, revoked access and performed
+* "We immediately shut down the Jenkins instance, revoked access and performed
   an audit of our infrastructure."
-- No attack spillover to Launchpad
-- "At this time we see no other indicators of compromise that would suggest
+* No attack spillover to Launchpad
+* "At this time we see no other indicators of compromise that would suggest
   access beyond our original disclosure"
 
 ## Type of compromise

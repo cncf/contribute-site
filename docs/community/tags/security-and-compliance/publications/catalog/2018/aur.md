@@ -1,5 +1,4 @@
 <!-- cSpell:ignore acroread -->
-
 # `acroread` package compromised in AUR
 
 An attacker took over maintenance for the orphaned `acroread` package in Arch
@@ -8,8 +7,8 @@ user's systems.
 
 ## Impact
 
-- System information might have leaked to the attacker
-- Account suspended and commit reverted
+* System information might have leaked to the attacker
+* Account suspended and commit reverted
 
 ## Type of compromise
 

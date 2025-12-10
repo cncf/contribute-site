@@ -8,35 +8,32 @@ tags:
 
 # TAG Security and Compliance
 
-TAG Security and Compliance addresses security and compliance concerns in cloud
-native systems through best practices, assessments, tooling, policy-as-code,
-threat modeling, and secure software supply chain practices.
+TAG Security and Compliance addresses security and compliance concerns in cloud native systems through best practices, assessments, tooling, policy-as-code, threat modeling, and secure software supply chain practices.
 
 ## Mission Statement
 
-Security Hygiene, Policy-as-Code, Compliance, Auditing, Threat Modeling, Secure
-Software Supply Chain
+Security Hygiene, Policy-as-Code, Compliance, Auditing, Threat Modeling, Secure Software Supply Chain
 
 ## Leadership
 
 ### Chairs
 
-| Name          | GitHub                                             | Organization     | Term                     |
-| ------------- | -------------------------------------------------- | ---------------- | ------------------------ |
-| Evan Anderson | [@evankanderson](https://github.com/evankanderson) | Custcodian       | 2025-07-01 to 2026-06-30 |
-| John Kjell    | [@jkjell](https://github.com/jkjell)               | Control-Plane.io | 2025-07-02 to 2027-06-30 |
-| Marina Moore  | [@mnm678](https://github.com/mnm678)               | Edera            | 2025-07-01 to 2027-06-30 |
+| Name | GitHub | Organization | Term |
+|------|--------|--------------|------|
+| Evan Anderson | [@evankanderson](https://github.com/evankanderson) | Custcodian | 2025-07-01 to 2026-06-30 |
+| John Kjell | [@jkjell](https://github.com/jkjell) | Control-Plane.io | 2025-07-02 to 2027-06-30 |
+| Marina Moore | [@mnm678](https://github.com/mnm678) | Edera | 2025-07-01 to 2027-06-30 |
 
 ### Tech Leads
 
-| Name              | GitHub                                           | Organization        | Term                     |
-| ----------------- | ------------------------------------------------ | ------------------- | ------------------------ |
-| Brandt Keller     | [@brandtkeller](https://github.com/brandtkeller) | Defense Unicorns    | 2025-07-02 to 2026-06-30 |
-| Eddie Knight      | [@eddie-knight](https://github.com/eddie-knight) | Sonatype            | 2025-07-01 to 2026-06-30 |
-| Jennifer Power    | [@jpower432](https://github.com/jpower432)       | Red Hat             | 2025-07-02 to 2026-06-30 |
-| Justin Cappos     | [@JustinCappos](https://github.com/JustinCappos) | New York University | 2025-07-02 to 2027-06-30 |
-| Michael Lieberman | [@mlieberman85](https://github.com/mlieberman85) | Kusari              | 2025-07-02 to 2026-06-30 |
-| Yoshiyuki Tabata  | [@y-tabata](https://github.com/y-tabata)         | Hitachi             | 2025-07-02 to 2026-06-30 |
+| Name | GitHub | Organization | Term |
+|------|--------|--------------|------|
+| Brandt Keller | [@brandtkeller](https://github.com/brandtkeller) | Defense Unicorns | 2025-07-02 to 2026-06-30 |
+| Eddie Knight | [@eddie-knight](https://github.com/eddie-knight) | Sonatype | 2025-07-01 to 2026-06-30 |
+| Jennifer Power | [@jpower432](https://github.com/jpower432) | Red Hat | 2025-07-02 to 2026-06-30 |
+| Justin Cappos | [@JustinCappos](https://github.com/JustinCappos) | New York University | 2025-07-02 to 2027-06-30 |
+| Michael Lieberman | [@mlieberman85](https://github.com/mlieberman85) | Kusari | 2025-07-02 to 2026-06-30 |
+| Yoshiyuki Tabata | [@y-tabata](https://github.com/y-tabata) | Hitachi | 2025-07-02 to 2026-06-30 |
 
 ### TOC Liaisons
 
@@ -47,13 +44,10 @@ Software Supply Chain
 
 **TAG Security and Compliance Meetings**
 
-- **Calendar**:
-  [View and join meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-security-and-compliance?view=list)
-- **Recordings**:
-  [YouTube Channel](https://www.youtube.com/@CNCFTAGSecurityandCompliance)
+- **Calendar**: [View and join meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-security-and-compliance?view=list)
+- **Recordings**: [YouTube Channel](https://www.youtube.com/@CNCFTAGSecurityandCompliance)
 
-All meetings are open to the public. No registration required - simply join the
-meeting from the calendar link.
+All meetings are open to the public. No registration required - simply join the meeting from the calendar link.
 
 ## Communication Channels
 
@@ -61,14 +55,12 @@ meeting from the calendar link.
 
 Join the CNCF Slack workspace and connect with the TAG:
 
-- **Channel**:
-  [#tag-security-and-compliance](https://cloud-native.slack.com/archives/C08JZ9YLAA3)
+- **Channel**: [#tag-security-and-compliance](https://cloud-native.slack.com/archives/C08JZ9YLAA3)
 - **CNCF Slack Invite**: [slack.cncf.io](https://slack.cncf.io)
 
 ### Mailing List
 
-- **Subscribe**:
-  [cncf-tag-security-and-compliance](https://lists.cncf.io/g/cncf-tag-security-and-compliance)
+- **Subscribe**: [cncf-tag-security-and-compliance](https://lists.cncf.io/g/cncf-tag-security-and-compliance)
 - Use for announcements, discussions, and coordination
 
 ## Focus Areas
@@ -139,8 +131,7 @@ Protecting the software supply chain:
 
 ### Security Assessments
 
-The Security Assessments subproject conducts comprehensive security reviews of
-CNCF projects.
+The Security Assessments subproject conducts comprehensive security reviews of CNCF projects.
 
 - **Project Reviews**: In-depth security assessments
 - **Self-Assessments**: Helping projects assess their own security
@@ -161,12 +152,9 @@ View current and past initiatives:
 TAG Security and Compliance produces various publications to help the community:
 
 - **[White Papers](./publications/index.md)**: In-depth security guidance
-- **[Security Lexicon](./publications/security-lexicon.md)**: Common security
-  terminology
-- **[Best Practices](./publications/index.md)**: Security best practices for
-  cloud native
-- **[Catalog](./publications/catalog/index.md)**: Comprehensive security
-  resources
+- **[Security Lexicon](./publications/security-lexicon.md)**: Common security terminology
+- **[Best Practices](./publications/index.md)**: Security best practices for cloud native
+- **[Catalog](./publications/catalog/index.md)**: Comprehensive security resources
 
 ## Getting Involved
 
@@ -174,16 +162,11 @@ We welcome contributions from anyone interested in cloud native security:
 
 ### Attend Meetings
 
-Join our regular meetings to hear about ongoing work and participate in
-discussions. Check the
-[meeting calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-security-and-compliance?view=list)
-for details.
+Join our regular meetings to hear about ongoing work and participate in discussions. Check the [meeting calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-security-and-compliance?view=list) for details.
 
 ### Contribute to Initiatives
 
-Browse
-[active initiatives](https://github.com/cncf/toc/issues?q=state%3Aopen+label%3Akind%2Finitiative+label%3Atag%2Fsecurity-and-compliance)
-and volunteer to help with specific deliverables.
+Browse [active initiatives](https://github.com/cncf/toc/issues?q=state%3Aopen+label%3Akind%2Finitiative+label%3Atag%2Fsecurity-and-compliance) and volunteer to help with specific deliverables.
 
 ### Security Assessments
 
@@ -202,10 +185,8 @@ Help conduct security assessments of CNCF projects:
 
 ### Join the Conversation
 
-- Participate in
-  [Slack discussions](https://cloud-native.slack.com/archives/C08JZ9YLAA3)
-- Engage on the
-  [mailing list](https://lists.cncf.io/g/cncf-tag-security-and-compliance)
+- Participate in [Slack discussions](https://cloud-native.slack.com/archives/C08JZ9YLAA3)
+- Engage on the [mailing list](https://lists.cncf.io/g/cncf-tag-security-and-compliance)
 - Comment on GitHub issues in the [TOC repository](https://github.com/cncf/toc)
 
 ## Resources
@@ -219,12 +200,9 @@ Help conduct security assessments of CNCF projects:
 ## Related TAGs
 
 - [TAG Infrastructure](../infrastructure/index.md) - Infrastructure security
-- [TAG Operational Resilience](../operational-resilience/index.md) - Security
-  operations
-- [TAG Developer Experience](../developer-experience/index.md) - Secure
-  development practices
+- [TAG Operational Resilience](../operational-resilience/index.md) - Security operations
+- [TAG Developer Experience](../developer-experience/index.md) - Secure development practices
 
 ## Related Technical Community Groups
 
-- [Software Supply Chain Security TCG](../../tcgs/software-supply-chain-security/index.md) -
-  Focused supply chain security discussions
+- [Software Supply Chain Security TCG](../../tcgs/software-supply-chain-security/index.md) - Focused supply chain security discussions

@@ -9,7 +9,7 @@ Linux 4 (i386 and x86_64 architectures only) and Red Hat Enterprise Linux 5
 ## Impact
 
 Several OpenSSH packages relating to RHEL 4 & 5 were signed by an unauthorized
-entity and available for use. New keys were rolled out.
+entity and available for use.  New keys were rolled out.
 
 ## Type of compromise
 

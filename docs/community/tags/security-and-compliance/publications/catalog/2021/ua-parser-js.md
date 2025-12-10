@@ -1,5 +1,4 @@
 <!-- cSpell:ignore klow klown Sonatype okhsa cryptominer -->
-
 # Compromise of NPM package ua-parser-js
 
 On October 22, 2021, the developer of popular NPM package ua-parser-js (over 7
@@ -9,8 +8,8 @@ noticed because of a flurry of spam emails that (they suspect) were sent to mask
 the NPM emails, and quickly deprecated the malicious versions and put out a
 notice that stated their NPM account was hijacked.
 
-This attack seems to be related to the
-[klow /klown /okhsa attack](klow-klown-okhsa.md).
+This attack seems to be related to the [klow /klown /okhsa
+attack](klow-klown-okhsa.md).
 
 ## Impact
 

@@ -1,11 +1,11 @@
 ---
-title: 'Issue Labels for New Contributors'
-linkTitle: 'Issue Labels'
+title: "Issue Labels for New Contributors"
+linkTitle: "Issue Labels"
 date: 2020-09-29
 description: >
   Curate your issues and apply labels that attract new contributors.
 aliases:
-  - /maintainers/github/issue-labels
+- /maintainers/github/issue-labels
 ---
 
 A great way to encourage new contributors is to curate issues that are suitable
@@ -18,12 +18,12 @@ adding context to the issue so someone new has enough information to implement
 it without asking a bunch of questions, and how to reduce the overhead of
 maintaining a set of issues for new contributors.
 
-- [Labels](#labels)
-  - [Help Wanted](#help-wanted)
-  - [Good First Issue](#good-first-issue)
-- [Grooming Issues](#grooming-issues)
-  - [Candidate Issues](#candidate-issues)
-- [Reviewing Pull Requests from New Contributors](#reviewing-pull-requests-from-new-contributors)
+* [Labels](#labels)
+  * [Help Wanted](#help-wanted)
+  * [Good First Issue](#good-first-issue)
+* [Grooming Issues](#grooming-issues)
+  * [Candidate Issues](#candidate-issues)
+* [Reviewing Pull Requests from New Contributors](#reviewing-pull-requests-from-new-contributors)
 
 ## Labels
 
@@ -34,9 +34,9 @@ Only] or [Open Sauced], rely on standard labels to identity issues.
 
 ### Help Wanted
 
-These issues should be suitable for someone who has either contributed to the
-project before, or an experienced developer who is comfortable navigating a new
-codebase. Items marked with the "help wanted" label should:
+These issues should be suitable for someone who has either contributed to the project
+before, or an experienced developer who is comfortable navigating a new codebase. Items
+marked with the "help wanted" label should:
 
 - **Low Barrier to Entry**
 
@@ -47,8 +47,8 @@ codebase. Items marked with the "help wanted" label should:
 
   The task is agreed upon and does not require further discussions in the
   community. Call out if that area of code is untested and requires new
-  fixtures. When possible point to existing code that serves as an example of
-  how to implement the change.
+  fixtures. When possible point to existing code that serves as an example
+  of how to implement the change.
 
   API / CLI behavior is decided and included in the original issue, for example:
   _"The new command syntax is `svcat unbind NAME [--orphan] [--timeout 5m]`"_,
@@ -121,6 +121,7 @@ wanted" and also:
   for copying. If the area of code doesn’t have tests, before labeling the
   issue, add a test fixture. This prep often makes a great help wanted task!
 
+
 ## Grooming Issues
 
 Below are explanations of what to look for when grooming your issue queue.
@@ -128,19 +129,19 @@ Usually issues have just enough information to make sense for another maintainer
 or someone familiar with the project to understand the desired change. What's
 usually lacking is:
 
-- Clearly explain to someone not involved with the project the desired change.
+* Clearly explain to someone not involved with the project the desired change.
   If it is a new CLI command, an example of the command, its output and how it
   should validate input and handle errors would be very helpful.
 
-- Where is the code that should be changed?
+* Where is the code that should be changed?
 
-- Is there existing code or tests that can be used as an example?
+* Is there existing code or tests that can be used as an example?
 
-- Links to documenation in the development.md or contributing.md file explaining
+* Links to documenation in the development.md or contributing.md file explaining
   how to make the change. For example, if the change requires modifying the
   website, it would really help to link to how to preview it locally.
 
-- Relevant links to other issues, documenation for related features or concepts.
+* Relevant links to other issues, documenation for related features or concepts.
 
 Not every issue requires that level of grooming. Honestly, by the time I write
 that out for a simple issue I could have implemented it myself. However the
@@ -174,12 +175,11 @@ requests, and ensure that our investment in new contributors is rewarded by them
 coming back and becoming regulars.
 
 Provide extra assistance during reviews on `good first issue` pull requests:
-
 - Answer questions and identify useful docs.
 
-- Offer advice such as how to reproduce the issue on a local dev environment, or
-  how to take advantage of helper functions and libraries that they may not be
-  aware of.
+- Offer advice such as how to reproduce the issue on a local dev environment,
+  or how to take advantage of helper functions and libraries that they may 
+  not be aware of.
 
 - Help new contributors learn enough about the project, setting up their
   environment, running tests, and navigating this area of the code so that they

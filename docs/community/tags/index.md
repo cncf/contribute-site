@@ -10,22 +10,15 @@ tags:
 
 # CNCF Technical Advisory Groups (TAGs)
 
-Technical Advisory Groups (TAGs) are the primary organizational units within the
-CNCF that oversee and coordinate interests across projects, working groups, and
-the broader cloud native community. TAGs scale technical contributions while
-maintaining quality and advancing the CNCF mission of making cloud native
-computing ubiquitous.
+Technical Advisory Groups (TAGs) are the primary organizational units within the CNCF that oversee and coordinate interests across projects, working groups, and the broader cloud native community. TAGs scale technical contributions while maintaining quality and advancing the CNCF mission of making cloud native computing ubiquitous.
 
 ## Overview
 
-TAGs serve as bridges between CNCF projects, end users, and the Technical
-Oversight Committee (TOC). Each TAG focuses on a specific industry problem
-domain or provides horizontal services that support other TAGs and projects.
+TAGs serve as bridges between CNCF projects, end users, and the Technical Oversight Committee (TOC). Each TAG focuses on a specific industry problem domain or provides horizontal services that support other TAGs and projects.
 
 :::tip TAG Mission
 
-TAGs strengthen the project ecosystem to meet the needs of end users and
-contributors by:
+TAGs strengthen the project ecosystem to meet the needs of end users and contributors by:
 
 - Providing technical expertise during project evaluations
 - Identifying gaps in the CNCF project portfolio
@@ -41,11 +34,9 @@ The CNCF has five active Technical Advisory Groups organized by domain:
 
 ### TAG Developer Experience
 
-**Focus**: Databases, Microservices, Streaming, Messaging, API Management,
-Developer Frameworks
+**Focus**: Databases, Microservices, Streaming, Messaging, API Management, Developer Frameworks
 
-Improving the developer experience in cloud native environments through better
-tools, frameworks, and practices.
+Improving the developer experience in cloud native environments through better tools, frameworks, and practices.
 
 **Leadership**: 3 Chairs, 5 Tech Leads  
 **TOC Liaison**: Katie Gamanji ([@kgamanji](https://github.com/kgamanji))
@@ -60,15 +51,12 @@ tools, frameworks, and practices.
 
 ### TAG Infrastructure
 
-**Focus**: Data, Storage, Network, DNS, Compute, Service Mesh,
-Infrastructure-as-Code, Edge, Sovereignty, Load Balancing
+**Focus**: Data, Storage, Network, DNS, Compute, Service Mesh, Infrastructure-as-Code, Edge, Sovereignty, Load Balancing
 
-Developing practices, standards, and assessments for core cloud native
-infrastructure to enable scalable, resilient, secure, and performant systems.
+Developing practices, standards, and assessments for core cloud native infrastructure to enable scalable, resilient, secure, and performant systems.
 
 **Leadership**: 3 Chairs, 5 Tech Leads  
-**TOC Liaisons**: Ricardo Rocha ([@rochaporto](https://github.com/rochaporto)),
-Karena Angell ([@angellk](https://github.com/angellk))
+**TOC Liaisons**: Ricardo Rocha ([@rochaporto](https://github.com/rochaporto)), Karena Angell ([@angellk](https://github.com/angellk))
 
 - [Learn more →](./infrastructure/index.md)
 - [Slack: #tag-infrastructure](https://cloud-native.slack.com/archives/C08KBH3RA1K)
@@ -80,16 +68,12 @@ Karena Angell ([@angellk](https://github.com/angellk))
 
 ### TAG Operational Resilience
 
-**Focus**: Observability, Management, Business Continuity, Resource
-Optimization, Cost Efficiency, Energy, Performance, Troubleshooting,
-Reliability, Day 2 Operations
+**Focus**: Observability, Management, Business Continuity, Resource Optimization, Cost Efficiency, Energy, Performance, Troubleshooting, Reliability, Day 2 Operations
 
-Dedicated to operational resilience and reliability practices in cloud native
-systems.
+Dedicated to operational resilience and reliability practices in cloud native systems.
 
 **Leadership**: 3 Chairs, 5 Tech Leads  
-**TOC Liaison**: Jeremy Rickard
-([@jeremyrickard](https://github.com/jeremyrickard))
+**TOC Liaison**: Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard))
 
 - [Learn more →](./operational-resilience/index.md)
 - [Slack: #tag-operational-resilience](https://cloud-native.slack.com/archives/C08KGDENK34)
@@ -101,15 +85,12 @@ systems.
 
 ### TAG Security and Compliance
 
-**Focus**: Security Hygiene, Policy-as-Code, Compliance, Auditing, Threat
-Modeling, Secure Software Supply Chain
+**Focus**: Security Hygiene, Policy-as-Code, Compliance, Auditing, Threat Modeling, Secure Software Supply Chain
 
-Addressing security and compliance concerns in cloud native systems through best
-practices, assessments, and tooling.
+Addressing security and compliance concerns in cloud native systems through best practices, assessments, and tooling.
 
 **Leadership**: 3 Chairs, 6 Tech Leads  
-**TOC Liaisons**: Faseela K ([@kfaseela](https://github.com/kfaseela)), Jeremy
-Rickard ([@jeremyrickard](https://github.com/jeremyrickard))
+**TOC Liaisons**: Faseela K ([@kfaseela](https://github.com/kfaseela)), Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard))
 
 - [Learn more →](./security-and-compliance/index.md)
 - [Slack: #tag-security-and-compliance](https://cloud-native.slack.com/archives/C08JZ9YLAA3)
@@ -121,15 +102,12 @@ Rickard ([@jeremyrickard](https://github.com/jeremyrickard))
 
 ### TAG Workloads Foundation
 
-**Focus**: Fundamental cloud native workload execution environments and
-lifecycle management
+**Focus**: Fundamental cloud native workload execution environments and lifecycle management
 
-Defining practices and standards for cloud native workload execution within
-systems, applications, and architectures.
+Defining practices and standards for cloud native workload execution within systems, applications, and architectures.
 
 **Leadership**: 3 Chairs, 5 Tech Leads  
-**TOC Liaisons**: Alex Chircop ([@chira001](https://github.com/chira001)), Kevin
-Wang ([@kevin-wangzefeng](https://github.com/kevin-wangzefeng))
+**TOC Liaisons**: Alex Chircop ([@chira001](https://github.com/chira001)), Kevin Wang ([@kevin-wangzefeng](https://github.com/kevin-wangzefeng))
 
 - [Learn more →](./workloads-foundation/index.md)
 - [Slack: #tag-workloads-foundation](https://cloud-native.slack.com/archives/C08K71W9HAS)
@@ -141,25 +119,22 @@ Wang ([@kevin-wangzefeng](https://github.com/kevin-wangzefeng))
 
 Each TAG operates with a consistent structure:
 
-| Role            | Count    | Term       | Responsibilities                                                              |
-| --------------- | -------- | ---------- | ----------------------------------------------------------------------------- |
-| **Chairs**      | 3        | 2 years    | Oversee planning and execution, ensure adherence to principles, report to TOC |
-| **Tech Leads**  | 5-6      | 2 years    | Provide subject matter expertise, guide technical decisions, maintain quality |
-| **Subprojects** | Variable | Ongoing    | Focused work efforts on specific domains                                      |
-| **Initiatives** | Variable | Time-bound | Short-term deliverables like white papers or reports                          |
+| Role | Count | Term | Responsibilities |
+|------|-------|------|-----------------|
+| **Chairs** | 3 | 2 years | Oversee planning and execution, ensure adherence to principles, report to TOC |
+| **Tech Leads** | 5-6 | 2 years | Provide subject matter expertise, guide technical decisions, maintain quality |
+| **Subprojects** | Variable | Ongoing | Focused work efforts on specific domains |
+| **Initiatives** | Variable | Time-bound | Short-term deliverables like white papers or reports |
 
 ### How TAGs Operate
 
 TAGs follow a consistent operational model:
 
-- **Regular Meetings**: At least one public monthly meeting, recorded and
-  uploaded to YouTube
+- **Regular Meetings**: At least one public monthly meeting, recorded and uploaded to YouTube
 - **Open Participation**: All meetings are open to the community
 - **Documented Decisions**: All significant decisions documented publicly
-- **Progress Updates**: Regular reports to the TOC on health, subprojects, and
-  initiatives
-- **Community Engagement**: KubeCon presence, blog posts, white papers, and
-  presentations
+- **Progress Updates**: Regular reports to the TOC on health, subprojects, and initiatives
+- **Community Engagement**: KubeCon presence, blog posts, white papers, and presentations
 
 ## Getting Involved with TAGs
 
@@ -167,24 +142,20 @@ TAGs welcome participation from anyone in the cloud native community:
 
 ### Attend Meetings
 
-All TAG meetings are open to the public. No registration or membership
-required - simply join and observe or participate in discussions.
+All TAG meetings are open to the public. No registration or membership required - simply join and observe or participate in discussions.
 
 ### Join Communication Channels
 
 - **Slack**: Each TAG has a dedicated Slack channel (links above)
-- **Mailing Lists**: Subscribe to TAG mailing lists for announcements and
-  discussions
+- **Mailing Lists**: Subscribe to TAG mailing lists for announcements and discussions
 - **GitHub**: Watch TAG repositories for issues and pull requests
 
 ### Contribute to Work
 
-- **Review Documents**: Provide feedback on white papers, best practices, and
-  other outputs
+- **Review Documents**: Provide feedback on white papers, best practices, and other outputs
 - **Participate in Initiatives**: Join time-bound work efforts that interest you
 - **Help with Reviews**: Assist with project evaluations and health checks
-- **Share Expertise**: Contribute domain knowledge to discussions and
-  deliverables
+- **Share Expertise**: Contribute domain knowledge to discussions and deliverables
 
 ### Path to Leadership
 
@@ -224,9 +195,7 @@ TAGs coordinate with multiple parts of the CNCF ecosystem:
 
 ## Historical Context
 
-The current TAG structure was established in 2025 to better align with cloud
-native ecosystem needs. Previous Technical Advisory Groups are being phased out
-and replaced with this new structure.
+The current TAG structure was established in 2025 to better align with cloud native ecosystem needs. Previous Technical Advisory Groups are being phased out and replaced with this new structure.
 
 :::note Legacy TAGs
 
@@ -245,14 +214,10 @@ The following legacy TAGs are being spun down during 2025:
 
 ## Resources and Documentation
 
-- [TAG Governance](../governance/tech-group-governance.md#technical-advisory-groups-tags) -
-  Full governance details
-- [Technical Leadership Principles](../governance/tech-leadership-principles-guidance.md) -
-  Expected leadership behaviors
-- [TOC Repository](https://github.com/cncf/toc) - Primary location for TAG
-  coordination
-- [All Active Initiatives](https://github.com/cncf/toc/issues?q=is%3Aopen+label%3Akind%2Finitiative) -
-  Current TAG initiatives
+- [TAG Governance](../governance/tech-group-governance.md#technical-advisory-groups-tags) - Full governance details
+- [Technical Leadership Principles](../governance/tech-leadership-principles-guidance.md) - Expected leadership behaviors
+- [TOC Repository](https://github.com/cncf/toc) - Primary location for TAG coordination
+- [All Active Initiatives](https://github.com/cncf/toc/issues?q=is%3Aopen+label%3Akind%2Finitiative) - Current TAG initiatives
 
 ## Contact
 
@@ -262,5 +227,4 @@ For general TAG questions:
 - **Mailing List**: [cncf-toc@lists.cncf.io](https://lists.cncf.io/g/cncf-toc)
 - **GitHub**: [cncf/toc issues](https://github.com/cncf/toc/issues)
 
-For TAG-specific questions, use the contact information listed under each TAG
-above.
+For TAG-specific questions, use the contact information listed under each TAG above.

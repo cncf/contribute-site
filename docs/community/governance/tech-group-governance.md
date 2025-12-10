@@ -5,10 +5,11 @@ sidebar_position: 2
 
 # CNCF Technical Group Governance
 
-**NOTE:** This document is a **starting point**. It is expected to change and be
-refined as we roll out the TAG restructuring and discover what works, what
+**NOTE:** This document is a **starting point**. It is expected to change and
+be refined as we roll out the TAG restructuring and discover what works, what
 doesn't, and where we can reduce friction or overhead. Thank you for your
 patience and understanding while we work through this together.
+
 
 This document outlines the scope and responsibilities of the CNCF Technical
 Groups
@@ -29,7 +30,7 @@ different purposes or have different scopes:
 
 - [CNCF Technical Group Governance](#cncf-technical-group-governance)
 - [Keywords](#keywords)
-- [Technical Advisory Group (TAG)](<#technical-advisory-groups-(tags)>)
+- [Technical Advisory Group (TAG)](#technical-advisory-groups-\(tags\))
   - [Goals](#goals)
   - [Formation](#formation)
   - [Requirements](#requirements)
@@ -79,18 +80,18 @@ standards bodies, such as the [Internet Engineering Task Force (IETF)] and the
   the item is required.
 - **MUST NOT** - This phrase, or the phrase "**SHALL NOT**", means that the item
   is not permitted or must be avoided.
-- **SHOULD** - This word, or the adjective "**RECOMMENDED**," means the item is
+- **SHOULD** -  This word, or the adjective "**RECOMMENDED**," means the item is
   suggested but may be ignored for valid reasons.
 - **SHOULD NOT** - This phrase, or the phrase "**NOT RECOMMENDED**," means the
   item is acceptable under certain circumstances.
 - **MAY** - This word, or the adjective "**OPTIONAL**," means the item is truly
   optional.
 
+
 [RFC2119 keywords]: https://www.ietf.org/rfc/rfc2119.txt
-[Internet Engineering Task Force (IETF)]:
-  https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force
-[Kubernetes project]:
-  https://github.com/kubernetes/community/blob/master/committee-steering/governance/sig-governance-requirements.md
+[Internet Engineering Task Force (IETF)]: https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force
+[Kubernetes project]: https://github.com/kubernetes/community/blob/master/committee-steering/governance/sig-governance-requirements.md
+
 
 ## Technical Advisory Groups (TAGs)
 
@@ -101,9 +102,9 @@ focused on industry problem domains that align with the projects within the CNCF
 and/or horizontal that support the other TAGs or the projects themselves.
 
 **Examples:**
-
 - **Vertical:** Infrastructure, Workloads
 - **Horizontal:** Security & Compliance, Operational Resilience
+
 
 ### Goals
 
@@ -122,6 +123,7 @@ and/or horizontal that support the other TAGs or the projects themselves.
 - Focus attention & resources on helping foster project maturity, systematically
   across CNCF projects.
 
+
 ### Formation
 
 TAGs are formed when there is a documented, outstanding gap in the technical
@@ -133,10 +135,12 @@ Due to the longevity of a TAG, existing groups interested in becoming a TAG need
 to engage the TOC, the TOC will review the request against the current needs and
 movement of the ecosystem and make a determination.
 
-Example: A domain-focused community group has regularly submitted and completed
+Example:
+A domain-focused community group has regularly submitted and completed
 initiatives that cover gaps in the current TAG structure. After a discussion
 with the TOC, a draft charter with scopes is drafted. The TOC then votes on the
 TAG charter PR, and the TAG is formed after the vote is passed.
+
 
 ### Requirements
 
@@ -149,7 +153,7 @@ TAG charter PR, and the TAG is formed after the vote is passed.
 - Where applicable, MUST participate in Project Reviews & Contributor Strategy
   TOC subproject.
 - If applicable, MUST document services provided to other TAGs or projects.
-- MUST hold at least one regularly scheduled _public_ monthly meeting, recorded
+- MUST hold at least one regularly scheduled *public* monthly meeting, recorded
   and uploaded to YouTube.
 - MUST provide periodic updates to the TOC and TOC liaisons on their health,
   subprojects, and initiatives.
@@ -167,6 +171,7 @@ TAG charter PR, and the TAG is formed after the vote is passed.
 - SHOULD check in with graduated and incubating projects to understand their
   health, features, changes, etc. and notify the TOC of anything significant,
   any gaps, novelty, interesting, concerning.
+
 
 ### Roles, Terms, and Elections
 
@@ -197,6 +202,7 @@ expected to increase (e.g up to 20%) during times with a high volume of requests
 including, but not limited to sandbox inclusion, due diligence for
 incubation/graduation, and/or or/and KubeCon preparations.
 
+
 ##### Requirements
 
 - MUST be approved by the TOC.
@@ -207,6 +213,7 @@ incubation/graduation, and/or or/and KubeCon preparations.
   such as extensive domain expertise, formation of a new governing body (e.g.
   new TAG or subproject), or demonstrating significant aptitude for people &
   community management.
+
 
 ##### Duties
 
@@ -237,6 +244,7 @@ incubation/graduation, and/or or/and KubeCon preparations.
 - MUST keep the TOC liaisons informed of the group’s activities and progress
   against the charter.
 
+
 ##### Activity Expectations
 
 - Chairs serve 2-year terms and MAY submit for re-election.
@@ -244,11 +252,11 @@ incubation/graduation, and/or or/and KubeCon preparations.
 - Chairs MAY decide to step down at any time and propose a replacement to
   complete their term.
   - The candidate SHOULD be supported by a majority of the current active leads,
-    with support backed up by documentation, such as links to GitHub activity or
-    documented deliverables.
+    with support backed up by documentation, such as links to GitHub activity
+    or documented deliverables.
   - The candidate is REQUIRED to be approved by the TOC.
-- Chairs taking an extended leave of 1 or more months MUST coordinate with other
-  leads to ensure the role is adequately covered during their leave.
+- Chairs taking an extended leave of 1 or more months MUST coordinate with
+  other leads to ensure the role is adequately covered during their leave.
 - Chairs going on leave for 1-3 months MUST work with other Chairs and Tech
   Leads to identify a temporary replacement.
 - Active Leads are REQUIRED to notify the TOC and receive confirmation of notice
@@ -256,10 +264,12 @@ incubation/graduation, and/or or/and KubeCon preparations.
   duty.
 - Inactive Chairs MUST be removed through a super-majority vote of the TOC.
 
+
 ##### Escalations
 
 - Lead membership disagreements MAY be escalated to the TOC or the CoCC as
   applicable.
+
 
 #### Tech Lead
 
@@ -283,6 +293,7 @@ The expected minimum time commitment is at least 10% of their working hours, but
 expected to increase (e.g up to 20%) during times with a high volume of requests
 including, but not limited to sandbox inclusion, due diligence for
 incubation/graduation, and/or or/and KubeCon preparations.
+
 
 ##### Requirements
 
@@ -313,14 +324,15 @@ incubation/graduation, and/or or/and KubeCon preparations.
   of their groups, subprojects, and any other initiatives.
 - SHOULD attend regular group meetings.
 
+
 ##### Activity Expectations
 
 - Tech Leads serve 2 year terms, and MAY submit for re-election.
 - Tech Leads MAY decide to step down at any time and propose a replacement to
   complete their term.
   - The candidate SHOULD be supported by a majority of the current active leads,
-    with support backed up by documentation, such as links to GitHub activity or
-    documented deliverables.
+    with support backed up by documentation, such as links to GitHub activity
+    or documented deliverables.
   - The candidate is REQUIRED to be approved by the TOC.
 - Tech Leads taking an extended leave of 1 or more months MUST coordinate with
   other leads to ensure the role is adequately covered during their leave.
@@ -331,10 +343,13 @@ incubation/graduation, and/or or/and KubeCon preparations.
   of duty.
 - Inactive Tech Leads MUST be removed through a super-majority vote of the TOC.
 
+
+
 ##### Escalations
 
 - Lead membership disagreements MAY be escalated to the TOC or the CoCC as
   applicable.
+
 
 #### Other Roles
 
@@ -349,6 +364,7 @@ All additional roles are REQUIRED to have the following minimum requirements:
 - MUST be tracked alongside the other TAG [metadata].
 - MUST adhere to the [Technical Leadership Principles].
 - SHOULD remain active and responsive in their Roles.
+
 
 ## Subprojects
 
@@ -369,6 +385,7 @@ organizer, domain experts, or points of contact.
   subproject
 - Enact the technical vision of the TOC within scope of the subproject
 
+
 ### Formation
 
 Subprojects require a charter describing their purpose, scope, roles, and any
@@ -377,6 +394,7 @@ This charter MUST be approved by the TOC.
 
 It is strongly recommended to share a draft charter and work with the TOC early
 to ensure a streamlined approval process.
+
 
 ### Requirements
 
@@ -392,6 +410,7 @@ to ensure a streamlined approval process.
   Tech Leads of the TAG. For TOC Subprojects, subproject leads fall to the TOC
   Shadows first and TOC Members next, as needed.
 
+
 ### Roles, Terms, and Elections
 
 #### Subproject Leads
@@ -401,8 +420,9 @@ organizing and shepherding the execution of the subproject. They adhere to the
 requirements, duties and expectations outlined in the Subproject Lead role
 description in CNCF Community Group Leadership Requirements.
 
-Recommended minimum number of leads: 2 Term: 1 year Election requirements:
-Super-majority vote of the parent governing body.
+Recommended minimum number of leads: 2
+Term: 1 year
+Election requirements: Super-majority vote of the parent governing body.
 
 - MUST adhere to the [Technical Leadership Principles].
 - MUST be nominated by the TAG’s Tech Leads (minimum 1) for TAG led subprojects,
@@ -413,6 +433,7 @@ Super-majority vote of the parent governing body.
   documented reason such as extensive domain expertise, formation of a new
   governing body (e.g. new TAG or subproject), or demonstrating significant
   aptitude for people & community management.
+
 
 ##### Duties
 
@@ -430,14 +451,15 @@ Super-majority vote of the parent governing body.
 - SHOULD ensure a healthy process for discussion and decision making is in
   place. MAY make decisions to resolve conflicts.
 
+
 ##### Activity Expectations
 
-- Subproject Leads serve 1 year terms, and MAY submit for re-election.
+- Subproject Leads serve 1 year terms, and  MAY submit for re-election.
 - Subproject Leads MAY decide to step down at any time and propose a replacement
   to complete their term.
   - The candidate SHOULD be supported by a majority of the current active leads,
-    with support backed up by documentation, such as links to GitHub activity or
-    documented deliverables.
+    with support backed up by documentation, such as links to GitHub activity
+    or documented deliverables.
   - The candidate is REQUIRED to be approved by the parent TAG’s Tech Leads, or
     in the case of TOC lead subprojects, the TOC itself.
 - Subproject Leads taking an extended leave of 1 or more months MUST coordinate
@@ -453,11 +475,13 @@ Super-majority vote of the parent governing body.
   body leads to hold a vote, the active members MUST escalate to the next-level
   parent governing body, where those members may count as additional voters.
 
+
 ##### Escalations
 
 - Lead membership disagreements MAY be escalated to their parent governing body,
   the CoCC as applicable, or in the event of further dispute, up to the top
   governing body itself (TOC).
+
 
 #### Other Roles
 
@@ -473,6 +497,8 @@ All additional roles are REQUIRED to have the following minimum requirements:
 - MUST adhere to the [Technical Leadership Principles].
 - SHOULD remain active and responsive in their Roles.
 
+
+
 ## Initiatives
 
 Initiatives are short-term, time bound work that have a pre-defined objective
@@ -483,6 +509,7 @@ it is beneficial to the initiative completing its goal. Each initiative MUST
 have a TAG Tech Lead, Subproject lead, or TOC member assigned to oversee and
 ensure timely completion and closure of the work within the scope of the parent
 governing group's charter.
+
 
 ### Goals
 
@@ -497,6 +524,7 @@ governing group's charter.
 There are three types of initiatives with different formation requirements, TAG
 initiatives, subproject initiatives, and TOC initiatives.
 
+
 #### TAG Initiatives
 
 General initiatives can be any "piece of work," such as white papers, reports,
@@ -510,11 +538,13 @@ domains, however one is ultimately assigned as the responsible group for
 execution and reporting. Initiatives that span many TAGs, or have no clear owner
 should be proposed as TOC initiatives.
 
+
 #### Subproject Initiatives
 
 Subproject-based initiatives are defined in the subproject’s charter and are
 tailored to meet the subproject’s needs. They are essentially a customized
 GitHub issue template used to track the work of the subproject.
+
 
 #### TOC Initiatives
 
@@ -523,14 +553,15 @@ of TAGs or coordinate work around specific goals. In these instances, at least
 one TOC member MUST be assigned to organize, shepherd, and report on the
 initiative's status.
 
+
 ### Requirements
 
 - MUST be documented, including goals, milestones, deliverables, and any exit
   criteria (e.g., a tracking GitHub issue).
 - Initiatives MUST have more than two participants not including the assigned
   lead for oversight.
-- SHOULD actively be worked on. An initiative that has made little progress in 3
-  months should be canceled or paused until other contributors can be
+- SHOULD actively be worked on. An initiative that has made little progress in
+  3 months should be canceled or paused until other contributors can be
   identified.
 - Initiatives SHOULD not last longer than 2 quarters but MAY request an
   extension from their parent governing body with reasonable justification.
@@ -540,43 +571,48 @@ initiative's status.
 - Subproject based initiatives MAY have different requirements that are outlined
   in the subproject charter.
 
+
 ### Roles
 
 Assigned Tech Leads, Subproject Leads or TOC members serve as the general
 oversight of initiatives depending on the parent governing body.
 
+
 ## Technical Community Groups
 
-Technical Community Groups (TCGs) are a part of the broader [CNCF Community
-Groups Program]. They are a lightweight topic or domain-focused group used as a
-rallying point for community members to discuss, share knowledge, and coordinate
-potential future initiatives. They are free to propose and shepherd initiatives
-when there is an explicit deliverable or objective they wish to work on.
+Technical Community Groups (TCGs) are a part of the broader
+[CNCF Community Groups Program]. They are a lightweight topic or domain-focused
+group used as a rallying point for community members to discuss, share knowledge,
+and coordinate potential future initiatives. They are free to propose and
+shepherd initiatives when there is an explicit deliverable or objective they
+wish to work on.
 
 Community Groups have [much broader exposure], and have a suite of tools
 tailored for community management, making them the best place for
 discussion-oriented groups.
 
 Additionally, it is likely that future TAGs and subprojects will likely start as
-community groups.
+community groups. 
 
 A community group applying to become a TAG or subproject:
 
 - MUST have completed numerous initiatives and cover a gap in the currently
   defined groups
-- MUST have a documented history of collaboration with the parent group they are
-  applying to
+- MUST have a documented history of collaboration with the parent group they
+  are applying to
 - MUST be approved by the TOC
 - MUST have its leadership established through the same processes outlined in
   the respective section above for TAGs or subprojects, following approval
 
 [much broader exposure]: https://community.cncf.io/
 
+
 ### Formation
 
 TCG's have minimal governance requirements and follow the formation process
-outlined in [Community Groups README], with the additional step of requiring TOC
-approval.
+outlined in [Community Groups README], with the additional step of requiring
+TOC approval.
+
 
 ### Roles, Terms, and Elections
 
@@ -586,14 +622,16 @@ An Organizer is an individual domain expert who is responsible for the overall
 administration and execution of the TCG, such as scheduling and hosting
 meetings, promoting the group, and coordinating the creation of initiatives.
 
+
 #### Requirements
 
 - MUST adhere to the [Technical Leadership Principles].
 - MUST adhere to the [Community Group Organizer Requirements].
 - SHOULD remain active and responsive in their role.
 
-[Community Group Organizer Requirements]:
-  https://github.com/cncf/communitygroups/blob/main/organizer_roles.md
+
+[Community Group Organizer Requirements]: https://github.com/cncf/communitygroups/blob/main/organizer_roles.md
+
 
 #### Duties
 
@@ -604,6 +642,7 @@ meetings, promoting the group, and coordinating the creation of initiatives.
 - MUST coordinate communication and be a connector with other community groups
   like TAGs and the TOC, but MAY delegate the actual communication and creation
   of content to other contributors where appropriate.
+
 
 #### Activity Expectations
 
@@ -628,20 +667,21 @@ meetings, promoting the group, and coordinating the creation of initiatives.
 
 #### Other Roles
 
-TCG's MAY have other roles, but they are REQUIRED to be documented in an easily
-discovered area, such as the groups's page on Bevy; the platform used by
-Community Groups.
+TCG's MAY have other roles, but they are REQUIRED to be documented in an
+easily discovered area, such as the groups's page on Bevy; the platform used
+by Community Groups.
 
 - MUST be documented with a description, scope, and responsibilities.
 - MUST adhere to the [Technical Leadership Principles].
 - SHOULD remain active and responsive in their roles.
 
-[Community Groups README]:
-  https://github.com/cncf/communitygroups?tab=readme-ov-file#how-to-apply
+
+
+[Community Groups README]: https://github.com/cncf/communitygroups?tab=readme-ov-file#how-to-apply
+
 
 <!-- Common Links -->
 
 [metadata]: https://github.com/cncf/toc/blob/main/tags.yaml
-[Technical Leadership Principles]:
-  https://github.com/cncf/toc/blob/main/PRINCIPLES.md#technical-leadership-principles
+[Technical Leadership Principles]: https://github.com/cncf/toc/blob/main/PRINCIPLES.md#technical-leadership-principles
 [CNCF Community Groups Program]: https://github.com/cncf/communitygroups

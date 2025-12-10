@@ -10,19 +10,11 @@ tags:
 
 # CNCF Technical Community Groups (TCGs)
 
-Technical Community Groups (TCGs) are lightweight, topic or domain-focused
-groups that serve as rallying points for community members to discuss, share
-knowledge, and coordinate potential future initiatives. TCGs are part of the
-broader
-[CNCF Community Groups Program](https://github.com/cncf/communitygroups).
+Technical Community Groups (TCGs) are lightweight, topic or domain-focused groups that serve as rallying points for community members to discuss, share knowledge, and coordinate potential future initiatives. TCGs are part of the broader [CNCF Community Groups Program](https://github.com/cncf/communitygroups).
 
 ## Overview
 
-TCGs provide a structured yet flexible environment for community-driven
-exploration and collaboration on specific topics within the cloud native
-ecosystem. They complement Technical Advisory Groups (TAGs) by serving as
-incubators for ideas and initiatives that may eventually evolve into more formal
-structures.
+TCGs provide a structured yet flexible environment for community-driven exploration and collaboration on specific topics within the cloud native ecosystem. They complement Technical Advisory Groups (TAGs) by serving as incubators for ideas and initiatives that may eventually evolve into more formal structures.
 
 :::tip TCG Purpose
 
@@ -42,12 +34,9 @@ The CNCF currently has three active Technical Community Groups:
 
 ### Artificial Intelligence
 
-Focused on artificial intelligence and machine learning in cloud native
-environments, including AI/ML workloads, frameworks, and infrastructure
-requirements.
+Focused on artificial intelligence and machine learning in cloud native environments, including AI/ML workloads, frameworks, and infrastructure requirements.
 
-**Topics**: AI/ML infrastructure, model serving, training at scale, MLOps, AI
-governance
+**Topics**: AI/ML infrastructure, model serving, training at scale, MLOps, AI governance
 
 - [Learn more →](./artificial-intelligence/index.md)
 
@@ -55,12 +44,9 @@ governance
 
 ### Platform Engineering
 
-Dedicated to platform engineering practices, tools, and patterns that enable
-development teams to self-service their infrastructure needs while maintaining
-consistency and governance.
+Dedicated to platform engineering practices, tools, and patterns that enable development teams to self-service their infrastructure needs while maintaining consistency and governance.
 
-**Topics**: Internal developer platforms, golden paths, self-service portals,
-platform as a product
+**Topics**: Internal developer platforms, golden paths, self-service portals, platform as a product
 
 - [Learn more →](./platform-engineering/index.md)
 
@@ -68,12 +54,9 @@ platform as a product
 
 ### Software Supply Chain Security
 
-Addressing the security of the software supply chain, from source code to
-production deployment, including build processes, artifact signing, and
-provenance tracking.
+Addressing the security of the software supply chain, from source code to production deployment, including build processes, artifact signing, and provenance tracking.
 
-**Topics**: SBOM, artifact signing, provenance, build security, vulnerability
-management, supply chain attestation
+**Topics**: SBOM, artifact signing, provenance, build security, vulnerability management, supply chain attestation
 
 - [Learn more →](./software-supply-chain-security/index.md)
 
@@ -83,13 +66,10 @@ management, supply chain attestation
 
 TCGs have minimal governance requirements compared to TAGs:
 
-- **Organizers**: Domain experts who facilitate meetings and coordinate
-  activities (2-year terms)
+- **Organizers**: Domain experts who facilitate meetings and coordinate activities (2-year terms)
 - **Open Participation**: Anyone can join and participate in discussions
-- **Initiative-Driven**: Work is organized through lightweight initiatives with
-  clear deliverables
-- **Community-Focused**: Success measured by community engagement and value
-  delivered
+- **Initiative-Driven**: Work is organized through lightweight initiatives with clear deliverables
+- **Community-Focused**: Success measured by community engagement and value delivered
 
 ### Meetings
 
@@ -102,24 +82,23 @@ TCGs have minimal governance requirements compared to TAGs:
 
 TCGs leverage the CNCF Community Groups infrastructure:
 
-- **Bevy Platform**: Community group pages on
-  [community.cncf.io](https://community.cncf.io)
+- **Bevy Platform**: Community group pages on [community.cncf.io](https://community.cncf.io)
 - **Slack Channels**: Dedicated channels on CNCF Slack
 - **Mailing Lists**: For announcements and asynchronous discussion
 - **GitHub**: For tracking initiatives and deliverables
 
 ## TCG vs TAG: What's the Difference?
 
-| Aspect           | Technical Community Group (TCG)            | Technical Advisory Group (TAG)                 |
-| ---------------- | ------------------------------------------ | ---------------------------------------------- |
-| **Purpose**      | Discussion, exploration, knowledge sharing | Governance, project oversight, deliverables    |
-| **Structure**    | Lightweight, flexible                      | Formal with chairs and tech leads              |
-| **Scope**        | Topic/domain focused                       | Industry problem domain or horizontal function |
-| **Governance**   | Minimal requirements                       | Comprehensive governance framework             |
-| **Meetings**     | As needed by community                     | Required monthly public meetings               |
-| **Deliverables** | Optional initiatives                       | Required white papers, reviews, assessments    |
-| **Reporting**    | Informal to TOC                            | Regular status updates to TOC                  |
-| **Lifecycle**    | Can be formed/dissolved easily             | Long-lived, requires TOC approval              |
+| Aspect | Technical Community Group (TCG) | Technical Advisory Group (TAG) |
+|--------|--------------------------------|-------------------------------|
+| **Purpose** | Discussion, exploration, knowledge sharing | Governance, project oversight, deliverables |
+| **Structure** | Lightweight, flexible | Formal with chairs and tech leads |
+| **Scope** | Topic/domain focused | Industry problem domain or horizontal function |
+| **Governance** | Minimal requirements | Comprehensive governance framework |
+| **Meetings** | As needed by community | Required monthly public meetings |
+| **Deliverables** | Optional initiatives | Required white papers, reviews, assessments |
+| **Reporting** | Informal to TOC | Regular status updates to TOC |
+| **Lifecycle** | Can be formed/dissolved easily | Long-lived, requires TOC approval |
 
 ## Evolution Path
 
@@ -156,7 +135,6 @@ To propose a new Technical Community Group:
 ### 2. Draft Proposal
 
 Create a proposal that includes:
-
 - Topic description and scope
 - Initial organizers (minimum 2)
 - Expected activities and potential deliverables
@@ -164,8 +142,7 @@ Create a proposal that includes:
 
 ### 3. Submit for Approval
 
-- Follow the
-  [Community Groups formation process](https://github.com/cncf/communitygroups?tab=readme-ov-file#how-to-apply)
+- Follow the [Community Groups formation process](https://github.com/cncf/communitygroups?tab=readme-ov-file#how-to-apply)
 - Obtain TOC approval (required for Technical Community Groups)
 - Work with CNCF staff to set up infrastructure
 
@@ -213,11 +190,9 @@ All TCGs must meet basic requirements:
 - **Organizers**: Minimum of 2 organizers who facilitate activities
 - **Public Meetings**: Hold meetings open to all community members
 - **Communication Channels**: Maintain active Slack channel and/or mailing list
-- **Code of Conduct**: Adhere to
-  [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md)
+- **Code of Conduct**: Adhere to [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md)
 - **Regular Activity**: Demonstrate ongoing community engagement and value
-- **Technical Leadership Principles**: Follow
-  [CNCF technical leadership principles](https://github.com/cncf/toc/blob/main/PRINCIPLES.md#technical-leadership-principles)
+- **Technical Leadership Principles**: Follow [CNCF technical leadership principles](https://github.com/cncf/toc/blob/main/PRINCIPLES.md#technical-leadership-principles)
 
 :::
 
@@ -227,13 +202,11 @@ All TCGs must meet basic requirements:
 
 - **Website**: [community.cncf.io](https://community.cncf.io)
 - **GitHub**: [cncf/communitygroups](https://github.com/cncf/communitygroups)
-- **Organizer Guide**:
-  [Organizer Roles and Responsibilities](https://github.com/cncf/communitygroups/blob/main/organizer_roles.md)
+- **Organizer Guide**: [Organizer Roles and Responsibilities](https://github.com/cncf/communitygroups/blob/main/organizer_roles.md)
 
 ### Governance
 
-- [TCG Governance](../governance/tech-group-governance.md#technical-community-groups) -
-  Full governance details
+- [TCG Governance](../governance/tech-group-governance.md#technical-community-groups) - Full governance details
 - [Technical Leadership Principles](../governance/tech-leadership-principles-guidance.md)
 
 ### Contact
@@ -244,9 +217,7 @@ All TCGs must meet basic requirements:
 
 ## Related Resources
 
-- [Technical Advisory Groups (TAGs)](../tags/index.md) - Formal technical
-  governance groups
+- [Technical Advisory Groups (TAGs)](../tags/index.md) - Formal technical governance groups
 - [Initiatives](../initiatives/index.md) - Time-bound work efforts
 - [TOC](../toc/index.md) - Technical Oversight Committee
-- [CNCF Community Groups](https://github.com/cncf/communitygroups) - Broader
-  community groups program
+- [CNCF Community Groups](https://github.com/cncf/communitygroups) - Broader community groups program
