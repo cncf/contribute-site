@@ -11,20 +11,20 @@ add backdoor capabilities.
 <!-- cSpell:ignore Lerdorf -->
 <!-- cSpell:ignore Popov -->
 
-* Code changes in the form of two commits to the official and self-hosted Git
-server were made as if they were signed-off by PHP maintainers Rasmus Lerdorf
-and Nikita Popov.
-* Code changes were introducing a remote code execution backdoor to any PHP
-server built from the source-code that included these commits.
+- Code changes in the form of two commits to the official and self-hosted Git
+  server were made as if they were signed-off by PHP maintainers Rasmus Lerdorf
+  and Nikita Popov.
+- Code changes were introducing a remote code execution backdoor to any PHP
+  server built from the source-code that included these commits.
 
 ## Remediation
 
-* Membership in the PHP GitHub organization now required 2FA-enabled accounts.
-* Write access to the repository's source migrated out of a self-built karma
-system and now restricted only to members of the PHP project's GitHub
-organization.
-* The PHP team has decided to stop maintaining their own infrastructure
-declared their GitHub PHP project repository as the primary source.
+- Membership in the PHP GitHub organization now required 2FA-enabled accounts.
+- Write access to the repository's source migrated out of a self-built karma
+  system and now restricted only to members of the PHP project's GitHub
+  organization.
+- The PHP team has decided to stop maintaining their own infrastructure declared
+  their GitHub PHP project repository as the primary source.
 
 ## Type of Compromise
 
@@ -36,4 +36,4 @@ all websites [2].
 
 1. PHP Security Update, `<https://news-web.php.net/php.internals/113838>`.
 2. 79.2% of all websites are powered by PHP,
-`<https://w3techs.com/technologies/details/pl-php>`.
+   `<https://w3techs.com/technologies/details/pl-php>`.

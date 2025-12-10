@@ -16,9 +16,9 @@ repositories _as storage_.
 ## Type of compromise
 
 - **Trust and Signing**: This means that in addition to leveraging implicit
-trust on `github.com` for pulls, attackers were using Personal Access Tokens
-(PATs) to leverage that implicit trust for exfiltration.
+  trust on `github.com` for pulls, attackers were using Personal Access Tokens
+  (PATs) to leverage that implicit trust for exfiltration.
 
-## References  
+## References
 
 - [ReversingLabs Blog](https://www.reversinglabs.com/blog/gitgot-cybercriminals-using-github-to-store-stolen-data)

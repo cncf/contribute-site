@@ -12,10 +12,10 @@ to Okta environments.
 ## Type of Compromise
 
 It's not entirely clear what the type of compromise is here. It appears to be
-source code like the [Intel BIOS
-leak](community/catalog/compromises/2022/intel-alder-lake-BIOS-leak.md) and
-might also involve dev tooling depending on how the attacker gained access to
-the source code.
+source code like the
+[Intel BIOS leak](community/catalog/compromises/2022/intel-alder-lake-BIOS-leak.md)
+and might also involve dev tooling depending on how the attacker gained access
+to the source code.
 
 ## References
 

@@ -16,7 +16,8 @@ A few weeks after this incident, it was announced that the
 
 ## Type of Compromise
 
-This incident fits the [malicious maintainer](../compromise-definitions.md#malicious-maintainer)
+This incident fits the
+[malicious maintainer](../compromise-definitions.md#malicious-maintainer)
 definition.
 
 ## References

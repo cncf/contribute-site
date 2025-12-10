@@ -1,4 +1,5 @@
 <!-- cSpell:ignore Qakbot Sonatype -->
+
 # Compromise of NPM packages coa and rc
 
 In early November 2021, the developer accounts of popular NPM packages coa (over

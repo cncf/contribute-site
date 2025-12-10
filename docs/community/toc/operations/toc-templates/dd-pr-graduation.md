@@ -1,5 +1,5 @@
 ---
-title: "Graduation DD"
+title: 'Graduation DD'
 description: Graduation Due Diligence PR template
 ---
 
@@ -13,15 +13,25 @@ description: Graduation Due Diligence PR template
 
 ### Criteria Evaluation
 
-_$TOCMEMBER conducted the due diligence of $PROJECT who applied for $LEVEL. The project [has/has not] completed the criteria that show its maturity at $LEVEL. The following criteria implementations are noteworthy to call out... $NOTABLES. The following actions were provided to the project that were considered blocking but since resolved... $BLOCKERS. The following recommendations were provided to the project that are non-blocking in the TOC's assessment but should be completed by the project to ensure continued viability of the project... $RECOMMENDATIONS._
+_$TOCMEMBER conducted the due diligence of $PROJECT who applied for $LEVEL. The
+project [has/has not] completed the criteria that show its maturity at $LEVEL.
+The following criteria implementations are noteworthy to call out... $NOTABLES.
+The following actions were provided to the project that were considered blocking
+but since resolved... $BLOCKERS. The following recommendations were provided to
+the project that are non-blocking in the TOC's assessment but should be
+completed by the project to ensure continued viability of the project...
+$RECOMMENDATIONS._
 
 ### Adoption Evaluation
 
-_The adopter interviews reflect a project [in use/too early] for the level which the project applied. They show ... $INTERVIEWSUMMARY._
+_The adopter interviews reflect a project [in use/too early] for the level which
+the project applied. They show ... $INTERVIEWSUMMARY._
 
 ### Final Assessment
 
-_[The TOC has found the project to have satisfied the criteria for $LEVEL/ The TOC's evaluation of the project shows a needed focus to complete the outstanding blockers and reapply when the following conditions are met ... $CONDITIONS]._
+_[The TOC has found the project to have satisfied the criteria for $LEVEL/ The
+TOC's evaluation of the project shows a needed focus to complete the outstanding
+blockers and reapply when the following conditions are met ... $CONDITIONS]._
 
 ### Criteria
 
@@ -33,87 +43,115 @@ N/A
 
 ### Required
 
-- [ ] **Engage with the domain specific TAG(s) to increase awareness through a presentation or completing a General Technical Review.**
-  - This was completed and occurred on DD-MMM-YYYY, and can be discovered at $LINK.
+- [ ] **Engage with the domain specific TAG(s) to increase awareness through a
+      presentation or completing a General Technical Review.**
+  - This was completed and occurred on DD-MMM-YYYY, and can be discovered at
+    $LINK.
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ]  **All project metadata and resources are [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/).**
+- [ ] **All project metadata and resources are
+      [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/).**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Review and acknowledgement of expectations for [Sandbox](sandbox.cncf.io) projects and requirements for moving forward through the CNCF Maturity levels.**		
-   - [ ] Met during Project's application on DD-MMM-YYYY.
+- [ ] **Review and acknowledgement of expectations for
+      [Sandbox](sandbox.cncf.io) projects and requirements for moving forward
+      through the CNCF Maturity levels.**
+  - [ ] Met during Project's application on DD-MMM-YYYY.
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 - [ ] **Due Diligence Review.**
 
-Completion of this due diligence document, resolution of concerns raised, and presented for public comment satisfies the Due Diligence Review criteria.
+Completion of this due diligence document, resolution of concerns raised, and
+presented for public comment satisfies the Due Diligence Review criteria.
 
-- [ ] **Additional documentation as appropriate for project type, e.g.: installation documentation, end user documentation, reference implementation and/or code samples.**
+- [ ] **Additional documentation as appropriate for project type, e.g.:
+      installation documentation, end user documentation, reference
+      implementation and/or code samples.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 ## Governance and Maintainers
 
-Note: this section may be augmented by the completion of a Governance Review from the Project Reviews subproject.
+Note: this section may be augmented by the completion of a Governance Review
+from the Project Reviews subproject.
 
 ### Suggested
 
-- [ ]  **Governance has continuously been iterated upon by the project as a result of their experience applying it, with the governance history demonstrating evolution of maturity alongside the project's maturity evolution.**
+- [ ] **Governance has continuously been iterated upon by the project as a
+      result of their experience applying it, with the governance history
+      demonstrating evolution of maturity alongside the project's maturity
+      evolution.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 ### Required
 
 - [ ] **Clear and discoverable project governance documentation.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Governance is up to date with actual project activities, including any meetings, elections, leadership, or approval processes.**
-
-<!-- (TOC Evaluation goes here) --> 
-
-- [ ] **Governance clearly documents [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/) of project direction.**
-
-<!-- (TOC Evaluation goes here) --> 
-
-- [ ] **Document how the project makes decisions on leadership, contribution acceptance, requests to the CNCF, and changes to governance or project goals.**
-
-<!-- (TOC Evaluation goes here) --> 
-
-- [ ] **Document how role, function-based members, or sub-teams are assigned, onboarded, and removed for specific teams (example: Security Response Committee).**
-
-<!-- (TOC Evaluation goes here) --> 
-
-- [ ] **Document a complete maintainer lifecycle process (including roles, onboarding, offboarding, and emeritus status).**
+- [ ] **Governance is up to date with actual project activities, including any
+      meetings, elections, leadership, or approval processes.**
 
 <!-- (TOC Evaluation goes here) -->
 
-- [ ] **Demonstrate usage of the maintainer lifecycle with outcomes, either through the addition or replacement of maintainers as project events have required.**
+- [ ] **Governance clearly documents
+      [vendor-neutral](https://contribute.cncf.io/maintainers/community/vendor-neutrality/)
+      of project direction.**
 
 <!-- (TOC Evaluation goes here) -->
 
-- [ ] **Document complete list of current maintainers, including names, contact information, domain of responsibility, and affiliation.**
+- [ ] **Document how the project makes decisions on leadership, contribution
+      acceptance, requests to the CNCF, and changes to governance or project
+      goals.**
 
 <!-- (TOC Evaluation goes here) -->
 
-- [ ] **A number of active maintainers which is appropriate to the size and scope of the project.**
+- [ ] **Document how role, function-based members, or sub-teams are assigned,
+      onboarded, and removed for specific teams (example: Security Response
+      Committee).**
 
-<!-- (TOC Evaluation goes here) -->   
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Project maintainers from at least 2 organizations that demonstrates survivability.**
+- [ ] **Document a complete maintainer lifecycle process (including roles,
+      onboarding, offboarding, and emeritus status).**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Code and Doc ownership in Github and elsewhere matches documented governance roles.**
+- [ ] **Demonstrate usage of the maintainer lifecycle with outcomes, either
+      through the addition or replacement of maintainers as project events have
+      required.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Document adoption and adherence to the CNCF Code of Conduct or the project's CoC which is based off the CNCF CoC and not in conflict with it.**
+- [ ] **Document complete list of current maintainers, including names, contact
+      information, domain of responsibility, and affiliation.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
+
+- [ ] **A number of active maintainers which is appropriate to the size and
+      scope of the project.**
+
+<!-- (TOC Evaluation goes here) -->
+
+- [ ] **Project maintainers from at least 2 organizations that demonstrates
+      survivability.**
+
+<!-- (TOC Evaluation goes here) -->
+
+- [ ] **Code and Doc ownership in Github and elsewhere matches documented
+      governance roles.**
+
+<!-- (TOC Evaluation goes here) -->
+
+- [ ] **Document adoption and adherence to the CNCF Code of Conduct or the
+      project's CoC which is based off the CNCF CoC and not in conflict with
+      it.**
+
+<!-- (TOC Evaluation goes here) -->
 
 - [ ] **CNCF Code of Conduct is cross-linked from other governance documents.**
 
@@ -121,47 +159,54 @@ Note: this section may be augmented by the completion of a Governance Review fro
 
 - [ ] **All subprojects, if any, are listed.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **If the project has subprojects: subproject leadership, contribution, maturity status documented, including add/remove process.**
+- [ ] **If the project has subprojects: subproject leadership, contribution,
+      maturity status documented, including add/remove process.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 ## Contributors and Community
 
-Note: this section may be augmented by the completion of a Governance Review from the Project Reviews subproject.
+Note: this section may be augmented by the completion of a Governance Review
+from the Project Reviews subproject.
 
 ### Suggested
 
 - [ ] **Contributor ladder with multiple roles for contributors.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 ### Required
 
 - [ ] **Clearly defined and discoverable process to submit issues or changes.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Project must have, and document, at least one public communications channel for users and/or contributors.**
+- [ ] **Project must have, and document, at least one public communications
+      channel for users and/or contributors.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **List and document all project communication channels, including subprojects (mail list/slack/etc.).  List any non-public communications channels and what their special purpose is.**
+- [ ] **List and document all project communication channels, including
+      subprojects (mail list/slack/etc.). List any non-public communications
+      channels and what their special purpose is.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Up-to-date public meeting schedulers and/or integration with CNCF calendar.**
+- [ ] **Up-to-date public meeting schedulers and/or integration with CNCF
+      calendar.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Documentation of how to contribute, with increasing detail as the project matures.**
+- [ ] **Documentation of how to contribute, with increasing detail as the
+      project matures.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 - [ ] **Demonstrate contributor activity and recruitment.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 ## Engineering Principles
 
@@ -171,79 +216,106 @@ N/A
 
 ### Required
 
-- [ ] **Document project goals and objectives that illustrate the project’s differentiation in the Cloud Native landscape as well as outlines how this project fulfills an outstanding need and/or solves a problem differently. _This requirement may also be satisfied by completing a General Technical Review._**
-  - _If applicable_ A General Technical Review was completed/updated on DD-MMM-YYYY, and can be discovered at $LINK.
+- [ ] **Document project goals and objectives that illustrate the project’s
+      differentiation in the Cloud Native landscape as well as outlines how this
+      project fulfills an outstanding need and/or solves a problem differently.
+      _This requirement may also be satisfied by completing a General Technical
+      Review._**
+  - _If applicable_ A General Technical Review was completed/updated on
+    DD-MMM-YYYY, and can be discovered at $LINK.
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Document what the project does, and why it does it - including viable cloud native use cases. _This requirement may also be satisfied by completing a General Technical Review._**
-  - _If applicable_ a General Technical Review was completed/updated on DD-MMM-YYYY, and can be discovered at $LINK.
+- [ ] **Document what the project does, and why it does it - including viable
+      cloud native use cases. _This requirement may also be satisfied by
+      completing a General Technical Review._**
+  - _If applicable_ a General Technical Review was completed/updated on
+    DD-MMM-YYYY, and can be discovered at $LINK.
 
-- [ ] **Document and maintain a public roadmap or other forward looking planning document or tracking mechanism.**
+- [ ] **Document and maintain a public roadmap or other forward looking planning
+      document or tracking mechanism.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 - [ ] **Roadmap change process is documented.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Document overview of project architecture and software design that demonstrates viable cloud native use cases, as part of the project's documentation.  *This requirement may also be satisfied by completing a General Technical Review and capturing the output in the project's documentation.***
-  -  _If applicable_ a general Technical Review was completed/updated on DD-MMM-YYYY, and can be discovered at $LINK.
+- [ ] **Document overview of project architecture and software design that
+      demonstrates viable cloud native use cases, as part of the project's
+      documentation. _This requirement may also be satisfied by completing a
+      General Technical Review and capturing the output in the project's
+      documentation._**
+  - _If applicable_ a general Technical Review was completed/updated on
+    DD-MMM-YYYY, and can be discovered at $LINK.
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Document the project's release process and guidelines publicly in a RELEASES.md or equivalent file that defines:** 
-
+- [ ] **Document the project's release process and guidelines publicly in a
+      RELEASES.md or equivalent file that defines:**
   - [ ] Release expectations (scheduled or based on feature implementation)
   - [ ] Tagging as stable, unstable, and security related releases
   - [ ] Information on branch and tag strategies
   - [ ] Branch and platform support and length of support
   - [ ] Artifacts included in the release.
-  - Additional information on topics such as LTS and edge releases are optional. Release expectations are a social contract between the project and its end users and hence changes to these should be well thought out, discussed, socialized and as necessary agreed upon by project leadership before getting rolled out.
+  - Additional information on topics such as LTS and edge releases are optional.
+    Release expectations are a social contract between the project and its end
+    users and hence changes to these should be well thought out, discussed,
+    socialized and as necessary agreed upon by project leadership before getting
+    rolled out.
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 - [ ] **History of regular, quality releases.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 ## Security
 
-Note: this section may be augmented by a joint-assessment performed by TAG Security and Compliance.
+Note: this section may be augmented by a joint-assessment performed by TAG
+Security and Compliance.
 
 ### Suggested
 
 - [ ] **Achieving OpenSSF Best Practices silver or gold badge.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 ### Required
 
 - [ ] **Clearly defined and discoverable process to report security issues.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Enforcing Access Control Rules to secure the code base against attacks (Example: two factor authentication enforcement, and/or use of ACL tools.)**
+- [ ] **Enforcing Access Control Rules to secure the code base against attacks
+      (Example: two factor authentication enforcement, and/or use of ACL
+      tools.)**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Document assignment of security response roles and how reports are handled.**
+- [ ] **Document assignment of security response roles and how reports are
+      handled.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 - [ ] **Document Security Self-Assessment.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 - [ ] **Third Party Security Review.**
+  - [ ] Moderate and low findings from the Third Party Security Review are
+        planned/tracked for resolution as well as overall thematic findings,
+        such as: improving project contribution guide providing a PR review
+        guide to look for memory leaks and other vulnerabilities the project may
+        be susceptible to by design or language choice ensuring adequate test
+        coverage on all PRs.
 
-  - [ ] Moderate and low findings from the Third Party Security Review are planned/tracked for resolution as well as overall thematic findings, such as: improving project contribution guide providing a PR review guide to look for memory leaks and other vulnerabilities the project may be susceptible to by design or language choice ensuring adequate test coverage on all PRs.
+<!-- (TOC Evaluation goes here) -->
 
-<!-- (TOC Evaluation goes here) --> 
+- [ ] **Achieve the Open Source Security Foundation (OpenSSF) Best Practices
+      passing badge.**
 
-- [ ] **Achieve the Open Source Security Foundation (OpenSSF) Best Practices passing badge.**
-
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 ## Ecosystem
 
@@ -253,39 +325,45 @@ N/A
 
 ### Required
 
-- [ ] **Publicly documented list of adopters, which may indicate their adoption level (dev/trialing, prod, etc.)**
+- [ ] **Publicly documented list of adopters, which may indicate their adoption
+      level (dev/trialing, prod, etc.)**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-- [ ] **Used in appropriate capacity by at least 3 independent + indirect/direct adopters, (these are not required to be in the publicly documented list of adopters)**
+- [ ] **Used in appropriate capacity by at least 3 independent + indirect/direct
+      adopters, (these are not required to be in the publicly documented list of
+      adopters)**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
-The project provided the TOC with a list of adopters for verification of use of the project at the level expected, i.e. production use for graduation, dev/test for incubation.
+The project provided the TOC with a list of adopters for verification of use of
+the project at the level expected, i.e. production use for graduation, dev/test
+for incubation.
 
 - [ ] **TOC verification of adopters.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 Refer to the Adoption portion of this document.
 
-- [ ] **Clearly documented integrations and/or compatibility with other CNCF projects as well as non-CNCF projects.**
+- [ ] **Clearly documented integrations and/or compatibility with other CNCF
+      projects as well as non-CNCF projects.**
 
-<!-- (TOC Evaluation goes here) --> 
+<!-- (TOC Evaluation goes here) -->
 
 #### Adoption
 
 ##### Adopter 1 - $COMPANY/$INDUSTRY
 
-_If the Adopting organization needs to remain anonymous, stating the industry vertical is sufficient._
-MONTH YEAR
+_If the Adopting organization needs to remain anonymous, stating the industry
+vertical is sufficient._ MONTH YEAR
 
 ##### Adopter 2 - $COMPANY/$INDUSTRY
 
-_If the Adopting organization needs to remain anonymous, stating the industry vertical is sufficient._
-MONTH YEAR
+_If the Adopting organization needs to remain anonymous, stating the industry
+vertical is sufficient._ MONTH YEAR
 
 ##### Adopter 3 - $COMPANY/$INDUSTRY
 
-_If the Adopting organization needs to remain anonymous, stating the industry vertical is sufficient._
-MONTH YEAR
+_If the Adopting organization needs to remain anonymous, stating the industry
+vertical is sufficient._ MONTH YEAR

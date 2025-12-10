@@ -1,15 +1,17 @@
 ---
-title: "Secure Defaults: Cloud Native 8"
+title: 'Secure Defaults: Cloud Native 8'
 sidebar_position: 4
 ---
 
 # Secure Defaults: Cloud Native 8
 
 <!-- cspell:disable -->
+
 **Author**: Pushkar Joglekar
 
-**Contributors** (alphabetical order): Emily Fox, Faraz Angabini,
-Robert Clark, Robert Van Voorhees
+**Contributors** (alphabetical order): Emily Fox, Faraz Angabini, Robert Clark,
+Robert Van Voorhees
+
 <!-- cspell:enable -->
 
 ## 1. Make security a design requirement
@@ -160,11 +162,11 @@ to cloud native ecosystem
 
 ## Notes
 
-* Message sent to CNCF TAG
-  Security: [https://lists.cncf.io/g/cncf-tag-security/message/71](https://lists.cncf.io/g/cncf-tag-security/message/71)
-* This guideline format and intent is influenced
-  from: [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
-* Featured in CNCF
-  blog: [https://www.cncf.io/blog/2021/10/12/cloud-native-security-microsurvey-more-than-80-of-organizations-want-to-build-modern-security-systems-with-open-source-software/](https://www.cncf.io/blog/2021/10/12/cloud-native-security-microsurvey-more-than-80-of-organizations-want-to-build-modern-security-systems-with-open-source-software/)
-* Github issue
-  tracker: [https://github.com/cncf/tag-security/issues/734](https://github.com/cncf/tag-security/issues/734)
+- Message sent to CNCF TAG Security:
+  [https://lists.cncf.io/g/cncf-tag-security/message/71](https://lists.cncf.io/g/cncf-tag-security/message/71)
+- This guideline format and intent is influenced from:
+  [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
+- Featured in CNCF blog:
+  [https://www.cncf.io/blog/2021/10/12/cloud-native-security-microsurvey-more-than-80-of-organizations-want-to-build-modern-security-systems-with-open-source-software/](https://www.cncf.io/blog/2021/10/12/cloud-native-security-microsurvey-more-than-80-of-organizations-want-to-build-modern-security-systems-with-open-source-software/)
+- Github issue tracker:
+  [https://github.com/cncf/tag-security/issues/734](https://github.com/cncf/tag-security/issues/734)

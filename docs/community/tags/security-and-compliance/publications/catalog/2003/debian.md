@@ -5,8 +5,8 @@ escalated and a rootkit installed in at least four different Debian machines.
 
 ## Impact
 
-* Debian development slowed down as LDAP/SSH were disabled and secrets rotated
-* External checksum lists were used to verify that packages weren't affected
+- Debian development slowed down as LDAP/SSH were disabled and secrets rotated
+- External checksum lists were used to verify that packages weren't affected
 
 ## Type of compromise
 

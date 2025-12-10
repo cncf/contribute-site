@@ -1,6 +1,6 @@
 # HackTask
 
-HackTask  used typosquatting to register packages that had names similar to
+HackTask used typosquatting to register packages that had names similar to
 popular libraries on the npm registry. As a result, the attacker could steal
 developer credentials.
 

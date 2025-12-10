@@ -1,4 +1,5 @@
 <!-- cSpell:ignore klow klown Sonatype okhsa cryptominer -->
+
 # The klow / klown / okhsa incident
 
 On October 20, 2021, Sonatype reported that their automated malware detection

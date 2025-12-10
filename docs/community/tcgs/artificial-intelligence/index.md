@@ -10,20 +10,29 @@ tags:
 
 # Artificial Intelligence Technical Community Group
 
-The Artificial Intelligence Technical Community Group (TCG) focuses on artificial intelligence and machine learning in cloud native environments, exploring AI/ML workloads, frameworks, infrastructure requirements, and best practices for running AI systems at scale.
+The Artificial Intelligence Technical Community Group (TCG) focuses on
+artificial intelligence and machine learning in cloud native environments,
+exploring AI/ML workloads, frameworks, infrastructure requirements, and best
+practices for running AI systems at scale.
 
 ## Mission
 
-The AI TCG serves as a community rallying point for discussing, sharing knowledge, and coordinating initiatives related to artificial intelligence and machine learning in the cloud native ecosystem. We aim to bridge the gap between traditional AI/ML practices and cloud native architectures.
+The AI TCG serves as a community rallying point for discussing, sharing
+knowledge, and coordinating initiatives related to artificial intelligence and
+machine learning in the cloud native ecosystem. We aim to bridge the gap between
+traditional AI/ML practices and cloud native architectures.
 
 ## Focus Areas
 
 ### AI/ML Infrastructure
 
-Exploring infrastructure requirements and patterns for running AI/ML workloads in cloud native environments:
+Exploring infrastructure requirements and patterns for running AI/ML workloads
+in cloud native environments:
 
-- **Compute Resources**: GPU/TPU scheduling, resource allocation, and optimization
-- **Storage Solutions**: Managing large datasets, model artifacts, and training data
+- **Compute Resources**: GPU/TPU scheduling, resource allocation, and
+  optimization
+- **Storage Solutions**: Managing large datasets, model artifacts, and training
+  data
 - **Networking**: High-performance networking for distributed training
 - **Resource Management**: Efficient utilization of expensive AI/ML hardware
 
@@ -65,18 +74,22 @@ Exploring patterns specific to cloud native AI:
 
 ## Getting Involved
 
-The AI TCG welcomes participation from anyone interested in artificial intelligence and machine learning in cloud native environments:
+The AI TCG welcomes participation from anyone interested in artificial
+intelligence and machine learning in cloud native environments:
 
 ### Join the Community
 
-- **CNCF Community Groups**: Find us on [community.cncf.io](https://community.cncf.io)
-- **CNCF Slack**: Join [slack.cncf.io](https://slack.cncf.io) and look for AI-related channels
+- **CNCF Community Groups**: Find us on
+  [community.cncf.io](https://community.cncf.io)
+- **CNCF Slack**: Join [slack.cncf.io](https://slack.cncf.io) and look for
+  AI-related channels
 - **Meetings**: Check community.cncf.io for meeting schedules and join links
 
 ### Contribute
 
 - **Share Experiences**: Present your AI/ML use cases and lessons learned
-- **Participate in Initiatives**: Help with white papers, guides, or other deliverables
+- **Participate in Initiatives**: Help with white papers, guides, or other
+  deliverables
 - **Ask Questions**: Bring your challenges and learn from the community
 - **Provide Feedback**: Help shape the direction of AI in cloud native
 
@@ -94,9 +107,13 @@ Some areas where community input is valuable:
 
 ## Organizers
 
-Technical Community Groups are led by community organizers who facilitate meetings, coordinate activities, and ensure the group delivers value to participants.
+Technical Community Groups are led by community organizers who facilitate
+meetings, coordinate activities, and ensure the group delivers value to
+participants.
 
-To become an organizer or learn more about current organizers, check the group's page on [community.cncf.io](https://community.cncf.io) or reach out via the CNCF Slack.
+To become an organizer or learn more about current organizers, check the group's
+page on [community.cncf.io](https://community.cncf.io) or reach out via the CNCF
+Slack.
 
 ## Resources
 
@@ -108,9 +125,12 @@ To become an organizer or learn more about current organizers, check the group's
 
 ### Related CNCF Groups
 
-- [TAG Developer Experience](../../tags/developer-experience/index.md) - Developer tools and frameworks
-- [TAG Infrastructure](../../tags/infrastructure/index.md) - Infrastructure for AI workloads
-- [TAG Operational Resilience](../../tags/operational-resilience/index.md) - Observability and operations
+- [TAG Developer Experience](../../tags/developer-experience/index.md) -
+  Developer tools and frameworks
+- [TAG Infrastructure](../../tags/infrastructure/index.md) - Infrastructure for
+  AI workloads
+- [TAG Operational Resilience](../../tags/operational-resilience/index.md) -
+  Observability and operations
 
 ### External Resources
 
@@ -122,8 +142,10 @@ To become an organizer or learn more about current organizers, check the group's
 As a Technical Community Group, the AI TCG may evolve based on community needs:
 
 - **Current State**: Discussion and knowledge-sharing forum
-- **Near Term**: Deliver initiatives like best practices guides or reference architectures
-- **Long Term**: Potentially evolve into a TAG if sustained value and formal oversight is needed
+- **Near Term**: Deliver initiatives like best practices guides or reference
+  architectures
+- **Long Term**: Potentially evolve into a TAG if sustained value and formal
+  oversight is needed
 
 The community drives the direction and pace of this evolution.
 
@@ -133,8 +155,12 @@ For questions or to get involved:
 
 - **CNCF Community Groups**: community-groups@cncf.io
 - **CNCF Slack**: [slack.cncf.io](https://slack.cncf.io)
-- **TOC**: For governance questions, reach out via [#toc](https://cloud-native.slack.com/archives/C0MP69YF4)
+- **TOC**: For governance questions, reach out via
+  [#toc](https://cloud-native.slack.com/archives/C0MP69YF4)
 
 ## Code of Conduct
 
-All participants in the Artificial Intelligence TCG must adhere to the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md). We are committed to providing a welcoming and inclusive environment for all community members.
+All participants in the Artificial Intelligence TCG must adhere to the
+[CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
+We are committed to providing a welcoming and inclusive environment for all
+community members.

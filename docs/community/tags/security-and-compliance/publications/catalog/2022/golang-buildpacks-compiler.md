@@ -1,16 +1,26 @@
 # GCP Golang Buildpacks Old Compiler Injection
+
 <!-- cSpell:ignore Buildpacks buildpacks -->
-Previously, GCP Build Pipelines defaulted to pulling the `go` compiler supplied in `go.mod`, which could point to insecure versions.
+
+Previously, GCP Build Pipelines defaulted to pulling the `go` compiler supplied
+in `go.mod`, which could point to insecure versions.
 
 ## Impact
 
-According to the researchers: "before the fix, GCP Buildpacks originally pulled in older compilers based upon the level of compatibility rather than the latest stable version", and "using an older compiler to build resulted in insecure binaries with known vulnerabilities originating from the old compiler and golang stdlib".
+According to the researchers: "before the fix, GCP Buildpacks originally pulled
+in older compilers based upon the level of compatibility rather than the latest
+stable version", and "using an older compiler to build resulted in insecure
+binaries with known vulnerabilities originating from the old compiler and golang
+stdlib".
 
-This behavior has since been adjusted, but the researchers also point out to the value of attestations and SBOM to proactively inform users.
+This behavior has since been adjusted, but the researchers also point out to the
+value of attestations and SBOM to proactively inform users.
 
 ## Type of Compromise
 
-Given this default overrides the experience a developer might be having building and testing locally or in a non-production environment, we categorize this as Dev Tooling.
+Given this default overrides the experience a developer might be having building
+and testing locally or in a non-production environment, we categorize this as
+Dev Tooling.
 
 ## References
 

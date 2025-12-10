@@ -1,10 +1,11 @@
 <!-- cspell:ignore monero -->
 <!-- cspell:ignore getmonero -->
+
 # Binaries of the CLI for `monero` compromised
 
-The binaries of the CLI wallet had been compromised and a malicious version
-was being served. The attacker introduced two new functions. Anyone who
-created or opened a wallet with the compromised binary had their seed stolen.
+The binaries of the CLI wallet had been compromised and a malicious version was
+being served. The attacker introduced two new functions. Anyone who created or
+opened a wallet with the compromised binary had their seed stolen.
 
 ## Impact
 
@@ -13,7 +14,9 @@ to have lost funds worth $7000.
 
 ## Type of Compromise
 
-This incident fits the [Publishing Infrastructure](../compromise-definitions.md#publishing-infrastructure) definition.
+This incident fits the
+[Publishing Infrastructure](../compromise-definitions.md#publishing-infrastructure)
+definition.
 
 ## References
 

@@ -6,7 +6,7 @@ account takeover.
 
 ## Impact
 
-Unknown.  This was addressed by GitHub and neither GitHub or the original
+Unknown. This was addressed by GitHub and neither GitHub or the original
 reporter mention any known attacks.
 
 ## Type of compromise
