@@ -1,5 +1,5 @@
 ---
-title: Opportunities Interest CFPs for KubeCon + CloudNativeCon Europe 2026 are closing soon!
+title: Project Opportunities CFPs for KubeCon + CloudNativeCon Europe 2026 are closing soon!
 date: 2025-12-10
 authors: [castrojo]
 tags: [cfp, kubecon, events, project-opportunities]
