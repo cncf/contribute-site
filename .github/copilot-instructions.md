@@ -74,6 +74,7 @@ Be very strict with the instructions in this section:
 - Always keep the template up to date when a new style is added to this document.
 - Link mentions of github organizations and repositories via `@org/repository` (and so on) to their actual repositories via a markdown link.
 - Make good use of docusaurus admonitions to keep the content well organized and visually appealing.
+- When asked to generate a blog post with the issue template, ONLY make the blog post, do not modify any other files. 
 
 # Project Health Check Criteria Guide
 
