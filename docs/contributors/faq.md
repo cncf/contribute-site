@@ -38,8 +38,12 @@ collective wisdom of over 850 community members and 2,200+ messages.
 5. **Clone the repo** and try to get it running locally
 6. **Find a "good first issue"** on [CLOTributor](https://clotributor.dev/)
 
-:::tip Start Small Don't try to contribute to multiple projects at once. Pick
-one, understand it deeply, and make your first contribution there. :::
+:::tip Start Small
+
+Don't try to contribute to multiple projects at once. Pick one, understand it
+deeply, and make your first contribution there.
+
+:::
 
 ### Q: Do I need to be an expert in Go/Kubernetes/etc. to contribute?
 
@@ -60,9 +64,12 @@ contributing.
 - Ask questions when stuck (with specific details)
 - Use the project as your learning environment
 
-:::info Non-Code Contributions Many valuable contributions don't require coding
-at all: documentation, testing, design, translation, community management, and
-more. :::
+:::info Non-Code Contributions
+
+Many valuable contributions don't require coding at all: documentation, testing,
+design, translation, community management, and more.
+
+:::
 
 ### Q: Which CNCF project should I choose?
 
@@ -84,8 +91,12 @@ more. :::
 - **Smaller graduated projects:** Often more approachable than the largest
   projects
 
-:::caution Choose One Resist the urge to contribute to multiple projects
-initially. Master the contribution workflow in one project first. :::
+:::caution Choose One
+
+Resist the urge to contribute to multiple projects initially. Master the
+contribution workflow in one project first.
+
+:::
 
 ### Q: I don't know Go. Can I still contribute to Kubernetes?
 
@@ -133,9 +144,12 @@ initially. Master the contribution workflow in one project first. :::
 - Review recent PRs and see if similar work is needed elsewhere
 - Ask maintainers: "I'd like to contribute. What would be most helpful?"
 
-:::tip Create Your Own Issues If you find a bug or documentation gap while using
-the project, file an issue yourself and then propose to fix it. This shows
-initiative! :::
+:::tip Create Your Own Issues
+
+If you find a bug or documentation gap while using the project, file an issue
+yourself and then propose to fix it. This shows initiative!
+
+:::
 
 ### Q: All the "good first issues" seem too hard. What do I do?
 
@@ -188,8 +202,12 @@ initiative! :::
 - If you claim an issue but can't complete it, comment to release it
 - Projects may have time limits (e.g., "must have PR within 2 weeks")
 
-:::caution Don't Ghost If you claim an issue but realize you can't complete it,
-let the maintainers know. It's much better than leaving them wondering. :::
+:::caution Don't Ghost
+
+If you claim an issue but realize you can't complete it, let the maintainers
+know. It's much better than leaving them wondering.
+
+:::
 
 ## Technical Questions
 
@@ -215,8 +233,12 @@ let the maintainers know. It's much better than leaving them wondering. :::
 - **Kubernetes** (Minikube, Kind, or K3s) for cloud-native projects
 - **Make** for build automation
 
-:::tip Use Codespaces or Dev Containers Many projects now support GitHub
-Codespaces or VS Code Dev Containers for instant development environments. :::
+:::tip Use Codespaces or Dev Containers
+
+Many projects now support GitHub Codespaces or VS Code Dev Containers for
+instant development environments.
+
+:::
 
 ### Q: I can't get the project to build. What do I do?
 
@@ -246,8 +268,12 @@ Codespaces or VS Code Dev Containers for instant development environments. :::
 - The complete error message (use code blocks or pastebin for long errors)
 - What you've already tried
 
-:::caution Be Specific "It doesn't work" won't get helpful responses. Include
-error messages, logs, and what you've tried. :::
+:::caution Be Specific
+
+"It doesn't work" won't get helpful responses. Include error messages, logs, and
+what you've tried.
+
+:::
 
 ### Q: How do I write a good commit message?
 
@@ -299,9 +325,12 @@ Fixes #67890
 - Some use different formats (e.g., Kubernetes uses its own conventions)
 - **Always check the project's CONTRIBUTING.md** for their specific requirements
 
-:::info Sign Your Commits Many projects require
-[signed commits (DCO)](https://github.com/apps/dco). Use `git commit -s` to
-automatically sign. :::
+:::info Sign Your Commits
+
+Many projects require [signed commits (DCO)](https://github.com/apps/dco). Use
+`git commit -s` to automatically sign.
+
+:::
 
 ## Pull Requests
 
@@ -335,8 +364,12 @@ automatically sign. :::
 - Respond to review feedback promptly
 - Be patient—reviews take time
 
-:::tip PR Templates Most projects have PR templates. Fill them out completely—it
-helps reviewers understand your change. :::
+:::tip PR Templates
+
+Most projects have PR templates. Fill them out completely—it helps reviewers
+understand your change.
+
+:::
 
 ### Q: My PR hasn't been reviewed. What should I do?
 
@@ -384,9 +417,12 @@ volunteers with limited time.
 - Complaining about response time
 - Tagging random maintainers
 
-:::caution Understand Priorities Bug fixes and requested features get more
-attention than unsolicited refactoring. Make sure your contribution aligns with
-project priorities. :::
+:::caution Understand Priorities
+
+Bug fixes and requested features get more attention than unsolicited
+refactoring. Make sure your contribution aligns with project priorities.
+
+:::
 
 ### Q: My PR got negative feedback. What do I do?
 
@@ -423,8 +459,12 @@ project priorities. :::
 - It's okay to say: "This is beyond my current skills. Would someone be able to
   take over, or could I tackle this in smaller steps?"
 
-:::info Learning Opportunity Negative feedback often teaches more than positive
-feedback. Each criticism is a chance to improve. :::
+:::info Learning Opportunity
+
+Negative feedback often teaches more than positive feedback. Each criticism is a
+chance to improve.
+
+:::
 
 ### Q: Can I contribute by reviewing other people's PRs?
 
@@ -456,8 +496,12 @@ feedback. Each criticism is a chance to improve. :::
 - Does it follow project conventions?
 - Are there edge cases not handled?
 
-:::tip Start with Documentation PRs Documentation PRs are great for learning how
-to review. They're less intimidating and still very valuable. :::
+:::tip Start with Documentation PRs
+
+Documentation PRs are great for learning how to review. They're less intimidating
+and still very valuable.
+
+:::
 
 ## Career and Learning
 
@@ -496,9 +540,12 @@ to review. They're less intimidating and still very valuable. :::
 - Quality matters more than quantity
 - Building relationships is as important as code contributions
 
-:::info Employers Notice Many companies actively recruit from open source
-contributors. Kubernetes, Prometheus, and other major projects are
-well-recognized on resumes. :::
+:::info Employers Notice
+
+Many companies actively recruit from open source contributors. Kubernetes,
+Prometheus, and other major projects are well-recognized on resumes.
+
+:::
 
 ### Q: How do I learn Go (or another language) through CNCF projects?
 
@@ -534,9 +581,12 @@ well-recognized on resumes. :::
 - Read the Go standard library - linked from CNCF projects frequently
 - Explore smaller graduated projects - more approachable than Kubernetes
 
-:::caution Learn the Basics First Don't expect the project community to teach
-you language fundamentals. Learn basic syntax and concepts first, then use the
-project to level up. :::
+:::caution Learn the Basics First
+
+Don't expect the project community to teach you language fundamentals. Learn
+basic syntax and concepts first, then use the project to level up.
+
+:::
 
 ### Q: Should I contribute to multiple projects at once?
 
@@ -565,8 +615,12 @@ project to level up. :::
 - Don't commit to major features in multiple projects simultaneously
 - Be honest about bandwidth with each community
 
-:::info Depth Over Breadth One substantial contribution to a single project is
-more valuable than superficial contributions to ten projects. :::
+:::info Depth Over Breadth
+
+One substantial contribution to a single project is more valuable than
+superficial contributions to ten projects.
+
+:::
 
 ## Community and Culture
 
@@ -600,8 +654,12 @@ contributors at all levels.
 4. **Find community** - Connect with other newcomers
 5. **Take breaks** - Burnout amplifies imposter syndrome
 
-:::tip Your Questions Help Others When you ask a "basic" question, you're often
-exposing a documentation gap that will help hundreds of future contributors. :::
+:::tip Your Questions Help Others
+
+When you ask a "basic" question, you're often exposing a documentation gap that
+will help hundreds of future contributors.
+
+:::
 
 ### Q: How do I handle rejection or criticism?
 
@@ -636,8 +694,12 @@ them:
 - What was wrong with the approach? (Improve your design thinking)
 - How could you have proposed it better? (Communication skills)
 
-:::info Rejection ≠ Failure Many experienced contributors have had PRs rejected.
-It's feedback, not a judgment of your worth. :::
+:::info Rejection ≠ Failure
+
+Many experienced contributors have had PRs rejected. It's feedback, not a
+judgment of your worth.
+
+:::
 
 ### Q: What should I do if I witness or experience harassment?
 
@@ -670,9 +732,12 @@ It's feedback, not a judgment of your worth. :::
 - Actions range from warnings to permanent bans
 - Retaliation against reporters is itself a violation
 
-:::caution You Don't Have to Tolerate Harassment The CNCF community aims to be
-welcoming and inclusive. If someone makes you uncomfortable, it's not your
-responsibility to just deal with it. :::
+:::caution You Don't Have to Tolerate Harassment
+
+The CNCF community aims to be welcoming and inclusive. If someone makes you
+uncomfortable, it's not your responsibility to just deal with it.
+
+:::
 
 ## Program-Specific Questions
 
@@ -719,8 +784,12 @@ sometimes stipends.
 3. **Write a strong proposal** - Clear problem, approach, timeline
 4. **Be realistic** - Don't promise more than you can deliver
 
-:::info Start Early Successful applicants usually start engaging with projects
-1-2 months before applications open. :::
+:::info Start Early
+
+Successful applicants usually start engaging with projects 1-2 months before
+applications open.
+
+:::
 
 ### Q: What is a TAG (Technical Advisory Group)?
 
@@ -759,8 +828,12 @@ guidance.
 - Influence direction of cloud-native ecosystem
 - Access to expertise and mentorship
 
-:::tip Lower Barrier to Entry TAG meetings are often less intimidating than
-project meetings and welcome new contributors. :::
+:::tip Lower Barrier to Entry
+
+TAG meetings are often less intimidating than project meetings and welcome new
+contributors.
+
+:::
 
 ## Practical Tips
 
@@ -792,8 +865,12 @@ complex builds.
 - Frontend work (many sites are static)
 - Writing and reviewing code without running locally
 
-:::info Cloud Development Environments GitHub Codespaces and similar tools have
-democratized contributions—you no longer need a powerful local machine. :::
+:::info Cloud Development Environments
+
+GitHub Codespaces and similar tools have democratized contributions—you no
+longer need a powerful local machine.
+
+:::
 
 ### Q: How can I attend meetings if I'm in a different timezone?
 
@@ -825,9 +902,12 @@ democratized contributions—you no longer need a powerful local machine. :::
 - Be active in async channels so people know you
 - Schedule 1:1s with mentors at mutually convenient times
 
-:::tip Written Communication Matters More In global communities, written
-communication in issues, PRs, and Slack is often more important than meeting
-attendance. :::
+:::tip Written Communication Matters More
+
+In global communities, written communication in issues, PRs, and Slack is often
+more important than meeting attendance.
+
+:::
 
 ### Q: My PR was merged! What do I do next?
 
@@ -862,8 +942,12 @@ attendance. :::
 - **Join a working group** - Get involved in planning and design
 - **Consider maintainership** - Eventually, you might become a maintainer
 
-:::tip Keep the Momentum Don't stop after one PR! Your second contribution is
-often easier and faster than your first. :::
+:::tip Keep the Momentum
+
+Don't stop after one PR! Your second contribution is often easier and faster
+than your first.
+
+:::
 
 ## Essential Resources
 
