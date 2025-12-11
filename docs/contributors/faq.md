@@ -20,7 +20,7 @@ tags:
 ---
 
 This FAQ was compiled from real conversations in the CNCF #cncf-new-contributors
-Slack channel spanning November 2023 to December 2025, representing the
+Slack channel spanning November 2023 through late 2025, representing the
 collective wisdom of over 850 community members and 2,200+ messages.
 
 ## Getting Started
