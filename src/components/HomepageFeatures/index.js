@@ -7,7 +7,7 @@ const FeatureList = [
   {
     title: 'Contributors',
     Svg: require('@site/static/img/CNCF-Contributor-Icons-Contributor.svg').default,
-    link: '/maintainers',
+    link: '/contributors',
     description: (
       <>
         Navigate the Cloud Native as an individual contributor. Get started, find new friends, forge your path.
