@@ -23,6 +23,10 @@ idvoretskyi:
   url: https://github.com/idvoretskyi
   image_url: https://github.com/idvoretskyi.png
   email: ihor@cncf.io
+  socials:
+    bluesky: idvoretskyi.bsky.social
+    github: idvoretskyi
+    linkedin: idvoretskyi
 jeefy:
   name: Jeffrey Sica
   page: true
