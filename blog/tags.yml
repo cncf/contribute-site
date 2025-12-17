@@ -62,3 +62,8 @@ services:
   label: Services
   permalink: /services
   description: About services for maintainers
+
+newsletter:
+  label: Newsletter
+  permalink: /newsletter
+  description: CNCF newsletter and updates
