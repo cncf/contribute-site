@@ -15,23 +15,23 @@ And please take the 2H 2025 Maintainer Survey when you have a chance. It will he
 
 Thank you, we hope you enjoy the end of year downtime and we wish you the best in the new year!
 
-* ✍️ Please take the Maintainer Survey
-* 🚲 Upcoming project opportunity deadline (TODAY!)
-* 🎥 Maintainer Summit recordings available
-* 🚀 New contribute.cncf.io launched
-* 📄 Call for Kubernetes AI Conformance applications and reference architectures
-* 🧑‍🎓 CNCF LFX 2026 Term 1 call for proposals open soon
-* 🔑 Google Summer of Code 2026 opportunities
-* 🤖 GitHub Copilot guidance
-* 🕵️ Kusari Gadget free for projects
-* 🐳 Docker Hardened Images free for projects
-* 📈 Telemetry collection and privacy guidelines
-* 🙏 Please take the Maintainer Survey
-* 🎉 Thank you for an amazing year!
+* [✍️ Please take the Maintainer Survey](#️-please-take-the-maintainer-survey)
+* [🚲 Upcoming project opportunity deadline (TODAY!)](#-upcoming-project-opportunity-deadline-today)
+* [🎥 Maintainer Summit recordings available](#-maintainer-summit-recordings-available)
+* [🚀 New contribute.cncf.io launched](#-new-contributecncfio-launched)
+* [📄 Call for Kubernetes AI Conformance applications and reference architectures](#-call-for-kubernetes-ai-conformance-applications-and-reference-architectures)
+* [🧑‍🎓 CNCF LFX 2026 Term 1 call for proposals open soon](#-cncf-lfx-2026-term-1-call-for-proposals-open-soon)
+* [🔑 Google Summer of Code 2026 opportunities](#-google-summer-of-code-2026-opportunities)
+* [🤖 GitHub Copilot guidance](#-github-copilot-guidance)
+* [🕵️ Kusari Gadget free for projects](#️-kusari-gadget-free-for-projects)
+* [🐳 Docker Hardened Images free for projects](#-docker-hardened-images-free-for-projects)
+* [📈 Telemetry collection and privacy guidelines](#-telemetry-collection-and-privacy-guidelines)
+* [🙏 Please take the Maintainer Survey](#-please-take-the-maintainer-survey-1)
+* [🎉 Thank you for an amazing year](#-thank-you-for-an-amazing-year)
 
 ## ✍️ Please take the Maintainer Survey
 
-To help guide the CNCF's efforts in supporting our projects we regularly collect feedback from maintainers on their experience at the CNCF. Please help us help you by filling out the 25H2 edition of the [CNCF Maintainers Survey](https://maintainers-survey.cncf.io).
+To help guide the CNCF's efforts in supporting our projects we regularly collect feedback from maintainers on their experience at the CNCF. Please help us help you by filling out the 2H25 edition of the [CNCF Maintainers Survey](https://maintainers-survey.cncf.io).
 
 This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and influence our priorities in 2026. It should take no more than a couple of minutes of your time. Thanks in advance!
 
@@ -51,11 +51,11 @@ We've also launched a [blog](https://contribute.cncf.io/blog) on the site. It's 
 
 ## 📄 Call for Kubernetes AI Conformance applications and reference architectures
 
-Last month the [Kubernetes AI Conformance program officially launched](https://www.cncf.io/blog/2025/08/01/help-us-build-the-kubernetes-conformance-for-ai/) and the interest and response has been overwhelming! Many thanks to our initial batch of contributors and conformance program participants.
+Earlier this year, the [Kubernetes AI Conformance program officially launched](https://www.cncf.io/blog/2025/08/01/help-us-build-the-kubernetes-conformance-for-ai/) and the interest and response has been overwhelming! Many thanks to our initial batch of contributors and conformance program participants.
 
 With Kubernetes 1.35 launching soon (already?) it's a perfect time to [submit your K8s AI Conformance application here](https://github.com/cncf/k8s-ai-conformance).
 
-Willing to talk about your use of Cloud Native projects in the AI training and inference space? We'd love to hear from you! Please email <projects@cncf.io>
+Willing to talk about your use of Cloud Native projects in the AI training and inference space? We'd love to hear from you! Please email projects@cncf.io
 
 ## 🧑‍🎓 CNCF LFX 2026 Term 1 call for proposals open soon
 
@@ -93,9 +93,9 @@ We are excited to officially roll out GitHub Copilot Enterprise to CNCF project 
 
 We have another tool for our utility belt! To help us continue to improve shipping more secure projects faster, Kusari has graciously offered all CNCF projects their Gadget product free of charge! Gadget gives full visibility into versions, licenses, and security risks for direct and transitive dependencies.
 
-To sign up for your project, visit <https://us.kusari.cloud/signup> and go for the free trial. Kusari and CNCF staff will ensure the full product is unlocked for all CNCF GitHub orgs.
+To sign up for your project, visit [https://us.kusari.cloud/signup](https://us.kusari.cloud/signup) and go for the free trial. Kusari and CNCF staff will ensure the full product is unlocked for all CNCF GitHub orgs.
 
-Here are docs for any curious: <https://docs.kusari.cloud/docs/Inspector/> and if you have any questions, we've been told that y'all can reach out directly to <support@kusari.dev>! Feel free to CC <projects@cncf.io>  
+Here are docs for any curious: [https://docs.kusari.cloud/docs/Inspector/](https://docs.kusari.cloud/docs/Inspector/) and if you have any questions, we've been told that y'all can reach out directly to support@kusari.dev! Feel free to CC projects@cncf.io  
 
 ## 🐳 Docker Hardened Images free for projects
 
