@@ -93,7 +93,7 @@ const config = {
       ],
       announcementBar: {
         id: `hello-bar`,
-        content: `🎉️ The CFP for the CNCF Maintainer Summit Europe 2026 closes December 14 · <b><a target="_blank" href="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/maintainer-summit/#call-for-proposals">Submit Today!</b>`,
+        content: `KubeCon + CloudNativeCon Europe 2026 · 23-26 March · Amsterdam · <b><a target="_blank" href="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/?utm_source=cncf&utm_medium=subpage&utm_campaign=18269725-KubeCon-EU-2026&utm_content=hello-bar">Submit Today!</a></b>`,
         backgroundColor: 'rgb(1, 117, 228)', // Defaults to `#fff`
         textColor: '#fff', // Defaults to `#000`
       },
