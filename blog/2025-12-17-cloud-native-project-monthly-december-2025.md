@@ -77,7 +77,7 @@ CNCF is planning on being a Mentoring Organization again next year for Google Su
 
 Next year, GSoC is actively looking to bring in more projects in the areas of Security and AI/ML.
 
-GSoC 2026 Announcement
+[GSoC 2026 Announcement](https://groups.google.com/g/google-summer-of-code-discuss/c/D-aU3nHnGBQ/m/VU7lwF_MBQAJ)
 
 Key dates:
 
@@ -131,4 +131,4 @@ We've seen amazing project growth, accelerated Sandbox project applications revi
 
 As folks will be taking time off through the rest of the year, we remind you that staff GitHub issue, Service Desk ticket, and email responses will likely be slower than normal. Enjoy the holiday season and have a happy new year!
 
-🫶 Daniel, Jeefy, Bob, Nate, Jorge, Riaan, Ihor, and Robert
+🫶 Daniel, Jeefy, Bob, Nate, Jorge, Riaan, Ihor, Robert and the rest of the CNCF staff
