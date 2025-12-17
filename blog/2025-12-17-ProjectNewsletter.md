@@ -51,7 +51,7 @@ We've also launched a [blog](https://contribute.cncf.io/blog) on the site. It's 
 
 ## 📄 Call for Kubernetes AI Conformance applications and reference architectures
 
-Last month the [Kubernetes AI Conformance program officially launched](https://www.cncf.io/blog/2025/08/01/help-us-build-the-kubernetes-conformance-for-ai/) and the interest and response has been overwhelming! Many thanks to our initial batch of contributors and conformance program participants.
+Earlier this year, the [Kubernetes AI Conformance program officially launched](https://www.cncf.io/blog/2025/08/01/help-us-build-the-kubernetes-conformance-for-ai/) and the interest and response has been overwhelming! Many thanks to our initial batch of contributors and conformance program participants.
 
 With Kubernetes 1.35 launching soon (already?) it's a perfect time to [submit your K8s AI Conformance application here](https://github.com/cncf/k8s-ai-conformance).
 
