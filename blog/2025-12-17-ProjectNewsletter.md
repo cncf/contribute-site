@@ -31,7 +31,7 @@ Thank you, we hope you enjoy the end of year downtime and we wish you the best i
 
 ## ✍️ Please take the Maintainer Survey
 
-To help guide the CNCF's efforts in supporting our projects we regularly collect feedback from maintainers on their experience at the CNCF. Please help us help you by filling out the 25H2 edition of the [CNCF Maintainers Survey](https://maintainers-survey.cncf.io).
+To help guide the CNCF's efforts in supporting our projects we regularly collect feedback from maintainers on their experience at the CNCF. Please help us help you by filling out the 2H25 edition of the [CNCF Maintainers Survey](https://maintainers-survey.cncf.io).
 
 This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and influence our priorities in 2026. It should take no more than a couple of minutes of your time. Thanks in advance!
 
