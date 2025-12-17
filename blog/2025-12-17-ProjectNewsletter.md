@@ -1,6 +1,6 @@
 ---
 title: Cloud Native Project Monthly (CNPM) December 2025 (Year End Edition)
-date: 2024-12-17
+date: 2025-12-17
 authors: [krook, idvoretskyi, castrojo, jeefy, mrbobbytables, nate-double-u, riaankleinhans, robertkielty]
 tags: [maintainers, community, projects, services, newsletter]
 ---
@@ -28,6 +28,8 @@ Thank you, we hope you enjoy the end of year downtime and we wish you the best i
 * [📈 Telemetry collection and privacy guidelines](#-telemetry-collection-and-privacy-guidelines)
 * [🙏 Please take the Maintainer Survey](#-please-take-the-maintainer-survey-1)
 * [🎉 Thank you for an amazing year](#-thank-you-for-an-amazing-year)
+
+<!-- truncate -->
 
 ## ✍️ Please take the Maintainer Survey
 
