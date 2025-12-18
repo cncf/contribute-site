@@ -101,8 +101,12 @@
 
 /maintainers/security /projects/best-practices/security/ 301
 /maintainers/security/ /projects/best-practices/security/ 301
-/maintainers/security/security-guidelines /projects/best-practices/security/security-hygine/ 301
-/maintainers/security/security-guidelines/ /projects/best-practices/security/security-hygine/ 301
+/maintainers/security/security-guidelines /projects/best-practices/security/security-hygiene/ 301
+/maintainers/security/security-guidelines/ /projects/best-practices/security/security-hygiene/ 301
+
+# Redirect old misspelled URL to corrected URL
+/projects/best-practices/security/security-hygine /projects/best-practices/security/security-hygiene/ 301
+/projects/best-practices/security/security-hygine/ /projects/best-practices/security/security-hygiene/ 301
 
 /maintainers/templates /resources/templates/ 301
 /maintainers/templates/ /resources/templates/ 301

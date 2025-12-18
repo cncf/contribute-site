@@ -43,7 +43,7 @@ const config = {
         htmlLang: 'en-US',
         calendar: 'gregory',
         path: 'en',
-      }
+      },
     },
   },
 
@@ -72,6 +72,9 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        googleTagManager: {
+          containerId: 'GTM-WJJ7VKZ',
+        },
       }),
     ],
   ],
@@ -81,9 +84,16 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/cloud-native-contributors.jpg',
+      metadata: [
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@CloudNativeFdn' },
+        { name: 'twitter:creator', content: '@CloudNativeFdn' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'CNCF Contributors' },
+      ],
       announcementBar: {
         id: `hello-bar`,
-        content: `🎉️ Meet us in Atlanta for KubeCon + CloudNativeCon North America · Nov 10-13 ·<b><a target="_blank" href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/?utm_source=contribute-cncf-io&utm_medium=subpage&utm_campaign=10608228-KubeCon-NA-2025&utm_content=hello-bar">Register Today!</b> 🥳️`,
+        content: `🎉️ The CFP for the CNCF Maintainer Summit Europe 2026 closes December 14 · <b><a target="_blank" href="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/maintainer-summit/#call-for-proposals">Submit Today!</b>`,
         backgroundColor: 'rgb(1, 117, 228)', // Defaults to `#fff`
         textColor: '#fff', // Defaults to `#000`
       },
@@ -101,7 +111,7 @@ const config = {
             position: 'left',
             label: 'Maintainers',
           },
-            {
+          {
             type: 'docSidebar',
             sidebarId: 'projectsSidebar',
             position: 'left',
