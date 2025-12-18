@@ -18,7 +18,7 @@ The first version of this document summarizes the experience different project m
 
 **NOTE:** We want this to be a living document where projects keep updating and adding new ideas as their experience grows. If you've learned something other projects can benefit from, please submit a PR with your advice. 
 
-This framework has five independent sections, so feel free to jump into whichever section interests you most.
+This framework has six independent sections, so feel free to jump into whichever section interests you most.
 
 1. [Motivating users to contribute](motivation/)
 2. [A successful PR workflow](pr-workflow/)
