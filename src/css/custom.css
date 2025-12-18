@@ -146,7 +146,7 @@
   display: inline-block;
 }
 
-/* making it easier to click on mobile */
+/* making it easier to click on mobiles */
 @media screen and (max-width: 768px) {
   .markdown .hash-link {
     transform: none;
