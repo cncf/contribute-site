@@ -6,37 +6,43 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Contributors',
-    Svg: require('@site/static/img/CNCF-Contributor-Icons-Contributor.svg').default,
-    link: '/maintainers',
+    Svg: require('@site/static/img/CNCF-Contributor-Icons-Contributor.svg')
+      .default,
+    link: '/contributors',
     description: (
       <>
-        Navigate the Cloud Native as an individual contributor. Get started, find new friends, forge your path.
+        Navigate the Cloud Native as an individual contributor. Get started,
+        find new friends, forge your path.
       </>
     ),
   },
   {
     title: 'Projects',
-    Svg: require('@site/static/img/CNCF-Contributor-Icons-Projects.svg').default,
+    Svg: require('@site/static/img/CNCF-Contributor-Icons-Projects.svg')
+      .default,
     link: '/projects',
     description: (
       <>
-        Over 220 Projects choose the CNCF as their home. These resources document how we work together as a team. 
+        Over 220 Projects choose the CNCF as their home. These resources
+        document how we work together as a team.
       </>
     ),
   },
   {
     title: 'Community',
-    Svg: require('@site/static/img/CNCF-Contributor-Icons-Community.svg').default,
+    Svg: require('@site/static/img/CNCF-Contributor-Icons-Community.svg')
+      .default,
     link: '/community',
     description: (
       <>
-        Stronger, together. Contributors and Projects collaborate to get larger goals accomplished. 
+        Stronger, together. Contributors and Projects collaborate to get larger
+        goals accomplished.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description, link}) {
+function Feature({ Svg, title, description, link }) {
   return (
     <div className={clsx('col col--4')}>
       <Link to={link} className={styles.featureLink}>
