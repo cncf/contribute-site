@@ -108,3 +108,48 @@
 .navbar__logo:not(#\#):not(#\#) {
   height: 2.5rem;
 }
+
+/* This enables Hoverable ¶ anchors for all headings */
+.markdown .hash-link {
+  opacity: 0;
+  text-decoration: none;
+  color: #555;
+  font-weight: normal;
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+  font-size: 0.85em;
+  display: inline-block;
+  transform: translateX(-2px);
+}
+
+/* shows ¶ on heading hover or when focused */
+.markdown h1:hover .hash-link,
+.markdown h2:hover .hash-link,
+.markdown h3:hover .hash-link,
+.markdown h4:hover .hash-link,
+.markdown h5:hover .hash-link,
+.markdown h6:hover .hash-link,
+.markdown .hash-link:focus {
+  opacity: 1;
+  transform: translateX(0);
+  text-decoration: none;
+}
+
+/* adds ¶ content */
+.markdown .hash-link::before {
+  content: '¶';
+  pointer-events: none;
+  color: #555;
+  font-size: 0.62em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* making it easier to click on mobiles */
+@media screen and (max-width: 768px) {
+  .markdown .hash-link {
+    transform: none;
+    font-size: 0.95em;
+  }
+} 
