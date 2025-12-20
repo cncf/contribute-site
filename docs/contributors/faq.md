@@ -983,7 +983,7 @@ than your first.
 | --------------------------------------------------------------------------------------- | -------------------------------- |
 | [Community Groups](https://community.cncf.io/)                                          | Local meetups and KCDs worldwide |
 | [TAG Contributor Strategy](https://github.com/cncf/tag-contributor-strategy)            | Initiatives to help contributors |
-| [CNCF Blog Guidelines](https://github.com/cncf/foundation/blob/main/blog-guidelines.md) | How to write for the CNCF blog   |
+| [CNCF Blog Guidelines](https://github.com/cncf/foundation/blob/main/policies-guidance/blog-guidelines.md) | How to write for the CNCF blog   |
 | [KubeCon Events](https://events.linuxfoundation.org/)                                   | Flagship conferences             |
 
 ### Go Language Resources
