@@ -17,10 +17,10 @@ Key LFX dates:
 * Mentee Applications Open: Monday, January 26 – Tuesday, February 10, 2026, 11AM PST (19:00 UTC)  
 * Application Review Period: Wednesday, February 11 – Tuesday, February 24, 2026, 11AM PST (19:00 UTC)
 
-In addition to LFX, the CNCF is planning on being a **Mentoring Organization** again next year for Google Summer of Code (GSoC) and can help projects looking to participate in the program.
+In addition to LFX, the CNCF is planning on being a **Mentoring Organization** again this year for Google Summer of Code (GSoC) and can help projects looking to participate in the program.
 This is a fantastic opportunity to increase your project's contributor community and get valuable work done!
 
-Next year, GSoC is actively looking to bring in more projects in the areas of **Security** and **AI/ML**.
+In 2026, GSoC is actively looking to bring in more projects in the areas of **Security** and **AI/ML**.
 
 [GSoC 2026 Announcement](https://groups.google.com/g/google-summer-of-code-discuss/c/D-aU3nHnGBQ/m/VU7lwF_MBQAJ)
 
