@@ -6,7 +6,7 @@ tags: [mentorship, lfx, gsoc, maintainers, community, projects]
 ---
 
 The CNCF LFX Mentorship 2026 Term 1 (March - May) is open for project proposals.
-Since 2020, 25 LFX mentee alumni have gone on to become CNCF project maintainers.
+Since 2020, [25 LFX mentee alumni have gone on to become CNCF project maintainers](https://www.cncf.io/blog/2025/12/18/the-mentorship-flywheel-how-cncf-is-growing-the-next-generation-of-cloud-native-leaders/).
 This is a great opportunity to grow your contributor community.
 
 [CNCF LFX Mentorship 2026 Term 1 Mar-May](https://github.com/cncf/mentoring/tree/main/programs/lfx-mentorship/2026/01-Mar-May) 
