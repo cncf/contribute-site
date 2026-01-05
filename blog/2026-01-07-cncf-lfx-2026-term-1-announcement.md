@@ -24,6 +24,8 @@ Next year, GSoC is actively looking to bring in more projects in the areas of **
 
 [GSoC 2026 Announcement](https://groups.google.com/g/google-summer-of-code-discuss/c/D-aU3nHnGBQ/m/VU7lwF_MBQAJ)
 
+[CNCF Project GSoC 2026 Ideas](https://github.com/cncf/mentoring/blob/main/programs/summerofcode/2026.md)
+
 Key GSoC dates:
 
 * Organizations application period: **Monday, Jan 19, to Tuesday, Feb 3, 2026**  
