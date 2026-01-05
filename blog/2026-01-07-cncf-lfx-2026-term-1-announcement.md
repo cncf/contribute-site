@@ -2,7 +2,7 @@
 title: CNCF Mentorship 2026 Term 1 Project Proposals Open + GSoC 2026 Opportunities
 date: 2026-01-07
 authors: [nate-double-u]
-tags: [mentorship, maintainers, community, projects, services, newsletter, lfx, gsoc]
+tags: [mentorship, lfx, gsoc, maintainers, community, projects]
 ---
 
 The CNCF LFX Mentorship 2026 Term 1 (March - May) is open for project proposals.
