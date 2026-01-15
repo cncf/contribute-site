@@ -148,8 +148,10 @@
 /resources/project-services/cncf-support/ /resources/services/cncf-support/ 301
 /resources/project-services/hosted-tools /resources/services/hosted-tools/ 301
 /resources/project-services/hosted-tools/ /resources/services/hosted-tools/ 301
-/resources/project-services/maturity-levels /resources/services/maturity-levels/ 301
-/resources/project-services/maturity-levels/ /resources/services/maturity-levels/ 301
+/resources/project-services/maturity-levels /resources/services/marketing/ 301
+/resources/project-services/maturity-levels/ /resources/services/marketing/ 301
+/resources/services/maturity-levels /resources/services/marketing/ 301
+/resources/services/maturity-levels/ /resources/services/marketing/ 301
 /resources/project-services/outreach-events /resources/services/outreach-events/ 301
 /resources/project-services/outreach-events/ /resources/services/outreach-events/ 301
 /resources/project-services/technical-writing /resources/services/technical-writing/ 301
