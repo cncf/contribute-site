@@ -1,11 +1,6 @@
 ---
 title: "The Governance By Subprojects Template"
-linkTitle: "Subproject Governance"
-date: 2022-09-15
-draft: false
-weight: 33
-aliases:
-- /maintainers/github/templates/required/governance-subprojects
+sidebar_label: "Subprojects (Delegation)"
 ---
 
 | Audience of this HowTo | Audience of CONTRIBUTING.md | Required by CNCF      |

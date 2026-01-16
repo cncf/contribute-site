@@ -1,11 +1,6 @@
 ---
 title: "The Steering Committee Elections Template"
-linkTitle: "Elections Governance"
-date: 2022-09-15
-draft: false
-weight: 32
-aliases:
-- /maintainers/github/templates/required/governance-elections
+sidebar_label: "Steering Committee"
 ---
 
 | Audience of this HowTo | Audience of The Document    | Required by CNCF      |
