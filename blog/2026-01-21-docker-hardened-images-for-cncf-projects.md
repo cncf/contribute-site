@@ -5,7 +5,7 @@ authors: [idvoretskyi]
 tags: [maintainers, services, projects, security]
 ---
 
-Last year, the CNCF and Docker announced an expanded partnership through the **Docker Sponsored Open Source (DSOS) Program** to increase infrastructure and tooling support available to CNCF project maintainers. Since then, Docker has made Docker Hardened Images (DHI) freely available to all developers.
+Last year, the CNCF and Docker [announced an expanded partnership](https://www.cncf.io/announcements/2025/09/18/cncf-expands-infrastructure-support-for-project-maintainers-through-partnership-with-docker/) through the **Docker Sponsored Open Source (DSOS) Program** to increase infrastructure and tooling support available to CNCF project maintainers. Since then, Docker has made Docker Hardened Images (DHI) freely available to all developers.
 
 We are highlighting this update for the benefit of the CNCF maintainer community, as DHI can be used by CNCF projects as a secure and transparent foundation for shipping container images.
 
