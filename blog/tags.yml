@@ -82,3 +82,8 @@ gsoc:
   label: GSoC
   permalink: /gsoc
   description: Google Summer of Code participation and updates
+
+security:
+  label: Security
+  permalink: /security
+  description: Security updates and best practices for CNCF projects
