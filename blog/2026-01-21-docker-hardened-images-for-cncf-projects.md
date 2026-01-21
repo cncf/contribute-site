@@ -36,7 +36,7 @@ As a CNCF project maintainer, you can start using Docker Hardened Images today f
 
 To learn more, please join the upcoming Docker-hosted CNCF community call:
 
-* **Date**: January 23
+* **Date**: January 23, 2026
 * **Time**: 4 pm UTC / 5 pm CET / 8 am PST
 * **Registration**: [Sign up here](https://dockr.ly/4qpSTRu)
 
