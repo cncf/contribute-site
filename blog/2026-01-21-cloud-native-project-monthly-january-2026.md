@@ -28,7 +28,7 @@ Please take a moment to complete the [2H 2025 Maintainer Survey](https://maintai
 
 CNCF is planning on being a Mentoring Organization again this year for Google Summer of Code (GSoC) and can help projects looking to participate in the program. This is a fantastic opportunity to increase your project's contributor community and get valuable work done!
 
-In 2026, GSoC is actively looking to bring in more projects in the areas of Security and AI/ML.
+This year, GSoC is actively looking to bring in more projects in the areas of Security and AI/ML.
 
 [GSoC 2026 Announcement](https://groups.google.com/g/google-summer-of-code-discuss/c/D-aU3nHnGBQ/m/VU7lwF_MBQAJ)  
 [CNCF GSoC 2026 ideas worksheet](https://github.com/cncf/mentoring/blob/main/programs/summerofcode/2026.md)
