@@ -57,23 +57,23 @@ This is your chance to tell us how we're doing, gauge your understanding of the 
 
 ## KubeCon+CloudNativeCon 2026 – Maintainer Summit & Travel Info
 
-**Maintainer Summit Europe**
+### Maintainer Summit Europe
 Don’t miss the opportunity to connect with fellow maintainers on Sunday, 22 March, [for a day of collaboration, knowledge sharing, and community building](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/maintainer-summit/#schedule). Review [eligibility requirements](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/maintainer-summit/#eligibility) & [register now for the Maintainer Summit today](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/maintainer-summit/#registration)!
 
-**Plan Your Trip to Amsterdam**
+### Plan Your Trip to Amsterdam
 Book your travel for KubeCon + CloudNativeCon Europe 2026: [Save with Conference Rates](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/attend/venue-travel/#hotel-information).
 
-**Observability Summit North America**
+### Observability Summit North America
 Don't forget to submit your proposal for [Observability Summit North America](https://events.linuxfoundation.org/observability-summit-north-america/)!
 
 Visit the [Observability Summit North America page](https://events.linuxfoundation.org/observability-summit-north-america/) for additional information on topics, and submission types and submit your session via the [CFP](https://sessionize.com/observability-summit-2026) by Sunday, January 25 at 11:59 PM CST.
 
-**KubeCon + CloudNativeCon India 2026 - Project Benefits now LIVE!**
+### KubeCon + CloudNativeCon India 2026 - Project Benefits now LIVE!
 CFPs and Interest Forms are now open for KubeCon + CloudNativeCon India! Don’t miss your chance to participate in Project Lightning Talks, Maintainer Track, Project Tables, and PR Support. Check out the link below for details about each opportunity and to submit.
 
 [Project Opportunities + CFP](https://events.linuxfoundation.org/kubecon-cloudnativecon-india/features-add-ons/project-opportunities/) - DUE Sunday 1 March 23:59 IST
 
-**Update Your Project Logos!**
+### Update Your Project Logos!
 The CNCF Events Team pulls project logos from the [CNCF artwork repository](https://github.com/cncf/artwork/tree/main/projects) for signage and stickers. Please be sure to upload your project’s high-resolution stacked and horizontal color logos at least 8 weeks before the event. If the required file is unavailable in the repository or is not high resolution, CNCF staff will determine which file to use.
 
 ## Call for Kubernetes AI Conformance applications and reference architectures
