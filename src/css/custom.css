@@ -107,4 +107,34 @@
 
 .navbar__logo:not(#\#):not(#\#) {
   height: 2.5rem;
+  max-width: 100%;
+  transition: max-width 0.3s ease;
+}
+
+.navbar__logo img {
+  transition: max-height 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar__logo,
+  .navbar__logo img {
+    transition: none;
+  }
+}
+
+@media (max-width: 330px) {
+
+  .navbar__logo:not(#\#):not(#\#) {
+    max-width: 80%;
+  }
+
+  .button_zS_t:not(#\#) {
+	margin-left: 0;
+  }
+
+}
+
+.socialIcons_t1qu:not(#\#):not(#\#) {
+  flex-wrap: wrap;
+  justify-content: center;
 }
