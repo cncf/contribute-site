@@ -3,7 +3,6 @@ title: Outreach and Event Opportunities (2026)
 description: CNCF-supported outreach and event opportunities available to projects and contributors in 2026.
 aliases:
 - /resources/project-services/outreach-events/
-
 ---
 
 This page lists **CNCF-supported outreach and event opportunities for 2026**.
@@ -12,8 +11,6 @@ It is intended for **CNCF projects, maintainers, and contributors** who want to 
 
 Event schedules, participation requirements, and submission deadlines vary by event.  
 Always refer to the linked event pages for the most current information.
-
----
 
 ## Open opportunities and deadlines
 
@@ -26,8 +23,6 @@ Deadlines vary by event and region.
 | [Maintainer Summit](https://events.linuxfoundation.org/) | Varies | Varies | Varies | N/A |
 | [Kubernetes Community Days (KCDs)](https://community.cncf.io/kubernetes-community-days/) | Rolling | N/A | Varies | N/A |
 | [CNCF Community Events & Meetups](https://community.cncf.io/events/) | Rolling | N/A | N/A | N/A |
-
----
 
 ## KubeCon + CloudNativeCon
 
@@ -45,8 +40,6 @@ KubeCon + CloudNativeCon events are held multiple times per year in different re
 More information:  
 https://www.cncf.io/events/
 
----
-
 ## Kubernetes Community Days (KCDs)
 
 Kubernetes Community Days (KCDs) are **community-organized, CNCF-supported** events focused on local Kubernetes and cloud native communities.
@@ -61,8 +54,6 @@ KCDs take place throughout 2026 in multiple locations worldwide.
 
 More information:  
 https://community.cncf.io/kubernetes-community-days/
-
----
 
 ## CNCF community events and meetups
 
@@ -79,8 +70,6 @@ Community events occur on an ongoing basis throughout 2026.
 More information:  
 https://community.cncf.io/events/
 
----
-
 ## Calls for proposals and submissions
 
 Many CNCF-supported events accept proposals for talks, panels, or project participation.
@@ -95,8 +84,6 @@ Submission timelines and requirements vary by event.
 
 More information:  
 https://contribute.cncf.io/resources/services/outreach-events/
-
----
 
 ## Contributor programs related to events
 
@@ -116,14 +103,10 @@ CNCF participates in Google Summer of Code as a mentoring organization. Contribu
 More information:  
 https://summerofcode.withgoogle.com/
 
----
-
 ## Notes for CNCF projects
 
 - Projects should coordinate outreach and event participation with CNCF Event Services where applicable.
 - Outreach planning should begin early to allow sufficient review and scheduling time.
 - Past events are intentionally excluded from this page.
-
----
 
 _Last reviewed for 2026 opportunities._
