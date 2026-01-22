@@ -1,11 +1,6 @@
 ---
 title: "Issue Labels for New Contributors"
-linkTitle: "Issue Labels"
-date: 2020-09-29
-description: >
-  Curate your issues and apply labels that attract new contributors.
-aliases:
-- /maintainers/github/issue-labels
+sidebar_label: Issue Labels
 ---
 
 A great way to encourage new contributors is to curate issues that are suitable
@@ -112,7 +107,7 @@ wanted" and also:
   reference guide for their changes.
 
 - **Identifies Relevant Code**
-
+s: "Revie
   The relevant code and tests to be changed are linked in the issue.
 
 - **Ready to Test**
