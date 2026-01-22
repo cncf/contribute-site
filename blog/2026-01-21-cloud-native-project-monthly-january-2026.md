@@ -18,6 +18,7 @@ Please take a moment to complete the [2H 2025 Maintainer Survey](https://maintai
 * [Call for Kubernetes AI Conformance applications and reference architectures](#call-for-kubernetes-ai-conformance-applications-and-reference-architectures)
 * [GitHub Copilot guidance](#github-copilot-guidance)
 * [Docker Hardened Images are now free for projects](#docker-hardened-images-are-now-free-for-projects)
+* [CNCF Projects Calendar Migration](#cncf-projects-calendar-migration-move-your-projects-meetings-to-lfx-pcc-for-self-service-scheduling)
 * [Help us help you](#help-us-help-you)
 * [See you next month](#see-you-next-month)
 
@@ -100,7 +101,7 @@ Many CNCF projects can already be found in the DHI catalog, and giving the broad
 
 [Learn how to get started in this blog post](https://contribute.cncf.io/blog/2026/01/21/docker-hardened-images-for-cncf-projects).
 
-### CNCF Projects Calendar Migration: Move your project’s meetings to LFX PCC for Self-Service Scheduling
+## CNCF Projects Calendar Migration: Move your project’s meetings to LFX PCC for Self-Service Scheduling
 
 As we head into 2026, we encourage any remaining projects to transition to the **LFX Project Control Center (PCC)** to take full advantage of our new self-service calendar system. With the legacy Google Calendar system now sunset, moving to PCC is the best way to ensure your community meetings remain visible and organized.
 
