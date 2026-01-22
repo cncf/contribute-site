@@ -77,10 +77,6 @@ CFPs and Interest Forms are now open for KubeCon + CloudNativeCon India! Don’t
 **Update Your Project Logos!**
 The CNCF Events Team pulls project logos from the [CNCF artwork repository](https://github.com/cncf/artwork/tree/main/projects) for signage and stickers. Please be sure to upload your project’s high-resolution stacked and horizontal color logos at least 8 weeks before the event. If the required file is unavailable in the repository or is not high resolution, CNCF staff will determine which file to use.
 
-## Upcoming project opportunity deadline
-
-We notified projects about opportunities for KubeCon + CloudNativeCon Europe 2026 last week. The CFP for Maintainer Track, Contribfest, and Project Lightning Talks closed on Sunday, 14 December, but the [Kiosk + PR Interest Form closes on Wednesday, 17 December, at 23:59 local time](https://linuxfoundation.research.net/r/ProjectOpps2026). Get your requests in today!
-
 ## Call for Kubernetes AI Conformance applications and reference architectures
 
 Late last year, the [Kubernetes AI Conformance program officially launched](https://www.cncf.io/blog/2025/08/01/help-us-build-the-kubernetes-conformance-for-ai/) and the interest and response has been overwhelming! Many thanks to our initial batch of contributors and conformance program participants.
