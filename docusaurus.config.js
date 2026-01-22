@@ -144,10 +144,6 @@ const config = {
             label: 'Events',
           },
           { to: '/blog', label: 'Blog', position: 'right' },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-          },
         ],
       },
       footer: {
