@@ -83,7 +83,7 @@ Late last year, the [Kubernetes AI Conformance program officially launched](http
 
 With Kubernetes 1.35 having launched, it's a perfect time to [submit your K8s AI Conformance application here](https://github.com/cncf/k8s-ai-conformance).
 
-Willing to talk about your use of Cloud Native projects in the AI training and inference space? We'd love to hear from you! Please email <projects@cncf.io>
+Willing to talk about your use of Cloud Native projects in the AI training and inference space? We'd love to hear from you! Please email projects@cncf.io
 
 ## GitHub Copilot guidance
 
@@ -124,7 +124,7 @@ For a quick walkthrough, check out this [short video tutorial](https://www.youtu
 
 ## See you next month
 
-Please let us know if you have any suggestions for future newsletter content by sending an email to <projects@cncf.io>.
+Please let us know if you have any suggestions for future newsletter content by sending an email to projects@cncf.io.
 
 You can also continue discussions with other maintainers in the #maintainer-circle Slack channel.
 
