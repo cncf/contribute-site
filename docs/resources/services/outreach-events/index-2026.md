@@ -109,4 +109,5 @@ https://summerofcode.withgoogle.com/
 - Outreach planning should begin early to allow sufficient review and scheduling time.
 - Past events are intentionally excluded from this page.
 
+
 _Last reviewed for 2026 opportunities._
