@@ -1,6 +1,6 @@
 ---
 title: Cloud Native Project Monthly (CNPM) January 2026 Newsletter
-date: 2026-01-21
+date: 2026-01-22
 authors: [krook, idvoretskyi, castrojo, jeefy, mrbobbytables, nate-double-u, riaankleinhans, robertkielty]
 tags: [maintainers, community, projects, services, newsletter, mentorship, lfx, gsoc]
 ---
