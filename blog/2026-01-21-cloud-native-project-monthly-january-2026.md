@@ -5,7 +5,6 @@ authors: [krook, idvoretskyi, castrojo, jeefy, mrbobbytables, nate-double-u, ria
 tags: [maintainers, community, projects, services, newsletter, mentorship, lfx, gsoc]
 ---
 
-
 Welcome to the January 2026 edition of the Cloud Native Project Monthly (CNPM) Newsletter.
 
 In 2025 we saw continued [project growth](https://www.cncf.io/project-metrics/), with the TOC accepting an additional six projects to close out the year. The speed at which projects join the CNCF and advance through levels has improved thanks to better processes, and we've expanded the variety of services available to maintainers through new partnerships with providers. We are committed to serving you even better in 2026.
@@ -28,7 +27,7 @@ Please take a moment to complete the [2H 2025 Maintainer Survey](https://maintai
 
 CNCF is planning on being a Mentoring Organization again this year for Google Summer of Code (GSoC) and can help projects looking to participate in the program. This is a fantastic opportunity to increase your project's contributor community and get valuable work done!
 
-This year, GSoC is actively looking to bring in more projects in the areas of Security and AI/ML.
+In 2026, GSoC is actively looking to bring in more projects in the areas of Security and AI/ML.
 
 [GSoC 2026 Announcement](https://groups.google.com/g/google-summer-of-code-discuss/c/D-aU3nHnGBQ/m/VU7lwF_MBQAJ)  
 [CNCF GSoC 2026 ideas worksheet](https://github.com/cncf/mentoring/blob/main/programs/summerofcode/2026.md)
@@ -37,7 +36,7 @@ Key dates:
 
 * Organizations application period: *Monday, Jan 19, to Tuesday, Feb 3, 2026*
 * CNCF Project proposals submissions recommendation: *Wednesday Jan 14, 2026*
-* Note, We’re past this now, and only have a handful of proposals. We’d like a few more, so if you’d like to participate, now’s a good time to add an idea. The more proposals we have, the stronger our org application will be.
+* Note: the internal recommendation date has passed and we currently only have a handful of proposals. If you're reading this before the org application deadline (Feb 3, 2026), you can still add an idea—the more proposals we have, the stronger our org application will be.
 
 ## Please take the Maintainer Survey
 
@@ -83,7 +82,7 @@ Late last year, the [Kubernetes AI Conformance program officially launched](http
 
 With Kubernetes 1.35 having launched, it's a perfect time to [submit your K8s AI Conformance application here](https://github.com/cncf/k8s-ai-conformance).
 
-Willing to talk about your use of Cloud Native projects in the AI training and inference space? We'd love to hear from you! Please email projects@cncf.io
+Willing to talk about your use of Cloud Native projects in the AI training and inference space? We'd love to hear from you! Please email [projects@cncf.io](mailto:projects@cncf.io)
 
 ## GitHub Copilot guidance
 
@@ -124,7 +123,7 @@ For a quick walkthrough, check out this [short video tutorial](https://www.youtu
 
 ## See you next month
 
-Please let us know if you have any suggestions for future newsletter content by sending an email to projects@cncf.io.
+Please let us know if you have any suggestions for future newsletter content by sending an email to [projects@cncf.io](mailto:projects@cncf.io).
 
 You can also continue discussions with other maintainers in the #maintainer-circle Slack channel.
 
