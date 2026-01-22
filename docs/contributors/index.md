@@ -28,7 +28,7 @@ Have questions as you get started? Check out our [Frequently Asked Questions](fa
 
 ## Unknown Terms?
 
-If you encounter any unfamiliar terms in this document or on our website, we have a [glossary](/resources/glossary)
+If you encounter any unfamiliar terms in this document or on our website, we have a [glossary](../resources/glossary.md)
 available.
 
 ## Contribution Opportunities
