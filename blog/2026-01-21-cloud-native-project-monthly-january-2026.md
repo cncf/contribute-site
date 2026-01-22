@@ -9,7 +9,7 @@ Welcome to the January 2026 edition of the Cloud Native Project Monthly (CNPM) N
 
 In 2025 we saw continued [project growth](https://www.cncf.io/project-metrics/), with the TOC accepting an additional six projects to close out the year. The speed at which projects join the CNCF and advance through levels has improved thanks to better processes, and we've expanded the variety of services available to maintainers through new partnerships with providers. We are committed to serving you even better in 2026.
 
-Please take a moment to complete the [2H 2025 Maintainer Survey](https://maintainers-survey.cncf.io). Your feedback is vital for us to serve you better this year. The survey is open until January 30, 2026; if you are reading this after that date, please check [maintainers-survey.cncf.io](https://maintainers-survey.cncf.io) for the latest survey opportunities.
+Please take a moment to complete the [2H 2025 Maintainer Survey](https://maintainers-survey.cncf.io). Your feedback is vital for us to serve you better this year. The survey will close on January 30th, so please respond as soon as you can!
 
 * [Google Summer of Code 2026 opportunities](#google-summer-of-code-2026-opportunities)
 * [Please take the Maintainer Survey](#please-take-the-maintainer-survey)
@@ -27,10 +27,10 @@ Please take a moment to complete the [2H 2025 Maintainer Survey](https://maintai
 
 CNCF is planning on being a Mentoring Organization again this year for Google Summer of Code (GSoC) and can help projects looking to participate in the program. This is a fantastic opportunity to increase your project's contributor community and get valuable work done!
 
-This year, GSoC is actively looking to bring in more projects in the areas of Security and AI/ML.
+In 2026, GSoC is actively looking to bring in more projects in the areas of Security and AI/ML.
 
 [GSoC 2026 Announcement](https://groups.google.com/g/google-summer-of-code-discuss/c/D-aU3nHnGBQ/m/VU7lwF_MBQAJ)  
-[CNCF GSoC 2026 ideas worksheet](https://github.com/cncf/mentoring/blob/main/programs/summerofcode/2026.md) ([@cncf/mentoring](https://github.com/cncf/mentoring))
+[CNCF GSoC 2026 ideas worksheet](https://github.com/cncf/mentoring/blob/main/programs/summerofcode/2026.md)
 
 Key dates:
 
@@ -55,10 +55,6 @@ This is your chance to tell us how we're doing, gauge your understanding of the 
 | **Japan** | [🎓 Scholarships](https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/attend/scholarships-travel-funding/#scholarships) | 22 June, 11:59 PM PT | 29 June |
 | **Japan** | [✈️ Travel Funding](https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/attend/scholarships-travel-funding/#travel-funding) | 31 May, 11:59 PM PT | 15 June |
 
-:::caution Deadline timing
-As of this newsletter's publication date (**21 January 2026**), Europe travel funding applications close on **25 January 2026 at 11:59 PM PT**. If you are reading this after that date, this specific opportunity has likely closed. Always confirm current scholarship and travel funding deadlines on the official event pages linked above.
-:::
-
 ## KubeCon+CloudNativeCon 2026 – Maintainer Summit & Travel Info
 
 **Maintainer Summit Europe**
@@ -82,9 +78,9 @@ The CNCF Events Team pulls project logos from the [CNCF artwork repository](http
 
 ## Call for Kubernetes AI Conformance applications and reference architectures
 
-In August 2025, the [Kubernetes AI Conformance program officially launched](https://www.cncf.io/blog/2025/08/01/help-us-build-the-kubernetes-conformance-for-ai/) and the interest and response has been overwhelming! Many thanks to our initial batch of contributors and conformance program participants.
+Late last year, the [Kubernetes AI Conformance program officially launched](https://www.cncf.io/blog/2025/08/01/help-us-build-the-kubernetes-conformance-for-ai/) and the interest and response has been overwhelming! Many thanks to our initial batch of contributors and conformance program participants.
 
-With Kubernetes 1.35 having launched, it's a perfect time to [submit your K8s AI Conformance application here](https://github.com/cncf/k8s-ai-conformance) ([@cncf/k8s-ai-conformance](https://github.com/cncf/k8s-ai-conformance)).
+With Kubernetes 1.35 having launched, it's a perfect time to [submit your K8s AI Conformance application here](https://github.com/cncf/k8s-ai-conformance).
 
 Willing to talk about your use of Cloud Native projects in the AI training and inference space? We'd love to hear from you! Please email [projects@cncf.io](mailto:projects@cncf.io)
 
