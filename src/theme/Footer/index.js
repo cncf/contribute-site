@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import clsx from 'clsx';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -55,14 +56,13 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.topRow}>
         <div className={styles.left}>
-          <a href="https://www.cncf.io/" target="_blank" rel="noopener noreferrer">
+          <Link className={styles.logo} href="https://www.cncf.io/" target="_blank" rel="noopener noreferrer">
             <img
               src={useBaseUrl('/img/cncf_logo_white.svg')}
               alt="CNCF Logo"
-              className={styles.logo}
             />
-          </a>
-          <Link className={styles.button} to="https://www.cncf.io/all-cncf/">
+          </Link>
+          <Link className={clsx(styles.button, styles.allCncfSites)} to="https://www.cncf.io/all-cncf/">
             All CNCF Sites
           </Link>
         </div>
