@@ -19,7 +19,7 @@ _The following details are specific to the [2026 Maintainer Summit in Amsterdam]
 
 **Date**
 : Sunday, March 22, 2026
-  _One day prior to KubeCon + CloudNativeCon North America pre-event programming. The event is held on Sunday to avoid conflict with co-located event days._
+  _One day prior to KubeCon + CloudNativeCon Europe pre-event programming. The event is held on Sunday to avoid conflict with co-located event days._
 
 **Location**
 : Amsterdam, The Netherlands
