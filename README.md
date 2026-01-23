@@ -40,19 +40,20 @@ There are two different options you can adopt to run this website locally:
 If you are using a devcontainer, start the application with the following command:
 
 ```bash
-npm run docusaurus start -- --host 0.0.0.0 --port 3000 --poll 10000
+npm start -- --host 0.0.0.0 --port 3000 --poll 10000
 ```
 
-This will start the development server and make it accessible on `http://localhost:3000`.
+This will start the development server and make it accessible on http://localhost:3000.
 
 #### Option 2: Running Locally
 To run the site locally, use the following command:
 
 ```bash
-npm run docus:start
+npm start
 ```
 
-This will start the development server on the default port, typically `http://localhost:3000`.
+This will start the development server on the default port, typically
+http://localhost:3000.
 
 
 ## ChillOps

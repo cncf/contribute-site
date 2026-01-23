@@ -40,6 +40,7 @@
     "precheck:links": "npm run build",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run docus:serve",
+    "start": "npm run docus:start --",
     "test": "npm run check",
     "typecheck": "tsc",
     "update:pkgs": "npx npm-check-updates -u"
