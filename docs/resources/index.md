@@ -17,7 +17,7 @@ Projects are welcome to use their own tools in the CNCF, we are a strong support
 
 ### I have a project I want to donate to the CNCF
 
-Awesome! To contribute your project to CNCF or discuss how CNCF can help your project, email <info@cncf.io> and read the [TOC repo] for further information.
+Awesome! To contribute your project to CNCF or discuss how CNCF can help your project, email [info@cncf.io](mailto:info@cncf.io) and read the [TOC repo] for further information.
 
 ### How much budget is available for projects?
 
@@ -77,7 +77,7 @@ The CNCF has a special partnership with GitHub, please file a [Service Desk][ser
 
 ### I don't have a Service Desk account
 
-If you are a maintainer, head to the [Service Desk][service-desk-login] website and try to log in, if you can't find an account, email <info@cncf.io> and one will be created for you.
+If you are a maintainer, head to the [Service Desk][service-desk-login] website and try to log in, if you can't find an account, email [info@cncf.io](mailto:info@cncf.io) and one will be created for you.
 
 #### I am a Kubernetes SIG chair and I don't have a Service Desk account
 
@@ -85,7 +85,7 @@ The CNCF Service Desk policy for the Kubernetes community is defined at [Kuberne
 
 ### I changed my email and lost my Service Desk access. What can I do to get it back?
 
-Email <info@cncf.io> and one will be created for you.
+Email [info@cncf.io](mailto:info@cncf.io) and one will be created for you.
 
 ### I am not happy with the level of service from CNCF staff, what can I do to escalate?
 

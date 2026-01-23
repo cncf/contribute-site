@@ -19,7 +19,7 @@ _The following details are specific to the [2026 Maintainer Summit in Amsterdam]
 
 **Date**
 : Sunday, March 22, 2026
-  _One day prior to KubeCon + CloudNativeCon North America pre-event programming. The event is held on Sunday to avoid conflict with co-located event days._
+  _One day prior to KubeCon + CloudNativeCon Europe pre-event programming. The event is held on Sunday to avoid conflict with co-located event days._
 
 **Location**
 : Amsterdam, The Netherlands
@@ -112,7 +112,7 @@ Sponsorship is essential to the event's sustainability, helping cover hard costs
 
 ### Current Sponsorship
 
-Please see [How to Sponsor](#how-to-sponsor) for instructions. For the 206 event, signed contracts must be received by **February 2, 2026**.
+Please see [How to Sponsor](#how-to-sponsor) for instructions. For the 2026 event, signed contracts must be received by **February 2, 2026**.
 
 ### How to Sponsor
 
