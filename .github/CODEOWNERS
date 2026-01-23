@@ -1,0 +1,42 @@
+# Teams
+#
+# cncf/cncf-projects - cncf projects team staff
+# cncf/cncf-toc - both TOC & TOC Shadows
+# cncf/cncf-toc-voters - JUST the TOC
+# cncf/tag-*-leads - TAG leads for each TAG
+#
+# teams config: https://github.com/cncf/people/blob/main/config.yaml
+
+# default catch-all for approvals
+* @cncf/cncf-projects @cncf/cncf-toc-voters @cncf/cncf-tech-docs
+
+
+# TAG directories
+/docs/community/tags/developer-experience @cncf/tag-developer-experience-leads
+/docs/community/tags/infrastructure @cncf/tag-infrastructure-leads
+/docs/community/tags/operational-resilience @cncf/tag-operational-resilience-leads
+/docs/community/tags/security-and-compliance @cncf/tag-security-compliance-leads
+/docs/community/tags/workloads-foundation @cncf/tag-workloads-foundation-leads
+
+
+# TAG specific owned directories outside of primary TAG directory
+/docs/projects/best-practices/security @cncf/tag-security-compliance-leads
+
+
+# Areas that are specifically owned by the Projects team / CNCF staff
+/.devcontainer @cncf/cncf-projects @cncf/cncf-tech-docs
+/blog @cncf/cncf-projects @cncf/cncf-tech-docs
+/docs/events @cncf/cncf-projects @cncf/cncf-tech-docs
+/docs/resources @cncf/cncf-projects @cncf/cncf-tech-docs
+/src @cncf/cncf-projects @cncf/cncf-tech-docs
+/static @cncf/cncf-projects @cncf/cncf-tech-docs
+
+docusaurus.config.js @cncf/cncf-projects @cncf/cncf-tech-docs
+netlify.toml @cncf/cncf-projects @cncf/cncf-tech-docs
+package-lock.json @cncf/cncf-projects @cncf/cncf-tech-docs
+package.json @cncf/cncf-projects @cncf/cncf-tech-docs
+sidebar.js @cncf/cncf-projects @cncf/cncf-tech-docs
+
+# Projects team should be the only group to approve CODEOWNERS changes
+# All general permissions should be handled through github group membership
+/.github/CODEOWNERS @cncf/cncf-projects

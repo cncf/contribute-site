@@ -131,7 +131,7 @@ Browse [active initiatives](https://github.com/cncf/toc/issues?q=state%3Aopen+la
 
 ## Resources
 
-- [Charter](https://github.com/cncf/toc/blob/main/tags/tag-developer-experience/charter.md)
+- [Charter](charter.md)
 - [TAG Governance](../../governance/tech-group-governance.md)
 - [CNCF TOC Repository](https://github.com/cncf/toc)
 - [All TAGs](../index.md)

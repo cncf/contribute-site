@@ -1,9 +1,6 @@
 ---
 title: "HowTo: Make a Reviewing Guide"
-linkTitle: "Reviewing Guide"
-date: 2021-09-20
-aliases:
-- /maintainers/github/templates/recommended/reviewing
+sidebar_label: "Reviewing Guide"
 ---
 
 | Audience of this HowTo | Audience of REVIEWING.md | Required by CNCF    |
