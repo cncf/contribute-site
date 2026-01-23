@@ -54,6 +54,15 @@ Addressing governance, compliance, and ethical considerations:
 - **Compliance**: Meeting regulatory requirements for AI systems
 - **Security**: Protecting models, data, and inference endpoints
 
+### AI Agents
+
+Exploring the development and deployment of autonomous agents in cloud native environments:
+
+- **Agentic Standards**: Defining standards for agent communication and interoperability
+- **Agent Orchestration**: Managing multi-agent systems and workflows
+- **Tool Use & Function Calling**: Patterns for agents interacting with cloud infrastructure
+- **Agent Observability**: Tracing and monitoring agent decision-making processes
+
 ### Cloud Native AI Patterns
 
 Exploring patterns specific to cloud native AI:
@@ -91,6 +100,8 @@ Some areas where community input is valuable:
 - Real-time inference architectures
 - Federated learning in cloud native environments
 - Integration with CNCF projects (Knative, KubeFlow, etc.)
+- Agentic workflows and standards
+- AI Governance frameworks and implementation
 
 ## Organizers
 
