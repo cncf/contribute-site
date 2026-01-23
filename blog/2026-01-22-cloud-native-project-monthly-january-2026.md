@@ -7,7 +7,7 @@ tags: [maintainers, community, projects, services, newsletter, mentorship, lfx, 
 
 Welcome to the January 2026 edition of the Cloud Native Project Monthly (CNPM) Newsletter.
 
-In 2025 we saw continued [project growth](https://www.cncf.io/project-metrics/), with the TOC accepting an additional six projects to close out the year. The speed at which projects join the CNCF and advance through levels has improved thanks to better processes, and we've expanded the variety of services available to maintainers through new partnerships with providers. We are committed to serving you even better in 2026.
+In 2025 we saw continued [project growth](https://www.cncf.io/project-metrics/), with the TOC accepting an additional six projects to close out the year. The speed at which projects join the CNCF and advance through levels has improved thanks to better processes, and we've expanded the variety of services available to maintainers through new partnerships with providers. We are committed to serving our 2,000 maintainers and 300,000 [contributors](https://www.cncf.io/blog/2026/01/12/a-decade-of-open-source-in-cncf-with-300000-contributors-and-counting/) even better in 2026.
 
 Please take a moment to complete the [2H 2025 Maintainer Survey](https://maintainers-survey.cncf.io). Your feedback is vital for us to serve you better this year. The survey will close on January 30th, so please respond as soon as you can!
 
