@@ -112,7 +112,7 @@ Sponsorship is essential to the event's sustainability, helping cover hard costs
 
 ### Current Sponsorship
 
-Please see [How to Sponsor](#how-to-sponsor) for instructions. For the 206 event, signed contracts must be received by **February 2, 2026**.
+Please see [How to Sponsor](#how-to-sponsor) for instructions. For the 2026 event, signed contracts must be received by **February 2, 2026**.
 
 ### How to Sponsor
 
