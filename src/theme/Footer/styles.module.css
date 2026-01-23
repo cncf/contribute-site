@@ -10,6 +10,8 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 30px;
 }
 
 .left {
@@ -55,11 +57,11 @@
 
 .socialIcons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .socialIcons a {
-    padding: 17px;
+  padding: 1rem 0 1rem 0;
 }
 
 .socialIcons svg {
