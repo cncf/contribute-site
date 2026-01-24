@@ -40,6 +40,7 @@
     "precheck:links": "npm run build",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run docus:serve",
+    "start": "npm run docus:start --",
     "test": "npm run check",
     "typecheck": "tsc",
     "update:pkgs": "npx npm-check-updates -u"
@@ -55,7 +56,7 @@
     "@docusaurus/preset-classic": "3.8.1",
     "@mdx-js/react": "^3.1.0",
     "clsx": "^2.1.1",
-    "docusaurus-plugin-search-local": "^2.1.2",
+    "docusaurus-lunr-search": "^3.6.0",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
