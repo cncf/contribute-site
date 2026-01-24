@@ -48,7 +48,7 @@ Projects moving to Graduation level receive:
 
 - Press release announcement
 - Presentation slot at the upcoming KubeCon + CloudNativeCon
-- Embargoed pitch of the announcement and top features to the media. Requests for interviews go to the project team.
+- Embargoed pitch of the announcement and top features to the media. Interviews will be staffed by CNCF PR and project team will receive prep.
 - Tweet on announcement day, including social card
 
 ### Incubating

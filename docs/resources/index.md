@@ -17,7 +17,7 @@ Projects are welcome to use their own tools in the CNCF, we are a strong support
 
 ### I have a project I want to donate to the CNCF
 
-Awesome! To contribute your project to CNCF or discuss how CNCF can help your project, email info@cncf.io and read the [TOC repo] for further information. 
+Awesome! To contribute your project to CNCF or discuss how CNCF can help your project, email [info@cncf.io](mailto:info@cncf.io) and read the [TOC repo] for further information.
 
 ### How much budget is available for projects?
 
@@ -46,21 +46,19 @@ The CNCF doesn't enforce the projects to use any specific tool for sharing crede
 
 ### How can I use the computing infrastructure provided by the CNCF?
 
-The CNCF prefers projects evaluate using our [Community Cluster][cncf-cluster] first. We have partnered with various providers that offer discounted or free services for CNCF projects. For example, CNCF projects may use the credits offered by [Amazon Web Services][aws-credits] or [Oracle][oracle-credits] for their upstream testing, CI/CD, and other purposes. See the [Tools](#tools) sections on this page for more details.
+We have partnered with various providers that offer discounted or free services for CNCF projects. For example, CNCF projects may use the credits offered by [Amazon Web Services][aws-credits], [Oracle][oracle-credits], or [Akamai/Linode][akamai-credits] for their upstream testing, CI/CD, and other purposes. See the [Tools](#tools) sections on this page for more details.
 
 To benefit from one of these offers, please submit the Service Desk ticket with a detailed description of the request, including the purpose, a list of the desired services, and a rough cost.
 
 Code being run must be 100 percent open source and must not include any sensitive data.
 
-Please note that available computing resources are limited so we may ask you to reduce your usage when there is high demand for the available credits. Specifically, please consider shutting down the unused computing resources, use automation to terminate the bare metal/virtual machines if they are not intended to be used 24/7, use spot instances if applicable etc. Please estimate your budget to use no more than $3000/month USD in AWS or Oracle credits. If you expect higher resource usage on a regular basis, please consider using the [CNCF Cluster][cncf-cluster] instead.
+Please note that available computing resources are limited so we may ask you to reduce your usage when there is high demand for the available credits. Specifically, please consider shutting down the unused computing resources, use automation to terminate the bare metal/virtual machines if they are not intended to be used 24/7, use spot instances if applicable etc. Please estimate your budget to use no more than $3000/month USD in AWS or Oracle credits.
 
 The CNCF expects fair usage of the allocated resources and credits, and reserves the right to terminate any allocated infrastructure resources and revoke the access to them in the case of violation of these rules.
 
 ### My project is affected by the [Docker Hub rate limits policy changes][docker-rate-limits], what can I do?
 
-In 2020, Docker announced the changes to [image retention][docker-retention] and [data pull rates][docker-pull-rates].
-
-The CNCF has reached an agreement with Docker that these limits can be eliminated for CNCF projects - if your project is affected by these changes, please consider applying to the [Docker Expanded Support for Open Source Software Projects][docker-oss-program] program via the [form][docker-oss-form].
+The CNCF has reached an agreement with Docker that these limits can be eliminated for CNCF projects - if your project is affected by these changes, please consider applying to the [Docker Expanded Support for Open Source Software Projects][docker-oss-program] program. Relatedly, Docker has also offered [Hardened Images free to CNCF projects][docker-dhi-program].
 
 NOTE: To have your application processed correctly by Docker, please explicitly mention that your project is hosted by CNCF. Also, please note that the approval process may take a few weeks.
 
@@ -79,7 +77,7 @@ The CNCF has a special partnership with GitHub, please file a [Service Desk][ser
 
 ### I don't have a Service Desk account
 
-If you are a maintainer, head to the [Service Desk][service-desk-login] website and try to log in, if you can't find an account, email info@cncf.io and one will be created for you.
+If you are a maintainer, head to the [Service Desk][service-desk-login] website and try to log in, if you can't find an account, email [info@cncf.io](mailto:info@cncf.io) and one will be created for you.
 
 #### I am a Kubernetes SIG chair and I don't have a Service Desk account
 
@@ -87,7 +85,7 @@ The CNCF Service Desk policy for the Kubernetes community is defined at [Kuberne
 
 ### I changed my email and lost my Service Desk access. What can I do to get it back?
 
-Email info@cncf.io and one will be created for you.
+Email [info@cncf.io](mailto:info@cncf.io) and one will be created for you.
 
 ### I am not happy with the level of service from CNCF staff, what can I do to escalate?
 
@@ -102,14 +100,12 @@ If you aren't happy with the service provided by CNCF staff or with a resolution
 [google-vuln-guide]: https://github.com/google/oss-vulnerability-guide
 [keybase]: https://keybase.io/
 [1password-oss]: https://github.com/1Password/1password-teams-open-source
-[cncf-cluster]: https://github.com/cncf/cluster
 [aws-credits]: https://www.cncf.io/announcement/2019/11/19/cloud-native-computing-foundation-receives-200000-in-credits-from-amazon-web-services-aws/
 [oracle-credits]: https://www.cncf.io/blog/2024/02/02/oracle-oci-credits-are-now-available-to-cncf-projects-here-is-what-you-need-to-know/
+[akamai-credits]: https://www.cncf.io/blog/2025/11/05/akamai-builds-cloud-native-resilience-cloud-credits-to-power-cncf-projects/
 [docker-rate-limits]: https://www.docker.com/increase-rate-limits
-[docker-retention]: https://www.docker.com/blog/scaling-dockers-business-to-serve-millions-more-developers-storage/
-[docker-pull-rates]: https://www.docker.com/blog/scaling-docker-to-serve-millions-more-developers-network-egress/
-[docker-oss-program]: https://www.docker.com/blog/expanded-support-for-open-source-software-projects/
-[docker-oss-form]: https://www.docker.com/community/open-source/application/
+[docker-oss-program]: https://contribute.cncf.io/blog/2026/01/21/docker-hardened-images-for-cncf-projects
+[docker-dhi-program]: https://www.docker.com/community/open-source/application/
 [k8s-org]: https://github.com/kubernetes/org
 [cilium-team]: https://github.com/cilium/team-manager
 [github-settings-app]: https://github.com/apps/settings

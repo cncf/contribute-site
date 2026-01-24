@@ -1,8 +1,8 @@
 ---
-title: Submit a request for a licensing policy exception
+title: Submit a Request for a Licensing Policy Exception
 ---
 
-# Purpose
+# License Exceptions
 
 CNCF's IP policy is set forth in the [CNCF charter], section 11.
 

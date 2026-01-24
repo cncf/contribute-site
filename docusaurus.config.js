@@ -195,7 +195,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} The CNCF Authors.`,
+        copyright: `Copyright The CNCF Authors.`,
       },
       prism: {
         theme: prismThemes.github,

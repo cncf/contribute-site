@@ -8,16 +8,16 @@ aliases:
 ---
 
 ## Open Opportunites and Deadlines
-Here are the current open opportunites available to projects:
 
-| **Event** | **CFP Deadline** | **Maintainer CFP Deadline** | **Scholarship Deadline** | **Project Pavilion Deadline** | 
+Here are the current open opportunities available to projects:
+
+| **Event** | **CFP Deadline** | **Maintainer CFP Deadline** | **Scholarship Deadline** | **Project Pavilion Deadline** |
 | :-----: | :--: | :--: | :--: | :--: |
 | [KubeCon + CloudNativeCon North America](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/cfp/) | May 27 | TBD | TBD | TBD |
-| [gRPConf North America 2025](https://events.linuxfoundation.org/grpconf/program/cfp/#submit-your-talk) | May 28 | TBD | TBD | TBD |  
-| [KubeCon North America CNCF-hosted Co-located Events North America](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cfp-colocated-events/#submit-your-talk) | June 30 | TBD | TBD | TBD | 
-| [KubeCon North America + CloudNativeCon North America Project Lightning Talk, Maintainer Track + ContribFest](https://sessionize.com/project-lightning-talk-maintainer-track-na25/) | July 7 | TBD | TBD | TBD |  
-| [Maintainer Summit North America](https://sessionize.com/maintainer-summit-na-2025) | July 31 | TBD | TBD | TBD |  
-| [Submit to Upcoming KCDs](https://sessionize.com/2025-kcd-open-call-for-proposals/) | | | | |
+| [KubeCon North America CNCF-hosted Co-located Events North America](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cfp-colocated-events/#submit-your-talk) | TBD | TBD | TBD | TBD |
+| KubeCon North America + CloudNativeCon North America Project Lightning Talk, Maintainer Track + ContribFest | TBD | TBD | TBD | TBD |  
+| Maintainer Summit North America | TBD | TBD | TBD | TBD |  
+| [Submit to Upcoming KCDs](https://sessionize.com/2026-kcd-open-call-for-proposals/) | | | | |
 
 ## Marketing
 
@@ -27,21 +27,21 @@ Marketing services for projects are designed to assist with the awareness of the
 
 Events are central to CNCF's strategic approach, fostering community growth through direct interactions and knowledge exchange. CNCF offers various participation avenues for projects:
 
-| Event Type | TAGs	| Graduated	| Incubating | SIGs | Sandbox |
+| Event Type | TAGs | Graduated | Incubating | SIGs | Sandbox |
 | :--------: | :--: | :-------: | :--------: | :---: | :-----: |
-| CNCF-hosted, Co-located Events, KubeCon + CloudNativeCon, and Open Source Summit Events |	✅ | ✅ | ✅ | - | - |
-| Virtual Only Events |	✅ | ✅ | ✅ |	✅ | ✅ |
+| CNCF-hosted, Co-located Events, KubeCon + CloudNativeCon, and Open Source Summit Events | ✅ | ✅ | ✅ | - | - |
+| Virtual Only Events | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 Learn more about eligibility and the parameters for [CNCF-Hosted Events here.](https://events.linuxfoundation.org/wp-content/uploads/2024/08/2025-CNCF-Project-Co-located-Event-Guidelines-8-22-24.pdf)
 
 #### KubeCon + CloudNativeCon Project Opportunities
 
-| Project Opportunity Type | TAGs	| Graduated	| Incubating | SIGs | Sandbox |
+| Project Opportunity Type | TAGs | Graduated | Incubating | SIGs | Sandbox |
 | :----------------------: | :---: | :-------: | :--------: | :---: | :-----: |
-| In-Person Kiosk (Project Pavilion) | ✅ | ✅ |	✅ | ✅ | ✅ |
-| In-Person Project Meeting	| ✅ | ✅ | ✅ | - | - |
-| PR Support | ✅ | ✅ |	✅ | ✅ | - |
-| Maintainer session | - | ✅ | ✅ |	- |	- |
+| In-Person Kiosk (Project Pavilion) | ✅ | ✅ | ✅ | ✅ | ✅ |
+| In-Person Project Meeting | ✅ | ✅ | ✅ | - | - |
+| PR Support | ✅ | ✅ | ✅ | ✅ | - |
+| Maintainer session | - | ✅ | ✅ | - | - |
 
 We provide:
 

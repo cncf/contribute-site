@@ -20,7 +20,7 @@ const FeatureList = [
     link: '/projects',
     description: (
       <>
-        Over 220 Projects choose the CNCF as their home. These resources document how we work together as a team. 
+        Over 240 Projects choose the CNCF as their home. These resources document how we work together as a team. 
       </>
     ),
   },
