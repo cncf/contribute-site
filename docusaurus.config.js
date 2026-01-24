@@ -202,7 +202,9 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-  plugins: [require.resolve('docusaurus-plugin-search-local')],
+  plugins: [[require.resolve('docusaurus-lunr-search'), {
+    highlightResult: true,
+  }]],
 };
 
 export default config;
