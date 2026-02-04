@@ -174,13 +174,13 @@ For KubeCon + CloudNativeCon's (KCCN) Europe and North America — the following
 - TOC members will not take on new sponsorship of applications for moving levels
 - Many activities occur before, during, and after KCCN. Postponing new sponsorship until after KCCN reduces the likelihood that kicking off the process is overcome by such activities.
 - Public Comment will not open
-- We want to ensure community members, adopters, and other stakeholders have time to participate in the public comment of projects, the 2 weeks leading up to the event are typically very busy for many individuals involved in the moving levels process.
+  - We want to ensure community members, adopters, and other stakeholders have time to participate in the public comment of projects, the 2 weeks leading up to the event are typically very busy for many individuals involved in the moving levels process.
 - Voting for projects will not open
-- Voting is an opportunity for community members to show support for projects, it is also the time when the TOC determines if the due diligence and state of the project support its promotion to the next level. As such it is essential for TOC members to have time to not only cast votes, but to consider any comments raised during the public comment period. The TOC is just as busy as any other attendee or speaker for KCCN, it is easy to miss the timeframes for voting and we want to ensure projects receive the attention in a vote they deserve.
+  - Voting is an opportunity for community members to show support for projects, it is also the time when the TOC determines if the due diligence and state of the project support its promotion to the next level. As such it is essential for TOC members to have time to not only cast votes, but to consider any comments raised during the public comment period. The TOC is just as busy as any other attendee or speaker for KCCN, it is easy to miss the timeframes for voting and we want to ensure projects receive the attention in a vote they deserve.
 - Open voting is paused
-- While community members may continue to show support for projects, the TOC will officially pause our voting.
+  - While community members may continue to show support for projects, the TOC will officially pause our voting.
 - No project announcements
-- Even if a project has passed a vote, if they have not announced and officially moved levels, they will not be included as an incubating or graduated project.
+  - Even if a project has passed a vote, if they have not announced and officially moved levels, they will not be included as an incubating or graduated project.
 
 **2nd week following the event**
 
