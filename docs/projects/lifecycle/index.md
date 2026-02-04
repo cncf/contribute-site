@@ -1,11 +1,13 @@
 ---
-title: Project lifecycle and Process
+title: Project Lifecycle and Process
 ---
 
-# CNCF Project Lifecycle & Process 
+# CNCF Project Lifecycle & Process
+
 v1.6, previously "project proposal process v1.5"
 
 ## Table of Contents
+
 - [Project Stages](#project-stages)
 - [Project Lifecycle Process](#project-lifecycle-process)
 - [How to Move Levels](#how-to-apply-to-move-levels)
@@ -13,16 +15,16 @@ v1.6, previously "project proposal process v1.5"
 - [Project Resources and Guide Posts](#project-resources-and-guide-posts)
 - [Additional Information](#additional-information)
 
+## Introduction
 
-## Introduction 
-This document outlines the CNCF project lifecycle - a multi-stage evaluation which helps ensure cloud native projects meet defined standards of maturity, security, and production readiness for adopters. It includes the criteria for each stage and the process for transitioning between levels. 
+This document outlines the CNCF project lifecycle - a multi-stage evaluation which helps ensure cloud native projects meet defined standards of maturity, security, and production readiness for adopters. It includes the criteria for each stage and the process for transitioning between levels.
 
  The TOC defines 4 stages of the project lifecycle:
 
-* **[Sandbox](https://sandbox.cncf.io)** - Experimental or innovative projects early in their development.
-* **Incubation** - Projects gaining adoption, focusing on improving stability and maturity.
-* **Graduated** - Highly mature, robust projects whose adopters have demonstrated their production-readiness by their deployment to production environments.
-* **[Archived](archiving.md)** - Inactive or low activity projects that are no longer supported by the TOC or are not recommended for use due to a variety of factors (project specific)
+- **[Sandbox](https://sandbox.cncf.io)** - Experimental or innovative projects early in their development.
+- **Incubation** - Projects gaining adoption, focusing on improving stability and maturity.
+- **Graduated** - Highly mature, robust projects whose adopters have demonstrated their production-readiness by their deployment to production environments.
+- **[Archived](archiving.md)** - Inactive or low activity projects that are no longer supported by the TOC or are not recommended for use due to a variety of factors (project specific)
 
 ## Project stages
 
@@ -39,7 +41,7 @@ CNCF Graduated projects represent the pinnacle of project maturity within the Cl
 
 **Archived**:
 Archived projects are inactive or no longer recommended for use. This stage ensures the CNCF community focuses on active, impactful projects.
-Refer to the archive process (here)[https://github.com/cncf/toc/blob/main/process/archiving.md]
+Refer to the [archive process](https://github.com/cncf/toc/blob/main/process/archiving.md)
 
 ---
 
@@ -49,14 +51,15 @@ Projects may enter the CNCF either by applying as a sandbox project or applying 
 
 Due Diligence Enhancements:
 To streamline the evaluation process, the TOC has:
+
 - Reduced duplication of work.
 - Improved transparency for projects and their adopters.
 - Simplified handoffs during evaluations.
 
-For project resources on the lifecycle process, please refer to the section on 
+For project resources on the lifecycle process, please refer to the section on
 [Project Resources and Guide Posts](#project-resources-and-guide-posts).
 
-##  Naming conventions for projects
+## Naming conventions for projects
 
 All CNCF projects are subject to the [Trademark Usage Policies](https://www.linuxfoundation.org/legal/trademark-usage) set by the Linux Foundation. Specifically, new or incoming projects should avoid using existing trademarks in their proposed project names. In addition, if they are intending to use a popular prefix/suffix of an existing project (like "kube" or "k8s"), then they should consult the leadership group(TAG) of the respective project to seek their approval and document the consensus reached. Existing projects are encouraged to document their naming guidelines to make this process smooth as well to avoid lengthy deliberation processes for new project names.
 
@@ -76,59 +79,69 @@ All exceptions and "declined" or "postponed" outcomes are handled by the TOC. Pr
 While the details of the process are described in detail further for Incubating and Graduating proposals, the high level steps that occur when a project moves levels are as follows:
 
 #### Applications to move levels are done by submitting an incubation or graduation [application issue](https://github.com/cncf/toc/issues/new/choose) on the TOC repo
+
 *Who: Project*
 
-* Projects seeking to move to incubation should submit the Incubation Application issue and detail how they meet the incubation level criteria with links to evidence of implementation, existing incubating projects seeking to move to graduation should submit the Graduation Application issue and detail how they meet the graduation level criteria with links to evidence of implementation.
-* **Project must complete the [Adopter Interview Form with 5-7 adopters willing to be interviewed](https://docs.google.com/forms/d/1n1oLC6IKj5-7S_xeEjIdEjbtS9SWniuAo7IIOyLFuK8/)**.
-* As prior applications are closed, the TOC selects the next project from the "ready for assignment" column of the [TOC project board](https://github.com/orgs/cncf/projects/27/views/9)'s **Applications to Move levels** tab. 
+- Projects seeking to move to incubation should submit the Incubation Application issue and detail how they meet the incubation level criteria with links to evidence of implementation, existing incubating projects seeking to move to graduation should submit the Graduation Application issue and detail how they meet the graduation level criteria with links to evidence of implementation.
+- **Project must complete the [Adopter Interview Form with 5-7 adopters willing to be interviewed](https://docs.google.com/forms/d/1n1oLC6IKj5-7S_xeEjIdEjbtS9SWniuAo7IIOyLFuK8/)**.
+- As prior applications are closed, the TOC selects the next project from the "ready for assignment" column of the [TOC project board](https://github.com/orgs/cncf/projects/27/views/9)'s **Applications to Move levels** tab.
 
 #### The TOC triages project applications for completeness
+
 *Who: TOC*
 
-* Project applications that are found to be incomplete will be commented with the outstanding areas to be completed, closed, and moved to Not Ready- Will return in the [TOC project board](https://github.com/orgs/cncf/projects/27/views/9)'s **Applications to Move levels** tab. 
-* When a project has completed all outstanding areas, the project can re-apply, link to the previous application, and reuse any previous content as appropriate.
+- Project applications that are found to be incomplete will be commented with the outstanding areas to be completed, closed, and moved to Not Ready- Will return in the [TOC project board](https://github.com/orgs/cncf/projects/27/views/9)'s **Applications to Move levels** tab.
+- When a project has completed all outstanding areas, the project can re-apply, link to the previous application, and reuse any previous content as appropriate.
 
 #### A TOC sponsor(s) is assigned and the project is moved to 'TOC DD Eval' on the project board
+
 *Who: TOC*
 
 #### Application Kick off Meeting is scheduled and held
+
 *Who: TOC Sponsor(s) and Project*
 
-* The TOC will schedule time with the project to set expectations and lay out the process. The TOC will use the meeting notes document to capture blockers, recommendations, and other findings as they review the issue and the project's repositories, channels, release process, metrics, governance, and other sources of information that support the project's completion of the criteria. The TOC member will refer back to these notes to support their formulation of the Due Diligence PR. The project is asked to identify 5-7 adopters for interviews. 
-* If the TOC sponsor(s) finds that the project is not yet ready to move levels, they will re-engage with the project to discuss next steps, detail specific blockers that prevent the project from moving, and any actions that need to be completed but are non-blocking. The Application issue is updated with this summary once the project is discussed.
+- The TOC will schedule time with the project to set expectations and lay out the process. The TOC will use the meeting notes document to capture blockers, recommendations, and other findings as they review the issue and the project's repositories, channels, release process, metrics, governance, and other sources of information that support the project's completion of the criteria. The TOC member will refer back to these notes to support their formulation of the Due Diligence PR. The project is asked to identify 5-7 adopters for interviews.
+- If the TOC sponsor(s) finds that the project is not yet ready to move levels, they will re-engage with the project to discuss next steps, detail specific blockers that prevent the project from moving, and any actions that need to be completed but are non-blocking. The Application issue is updated with this summary once the project is discussed.
 
 #### Due Diligence creation or refresh
+
 *Who: TOC Sponsor(s)*
 
-* Once all recommendations, blockers, and other findings are resolved, the TOC member will begin crafting the Due Diligence PR that provides their evaluation of the project's completion of the criteria, any compensating mechanisms in place, or other notables that may influence the TOC's decision to move the project to the next level.
+- Once all recommendations, blockers, and other findings are resolved, the TOC member will begin crafting the Due Diligence PR that provides their evaluation of the project's completion of the criteria, any compensating mechanisms in place, or other notables that may influence the TOC's decision to move the project to the next level.
 
 #### Adopter Interviews are conducted
+
 *Who: TOC Sponsor(s) and Adopters*
 
-* Depending on the freshness of prior interviews the TOC may choose to not conduct further interviews or conduct others to ensure coverage by a variety of adopters to explore all facets of the project. The project is updated on the project board.
-* The TOC will reach out to adopters to inform them of how interviews are conducted and to address any anonymity or other concerns they may have. The TOC will ensure adopters have final approval of any published summaries of the interviews that are included in the due diligence PR. 
-* If multiple TOC members are sponsoring, they will conduct their own individual reviews and then coordinate with each other on overall observations, findings, and next steps.
+- Depending on the freshness of prior interviews the TOC may choose to not conduct further interviews or conduct others to ensure coverage by a variety of adopters to explore all facets of the project. The project is updated on the project board.
+- The TOC will reach out to adopters to inform them of how interviews are conducted and to address any anonymity or other concerns they may have. The TOC will ensure adopters have final approval of any published summaries of the interviews that are included in the due diligence PR.
+- If multiple TOC members are sponsoring, they will conduct their own individual reviews and then coordinate with each other on overall observations, findings, and next steps.
 
 #### TOC internal comment period
+
 *Who: TOC Sponsor(s) and TOC*
 
-* Assuming all outstanding issues are resolved, the TOC opens an internal comment period, about 1 week, for other TOC members to perform an independent review and verify all areas of the project have been evaluated.
-* The TOC sponsor may choose to share a WIP PR with the TOC for review and comment internally. If no further issues are identified, the TOC sponsor(s) will finalize and submit the PR to open the public comment period. A message is announced on the toc mailing list. 
+- Assuming all outstanding issues are resolved, the TOC opens an internal comment period, about 1 week, for other TOC members to perform an independent review and verify all areas of the project have been evaluated.
+- The TOC sponsor may choose to share a WIP PR with the TOC for review and comment internally. If no further issues are identified, the TOC sponsor(s) will finalize and submit the PR to open the public comment period. A message is announced on the toc mailing list.
 
-#### The project is updated on the project board to 'Public Comment' and **the public comment period is open for two weeks**.
+#### The project is updated on the project board to 'Public Comment' and **the public comment period is open for two weeks**
+
 *Who: TOC Sponsor(s)*
 
 #### Voting opens
+
 *Who: Initiate - CNCF Support Staff for the TOC, Voting - TOC and community members*
 
-* Provided no additional items are identified during the public comment period, the TOC opens voting on the PR using gitvote shortly thereafter (usually about 2 days subject to availability). The project is updated on the project board to 'In Voting'.
-* TOC members and the community may cast votes and show support by using emoji voting on the gitvote initiating comment.
+- Provided no additional items are identified during the public comment period, the TOC opens voting on the PR using gitvote shortly thereafter (usually about 2 days subject to availability). The project is updated on the project board to 'In Voting'.
+- TOC members and the community may cast votes and show support by using emoji voting on the gitvote initiating comment.
 
 #### Voting is completed
+
 *Who: CNCF Support Staff for the TOC*
 
-* If the vote passes (2/3 supermajority vote of the TOC), the results are emailed and the project is placed in the 'Done' state on the project board.
-* An announcement is made conveying the project name and its new level status.
+- If the vote passes (2/3 supermajority vote of the TOC), the results are emailed and the project is placed in the 'Done' state on the project board.
+- An announcement is made conveying the project name and its new level status.
 
 #### Criteria
 
@@ -148,31 +161,31 @@ When projects apply for moving levels, they do not move levels on a first-in fir
 
 For sandbox proposals, applications are reviewed in the order the TOC chooses, most commonly returning applications first and then from oldest application to newest every two months. The TOC may not have time to get through every application each meeting as different project applications carry varying considerations and discussion topics to ensure enough information is discovered and explored to make an informed decision. The up to date list can be found [here](https://sandbox.cncf.io/) and will be carried over from meeting to meeting if not every project is reviewed.
 
-For moving levels to incubation or graduation, projects should plan on _at least 3 months_ once a TOC member steps forward to sponsor the project's application (assigns themselves to the issue). 
+For moving levels to incubation or graduation, projects should plan on *at least 3 months* once a TOC member steps forward to sponsor the project's application (assigns themselves to the issue).
 
 #### KubeCon+CloudNativeCon Freeze
 
-Due to the increased community demands around KubeCon + CloudNativeCon (KCCN), the scheduling and production of content, and reduced availability of individuals involved in moving levels, the TOC leverages a freeze for projects in process for moving levels. Even if a project is approved to move levels 3 weeks before this event, projects should _not_ expect to receive benefits beyond those afforded for the level they were previously at. For example, if a sandbox project is approved to move to incubation 3 weeks prior to the event, the project and the event staff will not have enough time to record, edit, and produce an incubating project update to have it included within the keynote stage reel.
+Due to the increased community demands around KubeCon + CloudNativeCon (KCCN), the scheduling and production of content, and reduced availability of individuals involved in moving levels, the TOC leverages a freeze for projects in process for moving levels. Even if a project is approved to move levels 3 weeks before this event, projects should *not* expect to receive benefits beyond those afforded for the level they were previously at. For example, if a sandbox project is approved to move to incubation 3 weeks prior to the event, the project and the event staff will not have enough time to record, edit, and produce an incubating project update to have it included within the keynote stage reel.
 
 For KubeCon + CloudNativeCon's (KCCN) Europe and North America — the following freeze is applied:
 
-__Within 4 weeks of the event__
+**Within 4 weeks of the event**
 
-* TOC members will not take on new sponsorship of applications for moving levels
-* Many activities occur before, during, and after KCCN. Postponing new sponsorship until after KCCN reduces the likelihood that kicking off the process is overcome by such activities.
-* Public Comment will not open
- * We want to ensure community members, adopters, and other stakeholders have time to participate in the public comment of projects, the 2 weeks leading up to the event are typically very busy for many individuals involved in the moving levels process.
-* Voting for projects will not open
- * Voting is an opportunity for community members to show support for projects, it is also the time when the TOC determines if the due diligence and state of the project support its promotion to the next level. As such it is essential for TOC members to have time to not only cast votes, but to consider any comments raised during the public comment period. The TOC is just as busy as any other attendee or speaker for KCCN, it is easy to miss the timeframes for voting and we want to ensure projects receive the attention in a vote they deserve.
-* Open voting is paused
- * While community members may continue to show support for projects, the TOC will officially pause our voting.
-* No project announcements
- * Even if a project has passed a vote, if they have not announced and officially moved levels, they will not be included as an incubating or graduated project.
+- TOC members will not take on new sponsorship of applications for moving levels
+- Many activities occur before, during, and after KCCN. Postponing new sponsorship until after KCCN reduces the likelihood that kicking off the process is overcome by such activities.
+- Public Comment will not open
+  - We want to ensure community members, adopters, and other stakeholders have time to participate in the public comment of projects, the 2 weeks leading up to the event are typically very busy for many individuals involved in the moving levels process.
+- Voting for projects will not open
+  - Voting is an opportunity for community members to show support for projects, it is also the time when the TOC determines if the due diligence and state of the project support its promotion to the next level. As such it is essential for TOC members to have time to not only cast votes, but to consider any comments raised during the public comment period. The TOC is just as busy as any other attendee or speaker for KCCN, it is easy to miss the timeframes for voting and we want to ensure projects receive the attention in a vote they deserve.
+- Open voting is paused
+  - While community members may continue to show support for projects, the TOC will officially pause our voting.
+- No project announcements
+  - Even if a project has passed a vote, if they have not announced and officially moved levels, they will not be included as an incubating or graduated project.
 
-__2nd week following the event__
+**2nd week following the event**
 
-* Voting for projects who completed public comment may open and commence.
-* The week immediately following KCCN is commonly reserved as a recovery and digest period for attendees, event staff, community members, and TOC.
+- Voting for projects who completed public comment may open and commence.
+- The week immediately following KCCN is commonly reserved as a recovery and digest period for attendees, event staff, community members, and TOC.
 
 The above freeze only applies to KCCN NA and EU. Other events will be subject to the TOC members' availability who are expected to regularly check in with the projects. TOC members may choose to continue working with projects on due diligence within the weeks before and after KCCN subject to their and others' availability. Projects should take all of this into account when planning completion of their due diligence. We ask projects to be understanding and considerate of our availability constraints around KCCN and remind everyone that the TOC is not a full-time body, we have primary work commitments in addition to our involvement on the TOC and any projects, TAGs, or community groups we are involved in.
 
@@ -201,12 +214,13 @@ Q: How can I ensure my project is on the right path to the next level?
 A: Projects are strongly encouraged to meet with their TAG to receive feedback on changes, improvements, and recommendations to assist the project to the next maturity level. Some of these may be domain specific recommendations to ensure a more robust project, or they may be more high level items and encompass engineering principles that need to be codified within the project. TOC members sponsoring a project will reach out to the project's TAG to understand more about the project and ensure they incorporate the TAG's recommendations, notes, and observations within the Due Diligence PR.
 
 ---
+
 ### Project resources and guide posts
 
 The TOC, with support from the [Technical Advisory Groups](/tags/README.md), have a wide variety of resources available to assist projects.  Current and aspiring maintainers of cloud native projects can find a lot of information and templates on [contribute.cncf.io/maintainers](https://contribute.cncf.io/maintainers/). The TOC also maintains [project Guide Posts](../docs/project_guideposts.md) - a collection of guiding points that have assisted cloud native projects as they grow and mature in the ecosystem. These are not requirements for moving levels, those may be found in the respective application issue templates ([Incubation](../.github/ISSUE_TEMPLATE/template-incubation-application.md), [Graduation](../.github/ISSUE_TEMPLATE/template-graduation-application.md)). The [Guide Posts](../docs/project_guideposts.md) are resources for projects to leverage that are beneficial in meeting or exceeding the criteria defined.
 
 Additionally, projects interested in preparing to apply to move levels are encouraged to pursue the following activities as the resulting artifacts can and often are leveraged in the TOC's completion of the Due Diligence in lieu of certain sections of the DD.
 
-* Pursue a [Governance Review with TAG Contributor Strategy](https://github.com/cncf/tag-contributor-strategy/issues/new?template=governance-review-request.yaml) - A governance review is an in depth look at how your project is governed, its documentation, its practices, and general project operations. For more information please [checkout the maintainer page on governance](https://contribute.cncf.io/maintainers/governance/overview/) or join the [Governance Review Group](https://github.com/cncf/tag-contributor-strategy/tree/main/governance).
-* Complete a [General Technical Review (GTR)](../tags/resources/toc-supporting-guides/general-technical-questions.md) or [Domain Technical Review (DTR)](../tags/resources/toc-supporting-guides/tag-domain-technical-review-template.md) - these reviews provide a structured framework to explore the technical lifecycle aspects of a project experienced or sought by adopters as well as dive deep on the design and architecture of the project within its technical domain of focus. The results of these can support projects in identifying next steps to increase usability, resilience, scale, performance, and ease-of-use.
-* Collaborate with [TAG Security on a joint-review](https://github.com/cncf/tag-security/blob/main/community/assessments/guide/README.md#joint-assessment) - highly recommended for currently incubating projects, the joint review is a comprehensive assessment of a project's security, it helps project's prepare for a successful security audit.
+- Pursue a [Governance Review with TAG Contributor Strategy](https://github.com/cncf/tag-contributor-strategy/issues/new?template=governance-review-request.yaml) - A governance review is an in depth look at how your project is governed, its documentation, its practices, and general project operations. For more information please [checkout the maintainer page on governance](https://contribute.cncf.io/maintainers/governance/overview/) or join the [Governance Review Group](https://github.com/cncf/tag-contributor-strategy/tree/main/governance).
+- Complete a [General Technical Review (GTR)](../tags/resources/toc-supporting-guides/general-technical-questions.md) or [Domain Technical Review (DTR)](../tags/resources/toc-supporting-guides/tag-domain-technical-review-template.md) - these reviews provide a structured framework to explore the technical lifecycle aspects of a project experienced or sought by adopters as well as dive deep on the design and architecture of the project within its technical domain of focus. The results of these can support projects in identifying next steps to increase usability, resilience, scale, performance, and ease-of-use.
+- Collaborate with [TAG Security on a joint-review](https://github.com/cncf/tag-security/blob/main/community/assessments/guide/README.md#joint-assessment) - highly recommended for currently incubating projects, the joint review is a comprehensive assessment of a project's security, it helps project's prepare for a successful security audit.

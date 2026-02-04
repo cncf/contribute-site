@@ -76,7 +76,7 @@ export default function Footer() {
       </div>
       <hr className={styles.divider} />
       <div className={styles.bottomRow}>
-        © {currentYear} Cloud Native Computing Foundation | Documentation Distributed under CC BY 4.0
+        Copyright Cloud Native Computing Foundation | Documentation Distributed under CC BY 4.0
       </div>
     </footer>
   );
