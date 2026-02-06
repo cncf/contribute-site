@@ -102,6 +102,7 @@ const config = {
         logo: {
           alt: 'Contribute to Cloud Native',
           src: 'img/logo.svg',
+          srcDark: 'img/logo-dark.svg',
         },
         items: [
           // Left
