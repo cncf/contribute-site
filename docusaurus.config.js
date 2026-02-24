@@ -126,7 +126,6 @@ const config = {
           },
           {
             type: 'docSidebar',
-            docsPluginId: 'techdocs',
             sidebarId: 'techdocsSidebar',
             position: 'left',
             label: 'TechDocs',
@@ -215,15 +214,6 @@ const config = {
       require.resolve('docusaurus-lunr-search'),
       {
         highlightResult: true,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'techdocs',
-        path: 'docs/techdocs', // will be populated at build time from cncf/techdocs/docs
-        routeBasePath: 'docs/techdocs', // URLs: /docs/techdocs/...
-        sidebarPath: require.resolve('./sidebars.js'), // can reuse the same sidebar
       },
     ],
   ],
