@@ -1,6 +1,6 @@
 [build]
 publish = "build"
-command = "npm run build:preview"
+command = "bash scripts/sync-techdocs-docs.sh && npm ci && npm run build:preview"
 
 [context.production]
-command = "npm run build:production"
+command = "bash scripts/sync-techdocs-docs.sh && npm ci && npm run build:production"
