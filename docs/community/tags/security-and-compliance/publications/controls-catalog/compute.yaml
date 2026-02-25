@@ -1,0 +1,871 @@
+guidelines:
+- id: CNSC-22
+  title: Compute Bootstrapping Verification
+  objective: Bootstrapping is employed to verify correct physical and logical location of compute
+  recommendations:
+  - Secure Boot with TPM 2.0 or similar control
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7(9)
+      remarks: Software, Firmware, and Information Integrity
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-27
+  title: Trust Implementation
+  objective: The hardware root of trust is based in a Trusted Platform Module (TPM) or virtual TPM (vTPM)
+  recommendations:
+  - Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on the system.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-23
+  title: Boundary Management
+  objective: Disparate data sensitive workloads are not run on the same OS kernel
+  recommendations:
+  - 'There are at least three implementing controls possible: workloads may be separated by running in a separate cluster, on a separate node, or by implementing pods in independent VMs. It is also possible
+    to emulate the kernel via an application kernel (e.g. gvisor)'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-26
+  title: Operating System Configuration
+  objective: Container specific operating systems are in use
+  recommendations:
+  - a read-only OS with other services disabled. This provides isolation and resource confinement that enables developers to run isolated applications on a shared host kernel
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-2
+      remarks: Baseline Configuration
+    - reference-id: CM-7
+      remarks: Least Functionality
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-56
+  title: System Component Isolation
+  objective: Serverless functions are run in tenant-based resource or performance isolation for similar data classifications
+  recommendations:
+  - This may impact the performance due to limitations in the address space available to the isolation environment and should be considered for only the most sensitive workloads.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7(21)
+      remarks: Boundary Protection, Isolation of System Components
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-24
+  title: Runtime Configuration Monitoring
+  objective: Monitor and detect any changes to the initial configurations made in runtime
+  recommendations:
+  - Preventative controls should be the primary control. Detective controls monitoring filesystem changes should be used to verify primary controls are operating properly.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-2(2)
+      remarks: Baseline Configuration, Automation Support for Accuracy and Currency
+    - reference-id: CM-3(7)
+      remarks: Configuration Change Control, Review System Changes
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-25
+  title: API Auditing Implementation
+  objective: API auditing is enabled with a filter for a specific set of API Groups or verbs
+  recommendations:
+  - API audits of the application, kubernetes API server, and kernel should be implemented.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AU-2
+      remarks: Event Logging
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-30
+  title: System Alert Monitoring
+  objective: Systems processing alerts are periodically tuned for false positives
+  recommendations:
+  - to avoid alert flooding, fatigue, and false negatives after security incidents that were not detected by the system
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4(13)
+      remarks: System Monitoring, Analyze Traffic and Event Patterns
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-43
+  title: Audit Event Logging
+  objective: Actionable audit events are generates that correlate/contextualize data from logs into "information" that can drive decision trees/incident response
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AU-3
+      remarks: Content of Audit Records
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-28
+  title: Least Privilege
+  objective: Minimize administrative access to the control plane
+  recommendations:
+  - Enure both users and pods have the minimum necessary access
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-6
+      remarks: Least Privilege
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-44
+  title: Privilege Management
+  objective: Segregation of duties and the principle of least privilege is enforced
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-6
+      remarks: Least Privilege
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-29
+  title: Resource Control Management
+  objective: Object level and resource requests and limits are controlled through cgroups
+  recommendations:
+  - helps prevent exhaustion of node and cluster level resources by one misbehaving workload due to an intentional (e.g., fork bomb attack or cryptocurrency mining) or unintentional (e.g., reading a 
+    large file in memory without input validation, horizontal autoscaling to exhaust compute resources) issue
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7(16)
+      remarks: Software, Firmware, and Information Integrity, Time Limit on Process Execution Without Supervision
+    - reference-id: SI-7(17)
+      remarks: Software, Firmware, and Information Integrity, Runtime Application Self-protection
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-31
+  title: Control Plane Configuration
+  objective: All orchestrator control plane components are configured to communicate via mutual authentication and certificate validation with a periodically rotated certificate
+  recommendations:
+  - In unfederated clusters, the CA should be used exclusively for the current cluster.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-3
+      remarks: Access Enforcement
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-32
+  title: Baseline Configured Functionality
+  objective: Only sanctioned capabilities and system calls (e.g. seccomp filters), are allowed to execute or be invoked in a container by the host operating system
+  recommendations:
+  - Additional tooling should be installed that go beyond k8s capabilities to limit system calls. E.g. Falco.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-2
+      remarks: Baseline Configuration
+    - reference-id: CM-7
+      remarks: Least Functionality
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-51
+  title: Functionality Management
+  objective: Processes must execute only functions explicitly defined in an allow list
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-2
+      remarks: Baseline Configuration
+    - reference-id: CM-7
+      remarks: Least Functionality
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-33
+  title: Critical Change Management
+  objective: Changes to critical mount points and files are prevented, monitored, and alerted
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-5
+      remarks: Access Restrictions for Change
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-34
+  title: Runtime Configuration for Change Management
+  objective: Runtime configuration control prevents changes to binaries, certificates, and remote access configurations
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-5
+      remarks: Access Restrictions for Change
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-52
+  title: Access and Change Restrictions
+  objective: Functions are not be allowed to make changes to critical file system mount points
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-5
+      remarks: Access Restrictions for Change
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-35
+  title: Runtime Boundary Protection Management
+  objective: Runtime configuration prevents ingress and egress network access for containers to only what is required to operate
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-36
+  title: Boundary Protection Management
+  objective: Policies are defined that restrict communications to only occur between sanctioned microservice pairs
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-39
+  title: Data Trust Management
+  objective: Use a service mesh that eliminates implicit trust through data-in-motion encryption (data in transit)
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-48
+  title: System Monitoring
+  objective: Network traffic to malicious domains is detected and denied
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-54
+  title: System Monitoring
+  objective: Egress network connection is monitored to detect and prevent access to C&C (command and control) and other malicious network domains
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-55
+  title: System Monitoring Management
+  objective: Ingress network inspection is employed detect and remove malicious payloads and commands
+  recommendations:
+  - For instance, SQL injection attacks can be detected using inspection.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-37
+  title: Policy Enforcement Management
+  objective: Use a policy agent to control and enforce authorized, signed container images
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-5
+      remarks: Access Restrictions for Change
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-38
+  title: Policy Enforcement Management
+  objective: Use a policy agent to control provenance assurance for operational workloads
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-5
+      remarks: Access Restrictions for Change
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-45
+  title: Information Integrity
+  objective: Non-compliant violations are detected based on a pre-configured set of rules that filter violations of the organization's policies
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-53
+  title: Access Configuration
+  objective: Function access is only permitted to sanctioned services
+  recommendations:
+  - Either through networking restrictions or least privilege in permission models
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-2
+      remarks: Baseline Configuration
+    - reference-id: CM-7
+      remarks: Least Functionality
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-40
+  title: System Monitoring Components
+  objective: Use components that detect, track, aggregate and report system calls and network traffic from a container
+  recommendations:
+  - should be leveraged to look for unexpected or malicious behavior
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-41
+  title: Dynamic Workload Scanning
+  objective: Workloads should be dynamically scanned to detect malicious or insidious behavior for which no known occurrence yet exists
+  recommendations:
+  - Events such as an extended sleep command that executes data exfiltration from etcd after the workload has been running for X amount of days are not expected in the majority of environments and 
+    therefore are not included in security tests. The aspect that workloads can have time or event delayed trojan horses is only detectable by comparing to baseline expected behavior, often discovered
+    during thorough activity and scan monitoring
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-3
+      remarks: Malicious Code Protection
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-42
+  title: Continuous Monitoring and Scanning
+  objective: Environments are continuously scanned to detect new vulnerabilities in workloads
+  recommendations:
+  - Vulnerabilities are constantly being discovered, just because it wasnt vulnerable at deploy, doesn't mean it won't be vulnerable in two weeks
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: RA-5
+      remarks: Vulnerability Monitoring and Scanning
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-46
+  title: Key Management Storage
+  objective: Native secret stores encrypt with keys from an external Key Management Store (KMS)
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-12(3)
+      remarks: Systems and Communication Protection
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-47
+  title: Secret Storage Configuration
+  objective: Native secret stores are not configured for base64 encoding or stored in clear-text in the key-value store by default
+  recommendations:
+  - Encoding is not encryption
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-12(3)
+      remarks: Systems and Communication Protection
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-49
+  title: Sensitive Data Encryption
+  objective: Use encrypted containers for sensitive sources, methods, and data
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-28
+      remarks: Protection of Information at Rest
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-50
+  title: SBOM Management
+  objective: Use SBOMs to identify current deployments of vulnerable libraries, dependencies, and packages
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-8
+      remarks: System Component Inventory
+  family: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-216
+  title: Compute Bootstrapping Verification
+  objective: Bootstrapping is employed to verify correct physical and logical location of compute
+  recommendations:
+  - Secure Boot with TPM 2.0 or similar control
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7(9)
+      remarks: Software, Firmware, and Information Integrity
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-217
+  title: Boundary Management
+  objective: Disparate data sensitive workloads are not run on the same host OS kernel
+  recommendations:
+  - 'There are at least three implementing controls possible: workloads may be separated by running in a separate cluster, on a separate node, or by implementing pods in independent VMs. It is also possible to emulate the kernel via an application kernel (e.g. gvisor)'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-218
+  title: Runtime Configuration Monitoring
+  objective: Monitor and detect any changes to the initial configurations made in runtime
+  recommendations:
+  - Preventative controls should be the primary control. Detective controls monitoring filesystem changes should be used to verify primary controls are operating properly.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-2(2)
+      remarks: Baseline Configuration, Automation Support for Accuracy and Currency
+    - reference-id: CM-3(7)
+      remarks: Configuration Change Control, Review System Changes
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-219
+  title: API Auditing Implementation
+  objective: API auditing is enabled with a filter for a specific set of API Groups or verbs
+  recommendations:
+  - 'API audits of the application, kubernetes API server, and kernel should be implemented.'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AU-2
+      remarks: Event Logging
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-220
+  title: Operating System Configuration
+  objective: Container specific operating systems are in use
+  recommendations:
+  - a read-only OS with other services disabled. This provides isolation and resource confinement that enables developers to run isolated applications on a shared host kernel
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-2
+      remarks: Baseline Configuration
+    - reference-id: CM-7
+      remarks: Least Functionality
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-221
+  title: Trust Implementation
+  objective: The hardware root of trust is based in a Trusted Platform Module (TPM) or virtual TPM (vTPM)
+  recommendations:
+  - 'Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on the system.'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-222
+  title: Least Privilege
+  objective: Minimize administrative access to the control plane
+  recommendations:
+  - Enure both users and pods have the minimum necessary access
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-6
+      remarks: Least Privilege
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-223
+  title: Resource Control Management
+  objective: Object level and resource requests and limits are controlled through cgroups
+  recommendations:
+  - 'helps prevent exhaustion of node and cluster level resources by one misbehaving workload due to an intentional (e.g., fork bomb attack or cryptocurrency mining) or unintentional (e.g., reading a large file in memory without input validation, horizontal autoscaling to exhaust compute resources) issue'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7(16)
+      remarks: Software, Firmware, and Information Integrity, Time Limit on Process Execution Without Supervision
+    - reference-id: SI-7(17)
+      remarks: Software, Firmware, and Information Integrity, Runtime Application Self-protection
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-224
+  title: System Alert Monitoring
+  objective: Systems processing alerts are periodically tuned for false positives
+  recommendations:
+  - 'to avoid alert flooding, fatigue, and false negatives after security incidents that were not detected by the system'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4(13)
+      remarks: System Monitoring, Analyze Traffic and Event Patterns
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-225
+  title: Control Plane Configuration
+  objective: All orchestrator control plane components are configured to communicate via mutual authentication and certificate validation with a periodically rotated certificate
+  recommendations:
+  - 'In unfederated clusters, the CA should be used exclusively for the current cluster.'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-3
+      remarks: Access Enforcement
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-226
+  title: Baseline Configured Functionality
+  objective: Only sanctioned capabilities and system calls (e.g. seccomp filters), are allowed to execute or be invoked in a container by the host operating system
+  recommendations:
+  - Additional tooling should be installed that go beyond k8s capabilities to limit system calls. E.g. Falco.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-2
+      remarks: Baseline Configuration
+    - reference-id: CM-7
+      remarks: Least Functionality
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-227
+  title: Critical Change Management
+  objective: Changes to critical mount points and files are prevented, monitored, and alerted
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-5
+      remarks: Access Restrictions for Change
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-228
+  title: Runtime Configuration for Change Management
+  objective: Runtime configuration control prevents changes to binaries, certificates, and remote access configurations
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-5
+      remarks: Access Restrictions for Change
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-229
+  title: Runtime Boundary Protection Management
+  objective: Runtime configuration prevents ingress and egress network access for containers to only what is required to operate
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-230
+  title: Boundary Protection Management
+  objective: Policies are defined that restrict communications to only occur between sanctioned microservice pairs
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-231
+  title: Policy Enforcement Management
+  objective: Use a policy agent to control and enforce authorized, signed container images
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-5
+      remarks: Access Restrictions for Change
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-232
+  title: Policy Enforcement Management
+  objective: Use a policy agent to control provenance assurance for operational workloads
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-5
+      remarks: Access Restrictions for Change
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-233
+  title: Data Trust Management
+  objective: Use a service mesh that eliminates implicit trust through data-in-motion protection (i.e. confidentiality, integrity, authentication, authorization)
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-234
+  title: System Monitoring Components
+  objective: Use components that detect, track, aggregate and report system calls and network traffic from a container
+  recommendations:
+  - should be leveraged to look for unexpected or malicious behavior
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-235
+  title: Dynamic Workload Scanning
+  objective: Workloads should be dynamically scanned to detect malicious or insidious behavior for which no known occurrence yet exists
+  recommendations:
+  - 'Events such as an extended sleep command that executes data exfiltration from etcd after the workload has been running for X amount of days are not expected in the majority of environments and therefore are not included in security tests. The aspect that workloads can have time or event delayed trojan horses is only detectable by comparing to baseline expected behavior, often discovered during thorough activity and scan monitoring'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-3
+      remarks: Malicious Code Protection
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-236
+  title: Continuous Monitoring and Scanning
+  objective: Environments are continuously scanned to detect new vulnerabilities in workloads
+  recommendations:
+  - 'Vulnerabilities are constantly being discovered, just because it wasnt vulnerable at deploy, doesn''t mean it won''t be vulnerable in two weeks'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: RA-5
+      remarks: Vulnerability Monitoring and Scanning
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-237
+  title: Audit Event Logging
+  objective: Actionable audit events are generated that correlate/contextualize data from logs into "information" that can drive decision trees/incident response
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AU-3
+      remarks: Content of Audit Records
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-238
+  title: Privilege Management
+  objective: Segregation of duties and the principle of least privilege is enforced
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-6
+      remarks: Least Privilege
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-239
+  title: Information Integrity
+  objective: Non-compliant violations are detected based on a pre-configured set of rules defined by the organization's policies
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-240
+  title: Key Management Storage
+  objective: Native secret stores encrypt with keys from an external Key Management Store (KMS)
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-12(3)
+      remarks: Systems and Communication Protection
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-241
+  title: Secret Storage Configuration
+  objective: Native secret stores are not configured for base64 encoding or stored in clear-text in the key-value store by default
+  recommendations:
+  - Encoding is not encryption
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-12(3)
+      remarks: Systems and Communication Protection
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-242
+  title: System Monitoring
+  objective: Network traffic to malicious domains is detected and denied
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-243
+  title: Sensitive Data Encryption
+  objective: Use encrypted containers for sensitive sources, methods, and data
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-28
+      remarks: Protection of Information at Rest
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-244
+  title: SBOM Management
+  objective: Use SBOMs to identify current deployments of vulnerable libraries, dependencies, and packages
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-8
+      remarks: System Component Inventory
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-245
+  title: Functionality Management
+  objective: Processes must execute only functions explicitly defined in an allow list
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-2
+      remarks: Baseline Configuration
+    - reference-id: CM-7
+      remarks: Least Functionality
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-246
+  title: Access and Change Restrictions
+  objective: Functions are not be allowed to make changes to critical file system mount points
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-5
+      remarks: Access Restrictions for Change
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-247
+  title: Access Configuration
+  objective: Function access is only permitted to sanctioned services
+  recommendations:
+  - Either through networking restrictions or least privilege in permission models
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-2
+      remarks: Baseline Configuration
+    - reference-id: CM-7
+      remarks: Least Functionality
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-248
+  title: System Monitoring
+  objective: Egress network connection is monitored to detect and prevent access to C&C (command and control) and other malicious network domains
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-249
+  title: System Monitoring Management
+  objective: Ingress network inspection is employed detect and remove malicious payloads and commands
+  recommendations:
+  - 'For instance, SQL injection attacks can be detected using inspection.'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Compute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-250
+  title: System Component Isolation
+  objective: Serverless functions are run in tenant-based resource or performance isolation for similar data classifications
+  recommendations:
+  - This may impact the performance due to limitations in the address space available to the isolation environment and should be considered for only the most sensitive workloads.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7(21)
+      remarks: Boundary Protection, Isolation of System Components
+  family: Compute
+  applicability:
+  - CNSWP-v2.0

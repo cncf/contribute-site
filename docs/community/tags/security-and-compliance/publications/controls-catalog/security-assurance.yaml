@@ -1,0 +1,416 @@
+guidelines:
+- id: CNSC-115
+  title: East-West Network Policy
+  objective: Network policies enforce east-west network communication within the container deployment is limited to only that which is authorized for access
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-6(3)
+      remarks: Least Privilege, Network Access to Privileged Commands
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-126
+  title: Network Policy Management
+  objective: Orchestrator network policies are used in conjunction with a service mesh
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-116
+  title: Incident Response
+  objective: Incident response considers cloud native workloads
+  recommendations:
+  - workloads which may not always conform with some underlying assumptions about node isolation (new pod instances could run on a different server), networking (e.g. IP addresses are assigned 
+    dynamically) and immutability (e.g. runtime changes to container are not persisted across restarts)
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IR-4
+      remarks: Incident Handling, Automated Incident Handling Processes
+    - reference-id: IR-4(5)
+      remarks: Incident Handling, Automated Disabling of System
+    - reference-id: CA-7
+      remarks: Continuous Monitoring
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-117
+  title: Incident Monitoring
+  objective: Incident response accounts for appropriate evidence handling and collection of cloud native workloads
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IR-5(1)
+      remarks: Incident Monitoring, Automated Tracking, Data Collection, and Analysis
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-118
+  title: Security Assurance Management
+  objective: Rootless builds are employed
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-119
+  title: Workload and Deployment Isolation
+  objective: Cgroups and system groups are used to isolate workloads and deployments
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-120
+  title: Mandatory Access Controls
+  objective: MAC implementations are employed
+  recommendations:
+  - SELinux, AppArmor
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-3(3)
+      remarks: Access Enforcement, Mandatory Access Control
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-121
+  title: Threat Modeling and Vulnerability Analysis
+  objective: Threat model code and infrastructure
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11(2)
+      remarks: Developer Testing and Evaluation, Threat Modeling and Vulnerability Analyses
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-122
+  title: Authentication Management
+  objective: Entities are able to independently authenticate other identities
+  recommendations:
+  - Public Key Infrastructure
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IA-9
+      remarks: Service Identification and Authentication
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-123
+  title: Identity Management
+  objective: Each entity can create proof of who the identity is
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IA-9
+      remarks: Service Identification and Authentication
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-124
+  title: Trusted Components
+  objective: Orchestrator is running on a trusted OS, BIOS, etc
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-14
+      remarks: Signed Components
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-125
+  title: Security Verification
+  objective: Orchestrator verifies the claims of a container
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-6
+      remarks: Security and Privacy Function Verification
+  family: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-196
+  title: Supply Chain Security Best Practices
+  objective: Supply chain security best practices are adhered to
+  recommendations:
+  - The SSCP controls in this document provide the necessary controls for best practices
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-197
+  title: Repository and Branch Access Control
+  objective: Access to repository and branches is restricted
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-198
+  title: Git Secret Prevention
+  objective: Unencrypted credentials or secrets are never stored in the Git repository and sensitive data is blocked from being pushed
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-199
+  title: Commit Identity Enforcement
+  objective: Strong identity is enforced with GPG Signed Commits for accountability and traceability
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-200
+  title: Linear History Enforcement
+  objective: Linear history is required and commit history is maintained by disallowing force pushes
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-201
+  title: Branching Policy Enforcement
+  objective: Branching policy is enforced with main branch protection and code review required before merging
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-202
+  title: Git Tool Security Monitoring
+  objective: Vulnerabilities are monitored and Git and GitOps tools are kept up to date
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-203
+  title: Repository Credential Management
+  objective: SSH keys and Personal Access Tokens are rotated and unauthorized access to Git repositories is blocked
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-204
+  title: Technical Account Management
+  objective: Dedicated non-user technical accounts are used for access with frequently rotated short-lived credentials
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-205
+  title: Privilege Escalation Prevention
+  objective: Users who can elevate permissions to remove security features are limited to prevent deletion of audit trails and silencing of alerts
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-310
+  title: East-West Network Policy
+  objective: Network policies enforce east-west network communication within the container deployment is limited to only that which is authorized for access
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-6(3)
+      remarks: Least Privilege, Network Access to Privileged Commands
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-311
+  title: Incident Response
+  objective: Incident reponse considers cloud native workloads
+  recommendations:
+  - 'workloads which may not always conform with some underlying assumptions about node isolation (new pod instances could run on a different server), networking (e.g. IP addresses are assigned dynamically) and immutability (e.g. runtime changes to container are not persisted across restarts)'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IR-4
+      remarks: INCIDENT HANDLING
+    - reference-id: IR-4(5)
+      remarks: INCIDENT HANDLING
+    - reference-id: CA-7
+      remarks: CONTINUOUS MONITORING
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-312
+  title: Incident Monitoring
+  objective: Incident response accounts for appropriate evidence handling and collection of coud native workloads
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IR-5(1)
+      remarks: INCIDENT MONITORING
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-313
+  title: Security Assurance Management
+  objective: Rootless builds are employed
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-314
+  title: Workload and Deployment Isolation
+  objective: cgroups and system groups are used to isolate workloads and deployments
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-315
+  title: Mandatory Access Controls
+  objective: MAC implementations are employed
+  recommendations:
+  - 'SELinux, AppArmor'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-3(3)
+      remarks: Access Enforcement, Mandatory Access Control
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-316
+  title: Threat Modeling and Vulnerability Analysis
+  objective: Threat model code and infrastructure
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11(2)
+      remarks: Developer Testing and Evaluation, Threat Modeling and Vulnerability Analyses
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-317
+  title: Authentication Management
+  objective: Entities are able to independently authenticate other identities
+  recommendations:
+  - Public Key Infrastructure
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IA-9
+      remarks: Service Identification and Authentication
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-318
+  title: Identity Management
+  objective: Each entity can create proof of who the identity is
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IA-9
+      remarks: Service Identification and Authentication
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-319
+  title: Trusted Components
+  objective: Orchestrator is running on an a trusted OS, BIOS, etc
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-14
+      remarks: SIGNED COMPONENTS
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-320
+  title: Security Verification
+  objective: Orchestrator verifies the claims of a container
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-6
+      remarks: Security and Privacy Function Verification
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-321
+  title: Network Policy Management
+  objective: Orchestrator network policies are used in conjunction with a service mesh
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-322
+  title: Supply Chain Security Best Practices
+  objective: Adhere to supply chain security best practices
+  recommendations:
+  - The SSCP controls in this document provide the necessary controls for best practices
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-323
+  title: Repository and Branch Access Control
+  objective: Restrict access to repository and branches
+  recommendations:
+  - 'The ''Security the Source Code'' SSCP controls provide the necessary GitOps best practices'
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-324
+  title: Git Secret Prevention
+  objective: Never store unencrypted credentials or secrets in the Git repository and block sensitive data being pushed to Git
+  recommendations:
+  - 'The ''Security the Source Code'' SSCP controls provide the necessary GitOps best practices'
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-325
+  title: Commit Identity Enforcement
+  objective: Enforce strong identity with GPG Signed Commits, to give accountability and traceability
+  recommendations:
+  - 'The ''Security the Source Code'' SSCP controls provide the necessary GitOps best practices'
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-326
+  title: Linear History Enforcement
+  objective: Require linear history and maintain a commit history by disallowing force pushes
+  recommendations:
+  - 'The ''Security the Source Code'' SSCP controls provide the necessary GitOps best practices'
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-327
+  title: Branching Policy Enforcement
+  objective: Enforce branching policy. Especially protect the main branch and require code review before merging
+  recommendations:
+  - 'The ''Security the Source Code'' SSCP controls provide the necessary GitOps best practices'
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-328
+  title: Git Tool Security Monitoring
+  objective: Monitor for vulnerabilities, and keep Git and GitOps tools up to date
+  recommendations:
+  - 'The ''Security the Source Code'' SSCP controls provide the necessary GitOps best practices'
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-329
+  title: Repository Credential Management
+  objective: Rotate SSH keys and Personal Access Tokens, block unauthorized access to Git repositories
+  recommendations:
+  - 'The ''Security the Source Code'' SSCP controls provide the necessary GitOps best practices'
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-330
+  title: Technical Account Management
+  objective: Utilize a dedicated non-user technical account for access where credentials are frequently rotated and short-lived
+  recommendations:
+  - 'The ''Security the Source Code'' SSCP controls provide the necessary GitOps best practices'
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-331
+  title: Privilege Escalation Prevention
+  objective: Limit users who can elevate permissions to remove security features to cover their tracks via deletion of audit trails and silencing of alerts
+  recommendations:
+  - 'The ''Security the Source Code'' SSCP controls provide the necessary GitOps best practices'
+  family: Security Assurance
+  applicability:
+  - CNSWP-v2.0

@@ -1,0 +1,163 @@
+guidelines:
+- id: CNSC-57
+  title: Trust Confirmation
+  objective: Trust confirmation verifies the image has a valid signature from an authorized source
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SR-4(3)
+      remarks: Provenance, Validate as Genuine and Not Altered
+    - reference-id: SR-4(4)
+      remarks: Provenance, Supply Chain Integrity - Pedigree
+  family: Deploy
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-59
+  title: Image Integrity Verification
+  objective: Image integrity and signature are verified prior to deployment
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SR-4(3)
+      remarks: Provenance, Validate as Genuine and Not Altered
+    - reference-id: SR-4(4)
+      remarks: Provenance, Supply Chain Integrity - Pedigree
+  family: Deploy
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-58
+  title: Runtime Policy Enforcement
+  objective: Image runtime policies are enforced prior to deployment
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7(17)
+      remarks: Software, Firmware, and Information Integrity, Runtime Application Self-Protection
+  family: Deploy
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-60
+  title: Application Logging
+  objective: Applications provide logs regarding authentication, authorization, actions, and failures
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-3
+      remarks: Configuration Change Control
+  family: Deploy
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-61
+  title: Forensics Integration
+  objective: Forensics capabilities are integrated into an incident response plan and procedures
+  family: Deploy
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-62
+  title: Behavioral Analysis
+  objective: AI, ML, or statistical modeling are used for behavioural and heuristic environment analysis
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-3
+      remarks: System and Information Integrity
+  family: Deploy
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-170
+  title: Artifact Verification
+  objective: Clients can perform verification of artefacts and associated metadata
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Deploy
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-171
+  title: Freshness Verification
+  objective: Clients can verify the freshness of files
+  recommendations:
+  - Ensure clients can access latest versions and can veriify if the provided files are out of date
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Deploy
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-172
+  title: Update Framework
+  objective: A framework is used for managing software updates
+  recommendations:
+  - Consider using The Update Framework (TUF) to enforce the updating of software. TUF is a specification for delivering software updates in a secure, reliable and trusted way
+  family: Deploy
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-251
+  title: Trust Confirmation
+  objective: Trust confirmation verifies the image has a valid signature from an authorized source
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SR-4(3)
+      remarks: Provenance, Validate as Genuine and Not Altered
+    - reference-id: SR-4(4)
+      remarks: Provenance, Supply Chain Integrity - Pedigree
+  family: Deploy
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-252
+  title: Runtime Policy Enforcement
+  objective: Image runtime policies are enforced prior to deployment
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7(17)
+      remarks: Software, Firmware, and Information Integrity, Runtime Application Self-Protection
+  family: Deploy
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-253
+  title: Image Integrity Verification
+  objective: Image integrity and signature are verified prior to deployment
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SR-4(3)
+      remarks: Provenance, Validate as Genuine and Not Altered
+    - reference-id: SR-4(4)
+      remarks: Provenance, Supply Chain Integrity - Pedigree
+  family: Deploy
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-254
+  title: Application Logging
+  objective: Applications provide logs regarding authentication, authorization, actions, and failures
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-3
+      remarks: Configuration Change Control
+  family: Deploy
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-255
+  title: Forensics Integration
+  objective: Forensics capabilities are integrated into an incident response plan and procedures
+  family: Deploy
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-256
+  title: Behavioral Analysis
+  objective: AI, ML, or statistical modeling are used for behavioural and heuristic environment analysis to detect unwanted activities
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-3
+      remarks: SYSTEM AND INFORMATION INTEGRITY
+  family: Deploy
+  applicability:
+  - CNSWP-v2.0

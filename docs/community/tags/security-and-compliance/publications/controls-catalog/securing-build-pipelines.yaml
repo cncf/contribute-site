@@ -1,0 +1,232 @@
+guidelines:
+- id: CNSC-149
+  title: Cryptographic Policy Guarantee
+  objective: Policy adherence is cryptographically guaranteed
+  recommendations:
+  - The presence and output of each build step should be attested during the build. The CNCF maintains the in-toto project that can be used to secure a chain of pipeline stages end-to-end with 
+    cryptographic guarantees. Build metadata should be evaluated against the policy template by using tools such as Open Policy Agent.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-3(6)
+      remarks: Configuration Change Control
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-168
+  title: Root of Trust Establishment
+  objective: Established practices are followed for establishing a root of trust from an offline source
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-17
+      remarks: Public Key Infrastructure Certificates
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-169
+  title: Short-Lived Certificates
+  objective: Short-lived workload certificates are used
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-23(5)
+      remarks: Session Authenticity
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-150
+  title: Environment and Dependency Validation
+  objective: Environments and dependencies are validated before usage
+  recommendations:
+  - The build environment’s sources and dependencies must come from a secure, trusted source of truth. Checksums and any signatures should be validated both in the downloading or ingestion process, 
+    and again by the build worker. This should include validating package manager signatures, checking out specific Git commit hashes, and verifying SHA sums of input sources and binaries. After 
+    completing this validation, the downloading process should sign all binaries or libraries it is adding to the secure source
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-3(2)
+      remarks: Configuration Change Control
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-151
+  title: Build Worker Runtime Security
+  objective: Runtime security of build workers is validated
+  recommendations:
+  - Out-of-band verification of runtime environment security, as defined by execution of policies using tools such as seccomp, AppArmor, and SELinux, provides defense in depth against attacks on build
+    infrastructure. High privilege kernel capabilities such as debugger, device, and network attachments should be restricted and monitored.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-3(4)
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-152
+  title: Reproducible Builds
+  objective: Build artefacts are validated through verifiably reproducible builds
+  recommendations:
+  - A verifiably reproducible build is a build process where, given a source code commit hash and a set of build instructions, an end user should be able to reproduce the built artefact bit for bit.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-3(4)
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-153
+  title: External Requirement Verification
+  objective: External requirements from the build process are locked and verified
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-3(2)
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-154
+  title: Build Determinism
+  objective: Sources of non-determinism are found and eliminated
+  recommendations:
+  - Reproducible-builds.org documents and offers solutions for many of these things. Diffoscope41 can be used to dig in and find the cause of differences when tracking down sources of non-determinism.
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-155
+  title: Build Environment Recording
+  objective: The build environment is recorded
+  recommendations:
+  - Ensure best practices outlined in cloud native security paper are followed to deploy a secure orchestration layer
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-3(1)
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-156
+  title: Build Environment Automation
+  objective: Creation of the build environment is automated
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-3(3)
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-157
+  title: Build Distribution
+  objective: Builds are distributed across different infrastructure
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-3(3)
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-158
+  title: Pipeline as Code
+  objective: Build and related CI/CD steps are automated through a pipeline delivered as code
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-3
+      remarks: System Development Life Cycle
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-159
+  title: Pipeline Standardization
+  objective: Pipelines are standardized across projects
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-160
+  title: Software Factory Platform
+  objective: A secured orchestration platform is provisioned to host the software factory
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-161
+  title: Single-Use Build Workers
+  objective: Build workers are single use
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-2
+      remarks: Account Management
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-162
+  title: Software Factory Network Isolation
+  objective: Software factory has minimal network connectivity
+  recommendations:
+  - The software factory should have no network connectivity other than to connect to the trusted sources of hardened source code, the dependency repository and code signing infrastructure.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7(3)
+      remarks: Boundary Protection
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-163
+  title: Build Worker Duty Segregation
+  objective: Duties of each build worker are segregated
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-5
+      remarks: Separation of Duties
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-164
+  title: Build Worker Environment Control
+  objective: Build worker environment and commands are passed in
+  recommendations:
+  - Inorder to limit hostile tooling and persistent impants from attackers, a Build Worker should start with a clean and isolated environmment. It should not be able to pull its own environment. 
+    Ensure environment variables and commands are explicitly passed to avoid any complicated and opaque build process
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-2(2)
+      remarks: Baseline Configuration
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-165
+  title: Secured Output Storage
+  objective: Output is written to a separate secured storage repo
+  recommendations:
+  - The output artefact should be written to a separate shared storage from the inputs. A process separate from the Build Worker should then upload that artefact to an appropriate repository.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AU-9(2)
+      remarks: Protection of Audit Information
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-166
+  title: Pipeline Modification Control
+  objective: Pipeline modification is only allowed through pipeline as code
+  recommendations:
+  - The pipeline configuration (pipeline as code) should be immutable and any modification shouldn't be possible. This prevents attackers from interacting and modifying the configuration. This model 
+    then requires appropriate authentication and authorization to be in place for the software and configuration of the pipeline
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-167
+  title: User Role Definition
+  objective: User roles are defined
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-2
+      remarks: Account Management
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0

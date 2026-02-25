@@ -1,0 +1,327 @@
+guidelines:
+- id: CNSC-127
+  title: Control Plane Authentication
+  objective: Storage control plane management interface requires mutual authentication and TLS for connections
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-8
+      remarks: Transmission Confidentiality and Integrity
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-128
+  title: Data Availability Mechanism
+  objective: Data availability is achieved through parity or mirroring, erasure coding or replicas
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-13
+      remarks: Predictable Failure Prevention
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-129
+  title: Integrity Validation
+  objective: Hashing and checksums are added to blocks, objects or files
+  recommendations:
+  - primarily designed to detect and recover from corrupted data, but can also add a layer of protection against the tampering of data.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-7
+      remarks: Least Functionality
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-130
+  title: Data Source Storage Management
+  objective: Data backup storage locations employ like access controls and security policies to that of the data storage source
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-9
+      remarks: External System Services
+    - reference-id: SC-30
+      remarks: Concealment and Misdirection
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-131
+  title: System Backup
+  objective: Secure erasure adhering to OPAL standards is employed for returned or non-functional devices
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CP-9
+      remarks: System Backup
+    - reference-id: MP-6
+      remarks: Media Sanitization
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-132
+  title: Encryption of Data at Rest
+  objective: Encryption at rest considers data path, size, and frequency of access when determining additional security protections and cryptographic algorithms to employ
+  recommendations:
+  - The encryption may be implemented in the storage client or storage server and granularity of the encryption will vary by system (e.g. per volume, per group or global keys)
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-28
+      remarks: Protection of Information at Rest
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-133
+  title: Encryption Requirements
+  objective: Caching is considered for determining encryption requirements in architectures
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-134
+  title: Boundary Protection
+  objective: Namespaces have defined trust boundaries to cordon access to volumes
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-135
+  title: Security Policy Management
+  objective: Security policies are used to prevent containers from accessing volume mounts on worker nodes
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+    - reference-id: SA-8
+      remarks: Security and Privacy Engineering Principles
+    - reference-id: CM-6
+      remarks: Configuration Settings
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-136
+  title: Security Policy Enforcement
+  objective: Security policies are used enforce authorized worker node access to volumes
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+    - reference-id: SA-8
+      remarks: Security and Privacy Engineering Principles
+    - reference-id: CM-6
+      remarks: Configuration Settings
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-137
+  title: Information Flow Management
+  objective: Volume UID and GID are inaccessible to containers
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-4
+      remarks: Information Flow Enforcement
+    - reference-id: AC-16
+      remarks: Security and Privacy Attributes
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-138
+  title: Artifact Registry Management
+  objective: Artifact registry supports OCI artifacts
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-139
+  title: Signed Artifact Support
+  objective: Artifact registry supports signed artifacts
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-14
+      remarks: Signed Components
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-140
+  title: Artifact Registry Policy Verification
+  objective: Artifact registry verifies artifacts against organizational policies
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AU-10
+      remarks: Non-repudiation
+    - reference-id: CM-6
+      remarks: Configuration Settings
+  family: Storage
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-332
+  title: Control Plane Authentication
+  objective: Storage control plane management interface requires mutual authentication and TLS for connections
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-8
+      remarks: Transmission Confidentiality and Integrity
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-333
+  title: Data Availability Mechanism
+  objective: Data availability is achieved through parity or mirroring, erasure coding or replicas
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-13
+      remarks: Predictable Failure Prevention
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-334
+  title: Integrity Validation
+  objective: Hashing and checksums are added to blocks, objects or files
+  recommendations:
+  - 'primarily designed to detect and recover from corrupted data, but can also add a layer of protection against the tampering of data.'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-7
+      remarks: Least Functionality
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-335
+  title: Data Source Storage Management
+  objective: Data backup storage and data source storage should have same security controls
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-9
+      remarks: EXTERNAL SYSTEM SERVICES
+    - reference-id: SC-30
+      remarks: CONCEALMENT AND MISDIRECTION
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-336
+  title: System Backup
+  objective: Secure erasure adhering to OPAL standards is employed for returned or non-functional devices
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CP-9
+      remarks: System Backup
+    - reference-id: MP-6
+      remarks: Media Sanitization
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-337
+  title: Encryption of Data at Rest
+  objective: Encryption at rest considers data path, size, and frequency of access when determing additional security protections and cryptographic algorithms to employ
+  recommendations:
+  - 'The encryption may be implemented in the storage client or storage server and granularity of the encryption will vary by system (e.g. per volume, per group or global keys)'
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-28
+      remarks: PROTECTION OF INFORMATION AT REST
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-338
+  title: Encryption Requirements
+  objective: Caching is considered for determining encryption requirements in archictures
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-339
+  title: Boundary Protection
+  objective: Namespaces have defined trust boundaries to cordon access to volumes
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-340
+  title: Security Policy Management
+  objective: Security policies are used to prevent containers from accessing volume mounts on worker nodes
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+    - reference-id: SA-8
+      remarks: Security and Privacy Engineering Principles
+    - reference-id: CM-6
+      remarks: Configuration Settings
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-341
+  title: Security Policy Enforcement
+  objective: Security policies are used enforce authorized worker node access to volumes
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7
+      remarks: Boundary Protection
+    - reference-id: SA-8
+      remarks: Security and Privacy Engineering Principles
+    - reference-id: CM-6
+      remarks: Configuration Settings
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-342
+  title: Information Flow Management
+  objective: Volume UID and GID are inaccessible to containers
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-4
+      remarks: Information Flow Enforcement
+    - reference-id: AC-16
+      remarks: Security and Privacy Attributes
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-343
+  title: Artifact Registry Management
+  objective: Artifact registry supports OCI artifacts
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-344
+  title: Signed Artifact Support
+  objective: Artifact registry supports signed artifacts
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-14
+      remarks: Signed Components
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-345
+  title: Artifact Registry Policy Verification
+  objective: Artifact registry verifies artifacts against organizational policies
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AU-10
+      remarks: Non-repudiation
+    - reference-id: CM-6
+      remarks: Configuration Settings
+  family: Storage
+  applicability:
+  - CNSWP-v2.0
