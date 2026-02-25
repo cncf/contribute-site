@@ -1,0 +1,734 @@
+guidelines:
+- id: CNSC-100
+  title: Registry Authentication
+  objective: Registries require mutually authenticated TLS for all registry connections
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IA-3(1)
+      remarks: Cryptographic Bidirectional Authentication
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-112
+  title: Public Registry Access Control
+  objective: Pulls from public registries are controlled and only from authorized engineers or internal registries
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-6(3)
+      remarks: Least Privilege
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-79
+  title: Trust Verification
+  objective: Trust is verified
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-80
+  title: Staging Registry Management
+  objective: Artifacts ready for deployment are managed in a staging or pre-prod registry
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-84
+  title: Private Development Registry
+  objective: Artifacts undergoing active development are held in a private registry
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-101
+  title: Image Signing
+  objective: Image and metadata are signed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-102
+  title: Configuration Signing
+  objective: Configuration is signed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-103
+  title: Package Signing
+  objective: Package is signed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-104
+  title: Image Integrity Validation
+  objective: Integrity of images is validated
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: System and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-106
+  title: Key Revocation
+  objective: Image signing key revocation is enabled in the event of compromise
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: System and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-89
+  title: Pipeline Metadata Signing
+  objective: Pipeline metadata is signed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-105
+  title: Image Vulnerability Scanning
+  objective: Images are scanned for vulnerabilities and malware
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: RA-5
+      remarks: Vulnerability Monitoring and Scanning
+    - reference-id: SA-3
+      remarks: System Development Life Cycle
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-109
+  title: Scanning Remediation
+  objective: Container image scanning findings are acted upon
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-2(3)
+      remarks: System and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-114
+  title: Risk-Based Remediation Prioritization
+  objective: At-risk applications are prioritized for remediation by exploit maturity and vulnerable path presence in addition to the CVSS score
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-2(3)
+      remarks: System and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-91
+  title: CI Pipeline Scanning
+  objective: Images are scanned within the CI pipeline
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: RA-5
+      remarks: Vulnerability Monitoring and Scanning
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-107
+  title: Security Update Prioritization
+  objective: Security updates are prioritized
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-2(3)
+      remarks: System and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-108
+  title: Credential Protection
+  objective: HSMs or credential managers are used for protecting credentials
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-12(3)
+      remarks: Systems and Communication Protection
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-113
+  title: Image Encryption Management
+  objective: Image encryption is coupled with key management attestation and/or authorization and credential distribution
+  recommendations:
+  - This restricts the image to only be deployed to authorized platforms. Container image authorization is useful for compliance use cases such as geo-fencing or export control and digital rights 
+    media management
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-12(2)
+      remarks: Cryptographic Key Establishment and Management | Symmetric and Asymmetric Keys
+    - reference-id: SC-12(3)
+      remarks: Cryptographic Key Establishment and Management | Symmetric and Asymmetric Keys
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-110
+  title: Compliance Enforcement
+  objective: Organizational compliance rules are enforced
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: PL-1
+      remarks: Policy and Procedures
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-92
+  title: Pipeline Compliance Integration
+  objective: Vulnerability scans are coupled with pipeline compliance rules
+  recommendations:
+  - Prevent insecure images and artifacts from being deployed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-1
+      remarks: Policy and Procedures
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-111
+  title: Infrastructure Hardening
+  objective: Incremental hardening of the infrastructure is employed
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-81
+  title: Container Image Hardening
+  objective: Container images are hardened following best practices
+  recommendations:
+  - Images contain least permissions to remain functional, do not allow for shell, do not include unnecessary libraries and dependencies, do not bind mount files in from the host, etc.
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-82
+  title: Static Application Security Testing
+  objective: Static application security testing (SAST) is performed
+  recommendations:
+  - Static analysis is performed by dedicated SAST tools as well as linters
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-85
+  title: Manifest Scanning
+  objective: Application manifests are scanned in CI pipeline
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: RA-5
+      remarks: Vulnerability Monitoring and Scanning
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-86
+  title: CI Server Isolation
+  objective: CI servers for sensitive workloads are isolated from other workloads
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-39
+      remarks: Process Isolation
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-87
+  title: Privileged Build Isolation
+  objective: Builds requiring elevated privileges run on dedicated servers
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-39
+      remarks: Process Isolation
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-88
+  title: Build Policy Enforcement
+  objective: Build policies are enforced on the CI pipeline
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-1
+      remarks: Policy and Procedures
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-90
+  title: Build Stage Verification
+  objective: Build stages are verified prior to the next stage executing
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-93
+  title: Dynamic Application Security Testing
+  objective: Dynamic application security testing (DAST) is performed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11(8)
+      remarks: Interactive Application Security Testing
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-94
+  title: Application Instrumentation
+  objective: Application instrumentation is employed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-95
+  title: Test Traceability
+  objective: Automated test results map back to requirements
+  recommendations:
+  - Requirements include feature, function, security, and complaince
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-96
+  title: Infrastructure Security Testing
+  objective: Infrastructure security tests are employed
+  recommendations:
+  - firewall rules open to the world, overprivileged Identity & Access Management (IAM) policies, unauthenticated endpoints, etc
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-97
+  title: Security Health Verification
+  objective: Tests to verify security health are executed at build and deploy time
+  recommendations:
+  - to evaluate any changes or regressions that may have occurred throughout the lifecycle.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-98
+  title: IaC Policy Controls
+  objective: Infrastructure as Code is subject to the same pipeline policy controls as application code
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-99
+  title: Automated Security Testing
+  objective: Security testing is automated
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+    - reference-id: CA-8
+      remarks: Penetration Testing
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-83
+  title: Test Pyramid Adherence
+  objective: Test suites follow the test pyramid
+  family: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-274
+  title: Signing Key Revocation
+  objective: Should software artifacts become untrusted due to compromise or other incident, teams should revoke signing keys to ensure repudiation
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-275
+  title: Staging Registry Management
+  objective: Artifacts ready for deployment are managed in a staging or pre-prod registry
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-276
+  title: Container Image Hardening
+  objective: container images are hardened following best practices
+  recommendations:
+  - 'Images contain least permissions to remain functional, do not allow for shell, do not include unnecessary libraries and dependencies, do not bind mount files in from the host, etc.'
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-277
+  title: Static Application Security Testing
+  objective: Static application security testing (SAST) is performed
+  recommendations:
+  - Static analysis is performed by dedicated SAST tools as well as linters
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-278
+  title: Test Pyramid Adherence
+  objective: Test suites follow the test pyramid
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-279
+  title: Private Development Registry
+  objective: Artifacts undergoing active development are held in a private registery
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-280
+  title: Manifest Scanning
+  objective: Scan application manifests in CI pipeline
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: RA-5
+      remarks: VULNERABILITY MONITORING AND SCANNING
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-281
+  title: CI Server Isolation
+  objective: CI server's for sensitive workloads are isolated from other workloads
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-39
+      remarks: PROCESS ISOLATION
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-282
+  title: Privileged Build Isolation
+  objective: Builds requiring elevated privileges must run on dedicated servers
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-39
+      remarks: PROCESS ISOLATION
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-283
+  title: Build Policy Enforcement
+  objective: Build policies are enforced on the CI pipeline
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-1
+      remarks: Policy and Procedures
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-284
+  title: Pipeline Metadata Signing
+  objective: Sign pipeline metadata
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-285
+  title: Build Stage Verification
+  objective: Build stages are verified prior to the next stage executing
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-286
+  title: CI Pipeline Scanning
+  objective: Images are scanned within the CI pipeline
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: RA-5
+      remarks: Vulnerability Monitoring and Scanning
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-287
+  title: Pipeline Compliance Integration
+  objective: Vulnerability scans are coupled with pipeline compliance rules
+  recommendations:
+  - Prevent insecure images and artifacts from being deployed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-1
+      remarks: Policy and Procedures
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-288
+  title: Dynamic Application Security Testing
+  objective: Dynamic application security testing (DAST) is performed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11(8)
+      remarks: Interactive Application Security Testing
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-289
+  title: Application Instrumentation
+  objective: Application instrumentation is employed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-290
+  title: Test Traceability
+  objective: Automated test results map back to requirements
+  recommendations:
+  - 'Requirements include feature, function, security, and complaince'
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-291
+  title: Infrastructure Security Testing
+  objective: Infrastructure security tests must be employed
+  recommendations:
+  - 'firewall rules open to the world, overprivileged Identity & Access Management (IAM) policies, unauthenticated endpoints, etc'
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-292
+  title: Security Health Verification
+  objective: Tests to verify the security health are executed at time of build and at time of deploy
+  recommendations:
+  - to evaluate any changes or regressions that may have occurred throughout the lifecycle.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: SYSTEM MONITORING
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-293
+  title: IaC Policy Controls
+  objective: IaC is subject to the same pipeline policy controls as application code
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-294
+  title: Automated Security Testing
+  objective: Security testing is automated
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+    - reference-id: CA-8
+      remarks: Penetration Testing
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-295
+  title: Registry Authentication
+  objective: Registries require mutually authenticated TLS for all registry connections
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IA-3(1)
+      remarks: Cryptographic Bidirectional Authentication
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-296
+  title: Image Signing
+  objective: Image and metadata are signed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-297
+  title: Configuration Signing
+  objective: Workload-related configuration is signed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-298
+  title: Package Signing
+  objective: Workload-related package is signed
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-299
+  title: Image Integrity Validation
+  objective: Validate integrity of images
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: SYSTEM & INFORMATION INTEGRITY
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-300
+  title: Image Vulnerability Scanning
+  objective: Scan images for vulnerabilities and malware
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: RA-5
+      remarks: VULNERABILITY MONITORING AND SCANNING
+    - reference-id: SA-3
+      remarks: SYSTEM DEVELOPMENT LIFE CYCLE
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-301
+  title: Key Revocation
+  objective: Enable image signing key revokation in the event of compromise
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7
+      remarks: SYSTEM & INFORMATION INTEGRITY
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-302
+  title: Security Update Prioritization
+  objective: Security updates are prioritized
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-2(3)
+      remarks: System and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-303
+  title: Credential Protection
+  objective: HSMs or credential managers should be used for protecting credentials. If this is not possible, software-based credential managers should be used.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-12(3)
+      remarks: SYSTEMS & COMMUNICATION PROTECTION
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-304
+  title: Scanning Remediation
+  objective: Container image scanning findings are acted upon
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-2(3)
+      remarks: System and Information Integrity
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-305
+  title: Compliance Enforcement
+  objective: Organizational compliance rules are enforced
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: PL-1
+      remarks: Policy and Procedures
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-306
+  title: Infrastructure Hardening
+  objective: Incremental hardening of the infrastructure is employed
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-307
+  title: Public Registry Access Control
+  objective: pulls from public registries are controlled and only from authorized engineers or internal registries
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-6(3)
+      remarks: Least Privilege
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-308
+  title: Image Encryption Management
+  objective: Image encryption is coupled with key management attestation and/or authorization and credential distribution
+  recommendations:
+  - This restricts the image to only be deployed to authorized platforms. Container image authorization is useful for compliance use cases such as geo-fencing or export control and digital rights media management
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-12(2)
+      remarks: Cryptographic Key Establishment and Management | Symmetric and Asymmetric Keys
+    - reference-id: SC-12(3)
+      remarks: Cryptographic Key Establishment and Management | Symmetric and Asymmetric Keys
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-309
+  title: Risk-Based Remediation Prioritization
+  objective: At-risk applications are prioritized for remediation by the exploit maturity and vulnerable path presence in addition to the CVSS score
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-2(3)
+      remarks: SYSTEM & INFORMATION INTEGRITY
+  family: Distribute
+  applicability:
+  - CNSWP-v2.0
