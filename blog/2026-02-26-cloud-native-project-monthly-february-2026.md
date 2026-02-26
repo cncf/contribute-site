@@ -65,20 +65,21 @@ Book your travel for KubeCon + CloudNativeCon Europe 2026: [Save with Conference
 
 Last call to submit! CFPs and Interest Forms for KubeCon + CloudNativeCon India are closing soon. If you’d like to participate in Project Lightning Talks, the Maintainer Track, Project Tables, or receive PR support, submit the interest form and/or CFP by Sunday, 1 March 23:59 IST.
 
-[Project Opportunities + CFP](https://events.linuxfoundation.org/kubecon-cloudnativecon-india/features-add-ons/project-opportunities/) - *DUE Sunday 1 March* 23:59 IST
+[Project Opportunities + CFP](https://events.linuxfoundation.org/kubecon-cloudnativecon-india/features-add-ons/project-opportunities/) - *DUE Sunday, March 1*
 
 ### KubeCon + CloudNativeCon Japan - Project Benefits now LIVE
 
 CFPs and Interest Forms are now open for KubeCon + CloudNativeCon Japan! Don’t miss your chance to participate in Project Lightning Talks, Maintainer Track, Project Tables, and PR Support. Check out the link below for details about each opportunity and to submit.
 
-[Project Opportunities + CFP](https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/features-add-ons/project-opportunities/) - *DUE Sunday, April 12*, 23:59 JST
+[Project Opportunities + CFP](https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/features-add-ons/project-opportunities/) - *DUE Sunday, April 12*
 
 ### KubeCon + CloudNativeCon + OpenInfra Summit + PyTorch Conference China - Project Benefits now LIVE
 
 CFPs and Interest Forms are now open for KubeCon + CloudNativeCon + OpenInfra Summit + PyTorch Conference China! Don’t miss your chance to participate in Project Lightning Talks, Maintainer Track, Project Tables, and PR Support. Check out the link below for details about each opportunity and to submit.
 
-Submit a CFP - DUE Sunday, 3 May 23:59 CST
-Project Opportunities - DUE Sunday, 24 May 23:59 CST
+[Submit a CFP](https://sessionize.com/kubecon-cloudnativecon-openinfra-pytorch-2026/) - *DUE Sunday, 3 May*
+
+[Project Opportunities](https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/features-add-ons/project-opportunities/) - *DUE Sunday, 24 May*
 
 ### Update Your Project Logos
 
