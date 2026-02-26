@@ -110,6 +110,6 @@ Willing to talk about your use of Cloud Native projects in the AI training and i
 
 Please let us know if you have any suggestions for future newsletter content by sending an email to [projects@cncf.io](mailto:projects@cncf.io).
 
-You can also continue discussions with other maintainers in the #maintainer-circle Slack channel.
+You can also continue discussions with other maintainers in the [#maintainer-circle](https://app.slack.com/client/T08PSQ7BQ/C014YQ8CDCG) Slack channel.
 
 🫶 Daniel, Jeefy, Bob, Nate, Jorge, Riaan, Ihor, Robert and the rest of the CNCF staff
