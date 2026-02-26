@@ -13,7 +13,9 @@ You can learn more about the event and other worldwide KubeCon + CloudNativeCon 
 
 * [Scholarships & Travel Funding Deadlines](#scholarships--travel-funding-deadlines)
 * [KubeCon + CloudNativeCon EU 2026](#kubecon--cloudnativecon-eu-2026)
+* [KubeCon + CloudNativeCon Worldwide](#kubecon--cloudnativecon-worldwide)
 * [Virtual Events](#virtual-events)
+* [Update Your Project Logos](#update-your-project-logos)
 * [Call for Kubernetes AI Conformance applications and reference architectures](#call-for-kubernetes-ai-conformance-applications-and-reference-architectures)
 * [See you next month](#see-you-next-month)
 
@@ -61,6 +63,8 @@ Don’t miss the opportunity to connect with fellow maintainers on Sunday, 22 Ma
 
 Book your travel for KubeCon + CloudNativeCon Europe 2026: [Save with Conference Rates](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/attend/venue-travel/#hotel-information).
 
+## KubeCon + CloudNativeCon Worldwide
+
 ### LAST CALL! KubeCon + CloudNativeCon India 2026 - Project Benefits
 
 Last call to submit! CFPs and Interest Forms for KubeCon + CloudNativeCon India are closing soon. If you’d like to participate in Project Lightning Talks, the Maintainer Track, Project Tables, or receive PR support, submit the interest form and/or CFP by Sunday, 1 March 23:59 IST.
@@ -81,10 +85,6 @@ CFPs and Interest Forms are now open for KubeCon + CloudNativeCon + OpenInfra Su
 
 [Project Opportunities](https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/features-add-ons/project-opportunities/) - *DUE Sunday, 24 May*
 
-### Update Your Project Logos
-
-The CNCF Events Team pulls project logos from the [CNCF artwork repository](https://github.com/cncf/artwork/tree/main/projects) for signage and stickers. Please be sure to upload your project’s high-resolution *stacked and horizontal color logos at least 8 weeks before the event*. If the required file is unavailable in the repository or is not high resolution, CNCF staff will determine which file to use.
-
 ## Virtual Events
 
 | Event | Date | Registration | CFP | CFP deadline |
@@ -93,6 +93,10 @@ The CNCF Events Team pulls project logos from the [CNCF artwork repository](http
 | **EnvoyCon** | 7 May | [📋 Register](https://community.cncf.io/j/csfu8k2b4kxjj/) | [📢 Submit a talk](https://sessionize.com/virtual-envoycon-2026) | 8 Mar |
 | **CozySummit** | 26 May | [📋 Register](https://community.cncf.io/events/details/cncf-virtual-project-events-hosted-by-cncf-presents-cozysummit-virtual-2026/) | [📢 Submit a talk](https://sessionize.com/cozysummit-virtual-2026/) | 8 Mar |
 | **StrimziCon** | 3 Jun | [📋 Register](https://community.cncf.io/j/hjubxzbw3sta7/) | [📢 Submit a talk](https://sessionize.com/StrimziConVirtual2026/) | 31 Mar |
+
+## Update Your Project Logos
+
+The CNCF Events Team pulls project logos from the [CNCF artwork repository](https://github.com/cncf/artwork/tree/main/projects) for signage and stickers. Please be sure to upload your project’s high-resolution *stacked and horizontal color logos at least 8 weeks before the event*. If the required file is unavailable in the repository or is not high resolution, CNCF staff will determine which file to use.
 
 ## Call for Kubernetes AI Conformance applications and reference architectures
 
