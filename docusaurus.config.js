@@ -124,6 +124,12 @@ const config = {
             position: 'left',
             label: 'Community',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'techdocsSidebar',
+            position: 'left',
+            label: 'TechDocs',
+          },
 
           // Right
           {
@@ -203,9 +209,14 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-  plugins: [[require.resolve('docusaurus-lunr-search'), {
-    highlightResult: true,
-  }]],
+  plugins: [
+    [
+      require.resolve('docusaurus-lunr-search'),
+      {
+        highlightResult: true,
+      },
+    ],
+  ],
 };
 
 export default config;
