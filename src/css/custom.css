@@ -108,3 +108,12 @@
 .navbar__logo:not(#\#):not(#\#) {
   height: 2.5rem;
 }
+
+
+/* Make the navbar responsive by allowing it to wrap on smaller screens.  */
+@media (max-width: 1200px) {
+  .navbar__items--right
+  .navbar__item:not(.navbar__search):not(.navbar__item--colorModeToggle) {
+    display: none;
+  }
+}
