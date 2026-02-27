@@ -108,3 +108,79 @@
 .navbar__logo:not(#\#):not(#\#) {
   height: 2.5rem;
 }
+
+.navbar__item, .navbarSearchContainer_Bca1, .DocSearch-Button-Placeholder {
+  transition: font-size 0.3s ease, padding-inline 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbarSearchContainer_Bca1,
+  .DocSearch-Button-Placeholder {
+    transition: none;
+  }
+}
+
+@media (max-width: 1290px) and (min-width: 997px) {
+
+  .navbar__item:not(#\#):not(#\#) {
+    padding-inline: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .navbar__logo:not(#\#):not(#\#) {
+	display: flex;
+	align-items: center;
+  }
+
+}
+
+@media (max-width: 1230px) and (min-width: 997px) {
+
+  .navbar__item:not(#\#):not(#\#) {
+    padding-inline: 0.3rem;
+  }
+
+}
+
+@media (max-width: 1120px) and (min-width: 997px) {
+
+  .navbar__logo:not(#\#):not(#\#) img {
+	max-height: 90%;
+  }
+
+  .DocSearch-Button:not(#\#) {
+	padding: 0 6px;
+	margin: 0 0 0 2px;
+  }
+
+  .navbarSearchContainer_Bca1:not(#\#_Z9eR):not(#\#_Z9eR):not(#\#_Z9eR) {
+	padding-left: 4px;
+  }
+
+}
+
+@media (max-width: 1080px) and (min-width: 997px) {
+
+  .navbar__logo:not(#\#):not(#\#) img {
+	max-height: 80%;
+  }
+
+  .DocSearch-Button-Placeholder:not(#\#) {
+    font-size: 0.9rem;
+    padding: 0 8px 0 4px;
+  }
+
+}
+
+@media (max-width: 1040px) and (min-width: 997px) {
+
+  .navbar__logo:not(#\#):not(#\#) img {
+	max-height: 72%;
+  }
+
+  .navbar__item:not(#\#):not(#\#) {
+    padding-inline: 0.3rem;
+    font-size: 0.85rem;
+  }
+
+}
