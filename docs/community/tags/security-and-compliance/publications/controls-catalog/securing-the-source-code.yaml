@@ -52,41 +52,6 @@ guidelines:
   family: Securing the Source Code
   applicability:
   - SSCP-v1.0
-- id: CNSC-188
-  title: Functional Role Definition
-  objective: Roles are defined and aligned to functional responsibilities
-  recommendations:
-  - Define roles by using principle of least privileges to provide access based on function such as Developer, Maintainer, Owner, Reviewer, Approver, and Guest
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: PL-1
-      remarks: Policy and Procedures
-  family: Securing the Source Code
-  applicability:
-  - SSCP-v1.0
-- id: CNSC-191
-  title: Repository MFA Enforcement
-  objective: MFA is enforced for accessing source code repositories
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: IA-2(1)
-      remarks: Identification and Authentication (organizational Users)
-  family: Securing the Source Code
-  applicability:
-  - SSCP-v1.0
-- id: CNSC-192
-  title: SSH Key Access
-  objective: SSH keys are used to provide developers access to source code repositories
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: AC-1
-      remarks: Remote Access
-  family: Securing the Source Code
-  applicability:
-  - SSCP-v1.0
 - id: CNSC-186
   title: Automated Security Scanning
   objective: Software security scanning and testing is automated
@@ -114,6 +79,19 @@ guidelines:
   family: Securing the Source Code
   applicability:
   - SSCP-v1.0
+- id: CNSC-188
+  title: Functional Role Definition
+  objective: Roles are defined and aligned to functional responsibilities
+  recommendations:
+  - Define roles by using principle of least privileges to provide access based on function such as Developer, Maintainer, Owner, Reviewer, Approver, and Guest
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: PL-1
+      remarks: Policy and Procedures
+  family: Securing the Source Code
+  applicability:
+  - SSCP-v1.0
 - id: CNSC-189
   title: Four-Eyes Principle
   objective: An independent four-eyes principle is enforced
@@ -133,12 +111,34 @@ guidelines:
   recommendations:
   - SCM platforms allow the configuration and restriction of source code operations on individual branches. Protection rules can be used to enforce the usage of pull requests with specified 
     precondition and approval rules, ensuring that a human code review process is followed or an automated status checking of a branch occurs. Additionally, protected branches can be used to disallow 
-    dangerous use of force pushes26, preventing the overwrite of commit histories and potential obfuscation of code changes.
+    dangerous use of force pushes, preventing the overwrite of commit histories and potential obfuscation of code changes.
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
     - reference-id: SA-8
       remarks: Security Engineering Principles
+  family: Securing the Source Code
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-191
+  title: Repository MFA Enforcement
+  objective: MFA is enforced for accessing source code repositories
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IA-2(1)
+      remarks: Identification and Authentication (organizational Users)
+  family: Securing the Source Code
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-192
+  title: SSH Key Access
+  objective: SSH keys are used to provide developers access to source code repositories
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-1
+      remarks: Remote Access
   family: Securing the Source Code
   applicability:
   - SSCP-v1.0

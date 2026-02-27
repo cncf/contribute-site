@@ -14,20 +14,6 @@ guidelines:
   family: Securing Materials
   applicability:
   - SSCP-v1.0
-- id: CNSC-176
-  title: Source-Based Library Builds
-  objective: Libraries are built based upon source code
-  family: Securing Materials
-  applicability:
-  - SSCP-v1.0
-- id: CNSC-177
-  title: Trusted Package Sources
-  objective: Trusted package managers and repositories are defined and prioritized
-  recommendations:
-  - Organizations should host their own package managers and artefact repositories, and restrict build machines to pull from only those sources.
-  family: Securing Materials
-  applicability:
-  - SSCP-v1.0
 - id: CNSC-174
   title: Third-Party SBOM Requirements
   objective: SBOM is required from third party suppliers
@@ -42,14 +28,6 @@ guidelines:
   family: Securing Materials
   applicability:
   - SSCP-v1.0
-- id: CNSC-178
-  title: Immutable SBOM Generation
-  objective: An immutable SBOM of the code is generated
-  recommendations:
-  - 'There are currently two well known SBOM specifications: SPDX34 and CycloneDX'
-  family: Securing Materials
-  applicability:
-  - SSCP-v1.0
 - id: CNSC-175
   title: Dependency Tracking
   objective: Dependencies between open source components are tracked
@@ -61,6 +39,28 @@ guidelines:
     entries:
     - reference-id: CM-10
       remarks: Software Usage Restrictions
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-176
+  title: Source-Based Library Builds
+  objective: Libraries are built based upon source code
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-177
+  title: Trusted Package Sources
+  objective: Trusted package managers and repositories are defined and prioritized
+  recommendations:
+  - Organizations should host their own package managers and artefact repositories, and restrict build machines to pull from only those sources.
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-178
+  title: Immutable SBOM Generation
+  objective: An immutable SBOM of the code is generated
+  recommendations:
+  - 'There are currently two well known SBOM specifications: SPDX and CycloneDX'
   family: Securing Materials
   applicability:
   - SSCP-v1.0
@@ -79,7 +79,7 @@ guidelines:
   title: License Compliance Scanning
   objective: Software is scanned for license implications
   recommendations:
-  - Licensing obligations must also be factored into the ingestion process. The Linux Foundation maintains the Open Compliance Program36 which hosts several tools to ensure released software meets 
+  - Licensing obligations must also be factored into the ingestion process. The Linux Foundation maintains the Open Compliance Program which hosts several tools to ensure released software meets 
     legal and regulatory compliance requirements.
   guideline-mappings:
   - reference-id: NIST-800-53

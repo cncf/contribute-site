@@ -5,12 +5,16 @@ metadata:
     id: tag-sc
     name: TAG Security and Compliance
     type: Software-Assisted
-  version: 1.0.0
+  version: 1.1.0
   mapping-references:
   - id: NIST-800-53
     title: NIST SP 800-53r5
     version: rev5
     url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+  - id: CNSC-CSV
+    title: Originating copy of the Controls Catalog (Apache 2.0 License)
+    version: v1.0.0
+    url: https://github.com/cloud-native-security-controls/controls-catalog
   applicability-categories:
   - id: CNSWP-v1.0
     title: Cloud Native Security Whitepaper v1.0

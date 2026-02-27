@@ -36,7 +36,7 @@ guidelines:
   objective: A framework is used to manage signing of artefacts
   recommendations:
   - Consider TUF/notary to sign OCI images. Notary makes use of a “root-of-trust” model to delegate trust from a single root to the individual teams or developers who sign artefacts. It uses 
-    additional metadata to allow clients to verify the freshness of content in a repository and protect against common attacks on update systems48. Clients can make use of public keys to verify the 
+    additional metadata to allow clients to verify the freshness of content in a repository and protect against common attacks on update systems. Clients can make use of public keys to verify the 
     contents of the repository.
   guideline-mappings:
   - reference-id: NIST-800-53
