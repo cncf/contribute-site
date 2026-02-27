@@ -13,28 +13,6 @@ guidelines:
   family: Securing Build Pipelines
   applicability:
   - SSCP-v1.0
-- id: CNSC-168
-  title: Root of Trust Establishment
-  objective: Established practices are followed for establishing a root of trust from an offline source
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SC-17
-      remarks: Public Key Infrastructure Certificates
-  family: Securing Build Pipelines
-  applicability:
-  - SSCP-v1.0
-- id: CNSC-169
-  title: Short-Lived Certificates
-  objective: Short-lived workload certificates are used
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SC-23(5)
-      remarks: Session Authenticity
-  family: Securing Build Pipelines
-  applicability:
-  - SSCP-v1.0
 - id: CNSC-150
   title: Environment and Dependency Validation
   objective: Environments and dependencies are validated before usage
@@ -89,7 +67,7 @@ guidelines:
   title: Build Determinism
   objective: Sources of non-determinism are found and eliminated
   recommendations:
-  - Reproducible-builds.org documents and offers solutions for many of these things. Diffoscope41 can be used to dig in and find the cause of differences when tracking down sources of non-determinism.
+  - Reproducible-builds.org documents and offers solutions for many of these things. Diffoscope can be used to dig in and find the cause of differences when tracking down sources of non-determinism.
   family: Securing Build Pipelines
   applicability:
   - SSCP-v1.0
@@ -227,6 +205,28 @@ guidelines:
     entries:
     - reference-id: AC-2
       remarks: Account Management
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-168
+  title: Root of Trust Establishment
+  objective: Established practices are followed for establishing a root of trust from an offline source
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-17
+      remarks: Public Key Infrastructure Certificates
+  family: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-169
+  title: Short-Lived Certificates
+  objective: Short-lived workload certificates are used
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-23(5)
+      remarks: Session Authenticity
   family: Securing Build Pipelines
   applicability:
   - SSCP-v1.0

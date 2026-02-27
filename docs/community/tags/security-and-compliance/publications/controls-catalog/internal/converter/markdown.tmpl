@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Security Controls Catalog
 sidebar_position: 6
+toc_max_heading_level: 2
 ---
 
 <!--
@@ -12,6 +13,8 @@ To regenerate this file, run below from the controls-catalog directory:
 
 # Cloud Native Security Controls Catalog
 
+## Overview
+
 This catalog provides a structured framework for implementing security best practices in cloud-native environments.
 It synthesizes the foundational principles of the [Cloud Native Security Whitepaper](../publications/security-whitepaper) and the Software Supply Chain Best Practices Paper into discrete, actionable objectives.
 
@@ -20,7 +23,8 @@ It synthesizes the foundational principles of the [Cloud Native Security Whitepa
 Guidelines are organized into Families, each representing a specific security domain. These families help you navigate and understand the scope of security guidelines across different aspects of cloud native systems.
 
 Each entry contains the following components:
-- **Guideline ID**: A unique identifier for traceability and mapping.
+- **ID**: A unique identifier for traceability and mapping.
+- **Title**: A short,concise summary of the guideline.
 - **Originating Document**: The source publication (e.g., Cloud Native Security Whitepaper v1.0, Software Supply Chain Best Practices v1.0).
 - **Objective**: The high-level security goal or intent of the guideline.
 - **Guideline Mappings**: Cross-references to frameworks (e.g., NIST SP800-53r5) to indicate compliance alignment.
@@ -31,29 +35,35 @@ Each entry contains the following components:
 The following families organize guidelines by security domain. Click on any family name to jump to its guidelines:
 
 {{range .FamiliesWithGuidelines}}
-### {{.Title}}
+**{{.Title}}**
 
-{{.Description}} [View guidelines →](#{{if .Guidelines}}{{lower (index .Guidelines 0).Id}}{{else}}{{anchor .Id}}{{end}})
+{{.Description}} [View guidelines →](#{{anchor .Id}})
 
 {{end}}
 
 ---
 
 {{range .FamiliesWithGuidelines}}
-## {{.Title}} {#{{anchor .Id}}}
+<a id="{{anchor .Id}}"></a>
+
+## {{.Title}}
 
 {{if .Description}}{{.Description}}
 
 {{end}}{{range .Guidelines}}
-### {{.Title}} {#{{lower .Id}}}
 
-**Guideline ID**: `{{.Id}}`{{if .Applicability}} | **Originating Document**: {{range $i, $a := .Applicability}}{{if $i}}, {{end}}`{{applicabilityTitle $a $.ApplicabilityTitles}}`{{end}}{{end}}
+<a id="{{lower .Id}}"></a>
 
-{{if .Objective}}#### Objective
+### {{.Title}} | `{{.Id}}`
+{{if .Applicability}}
+**Originating Document**: {{range $i, $a := .Applicability}}{{if $i}}, {{end}}`{{applicabilityTitle $a $.ApplicabilityTitles}}`{{end}}
+{{end}}
+
+{{if .Objective}}**Objective**
 
 {{.Objective}}
 
-{{end}}{{if .GuidelineMappings}}#### Guideline Mappings
+{{end}}{{if .GuidelineMappings}}**Guideline Mappings**
 {{range .GuidelineMappings}}
 **`{{.ReferenceId}}`**
 
@@ -62,7 +72,7 @@ The following families organize guidelines by security domain. Click on any fami
 {{range .Entries}}| {{.ReferenceId}} | {{.Remarks}} |
 {{end}}
 
-{{end}}{{end}}{{end}}{{if .Recommendations}}#### Recommendations
+{{end}}{{end}}{{end}}{{if .Recommendations}}**Recommendations**
 
 {{range .Recommendations}}- {{.}}
 {{end}}
@@ -74,6 +84,6 @@ The following families organize guidelines by security domain. Click on any fami
 {{end}}
 
 ## Acknowledgements
-This representation of the catalog builds upon the original [Cloud Native Security Controls Catalog initiative](https://www.cncf.io/blog/2022/06/07/introduction-to-the-cloud-native-security-controls-catalog/), which produced the foundational artifact.
+This representation of the catalog builds upon the original [Cloud Native Security Controls Catalog initiative](https://www.cncf.io/blog/2022/06/07/introduction-to-the-cloud-native-security-controls-catalog/), which produced the [foundational artifact](https://github.com/cloud-native-security-controls/controls-catalog) licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Content has been reformatted and restructured from the original CSV source.
 
-This catalog is expressed in **Gemara Layer 1** (Guidance Document) format, where security objectives are represented as guidelines. See [Gemara Documentation](https://gemara.openssf.org/) for details.
+This catalog is expressed in **Gemara Layer 1** (Guidance Catalog) format, where security objectives are represented as guidelines. See [Gemara Documentation](https://gemara.openssf.org/) for details.

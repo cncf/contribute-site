@@ -16,19 +16,19 @@ families:
   description: Guidelines for secure distribution of container images, packages, and artifacts including signing, scanning, and registry security.
 - id: Securing Artefacts
   title: Securing Artefacts
-  description: Guidelines for securing artefacts, including signing, verification, and freshness validation.
+  description: Guidelines for securing artefacts, including build process attestation, signing frameworks, key rotation, OCI registry support, and encryption.
 - id: Securing Build Pipelines
   title: Securing Build Pipelines
   description: Guidelines for securing build pipelines, ensuring cryptographic guarantees, validation, and secure build environments.
 - id: Securing Materials
   title: Securing Materials
-  description: Guidelines for securing materials, including signing, verification, and freshness validation.
+  description: Guidelines for securing materials, including third-party artifact verification, SBOM generation, dependency tracking, vulnerability scanning, and software composition analysis.
 - id: Securing the Source Code
   title: Securing the Source Code
-  description: Guidelines for securing the source code, including signing, verification, and freshness validation.
+  description: Guidelines for securing the source code, including commit signing, branch protection, secret prevention, access control, MFA enforcement, and automated security scanning.
 - id: Security Assurance
   title: Security Assurance
-  description: Guidelines for security assurance, including signing, verification, and freshness validation.
+  description: Guidelines for security assurance, including network policies, incident response, platform hardening, threat modeling, identity management, and GitOps security practices.
 - id: Storage
   title: Storage
-  description: Guidelines for securing storage, including signing, verification, and freshness validation.
+  description: Guidelines for securing storage, including encryption at rest, data availability, integrity validation, namespace boundaries, access policies, and artifact registry management.

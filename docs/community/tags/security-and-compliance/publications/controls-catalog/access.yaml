@@ -10,94 +10,6 @@ guidelines:
   family: Access
   applicability:
   - CNSWP-v1.0
-- id: CNSC-15
-  title: HSMs Protection of Cryptographic Secrets
-  objective: HSMs are used to physically protect cryptographic secrets with an encryption key residing in the HSM
-  recommendations:
-  - If this is not possible, software-based credential managers should be used.
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: AC-4(4)
-      remarks: Information Flow Enforcement
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-16
-  title: Secrets Management
-  objective: Secrets should have a short expiration period or time to live
-  recommendations:
-  - Leverage tool-specific capabilities of secret manager
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SI-12
-      remarks: Information Management and Retention
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-17
-  title: Secrets Lifecycle Management
-  objective: Time to live and expiration period on secrets is verified to prevent reuse
-  recommendations:
-  - Leverage tool-specific capabilities of secret manager
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: AC-16(3)
-      remarks: Security and Privacy Attributes
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-18
-  title: Secrets Management System
-  objective: Secrets management systems are highly available
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SC-12(1)
-      remarks: Cryptographic Key Establishment and Management
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-19
-  title: Secrets Rotation Management
-  objective: Long-lived secrets adhere to periodic rotation and revocation
-  recommendations:
-  - Long-lived secrets are not recommended, but some capabilities require them
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SI-12
-      remarks: Information Management and Retention
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-20
-  title: Secrets Protection
-  objective: Secrets are distributed through secured communication channels protected commensurate with the level of access or data they are protecting
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: AC-16
-      remarks: Security and Privacy Attributes
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-21
-  title: Secret Injection Lifecycle
-  objective: Secrets injected are runtime are masked or dropped from logs, audit, or system dumps
-  recommendations:
-  - Even short lived secrets may be resused if caught in time by an interested attacker. Logs, audit, and systems dumps (i.e. in-memory shared volumes instead of environment variables) are all areas 
-    where runtime injected secrets show up
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: AU-9(3)
-      remarks: Protection of Audit Information
-  family: Access
-  applicability:
-  - CNSWP-v1.0
 - id: CNSC-2
   title: Mutual Authentication
   objective: Applications and workloads are explicitly authorized to communicate with each other using mutual authentication
@@ -105,109 +17,6 @@ guidelines:
   - reference-id: NIST-800-53
     entries:
     - reference-id: IA-9
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-6
-  title: Identification and Authentication
-  objective: Authentication and authorization are determined independently
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: IA-2(6)
-      remarks: Identification and Authentication (Organizational Users)
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-7
-  title: Authentication and Authorization Enforcement
-  objective: Authentication and authorization are enforced independently
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: IA-2(6)
-      remarks: Identification and Authentication (Organizational Users)
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-12
-  title: Cluster Authentication Management
-  objective: All cluster and workloads operators are authenticated
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: IA-7
-      remarks: Cryptographic Module Authentication
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-13
-  title: Authentication Policy Management
-  objective: Cluster and workloads operate actions are evaluated against access control policies governing context, purpose, and output
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: IA-7
-      remarks: Cryptographic Module Authentication
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-14
-  title: Multi-factor Authentication
-  objective: Identity federation uses multi-factor authentication
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: IA-2(1)(2)
-      remarks: Identification and Authentication (organizational Users)
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-10
-  title: ABAC and RBAC
-  objective: ABAC and RBAC are used
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: AC-3(13)
-      remarks: Access Enforcement
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-11
-  title: Authorization and Identity Management
-  objective: End user identity is capable of being accepted, consumed, and forwarded on for contextual or dynamic authorization
-  recommendations:
-  - This can be achieved through the use of identity documents and tokens.
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SC-7(19)
-      remarks: Boundary Protection
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-8
-  title: Continuous System Monitoring
-  objective: Access control and file permissions are updated in real-time
-  recommendations:
-  - where possible as caching may permit unauthorized access
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SI-4(2)
-      remarks: System Monitoring
-  family: Access
-  applicability:
-  - CNSWP-v1.0
-- id: CNSC-9
-  title: Privileged-based Authorization
-  objective: Authorization for workloads is granted based on attributes and roles/permissions previously assigned
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: AC-3(13)
-      remarks: Access Enforcement
   family: Access
   applicability:
   - CNSWP-v1.0
@@ -246,7 +55,77 @@ guidelines:
   family: Access
   applicability:
   - CNSWP-v1.0
-- id: CNSC-206
+- id: CNSC-6
+  title: Identification and Authentication
+  objective: Authentication and authorization are determined independently
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IA-2(6)
+      remarks: Identification and Authentication (Organizational Users)
+  family: Access
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-7
+  title: Authentication and Authorization Enforcement
+  objective: Authentication and authorization are enforced independently
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IA-2(6)
+      remarks: Identification and Authentication (Organizational Users)
+  family: Access
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-8
+  title: Continuous System Monitoring
+  objective: Access control and file permissions are updated in real-time
+  recommendations:
+  - where possible as caching may permit unauthorized access
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4(2)
+      remarks: System Monitoring
+  family: Access
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-9
+  title: Privileged-based Authorization
+  objective: Authorization for workloads is granted based on attributes and roles/permissions previously assigned
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-3(13)
+      remarks: Access Enforcement
+  family: Access
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-10
+  title: ABAC and RBAC
+  objective: ABAC and RBAC are used
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-3(13)
+      remarks: Access Enforcement
+  family: Access
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-11
+  title: Authorization and Identity Management
+  objective: End user identity is capable of being accepted, consumed, and forwarded on for contextual or dynamic authorization
+  recommendations:
+  - This can be achieved through the use of identity documents and tokens.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7(19)
+      remarks: Boundary Protection
+  family: Access
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-12
   title: Cluster Authentication Management
   objective: All cluster and workloads operators are authenticated
   guideline-mappings:
@@ -256,10 +135,11 @@ guidelines:
       remarks: Cryptographic Module Authentication
   family: Access
   applicability:
+  - CNSWP-v1.0
   - CNSWP-v2.0
-- id: CNSC-207
+- id: CNSC-13
   title: Authentication Policy Management
-  objective: cluster and worklods operate actions are evaluated against access control policies governing context, purpose, and output
+  objective: Cluster and workloads operate actions are evaluated against access control policies governing context, purpose, and output
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
@@ -267,10 +147,11 @@ guidelines:
       remarks: Cryptographic Module Authentication
   family: Access
   applicability:
+  - CNSWP-v1.0
   - CNSWP-v2.0
-- id: CNSC-208
+- id: CNSC-14
   title: Multi-factor Authentication
-  objective: Identity federation uses multi-factor authentication for human users
+  objective: Identity federation uses multi-factor authentication
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
@@ -278,12 +159,12 @@ guidelines:
       remarks: Identification and Authentication (organizational Users)
   family: Access
   applicability:
-  - CNSWP-v2.0
-- id: CNSC-209
+  - CNSWP-v1.0
+- id: CNSC-15
   title: HSMs Protection of Cryptographic Secrets
   objective: HSMs are used to physically protect cryptographic secrets with an encryption key residing in the HSM
   recommendations:
-  - 'If this is not possible, software-based credential managers should be used.'
+  - If this is not possible, software-based credential managers should be used.
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
@@ -291,8 +172,9 @@ guidelines:
       remarks: Information Flow Enforcement
   family: Access
   applicability:
+  - CNSWP-v1.0
   - CNSWP-v2.0
-- id: CNSC-210
+- id: CNSC-16
   title: Secrets Management
   objective: Secrets should have a short expiration period or time to live
   recommendations:
@@ -304,10 +186,11 @@ guidelines:
       remarks: Information Management and Retention
   family: Access
   applicability:
+  - CNSWP-v1.0
   - CNSWP-v2.0
-- id: CNSC-211
+- id: CNSC-17
   title: Secrets Lifecycle Management
-  objective: Time to live and expiration period on secrets is verfied to prevent reuse
+  objective: Time to live and expiration period on secrets is verified to prevent reuse
   recommendations:
   - Leverage tool-specific capabilities of secret manager
   guideline-mappings:
@@ -317,8 +200,9 @@ guidelines:
       remarks: Security and Privacy Attributes
   family: Access
   applicability:
+  - CNSWP-v1.0
   - CNSWP-v2.0
-- id: CNSC-212
+- id: CNSC-18
   title: Secrets Management System
   objective: Secrets management systems are highly available
   guideline-mappings:
@@ -328,12 +212,13 @@ guidelines:
       remarks: Cryptographic Key Establishment and Management
   family: Access
   applicability:
+  - CNSWP-v1.0
   - CNSWP-v2.0
-- id: CNSC-213
+- id: CNSC-19
   title: Secrets Rotation Management
   objective: Long-lived secrets adhere to periodic rotation and revocation
   recommendations:
-  - 'Long-lived secrets are not recommended, but some capabilities require them'
+  - Long-lived secrets are not recommended, but some capabilities require them
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
@@ -341,8 +226,9 @@ guidelines:
       remarks: Information Management and Retention
   family: Access
   applicability:
+  - CNSWP-v1.0
   - CNSWP-v2.0
-- id: CNSC-214
+- id: CNSC-20
   title: Secrets Protection
   objective: Secrets are distributed through secured communication channels protected commensurate with the level of access or data they are protecting
   guideline-mappings:
@@ -352,17 +238,31 @@ guidelines:
       remarks: Security and Privacy Attributes
   family: Access
   applicability:
+  - CNSWP-v1.0
   - CNSWP-v2.0
-- id: CNSC-215
+- id: CNSC-21
   title: Secret Injection Lifecycle
-  objective: Secrets injected are runtime are masqued or dropped from logs, audit, or system dumps
+  objective: Secrets injected at runtime are masked or dropped from logs, audit, or system dumps
   recommendations:
-  - 'Even short lived secrets may be resused if caught in time by an interested attacker. Logs, audit, and systems dumps (i.e. in-memory shared volumes instead of environment variables) are all areas where runtime injected secrets show up'
+  - Even short lived secrets may be reused if caught in time by an interested attacker. Logs, audit, and systems dumps (i.e. in-memory shared volumes instead of environment variables) are all areas
+    where runtime injected secrets show up
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
     - reference-id: AU-9(3)
       remarks: Protection of Audit Information
+  family: Access
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-208
+  title: Multi-factor Authentication
+  objective: Identity federation uses multi-factor authentication for human users
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IA-2(1)(2)
+      remarks: Identification and Authentication (organizational Users)
   family: Access
   applicability:
   - CNSWP-v2.0
