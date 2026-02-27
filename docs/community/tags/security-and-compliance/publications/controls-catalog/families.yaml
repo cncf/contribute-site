@@ -1,0 +1,34 @@
+families:
+- id: Access
+  title: Access Control
+  description: Guidelines for access control models and identity forwarding.
+- id: Compute
+  title: Compute
+  description: Guidelines for securing compute infrastructure including bootstrapping, isolation, monitoring, and runtime security.
+- id: Deploy
+  title: Deploy
+  description: Guidelines for securing software deployments, including artifact verification, runtime policy enforcement, freshness validation, update management, logging, and incident response.
+- id: Develop
+  title: Develop
+  description: Guidelines for secure software development practices including environment segregation, testing, code review, and CI server hardening.
+- id: Distribute
+  title: Distribute
+  description: Guidelines for secure distribution of container images, packages, and artifacts including signing, scanning, and registry security.
+- id: Securing Artefacts
+  title: Securing Artefacts
+  description: Guidelines for securing artefacts, including build process attestation, signing frameworks, key rotation, OCI registry support, and encryption.
+- id: Securing Build Pipelines
+  title: Securing Build Pipelines
+  description: Guidelines for securing build pipelines, ensuring cryptographic guarantees, validation, and secure build environments.
+- id: Securing Materials
+  title: Securing Materials
+  description: Guidelines for securing materials, including third-party artifact verification, SBOM generation, dependency tracking, vulnerability scanning, and software composition analysis.
+- id: Securing the Source Code
+  title: Securing the Source Code
+  description: Guidelines for securing the source code, including commit signing, branch protection, secret prevention, access control, MFA enforcement, and automated security scanning.
+- id: Security Assurance
+  title: Security Assurance
+  description: Guidelines for security assurance, including network policies, incident response, platform hardening, threat modeling, identity management, and GitOps security practices.
+- id: Storage
+  title: Storage
+  description: Guidelines for securing storage, including encryption at rest, data availability, integrity validation, namespace boundaries, access policies, and artifact registry management.
