@@ -16,7 +16,7 @@ To regenerate this file, run below from the controls-catalog directory:
 ## Overview
 
 This catalog provides a structured framework for implementing security best practices in cloud-native environments.
-It synthesizes the foundational principles of the [Cloud Native Security Whitepaper](../publications/security-whitepaper) and the Software Supply Chain Best Practices Paper into discrete, actionable objectives.
+It synthesizes the foundational principles of the [Cloud Native Security Whitepaper](../security-whitepaper) and the Software Supply Chain Best Practices Paper into discrete, actionable objectives.
 
 > **Note**: While this catalog is historically called the "Cloud Native Security Controls Catalog," these security objectives are expressed using the term **guidelines**. Throughout this document, we use "guidelines" to refer to the individual security recommendations, while "catalog" refers to the overall collection.
 
@@ -24,7 +24,7 @@ Guidelines are organized into Families, each representing a specific security do
 
 Each entry contains the following components:
 - **ID**: A unique identifier for traceability and mapping.
-- **Title**: A short,concise summary of the guideline.
+- **Title**: A short, concise summary of the guideline.
 - **Originating Document**: The source publication (e.g., Cloud Native Security Whitepaper v1.0, Software Supply Chain Best Practices v1.0).
 - **Objective**: The high-level security goal or intent of the guideline.
 - **Guideline Mappings**: Cross-references to frameworks (e.g., NIST SP800-53r5) to indicate compliance alignment.
@@ -5465,4 +5465,4 @@ Artifact registry verifies artifacts against organizational policies
 ## Acknowledgements
 This representation of the catalog builds upon the original [Cloud Native Security Controls Catalog initiative](https://www.cncf.io/blog/2022/06/07/introduction-to-the-cloud-native-security-controls-catalog/), which produced the [foundational artifact](https://github.com/cloud-native-security-controls/controls-catalog) licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Content has been reformatted and restructured from the original CSV source.
 
-This catalog is expressed in **Gemara Layer 1** (Guidance Document) format, where security objectives are represented as guidelines. See [Gemara Documentation](https://gemara.openssf.org/) for details.
+This catalog is expressed in **Gemara Layer 1** (Guidance Catalog) format, where security objectives are represented as guidelines. See [Gemara Documentation](https://gemara.openssf.org/) for details.
