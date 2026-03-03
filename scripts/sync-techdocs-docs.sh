@@ -21,4 +21,7 @@ rm -rf docs/techdocs/analyses
 mkdir -p docs/techdocs/analyses
 cp -R "$WORKDIR/techdocs/analyses/." docs/techdocs/analyses/
 
+echo "Normalizing known broken relative image paths in synced analyses ..."
+find docs/techdocs/analyses -type f -name "*.md" -exec perl -i -pe 's!\.\./docs/images/!../../../images/!g' {} +
+
 echo "Done."
