@@ -8,7 +8,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-const TECHDOCS_DOCS_EDIT_BASE = 'https://github.com/cncf/techdocs/edit/main/docs';
+const TECHDOCS_EDIT_BASE = 'https://github.com/cncf/techdocs/edit/main/docs';
 const TECHDOCS_ANALYSES_EDIT_BASE = 'https://github.com/cncf/techdocs/edit/main/analyses';
 const LOCAL_EDIT_BASE = 'https://github.com/cncf/contribute-site/edit/main/docs';
 
