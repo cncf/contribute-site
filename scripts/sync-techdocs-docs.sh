@@ -16,4 +16,9 @@ rm -rf docs/techdocs
 mkdir -p docs/techdocs
 cp -R "$WORKDIR/techdocs/docs/." docs/techdocs/
 
+echo "Syncing techdocs top-level analyses/ -> docs/techdocs/analyses ..."
+rm -rf docs/techdocs/analyses
+mkdir -p docs/techdocs/analyses
+cp -R "$WORKDIR/techdocs/analyses/." docs/techdocs/analyses/
+
 echo "Done."
