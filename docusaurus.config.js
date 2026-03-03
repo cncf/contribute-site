@@ -67,7 +67,7 @@ const config = {
 
             // docs/techdocs/** -> cncf/techdocs/docs/**
             if (p.startsWith('techdocs/')) {
-              return `${TECHDOCS_DOCS_EDIT_BASE}/${p.replace(/^techdocs\//, '')}`;
+              return `${TECHDOCS_EDIT_BASE}/${p.replace(/^techdocs\//, '')}`;
             }
 
             // everything else stays local
