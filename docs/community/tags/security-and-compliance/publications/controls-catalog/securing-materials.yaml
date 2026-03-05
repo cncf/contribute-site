@@ -1,0 +1,105 @@
+guidelines:
+- id: CNSC-173
+  title: Third-Party Artifact Verification
+  objective: Third party artefacts and open source libraries are verified
+  recommendations:
+  - All third party artefacts, open source libraries and any other dependencies should be verified as part of the continuous integration pipeline by validating their checksums against a known good 
+    source and validating any cryptographic signatures. Any software ingested must be scanned using Software Composition Analysis (SCA) and pentesting tools to detect whether any vulnerable 
+    open-source software is used in the final product.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-174
+  title: Third-Party SBOM Requirements
+  objective: SBOM is required from third party suppliers
+  recommendations:
+  - Where possible, vendors should be required to provide Software Bills of Materials (SBOMs) containing the explicit details of the software and versions used within the supplied product as it 
+    provides a clear and direct link to the dependencies.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-8
+      remarks: Information System Component Inventory
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-175
+  title: Dependency Tracking
+  objective: Dependencies between open source components are tracked
+  recommendations:
+  - A register should be maintained of a project’s open source components, dependencies and vulnerabilities to help trace any deployed artefacts with new vulnerabilities. One of the most popular open 
+    source inventory implementations is OWASP Dependency-Track.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-10
+      remarks: Software Usage Restrictions
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-176
+  title: Source-Based Library Builds
+  objective: Libraries are built based upon source code
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-177
+  title: Trusted Package Sources
+  objective: Trusted package managers and repositories are defined and prioritized
+  recommendations:
+  - Organizations should host their own package managers and artefact repositories, and restrict build machines to pull from only those sources.
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-178
+  title: Immutable SBOM Generation
+  objective: An immutable SBOM of the code is generated
+  recommendations:
+  - 'There are currently two well known SBOM specifications: SPDX and CycloneDX'
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-179
+  title: Software Vulnerability Scanning
+  objective: Software is scanned for vulnerabilities
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: RA-5
+      remarks: Vulnerability Monitoring and Scanning
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-180
+  title: License Compliance Scanning
+  objective: Software is scanned for license implications
+  recommendations:
+  - Licensing obligations must also be factored into the ingestion process. The Linux Foundation maintains the Open Compliance Program which hosts several tools to ensure released software meets 
+    legal and regulatory compliance requirements.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-10
+      remarks: Software Usage Restrictions
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-181
+  title: Software Composition Analysis
+  objective: Software composition analysis is run on ingested software
+  recommendations:
+  - The SCA tool will attempt to use heuristics to identify the direct and transitive dependencies, and can also serve as verification of SBOM content. This data will then be matched against data from
+    a number of data feeds containing vulnerability data to highlight any vulnerabilities in the dependent packages.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11(1)(8)
+      remarks: Developer Testing and Evaluation
+  family: Securing Materials
+  applicability:
+  - SSCP-v1.0

@@ -1,0 +1,236 @@
+guidelines:
+- id: CNSC-63
+  title: Production Environment
+  objective: A dedicated production environment is established
+  recommendations:
+  - Ensure that production workloads are in a separate, dedicated environment from non-production workloads. In the context of containers, this can mean separate clusters. In the case of VMs, separate
+    networks.
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-3(1)
+      remarks: System Development Life Cycle | Manage preproduction environment
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-64
+  title: Dynamic Deployments
+  objective: Dynamic deployments are leveraged for safer releases
+  recommendations:
+  - Blue/Green, Alpha/Beta, Canary, red-black deployments
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-8(31)
+      remarks: Security and Privacy Engineering Principles | Secure System Modification
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-65
+  title: Early Vulnerability Scanning
+  objective: Vulnerability and configuration scanning is integrated in the IDE or at the pull request
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11(1)
+      remarks: Developer Testing and Evaluation | Static Code Analysis
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-66
+  title: Environment Segregation
+  objective: Dedicated development, testing, and production environments are established
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-15
+      remarks: Development Process, Standards, and Tools
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-67
+  title: Business-Critical Code Testing
+  objective: Tests are built for business-critical code
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-68
+  title: Infrastructure Testing
+  objective: Tests are built for business-critical infrastructure
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-69
+  title: Local Test Execution
+  objective: Test suites are able to be run locally
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-70
+  title: Shared Test Execution
+  objective: Test suites are available to run in a shared environment
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-71
+  title: Code Review Requirements
+  objective: Two non-author reviewers or approvers are required prior to merging
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11(4)
+      remarks: Developer Testing and Evaluation | Manual Code Reviews
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-72
+  title: Code Quality
+  objective: Code is clean and well commented
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-73
+  title: Full Infrastructure Testing
+  objective: Full infrastructure tests are used
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-74
+  title: Regression Testing
+  objective: Regression tests are used
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-75
+  title: Security Regression Testing
+  objective: Test suites are updated against new and emerging threats and developed into security regression tests
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-76
+  title: Testing Environment
+  objective: A dedicated testing environment is established
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-3(1)
+      remarks: System Development Life Cycle | Manage preproduction environment
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-77
+  title: CI Server Isolation
+  objective: Continuous integration server is isolated
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-39
+      remarks: Process Isolation
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-78
+  title: Threat-Informed Test Development
+  objective: Threat model results are used to determine ROI for test development
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11(2)
+      remarks: Developer Testing and Evaluation | Threat Modeling and Vulnerability Analyses
+  family: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-195
+  title: Secure Configuration Defaults
+  objective: Secure configuration is implemented as the default state of the system
+  recommendations:
+  - Transitioning towards such a system involves making security a design requirement, inheriting default security configuration and supporting an exception process
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-8(23)
+      remarks: Security and Privacy Engineering Principles, Secure Defaults
+  family: Develop
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-259
+  title: Early Vulnerability Scanning
+  objective: Integrate vulnerability and configuration scanning in both the IDE and at the CI system during pull request
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11(1)
+      remarks: Developer Testing and Evaluation | Static Code Analysis
+  family: Develop
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-265
+  title: Code Review Requirements
+  objective: Implement at least one other non-author reviewer/approver prior to merging
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11(4)
+      remarks: Developer Testing and Evaluation | Manual Code Reviews
+  family: Develop
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-271
+  title: CI Server Isolation
+  objective: Continuous integration server is isolated and hardened
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-39
+      remarks: Process Isolation
+  family: Develop
+  applicability:
+  - CNSWP-v2.0

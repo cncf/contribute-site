@@ -1,0 +1,29 @@
+metadata:
+  id: CNSC
+  description: Guidelines for access control, authentication, authorization, secrets management, and key management.
+  author:
+    id: tag-sc
+    name: TAG Security and Compliance
+    type: Software-Assisted
+  version: 1.1.0
+  mapping-references:
+  - id: NIST-800-53
+    title: NIST SP 800-53r5
+    version: rev5
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+  - id: CNSC-CSV
+    title: Originating copy of the Controls Catalog (Apache 2.0 License)
+    version: v1.0.0
+    url: https://github.com/cloud-native-security-controls/controls-catalog
+  applicability-categories:
+  - id: CNSWP-v1.0
+    title: Cloud Native Security Whitepaper v1.0
+    description: Controls originating from the Cloud Native Security Whitepaper version 1.0
+  - id: CNSWP-v2.0
+    title: Cloud Native Security Whitepaper v2.0
+    description: Controls originating from the Cloud Native Security Whitepaper version 2.0
+  - id: SSCP-v1.0
+    title: Software Supply Chain Best Practices v1.0
+    description: Controls originating from the Software Supply Chain Best Practices Paper version 1.0
+title: Cloud Native Security Controls Catalog
+document-type: Best Practice
