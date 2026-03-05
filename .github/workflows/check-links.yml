@@ -1,0 +1,54 @@
+# cSpell:ignore htmltest
+name: Check Links
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Every Monday at 9:00 UTC
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+
+      - name: Install htmltest
+        run: |
+          HTMLTEST_REPO=github.com/chalin/htmltest
+          BRANCH=dev/main
+          REPO_DIR=tmp/htmltest
+          git clone --branch $BRANCH https://$HTMLTEST_REPO.git $REPO_DIR
+          pushd $REPO_DIR
+          make build
+          popd
+          HTMLTEST=$REPO_DIR/bin/htmltest
+          echo "HTMLTEST=$HTMLTEST" >> $GITHUB_ENV
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Check links
+        run: |
+          mkdir -p tmp
+          npm run check:links 2>&1 | tee tmp/htmltest-output.txt
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-results
+          path: |
+            tmp/htmltest-output.txt
+            tmp/.htmltest/
+          retention-days: 30
