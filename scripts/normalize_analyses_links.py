@@ -151,7 +151,15 @@ def is_safe_markdown_file(file_path: Path, analyses_root: Path) -> bool:
     if file_path.is_symlink():
         return False
     try:
-        return file_path.resolve().is_relative_to(analyses_root)
+        resolved_file = file_path.resolve()
+        try:
+            return resolved_file.is_relative_to(analyses_root)
+        except AttributeError:
+            try:
+                resolved_file.relative_to(analyses_root)
+                return True
+            except ValueError:
+                return False
     except OSError:
         return False
 
