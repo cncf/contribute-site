@@ -58,4 +58,34 @@ http://localhost:3000.
 
 ## ChillOps
 
-Feel free to start diving in with PRs, we want to remain opinionated on this golden path for now, and then add branches and side quests after we've shipped more meat. We want people to feel good when they read this site because they found something useful, so feel free to file issues with your ideas! 
+Feel free to start diving in with PRs, we want to remain opinionated on this golden path for now, and then add branches and side quests after we've shipped more meat. We want people to feel good when they read this site because they found something useful, so feel free to file issues with your ideas!
+
+## Link checking
+
+This repository uses [htmltest](https://github.com/wjdp/htmltest) for
+automated link checking, aligned with the
+[@cncf/techdocs](https://github.com/cncf/techdocs) setup. We build from
+[@chalin's maintained fork](https://github.com/chalin/htmltest/tree/dev/main),
+which includes patches and improvements used across CNCF projects.
+
+A GitHub Actions workflow runs the check weekly (Mondays at 9:00 UTC) and can
+be triggered manually from the Actions tab. Results are uploaded as workflow
+artifacts.
+
+### Running locally
+
+```bash
+npm run check:links
+```
+
+This builds the site and runs htmltest against it. Requires
+[Go](https://go.dev/) to build htmltest from source.
+
+Alternatively, you can install a pre-built htmltest binary:
+
+- **Bash install script**:
+  `curl https://htmltest.wjdp.uk | bash`
+- **Releases page**:
+  <https://github.com/wjdp/htmltest/releases>
+- **Homebrew** (macOS):
+  `brew install htmltest`
