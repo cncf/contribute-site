@@ -111,30 +111,13 @@
 
 /* Reduce navbar crowding at intermediate viewport sizes */
 @media (min-width: 997px) and (max-width: 1279px) {
-  .navbar__items {
-    --ifm-navbar-item-padding-horizontal: 0.4rem;
+  nav.navbar {
+    --ifm-navbar-padding-horizontal: 0.5rem;
+    --ifm-navbar-item-padding-horizontal: 0.5rem;
   }
 
   .navbar__link {
     font-size: 0.875rem;
-  }
-
-  .navbar__logo:not(#\#):not(#\#) {
-    height: 2rem;
-  }
-
-  .navbar__search-input {
-    width: 9rem;
-  }
-}
-
-@media (min-width: 997px) and (max-width: 1099px) {
-  .navbar__items {
-    --ifm-navbar-item-padding-horizontal: 0.25rem;
-  }
-
-  .navbar__link {
-    font-size: 0.8rem;
   }
 
   .navbar__logo:not(#\#):not(#\#) {
@@ -143,5 +126,23 @@
 
   .navbar__search-input {
     width: 7rem;
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1099px) {
+  nav.navbar {
+    --ifm-navbar-item-padding-horizontal: 0.4rem;
+  }
+
+  .navbar__link {
+    font-size: 0.8rem;
+  }
+
+  .navbar__logo:not(#\#):not(#\#) {
+    height: 1.5rem;
+  }
+
+  .navbar__search-input {
+    width: 6rem;
   }
 }
