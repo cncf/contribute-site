@@ -110,6 +110,16 @@
 }
 
 /* Reduce navbar crowding at intermediate viewport sizes */
+@media (min-width: 1280px) and (max-width: 1399px) {
+  nav.navbar {
+    --ifm-navbar-item-padding-horizontal: 0.625rem;
+  }
+
+  .navbar__search-input {
+    width: 10rem;
+  }
+}
+
 @media (min-width: 997px) and (max-width: 1279px) {
   nav.navbar {
     --ifm-navbar-padding-horizontal: 0.5rem;
