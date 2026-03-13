@@ -2,7 +2,7 @@
 description: |
   AI-powered link checker that runs nightly. Scans all markdown files
   (including synced techdocs content), distinguishes real broken links from
-  transient failures, and creates/updates a GitHub issue with actionable results.
+  transient failures, and creates/updates GitHub issues with actionable results.
 
 on:
   schedule:
@@ -15,11 +15,28 @@ network:
   allowed:
     - defaults
     - github
+    - "*.cncf.io"
+    - "*.linuxfoundation.org"
+    - kubernetes.io
+    - "*.kubernetes.io"
+    - bestpractices.coreinfrastructure.org
+    - clotributor.dev
+    - clomonitor.io
+    - securityscorecards.dev
+    - owasp.org
+    - "*.owasp.org"
+    - csrc.nist.gov
+    - nvlpubs.nist.gov
+    - todogroup.org
+    - openssf.org
+    - "*.openssf.org"
 
 safe-outputs:
   add-comment:
   add-labels:
     allowed: [broken-link, techdocs-upstream]
+  create-issue:
+  update-issue:
 
 tools:
   github:
@@ -84,6 +101,7 @@ For each markdown file:
      - For external URLs that return 4xx: mark as **definitely broken**
      - For external URLs that return 5xx or timeout: retry once after 5 seconds
      - For external URLs that still fail after retry: mark as **possibly transient**
+     - **Firewall note**: This workflow runs behind a network firewall. Only GitHub and select CNCF ecosystem domains are reachable. If `curl` returns `000` (connection refused) for a domain, that domain is blocked by the firewall — **skip it silently** rather than reporting it as broken.
 
 #### Step 3: Classify Results
 
@@ -107,16 +125,15 @@ Group broken links by **top-level content section** based on file path. The sect
 - `docs/techdocs/` — TechDocs (upstream: cncf/techdocs)
 - Everything else — Root / Other
 
-For each section that has broken or possibly transient links, search for an existing open issue with the label `broken-link` and a title matching that section:
+For each section that has broken or possibly transient links, search for an existing open issue with the label `broken-link` and a title matching that section. Use the GitHub MCP tools for all issue operations (the `gh` CLI is not authenticated in this environment):
 
-```bash
-gh issue list --label broken-link --state open --limit 100
-```
+1. Use `list_issues` with `owner: "cncf"`, `repo: "contribute-site"`, label filter `broken-link`, and state `open` to find existing section issues
+2. Match by title prefix: `Broken links: <Section Name>`
 
 **For each section with problems:**
 
-- If an issue for that section already exists, update its body
-- If no issue exists, create a new one with the `broken-link` label
+- If an issue for that section already exists, update its body using the `update_issue` tool
+- If no issue exists, create a new one using the `create_issue` tool with the `broken-link` label
 - Title format: `Broken links: <Section Name>`
   - Example: `Broken links: Community`, `Broken links: Blog`, `Broken links: TechDocs`
 
@@ -146,7 +163,7 @@ Last run: [Workflow Run](https://github.com/${{ github.repository }}/actions/run
 - Z links checked successfully
 ```
 
-**For sections where all links are now OK:** if an issue for that section is open, close it with a comment saying all links in that section are now valid.
+**For sections where all links are now OK:** if an issue for that section is open, close it using `update_issue` (set `state: "closed"`) with a comment saying all links in that section are now valid.
 
 If all links across the entire site are OK and no issues exist, exit silently.
 
@@ -185,11 +202,13 @@ These domains are known to have intermittent availability, rate-limit automated 
 
 1. Scan ALL markdown files in the repo — this is a nightly full scan
 2. Include synced `docs/techdocs/` content if the sync script ran successfully
-3. Create or update ONE issue per content section (with `broken-link` label)
-4. Do not fail the workflow — use issues for feedback
-5. Be concise — developers should be able to fix issues quickly from the report
-6. Close section issues when all links in that section are valid
-7. For files under `docs/techdocs/`, also label with `techdocs-upstream`
+3. Create or update ONE issue per content section using MCP tools (`create_issue` / `update_issue`) — do NOT use `gh` CLI for issue operations
+4. Use the `broken-link` label on all issues
+5. Do not fail the workflow — use issues for feedback
+6. Be concise — developers should be able to fix issues quickly from the report
+7. Close section issues when all links in that section are valid
+8. For files under `docs/techdocs/`, also label with `techdocs-upstream`
+9. Skip external URLs that return `000` (firewall-blocked domains) — do not report them
 
 ### Exit Conditions
 
