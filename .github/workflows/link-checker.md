@@ -36,7 +36,9 @@ safe-outputs:
   add-labels:
     allowed: [broken-link, techdocs-upstream]
   create-issue:
+    max: 10
   update-issue:
+    max: 10
 
 tools:
   github:
@@ -173,6 +175,7 @@ Skip these URLs entirely — do not check or report them:
 
 - `^https?://localhost` — local development URLs
 - URLs containing `?no-link-check` — explicitly opted out
+- `mailto:` links and bare email addresses (e.g., `projects@cncf.io`) — not web links
 
 ### Domain-Specific Knowledge
 
