@@ -231,7 +231,7 @@ Cluster and workloads operate actions are evaluated against access control polic
 
 ### Multi-factor Authentication | `CNSC-14`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`
+**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
@@ -276,6 +276,12 @@ HSMs are used to physically protect cryptographic secrets with an encryption key
 - If this is not possible, software-based credential managers should be used.
 
 
+**See Also**
+
+- [`CNSC-16`](#cnsc-16)
+- [`CNSC-19`](#cnsc-19)
+
+
 ---
 
 
@@ -303,6 +309,12 @@ Secrets should have a short expiration period or time to live
 **Recommendations**
 
 - Leverage tool-specific capabilities of secret manager
+
+
+**See Also**
+
+- [`CNSC-19`](#cnsc-19)
+- [`CNSC-15`](#cnsc-15)
 
 
 ---
@@ -387,6 +399,12 @@ Long-lived secrets adhere to periodic rotation and revocation
 - Long-lived secrets are not recommended, but some capabilities require them
 
 
+**See Also**
+
+- [`CNSC-15`](#cnsc-15)
+- [`CNSC-16`](#cnsc-16)
+
+
 ---
 
 
@@ -433,30 +451,6 @@ Secrets are distributed through secured communication channels protected commens
 | Reference ID | Remarks |
 |--------------|----------|
 | AC-16 | Security and Privacy Attributes |
-
-
----
-
-
-
-<a id="cnsc-208"></a>
-
-### Multi-factor Authentication | `CNSC-208`
-
-**Originating Document**: `Cloud Native Security Whitepaper v2.0`
-
-
-**Objective**
-
-Identity federation uses multi-factor authentication for human users
-
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-2(1)(2) | Identification and Authentication (organizational Users) |
 
 
 ---

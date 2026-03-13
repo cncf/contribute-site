@@ -160,6 +160,7 @@ guidelines:
   family: Access
   applicability:
   - CNSWP-v1.0
+  - CNSWP-v2.0
 - id: CNSC-15
   title: HSMs Protection of Cryptographic Secrets
   objective: HSMs are used to physically protect cryptographic secrets with an encryption key residing in the HSM
@@ -174,6 +175,9 @@ guidelines:
   applicability:
   - CNSWP-v1.0
   - CNSWP-v2.0
+  see-also:
+  - CNSC-16
+  - CNSC-19
 - id: CNSC-16
   title: Secrets Management
   objective: Secrets should have a short expiration period or time to live
@@ -188,6 +192,9 @@ guidelines:
   applicability:
   - CNSWP-v1.0
   - CNSWP-v2.0
+  see-also:
+  - CNSC-19
+  - CNSC-15
 - id: CNSC-17
   title: Secrets Lifecycle Management
   objective: Time to live and expiration period on secrets is verified to prevent reuse
@@ -228,6 +235,9 @@ guidelines:
   applicability:
   - CNSWP-v1.0
   - CNSWP-v2.0
+  see-also:
+  - CNSC-15
+  - CNSC-16
 - id: CNSC-20
   title: Secrets Protection
   objective: Secrets are distributed through secured communication channels protected commensurate with the level of access or data they are protecting
@@ -254,15 +264,4 @@ guidelines:
   family: Access
   applicability:
   - CNSWP-v1.0
-  - CNSWP-v2.0
-- id: CNSC-208
-  title: Multi-factor Authentication
-  objective: Identity federation uses multi-factor authentication for human users
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: IA-2(1)(2)
-      remarks: Identification and Authentication (organizational Users)
-  family: Access
-  applicability:
   - CNSWP-v2.0
