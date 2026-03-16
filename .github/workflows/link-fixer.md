@@ -106,7 +106,7 @@ Note excluded files for the summary comment but take no action on them.
 For each remaining file path, search for an existing open pull request in this repository with a title matching:
 
 ```
-fix: correct broken links in <filename> [skip netlify]
+fix: correct broken links in <filename>
 ```
 
 Use the GitHub MCP `list_pull_requests` tool with state `open` to search. Match by checking if any open PR title contains `correct broken links in <filename>` (where `<filename>` is the basename of the file, e.g., `marketing.md`).
@@ -128,7 +128,7 @@ For each remaining file, process it **one at a time**. For each file:
    c. If you cannot find a valid replacement, **do not guess** — skip that link and note it in the summary
 3. **Edit the file** with only the corrected URLs — do not change any surrounding content, formatting, or structure
 4. **Create a pull request** with:
-   - **Title:** `fix: correct broken links in <filename> [skip netlify]`
+   - **Title:** `fix: correct broken links in <filename>`
    - **Branch name:** `fix/broken-links-<filename-without-extension>`
    - **Body:**
      ```
@@ -140,8 +140,6 @@ For each remaining file, process it **one at a time**. For each file:
      | old-url-2 | — | ⚠️ Could not resolve |
 
      Contributes to #<triggering-issue-number>
-
-     > **Note:** No deploy preview is generated for link-only fixes. URLs have been verified directly.
      ```
 5. **Reset your working tree** before moving to the next file — each PR must be independent
 
