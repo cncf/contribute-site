@@ -1,6 +1,7 @@
 [build]
 publish = "build"
 command = "npm run build:preview"
+ignore = "echo $BRANCH | grep -qE '^fix/broken-links-' && exit 0 || exit 1"
 
 [context.production]
 command = "npm run build:production"
