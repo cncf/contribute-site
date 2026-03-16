@@ -81,11 +81,11 @@ There are several tools and projects aimed at providing secret scanning services
 
 ### Code scanning (recommended)
 
-Code scanning is an automated security test to identify vulnerabilities and errors in the source code without actually compiling or executing the code. This is a key testing strategy to shift security testing left and we recommend configuring code scanning and utilizing its insights in your projects. There are several tools (both commercial and open source) available to perform the code scanning or an array of languages and technologies. GitHub also provides code scanning functionalities, which can be seen in their documentation - [GitHub Docs - Automatically scanning your code for vulnerabilities and errors](https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning).
+Code scanning is an automated security test to identify vulnerabilities and errors in the source code without actually compiling or executing the code. This is a key testing strategy to shift security testing left and we recommend configuring code scanning and utilizing its insights in your projects. There are several tools (both commercial and open source) available to perform the code scanning or an array of languages and technologies. GitHub also provides code scanning functionalities, which can be seen in their documentation - [GitHub Docs - About code scanning](https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning).
 
 In addition to scanning your code for identifying vulnerabilities and errors, managing the vulnerabilities dependencies is also important. [Dependabot](https://github.com/dependabot) is one tool that helps in managing vulnerabilities in dependencies by automatically raising a pull request to update vulnerable versions to secure versions of that dependency. These pull requests can be then analyzed, and further action can be taken. Further details of Dependabot and configuring it in your project code repository can be found at [GitHub Docs - Automatically updating dependencies with known vulnerabilities with Dependabot security updates](https://docs.github.com/en/code-security/dependabot/dependabot-security-updates).
 
-For further information on securing the code repository, we recommend reviewing the **GitOps section** of the [CNCF Cloud Native Security Whitepaper](https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/v2/cloud-native-security-whitepaper.md#gitopsnew-in-v2) and the **Control Environments** sections of the [CNCF Software Supply Chain Best Practices paper](https://github.com/cncf/tag-security/blob/main/community/working-groups/supply-chain-security/supply-chain-security-paper/CNCF_SSCP_v1.pdf)
+For further information on securing the code repository, we recommend reviewing the **GitOps section** of the [CNCF Cloud Native Security Whitepaper](https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/v2/cloud-native-security-whitepaper.md#gitopsnew-in-v2) and the **Control Environments** sections of the CNCF Software Supply Chain Best Practices paper[[2]]
 
 ## 2. Self-assessment
 
@@ -198,7 +198,7 @@ The criteria of best practices badging is defined at [Badging Criteria - BadgeAp
 
 ## 6. OpenSSF Security Scorecards
 
-The [OpenSSF Scorecards](https://securityscorecards.dev/) project helps quickly assess your project for risky practices. You can run the tool via the CLI manually or integrate it into your build [via a GitHub Action](https://securityscorecards.dev/#using-the-github-action). There are a variety of checks that are executed by default and the tool is even extensible to allow you to add your own checks. The CNCF highly recommends that projects enable this tool by default and it is integrated into CNCF onboarding tools such as [CLOMonitor](https://clomonitor.io/) or external tools such as deps.dev and more.
+The OpenSSF Scorecards[[6]] project helps quickly assess your project for risky practices. You can run the tool via the CLI manually or integrate it into your build [via a GitHub Action](https://securityscorecards.dev/#using-the-github-action). There are a variety of checks that are executed by default and the tool is even extensible to allow you to add your own checks. The CNCF highly recommends that projects enable this tool by default and it is integrated into CNCF onboarding tools such as CLOMonitor[[7]] or external tools such as deps.dev and more.
 
 ## References
 
