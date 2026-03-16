@@ -51,7 +51,7 @@ CNCF Technical Advisory Groups (TAGs) are responsible for overseeing and coordin
 
 Although TAGs are designed to focus on specific areas, you can begin contributing through working groups (WGs) that operate under the TAGs with even more narrow scopes. WGs are community-driven groups that encourage ongoing collaboration in specific areas of interest.
 
-Learn more about [CNCF TAGs](https://github.com/cncf/toc/blob/main/tags/cncf-tags.md) and view a [list of the CNCF TAGs](https://github.com/cncf/toc/tree/main/tags).
+Learn more about [CNCF TAGs](https://github.com/cncf/toc/tree/main/tags) and view a [list of the CNCF TAGs](https://github.com/cncf/toc/tree/main/tags).
 
 ### Community Groups
 
