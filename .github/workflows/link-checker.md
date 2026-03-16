@@ -39,6 +39,7 @@ safe-outputs:
     max: 10
   update-issue:
     max: 10
+    target: "*"
 
 tools:
   github:
