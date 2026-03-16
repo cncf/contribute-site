@@ -141,7 +141,13 @@ For each section that has broken or possibly transient links, search for an exis
 
 **For each section with problems:**
 
-- If an issue for that section already exists, update its body using the `update_issue` tool
+- If an issue for that section already exists:
+  - Read the existing issue body
+  - For any links that were previously listed but are now OK (returning 200), check them off by changing `- [ ]` to `- [x]` and appending `✅ Fixed` to the line
+  - Add any newly broken links that were not in the previous body as unchecked `- [ ]` items
+  - Remove any `- [x]` items that have been checked off for more than one run cycle (they are resolved and no longer need tracking)
+  - Update the issue body using the `update_issue` tool with the merged result
+  - Update the Summary counts and the Last run link
 - If no issue exists, create a new one using the `create_issue` tool with the `broken-link` label
 - Title format: `Broken links: <Section Name>`
   - Example: `Broken links: Community`, `Broken links: Blog`, `Broken links: TechDocs`

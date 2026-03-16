@@ -630,7 +630,7 @@ meetings, promoting the group, and coordinating the creation of initiatives.
 - SHOULD remain active and responsive in their role.
 
 
-[Community Group Organizer Requirements]: https://github.com/cncf/communitygroups/blob/main/organizer_roles.md
+[Community Group Organizer Requirements]: https://github.com/cncf/communitygroups/blob/main/organizers.md
 
 
 #### Duties
