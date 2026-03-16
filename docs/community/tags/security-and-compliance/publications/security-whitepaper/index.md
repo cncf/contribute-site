@@ -1207,7 +1207,7 @@ towards such a system involves following these guidelines in cloud native contex
 8. Security limitations of a system are explainable
 
 For more details on these guidelines, please refer to this
-page: [Secure Defaults: Cloud Native 8](https://github.com/cncf/tag-security/blob/main/security-whitepaper/secure-defaults-cloud-native-8.md)
+page: [Secure Defaults: Cloud Native 8](https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/secure-defaults-cloud-native-8.md)
 
 ##### Least Privilege
 
@@ -1429,7 +1429,7 @@ The focus is on security, protection, detection, and auto-response wherever poss
 tooling alone, but security tooling that integrates transparently into the development process to enforce security
 policies where fast feedback and most immediate actions to remediate can occur. For specific information on cloud native
 security use cases, refer to the
- [TAG-Security’s use cases listing](https://github.com/cncf/tag-security/blob/main/usecase-personas/README.md).
+ [TAG-Security’s use cases listing](https://github.com/cncf/tag-security/blob/main/community/resources/usecase-personas/README.md).
 
 #### Industries
 ##### Enterprise
@@ -1602,7 +1602,7 @@ version retrospective was addressed throughout the paper.
 
 #### Have Feedback For Us?<sup><em>(New in v2)</em></sup>
 If you have feedback for us please open an issue
-here: [https://github.com/cncf/tag-security/issues/new?assignees=&labels=suggestion%2C+triage-required&template=suggestion.md&title=%5BSuggestion%5D+some+descriptive+title](https://github.com/cncf/tag-security/issues/new?assignees=&labels=suggestion%2C+triage-required&template=suggestion.md&title=%5BSuggestion%5D+some+descriptive+title)
+here: [https://github.com/cncf/tag-security/issues/new/choose](https://github.com/cncf/tag-security/issues/new/choose)
 . Don’t forget to mention the name of the whitepaper and its version number.
 
 #### SSDF v1.1 Mapping<sup><em>(New in v2)</em></sup>
@@ -1763,7 +1763,7 @@ here: [https://github.com/cncf/tag-security/issues/new?assignees=&labels=suggest
 8. [MITRE ATT&CK Matrix For Kubernetes](https://www.microsoft.com/security/blog/2020/04/02/attack-matrix-kubernetes/)
 9. [12-factor](https://12factor.net/)
 10. [9 Box of Controls](https://blogs.blackberry.com/en/2016/03/the-9-box-of-controls)
-11. [Cloud Native Security Lexicon](https://github.com/cncf/tag-security/blob/main/security-lexicon/cloud-native-security-lexicon.md)
+11. [Cloud Native Security Lexicon](https://github.com/cncf/tag-security/blob/main/community/resources/security-lexicon/cloud-native-security-lexicon.md)
 12. [Cloud Native Glossary](https://glossary.cncf.io/)
 13. [CNCF landscape](https://landscape.cncf.io/)
 14. [Four eyes principle](https://www.unido.org/overview/member-states/change-management/faq/what-four-eyes-principle)
@@ -1778,17 +1778,17 @@ here: [https://github.com/cncf/tag-security/issues/new?assignees=&labels=suggest
 23. [OCTAVE](https://www.pluralsight.com/guides/cybersecurity-threat-modeling-with-octave)
 24. [ATT&CK’s Threat matrix for containers](https://medium.com/mitre-engenuity/att-ck-for-containers-now-available-4c2359654bf1)
 25. [NIST Incident Response Guide](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf)
-26. [Secure Defaults: Cloud Native 8](https://github.com/cncf/tag-security/blob/main/security-whitepaper/secure-defaults-cloud-native-8.md)
+26. [Secure Defaults: Cloud Native 8](https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/secure-defaults-cloud-native-8.md)
 27. [Software Supply Chain Best Practices White Paper](https://github.com/cncf/tag-security/blob/main/community/working-groups/supply-chain-security/supply-chain-security-paper/CNCF_SSCP_v1.pdf)
 28. Cloud Native Security Map - [https://cnsmap.netlify.app](https://cnsmap.netlify.app)
 29. [Center for Internet Security (CIS)](https://www.cisecurity.org/)
 30. [OpenSCAP](https://www.open-scap.org/)
-31. [TAG-Security’s use cases listing](https://github.com/cncf/tag-security/blob/main/usecase-personas/README.md)
+31. [TAG-Security’s use cases listing](https://github.com/cncf/tag-security/blob/main/community/resources/usecase-personas/README.md)
 32. European Banking Authority - [https://www.eba.europa.eu/regulation-and-policy/internal-governance/recommendations-on-outsourcing-to-cloud-service-providers)
 33. [European Insurance and Occupational Pensions Authority - Guidelines on outsourcing to cloud service providers](https://www.eiopa.europa.eu/sites/default/files/publications/eiopa_guidelines/guidelines_on_outsourcing_to_cloud_service_providers_en.pdf)
 34. [European Securities and Markets Authority -  CLOUD OUTSOURCING GUIDELINES](https://www.esma.europa.eu/press-news/esma-news/esma-publishes-cloud-outsourcing-guidelines)
 35. [github.com/cncf/surveys/security](https://github.com/cncf/surveys/blob/master/security/README.md)
-36. [Feedback](https://github.com/cncf/tag-security/issues/new?assignees=&labels=suggestion%2C+triage-required&template=suggestion.md&title=%5BSuggestion%5D+some+descriptive+title)
+36. [Feedback](https://github.com/cncf/tag-security/issues/new/choose)
 37. [https://techmonitor.ai/technology/cybersecurity/ransomcloud](https://techmonitor.ai/technology/cybersecurity/ransomcloud)
 38. [https://www.mcafee.com/enterprise/en-ca/security-awareness/ransomware.html](https://www.mcafee.com/enterprise/en-ca/security-awareness/ransomware.html)
 39. [https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf)
@@ -1808,7 +1808,7 @@ here: [https://github.com/cncf/tag-security/issues/new?assignees=&labels=suggest
 
 [^6]: cisecurity.org maintains a listing of benchmarks for hardening
 
-[^7]: It is critical to note that while authentication is available for use, [mutual authentication](https://github.com/cncf/tag-security/blob/main/security-whitepaper/v2/cloud-native-security-whitepaper.md#zero-trust-architecture) is the preferred mechanism to not only verify the client but also the server (outsider versus insider).
+[^7]: It is critical to note that while authentication is available for use, [mutual authentication](https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/v2/cloud-native-security-whitepaper.md#zero-trust-architecture) is the preferred mechanism to not only verify the client but also the server (outsider versus insider).
 
 [^8]: Utilization of a VPN does not guarantee encryption.
 
