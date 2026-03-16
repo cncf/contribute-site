@@ -25,7 +25,7 @@
 # (including synced techdocs content), distinguishes real broken links from
 # transient failures, and creates/updates GitHub issues with actionable results.
 #
-# gh-aw-metadata: {"schema_version":"v2","frontmatter_hash":"2ca77d7554b9e6f9cca7e23e9c475398ebb6b03651cf25faa066fdf4770c1b9d","compiler_version":"v0.57.2","strict":true}
+# gh-aw-metadata: {"schema_version":"v2","frontmatter_hash":"b349b99250e72eb0b01ec681c411cf5f881a901417c7e2efd84ce3f7b1a36eed","compiler_version":"v0.57.2","strict":true}
 
 name: "Link Checker"
 "on":
@@ -317,7 +317,7 @@ jobs:
           mkdir -p /tmp/gh-aw/safeoutputs
           mkdir -p /tmp/gh-aw/mcp-logs/safeoutputs
           cat > /opt/gh-aw/safeoutputs/config.json << 'GH_AW_SAFE_OUTPUTS_CONFIG_EOF'
-          {"add_comment":{"max":1},"add_labels":{"allowed":["broken-link","techdocs-upstream"],"max":3},"create_issue":{"max":10},"missing_data":{},"missing_tool":{},"noop":{"max":1},"update_issue":{"max":10}}
+          {"add_comment":{"max":1},"add_labels":{"allowed":["broken-link"],"max":3},"create_issue":{"max":10},"missing_data":{},"missing_tool":{},"noop":{"max":1},"update_issue":{"max":10}}
           GH_AW_SAFE_OUTPUTS_CONFIG_EOF
           cat > /opt/gh-aw/safeoutputs/tools.json << 'GH_AW_SAFE_OUTPUTS_TOOLS_EOF'
           [
@@ -412,7 +412,7 @@ jobs:
               "name": "add_comment"
             },
             {
-              "description": "Add labels to an existing GitHub issue or pull request for categorization and filtering. Labels must already exist in the repository. For creating new issues with labels, use create_issue with the labels property instead. CONSTRAINTS: Only these labels are allowed: [\"broken-link\" \"techdocs-upstream\"].",
+              "description": "Add labels to an existing GitHub issue or pull request for categorization and filtering. Labels must already exist in the repository. For creating new issues with labels, use create_issue with the labels property instead. CONSTRAINTS: Only these labels are allowed: [\"broken-link\"].",
               "inputSchema": {
                 "additionalProperties": false,
                 "properties": {
@@ -1357,7 +1357,7 @@ jobs:
           GH_AW_ALLOWED_DOMAINS: "*.cncf.io,*.githubusercontent.com,*.kubernetes.io,*.linuxfoundation.org,*.openssf.org,*.owasp.org,api.business.githubcopilot.com,api.enterprise.githubcopilot.com,api.github.com,api.githubcopilot.com,api.individual.githubcopilot.com,api.snapcraft.io,archive.ubuntu.com,azure.archive.ubuntu.com,bestpractices.coreinfrastructure.org,clomonitor.io,clotributor.dev,codeload.github.com,crl.geotrust.com,crl.globalsign.com,crl.identrust.com,crl.sectigo.com,crl.thawte.com,crl.usertrust.com,crl.verisign.com,crl3.digicert.com,crl4.digicert.com,crls.ssl.com,csrc.nist.gov,github-cloud.githubusercontent.com,github-cloud.s3.amazonaws.com,github.com,github.githubassets.com,host.docker.internal,json-schema.org,json.schemastore.org,keyserver.ubuntu.com,kubernetes.io,lfs.github.com,nvlpubs.nist.gov,objects.githubusercontent.com,ocsp.digicert.com,ocsp.geotrust.com,ocsp.globalsign.com,ocsp.identrust.com,ocsp.sectigo.com,ocsp.ssl.com,ocsp.thawte.com,ocsp.usertrust.com,ocsp.verisign.com,openssf.org,owasp.org,packagecloud.io,packages.cloud.google.com,packages.microsoft.com,ppa.launchpad.net,raw.githubusercontent.com,registry.npmjs.org,s.symcb.com,s.symcd.com,security.ubuntu.com,securityscorecards.dev,telemetry.enterprise.githubcopilot.com,todogroup.org,ts-crl.ws.symantec.com,ts-ocsp.ws.symantec.com"
           GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_API_URL: ${{ github.api_url }}
-          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"add_comment\":{\"max\":1},\"add_labels\":{\"allowed\":[\"broken-link\",\"techdocs-upstream\"]},\"create_issue\":{\"allowed_repos\":[\"cncf/techdocs\"],\"max\":10},\"missing_data\":{},\"missing_tool\":{},\"update_issue\":{\"allow_body\":true,\"allowed_repos\":[\"cncf/techdocs\"],\"max\":10,\"target\":\"*\"}}"
+          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"add_comment\":{\"max\":1},\"add_labels\":{\"allowed\":[\"broken-link\"]},\"create_issue\":{\"allowed_repos\":[\"cncf/techdocs\"],\"max\":10},\"missing_data\":{},\"missing_tool\":{},\"update_issue\":{\"allow_body\":true,\"allowed_repos\":[\"cncf/techdocs\"],\"max\":10,\"target\":\"*\"}}"
         with:
           github-token: ${{ secrets.COPILOT_CROSS_REPO_TOKEN }}
           script: |

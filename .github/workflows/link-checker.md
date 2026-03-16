@@ -35,7 +35,7 @@ safe-outputs:
   github-token: ${{ secrets.COPILOT_CROSS_REPO_TOKEN }}
   add-comment:
   add-labels:
-    allowed: [broken-link, techdocs-upstream]
+    allowed: [broken-link]
   create-issue:
     max: 10
     allowed-repos: ["cncf/techdocs"]
