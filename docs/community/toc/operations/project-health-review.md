@@ -26,7 +26,7 @@ The nature of the response determines next steps.
 
 ### No response
 
-In the event that after two months you do not receive a response, you will need to conduct a health and alignment review unless it is obvious the project is abandoned. If the project is abandoned, the TOC member should propose the project for [archive](../process/archiving.md).
+In the event that after two months you do not receive a response, you will need to conduct a health and alignment review unless it is obvious the project is abandoned. If the project is abandoned, the TOC member should propose the project for [archive](https://github.com/cncf/toc/blob/main/process/archiving.md).
 
 The health and alignment review focuses on the following areas:
 - **Project scope and goals remain consistent.**
