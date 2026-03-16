@@ -1602,7 +1602,7 @@ version retrospective was addressed throughout the paper.
 
 #### Have Feedback For Us?<sup><em>(New in v2)</em></sup>
 If you have feedback for us please open an issue
-here: [https://github.com/cncf/tag-security/issues/new/choose](https://github.com/cncf/tag-security/issues/new/choose)
+here: [https://github.com/cncf/toc/issues/new](https://github.com/cncf/toc/issues/new?assignees=&labels=tag%2Fsecurity-and-compliance%2C+needs-triage&template=suggestion.md&title=%5BSuggestion%5D+some+descriptive+title)
 . Don’t forget to mention the name of the whitepaper and its version number.
 
 #### SSDF v1.1 Mapping<sup><em>(New in v2)</em></sup>
