@@ -52,7 +52,7 @@ There are two different options you can adopt to run this website locally:
 
 > Note: `npm start` and `npm run build` automatically sync TechDocs content into
 > `docs/techdocs/` if it does not exist yet. The first run may take longer
-> because it clones [https://github.com/cncf/techdocs](https://github.com/cncf/techdocs).
+> because it clones `https://github.com/cncf/techdocs.git`.
 >
 > Source of truth: [@cncf/techdocs](https://github.com/cncf/techdocs). Treat
 > local `docs/techdocs/` content in this repository as synced/generated.

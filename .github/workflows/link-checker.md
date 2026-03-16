@@ -90,13 +90,14 @@ If no markdown files exist, exit immediately.
 For each markdown file:
 
 1. Extract all links (both `[text](url)` and bare URLs)
-2. Skip any URL that matches the **Ignored URL Patterns** listed below
-3. Categorize remaining links:
+2. **Skip URLs inside backticks** — a URL wrapped in backticks (`` `https://example.com` ``) is an inline code reference, not a clickable link. Do not extract or check these.
+3. Skip any URL that matches the **Ignored URL Patterns** listed below
+4. Categorize remaining links:
    - **Internal links**: relative paths to files in the repo (e.g., `./docs/foo.md`, `../README.md`)
    - **Anchor links**: `#section-name` references
    - **External links**: `https://...` URLs
 
-4. Check each link:
+5. Check each link:
    - **Internal links**: verify the target file exists in the repo using `test -f`
    - **Anchor links**: verify the heading exists in the target file
    - **External links**: use `curl -sL -o /dev/null -w '%{http_code}' --max-time 10` to check
