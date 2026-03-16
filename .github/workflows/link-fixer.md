@@ -39,6 +39,7 @@ safe-outputs:
   create-pull-request:
     max: 10
     draft: true
+    labels: [fixed-link]
     allowed-files:
       - "docs/**"
       - "blog/**"
@@ -99,7 +100,19 @@ Do NOT fix files matching these patterns:
 
 Note excluded files for the summary comment but take no action on them.
 
-#### Step 3: Fix Each Page
+#### Step 3: Skip Files With Existing PRs
+
+For each remaining file path, search for an existing open pull request in this repository with a title matching:
+
+```
+fix: correct broken links in <filename>
+```
+
+Use the GitHub MCP `list_pull_requests` tool with state `open` to search. Match by checking if any open PR title contains `correct broken links in <filename>` (where `<filename>` is the basename of the file, e.g., `marketing.md`).
+
+If an open PR already exists for that file, skip it — do not create a duplicate. Note it in the summary comment as "skipped (existing PR)".
+
+#### Step 4: Fix Each Page
 
 For each remaining file, process it **one at a time**. For each file:
 
@@ -129,7 +142,7 @@ For each remaining file, process it **one at a time**. For each file:
      ```
 5. **Reset your working tree** before moving to the next file — each PR must be independent
 
-#### Step 4: Comment on Parent Issue
+#### Step 5: Comment on Parent Issue
 
 After processing all files, add a comment to the triggering issue:
 
@@ -145,6 +158,9 @@ After processing all files, add a comment to the triggering issue:
 
 **Skipped (excluded paths):**
 - `<file-path>` — synced from cncf/techdocs
+
+**Skipped (existing PRs):**
+- #<pr-number> — `<file-path>`
 ```
 
 ### Rules
