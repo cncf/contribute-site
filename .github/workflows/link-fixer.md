@@ -140,6 +140,8 @@ For each remaining file, process it **one at a time**. For each file:
      | old-url-2 | — | ⚠️ Could not resolve |
 
      Contributes to #<triggering-issue-number>
+
+     > **Note:** No deploy preview is generated for link-only fixes. URLs have been verified directly.
      ```
 5. **Reset your working tree** before moving to the next file — each PR must be independent
 
