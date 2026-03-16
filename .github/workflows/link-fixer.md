@@ -20,6 +20,7 @@ network:
     - defaults
     - github
     - "*.cncf.io"
+    - cncf.io
     - "*.linuxfoundation.org"
     - kubernetes.io
     - "*.kubernetes.io"
