@@ -27,4 +27,4 @@ There is no need to reinvent the wheel. Whatever challenge you are facing today,
 * [Project Governance](/maintainers/governance/)
 * [Project Templates](/maintainers/github/templates/)
 * [Maintainer's Circle](/about/maintainers-circle/)
-* [TAG Contributor Strategy](httsp://cncf.io/contributor-strategy)
+* [TAG Contributor Strategy](https://cncf.io/contributor-strategy)
