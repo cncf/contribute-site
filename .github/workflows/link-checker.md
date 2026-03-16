@@ -32,14 +32,17 @@ network:
     - "*.openssf.org"
 
 safe-outputs:
+  github-token: ${{ secrets.COPILOT_CROSS_REPO_TOKEN }}
   add-comment:
   add-labels:
     allowed: [broken-link, techdocs-upstream]
   create-issue:
     max: 10
+    allowed-repos: ["cncf/techdocs"]
   update-issue:
     max: 10
     target: "*"
+    allowed-repos: ["cncf/techdocs"]
 
 tools:
   github:
@@ -131,7 +134,9 @@ Group broken links by **top-level content section** based on file path. The sect
 
 For each section that has broken or possibly transient links, search for an existing open issue with the label `broken-link` and a title matching that section. Use the GitHub MCP tools for all issue operations (the `gh` CLI is not authenticated in this environment):
 
-1. Use `list_issues` with `owner: "cncf"`, `repo: "contribute-site"`, label filter `broken-link`, and state `open` to find existing section issues
+1. Use `list_issues` with label filter `broken-link` and state `open` to find existing section issues
+   - For `docs/techdocs/` sections: search in `owner: "cncf"`, `repo: "techdocs"`
+   - For all other sections: search in `owner: "cncf"`, `repo: "contribute-site"`
 2. Match by title prefix: `Broken links: <Section Name>`
 
 **For each section with problems:**
@@ -141,9 +146,9 @@ For each section that has broken or possibly transient links, search for an exis
 - Title format: `Broken links: <Section Name>`
   - Example: `Broken links: Community`, `Broken links: Blog`, `Broken links: TechDocs`
 
-**For `docs/techdocs/` issues**, also add the label `techdocs-upstream` and include a note at the top of the issue body:
+**For `docs/techdocs/` issues**, create or update the issue in `cncf/techdocs` (not in this repository) by passing `repo: "cncf/techdocs"` to the `create_issue` or `update_issue` tool. Include a note at the top of the issue body:
 
-> ⚠️ These files are synced from [cncf/techdocs](https://github.com/cncf/techdocs). Fixes should be made in that repository, not here.
+> 🔗 Detected by the [contribute-site link checker](https://github.com/cncf/contribute-site/actions). These links were checked against the content as it appears on [contribute.cncf.io](https://contribute.cncf.io).
 
 Use this format for each issue body:
 
@@ -167,7 +172,7 @@ Last run: [Workflow Run](https://github.com/${{ github.repository }}/actions/run
 - Z links checked successfully
 ```
 
-**For sections where all links are now OK:** if an issue for that section is open, close it using `update_issue` (set `state: "closed"`) with a comment saying all links in that section are now valid.
+**For sections where all links are now OK:** if an issue for that section is open, close it using `update_issue` (set `state: "closed"`). Use the same repo where the issue was created — `cncf/techdocs` for TechDocs sections, `cncf/contribute-site` for everything else.
 
 If all links across the entire site are OK and no issues exist, exit silently.
 
@@ -212,7 +217,7 @@ These domains are known to have intermittent availability, rate-limit automated 
 5. Do not fail the workflow — use issues for feedback
 6. Be concise — developers should be able to fix issues quickly from the report
 7. Close section issues when all links in that section are valid
-8. For files under `docs/techdocs/`, also label with `techdocs-upstream`
+8. For `docs/techdocs/` sections, create issues in `cncf/techdocs` by passing `repo: "cncf/techdocs"` to the safe-output tools
 9. Skip external URLs that return `000` (firewall-blocked domains) — do not report them
 
 ### Exit Conditions
