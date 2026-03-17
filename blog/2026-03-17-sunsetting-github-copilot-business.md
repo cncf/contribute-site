@@ -15,7 +15,7 @@ As we move forward, we are working to simplify our infrastructure and billing. T
 
 Historically, the CNCF provided Copilot Business seats to various contributors. However, our current partnership with GitHub focuses on the Enterprise tier, which offers an expanded feature set and is provided specifically for formal maintainers.
 
-By sunsetting the legacy Business seats, we ensure that we are utilizing our resources efficiently and that all maintainers have access to the highest tier of GitHub's AI tools.
+By sunsetting the legacy Business seats, we ensure we use our resources efficiently and that all maintainers have access to GitHub's highest-tier AI tools.
 
 ## Enterprise vs. Business: What is the difference?
 
