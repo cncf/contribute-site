@@ -1778,7 +1778,7 @@ here: [https://github.com/cncf/toc/issues/new](https://github.com/cncf/toc/issue
 23. [OCTAVE](https://www.pluralsight.com/guides/cybersecurity-threat-modeling-with-octave)
 24. [ATT&CK’s Threat matrix for containers](https://medium.com/mitre-engenuity/att-ck-for-containers-now-available-4c2359654bf1)
 25. [NIST Incident Response Guide](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf)
-26. [Secure Defaults: Cloud Native 8](https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/secure-defaults-cloud-native-8.md)
+26. [Secure Defaults: Cloud Native 8](https://github.com/cncf/contribute-site/blob/main/docs/community/tags/security-and-compliance/publications/secure-defaults-cloud-native-8.md)
 27. [Software Supply Chain Best Practices White Paper](https://github.com/cncf/tag-security/blob/main/community/working-groups/supply-chain-security/supply-chain-security-paper/CNCF_SSCP_v1.pdf)
 28. Cloud Native Security Map - [https://cnsmap.netlify.app](https://cnsmap.netlify.app)
 29. [Center for Internet Security (CIS)](https://www.cisecurity.org/)
