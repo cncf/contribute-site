@@ -89,7 +89,7 @@ You can even track things like who received what swag, ensuring you don't resend
 4. **Use tags:** Tags can be based on interest, subprojects, or whatever makes sense for your project. Let's say you want to find contributors for your next observability feature on the roadmap. If used correctly, tags allow you to identify everyone who's expressed interest in that area.   
 
 These CRMs do lots of cool stuff. Savannah, for instance, allows you to see the impact your swag has on contributor productivity. 
-Another open source CNCF project is the [CHAOSS Project](https://chaoss.community/about/), which is not a CRM, but it does provide metrics, guidelines, and processes for measuring the health of a community. It's not necessary to use CHAOSS or its principles for your project, but it is good to consider the overall [health of your community](/maintainers/community/project-health/) and what you will use to measure that health as the community grows.  
+Another open source CNCF project is the [CHAOSS Project](https://chaoss.community/about/), which is not a CRM, but it does provide metrics, guidelines, and processes for measuring the health of a community. It's not necessary to use CHAOSS or its principles for your project, but it is good to consider the overall [health of your community](/projects/best-practices/community/project-health/) and what you will use to measure that health as the community grows.  
 
 Tool | What it does
 ---|---
