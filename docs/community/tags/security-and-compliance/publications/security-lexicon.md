@@ -504,7 +504,7 @@ environments
 | Definition | Dynamic application security testing ( DAST) is a type of security testing in which tests are performed by attacking an application from the outside. It looks for security vulnerabilities by simulating external attacks on an application while the application is running. Unlike static application security testing tools, DAST tools do not have access or need access to the source code. |
 | Terms | Runtime application scanning, Black box testing |
 | Organizational Use | null |
-| References | https://csrc.nist.gov/glossary/term/dynamic_analysis |
+| References | https://csrc.nist.gov/glossary/term/dast |
 |  | [Go to Table of Content](#index)  |
 
 ### Static Analysis Security Testing ( SAST)
