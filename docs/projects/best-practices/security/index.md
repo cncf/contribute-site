@@ -65,7 +65,7 @@ We recommend that any change to the repository should be introduced as part of a
 
 ### Issue template
 
-Any ideas, bugs or enhancement suggestions reported to the project need to be tracked, and can then be discussed, triaged and prioritized/de-prioritized for implementation. GitHub Issues are one such avenue that allows tracking and managing ideas until they are brought to fruition. We recommend the following template for proposing changes to the project [CNCF TAG Security Project Resouces - Issue Template](https://github.com/cncf/tag-security/blob/main/project-resources/templates/ISSUE_TEMPLATE.md).
+Any ideas, bugs or enhancement suggestions reported to the project need to be tracked, and can then be discussed, triaged and prioritized/de-prioritized for implementation. GitHub Issues are one such avenue that allows tracking and managing ideas until they are brought to fruition. We recommend the following template for proposing changes to the project [CNCF TAG Security Project Resouces - Issue Template](https://github.com/cncf/tag-security/blob/main/community/resources/project-resources/templates/ISSUE_TEMPLATE.md).
 
 ### Commit signing
 
@@ -81,11 +81,11 @@ There are several tools and projects aimed at providing secret scanning services
 
 ### Code scanning (recommended)
 
-Code scanning is an automated security test to identify vulnerabilities and errors in the source code without actually compiling or executing the code. This is a key testing strategy to shift security testing left and we recommend configuring code scanning and utilizing its insights in your projects. There are several tools (both commercial and open source) available to perform the code scanning or an array of languages and technologies. GitHub also provides code scanning functionalities, which can be seen in their documentation - [GitHub Docs - Automatically scanning your code for vulnerabilities and errors](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors).
+Code scanning is an automated security test to identify vulnerabilities and errors in the source code without actually compiling or executing the code. This is a key testing strategy to shift security testing left and we recommend configuring code scanning and utilizing its insights in your projects. There are several tools (both commercial and open source) available to perform the code scanning or an array of languages and technologies. GitHub also provides code scanning functionalities, which can be seen in their documentation - [GitHub Docs - About code scanning](https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning).
 
 In addition to scanning your code for identifying vulnerabilities and errors, managing the vulnerabilities dependencies is also important. [Dependabot](https://github.com/dependabot) is one tool that helps in managing vulnerabilities in dependencies by automatically raising a pull request to update vulnerable versions to secure versions of that dependency. These pull requests can be then analyzed, and further action can be taken. Further details of Dependabot and configuring it in your project code repository can be found at [GitHub Docs - Automatically updating dependencies with known vulnerabilities with Dependabot security updates](https://docs.github.com/en/code-security/dependabot/dependabot-security-updates).
 
-For further information on securing the code repository, we recommend reviewing the **GitOps section** of the [CNCF Cloud Native Security Whitepaper](https://github.com/cncf/tag-security/blob/main/security-whitepaper/v2/cloud-native-security-whitepaper.md#gitopsnew-in-v2) and the **Control Environments** sections of the [CNCF Software Supply Chain Best Practices paper](https://github.com/cncf/tag-security/blob/main/supply-chain-security/supply-chain-security-paper/CNCF_SSCP_v1.pdf)
+For further information on securing the code repository, we recommend reviewing the **GitOps section** of the [CNCF Cloud Native Security Whitepaper](https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/v2/cloud-native-security-whitepaper.md#gitopsnew-in-v2) and the **Control Environments** sections of the CNCF Software Supply Chain Best Practices paper[[2]]
 
 ## 2. Self-assessment
 
@@ -104,7 +104,7 @@ Self-assessment dives into the following aspects of the project to understand th
 7. Secure development practices
 8. Resolving security issues
 
-A template to perform the self assessment is available at [CNCF TAG Security Project Resouces - Self-assessment](https://github.com/cncf/tag-security/blob/main/assessments/guide/self-assessment.md). All the assessments (self-assessment and joint assessment) conducted by TAG Security can be found at TAG Security GitHub repository. As an example, self assessments are available within the dedicated project folders at [Assessments folder of the CNCF TAG Security GitHub repository](https://github.com/cncf/tag-security/tree/main/assessments/projects). Further sections (SECURITY.md in particular) in this document provide some of the pointers to address the gaps and create the necessary process & documentation.
+A template to perform the self assessment is available at [CNCF TAG Security Project Resouces - Self-assessment](https://github.com/cncf/tag-security/blob/main/community/assessments/guide/self-assessment.md). All the assessments (self-assessment and joint assessment) conducted by TAG Security can be found at TAG Security GitHub repository. As an example, self assessments are available within the dedicated project folders at [Assessments folder of the CNCF TAG Security GitHub repository](https://github.com/cncf/tag-security/tree/main/community/assessments/projects). Further sections (SECURITY.md in particular) in this document provide some of the pointers to address the gaps and create the necessary process & documentation.
 
 ## 3. SECURITY.md
 
@@ -120,7 +120,7 @@ This document is an outcome of the self-assessment which articulates all the mea
 
 ## 3.2 Security contacts
 
-This document states who are the personnel to reach out to in case of any security questions regarding the project, including but not limited to the triaging and handling of incoming security issues or security reports. Security contacts could be external participants and are not limited to being the maintainers of the projects. A template for this document is available at [CNCF TAG Security Project Resouces - Security Contacts](https://github.com/cncf/tag-security/blob/main/project-resources/templates/SECURITY_CONTACTS.md)
+This document states who are the personnel to reach out to in case of any security questions regarding the project, including but not limited to the triaging and handling of incoming security issues or security reports. Security contacts could be external participants and are not limited to being the maintainers of the projects. A template for this document is available at [CNCF TAG Security Project Resouces - Security Contacts](https://github.com/cncf/tag-security/blob/main/community/resources/project-resources/templates/SECURITY_CONTACTS.md)
 
 **NOTE**
 
@@ -130,7 +130,7 @@ CNCF could help create a mailing address (through service desk ticket) should pr
 
 Vulnerabilities are sensitive information and exposure of information regarding vulnerabilities without the availability of a patch generates unintended risk for all the consumers of this project, hence it should be handled with caution.
 
-At a minimum, the vulnerability reporting policy projects should include is as follows, A template for this document is available at [CNCF TAG Security Project Resouces - Reporting a Vulnerability](https://github.com/cncf/tag-security/blob/main/project-resources/templates/SECURITY.md#reporting-a-vulnerability):
+At a minimum, the vulnerability reporting policy projects should include is as follows, A template for this document is available at [CNCF TAG Security Project Resouces - Reporting a Vulnerability](https://github.com/cncf/tag-security/blob/main/community/resources/project-resources/templates/SECURITY.md#reporting-a-vulnerability):
 
 1. The medium to report vulnerabilities - Email, Web form etc.
 2. Disclosure timeline
@@ -152,7 +152,7 @@ The vulnerabilities reported to the project are then handled by the security poi
 5. The consequences of any violations
 6. Disclosure timeline
 
-A template for this document is available at [CNCF TAG Security Project Resouces - Embargo Policy](https://github.com/cncf/tag-security/blob/main/project-resources/templates/embargo-policy.md)
+A template for this document is available at [CNCF TAG Security Project Resouces - Embargo Policy](https://github.com/cncf/tag-security/blob/main/community/resources/project-resources/templates/embargo-policy.md)
 
 ## 3.5 Security notifications
 
@@ -168,7 +168,7 @@ The vulnerabilities may need to be reported to certain stakeholders, and for thi
 8. Timeline of events associated with this notification
 9. Any additional information relevant for this notification
 
-A template for this notification is available at [CNCF TAG Security Project Resouces - Embargo](https://github.com/cncf/tag-security/blob/main/project-resources/templates/embargo.md)
+A template for this notification is available at [CNCF TAG Security Project Resouces - Embargo](https://github.com/cncf/tag-security/blob/main/community/resources/project-resources/templates/embargo.md)
 
 ## 4. Incident Response
 
@@ -188,7 +188,7 @@ Incidence response primarily states how the vulnerability is triaged, replicated
   1. If a CVE is already present, request the CVE
 4. Patch publication and Notification
 
-In addition to the above, you could also consider adding relevant timelines, including but not limited to third party disclosure timelines. A template for the incident management process is available at [CNCF TAG Security Project Resouces - Incident Response](https://github.com/cncf/tag-security/blob/main/project-resources/templates/incident-response.md)
+In addition to the above, you could also consider adding relevant timelines, including but not limited to third party disclosure timelines. A template for the incident management process is available at [CNCF TAG Security Project Resouces - Incident Response](https://github.com/cncf/tag-security/blob/main/community/resources/project-resources/templates/incident-response.md)
 
 ## 5. OpenSSF best practices badging
 
@@ -198,7 +198,7 @@ The criteria of best practices badging is defined at [Badging Criteria - BadgeAp
 
 ## 6. OpenSSF Security Scorecards
 
-The [OpenSSF Scorecards](https://securityscorecards.dev/) project helps quickly assess your project for risky practices. You can run the tool via the CLI manually or integrate it into your build [via a GitHub Action](https://securityscorecards.dev/#using-the-github-action). There are a variety of checks that are executed by default and the tool is even extensible to allow you to add your own checks. The CNCF highly recommends that projects enable this tool by default and it is integrated into CNCF onboarding tools such as [CLOMonitor](https://clomonitor.io/) or external tools such as deps.dev and more.
+The OpenSSF Scorecards[[6]] project helps quickly assess your project for risky practices. You can run the tool via the CLI manually or integrate it into your build [via a GitHub Action](https://securityscorecards.dev/#using-the-github-action). There are a variety of checks that are executed by default and the tool is even extensible to allow you to add your own checks. The CNCF highly recommends that projects enable this tool by default and it is integrated into CNCF onboarding tools such as CLOMonitor[[7]] or external tools such as deps.dev and more.
 
 ## References
 
@@ -231,10 +231,10 @@ The [OpenSSF Scorecards](https://securityscorecards.dev/) project helps quickly 
 
 This paper is influenced by the publications of CNCF Technical Advisory Group for Security, particularly the Cloud Native Security Whitepaper[[1]] and Software Supply Chain Security Best Practices Whitepaper,[[2]] and CNCF Cloud Native Security Map[[3]], programs and initiatives by OpenSSF[[4]] [[6]]. Our sincere gratitude for the contributors of these programs and publications, and to Emily Fox for suggesting the creation of this paper, to the contributors and reviewers of this paper.
 
-[1]: https://github.com/cncf/tag-security/blob/main/security-whitepaper/v2/cloud-native-security-whitepaper.md
-[2]: https://github.com/cncf/tag-security/blob/main/supply-chain-security/supply-chain-security-paper/CNCF_SSCP_v1.pdf
+[1]: https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/v2/cloud-native-security-whitepaper.md
+[2]: https://github.com/cncf/tag-security/blob/main/community/working-groups/supply-chain-security/supply-chain-security-paper/CNCF_SSCP_v1.pdf
 [3]: https://cnsmap.github.io/
 [4]: https://bestpractices.coreinfrastructure.org/en
-[5]: https://github.com/cncf/tag-security/blob/main/PUBLICATIONS.md
+[5]: https://github.com/cncf/tag-security/blob/main/community/publications/README.md
 [6]: https://securityscorecards.dev/
 [7]: https://clomonitor.io/
