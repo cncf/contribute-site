@@ -2,7 +2,7 @@
 description: |
   Fixes broken links detected by the link checker. Triggered when a
   broken-link section issue is created or updated. Reads the issue,
-  fixes the links in each page, and creates one draft PR per page.
+  fixes the links in each page, and creates one PR per page.
 
 on:
   issues:
@@ -39,7 +39,7 @@ network:
 safe-outputs:
   create-pull-request:
     max: 10
-    draft: true
+    draft: false
     labels: [fixed-link]
     allowed-files:
       - "docs/**"
@@ -64,7 +64,7 @@ Your name is ${{ github.workflow }}. You are a **Broken Link Fixer** for the rep
 
 ### Mission
 
-When the link checker creates or updates a broken-link section issue, fix the broken links and create one draft PR per page. Each PR should contain only the corrected URLs for a single file — nothing else.
+When the link checker creates or updates a broken-link section issue, fix the broken links and create one PR per page. Each PR should contain only the corrected URLs for a single file — nothing else.
 
 ### Prerequisites
 
@@ -106,7 +106,7 @@ Note excluded files for the summary comment but take no action on them.
 For each remaining file path, search for an existing open pull request in this repository with a title matching:
 
 ```
-fix: correct broken links in <filename> [skip netlify]
+fix: correct broken links in <filename>
 ```
 
 Use the GitHub MCP `list_pull_requests` tool with state `open` to search. Match by checking if any open PR title contains `correct broken links in <filename>` (where `<filename>` is the basename of the file, e.g., `marketing.md`).
@@ -128,7 +128,7 @@ For each remaining file, process it **one at a time**. For each file:
    c. If you cannot find a valid replacement, **do not guess** — skip that link and note it in the summary
 3. **Edit the file** with only the corrected URLs — do not change any surrounding content, formatting, or structure
 4. **Create a pull request** with:
-   - **Title:** `fix: correct broken links in <filename> [skip netlify]`
+   - **Title:** `fix: correct broken links in <filename>`
    - **Branch name:** `fix/broken-links-<filename-without-extension>`
    - **Body:**
      ```
@@ -140,8 +140,6 @@ For each remaining file, process it **one at a time**. For each file:
      | old-url-2 | — | ⚠️ Could not resolve |
 
      Contributes to #<triggering-issue-number>
-
-     > **Note:** No deploy preview is generated for link-only fixes. URLs have been verified directly.
      ```
 5. **Reset your working tree** before moving to the next file — each PR must be independent
 
@@ -175,3 +173,4 @@ After processing all files, add a comment to the triggering issue:
 5. **Verify every replacement.** Every new URL must return a 200 status before you include it in a PR.
 6. **Do not guess.** If you cannot find a valid replacement, skip the link and report it in the summary comment.
 7. **Each PR must be independent.** Reset your working tree between files so PRs do not contain changes from other files.
+8. **Never use closing keywords.** Do not use `Fixes`, `Closes`, or `Resolves` in PR bodies — each PR fixes only one file, not the entire issue. Use only `Contributes to #<number>`.
