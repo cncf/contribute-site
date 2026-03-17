@@ -118,7 +118,7 @@ For a quick walkthrough, check out this [short video tutorial](https://www.youtu
 
 :::tip Take the Maintainer Survey
 
-**Help us help you**: [maintainers-survey.cncf.io](http://maintainers-survey.cncf.io)
+**Help us help you**: [maintainers-survey.cncf.io](https://maintainers-survey.cncf.io)
 
 :::
 
