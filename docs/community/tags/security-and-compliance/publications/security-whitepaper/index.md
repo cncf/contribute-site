@@ -1808,7 +1808,7 @@ here: [https://github.com/cncf/toc/issues/new](https://github.com/cncf/toc/issue
 
 [^6]: cisecurity.org maintains a listing of benchmarks for hardening
 
-[^7]: It is critical to note that while authentication is available for use, [mutual authentication](https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/v2/cloud-native-security-whitepaper.md#zero-trust-architecture) is the preferred mechanism to not only verify the client but also the server (outsider versus insider).
+[^7]: It is critical to note that while authentication is available for use, [mutual authentication](https://github.com/cncf/contribute-site/blob/main/docs/community/tags/security-and-compliance/publications/security-whitepaper/index.md#zero-trust-architecture) is the preferred mechanism to not only verify the client but also the server (outsider versus insider).
 
 [^8]: Utilization of a VPN does not guarantee encryption.
 
