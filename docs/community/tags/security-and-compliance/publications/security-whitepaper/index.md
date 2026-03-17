@@ -1207,7 +1207,7 @@ towards such a system involves following these guidelines in cloud native contex
 8. Security limitations of a system are explainable
 
 For more details on these guidelines, please refer to this
-page: [Secure Defaults: Cloud Native 8](https://github.com/cncf/tag-security/blob/main/community/resources/security-whitepaper/secure-defaults-cloud-native-8.md)
+page: [Secure Defaults: Cloud Native 8](https://github.com/cncf/contribute-site/blob/main/docs/community/tags/security-and-compliance/publications/secure-defaults-cloud-native-8.md)
 
 ##### Least Privilege
 
