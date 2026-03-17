@@ -1763,7 +1763,7 @@ here: [https://github.com/cncf/toc/issues/new](https://github.com/cncf/toc/issue
 8. [MITRE ATT&CK Matrix For Kubernetes](https://www.microsoft.com/security/blog/2020/04/02/attack-matrix-kubernetes/)
 9. [12-factor](https://12factor.net/)
 10. [9 Box of Controls](https://blogs.blackberry.com/en/2016/03/the-9-box-of-controls)
-11. [Cloud Native Security Lexicon](https://github.com/cncf/tag-security/blob/main/community/resources/security-lexicon/cloud-native-security-lexicon.md)
+11. [Cloud Native Security Lexicon](https://github.com/cncf/contribute-site/blob/main/docs/community/tags/security-and-compliance/publications/security-lexicon.md)
 12. [Cloud Native Glossary](https://glossary.cncf.io/)
 13. [CNCF landscape](https://landscape.cncf.io/)
 14. [Four eyes principle](https://www.unido.org/overview/member-states/change-management/faq/what-four-eyes-principle)
