@@ -1788,7 +1788,7 @@ here: [https://github.com/cncf/toc/issues/new](https://github.com/cncf/toc/issue
 33. [European Insurance and Occupational Pensions Authority - Guidelines on outsourcing to cloud service providers](https://www.eiopa.europa.eu/sites/default/files/publications/eiopa_guidelines/guidelines_on_outsourcing_to_cloud_service_providers_en.pdf)
 34. [European Securities and Markets Authority -  CLOUD OUTSOURCING GUIDELINES](https://www.esma.europa.eu/press-news/esma-news/esma-publishes-cloud-outsourcing-guidelines)
 35. [github.com/cncf/surveys/security](https://github.com/cncf/surveys/blob/master/security/README.md)
-36. [Feedback](https://github.com/cncf/tag-security/issues/new/choose)
+36. [Feedback](https://github.com/cncf/toc/issues/new?assignees=&labels=tag%2Fsecurity-and-compliance%2C+needs-triage&template=suggestion.md&title=%5BSuggestion%5D+some+descriptive+title)
 37. [https://techmonitor.ai/technology/cybersecurity/ransomcloud](https://techmonitor.ai/technology/cybersecurity/ransomcloud)
 38. [https://www.mcafee.com/enterprise/en-ca/security-awareness/ransomware.html](https://www.mcafee.com/enterprise/en-ca/security-awareness/ransomware.html)
 39. [https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf)
