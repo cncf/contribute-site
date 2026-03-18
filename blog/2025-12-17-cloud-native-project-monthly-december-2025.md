@@ -97,7 +97,7 @@ We have another tool for our utility belt! To help us continue to improve shippi
 
 To sign up for your project, visit [https://us.kusari.cloud/signup](https://us.kusari.cloud/signup) and go for the free trial. Kusari and CNCF staff will ensure the full product is unlocked for all CNCF GitHub orgs.
 
-Here are docs for any curious: [https://docs.kusari.cloud/docs/Inspector/](https://docs.kusari.cloud/docs/Inspector/) and if you have any questions, we've been told that y'all can reach out directly by posting to https://github.com/kusaridev/community!   
+Here are docs for any curious: [https://docs.kusari.cloud/docs/Inspector/](https://docs.kusari.cloud/docs/Inspector/) and if you have any questions, we've been told that y'all can reach out directly by posting to [https://github.com/kusaridev/community](https://github.com/kusaridev/community)!   
 
 ## 🐳 Docker Hardened Images free for projects
 
@@ -119,7 +119,7 @@ We've identified a small number of cases where third-party services may not yet 
 
 :::tip Take the Maintainer Survey
 
-**Help us help you**: [maintainers-survey.cncf.io](http://maintainers-survey.cncf.io)
+**Help us help you**: [maintainers-survey.cncf.io](https://maintainers-survey.cncf.io)
 
 :::
 
