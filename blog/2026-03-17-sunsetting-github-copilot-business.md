@@ -55,11 +55,11 @@ If you are an eligible maintainer and have not yet moved to the Enterprise tier,
 The removal of the legacy Business seats will begin in early April 2026, shortly after KubeCon Europe. We encourage all maintainers to check their seat status and submit requests for Enterprise access before this time.
 :::
 
-If you have any questions or encounter issues during this transition, please open a ticket at the [CNCF Service Desk](http://servicedesk.cncf.io/).
+If you have any questions or encounter issues during this transition, please open a ticket at the [CNCF Service Desk](https://servicedesk.cncf.io/).
 
 ## References
 
 - [CNCF Maintainers Dashboard](https://maintainers.cncf.io/) — Verify your maintainer status
 - [GitHub Copilot Plans Comparison](https://docs.github.com/en/copilot/get-started/plans) — Feature comparison between Business and Enterprise tiers
 - [Now Available: Free GitHub Copilot Enterprise for CNCF Maintainers](https://contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers/) — Original announcement and request instructions
-- [CNCF Service Desk](http://servicedesk.cncf.io/) — Submit support requests and access tickets
+- [CNCF Service Desk](https://servicedesk.cncf.io/) — Submit support requests and access tickets
