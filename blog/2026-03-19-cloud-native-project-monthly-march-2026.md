@@ -59,7 +59,7 @@ tl;dr? A repo (`.project`) under your Project's GH Org that houses as much proje
 
 Over the next couple of months, the projects team will be rolling this out to every project under the CNCF. Staff will be the ones bootstrapping each project’s repo to try and minimize the amount of work on maintainers. We hope this will actually minimize the amount of toil maintainers have with keeping data up to date and being able to own their own metadata all in one place.
 
-Please email [projects@cncf.io](mailto:projects@cncf.io) or come find Jeefy at the Project Pavilion in Amsterdam if you have questions.
+Please email [projects@cncf.io](mailto:projects@cncf.io) or come find us at the Project Pavilion in Amsterdam if you have questions.
 
 ## Looking for a New Role? Check out GitJobs
 
