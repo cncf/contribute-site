@@ -32,7 +32,7 @@ network:
     - "*.openssf.org"
 
 safe-outputs:
-  github-token: ${{ secrets.COPILOT_CROSS_REPO_TOKEN }}
+  github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
   add-comment:
   add-labels:
     allowed: [broken-link]
