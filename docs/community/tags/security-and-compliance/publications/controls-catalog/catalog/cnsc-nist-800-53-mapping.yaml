@@ -1,0 +1,1261 @@
+# Validate: cue vet -c -d '#MappingDocument' github.com/gemaraproj/gemara@v1.0.0-rc.1 this-file.catalog
+title: Cloud Native Security Controls (CNSC) to NIST SP 800-53 Rev. 5 Mapping
+metadata:
+  id: CNSC-NIST-800-53-MAPPING
+  type: MappingDocument
+  gemara-version: '1.0.0-rc.1'
+  version: 1.0.0
+  description: This document maps the Cloud Native Security Controls Catalog to NIST 800-53 SP Rev.5 Guidelines.
+  author:
+    id: tag-sc
+    name: TAG Security and Compliance
+    type: Software Assisted
+  mapping-references:
+  - id: CNSC-CATALOG
+    title: Cloud Native Security Controls Catalog (contribute-site)
+    version: 1.1.0
+    description: Layer 1 guidance catalog; CNSC guideline identifiers.
+    url: https://github.com/cncf/contribute-site/tree/main/docs/community/tags/security-and-compliance/publications/controls-catalog/catalog
+  - id: NIST-800-53
+    title: NIST SP 800-53 Rev. 5
+    version: rev5
+    description: Security and Privacy Controls for Information Systems and Organizations.
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+source-reference:
+  reference-id: CNSC-CATALOG
+  entry-type: Guideline
+target-reference:
+  reference-id: NIST-800-53
+  entry-type: Control
+mappings:
+- id: CNSC-1-IA-5-7
+  source: CNSC-1
+  targets:
+  - entry-id: IA-5(7)
+  relationship: relates-to
+  remarks: Authenticator Management
+- id: CNSC-10-AC-3-13
+  source: CNSC-10
+  targets:
+  - entry-id: AC-3(13)
+  relationship: relates-to
+  remarks: Access Enforcement
+- id: CNSC-100-IA-3-1
+  source: CNSC-100
+  targets:
+  - entry-id: IA-3(1)
+  relationship: relates-to
+  remarks: Cryptographic Bidirectional Authentication
+- id: CNSC-101-SI-7
+  source: CNSC-101
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-102-SI-7
+  source: CNSC-102
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-103-SI-7
+  source: CNSC-103
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-104-SI-7
+  source: CNSC-104
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: System and Information Integrity
+- id: CNSC-105-RA-5
+  source: CNSC-105
+  targets:
+  - entry-id: RA-5
+  relationship: relates-to
+  remarks: Vulnerability Monitoring and Scanning
+- id: CNSC-105-SA-3
+  source: CNSC-105
+  targets:
+  - entry-id: SA-3
+  relationship: relates-to
+  remarks: System Development Life Cycle
+- id: CNSC-106-SI-7
+  source: CNSC-106
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: System and Information Integrity
+- id: CNSC-107-SI-2-3
+  source: CNSC-107
+  targets:
+  - entry-id: SI-2(3)
+  relationship: relates-to
+  remarks: System and Information Integrity
+- id: CNSC-108-SC-12-3
+  source: CNSC-108
+  targets:
+  - entry-id: SC-12(3)
+  relationship: relates-to
+  remarks: Systems and Communication Protection
+- id: CNSC-109-SI-2-3
+  source: CNSC-109
+  targets:
+  - entry-id: SI-2(3)
+  relationship: relates-to
+  remarks: System and Information Integrity
+- id: CNSC-11-SC-7-19
+  source: CNSC-11
+  targets:
+  - entry-id: SC-7(19)
+  relationship: relates-to
+  remarks: Boundary Protection
+- id: CNSC-110-PL-1
+  source: CNSC-110
+  targets:
+  - entry-id: PL-1
+  relationship: relates-to
+  remarks: Policy and Procedures
+- id: CNSC-112-AC-6-3
+  source: CNSC-112
+  targets:
+  - entry-id: AC-6(3)
+  relationship: relates-to
+  remarks: Least Privilege
+- id: CNSC-113-SC-12-2
+  source: CNSC-113
+  targets:
+  - entry-id: SC-12(2)
+  relationship: relates-to
+  remarks: Cryptographic Key Establishment and Management | Symmetric and Asymmetric Keys
+- id: CNSC-113-SC-12-3
+  source: CNSC-113
+  targets:
+  - entry-id: SC-12(3)
+  relationship: relates-to
+  remarks: Cryptographic Key Establishment and Management | Symmetric and Asymmetric Keys
+- id: CNSC-114-SI-2-3
+  source: CNSC-114
+  targets:
+  - entry-id: SI-2(3)
+  relationship: relates-to
+  remarks: System and Information Integrity
+- id: CNSC-115-AC-6-3
+  source: CNSC-115
+  targets:
+  - entry-id: AC-6(3)
+  relationship: relates-to
+  remarks: Least Privilege, Network Access to Privileged Commands
+- id: CNSC-116-CA-7
+  source: CNSC-116
+  targets:
+  - entry-id: CA-7
+  relationship: relates-to
+  remarks: Continuous Monitoring
+- id: CNSC-116-IR-4
+  source: CNSC-116
+  targets:
+  - entry-id: IR-4
+  relationship: relates-to
+  remarks: Incident Handling, Automated Incident Handling Processes
+- id: CNSC-116-IR-4-5
+  source: CNSC-116
+  targets:
+  - entry-id: IR-4(5)
+  relationship: relates-to
+  remarks: Incident Handling, Automated Disabling of System
+- id: CNSC-117-IR-5-1
+  source: CNSC-117
+  targets:
+  - entry-id: IR-5(1)
+  relationship: relates-to
+  remarks: Incident Monitoring, Automated Tracking, Data Collection, and Analysis
+- id: CNSC-12-IA-7
+  source: CNSC-12
+  targets:
+  - entry-id: IA-7
+  relationship: relates-to
+  remarks: Cryptographic Module Authentication
+- id: CNSC-120-AC-3-3
+  source: CNSC-120
+  targets:
+  - entry-id: AC-3(3)
+  relationship: relates-to
+  remarks: Access Enforcement, Mandatory Access Control
+- id: CNSC-121-SA-11-2
+  source: CNSC-121
+  targets:
+  - entry-id: SA-11(2)
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation, Threat Modeling and Vulnerability Analyses
+- id: CNSC-122-IA-9
+  source: CNSC-122
+  targets:
+  - entry-id: IA-9
+  relationship: relates-to
+  remarks: Service Identification and Authentication
+- id: CNSC-123-IA-9
+  source: CNSC-123
+  targets:
+  - entry-id: IA-9
+  relationship: relates-to
+  remarks: Service Identification and Authentication
+- id: CNSC-124-CM-14
+  source: CNSC-124
+  targets:
+  - entry-id: CM-14
+  relationship: relates-to
+  remarks: Signed Components
+- id: CNSC-125-SI-6
+  source: CNSC-125
+  targets:
+  - entry-id: SI-6
+  relationship: relates-to
+  remarks: Security and Privacy Function Verification
+- id: CNSC-127-SC-8
+  source: CNSC-127
+  targets:
+  - entry-id: SC-8
+  relationship: relates-to
+  remarks: Transmission Confidentiality and Integrity
+- id: CNSC-128-SI-13
+  source: CNSC-128
+  targets:
+  - entry-id: SI-13
+  relationship: relates-to
+  remarks: Predictable Failure Prevention
+- id: CNSC-129-CM-7
+  source: CNSC-129
+  targets:
+  - entry-id: CM-7
+  relationship: relates-to
+  remarks: Least Functionality
+- id: CNSC-129-SI-7
+  source: CNSC-129
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-13-IA-7
+  source: CNSC-13
+  targets:
+  - entry-id: IA-7
+  relationship: relates-to
+  remarks: Cryptographic Module Authentication
+- id: CNSC-130-SA-9
+  source: CNSC-130
+  targets:
+  - entry-id: SA-9
+  relationship: relates-to
+  remarks: External System Services
+- id: CNSC-130-SC-30
+  source: CNSC-130
+  targets:
+  - entry-id: SC-30
+  relationship: relates-to
+  remarks: Concealment and Misdirection
+- id: CNSC-131-CP-9
+  source: CNSC-131
+  targets:
+  - entry-id: CP-9
+  relationship: relates-to
+  remarks: System Backup
+- id: CNSC-131-MP-6
+  source: CNSC-131
+  targets:
+  - entry-id: MP-6
+  relationship: relates-to
+  remarks: Media Sanitization
+- id: CNSC-132-SC-28
+  source: CNSC-132
+  targets:
+  - entry-id: SC-28
+  relationship: relates-to
+  remarks: Protection of Information at Rest
+- id: CNSC-135-CM-6
+  source: CNSC-135
+  targets:
+  - entry-id: CM-6
+  relationship: relates-to
+  remarks: Configuration Settings
+- id: CNSC-135-SA-8
+  source: CNSC-135
+  targets:
+  - entry-id: SA-8
+  relationship: relates-to
+  remarks: Security and Privacy Engineering Principles
+- id: CNSC-135-SC-7
+  source: CNSC-135
+  targets:
+  - entry-id: SC-7
+  relationship: relates-to
+  remarks: Boundary Protection
+- id: CNSC-136-CM-6
+  source: CNSC-136
+  targets:
+  - entry-id: CM-6
+  relationship: relates-to
+  remarks: Configuration Settings
+- id: CNSC-136-SA-8
+  source: CNSC-136
+  targets:
+  - entry-id: SA-8
+  relationship: relates-to
+  remarks: Security and Privacy Engineering Principles
+- id: CNSC-136-SC-7
+  source: CNSC-136
+  targets:
+  - entry-id: SC-7
+  relationship: relates-to
+  remarks: Boundary Protection
+- id: CNSC-137-AC-16
+  source: CNSC-137
+  targets:
+  - entry-id: AC-16
+  relationship: relates-to
+  remarks: Security and Privacy Attributes
+- id: CNSC-137-AC-4
+  source: CNSC-137
+  targets:
+  - entry-id: AC-4
+  relationship: relates-to
+  remarks: Information Flow Enforcement
+- id: CNSC-137-SI-7
+  source: CNSC-137
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-139-CM-14
+  source: CNSC-139
+  targets:
+  - entry-id: CM-14
+  relationship: relates-to
+  remarks: Signed Components
+- id: CNSC-14-IA-2-1-2
+  source: CNSC-14
+  targets:
+  - entry-id: IA-2(1)(2)
+  relationship: relates-to
+  remarks: Identification and Authentication (organizational Users)
+- id: CNSC-140-AU-10
+  source: CNSC-140
+  targets:
+  - entry-id: AU-10
+  relationship: relates-to
+  remarks: Non-repudiation
+- id: CNSC-140-CM-6
+  source: CNSC-140
+  targets:
+  - entry-id: CM-6
+  relationship: relates-to
+  remarks: Configuration Settings
+- id: CNSC-141-SI-1
+  source: CNSC-141
+  targets:
+  - entry-id: SI-1
+  relationship: relates-to
+  remarks: Policy and Procedures
+- id: CNSC-141-SI-7
+  source: CNSC-141
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-142-SI-1
+  source: CNSC-142
+  targets:
+  - entry-id: SI-1
+  relationship: relates-to
+  remarks: Policy and Procedures
+- id: CNSC-142-SI-7
+  source: CNSC-142
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-143-IA-5
+  source: CNSC-143
+  targets:
+  - entry-id: IA-5
+  relationship: relates-to
+  remarks: Authenticator Management
+- id: CNSC-144-AC-4-6
+  source: CNSC-144
+  targets:
+  - entry-id: AC-4(6)
+  relationship: relates-to
+  remarks: Information Flow Enforcement, Metadata
+- id: CNSC-145-AC-6
+  source: CNSC-145
+  targets:
+  - entry-id: AC-6
+  relationship: relates-to
+  remarks: Least Privilege
+- id: CNSC-146-SC-12
+  source: CNSC-146
+  targets:
+  - entry-id: SC-12
+  relationship: relates-to
+  remarks: Cryptographic Key Establishment and Management
+- id: CNSC-148-IA-5
+  source: CNSC-148
+  targets:
+  - entry-id: IA-5
+  relationship: relates-to
+  remarks: Authenticator Management
+- id: CNSC-148-SC-12
+  source: CNSC-148
+  targets:
+  - entry-id: SC-12
+  relationship: relates-to
+  remarks: Cryptographic Key Establishment and Management
+- id: CNSC-148-SC-13
+  source: CNSC-148
+  targets:
+  - entry-id: SC-13
+  relationship: relates-to
+  remarks: Cryptographic Protection
+- id: CNSC-148-SC-28-1
+  source: CNSC-148
+  targets:
+  - entry-id: SC-28(1)
+  relationship: relates-to
+  remarks: Protection of Information at Rest, Cryptographic Protection
+- id: CNSC-148-SC-8
+  source: CNSC-148
+  targets:
+  - entry-id: SC-8
+  relationship: relates-to
+  remarks: Transmission Confidentiality and Integrity
+- id: CNSC-149-CM-3-6
+  source: CNSC-149
+  targets:
+  - entry-id: CM-3(6)
+  relationship: relates-to
+  remarks: Configuration Change Control
+- id: CNSC-15-AC-4-4
+  source: CNSC-15
+  targets:
+  - entry-id: AC-4(4)
+  relationship: relates-to
+  remarks: Information Flow Enforcement
+- id: CNSC-150-CM-3-2
+  source: CNSC-150
+  targets:
+  - entry-id: CM-3(2)
+  relationship: relates-to
+  remarks: Configuration Change Control
+- id: CNSC-151-CM-3-4
+  source: CNSC-151
+  targets:
+  - entry-id: CM-3(4)
+  relationship: relates-to
+  remarks: 'NIST SP 800-53 control mapped from CNSC-151 (Build Worker Runtime Security); family: Securing Build Pipelines.'
+- id: CNSC-152-CM-3-4
+  source: CNSC-152
+  targets:
+  - entry-id: CM-3(4)
+  relationship: relates-to
+  remarks: 'NIST SP 800-53 control mapped from CNSC-152 (Reproducible Builds); family: Securing Build Pipelines.'
+- id: CNSC-153-CM-3-2
+  source: CNSC-153
+  targets:
+  - entry-id: CM-3(2)
+  relationship: relates-to
+  remarks: 'NIST SP 800-53 control mapped from CNSC-153 (External Requirement Verification); family: Securing Build Pipelines.'
+- id: CNSC-155-CM-3-1
+  source: CNSC-155
+  targets:
+  - entry-id: CM-3(1)
+  relationship: relates-to
+  remarks: 'NIST SP 800-53 control mapped from CNSC-155 (Build Environment Recording); family: Securing Build Pipelines.'
+- id: CNSC-156-CM-3-3
+  source: CNSC-156
+  targets:
+  - entry-id: CM-3(3)
+  relationship: relates-to
+  remarks: 'NIST SP 800-53 control mapped from CNSC-156 (Build Environment Automation); family: Securing Build Pipelines.'
+- id: CNSC-157-CM-3-3
+  source: CNSC-157
+  targets:
+  - entry-id: CM-3(3)
+  relationship: relates-to
+  remarks: 'NIST SP 800-53 control mapped from CNSC-157 (Build Distribution); family: Securing Build Pipelines.'
+- id: CNSC-158-SA-3
+  source: CNSC-158
+  targets:
+  - entry-id: SA-3
+  relationship: relates-to
+  remarks: System Development Life Cycle
+- id: CNSC-16-SI-12
+  source: CNSC-16
+  targets:
+  - entry-id: SI-12
+  relationship: relates-to
+  remarks: Information Management and Retention
+- id: CNSC-161-AC-2
+  source: CNSC-161
+  targets:
+  - entry-id: AC-2
+  relationship: relates-to
+  remarks: Account Management
+- id: CNSC-162-SC-7-3
+  source: CNSC-162
+  targets:
+  - entry-id: SC-7(3)
+  relationship: relates-to
+  remarks: Boundary Protection
+- id: CNSC-163-AC-5
+  source: CNSC-163
+  targets:
+  - entry-id: AC-5
+  relationship: relates-to
+  remarks: Separation of Duties
+- id: CNSC-164-CM-2-2
+  source: CNSC-164
+  targets:
+  - entry-id: CM-2(2)
+  relationship: relates-to
+  remarks: Baseline Configuration
+- id: CNSC-165-AU-9-2
+  source: CNSC-165
+  targets:
+  - entry-id: AU-9(2)
+  relationship: relates-to
+  remarks: Protection of Audit Information
+- id: CNSC-167-AC-2
+  source: CNSC-167
+  targets:
+  - entry-id: AC-2
+  relationship: relates-to
+  remarks: Account Management
+- id: CNSC-168-SC-17
+  source: CNSC-168
+  targets:
+  - entry-id: SC-17
+  relationship: relates-to
+  remarks: Public Key Infrastructure Certificates
+- id: CNSC-169-SC-23-5
+  source: CNSC-169
+  targets:
+  - entry-id: SC-23(5)
+  relationship: relates-to
+  remarks: Session Authenticity
+- id: CNSC-17-AC-16-3
+  source: CNSC-17
+  targets:
+  - entry-id: AC-16(3)
+  relationship: relates-to
+  remarks: Security and Privacy Attributes
+- id: CNSC-170-SI-7
+  source: CNSC-170
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-171-SI-7
+  source: CNSC-171
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-173-SA-11
+  source: CNSC-173
+  targets:
+  - entry-id: SA-11
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation
+- id: CNSC-174-CM-8
+  source: CNSC-174
+  targets:
+  - entry-id: CM-8
+  relationship: relates-to
+  remarks: Information System Component Inventory
+- id: CNSC-175-CM-10
+  source: CNSC-175
+  targets:
+  - entry-id: CM-10
+  relationship: relates-to
+  remarks: Software Usage Restrictions
+- id: CNSC-179-RA-5
+  source: CNSC-179
+  targets:
+  - entry-id: RA-5
+  relationship: relates-to
+  remarks: Vulnerability Monitoring and Scanning
+- id: CNSC-18-SC-12-1
+  source: CNSC-18
+  targets:
+  - entry-id: SC-12(1)
+  relationship: relates-to
+  remarks: Cryptographic Key Establishment and Management
+- id: CNSC-180-CM-10
+  source: CNSC-180
+  targets:
+  - entry-id: CM-10
+  relationship: relates-to
+  remarks: Software Usage Restrictions
+- id: CNSC-181-SA-11-1-8
+  source: CNSC-181
+  targets:
+  - entry-id: SA-11(1)(8)
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation
+- id: CNSC-182-SI-7
+  source: CNSC-182
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and information integrity
+- id: CNSC-183-AC-6-3
+  source: CNSC-183
+  targets:
+  - entry-id: AC-6(3)
+  relationship: relates-to
+  remarks: Least Privilege
+- id: CNSC-184-SC-12-3
+  source: CNSC-184
+  targets:
+  - entry-id: SC-12(3)
+  relationship: relates-to
+  remarks: Systems and Communication Protection
+- id: CNSC-185-PL-1
+  source: CNSC-185
+  targets:
+  - entry-id: PL-1
+  relationship: relates-to
+  remarks: Policy and Procedures
+- id: CNSC-186-RA-5
+  source: CNSC-186
+  targets:
+  - entry-id: RA-5
+  relationship: relates-to
+  remarks: Vulnerability Monitoring and Scanning
+- id: CNSC-187-PL-1
+  source: CNSC-187
+  targets:
+  - entry-id: PL-1
+  relationship: relates-to
+  remarks: Policy and Procedures
+- id: CNSC-188-PL-1
+  source: CNSC-188
+  targets:
+  - entry-id: PL-1
+  relationship: relates-to
+  remarks: Policy and Procedures
+- id: CNSC-189-SA-11
+  source: CNSC-189
+  targets:
+  - entry-id: SA-11
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation
+- id: CNSC-19-SI-12
+  source: CNSC-19
+  targets:
+  - entry-id: SI-12
+  relationship: relates-to
+  remarks: Information Management and Retention
+- id: CNSC-190-SA-8
+  source: CNSC-190
+  targets:
+  - entry-id: SA-8
+  relationship: relates-to
+  remarks: Security Engineering Principles
+- id: CNSC-191-IA-2-1
+  source: CNSC-191
+  targets:
+  - entry-id: IA-2(1)
+  relationship: relates-to
+  remarks: Identification and Authentication (organizational Users)
+- id: CNSC-192-AC-1
+  source: CNSC-192
+  targets:
+  - entry-id: AC-1
+  relationship: relates-to
+  remarks: Remote Access
+- id: CNSC-193-AC-2-1
+  source: CNSC-193
+  targets:
+  - entry-id: AC-2(1)
+  relationship: relates-to
+  remarks: Prerequisites and criteria for group and role membership are defined.
+- id: CNSC-194-AC-2-1
+  source: CNSC-194
+  targets:
+  - entry-id: AC-2(1)
+  relationship: relates-to
+  remarks: Usage of automated mechanisms to create, enable, modify, disable, and remove accounts.
+- id: CNSC-195-SA-8-23
+  source: CNSC-195
+  targets:
+  - entry-id: SA-8(23)
+  relationship: relates-to
+  remarks: Security and Privacy Engineering Principles, Secure Defaults
+- id: CNSC-2-IA-9
+  source: CNSC-2
+  targets:
+  - entry-id: IA-9
+  relationship: relates-to
+  remarks: 'NIST SP 800-53 control mapped from CNSC-2 (Mutual Authentication); family: Access.'
+- id: CNSC-20-AC-16
+  source: CNSC-20
+  targets:
+  - entry-id: AC-16
+  relationship: relates-to
+  remarks: Security and Privacy Attributes
+- id: CNSC-208-IA-2-1-2
+  source: CNSC-208
+  targets:
+  - entry-id: IA-2(1)(2)
+  relationship: relates-to
+  remarks: Identification and Authentication (organizational Users)
+- id: CNSC-21-AU-9-3
+  source: CNSC-21
+  targets:
+  - entry-id: AU-9(3)
+  relationship: relates-to
+  remarks: Protection of Audit Information
+- id: CNSC-22-SI-7-9
+  source: CNSC-22
+  targets:
+  - entry-id: SI-7(9)
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-23-SC-7
+  source: CNSC-23
+  targets:
+  - entry-id: SC-7
+  relationship: relates-to
+  remarks: Boundary Protection
+- id: CNSC-233-SC-7
+  source: CNSC-233
+  targets:
+  - entry-id: SC-7
+  relationship: relates-to
+  remarks: Boundary Protection
+- id: CNSC-24-CM-2-2
+  source: CNSC-24
+  targets:
+  - entry-id: CM-2(2)
+  relationship: relates-to
+  remarks: Baseline Configuration, Automation Support for Accuracy and Currency
+- id: CNSC-24-CM-3-7
+  source: CNSC-24
+  targets:
+  - entry-id: CM-3(7)
+  relationship: relates-to
+  remarks: Configuration Change Control, Review System Changes
+- id: CNSC-25-AU-2
+  source: CNSC-25
+  targets:
+  - entry-id: AU-2
+  relationship: relates-to
+  remarks: Event Logging
+- id: CNSC-259-SA-11-1
+  source: CNSC-259
+  targets:
+  - entry-id: SA-11(1)
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation | Static Code Analysis
+- id: CNSC-26-CM-2
+  source: CNSC-26
+  targets:
+  - entry-id: CM-2
+  relationship: relates-to
+  remarks: Baseline Configuration
+- id: CNSC-26-CM-7
+  source: CNSC-26
+  targets:
+  - entry-id: CM-7
+  relationship: relates-to
+  remarks: Least Functionality
+- id: CNSC-265-SA-11-4
+  source: CNSC-265
+  targets:
+  - entry-id: SA-11(4)
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation | Manual Code Reviews
+- id: CNSC-27-SI-7
+  source: CNSC-27
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-271-SC-39
+  source: CNSC-271
+  targets:
+  - entry-id: SC-39
+  relationship: relates-to
+  remarks: Process Isolation
+- id: CNSC-28-AC-6
+  source: CNSC-28
+  targets:
+  - entry-id: AC-6
+  relationship: relates-to
+  remarks: Least Privilege
+- id: CNSC-29-SI-7-16
+  source: CNSC-29
+  targets:
+  - entry-id: SI-7(16)
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity, Time Limit on Process Execution Without Supervision
+- id: CNSC-29-SI-7-17
+  source: CNSC-29
+  targets:
+  - entry-id: SI-7(17)
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity, Runtime Application Self-protection
+- id: CNSC-297-SI-7
+  source: CNSC-297
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-298-SI-7
+  source: CNSC-298
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-3-SC-12
+  source: CNSC-3
+  targets:
+  - entry-id: SC-12
+  relationship: relates-to
+  remarks: Cryptographic Key Establishment and Management
+- id: CNSC-30-SI-4-13
+  source: CNSC-30
+  targets:
+  - entry-id: SI-4(13)
+  relationship: relates-to
+  remarks: System Monitoring, Analyze Traffic and Event Patterns
+- id: CNSC-303-SC-12-3
+  source: CNSC-303
+  targets:
+  - entry-id: SC-12(3)
+  relationship: relates-to
+  remarks: Systems and Communication Protection
+- id: CNSC-31-AC-3
+  source: CNSC-31
+  targets:
+  - entry-id: AC-3
+  relationship: relates-to
+  remarks: Access Enforcement
+- id: CNSC-32-CM-2
+  source: CNSC-32
+  targets:
+  - entry-id: CM-2
+  relationship: relates-to
+  remarks: Baseline Configuration
+- id: CNSC-32-CM-7
+  source: CNSC-32
+  targets:
+  - entry-id: CM-7
+  relationship: relates-to
+  remarks: Least Functionality
+- id: CNSC-33-CM-5
+  source: CNSC-33
+  targets:
+  - entry-id: CM-5
+  relationship: relates-to
+  remarks: Access Restrictions for Change
+- id: CNSC-34-CM-5
+  source: CNSC-34
+  targets:
+  - entry-id: CM-5
+  relationship: relates-to
+  remarks: Access Restrictions for Change
+- id: CNSC-35-SC-7
+  source: CNSC-35
+  targets:
+  - entry-id: SC-7
+  relationship: relates-to
+  remarks: Boundary Protection
+- id: CNSC-36-SC-7
+  source: CNSC-36
+  targets:
+  - entry-id: SC-7
+  relationship: relates-to
+  remarks: Boundary Protection
+- id: CNSC-37-CM-5
+  source: CNSC-37
+  targets:
+  - entry-id: CM-5
+  relationship: relates-to
+  remarks: Access Restrictions for Change
+- id: CNSC-38-CM-5
+  source: CNSC-38
+  targets:
+  - entry-id: CM-5
+  relationship: relates-to
+  remarks: Access Restrictions for Change
+- id: CNSC-39-SC-7
+  source: CNSC-39
+  targets:
+  - entry-id: SC-7
+  relationship: relates-to
+  remarks: Boundary Protection
+- id: CNSC-4-SC-12-3
+  source: CNSC-4
+  targets:
+  - entry-id: SC-12(3)
+  relationship: relates-to
+  remarks: Cryptographic Key Establishment and Management
+- id: CNSC-40-SI-4
+  source: CNSC-40
+  targets:
+  - entry-id: SI-4
+  relationship: relates-to
+  remarks: System Monitoring
+- id: CNSC-41-SI-3
+  source: CNSC-41
+  targets:
+  - entry-id: SI-3
+  relationship: relates-to
+  remarks: Malicious Code Protection
+- id: CNSC-42-RA-5
+  source: CNSC-42
+  targets:
+  - entry-id: RA-5
+  relationship: relates-to
+  remarks: Vulnerability Monitoring and Scanning
+- id: CNSC-43-AU-3
+  source: CNSC-43
+  targets:
+  - entry-id: AU-3
+  relationship: relates-to
+  remarks: Content of Audit Records
+- id: CNSC-44-AC-6
+  source: CNSC-44
+  targets:
+  - entry-id: AC-6
+  relationship: relates-to
+  remarks: Least Privilege
+- id: CNSC-45-SI-7
+  source: CNSC-45
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-46-SC-12-3
+  source: CNSC-46
+  targets:
+  - entry-id: SC-12(3)
+  relationship: relates-to
+  remarks: Systems and Communication Protection
+- id: CNSC-47-SC-12-3
+  source: CNSC-47
+  targets:
+  - entry-id: SC-12(3)
+  relationship: relates-to
+  remarks: Systems and Communication Protection
+- id: CNSC-48-SI-4
+  source: CNSC-48
+  targets:
+  - entry-id: SI-4
+  relationship: relates-to
+  remarks: System Monitoring
+- id: CNSC-49-SC-28
+  source: CNSC-49
+  targets:
+  - entry-id: SC-28
+  relationship: relates-to
+  remarks: Protection of Information at Rest
+- id: CNSC-5-IA-2-12
+  source: CNSC-5
+  targets:
+  - entry-id: IA-2(12)
+  relationship: relates-to
+  remarks: Identification and Authentication (Organizational Users)
+- id: CNSC-50-CM-8
+  source: CNSC-50
+  targets:
+  - entry-id: CM-8
+  relationship: relates-to
+  remarks: System Component Inventory
+- id: CNSC-51-CM-2
+  source: CNSC-51
+  targets:
+  - entry-id: CM-2
+  relationship: relates-to
+  remarks: Baseline Configuration
+- id: CNSC-51-CM-7
+  source: CNSC-51
+  targets:
+  - entry-id: CM-7
+  relationship: relates-to
+  remarks: Least Functionality
+- id: CNSC-52-CM-5
+  source: CNSC-52
+  targets:
+  - entry-id: CM-5
+  relationship: relates-to
+  remarks: Access Restrictions for Change
+- id: CNSC-53-CM-2
+  source: CNSC-53
+  targets:
+  - entry-id: CM-2
+  relationship: relates-to
+  remarks: Baseline Configuration
+- id: CNSC-53-CM-7
+  source: CNSC-53
+  targets:
+  - entry-id: CM-7
+  relationship: relates-to
+  remarks: Least Functionality
+- id: CNSC-54-SI-4
+  source: CNSC-54
+  targets:
+  - entry-id: SI-4
+  relationship: relates-to
+  remarks: System Monitoring
+- id: CNSC-55-SI-4
+  source: CNSC-55
+  targets:
+  - entry-id: SI-4
+  relationship: relates-to
+  remarks: System Monitoring
+- id: CNSC-56-SC-7-21
+  source: CNSC-56
+  targets:
+  - entry-id: SC-7(21)
+  relationship: relates-to
+  remarks: Boundary Protection, Isolation of System Components
+- id: CNSC-57-SR-4-3
+  source: CNSC-57
+  targets:
+  - entry-id: SR-4(3)
+  relationship: relates-to
+  remarks: Provenance, Validate as Genuine and Not Altered
+- id: CNSC-57-SR-4-4
+  source: CNSC-57
+  targets:
+  - entry-id: SR-4(4)
+  relationship: relates-to
+  remarks: Provenance, Supply Chain Integrity - Pedigree
+- id: CNSC-58-SI-7-17
+  source: CNSC-58
+  targets:
+  - entry-id: SI-7(17)
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity, Runtime Application Self-Protection
+- id: CNSC-59-SR-4-3
+  source: CNSC-59
+  targets:
+  - entry-id: SR-4(3)
+  relationship: relates-to
+  remarks: Provenance, Validate as Genuine and Not Altered
+- id: CNSC-59-SR-4-4
+  source: CNSC-59
+  targets:
+  - entry-id: SR-4(4)
+  relationship: relates-to
+  remarks: Provenance, Supply Chain Integrity - Pedigree
+- id: CNSC-6-IA-2-6
+  source: CNSC-6
+  targets:
+  - entry-id: IA-2(6)
+  relationship: relates-to
+  remarks: Identification and Authentication (Organizational Users)
+- id: CNSC-60-CM-3
+  source: CNSC-60
+  targets:
+  - entry-id: CM-3
+  relationship: relates-to
+  remarks: Configuration Change Control
+- id: CNSC-62-SI-3
+  source: CNSC-62
+  targets:
+  - entry-id: SI-3
+  relationship: relates-to
+  remarks: System and Information Integrity
+- id: CNSC-63-SA-3-1
+  source: CNSC-63
+  targets:
+  - entry-id: SA-3(1)
+  relationship: relates-to
+  remarks: System Development Life Cycle | Manage preproduction environment
+- id: CNSC-64-SA-8-31
+  source: CNSC-64
+  targets:
+  - entry-id: SA-8(31)
+  relationship: relates-to
+  remarks: Security and Privacy Engineering Principles | Secure System Modification
+- id: CNSC-65-SA-11-1
+  source: CNSC-65
+  targets:
+  - entry-id: SA-11(1)
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation | Static Code Analysis
+- id: CNSC-66-SA-15
+  source: CNSC-66
+  targets:
+  - entry-id: SA-15
+  relationship: relates-to
+  remarks: Development Process, Standards, and Tools
+- id: CNSC-67-SA-11
+  source: CNSC-67
+  targets:
+  - entry-id: SA-11
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation
+- id: CNSC-68-SA-11
+  source: CNSC-68
+  targets:
+  - entry-id: SA-11
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation
+- id: CNSC-69-SA-11
+  source: CNSC-69
+  targets:
+  - entry-id: SA-11
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation
+- id: CNSC-7-IA-2-6
+  source: CNSC-7
+  targets:
+  - entry-id: IA-2(6)
+  relationship: relates-to
+  remarks: Identification and Authentication (Organizational Users)
+- id: CNSC-70-SA-11
+  source: CNSC-70
+  targets:
+  - entry-id: SA-11
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation
+- id: CNSC-71-SA-11-4
+  source: CNSC-71
+  targets:
+  - entry-id: SA-11(4)
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation | Manual Code Reviews
+- id: CNSC-73-SA-11
+  source: CNSC-73
+  targets:
+  - entry-id: SA-11
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation
+- id: CNSC-74-SA-11
+  source: CNSC-74
+  targets:
+  - entry-id: SA-11
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation
+- id: CNSC-75-SA-11
+  source: CNSC-75
+  targets:
+  - entry-id: SA-11
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation
+- id: CNSC-76-SA-3-1
+  source: CNSC-76
+  targets:
+  - entry-id: SA-3(1)
+  relationship: relates-to
+  remarks: System Development Life Cycle | Manage preproduction environment
+- id: CNSC-77-SC-39
+  source: CNSC-77
+  targets:
+  - entry-id: SC-39
+  relationship: relates-to
+  remarks: Process Isolation
+- id: CNSC-78-SA-11-2
+  source: CNSC-78
+  targets:
+  - entry-id: SA-11(2)
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation | Threat Modeling and Vulnerability Analyses
+- id: CNSC-8-SI-4-2
+  source: CNSC-8
+  targets:
+  - entry-id: SI-4(2)
+  relationship: relates-to
+  remarks: System Monitoring
+- id: CNSC-85-RA-5
+  source: CNSC-85
+  targets:
+  - entry-id: RA-5
+  relationship: relates-to
+  remarks: Vulnerability Monitoring and Scanning
+- id: CNSC-86-SC-39
+  source: CNSC-86
+  targets:
+  - entry-id: SC-39
+  relationship: relates-to
+  remarks: Process Isolation
+- id: CNSC-87-SC-39
+  source: CNSC-87
+  targets:
+  - entry-id: SC-39
+  relationship: relates-to
+  remarks: Process Isolation
+- id: CNSC-88-SA-1
+  source: CNSC-88
+  targets:
+  - entry-id: SA-1
+  relationship: relates-to
+  remarks: Policy and Procedures
+- id: CNSC-89-SI-7
+  source: CNSC-89
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-9-AC-3-13
+  source: CNSC-9
+  targets:
+  - entry-id: AC-3(13)
+  relationship: relates-to
+  remarks: Access Enforcement
+- id: CNSC-90-SI-7
+  source: CNSC-90
+  targets:
+  - entry-id: SI-7
+  relationship: relates-to
+  remarks: Software, Firmware, and Information Integrity
+- id: CNSC-91-RA-5
+  source: CNSC-91
+  targets:
+  - entry-id: RA-5
+  relationship: relates-to
+  remarks: Vulnerability Monitoring and Scanning
+- id: CNSC-92-SA-1
+  source: CNSC-92
+  targets:
+  - entry-id: SA-1
+  relationship: relates-to
+  remarks: Policy and Procedures
+- id: CNSC-93-SA-11-8
+  source: CNSC-93
+  targets:
+  - entry-id: SA-11(8)
+  relationship: relates-to
+  remarks: Interactive Application Security Testing
+- id: CNSC-94-SI-4
+  source: CNSC-94
+  targets:
+  - entry-id: SI-4
+  relationship: relates-to
+  remarks: System Monitoring
+- id: CNSC-97-SI-4
+  source: CNSC-97
+  targets:
+  - entry-id: SI-4
+  relationship: relates-to
+  remarks: System Monitoring
+- id: CNSC-99-CA-8
+  source: CNSC-99
+  targets:
+  - entry-id: CA-8
+  relationship: relates-to
+  remarks: Penetration Testing
+- id: CNSC-99-SA-11
+  source: CNSC-99
+  targets:
+  - entry-id: SA-11
+  relationship: relates-to
+  remarks: Developer Testing and Evaluation
+remarks: Auto-generated from YAML family files; 205 atomic guideline-to-control relationships.

@@ -1,4 +1,4 @@
-families:
+groups:
 - id: Access
   title: Access Control
   description: Guidelines for access control models and identity forwarding.

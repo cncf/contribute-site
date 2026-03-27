@@ -6,8 +6,9 @@ toc_max_heading_level: 2
 
 <!--
 This file is auto-generated. Do not edit manually.
+toc_max_heading_level: 2 omits ### guideline headings from the in-page TOC (families ## only).
 
-To regenerate this file, run below from the controls-catalog directory:
+To regenerate this file, run from the controls-catalog directory (source YAML lives under ./catalog/):
   go run cmd/catalog/main.go -md index.md
 -->
 
@@ -34,7 +35,7 @@ Each entry contains the following components:
 
 The following families organize guidelines by security domain. Click on any family name to jump to its guidelines:
 
-{{range .FamiliesWithGuidelines}}
+{{range .GroupsWithGuidelines}}
 **{{.Title}}**
 
 {{.Description}} [View guidelines →](#{{anchor .Id}})
@@ -43,7 +44,7 @@ The following families organize guidelines by security domain. Click on any fami
 
 ---
 
-{{range .FamiliesWithGuidelines}}
+{{range .GroupsWithGuidelines}}
 <a id="{{anchor .Id}}"></a>
 
 ## {{.Title}}
@@ -55,34 +56,31 @@ The following families organize guidelines by security domain. Click on any fami
 <a id="{{lower .Id}}"></a>
 
 ### {{.Title}} | `{{.Id}}`
-{{if .Applicability}}
-**Originating Document**: {{range $i, $a := .Applicability}}{{if $i}}, {{end}}`{{applicabilityTitle $a $.ApplicabilityTitles}}`{{end}}
+{{if .Applicability}}{{if eq (len .Applicability) 1}}**Originating Document**: `{{applicabilityTitle (index .Applicability 0) $.ApplicabilityTitles}}`
+{{else}}**Originating Document**:
+{{range .Applicability}}- `{{applicabilityTitle . $.ApplicabilityTitles}}`
 {{end}}
+{{end}}{{end}}
 
 {{if .Objective}}**Objective**
 
 {{.Objective}}
 
-{{end}}{{if .GuidelineMappings}}**Guideline Mappings**
-{{range .GuidelineMappings}}
-**`{{.ReferenceId}}`**
-
-{{if .Entries}}| Reference ID | Remarks |
-|--------------|----------|
-{{range .Entries}}| {{.ReferenceId}} | {{.Remarks}} |
-{{end}}
-
-{{end}}{{end}}{{end}}{{if .Recommendations}}**Recommendations**
+{{end}}{{if .Recommendations}}**Recommendations**
 
 {{range .Recommendations}}- {{.}}
 {{end}}
 
-{{end}}{{if .SeeAlso}}**See Also**
+{{end}}**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`{{.Id}}`) →](./cnsc-nist-800-53-mapping#crosswalk-{{lower .Id}})
+
+{{if .SeeAlso}}**See Also**
 
 {{range .SeeAlso}}- [`{{.}}`](#{{lower .}})
 {{end}}
 
-{{end}}---
+{{end}}
+
+---
 
 {{end}}
 

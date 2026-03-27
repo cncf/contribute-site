@@ -6,8 +6,9 @@ toc_max_heading_level: 2
 
 <!--
 This file is auto-generated. Do not edit manually.
+toc_max_heading_level: 2 omits ### guideline headings from the in-page TOC (families ## only).
 
-To regenerate this file, run below from the controls-catalog directory:
+To regenerate this file, run from the controls-catalog directory (source YAML lives under ./catalog/):
   go run cmd/catalog/main.go -md index.md
 -->
 
@@ -105,7 +106,6 @@ Guidelines for access control models and identity forwarding.
 <a id="cnsc-1"></a>
 
 ### Runtime Secret Injection | `CNSC-1`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -113,13 +113,8 @@ Guidelines for access control models and identity forwarding.
 
 Secrets are injected at runtime
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-1`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-1)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-5(7) | Authenticator Management |
 
 
 ---
@@ -129,7 +124,6 @@ Secrets are injected at runtime
 <a id="cnsc-10"></a>
 
 ### ABAC and RBAC | `CNSC-10`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -137,13 +131,8 @@ Secrets are injected at runtime
 
 ABAC and RBAC are used
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-10`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-10)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-3(13) | Access Enforcement |
 
 
 ---
@@ -153,7 +142,6 @@ ABAC and RBAC are used
 <a id="cnsc-11"></a>
 
 ### Authorization and Identity Management | `CNSC-11`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -161,18 +149,13 @@ ABAC and RBAC are used
 
 End user identity is capable of being accepted, consumed, and forwarded on for contextual or dynamic authorization
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-7(19) | Boundary Protection |
-
-
 **Recommendations**
 
 - This can be achieved through the use of identity documents and tokens.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-11`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-11)
+
 
 
 ---
@@ -182,21 +165,18 @@ End user identity is capable of being accepted, consumed, and forwarded on for c
 <a id="cnsc-12"></a>
 
 ### Cluster Authentication Management | `CNSC-12`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 All cluster and workloads operators are authenticated
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-12`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-12)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-7 | Cryptographic Module Authentication |
 
 
 ---
@@ -206,21 +186,18 @@ All cluster and workloads operators are authenticated
 <a id="cnsc-13"></a>
 
 ### Authentication Policy Management | `CNSC-13`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Cluster and workloads operate actions are evaluated against access control policies governing context, purpose, and output
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-13`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-13)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-7 | Cryptographic Module Authentication |
 
 
 ---
@@ -230,21 +207,18 @@ Cluster and workloads operate actions are evaluated against access control polic
 <a id="cnsc-14"></a>
 
 ### Multi-factor Authentication | `CNSC-14`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Identity federation uses multi-factor authentication
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-14`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-14)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-2(1)(2) | Identification and Authentication (organizational Users) |
 
 
 ---
@@ -254,32 +228,29 @@ Identity federation uses multi-factor authentication
 <a id="cnsc-15"></a>
 
 ### HSMs Protection of Cryptographic Secrets | `CNSC-15`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 HSMs are used to physically protect cryptographic secrets with an encryption key residing in the HSM
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-4(4) | Information Flow Enforcement |
-
-
 **Recommendations**
 
 - If this is not possible, software-based credential managers should be used.
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-15`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-15)
+
 **See Also**
 
 - [`CNSC-16`](#cnsc-16)
 - [`CNSC-19`](#cnsc-19)
+
+
 
 
 ---
@@ -289,32 +260,29 @@ HSMs are used to physically protect cryptographic secrets with an encryption key
 <a id="cnsc-16"></a>
 
 ### Secrets Management | `CNSC-16`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Secrets should have a short expiration period or time to live
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-12 | Information Management and Retention |
-
-
 **Recommendations**
 
 - Leverage tool-specific capabilities of secret manager
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-16`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-16)
+
 **See Also**
 
 - [`CNSC-19`](#cnsc-19)
 - [`CNSC-15`](#cnsc-15)
+
+
 
 
 ---
@@ -324,26 +292,23 @@ Secrets should have a short expiration period or time to live
 <a id="cnsc-17"></a>
 
 ### Secrets Lifecycle Management | `CNSC-17`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Time to live and expiration period on secrets is verified to prevent reuse
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-16(3) | Security and Privacy Attributes |
-
-
 **Recommendations**
 
 - Leverage tool-specific capabilities of secret manager
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-17`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-17)
+
 
 
 ---
@@ -353,21 +318,18 @@ Time to live and expiration period on secrets is verified to prevent reuse
 <a id="cnsc-18"></a>
 
 ### Secrets Management System | `CNSC-18`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Secrets management systems are highly available
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-18`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-18)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-12(1) | Cryptographic Key Establishment and Management |
 
 
 ---
@@ -377,32 +339,29 @@ Secrets management systems are highly available
 <a id="cnsc-19"></a>
 
 ### Secrets Rotation Management | `CNSC-19`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Long-lived secrets adhere to periodic rotation and revocation
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-12 | Information Management and Retention |
-
-
 **Recommendations**
 
 - Long-lived secrets are not recommended, but some capabilities require them
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-19`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-19)
+
 **See Also**
 
 - [`CNSC-15`](#cnsc-15)
 - [`CNSC-16`](#cnsc-16)
+
+
 
 
 ---
@@ -412,7 +371,6 @@ Long-lived secrets adhere to periodic rotation and revocation
 <a id="cnsc-2"></a>
 
 ### Mutual Authentication | `CNSC-2`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -420,13 +378,8 @@ Long-lived secrets adhere to periodic rotation and revocation
 
 Applications and workloads are explicitly authorized to communicate with each other using mutual authentication
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-2`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-2)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-9 |  |
 
 
 ---
@@ -436,21 +389,36 @@ Applications and workloads are explicitly authorized to communicate with each ot
 <a id="cnsc-20"></a>
 
 ### Secrets Protection | `CNSC-20`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Secrets are distributed through secured communication channels protected commensurate with the level of access or data they are protecting
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-20`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-20)
 
-**`NIST-800-53`**
 
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-16 | Security and Privacy Attributes |
+
+---
+
+
+
+<a id="cnsc-208"></a>
+
+### Multi-factor Authentication | `CNSC-208`
+**Originating Document**: `Cloud Native Security Whitepaper v2.0`
+
+
+**Objective**
+
+Identity federation uses multi-factor authentication for human users
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-208`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-208)
+
 
 
 ---
@@ -460,26 +428,23 @@ Secrets are distributed through secured communication channels protected commens
 <a id="cnsc-21"></a>
 
 ### Secret Injection Lifecycle | `CNSC-21`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Secrets injected at runtime are masked or dropped from logs, audit, or system dumps
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AU-9(3) | Protection of Audit Information |
-
-
 **Recommendations**
 
 - Even short lived secrets may be reused if caught in time by an interested attacker. Logs, audit, and systems dumps (i.e. in-memory shared volumes instead of environment variables) are all areas where runtime injected secrets show up
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-21`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-21)
+
 
 
 ---
@@ -489,7 +454,6 @@ Secrets injected at runtime are masked or dropped from logs, audit, or system du
 <a id="cnsc-3"></a>
 
 ### Cryptographic Key Management | `CNSC-3`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -497,13 +461,8 @@ Secrets injected at runtime are masked or dropped from logs, audit, or system du
 
 Keys are rotated frequently
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-3`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-3)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-12 | Cryptographic Key Establishment and Management |
 
 
 ---
@@ -513,7 +472,6 @@ Keys are rotated frequently
 <a id="cnsc-4"></a>
 
 ### Cryptographic Key Lifecycle Management | `CNSC-4`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -521,13 +479,8 @@ Keys are rotated frequently
 
 Key lifespan is short
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-4`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-4)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-12(3) | Cryptographic Key Establishment and Management |
 
 
 ---
@@ -537,7 +490,6 @@ Key lifespan is short
 <a id="cnsc-5"></a>
 
 ### Sensitive Credential Management | `CNSC-5`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -545,18 +497,13 @@ Key lifespan is short
 
 Credentials and keys protecting sensitive workloads (health/finance/etc) are generated and managed independent of a cloud service provider
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-2(12) | Identification and Authentication (Organizational Users) |
-
-
 **Recommendations**
 
 - KMS and HMS are common technologies to achieve this. FIPS 140-2 compliance is strongly suggested. Cloud KMS tends to be FIPS 140-2 Level 2 or greater.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-5`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-5)
+
 
 
 ---
@@ -566,7 +513,6 @@ Credentials and keys protecting sensitive workloads (health/finance/etc) are gen
 <a id="cnsc-6"></a>
 
 ### Identification and Authentication | `CNSC-6`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -574,13 +520,8 @@ Credentials and keys protecting sensitive workloads (health/finance/etc) are gen
 
 Authentication and authorization are determined independently
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-6`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-6)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-2(6) | Identification and Authentication (Organizational Users) |
 
 
 ---
@@ -590,7 +531,6 @@ Authentication and authorization are determined independently
 <a id="cnsc-7"></a>
 
 ### Authentication and Authorization Enforcement | `CNSC-7`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -598,13 +538,8 @@ Authentication and authorization are determined independently
 
 Authentication and authorization are enforced independently
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-7`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-7)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-2(6) | Identification and Authentication (Organizational Users) |
 
 
 ---
@@ -614,7 +549,6 @@ Authentication and authorization are enforced independently
 <a id="cnsc-8"></a>
 
 ### Continuous System Monitoring | `CNSC-8`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -622,18 +556,13 @@ Authentication and authorization are enforced independently
 
 Access control and file permissions are updated in real-time
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-4(2) | System Monitoring |
-
-
 **Recommendations**
 
 - where possible as caching may permit unauthorized access
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-8`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-8)
+
 
 
 ---
@@ -643,7 +572,6 @@ Access control and file permissions are updated in real-time
 <a id="cnsc-9"></a>
 
 ### Privileged-based Authorization | `CNSC-9`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -651,13 +579,8 @@ Access control and file permissions are updated in real-time
 
 Authorization for workloads is granted based on attributes and roles/permissions previously assigned
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-9`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-9)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-3(13) | Access Enforcement |
 
 
 ---
@@ -676,26 +599,23 @@ Guidelines for securing compute infrastructure including bootstrapping, isolatio
 <a id="cnsc-22"></a>
 
 ### Compute Bootstrapping Verification | `CNSC-22`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Bootstrapping is employed to verify correct physical and logical location of compute
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7(9) | Software, Firmware, and Information Integrity |
-
-
 **Recommendations**
 
 - Secure Boot with TPM 2.0 or similar control
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-22`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-22)
+
 
 
 ---
@@ -705,26 +625,23 @@ Bootstrapping is employed to verify correct physical and logical location of com
 <a id="cnsc-23"></a>
 
 ### Boundary Management | `CNSC-23`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Disparate data sensitive workloads are not run on the same host OS kernel
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-7 | Boundary Protection |
-
-
 **Recommendations**
 
 - There are at least three implementing controls possible: workloads may be  separated by running in a separate cluster, on a separate node, or by implementing pods in independent VMs. It is also possible to emulate the kernel via an application kernel (e.g. gvisor)
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-23`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-23)
+
 
 
 ---
@@ -734,7 +651,6 @@ Disparate data sensitive workloads are not run on the same host OS kernel
 <a id="cnsc-233"></a>
 
 ### Data Trust Management | `CNSC-233`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -742,13 +658,8 @@ Disparate data sensitive workloads are not run on the same host OS kernel
 
 Use a service mesh that eliminates implicit trust through data-in-motion protection (i.e. confidentiality, integrity, authentication, authorization)
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-233`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-233)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-7 | Boundary Protection |
 
 
 ---
@@ -758,27 +669,23 @@ Use a service mesh that eliminates implicit trust through data-in-motion protect
 <a id="cnsc-24"></a>
 
 ### Runtime Configuration Monitoring | `CNSC-24`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Monitor and detect any changes to the initial configurations made in runtime
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-2(2) | Baseline Configuration, Automation Support for Accuracy and Currency |
-| CM-3(7) | Configuration Change Control, Review System Changes |
-
-
 **Recommendations**
 
 - Preventative controls should be the primary control. Detective controls monitoring  filesystem changes should be used to verify primary controls are operating properly.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-24`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-24)
+
 
 
 ---
@@ -788,26 +695,23 @@ Monitor and detect any changes to the initial configurations made in runtime
 <a id="cnsc-25"></a>
 
 ### API Auditing Implementation | `CNSC-25`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 API auditing is enabled with a filter for a specific set of API Groups or verbs
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AU-2 | Event Logging |
-
-
 **Recommendations**
 
 - API audits of the application, kubernetes API server, and kernel should be implemented.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-25`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-25)
+
 
 
 ---
@@ -817,27 +721,23 @@ API auditing is enabled with a filter for a specific set of API Groups or verbs
 <a id="cnsc-26"></a>
 
 ### Operating System Configuration | `CNSC-26`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Container specific operating systems are in use
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-2 | Baseline Configuration |
-| CM-7 | Least Functionality |
-
-
 **Recommendations**
 
 - A read-only OS with other services disabled. This provides isolation and resource confinement  that enables developers to run isolated applications on a shared host kernel
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-26`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-26)
+
 
 
 ---
@@ -847,26 +747,23 @@ Container specific operating systems are in use
 <a id="cnsc-27"></a>
 
 ### Trust Implementation | `CNSC-27`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 The hardware root of trust is based in a Trusted Platform Module (TPM) or virtual TPM (vTPM)
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and Information Integrity |
-
-
 **Recommendations**
 
 - Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on the system.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-27`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-27)
+
 
 
 ---
@@ -876,26 +773,23 @@ The hardware root of trust is based in a Trusted Platform Module (TPM) or virtua
 <a id="cnsc-28"></a>
 
 ### Least Privilege | `CNSC-28`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Minimize administrative access to the control plane
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-6 | Least Privilege |
-
-
 **Recommendations**
 
 - Ensure both users and pods have the minimum necessary access
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-28`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-28)
+
 
 
 ---
@@ -905,27 +799,23 @@ Minimize administrative access to the control plane
 <a id="cnsc-29"></a>
 
 ### Resource Control Management | `CNSC-29`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Object level and resource requests and limits are controlled through cgroups
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7(16) | Software, Firmware, and Information Integrity, Time Limit on Process Execution Without Supervision |
-| SI-7(17) | Software, Firmware, and Information Integrity, Runtime Application Self-protection |
-
-
 **Recommendations**
 
 - helps prevent exhaustion of node and cluster level resources by one misbehaving workload due to an intentional (e.g., fork bomb attack or cryptocurrency mining) or unintentional (e.g., reading a large file in memory without input validation, horizontal autoscaling to exhaust compute resources) issue
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-29`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-29)
+
 
 
 ---
@@ -935,26 +825,23 @@ Object level and resource requests and limits are controlled through cgroups
 <a id="cnsc-30"></a>
 
 ### System Alert Monitoring | `CNSC-30`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Systems processing alerts are periodically tuned for false positives
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-4(13) | System Monitoring, Analyze Traffic and Event Patterns |
-
-
 **Recommendations**
 
 - to avoid alert flooding, fatigue, and false negatives after security incidents that were not detected by the system
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-30`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-30)
+
 
 
 ---
@@ -964,26 +851,23 @@ Systems processing alerts are periodically tuned for false positives
 <a id="cnsc-31"></a>
 
 ### Control Plane Configuration | `CNSC-31`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 All orchestrator control plane components are configured to communicate via mutual authentication and certificate validation with a periodically rotated certificate
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-3 | Access Enforcement |
-
-
 **Recommendations**
 
 - In unfederated clusters, the CA should be used exclusively for the current cluster.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-31`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-31)
+
 
 
 ---
@@ -993,27 +877,23 @@ All orchestrator control plane components are configured to communicate via mutu
 <a id="cnsc-32"></a>
 
 ### Baseline Configured Functionality | `CNSC-32`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Only sanctioned capabilities and system calls (e.g. seccomp filters), are allowed to execute or be invoked in a container by the host operating system
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-2 | Baseline Configuration |
-| CM-7 | Least Functionality |
-
-
 **Recommendations**
 
 - Additional tooling should be installed that go beyond k8s capabilities to limit system calls. E.g. Falco.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-32`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-32)
+
 
 
 ---
@@ -1023,21 +903,18 @@ Only sanctioned capabilities and system calls (e.g. seccomp filters), are allowe
 <a id="cnsc-33"></a>
 
 ### Critical Change Management | `CNSC-33`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Changes to critical mount points and files are prevented, monitored, and alerted
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-33`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-33)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-5 | Access Restrictions for Change |
 
 
 ---
@@ -1047,21 +924,18 @@ Changes to critical mount points and files are prevented, monitored, and alerted
 <a id="cnsc-34"></a>
 
 ### Runtime Configuration for Change Management | `CNSC-34`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Runtime configuration control prevents changes to binaries, certificates, and remote access configurations
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-34`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-34)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-5 | Access Restrictions for Change |
 
 
 ---
@@ -1071,21 +945,18 @@ Runtime configuration control prevents changes to binaries, certificates, and re
 <a id="cnsc-35"></a>
 
 ### Runtime Boundary Protection Management | `CNSC-35`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Runtime configuration prevents ingress and egress network access for containers to only what is required to operate
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-35`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-35)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-7 | Boundary Protection |
 
 
 ---
@@ -1095,21 +966,18 @@ Runtime configuration prevents ingress and egress network access for containers 
 <a id="cnsc-36"></a>
 
 ### Boundary Protection Management | `CNSC-36`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Policies are defined that restrict communications to only occur between sanctioned microservice pairs
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-36`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-36)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-7 | Boundary Protection |
 
 
 ---
@@ -1119,21 +987,18 @@ Policies are defined that restrict communications to only occur between sanction
 <a id="cnsc-37"></a>
 
 ### Policy Enforcement Management | `CNSC-37`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Use a policy agent to control and enforce authorized, signed container images
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-37`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-37)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-5 | Access Restrictions for Change |
 
 
 ---
@@ -1143,21 +1008,18 @@ Use a policy agent to control and enforce authorized, signed container images
 <a id="cnsc-38"></a>
 
 ### Policy Enforcement Management | `CNSC-38`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Use a policy agent to control provenance assurance for operational workloads
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-38`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-38)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-5 | Access Restrictions for Change |
 
 
 ---
@@ -1167,7 +1029,6 @@ Use a policy agent to control provenance assurance for operational workloads
 <a id="cnsc-39"></a>
 
 ### Data Trust Management | `CNSC-39`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -1175,13 +1036,8 @@ Use a policy agent to control provenance assurance for operational workloads
 
 Use a service mesh that eliminates implicit trust through data-in-motion encryption (data in transit)
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-39`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-39)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-7 | Boundary Protection |
 
 
 ---
@@ -1191,26 +1047,23 @@ Use a service mesh that eliminates implicit trust through data-in-motion encrypt
 <a id="cnsc-40"></a>
 
 ### System Monitoring Components | `CNSC-40`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Use components that detect, track, aggregate and report system calls and network traffic from a container
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-4 | System Monitoring |
-
-
 **Recommendations**
 
 - should be leveraged to look for unexpected or malicious behavior
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-40`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-40)
+
 
 
 ---
@@ -1220,26 +1073,23 @@ Use components that detect, track, aggregate and report system calls and network
 <a id="cnsc-41"></a>
 
 ### Dynamic Workload Scanning | `CNSC-41`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Workloads should be dynamically scanned to detect malicious or insidious behavior for which no known occurrence yet exists
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-3 | Malicious Code Protection |
-
-
 **Recommendations**
 
 - Events such as an extended sleep command that executes data exfiltration from etcd after the workload has been running for X amount of days are not expected in the majority of environments and therefore are not included in security tests. The aspect that workloads can have time or event delayed trojan horses is only detectable by comparing to baseline expected behavior, often discovered during thorough activity and scan monitoring
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-41`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-41)
+
 
 
 ---
@@ -1249,26 +1099,23 @@ Workloads should be dynamically scanned to detect malicious or insidious behavio
 <a id="cnsc-42"></a>
 
 ### Continuous Monitoring and Scanning | `CNSC-42`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Environments are continuously scanned to detect new vulnerabilities in workloads
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| RA-5 | Vulnerability Monitoring and Scanning |
-
-
 **Recommendations**
 
 - Vulnerabilities are constantly being discovered, just because it wasn't vulnerable at deploy, doesn't mean it won't be vulnerable in two weeks
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-42`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-42)
+
 
 
 ---
@@ -1278,21 +1125,18 @@ Environments are continuously scanned to detect new vulnerabilities in workloads
 <a id="cnsc-43"></a>
 
 ### Audit Event Logging | `CNSC-43`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Actionable audit events are generated that correlate/contextualize data from logs into "information" that can drive decision trees/incident response
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-43`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-43)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AU-3 | Content of Audit Records |
 
 
 ---
@@ -1302,21 +1146,18 @@ Actionable audit events are generated that correlate/contextualize data from log
 <a id="cnsc-44"></a>
 
 ### Privilege Management | `CNSC-44`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Segregation of duties and the principle of least privilege is enforced
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-44`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-44)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-6 | Least Privilege |
 
 
 ---
@@ -1326,21 +1167,18 @@ Segregation of duties and the principle of least privilege is enforced
 <a id="cnsc-45"></a>
 
 ### Information Integrity | `CNSC-45`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Non-compliant violations are detected based on a pre-configured set of rules defined by the organization's policies
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-45`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-45)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -1350,21 +1188,18 @@ Non-compliant violations are detected based on a pre-configured set of rules def
 <a id="cnsc-46"></a>
 
 ### Key Management Storage | `CNSC-46`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Native secret stores encrypt with keys from an external Key Management Store (KMS)
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-46`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-46)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-12(3) | Systems and Communication Protection |
 
 
 ---
@@ -1374,26 +1209,23 @@ Native secret stores encrypt with keys from an external Key Management Store (KM
 <a id="cnsc-47"></a>
 
 ### Secret Storage Configuration | `CNSC-47`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Native secret stores are not configured for base64 encoding or stored in clear-text in the key-value store by default
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-12(3) | Systems and Communication Protection |
-
-
 **Recommendations**
 
 - Encoding is not encryption
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-47`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-47)
+
 
 
 ---
@@ -1403,21 +1235,18 @@ Native secret stores are not configured for base64 encoding or stored in clear-t
 <a id="cnsc-48"></a>
 
 ### System Monitoring | `CNSC-48`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Network traffic to malicious domains is detected and denied
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-48`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-48)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-4 | System Monitoring |
 
 
 ---
@@ -1427,21 +1256,18 @@ Network traffic to malicious domains is detected and denied
 <a id="cnsc-49"></a>
 
 ### Sensitive Data Encryption | `CNSC-49`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Use encrypted containers for sensitive sources, methods, and data
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-49`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-49)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-28 | Protection of Information at Rest |
 
 
 ---
@@ -1451,21 +1277,18 @@ Use encrypted containers for sensitive sources, methods, and data
 <a id="cnsc-50"></a>
 
 ### SBOM Management | `CNSC-50`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Use SBOMs to identify current deployments of vulnerable libraries, dependencies, and packages
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-50`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-50)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-8 | System Component Inventory |
 
 
 ---
@@ -1475,22 +1298,18 @@ Use SBOMs to identify current deployments of vulnerable libraries, dependencies,
 <a id="cnsc-51"></a>
 
 ### Functionality Management | `CNSC-51`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Processes must execute only functions explicitly defined in an allow list
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-51`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-51)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-2 | Baseline Configuration |
-| CM-7 | Least Functionality |
 
 
 ---
@@ -1500,21 +1319,18 @@ Processes must execute only functions explicitly defined in an allow list
 <a id="cnsc-52"></a>
 
 ### Access and Change Restrictions | `CNSC-52`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Functions are not be allowed to make changes to critical file system mount points
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-52`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-52)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-5 | Access Restrictions for Change |
 
 
 ---
@@ -1524,27 +1340,23 @@ Functions are not be allowed to make changes to critical file system mount point
 <a id="cnsc-53"></a>
 
 ### Access Configuration | `CNSC-53`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Function access is only permitted to sanctioned services
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-2 | Baseline Configuration |
-| CM-7 | Least Functionality |
-
-
 **Recommendations**
 
 - Either through networking restrictions or least privilege in permission models
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-53`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-53)
+
 
 
 ---
@@ -1554,21 +1366,18 @@ Function access is only permitted to sanctioned services
 <a id="cnsc-54"></a>
 
 ### System Monitoring | `CNSC-54`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Egress network connection is monitored to detect and prevent access to C&C (command and control) and other malicious network domains
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-54`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-54)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-4 | System Monitoring |
 
 
 ---
@@ -1578,26 +1387,23 @@ Egress network connection is monitored to detect and prevent access to C&C (comm
 <a id="cnsc-55"></a>
 
 ### System Monitoring Management | `CNSC-55`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Ingress network inspection is employed detect and remove malicious payloads and commands
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-4 | System Monitoring |
-
-
 **Recommendations**
 
 - For instance, SQL injection attacks can be detected using inspection.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-55`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-55)
+
 
 
 ---
@@ -1607,26 +1413,23 @@ Ingress network inspection is employed detect and remove malicious payloads and 
 <a id="cnsc-56"></a>
 
 ### System Component Isolation | `CNSC-56`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Serverless functions are run in tenant-based resource or performance isolation for similar data classifications
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-7(21) | Boundary Protection, Isolation of System Components |
-
-
 **Recommendations**
 
 - This may impact the performance due to limitations in the address space available to the isolation environment and should be considered for only the most sensitive workloads.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-56`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-56)
+
 
 
 ---
@@ -1645,7 +1448,6 @@ Guidelines for securing software deployments, including artifact verification, r
 <a id="cnsc-170"></a>
 
 ### Artifact Verification | `CNSC-170`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -1653,13 +1455,8 @@ Guidelines for securing software deployments, including artifact verification, r
 
 Clients can perform verification of artefacts and associated metadata
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-170`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-170)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -1669,7 +1466,6 @@ Clients can perform verification of artefacts and associated metadata
 <a id="cnsc-171"></a>
 
 ### Freshness Verification | `CNSC-171`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -1677,18 +1473,13 @@ Clients can perform verification of artefacts and associated metadata
 
 Clients can verify the freshness of files
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and Information Integrity |
-
-
 **Recommendations**
 
 - Ensure clients can access latest versions and can verify if the provided files are out of date
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-171`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-171)
+
 
 
 ---
@@ -1698,7 +1489,6 @@ Clients can verify the freshness of files
 <a id="cnsc-172"></a>
 
 ### Update Framework | `CNSC-172`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -1711,6 +1501,10 @@ A framework is used for managing software updates
 - Consider using The Update Framework (TUF) to enforce the updating of software. TUF is a specification for delivering software updates in a secure, reliable and trusted way
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-172`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-172)
+
+
+
 ---
 
 
@@ -1718,22 +1512,18 @@ A framework is used for managing software updates
 <a id="cnsc-57"></a>
 
 ### Trust Confirmation | `CNSC-57`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Trust confirmation verifies the image has a valid signature from an authorized source
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-57`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-57)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SR-4(3) | Provenance, Validate as Genuine and Not Altered |
-| SR-4(4) | Provenance, Supply Chain Integrity - Pedigree |
 
 
 ---
@@ -1743,21 +1533,18 @@ Trust confirmation verifies the image has a valid signature from an authorized s
 <a id="cnsc-58"></a>
 
 ### Runtime Policy Enforcement | `CNSC-58`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Image runtime policies are enforced prior to deployment
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-58`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-58)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7(17) | Software, Firmware, and Information Integrity, Runtime Application Self-Protection |
 
 
 ---
@@ -1767,22 +1554,18 @@ Image runtime policies are enforced prior to deployment
 <a id="cnsc-59"></a>
 
 ### Image Integrity Verification | `CNSC-59`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Image integrity and signature are verified prior to deployment
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-59`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-59)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SR-4(3) | Provenance, Validate as Genuine and Not Altered |
-| SR-4(4) | Provenance, Supply Chain Integrity - Pedigree |
 
 
 ---
@@ -1792,21 +1575,18 @@ Image integrity and signature are verified prior to deployment
 <a id="cnsc-60"></a>
 
 ### Application Logging | `CNSC-60`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Applications provide logs regarding authentication, authorization, actions, and failures
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-60`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-60)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-3 | Configuration Change Control |
 
 
 ---
@@ -1816,13 +1596,19 @@ Applications provide logs regarding authentication, authorization, actions, and 
 <a id="cnsc-61"></a>
 
 ### Forensics Integration | `CNSC-61`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Forensics capabilities are integrated into an incident response plan and procedures
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-61`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-61)
+
+
 
 ---
 
@@ -1831,21 +1617,18 @@ Forensics capabilities are integrated into an incident response plan and procedu
 <a id="cnsc-62"></a>
 
 ### Behavioral Analysis | `CNSC-62`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 AI, ML, or statistical modeling are used for behavioural and heuristic environment analysis to detect unwanted activities
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-62`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-62)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-3 | System and Information Integrity |
 
 
 ---
@@ -1864,7 +1647,6 @@ Guidelines for secure software development practices including environment segre
 <a id="cnsc-195"></a>
 
 ### Secure Configuration Defaults | `CNSC-195`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -1872,18 +1654,13 @@ Guidelines for secure software development practices including environment segre
 
 Secure configuration is implemented as the default state of the system
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-8(23) | Security and Privacy Engineering Principles, Secure Defaults |
-
-
 **Recommendations**
 
 - Transitioning towards such a system involves making security a design requirement, inheriting default security configuration and supporting an exception process
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-195`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-195)
+
 
 
 ---
@@ -1893,7 +1670,6 @@ Secure configuration is implemented as the default state of the system
 <a id="cnsc-259"></a>
 
 ### Early Vulnerability Scanning | `CNSC-259`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -1901,13 +1677,8 @@ Secure configuration is implemented as the default state of the system
 
 Integrate vulnerability and configuration scanning in both the IDE and at the CI system during pull request
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-259`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-259)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11(1) | Developer Testing and Evaluation | Static Code Analysis |
 
 
 ---
@@ -1917,7 +1688,6 @@ Integrate vulnerability and configuration scanning in both the IDE and at the CI
 <a id="cnsc-265"></a>
 
 ### Code Review Requirements | `CNSC-265`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -1925,13 +1695,8 @@ Integrate vulnerability and configuration scanning in both the IDE and at the CI
 
 Implement at least one other non-author reviewer/approver prior to merging
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-265`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-265)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11(4) | Developer Testing and Evaluation | Manual Code Reviews |
 
 
 ---
@@ -1941,7 +1706,6 @@ Implement at least one other non-author reviewer/approver prior to merging
 <a id="cnsc-271"></a>
 
 ### CI Server Isolation | `CNSC-271`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -1949,13 +1713,8 @@ Implement at least one other non-author reviewer/approver prior to merging
 
 Continuous integration server is isolated and hardened
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-271`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-271)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-39 | Process Isolation |
 
 
 ---
@@ -1965,26 +1724,23 @@ Continuous integration server is isolated and hardened
 <a id="cnsc-63"></a>
 
 ### Production Environment | `CNSC-63`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 A dedicated production environment is established
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-3(1) | System Development Life Cycle | Manage preproduction environment |
-
-
 **Recommendations**
 
 - Ensure that production workloads are in a separate, dedicated environment from non-production workloads. In the context of containers, this can mean separate clusters. In the case of VMs, separate networks.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-63`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-63)
+
 
 
 ---
@@ -1994,26 +1750,23 @@ A dedicated production environment is established
 <a id="cnsc-64"></a>
 
 ### Dynamic Deployments | `CNSC-64`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Dynamic deployments are leveraged for safer releases
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-8(31) | Security and Privacy Engineering Principles | Secure System Modification |
-
-
 **Recommendations**
 
 - Blue/Green, Alpha/Beta, Canary, red-black deployments
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-64`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-64)
+
 
 
 ---
@@ -2023,7 +1776,6 @@ Dynamic deployments are leveraged for safer releases
 <a id="cnsc-65"></a>
 
 ### Early Vulnerability Scanning | `CNSC-65`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -2031,13 +1783,8 @@ Dynamic deployments are leveraged for safer releases
 
 Vulnerability and configuration scanning is integrated in the IDE or at the pull request
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-65`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-65)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11(1) | Developer Testing and Evaluation | Static Code Analysis |
 
 
 ---
@@ -2047,21 +1794,18 @@ Vulnerability and configuration scanning is integrated in the IDE or at the pull
 <a id="cnsc-66"></a>
 
 ### Environment Segregation | `CNSC-66`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Dedicated development, testing, and production environments are established
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-66`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-66)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-15 | Development Process, Standards, and Tools |
 
 
 ---
@@ -2071,21 +1815,18 @@ Dedicated development, testing, and production environments are established
 <a id="cnsc-67"></a>
 
 ### Business-Critical Code Testing | `CNSC-67`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Tests are built for business-critical code
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-67`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-67)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11 | Developer Testing and Evaluation |
 
 
 ---
@@ -2095,21 +1836,18 @@ Tests are built for business-critical code
 <a id="cnsc-68"></a>
 
 ### Infrastructure Testing | `CNSC-68`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Tests are built for business-critical infrastructure
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-68`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-68)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11 | Developer Testing and Evaluation |
 
 
 ---
@@ -2119,21 +1857,18 @@ Tests are built for business-critical infrastructure
 <a id="cnsc-69"></a>
 
 ### Local Test Execution | `CNSC-69`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Test suites are able to be run locally
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-69`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-69)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11 | Developer Testing and Evaluation |
 
 
 ---
@@ -2143,21 +1878,18 @@ Test suites are able to be run locally
 <a id="cnsc-70"></a>
 
 ### Shared Test Execution | `CNSC-70`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Test suites are available to run in a shared environment
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-70`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-70)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11 | Developer Testing and Evaluation |
 
 
 ---
@@ -2167,7 +1899,6 @@ Test suites are available to run in a shared environment
 <a id="cnsc-71"></a>
 
 ### Code Review Requirements | `CNSC-71`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -2175,13 +1906,8 @@ Test suites are available to run in a shared environment
 
 Two non-author reviewers or approvers are required prior to merging
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-71`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-71)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11(4) | Developer Testing and Evaluation | Manual Code Reviews |
 
 
 ---
@@ -2191,13 +1917,19 @@ Two non-author reviewers or approvers are required prior to merging
 <a id="cnsc-72"></a>
 
 ### Code Quality | `CNSC-72`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Code is clean and well commented
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-72`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-72)
+
+
 
 ---
 
@@ -2206,21 +1938,18 @@ Code is clean and well commented
 <a id="cnsc-73"></a>
 
 ### Full Infrastructure Testing | `CNSC-73`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Full infrastructure tests are used
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-73`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-73)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11 | Developer Testing and Evaluation |
 
 
 ---
@@ -2230,21 +1959,18 @@ Full infrastructure tests are used
 <a id="cnsc-74"></a>
 
 ### Regression Testing | `CNSC-74`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Regression tests are used
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-74`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-74)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11 | Developer Testing and Evaluation |
 
 
 ---
@@ -2254,21 +1980,18 @@ Regression tests are used
 <a id="cnsc-75"></a>
 
 ### Security Regression Testing | `CNSC-75`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Test suites are updated against new and emerging threats and developed into security regression tests
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-75`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-75)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11 | Developer Testing and Evaluation |
 
 
 ---
@@ -2278,21 +2001,18 @@ Test suites are updated against new and emerging threats and developed into secu
 <a id="cnsc-76"></a>
 
 ### Testing Environment | `CNSC-76`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 A dedicated testing environment is established
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-76`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-76)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-3(1) | System Development Life Cycle | Manage preproduction environment |
 
 
 ---
@@ -2302,7 +2022,6 @@ A dedicated testing environment is established
 <a id="cnsc-77"></a>
 
 ### CI Server Isolation | `CNSC-77`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -2310,13 +2029,8 @@ A dedicated testing environment is established
 
 Continuous integration server is isolated
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-77`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-77)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-39 | Process Isolation |
 
 
 ---
@@ -2326,21 +2040,18 @@ Continuous integration server is isolated
 <a id="cnsc-78"></a>
 
 ### Threat-Informed Test Development | `CNSC-78`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Threat model results are used to determine ROI for test development
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-78`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-78)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11(2) | Developer Testing and Evaluation | Threat Modeling and Vulnerability Analyses |
 
 
 ---
@@ -2359,21 +2070,18 @@ Guidelines for secure distribution of container images, packages, and artifacts 
 <a id="cnsc-100"></a>
 
 ### Registry Authentication | `CNSC-100`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Registries require mutually authenticated TLS for all registry connections
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-100`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-100)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-3(1) | Cryptographic Bidirectional Authentication |
 
 
 ---
@@ -2383,21 +2091,18 @@ Registries require mutually authenticated TLS for all registry connections
 <a id="cnsc-101"></a>
 
 ### Image Signing | `CNSC-101`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Image and metadata are signed
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-101`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-101)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2407,7 +2112,6 @@ Image and metadata are signed
 <a id="cnsc-102"></a>
 
 ### Configuration Signing | `CNSC-102`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -2415,13 +2119,8 @@ Image and metadata are signed
 
 Configuration is signed
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-102`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-102)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2431,7 +2130,6 @@ Configuration is signed
 <a id="cnsc-103"></a>
 
 ### Package Signing | `CNSC-103`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -2439,13 +2137,8 @@ Configuration is signed
 
 Package is signed
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-103`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-103)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2455,21 +2148,18 @@ Package is signed
 <a id="cnsc-104"></a>
 
 ### Image Integrity Validation | `CNSC-104`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Integrity of images is validated
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-104`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-104)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | System and Information Integrity |
 
 
 ---
@@ -2479,22 +2169,18 @@ Integrity of images is validated
 <a id="cnsc-105"></a>
 
 ### Image Vulnerability Scanning | `CNSC-105`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Images are scanned for vulnerabilities and malware
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-105`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-105)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| RA-5 | Vulnerability Monitoring and Scanning |
-| SA-3 | System Development Life Cycle |
 
 
 ---
@@ -2504,21 +2190,18 @@ Images are scanned for vulnerabilities and malware
 <a id="cnsc-106"></a>
 
 ### Key Revocation | `CNSC-106`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Image signing key revocation is enabled in the event of compromise
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-106`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-106)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | System and Information Integrity |
 
 
 ---
@@ -2528,21 +2211,18 @@ Image signing key revocation is enabled in the event of compromise
 <a id="cnsc-107"></a>
 
 ### Security Update Prioritization | `CNSC-107`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Security updates are prioritized
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-107`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-107)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-2(3) | System and Information Integrity |
 
 
 ---
@@ -2552,7 +2232,6 @@ Security updates are prioritized
 <a id="cnsc-108"></a>
 
 ### Credential Protection | `CNSC-108`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
@@ -2560,13 +2239,8 @@ Security updates are prioritized
 
 HSMs or credential managers are used for protecting credentials
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-108`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-108)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-12(3) | Systems and Communication Protection |
 
 
 ---
@@ -2576,21 +2250,18 @@ HSMs or credential managers are used for protecting credentials
 <a id="cnsc-109"></a>
 
 ### Scanning Remediation | `CNSC-109`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Container image scanning findings are acted upon
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-109`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-109)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-2(3) | System and Information Integrity |
 
 
 ---
@@ -2600,21 +2271,18 @@ Container image scanning findings are acted upon
 <a id="cnsc-110"></a>
 
 ### Compliance Enforcement | `CNSC-110`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Organizational compliance rules are enforced
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-110`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-110)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| PL-1 | Policy and Procedures |
 
 
 ---
@@ -2624,13 +2292,19 @@ Organizational compliance rules are enforced
 <a id="cnsc-111"></a>
 
 ### Infrastructure Hardening | `CNSC-111`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Incremental hardening of the infrastructure is employed
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-111`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-111)
+
+
 
 ---
 
@@ -2639,21 +2313,18 @@ Incremental hardening of the infrastructure is employed
 <a id="cnsc-112"></a>
 
 ### Public Registry Access Control | `CNSC-112`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Pulls from public registries are controlled and only from authorized engineers or internal registries
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-112`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-112)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-6(3) | Least Privilege |
 
 
 ---
@@ -2663,27 +2334,23 @@ Pulls from public registries are controlled and only from authorized engineers o
 <a id="cnsc-113"></a>
 
 ### Image Encryption Management | `CNSC-113`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Image encryption is coupled with key management attestation and/or authorization and credential distribution
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-12(2) | Cryptographic Key Establishment and Management | Symmetric and Asymmetric Keys |
-| SC-12(3) | Cryptographic Key Establishment and Management | Symmetric and Asymmetric Keys |
-
-
 **Recommendations**
 
 - This restricts the image to only be deployed to authorized platforms. Container image authorization is useful for compliance use cases such as geo-fencing or export control and digital rights media management
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-113`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-113)
+
 
 
 ---
@@ -2693,21 +2360,18 @@ Image encryption is coupled with key management attestation and/or authorization
 <a id="cnsc-114"></a>
 
 ### Risk-Based Remediation Prioritization | `CNSC-114`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 At-risk applications are prioritized for remediation by exploit maturity and vulnerable path presence in addition to the CVSS score
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-114`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-114)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-2(3) | System and Information Integrity |
 
 
 ---
@@ -2717,13 +2381,16 @@ At-risk applications are prioritized for remediation by exploit maturity and vul
 <a id="cnsc-274"></a>
 
 ### Signing Key Revocation | `CNSC-274`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Should software artifacts become untrusted due to compromise or other incident, teams should revoke signing keys to ensure repudiation
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-274`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-274)
+
+
 
 ---
 
@@ -2732,7 +2399,6 @@ Should software artifacts become untrusted due to compromise or other incident, 
 <a id="cnsc-297"></a>
 
 ### Configuration Signing | `CNSC-297`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -2740,13 +2406,8 @@ Should software artifacts become untrusted due to compromise or other incident, 
 
 Workload-related configuration is signed
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-297`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-297)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2756,7 +2417,6 @@ Workload-related configuration is signed
 <a id="cnsc-298"></a>
 
 ### Package Signing | `CNSC-298`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -2764,13 +2424,8 @@ Workload-related configuration is signed
 
 Workload-related package is signed
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-298`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-298)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2780,7 +2435,6 @@ Workload-related package is signed
 <a id="cnsc-303"></a>
 
 ### Credential Protection | `CNSC-303`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -2788,13 +2442,8 @@ Workload-related package is signed
 
 HSMs or credential managers should be used for protecting credentials. If this is not possible, software-based credential managers should be used.
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-303`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-303)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-12(3) | Systems and Communication Protection |
 
 
 ---
@@ -2804,13 +2453,16 @@ HSMs or credential managers should be used for protecting credentials. If this i
 <a id="cnsc-79"></a>
 
 ### Trust Verification | `CNSC-79`
-
 **Originating Document**: `Cloud Native Security Whitepaper v1.0`
 
 
 **Objective**
 
 Trust is verified
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-79`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-79)
+
+
 
 ---
 
@@ -2819,13 +2471,19 @@ Trust is verified
 <a id="cnsc-80"></a>
 
 ### Staging Registry Management | `CNSC-80`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Artifacts ready for deployment are managed in a staging or pre-prod registry
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-80`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-80)
+
+
 
 ---
 
@@ -2834,8 +2492,10 @@ Artifacts ready for deployment are managed in a staging or pre-prod registry
 <a id="cnsc-81"></a>
 
 ### Container Image Hardening | `CNSC-81`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
@@ -2847,6 +2507,10 @@ Container images are hardened following best practices
 - Images contain least permissions to remain functional, do not allow for shell, do not include unnecessary libraries and dependencies, do not bind mount files in from the host, etc.
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-81`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-81)
+
+
+
 ---
 
 
@@ -2854,8 +2518,10 @@ Container images are hardened following best practices
 <a id="cnsc-82"></a>
 
 ### Static Application Security Testing | `CNSC-82`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
@@ -2867,6 +2533,10 @@ Static application security testing (SAST) is performed
 - Static analysis is performed by dedicated SAST tools as well as linters
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-82`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-82)
+
+
+
 ---
 
 
@@ -2874,13 +2544,19 @@ Static application security testing (SAST) is performed
 <a id="cnsc-83"></a>
 
 ### Test Pyramid Adherence | `CNSC-83`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Test suites follow the test pyramid
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-83`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-83)
+
+
 
 ---
 
@@ -2889,13 +2565,19 @@ Test suites follow the test pyramid
 <a id="cnsc-84"></a>
 
 ### Private Development Registry | `CNSC-84`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Artifacts undergoing active development are held in a private registry
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-84`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-84)
+
+
 
 ---
 
@@ -2904,21 +2586,18 @@ Artifacts undergoing active development are held in a private registry
 <a id="cnsc-85"></a>
 
 ### Manifest Scanning | `CNSC-85`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Application manifests are scanned in CI pipeline
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-85`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-85)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| RA-5 | Vulnerability Monitoring and Scanning |
 
 
 ---
@@ -2928,21 +2607,18 @@ Application manifests are scanned in CI pipeline
 <a id="cnsc-86"></a>
 
 ### CI Server Isolation | `CNSC-86`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 CI servers for sensitive workloads are isolated from other workloads
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-86`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-86)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-39 | Process Isolation |
 
 
 ---
@@ -2952,21 +2628,18 @@ CI servers for sensitive workloads are isolated from other workloads
 <a id="cnsc-87"></a>
 
 ### Privileged Build Isolation | `CNSC-87`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Builds requiring elevated privileges run on dedicated servers
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-87`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-87)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-39 | Process Isolation |
 
 
 ---
@@ -2976,21 +2649,18 @@ Builds requiring elevated privileges run on dedicated servers
 <a id="cnsc-88"></a>
 
 ### Build Policy Enforcement | `CNSC-88`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Build policies are enforced on the CI pipeline
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-88`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-88)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-1 | Policy and Procedures |
 
 
 ---
@@ -3000,21 +2670,18 @@ Build policies are enforced on the CI pipeline
 <a id="cnsc-89"></a>
 
 ### Pipeline Metadata Signing | `CNSC-89`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Pipeline metadata is signed
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-89`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-89)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -3024,21 +2691,18 @@ Pipeline metadata is signed
 <a id="cnsc-90"></a>
 
 ### Build Stage Verification | `CNSC-90`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Build stages are verified prior to the next stage executing
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-90`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-90)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -3048,21 +2712,18 @@ Build stages are verified prior to the next stage executing
 <a id="cnsc-91"></a>
 
 ### CI Pipeline Scanning | `CNSC-91`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Images are scanned within the CI pipeline
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-91`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-91)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| RA-5 | Vulnerability Monitoring and Scanning |
 
 
 ---
@@ -3072,26 +2733,23 @@ Images are scanned within the CI pipeline
 <a id="cnsc-92"></a>
 
 ### Pipeline Compliance Integration | `CNSC-92`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Vulnerability scans are coupled with pipeline compliance rules
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-1 | Policy and Procedures |
-
-
 **Recommendations**
 
 - Prevent insecure images and artifacts from being deployed
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-92`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-92)
+
 
 
 ---
@@ -3101,21 +2759,18 @@ Vulnerability scans are coupled with pipeline compliance rules
 <a id="cnsc-93"></a>
 
 ### Dynamic Application Security Testing | `CNSC-93`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Dynamic application security testing (DAST) is performed
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-93`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-93)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11(8) | Interactive Application Security Testing |
 
 
 ---
@@ -3125,21 +2780,18 @@ Dynamic application security testing (DAST) is performed
 <a id="cnsc-94"></a>
 
 ### Application Instrumentation | `CNSC-94`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Application instrumentation is employed
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-94`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-94)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-4 | System Monitoring |
 
 
 ---
@@ -3149,8 +2801,10 @@ Application instrumentation is employed
 <a id="cnsc-95"></a>
 
 ### Test Traceability | `CNSC-95`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
@@ -3162,6 +2816,10 @@ Automated test results map back to requirements
 - Requirements include feature, function, security, and compliance
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-95`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-95)
+
+
+
 ---
 
 
@@ -3169,8 +2827,10 @@ Automated test results map back to requirements
 <a id="cnsc-96"></a>
 
 ### Infrastructure Security Testing | `CNSC-96`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
@@ -3182,6 +2842,10 @@ Infrastructure security tests are employed
 - firewall rules open to the world, overprivileged Identity & Access Management (IAM) policies, unauthenticated endpoints, etc
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-96`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-96)
+
+
+
 ---
 
 
@@ -3189,26 +2853,23 @@ Infrastructure security tests are employed
 <a id="cnsc-97"></a>
 
 ### Security Health Verification | `CNSC-97`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Tests to verify security health are executed at build and deploy time
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-4 | System Monitoring |
-
-
 **Recommendations**
 
 - to evaluate any changes or regressions that may have occurred throughout the lifecycle.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-97`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-97)
+
 
 
 ---
@@ -3218,13 +2879,19 @@ Tests to verify security health are executed at build and deploy time
 <a id="cnsc-98"></a>
 
 ### IaC Policy Controls | `CNSC-98`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Infrastructure as Code is subject to the same pipeline policy controls as application code
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-98`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-98)
+
+
 
 ---
 
@@ -3233,22 +2900,18 @@ Infrastructure as Code is subject to the same pipeline policy controls as applic
 <a id="cnsc-99"></a>
 
 ### Automated Security Testing | `CNSC-99`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Security testing is automated
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-99`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-99)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11 | Developer Testing and Evaluation |
-| CA-8 | Penetration Testing |
 
 
 ---
@@ -3267,7 +2930,6 @@ Guidelines for securing artefacts, including build process attestation, signing 
 <a id="cnsc-141"></a>
 
 ### Build Process Attestation | `CNSC-141`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3275,19 +2937,13 @@ Guidelines for securing artefacts, including build process attestation, signing 
 
 Every step in the build process is signed and attested for process integrity
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-1 | Policy and Procedures |
-| SI-7 | Software, Firmware, and Information Integrity |
-
-
 **Recommendations**
 
 - The signing of artefacts should be performed at each stage of its life cycle. The final artefact bundle should include these collective signatures and itself be signed to give integrity to the completed artefact and all its associated metadata.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-141`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-141)
+
 
 
 ---
@@ -3297,7 +2953,6 @@ Every step in the build process is signed and attested for process integrity
 <a id="cnsc-142"></a>
 
 ### Build Signature Verification | `CNSC-142`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3305,19 +2960,13 @@ Every step in the build process is signed and attested for process integrity
 
 Every step in the build process verifies previously generated signatures
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-1 | Policy and Procedures |
-| SI-7 | Software, Firmware, and Information Integrity |
-
-
 **Recommendations**
 
 - The integrity and provenance of images, deployment configuration, and application packages included in artefacts should all be validated using the signatures generated by each step in its build process to ensure compliance
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-142`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-142)
+
 
 
 ---
@@ -3327,7 +2976,6 @@ Every step in the build process verifies previously generated signatures
 <a id="cnsc-143"></a>
 
 ### Artifact Signing Framework | `CNSC-143`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3335,18 +2983,13 @@ Every step in the build process verifies previously generated signatures
 
 A framework is used to manage signing of artefacts
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-5 | Authenticator Management |
-
-
 **Recommendations**
 
 - Consider TUF/notary to sign OCI images. Notary makes use of a “root-of-trust” model to delegate trust from a single root to the individual teams or developers who sign artefacts. It uses additional metadata to allow clients to verify the freshness of content in a repository and protect against common attacks on update systems. Clients can make use of public keys to verify the contents of the repository.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-143`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-143)
+
 
 
 ---
@@ -3356,7 +2999,6 @@ A framework is used to manage signing of artefacts
 <a id="cnsc-144"></a>
 
 ### Attestation Store | `CNSC-144`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3364,18 +3006,13 @@ A framework is used to manage signing of artefacts
 
 A store is used to manage attestations
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-4(6) | Information Flow Enforcement, Metadata |
-
-
 **Recommendations**
 
 - Consider storing in-toto attestations in OCI registries alongside the image. Generated in-toto metadata needs to be stored and tracked for which a database or a dedicated store such as Grafeas can be used.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-144`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-144)
+
 
 
 ---
@@ -3385,7 +3022,6 @@ A store is used to manage attestations
 <a id="cnsc-145"></a>
 
 ### Certification Authorization | `CNSC-145`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3393,18 +3029,13 @@ A store is used to manage attestations
 
 Artefacts any given party is authorized to certify are limited
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-6 | Least Privilege |
-
-
 **Recommendations**
 
 - Trust should not be granted universally or indefinitely. Artefacts or metadata that a given party is trusted to certify should be restricted using selective trust delegations. Trust must expire at predefined intervals, unless renewed as weel as a party must only be trusted to perform the tasks assigned to it to ensure compartmentatlization
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-145`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-145)
+
 
 
 ---
@@ -3414,7 +3045,6 @@ Artefacts any given party is authorized to certify are limited
 <a id="cnsc-146"></a>
 
 ### Key Rotation and Revocation | `CNSC-146`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3422,18 +3052,13 @@ Artefacts any given party is authorized to certify are limited
 
 Rotation and revocation of private keys is supported
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-12 | Cryptographic Key Establishment and Management |
-
-
 **Recommendations**
 
 - The system must be prepared for when, not if, its private keys are compromised. The ability to rotate and revoke private keys must be built into the distribution mechanism. Additionally, multiple keys must be used for different tasks or roles, and a threshold of keys must be required for important roles. Finally, minimal trust must be placed in high-risk keys like those that are stored online or used in automated roles.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-146`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-146)
+
 
 
 ---
@@ -3443,7 +3068,6 @@ Rotation and revocation of private keys is supported
 <a id="cnsc-147"></a>
 
 ### OCI Registry Support | `CNSC-147`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3456,6 +3080,10 @@ A container registry that supports OCI image-spec images is used
 - An internal image registry should be deployed and configured to support internal artefact distribution with the security properties described in this section.
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-147`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-147)
+
+
+
 ---
 
 
@@ -3463,7 +3091,6 @@ A container registry that supports OCI image-spec images is used
 <a id="cnsc-148"></a>
 
 ### Artifact Encryption | `CNSC-148`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3471,22 +3098,13 @@ A container registry that supports OCI image-spec images is used
 
 Artefacts are encrypted before distribution and only authorized platforms have decryption capabilities
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-28(1) | Protection of Information at Rest, Cryptographic Protection |
-| SC-13 | Cryptographic Protection |
-| SC-8 | Transmission Confidentiality and Integrity |
-| IA-5 | Authenticator Management |
-| SC-12 | Cryptographic Key Establishment and Management |
-
-
 **Recommendations**
 
 - Ensure contents of the artefact remain confidential in transit and at rest, until it is consumed. These artefacts can be encrypted so that they are accessible by authorized parties, such as the clusters, vulnerability scanners, etc. t is recommended organizations use key management and distribution systems with identity and attestation mechanisms (e.g. SPIFFE/SPIRE)
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-148`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-148)
+
 
 
 ---
@@ -3505,7 +3123,6 @@ Guidelines for securing build pipelines, ensuring cryptographic guarantees, vali
 <a id="cnsc-149"></a>
 
 ### Cryptographic Policy Guarantee | `CNSC-149`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3513,18 +3130,13 @@ Guidelines for securing build pipelines, ensuring cryptographic guarantees, vali
 
 Policy adherence is cryptographically guaranteed
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-3(6) | Configuration Change Control |
-
-
 **Recommendations**
 
 - The presence and output of each build step should be attested during the build. The CNCF maintains the in-toto project that can be used to secure a chain of pipeline stages end-to-end with cryptographic guarantees. Build metadata should be evaluated against the policy template by using tools such as Open Policy Agent.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-149`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-149)
+
 
 
 ---
@@ -3534,7 +3146,6 @@ Policy adherence is cryptographically guaranteed
 <a id="cnsc-150"></a>
 
 ### Environment and Dependency Validation | `CNSC-150`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3542,18 +3153,13 @@ Policy adherence is cryptographically guaranteed
 
 Environments and dependencies are validated before usage
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-3(2) | Configuration Change Control |
-
-
 **Recommendations**
 
 - The build environment’s sources and dependencies must come from a secure, trusted source of truth. Checksums and any signatures should be validated both in the downloading or ingestion process, and again by the build worker. This should include validating package manager signatures, checking out specific Git commit hashes, and verifying SHA sums of input sources and binaries. After completing this validation, the downloading process should sign all binaries or libraries it is adding to the secure source
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-150`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-150)
+
 
 
 ---
@@ -3563,7 +3169,6 @@ Environments and dependencies are validated before usage
 <a id="cnsc-151"></a>
 
 ### Build Worker Runtime Security | `CNSC-151`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3571,18 +3176,13 @@ Environments and dependencies are validated before usage
 
 Runtime security of build workers is validated
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-3(4) |  |
-
-
 **Recommendations**
 
 - Out-of-band verification of runtime environment security, as defined by execution of policies using tools such as seccomp, AppArmor, and SELinux, provides defense in depth against attacks on build infrastructure. High privilege kernel capabilities such as debugger, device, and network attachments should be restricted and monitored.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-151`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-151)
+
 
 
 ---
@@ -3592,7 +3192,6 @@ Runtime security of build workers is validated
 <a id="cnsc-152"></a>
 
 ### Reproducible Builds | `CNSC-152`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3600,18 +3199,13 @@ Runtime security of build workers is validated
 
 Build artefacts are validated through verifiably reproducible builds
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-3(4) |  |
-
-
 **Recommendations**
 
 - A verifiably reproducible build is a build process where, given a source code commit hash and a set of build instructions, an end user should be able to reproduce the built artefact bit for bit.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-152`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-152)
+
 
 
 ---
@@ -3621,7 +3215,6 @@ Build artefacts are validated through verifiably reproducible builds
 <a id="cnsc-153"></a>
 
 ### External Requirement Verification | `CNSC-153`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3629,13 +3222,8 @@ Build artefacts are validated through verifiably reproducible builds
 
 External requirements from the build process are locked and verified
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-153`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-153)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-3(2) |  |
 
 
 ---
@@ -3645,7 +3233,6 @@ External requirements from the build process are locked and verified
 <a id="cnsc-154"></a>
 
 ### Build Determinism | `CNSC-154`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3658,6 +3245,10 @@ Sources of non-determinism are found and eliminated
 - Reproducible-builds.org documents and offers solutions for many of these things. Diffoscope can be used to dig in and find the cause of differences when tracking down sources of non-determinism.
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-154`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-154)
+
+
+
 ---
 
 
@@ -3665,7 +3256,6 @@ Sources of non-determinism are found and eliminated
 <a id="cnsc-155"></a>
 
 ### Build Environment Recording | `CNSC-155`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3673,18 +3263,13 @@ Sources of non-determinism are found and eliminated
 
 The build environment is recorded
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-3(1) |  |
-
-
 **Recommendations**
 
 - Ensure best practices outlined in cloud native security paper are followed to deploy a secure orchestration layer
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-155`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-155)
+
 
 
 ---
@@ -3694,7 +3279,6 @@ The build environment is recorded
 <a id="cnsc-156"></a>
 
 ### Build Environment Automation | `CNSC-156`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3702,13 +3286,8 @@ The build environment is recorded
 
 Creation of the build environment is automated
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-156`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-156)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-3(3) |  |
 
 
 ---
@@ -3718,7 +3297,6 @@ Creation of the build environment is automated
 <a id="cnsc-157"></a>
 
 ### Build Distribution | `CNSC-157`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3726,13 +3304,8 @@ Creation of the build environment is automated
 
 Builds are distributed across different infrastructure
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-157`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-157)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-3(3) |  |
 
 
 ---
@@ -3742,7 +3315,6 @@ Builds are distributed across different infrastructure
 <a id="cnsc-158"></a>
 
 ### Pipeline as Code | `CNSC-158`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3750,13 +3322,8 @@ Builds are distributed across different infrastructure
 
 Build and related CI/CD steps are automated through a pipeline delivered as code
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-158`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-158)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-3 | System Development Life Cycle |
 
 
 ---
@@ -3766,13 +3333,16 @@ Build and related CI/CD steps are automated through a pipeline delivered as code
 <a id="cnsc-159"></a>
 
 ### Pipeline Standardization | `CNSC-159`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
 **Objective**
 
 Pipelines are standardized across projects
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-159`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-159)
+
+
 
 ---
 
@@ -3781,13 +3351,16 @@ Pipelines are standardized across projects
 <a id="cnsc-160"></a>
 
 ### Software Factory Platform | `CNSC-160`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
 **Objective**
 
 A secured orchestration platform is provisioned to host the software factory
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-160`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-160)
+
+
 
 ---
 
@@ -3796,7 +3369,6 @@ A secured orchestration platform is provisioned to host the software factory
 <a id="cnsc-161"></a>
 
 ### Single-Use Build Workers | `CNSC-161`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3804,13 +3376,8 @@ A secured orchestration platform is provisioned to host the software factory
 
 Build workers are single use
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-161`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-161)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-2 | Account Management |
 
 
 ---
@@ -3820,7 +3387,6 @@ Build workers are single use
 <a id="cnsc-162"></a>
 
 ### Software Factory Network Isolation | `CNSC-162`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3828,18 +3394,13 @@ Build workers are single use
 
 Software factory has minimal network connectivity
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-7(3) | Boundary Protection |
-
-
 **Recommendations**
 
 - The software factory should have no network connectivity other than to connect to the trusted sources of hardened source code, the dependency repository and code signing infrastructure.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-162`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-162)
+
 
 
 ---
@@ -3849,7 +3410,6 @@ Software factory has minimal network connectivity
 <a id="cnsc-163"></a>
 
 ### Build Worker Duty Segregation | `CNSC-163`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3857,13 +3417,8 @@ Software factory has minimal network connectivity
 
 Duties of each build worker are segregated
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-163`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-163)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-5 | Separation of Duties |
 
 
 ---
@@ -3873,7 +3428,6 @@ Duties of each build worker are segregated
 <a id="cnsc-164"></a>
 
 ### Build Worker Environment Control | `CNSC-164`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3881,18 +3435,13 @@ Duties of each build worker are segregated
 
 Build worker environment and commands are passed in
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-2(2) | Baseline Configuration |
-
-
 **Recommendations**
 
 - Inorder to limit hostile tooling and persistent impants from attackers, a Build Worker should start with a clean and isolated environmment. It should not be able to pull its own environment. Ensure environment variables and commands are explicitly passed to avoid any complicated and opaque build process
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-164`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-164)
+
 
 
 ---
@@ -3902,7 +3451,6 @@ Build worker environment and commands are passed in
 <a id="cnsc-165"></a>
 
 ### Secured Output Storage | `CNSC-165`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3910,18 +3458,13 @@ Build worker environment and commands are passed in
 
 Output is written to a separate secured storage repo
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AU-9(2) | Protection of Audit Information |
-
-
 **Recommendations**
 
 - The output artefact should be written to a separate shared storage from the inputs. A process separate from the Build Worker should then upload that artefact to an appropriate repository.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-165`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-165)
+
 
 
 ---
@@ -3931,7 +3474,6 @@ Output is written to a separate secured storage repo
 <a id="cnsc-166"></a>
 
 ### Pipeline Modification Control | `CNSC-166`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3944,6 +3486,10 @@ Pipeline modification is only allowed through pipeline as code
 - The pipeline configuration (pipeline as code) should be immutable and any modification shouldn't be possible. This prevents attackers from interacting and modifying the configuration. This model then requires appropriate authentication and authorization to be in place for the software and configuration of the pipeline
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-166`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-166)
+
+
+
 ---
 
 
@@ -3951,7 +3497,6 @@ Pipeline modification is only allowed through pipeline as code
 <a id="cnsc-167"></a>
 
 ### User Role Definition | `CNSC-167`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3959,13 +3504,8 @@ Pipeline modification is only allowed through pipeline as code
 
 User roles are defined
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-167`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-167)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-2 | Account Management |
 
 
 ---
@@ -3975,7 +3515,6 @@ User roles are defined
 <a id="cnsc-168"></a>
 
 ### Root of Trust Establishment | `CNSC-168`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -3983,13 +3522,8 @@ User roles are defined
 
 Established practices are followed for establishing a root of trust from an offline source
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-168`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-168)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-17 | Public Key Infrastructure Certificates |
 
 
 ---
@@ -3999,7 +3533,6 @@ Established practices are followed for establishing a root of trust from an offl
 <a id="cnsc-169"></a>
 
 ### Short-Lived Certificates | `CNSC-169`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4007,13 +3540,8 @@ Established practices are followed for establishing a root of trust from an offl
 
 Short-lived workload certificates are used
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-169`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-169)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-23(5) | Session Authenticity |
 
 
 ---
@@ -4032,7 +3560,6 @@ Guidelines for securing materials, including third-party artifact verification, 
 <a id="cnsc-173"></a>
 
 ### Third-Party Artifact Verification | `CNSC-173`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4040,18 +3567,13 @@ Guidelines for securing materials, including third-party artifact verification, 
 
 Third party artefacts and open source libraries are verified
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11 | Developer Testing and Evaluation |
-
-
 **Recommendations**
 
 - All third party artefacts, open source libraries and any other dependencies should be verified as part of the continuous integration pipeline by validating their checksums against a known good source and validating any cryptographic signatures. Any software ingested must be scanned using Software Composition Analysis (SCA) and pentesting tools to detect whether any vulnerable open-source software is used in the final product.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-173`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-173)
+
 
 
 ---
@@ -4061,7 +3583,6 @@ Third party artefacts and open source libraries are verified
 <a id="cnsc-174"></a>
 
 ### Third-Party SBOM Requirements | `CNSC-174`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4069,18 +3590,13 @@ Third party artefacts and open source libraries are verified
 
 SBOM is required from third party suppliers
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-8 | Information System Component Inventory |
-
-
 **Recommendations**
 
 - Where possible, vendors should be required to provide Software Bills of Materials (SBOMs) containing the explicit details of the software and versions used within the supplied product as it provides a clear and direct link to the dependencies.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-174`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-174)
+
 
 
 ---
@@ -4090,7 +3606,6 @@ SBOM is required from third party suppliers
 <a id="cnsc-175"></a>
 
 ### Dependency Tracking | `CNSC-175`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4098,18 +3613,13 @@ SBOM is required from third party suppliers
 
 Dependencies between open source components are tracked
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-10 | Software Usage Restrictions |
-
-
 **Recommendations**
 
 - A register should be maintained of a project’s open source components, dependencies and vulnerabilities to help trace any deployed artefacts with new vulnerabilities. One of the most popular open source inventory implementations is OWASP Dependency-Track.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-175`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-175)
+
 
 
 ---
@@ -4119,13 +3629,16 @@ Dependencies between open source components are tracked
 <a id="cnsc-176"></a>
 
 ### Source-Based Library Builds | `CNSC-176`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
 **Objective**
 
 Libraries are built based upon source code
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-176`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-176)
+
+
 
 ---
 
@@ -4134,7 +3647,6 @@ Libraries are built based upon source code
 <a id="cnsc-177"></a>
 
 ### Trusted Package Sources | `CNSC-177`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4147,6 +3659,10 @@ Trusted package managers and repositories are defined and prioritized
 - Organizations should host their own package managers and artefact repositories, and restrict build machines to pull from only those sources.
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-177`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-177)
+
+
+
 ---
 
 
@@ -4154,7 +3670,6 @@ Trusted package managers and repositories are defined and prioritized
 <a id="cnsc-178"></a>
 
 ### Immutable SBOM Generation | `CNSC-178`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4167,6 +3682,10 @@ An immutable SBOM of the code is generated
 - There are currently two well known SBOM specifications: SPDX and CycloneDX
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-178`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-178)
+
+
+
 ---
 
 
@@ -4174,7 +3693,6 @@ An immutable SBOM of the code is generated
 <a id="cnsc-179"></a>
 
 ### Software Vulnerability Scanning | `CNSC-179`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4182,13 +3700,8 @@ An immutable SBOM of the code is generated
 
 Software is scanned for vulnerabilities
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-179`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-179)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| RA-5 | Vulnerability Monitoring and Scanning |
 
 
 ---
@@ -4198,7 +3711,6 @@ Software is scanned for vulnerabilities
 <a id="cnsc-180"></a>
 
 ### License Compliance Scanning | `CNSC-180`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4206,18 +3718,13 @@ Software is scanned for vulnerabilities
 
 Software is scanned for license implications
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-10 | Software Usage Restrictions |
-
-
 **Recommendations**
 
 - Licensing obligations must also be factored into the ingestion process. The Linux Foundation maintains the Open Compliance Program which hosts several tools to ensure released software meets legal and regulatory compliance requirements.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-180`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-180)
+
 
 
 ---
@@ -4227,7 +3734,6 @@ Software is scanned for license implications
 <a id="cnsc-181"></a>
 
 ### Software Composition Analysis | `CNSC-181`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4235,18 +3741,13 @@ Software is scanned for license implications
 
 Software composition analysis is run on ingested software
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11(1)(8) | Developer Testing and Evaluation |
-
-
 **Recommendations**
 
 - The SCA tool will attempt to use heuristics to identify the direct and transitive dependencies, and can also serve as verification of SBOM content. This data will then be matched against data from a number of data feeds containing vulnerability data to highlight any vulnerabilities in the dependent packages.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-181`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-181)
+
 
 
 ---
@@ -4265,7 +3766,6 @@ Guidelines for securing the source code, including commit signing, branch protec
 <a id="cnsc-182"></a>
 
 ### Commit and Tag Signing | `CNSC-182`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4273,18 +3773,13 @@ Guidelines for securing the source code, including commit signing, branch protec
 
 Commits and tags are signed
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-7 | Software, Firmware, and information integrity |
-
-
 **Recommendations**
 
 - GPG keys or S/MIME certificates are used to sign the source code
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-182`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-182)
+
 
 
 ---
@@ -4294,7 +3789,6 @@ Commits and tags are signed
 <a id="cnsc-183"></a>
 
 ### Branch Protection Attestation | `CNSC-183`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4302,18 +3796,13 @@ Commits and tags are signed
 
 Full attestation and verification is enforced for protected branches
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-6(3) | Least Privilege |
-
-
 **Recommendations**
 
 - Branch protection is enabled on the mainline and release branches with force push disabled
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-183`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-183)
+
 
 
 ---
@@ -4323,7 +3812,6 @@ Full attestation and verification is enforced for protected branches
 <a id="cnsc-184"></a>
 
 ### Secret Commit Prevention | `CNSC-184`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4331,18 +3819,13 @@ Full attestation and verification is enforced for protected branches
 
 Secrets are not committed to the source code repository unless encrypted
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-12(3) | Systems and Communication Protection |
-
-
 **Recommendations**
 
 - Implement tooling to detect secrets or to prevent certain files from being pushed which may contain plaintext sensitive materials, such as via a .gitignore and/or .gitattributes file, client-side hook (pre-commit), server-side hook (pre-receive or update), and/or as a step in the CI process
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-184`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-184)
+
 
 
 ---
@@ -4352,7 +3835,6 @@ Secrets are not committed to the source code repository unless encrypted
 <a id="cnsc-185"></a>
 
 ### Repository Access Definition | `CNSC-185`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4360,18 +3842,13 @@ Secrets are not committed to the source code repository unless encrypted
 
 Individuals or teams with write access to a repository are defined
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| PL-1 | Policy and Procedures |
-
-
 **Recommendations**
 
 - Implement codeowners (or equivalent)
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-185`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-185)
+
 
 
 ---
@@ -4381,7 +3858,6 @@ Individuals or teams with write access to a repository are defined
 <a id="cnsc-186"></a>
 
 ### Automated Security Scanning | `CNSC-186`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4389,18 +3865,13 @@ Individuals or teams with write access to a repository are defined
 
 Software security scanning and testing is automated
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| RA-5 | Vulnerability Monitoring and Scanning |
-
-
 **Recommendations**
 
 - Security specific scans should be performed, including Static Application Security Tests (SAST) and Dynamic Application Security Tests (DAST). Both the coverage and results of these tests should be published as part of the repository information to help downstream consumers of software better assess the stability, reliability, and/or suitability of a product or library.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-186`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-186)
+
 
 
 ---
@@ -4410,7 +3881,6 @@ Software security scanning and testing is automated
 <a id="cnsc-187"></a>
 
 ### Contribution Policy Enforcement | `CNSC-187`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4418,18 +3888,13 @@ Software security scanning and testing is automated
 
 Contribution policies are established and adhered to
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| PL-1 | Policy and Procedures |
-
-
 **Recommendations**
 
 - Define configuration options or configuration rules witthin SCM platforms allow repository administrators to enforce security, hygiene and operational policies.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-187`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-187)
+
 
 
 ---
@@ -4439,7 +3904,6 @@ Contribution policies are established and adhered to
 <a id="cnsc-188"></a>
 
 ### Functional Role Definition | `CNSC-188`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4447,18 +3911,13 @@ Contribution policies are established and adhered to
 
 Roles are defined and aligned to functional responsibilities
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| PL-1 | Policy and Procedures |
-
-
 **Recommendations**
 
 - Define roles by using principle of least privileges to provide access based on function such as Developer, Maintainer, Owner, Reviewer, Approver, and Guest
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-188`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-188)
+
 
 
 ---
@@ -4468,7 +3927,6 @@ Roles are defined and aligned to functional responsibilities
 <a id="cnsc-189"></a>
 
 ### Four-Eyes Principle | `CNSC-189`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4476,18 +3934,13 @@ Roles are defined and aligned to functional responsibilities
 
 An independent four-eyes principle is enforced
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11 | Developer Testing and Evaluation |
-
-
 **Recommendations**
 
 - The author(s) of a request may not also be the approver of the request. At least two reviewers with equal or greater expertise should review & approve the request.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-189`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-189)
+
 
 
 ---
@@ -4497,7 +3950,6 @@ An independent four-eyes principle is enforced
 <a id="cnsc-190"></a>
 
 ### Branch Protection Rules | `CNSC-190`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4505,18 +3957,13 @@ An independent four-eyes principle is enforced
 
 Branch protection rules are used
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-8 | Security Engineering Principles |
-
-
 **Recommendations**
 
 - SCM platforms allow the configuration and restriction of source code operations on individual branches. Protection rules can be used to enforce the usage of pull requests with specified precondition and approval rules, ensuring that a human code review process is followed or an automated status checking of a branch occurs. Additionally, protected branches can be used to disallow dangerous use of force pushes, preventing the overwrite of commit histories and potential obfuscation of code changes.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-190`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-190)
+
 
 
 ---
@@ -4526,7 +3973,6 @@ Branch protection rules are used
 <a id="cnsc-191"></a>
 
 ### Repository MFA Enforcement | `CNSC-191`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4534,13 +3980,8 @@ Branch protection rules are used
 
 MFA is enforced for accessing source code repositories
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-191`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-191)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-2(1) | Identification and Authentication (organizational Users) |
 
 
 ---
@@ -4550,7 +3991,6 @@ MFA is enforced for accessing source code repositories
 <a id="cnsc-192"></a>
 
 ### SSH Key Access | `CNSC-192`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4558,13 +3998,8 @@ MFA is enforced for accessing source code repositories
 
 SSH keys are used to provide developers access to source code repositories
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-192`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-192)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-1 | Remote Access |
 
 
 ---
@@ -4574,7 +4009,6 @@ SSH keys are used to provide developers access to source code repositories
 <a id="cnsc-193"></a>
 
 ### Key Rotation Policy | `CNSC-193`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4582,18 +4016,13 @@ SSH keys are used to provide developers access to source code repositories
 
 A key rotation policy is maintained
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-2(1) | Prerequisites and criteria for group and role membership are defined. |
-
-
 **Recommendations**
 
 - It is recommended to implement a key rotation policy to ensure that compromised keys will cease to be usable after a certain period of time. When a private key is known to have been compromised, it should be revoked and replaced immediately to shut off access for any unauthorized user. Organizations may also consider using short lived certificates or keys, which reduces the reliance on certificate revocation systems.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-193`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-193)
+
 
 
 ---
@@ -4603,7 +4032,6 @@ A key rotation policy is maintained
 <a id="cnsc-194"></a>
 
 ### Ephemeral Credentials | `CNSC-194`
-
 **Originating Document**: `Software Supply Chain Best Practices v1.0`
 
 
@@ -4611,18 +4039,13 @@ A key rotation policy is maintained
 
 Short-lived or ephemeral credentials are used for machine and service access
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-2(1) | Usage of automated mechanisms to create, enable, modify, disable, and remove accounts. |
-
-
 **Recommendations**
 
 - Short-life credential issuance encourages the use of fine grained permissions and automation in provisioning access tokens. For CI/CD pipeline agents, short-lived access tokens should be considered instead of password-based credentials. The use of very short-lived tokens like OAuth 2.0, OpenID Connect, etc., will help to implement more secure access and increase the security assurance.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-194`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-194)
+
 
 
 ---
@@ -4641,21 +4064,18 @@ Guidelines for security assurance, including network policies, incident response
 <a id="cnsc-115"></a>
 
 ### East-West Network Policy | `CNSC-115`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Network policies enforce east-west network communication within the container deployment is limited to only that which is authorized for access
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-115`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-115)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-6(3) | Least Privilege, Network Access to Privileged Commands |
 
 
 ---
@@ -4665,28 +4085,23 @@ Network policies enforce east-west network communication within the container de
 <a id="cnsc-116"></a>
 
 ### Incident Response | `CNSC-116`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Incident response considers cloud native workloads
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IR-4 | Incident Handling, Automated Incident Handling Processes |
-| IR-4(5) | Incident Handling, Automated Disabling of System |
-| CA-7 | Continuous Monitoring |
-
-
 **Recommendations**
 
 - workloads which may not always conform with some underlying assumptions about node isolation (new pod instances could run on a different server), networking (e.g. IP addresses are assigned dynamically) and immutability (e.g. runtime changes to container are not persisted across restarts)
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-116`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-116)
+
 
 
 ---
@@ -4696,21 +4111,18 @@ Incident response considers cloud native workloads
 <a id="cnsc-117"></a>
 
 ### Incident Monitoring | `CNSC-117`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Incident response accounts for appropriate evidence handling and collection of cloud native workloads
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-117`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-117)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IR-5(1) | Incident Monitoring, Automated Tracking, Data Collection, and Analysis |
 
 
 ---
@@ -4720,13 +4132,19 @@ Incident response accounts for appropriate evidence handling and collection of c
 <a id="cnsc-118"></a>
 
 ### Security Assurance Management | `CNSC-118`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Rootless builds are employed
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-118`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-118)
+
+
 
 ---
 
@@ -4735,13 +4153,19 @@ Rootless builds are employed
 <a id="cnsc-119"></a>
 
 ### Workload and Deployment Isolation | `CNSC-119`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Cgroups and system groups are used to isolate workloads and deployments
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-119`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-119)
+
+
 
 ---
 
@@ -4750,26 +4174,23 @@ Cgroups and system groups are used to isolate workloads and deployments
 <a id="cnsc-120"></a>
 
 ### Mandatory Access Controls | `CNSC-120`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 MAC implementations are employed
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-3(3) | Access Enforcement, Mandatory Access Control |
-
-
 **Recommendations**
 
 - SELinux, AppArmor
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-120`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-120)
+
 
 
 ---
@@ -4779,21 +4200,18 @@ MAC implementations are employed
 <a id="cnsc-121"></a>
 
 ### Threat Modeling and Vulnerability Analysis | `CNSC-121`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Threat model code and infrastructure
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-121`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-121)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-11(2) | Developer Testing and Evaluation, Threat Modeling and Vulnerability Analyses |
 
 
 ---
@@ -4803,26 +4221,23 @@ Threat model code and infrastructure
 <a id="cnsc-122"></a>
 
 ### Authentication Management | `CNSC-122`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Entities are able to independently authenticate other identities
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-9 | Service Identification and Authentication |
-
-
 **Recommendations**
 
 - Public Key Infrastructure
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-122`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-122)
+
 
 
 ---
@@ -4832,21 +4247,18 @@ Entities are able to independently authenticate other identities
 <a id="cnsc-123"></a>
 
 ### Identity Management | `CNSC-123`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Each entity can create proof of who the identity is
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-123`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-123)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| IA-9 | Service Identification and Authentication |
 
 
 ---
@@ -4856,21 +4268,18 @@ Each entity can create proof of who the identity is
 <a id="cnsc-124"></a>
 
 ### Trusted Components | `CNSC-124`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Orchestrator is running on a trusted OS, BIOS, etc
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-124`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-124)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-14 | Signed Components |
 
 
 ---
@@ -4880,21 +4289,18 @@ Orchestrator is running on a trusted OS, BIOS, etc
 <a id="cnsc-125"></a>
 
 ### Security Verification | `CNSC-125`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Orchestrator verifies the claims of a container
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-125`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-125)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-6 | Security and Privacy Function Verification |
 
 
 ---
@@ -4904,13 +4310,19 @@ Orchestrator verifies the claims of a container
 <a id="cnsc-126"></a>
 
 ### Network Policy Management | `CNSC-126`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Orchestrator network policies are used in conjunction with a service mesh
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-126`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-126)
+
+
 
 ---
 
@@ -4919,7 +4331,6 @@ Orchestrator network policies are used in conjunction with a service mesh
 <a id="cnsc-196"></a>
 
 ### Supply Chain Security Best Practices | `CNSC-196`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -4932,6 +4343,10 @@ Supply chain security best practices are adhered to
 - The SSCP controls in this document provide the necessary controls for best practices
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-196`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-196)
+
+
+
 ---
 
 
@@ -4939,7 +4354,6 @@ Supply chain security best practices are adhered to
 <a id="cnsc-197"></a>
 
 ### Repository and Branch Access Control | `CNSC-197`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -4952,6 +4366,10 @@ Access to repository and branches is restricted
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-197`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-197)
+
+
+
 ---
 
 
@@ -4959,7 +4377,6 @@ Access to repository and branches is restricted
 <a id="cnsc-198"></a>
 
 ### Git Secret Prevention | `CNSC-198`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -4972,6 +4389,10 @@ Unencrypted credentials or secrets are never stored in the Git repository and se
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-198`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-198)
+
+
+
 ---
 
 
@@ -4979,7 +4400,6 @@ Unencrypted credentials or secrets are never stored in the Git repository and se
 <a id="cnsc-199"></a>
 
 ### Commit Identity Enforcement | `CNSC-199`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -4992,6 +4412,10 @@ Strong identity is enforced with GPG Signed Commits for accountability and trace
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-199`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-199)
+
+
+
 ---
 
 
@@ -4999,7 +4423,6 @@ Strong identity is enforced with GPG Signed Commits for accountability and trace
 <a id="cnsc-200"></a>
 
 ### Linear History Enforcement | `CNSC-200`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -5012,6 +4435,10 @@ Linear history is required and commit history is maintained by disallowing force
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-200`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-200)
+
+
+
 ---
 
 
@@ -5019,7 +4446,6 @@ Linear history is required and commit history is maintained by disallowing force
 <a id="cnsc-201"></a>
 
 ### Branching Policy Enforcement | `CNSC-201`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -5032,6 +4458,10 @@ Branching policy is enforced with main branch protection and code review require
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-201`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-201)
+
+
+
 ---
 
 
@@ -5039,7 +4469,6 @@ Branching policy is enforced with main branch protection and code review require
 <a id="cnsc-202"></a>
 
 ### Git Tool Security Monitoring | `CNSC-202`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -5052,6 +4481,10 @@ Vulnerabilities are monitored and Git and GitOps tools are kept up to date
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-202`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-202)
+
+
+
 ---
 
 
@@ -5059,7 +4492,6 @@ Vulnerabilities are monitored and Git and GitOps tools are kept up to date
 <a id="cnsc-203"></a>
 
 ### Repository Credential Management | `CNSC-203`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -5072,6 +4504,10 @@ SSH keys and Personal Access Tokens are rotated and unauthorized access to Git r
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-203`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-203)
+
+
+
 ---
 
 
@@ -5079,7 +4515,6 @@ SSH keys and Personal Access Tokens are rotated and unauthorized access to Git r
 <a id="cnsc-204"></a>
 
 ### Technical Account Management | `CNSC-204`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -5092,6 +4527,10 @@ Dedicated non-user technical accounts are used for access with frequently rotate
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-204`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-204)
+
+
+
 ---
 
 
@@ -5099,7 +4538,6 @@ Dedicated non-user technical accounts are used for access with frequently rotate
 <a id="cnsc-205"></a>
 
 ### Privilege Escalation Prevention | `CNSC-205`
-
 **Originating Document**: `Cloud Native Security Whitepaper v2.0`
 
 
@@ -5110,6 +4548,10 @@ Users who can elevate permissions to remove security features are limited to pre
 **Recommendations**
 
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-205`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-205)
+
 
 
 ---
@@ -5128,21 +4570,18 @@ Guidelines for securing storage, including encryption at rest, data availability
 <a id="cnsc-127"></a>
 
 ### Control Plane Authentication | `CNSC-127`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Storage control plane management interface requires mutual authentication and TLS for connections
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-127`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-127)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-8 | Transmission Confidentiality and Integrity |
 
 
 ---
@@ -5152,21 +4591,18 @@ Storage control plane management interface requires mutual authentication and TL
 <a id="cnsc-128"></a>
 
 ### Data Availability Mechanism | `CNSC-128`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Data availability is achieved through parity or mirroring, erasure coding or replicas
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-128`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-128)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SI-13 | Predictable Failure Prevention |
 
 
 ---
@@ -5176,27 +4612,23 @@ Data availability is achieved through parity or mirroring, erasure coding or rep
 <a id="cnsc-129"></a>
 
 ### Integrity Validation | `CNSC-129`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Hashing and checksums are added to blocks, objects or files
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-7 | Least Functionality |
-| SI-7 | Software, Firmware, and Information Integrity |
-
-
 **Recommendations**
 
 - primarily designed to detect and recover from corrupted data, but can also add a layer of protection against the tampering of data.
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-129`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-129)
+
 
 
 ---
@@ -5206,22 +4638,18 @@ Hashing and checksums are added to blocks, objects or files
 <a id="cnsc-130"></a>
 
 ### Data Source Storage Management | `CNSC-130`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Data backup storage locations employ like access controls and security policies to that of the data storage source
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-130`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-130)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SA-9 | External System Services |
-| SC-30 | Concealment and Misdirection |
 
 
 ---
@@ -5231,22 +4659,18 @@ Data backup storage locations employ like access controls and security policies 
 <a id="cnsc-131"></a>
 
 ### System Backup | `CNSC-131`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Secure erasure adhering to OPAL standards is employed for returned or non-functional devices
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-131`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-131)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CP-9 | System Backup |
-| MP-6 | Media Sanitization |
 
 
 ---
@@ -5256,26 +4680,23 @@ Secure erasure adhering to OPAL standards is employed for returned or non-functi
 <a id="cnsc-132"></a>
 
 ### Encryption of Data at Rest | `CNSC-132`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Encryption at rest considers data path, size, and frequency of access when determining additional security protections and cryptographic algorithms to employ
 
-**Guideline Mappings**
-
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-28 | Protection of Information at Rest |
-
-
 **Recommendations**
 
 - The encryption may be implemented in the storage client or storage server and granularity of the encryption will vary by system (e.g. per volume, per group or global keys)
+
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-132`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-132)
+
 
 
 ---
@@ -5285,13 +4706,19 @@ Encryption at rest considers data path, size, and frequency of access when deter
 <a id="cnsc-133"></a>
 
 ### Encryption Requirements | `CNSC-133`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Caching is considered for determining encryption requirements in architectures
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-133`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-133)
+
+
 
 ---
 
@@ -5300,13 +4727,19 @@ Caching is considered for determining encryption requirements in architectures
 <a id="cnsc-134"></a>
 
 ### Boundary Protection | `CNSC-134`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Namespaces have defined trust boundaries to cordon access to volumes
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-134`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-134)
+
+
 
 ---
 
@@ -5315,23 +4748,18 @@ Namespaces have defined trust boundaries to cordon access to volumes
 <a id="cnsc-135"></a>
 
 ### Security Policy Management | `CNSC-135`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Security policies are used to prevent containers from accessing volume mounts on worker nodes
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-135`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-135)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-7 | Boundary Protection |
-| SA-8 | Security and Privacy Engineering Principles |
-| CM-6 | Configuration Settings |
 
 
 ---
@@ -5341,23 +4769,18 @@ Security policies are used to prevent containers from accessing volume mounts on
 <a id="cnsc-136"></a>
 
 ### Security Policy Enforcement | `CNSC-136`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Security policies are used enforce authorized worker node access to volumes
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-136`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-136)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| SC-7 | Boundary Protection |
-| SA-8 | Security and Privacy Engineering Principles |
-| CM-6 | Configuration Settings |
 
 
 ---
@@ -5367,23 +4790,18 @@ Security policies are used enforce authorized worker node access to volumes
 <a id="cnsc-137"></a>
 
 ### Information Flow Management | `CNSC-137`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Volume UID and GID are inaccessible to containers
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-137`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-137)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AC-4 | Information Flow Enforcement |
-| AC-16 | Security and Privacy Attributes |
-| SI-7 | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -5393,13 +4811,19 @@ Volume UID and GID are inaccessible to containers
 <a id="cnsc-138"></a>
 
 ### Artifact Registry Management | `CNSC-138`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Artifact registry supports OCI artifacts
+
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-138`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-138)
+
+
 
 ---
 
@@ -5408,21 +4832,18 @@ Artifact registry supports OCI artifacts
 <a id="cnsc-139"></a>
 
 ### Signed Artifact Support | `CNSC-139`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Artifact registry supports signed artifacts
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-139`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-139)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| CM-14 | Signed Components |
 
 
 ---
@@ -5432,22 +4853,18 @@ Artifact registry supports signed artifacts
 <a id="cnsc-140"></a>
 
 ### Artifact Registry Policy Verification | `CNSC-140`
+**Originating Document**:
+- `Cloud Native Security Whitepaper v1.0`
+- `Cloud Native Security Whitepaper v2.0`
 
-**Originating Document**: `Cloud Native Security Whitepaper v1.0`, `Cloud Native Security Whitepaper v2.0`
 
 
 **Objective**
 
 Artifact registry verifies artifacts against organizational policies
 
-**Guideline Mappings**
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-140`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-140)
 
-**`NIST-800-53`**
-
-| Reference ID | Remarks |
-|--------------|----------|
-| AU-10 | Non-repudiation |
-| CM-6 | Configuration Settings |
 
 
 ---
