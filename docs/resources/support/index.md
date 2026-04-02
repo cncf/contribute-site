@@ -3,7 +3,6 @@ title: Support
 --- 
 
 
-- Service desk
-- Project team contact info
-- Event team contact info
-- How to submit a blog to the cncf site // might be resources?
+- Service Desk is the primary ticketing system used by the projects staff
+- We can also be contacted directly through [projects@cncf.io](mailto:projects@cncf.io)
+- For event questions, use [events@cncf.io](mailto:events@cncf.io)

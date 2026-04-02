@@ -129,7 +129,11 @@ TAG Operational Resilience works on several key operational domains:
 
 ## Subprojects
 
-- **Operational Resilience-sub-foo**: [Mailing List](https://lists.cncf.io/g/cncf-tag-operational-resilience)
+### Green Reviews
+The purpose of the Green Reviews Subproject is to help CNCF projects to review their cloud native sustainability footprint. Through this review, projects aiming for graduation can show how their project uses resources at scale. The Green Reviews pipeline can integrate an environmental sustainability project review in each release cycle. Furthermore, this project strives to empower end users to assess the sustainability of the cloud native workloads within their systems.
+To support CNCF projects, project maintainers and contributors, there is a need for a systematic approach to assess every project's sustainability footprint and energy consumption. Implementing a structured review process for this purpose would greatly benefit the CNCF ecosystem, establishing it as a best practice. Such a process would enable stakeholders to evaluate and enhance the sustainability of CNCF projects, promoting their long-term viability and environmental responsibility.
+
+- [Mailing List](https://lists.cncf.io/g/cncf-tag-operational-resilience)
 
 ## Initiatives
 
@@ -164,7 +168,7 @@ Browse [active initiatives](https://github.com/cncf/toc/issues?q=state%3Aopen+la
 
 ## Resources
 
-- [Charter](https://github.com/cncf/toc/blob/main/tags/tag-operational-resilience/charter.md)
+- [Charter](charter.md)
 - [TAG Governance](../../governance/tech-group-governance.md)
 - [CNCF TOC Repository](https://github.com/cncf/toc)
 - [All TAGs](../index.md)

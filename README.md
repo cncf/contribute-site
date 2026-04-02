@@ -51,11 +51,14 @@ To set up the development environment for this Docusaurus site, you can choose b
 ## Setup Locally
 
 ### Prerequisites
+
 Ensure you have the following installed:
+
 - [Node.js](https://nodejs.org/) (LTS version 20 or above recommended)
 - [npm](https://www.npmjs.com/) (comes with Node.js)
 
 ### Install Dependencies
+
 Before starting the application, install the required packages by running:
 - Node.js (LTS 20 or above recommended)
 - npm
@@ -67,25 +70,35 @@ npm install
 ```
 
 ### Run application
+
 There are two different options you can adopt to run this website locally:
 ### Run development server
+
+> Note: `npm start` and `npm run build` automatically sync TechDocs content into
+> `docs/techdocs/` if it does not exist yet. The first run may take longer
+> because it clones `https://github.com/cncf/techdocs.git`.
+>
+> Source of truth: [@cncf/techdocs](https://github.com/cncf/techdocs). Treat
+> local `docs/techdocs/` content in this repository as synced/generated.
 
 #### Option 1: Using Devcontainer
 If you are using a devcontainer, start the application with the following command:
 #### Option 1: Devcontainer
 
 ```bash
-npm run docusaurus start -- --host 0.0.0.0 --port 3000 --poll 10000
+npm start -- --host 0.0.0.0 --port 3000 --poll 10000
 ```
 
-This will start the development server and make it accessible on `http://localhost:3000`.
+This will start the development server and make it accessible on
+http://localhost:3000.
 
 #### Option 2: Running Locally
+
 To run the site locally, use the following command:
 #### Option 2: Local environment
 
 ```bash
-npm run docus:start
+npm start
 ```
 
 This will start the development server on the default port, typically `http://localhost:3000`.

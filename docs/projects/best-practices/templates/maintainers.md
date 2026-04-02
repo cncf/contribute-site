@@ -1,11 +1,6 @@
 ---
 title: "Maintainer List Template"
-linkTitle: "MaintainerList"
-date: 2022-12-02
-draft: false
-weight: 13
-aliases:
-- /maintainers/github/templates/required/maintainers
+sidebar_label: Maintainer List
 ---
 
 | Audience of this HowTo | Audience of CONTRIBUTING.md | Required by CNCF |

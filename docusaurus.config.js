@@ -8,6 +8,10 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const TECHDOCS_EDIT_BASE = 'https://github.com/cncf/techdocs/edit/main/docs';
+const TECHDOCS_ANALYSES_EDIT_BASE = 'https://github.com/cncf/techdocs/edit/main/analyses';
+const LOCAL_EDIT_BASE = 'https://github.com/cncf/contribute-site/edit/main/docs';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'CNCF Contributors',
@@ -16,7 +20,7 @@ const config = {
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    // v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
   // Set the production url of your site here
@@ -53,9 +57,24 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          editUrl: ({ docPath }) => {
+            const p = docPath.replace(/\\/g, '/');
+
+            // docs/techdocs/analyses/** -> cncf/techdocs/analyses/**
+            if (p.startsWith('techdocs/analyses/')) {
+              return `${TECHDOCS_ANALYSES_EDIT_BASE}/${p.replace(/^techdocs\/analyses\//, '')}`;
+            }
+
+            // docs/techdocs/** -> cncf/techdocs/docs/**
+            if (p.startsWith('techdocs/')) {
+              return `${TECHDOCS_EDIT_BASE}/${p.replace(/^techdocs\//, '')}`;
+            }
+
+            // everything else stays local
+            return `${LOCAL_EDIT_BASE}/${p}`;
+          },
           routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/cncf/contribute-site/tree/main',
         },
         blog: {
           showReadingTime: true,
@@ -102,6 +121,7 @@ const config = {
         logo: {
           alt: 'Contribute to Cloud Native',
           src: 'img/logo.svg',
+          srcDark: 'img/logo-dark.svg',
         },
         items: [
           // Left
@@ -122,6 +142,12 @@ const config = {
             sidebarId: 'communitySidebar',
             position: 'left',
             label: 'Community',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'techdocsSidebar',
+            position: 'left',
+            label: 'TechDocs',
           },
 
           // Right
@@ -144,10 +170,6 @@ const config = {
             label: 'Events',
           },
           { to: '/blog', label: 'Blog', position: 'right' },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-          },
         ],
       },
       footer: {
@@ -199,14 +221,21 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} The CNCF Authors.`,
+        copyright: `Copyright The CNCF Authors.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
     }),
-  plugins: [require.resolve('docusaurus-plugin-search-local')],
+  plugins: [
+    [
+      require.resolve('docusaurus-lunr-search'),
+      {
+        highlightResult: true,
+      },
+    ],
+  ],
 };
 
 export default config;

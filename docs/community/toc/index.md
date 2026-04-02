@@ -159,7 +159,7 @@ The TOC has documented processes for various operational activities:
 
 ## Voting
 
-The TOC follows a documented [voting policy](https://github.com/cncf/toc/blob/main/docs/voting.md). Only TOC members can cast binding votes.
+The TOC follows a documented [voting policy](https://github.com/cncf/toc/blob/main/operations/toc-decision-process.md). Only TOC members can cast binding votes.
 
 ## Election Schedule
 

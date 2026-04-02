@@ -63,7 +63,6 @@ Be very strict with the instructions in this section:
 - Always ensure that the vocabulary and definitions for everything you create match the official definitions in @cncf/glossary
 - Use https://github.com/cncf/toc/blob/main/tags.yaml as the source of truth for individuals who participate in CNCF activities. When modifying any page that lists people, positions, or affiliations, verify against this file and update the page accordingly; if the upstream data is outdated, also submit a PR to @cncf/toc to correct it. 
 
-
 ## Style Guide
 
 - Use @kubernetes/website/blob/main/content/en/docs/contribute/style/style-guide.md as the style guide for this entire site. Only use the content and wording recommendations, do NOT use any Hugo specific content from this source. This is intended to be for content style only.

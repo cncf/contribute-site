@@ -16,7 +16,7 @@ Most services can be requested through a Service Desk ticket, unless otherwise n
 - [Zoom](https://zoom.us/) video conferencing Pro accounts for video meetings, recordings, and scheduling.
 - [LastPass](https://www.lastpass.com/), [1Password](https://github.com/1Password/1password-teams-open-source), and [Keybase](https://keybase.io) to manage access to shared secrets.
 - [Netlify](https://netlify.com) for website hosting, DNS management, and improved workflow/automation around documentation and websites.
-- [Discourse](https://www.discourse.org/) for community discussion (e.g., [discuss.kubernetes.io](https://discuss.kubernetes.io)
+- [Discourse](https://www.discourse.org/) for community discussion (e.g., [discuss.kubernetes.io](https://discuss.kubernetes.io)).
 - [Slack](https://slack.com) for communication for all projects in the Cloud Native Computing Foundation Slack.
 - [FOSSA](https://fossa.io) for license and security scanning.
 - [Snyk](https://snyk.io) for container image scanning.
@@ -48,7 +48,7 @@ When projects come to the CNCF requesting some form of CI help, we try to steer 
 
 CNCF staff is familiar with and can help projects with, hosting on AWS, GCP, Oracle, Akamai/Linode, and Azure clouds. In some cases, we have free credits ([AWS](https://www.cncf.io/announcement/2019/11/19/cloud-native-computing-foundation-receives-200000-in-credits-from-amazon-web-services-aws/), [GCP](https://www.cncf.io/google-cloud-recommits-3m-to-kubernetes/), [Oracle](https://www.cncf.io/blog/2024/02/02/oracle-oci-credits-are-now-available-to-cncf-projects-here-is-what-you-need-to-know/), [Akamai/Linode](https://www.cncf.io/blog/2025/11/05/akamai-builds-cloud-native-resilience-cloud-credits-to-power-cncf-projects/)) for free hosting.
 
-If you are a CNCF project maintainer, feel free to apply directly through the [CNCF Service Desk](http://servicedesk.cncf.io) for access to these credits.
+If you are a CNCF project maintainer, feel free to apply directly through the [CNCF Service Desk](https://servicedesk.cncf.io) for access to these credits.
 
 ## Credly
 
@@ -58,7 +58,7 @@ This service is available for all Graduated projects, and is limited to **4 badg
 
 Each year the Credly badge will "expire" (still be visible but will not be considered active) in order to allow for Yearly badges (such as "Kubernetes Maintainer 2025")
 
-Please direct Credly requests to CNCF Staff through the [CNCF Service Desk](http://servicedesk.cncf.io).
+Please direct Credly requests to CNCF Staff through the [CNCF Service Desk](https://servicedesk.cncf.io).
 
 ## Domains
 

@@ -1,13 +1,9 @@
 ---
-title: "Templates"
-linkTitle: "Templates"
-layout: single
-date: 2020-11-07
-weight: 10
+title: "Project Templates & Resources"
+sidebar_label: " Project Templates & Resources"
 description: >
-  Jump start your CNCF project by using our templates
-aliases:
-- /maintainers/github/templates/
+  Templates to help your project establish good governance, contributor guides,
+  labels, and much more to help your project get started.
 ---
 
 We have a [project template] repository that has templates for everything your project needs
@@ -35,10 +31,10 @@ when you view the markdown file in GitHub unless you view the raw text.
 ## How-To Guides
 
 * [HowTo: Make a Contributing Guide](contributing.md)
-* [Using the Governance Templates](governance-intro.md)
-  * [The Steering Committee Elections Template](governance-elections.md)
-  * [The Maintainer Council Template](governance-maintainer.md)
-  * [The Governance By Subprojects Template](governance-subprojects.md)
+* [Using the Governance Templates](../governance/templates/)
+  * [The Steering Committee Elections Template](../governance/templates/governance-elections.md)
+  * [The Maintainer Council Template](../governance/templates/governance-maintainer.md)
+  * [The Governance By Subprojects Template](../governance/templates/governance-subprojects.md)
 * [Maintainer List Template](maintainers.md)
 * [HowTo: Make a Reviewing Guide](reviewing.md)
 * [Issue Labels for New Contributors](issue-labels.md)

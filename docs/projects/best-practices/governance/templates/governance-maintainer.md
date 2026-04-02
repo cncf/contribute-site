@@ -1,11 +1,6 @@
 ---
 title: "The Maintainer Council Template"
-linkTitle: "Maintainer Governance"
-date: 2022-12-02
-draft: false
-weight: 31
-aliases:
-- /maintainers/github/templates/required/governance-maintainer
+sidebar_label: "Maintainer Council"
 ---
 
 | Audience of this HowTo | Audience of The Document    | Required by CNCF      |

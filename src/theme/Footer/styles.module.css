@@ -1,4 +1,6 @@
 .footer {
+  --gap-size: 16px;
+
   background-color: #000;
   color: #fff;
   padding: 2rem;
@@ -10,17 +12,27 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  row-gap: calc(2 * var(--gap-size));
+  column-gap: calc(2 * var(--gap-size));
+  padding-bottom: var(--gap-size);
 }
 
 .left {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  column-gap: calc(4 * var(--gap-size));
+  row-gap: calc(2 * var(--gap-size));
+  flex-wrap: wrap;
 }
 
 .logo {
-  width: 210px;
-  height: auto;
+  line-height: 0;
+
+  img {
+    min-width: 210px;
+    width: 210px;
+    height: auto;
+  }
 }
 
 .orgText {
@@ -33,7 +45,6 @@
   line-height: 16px;
   font-weight: 700;
   letter-spacing: .02em;
-  margin-left: 4rem;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 40px;
@@ -43,7 +54,11 @@
   color: #fff !important;
   transition: all .25s ease-out;
   text-decoration: none;
-  max-width: calc(614px - 15px - 15px);
+  text-align: center;
+
+  &.allCncfSites {
+    min-width: 12rem;
+  }
 }
 
 .button:hover {
@@ -55,11 +70,8 @@
 
 .socialIcons {
   display: flex;
-  gap: 1rem;
-}
-
-.socialIcons a {
-    padding: 17px;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .socialIcons svg {

@@ -11,12 +11,11 @@
 }
 
 .features .featureLink {
-  text-decoration: none !important;
-  color: #000 !important;
+  text-decoration: none;
+  color: var(--ifm-font-color-base) !important;
   display: block;
 }
 
 .features .featureLink:hover {
   text-decoration: none !important;
-  color: #000 !important;
 }
