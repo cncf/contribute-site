@@ -115,6 +115,11 @@ Secrets are injected at runtime
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-1`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-1)
 
+**See Also**
+
+- [`CNSC-21`](#cnsc-21)
+
+
 
 
 ---
@@ -132,6 +137,11 @@ Secrets are injected at runtime
 ABAC and RBAC are used
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-10`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-10)
+
+**See Also**
+
+- [`CNSC-9`](#cnsc-9)
+
 
 
 
@@ -219,6 +229,11 @@ Identity federation uses multi-factor authentication
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-14`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-14)
 
+**See Also**
+
+- [`CNSC-208`](#cnsc-208)
+
+
 
 
 ---
@@ -281,6 +296,7 @@ Secrets should have a short expiration period or time to live
 
 - [`CNSC-19`](#cnsc-19)
 - [`CNSC-15`](#cnsc-15)
+- [`CNSC-17`](#cnsc-17)
 
 
 
@@ -308,6 +324,12 @@ Time to live and expiration period on secrets is verified to prevent reuse
 
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-17`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-17)
+
+**See Also**
+
+- [`CNSC-16`](#cnsc-16)
+- [`CNSC-19`](#cnsc-19)
+
 
 
 
@@ -360,6 +382,7 @@ Long-lived secrets adhere to periodic rotation and revocation
 
 - [`CNSC-15`](#cnsc-15)
 - [`CNSC-16`](#cnsc-16)
+- [`CNSC-17`](#cnsc-17)
 
 
 
@@ -419,6 +442,11 @@ Identity federation uses multi-factor authentication for human users
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-208`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-208)
 
+**See Also**
+
+- [`CNSC-14`](#cnsc-14)
+
+
 
 
 ---
@@ -444,6 +472,11 @@ Secrets injected at runtime are masked or dropped from logs, audit, or system du
 
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-21`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-21)
+
+**See Also**
+
+- [`CNSC-1`](#cnsc-1)
+
 
 
 
@@ -522,6 +555,11 @@ Authentication and authorization are determined independently
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-6`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-6)
 
+**See Also**
+
+- [`CNSC-7`](#cnsc-7)
+
+
 
 
 ---
@@ -539,6 +577,11 @@ Authentication and authorization are determined independently
 Authentication and authorization are enforced independently
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-7`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-7)
+
+**See Also**
+
+- [`CNSC-6`](#cnsc-6)
+
 
 
 
@@ -581,6 +624,11 @@ Authorization for workloads is granted based on attributes and roles/permissions
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-9`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-9)
 
+**See Also**
+
+- [`CNSC-10`](#cnsc-10)
+
+
 
 
 ---
@@ -615,6 +663,11 @@ Bootstrapping is employed to verify correct physical and logical location of com
 
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-22`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-22)
+
+**See Also**
+
+- [`CNSC-27`](#cnsc-27)
+
 
 
 
@@ -759,10 +812,15 @@ The hardware root of trust is based in a Trusted Platform Module (TPM) or virtua
 
 **Recommendations**
 
-- Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on the system.
+- Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on
 
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-27`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-27)
+
+**See Also**
+
+- [`CNSC-22 the system.`](#cnsc-22 the system.)
+
 
 
 
@@ -915,6 +973,11 @@ Changes to critical mount points and files are prevented, monitored, and alerted
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-33`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-33)
 
+**See Also**
+
+- [`CNSC-34`](#cnsc-34)
+
+
 
 
 ---
@@ -935,6 +998,11 @@ Changes to critical mount points and files are prevented, monitored, and alerted
 Runtime configuration control prevents changes to binaries, certificates, and remote access configurations
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-34`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-34)
+
+**See Also**
+
+- [`CNSC-33`](#cnsc-33)
+
 
 
 
@@ -957,6 +1025,11 @@ Runtime configuration prevents ingress and egress network access for containers 
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-35`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-35)
 
+**See Also**
+
+- [`CNSC-36`](#cnsc-36)
+
+
 
 
 ---
@@ -977,6 +1050,11 @@ Runtime configuration prevents ingress and egress network access for containers 
 Policies are defined that restrict communications to only occur between sanctioned microservice pairs
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-36`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-36)
+
+**See Also**
+
+- [`CNSC-35`](#cnsc-35)
+
 
 
 
@@ -999,6 +1077,11 @@ Use a policy agent to control and enforce authorized, signed container images
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-37`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-37)
 
+**See Also**
+
+- [`CNSC-38`](#cnsc-38)
+
+
 
 
 ---
@@ -1019,6 +1102,11 @@ Use a policy agent to control and enforce authorized, signed container images
 Use a policy agent to control provenance assurance for operational workloads
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-38`) →](./cnsc-nist-800-53-mapping#crosswalk-cnsc-38)
+
+**See Also**
+
+- [`CNSC-37`](#cnsc-37)
+
 
 
 

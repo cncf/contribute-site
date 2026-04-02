@@ -8,6 +8,8 @@ guidelines:
   - CNSWP-v2.0
   recommendations:
   - Secure Boot with TPM 2.0 or similar control
+  see-also:
+  - CNSC-27
 - id: CNSC-23
   objective: Disparate data sensitive workloads are not run on the same host OS kernel
   title: Boundary Management
@@ -57,6 +59,8 @@ guidelines:
   - CNSWP-v2.0
   recommendations:
   - Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on
+  see-also:
+  - CNSC-22
     the system.
 - id: CNSC-28
   objective: Minimize administrative access to the control plane
@@ -114,6 +118,8 @@ guidelines:
   applicability:
   - CNSWP-v1.0
   - CNSWP-v2.0
+  see-also:
+  - CNSC-34
 - id: CNSC-34
   objective: Runtime configuration control prevents changes to binaries, certificates, and remote access configurations
   title: Runtime Configuration for Change Management
@@ -121,6 +127,8 @@ guidelines:
   applicability:
   - CNSWP-v1.0
   - CNSWP-v2.0
+  see-also:
+  - CNSC-33
 - id: CNSC-35
   objective: Runtime configuration prevents ingress and egress network access for containers to only what is required to operate
   title: Runtime Boundary Protection Management
@@ -128,6 +136,8 @@ guidelines:
   applicability:
   - CNSWP-v1.0
   - CNSWP-v2.0
+  see-also:
+  - CNSC-36
 - id: CNSC-36
   objective: Policies are defined that restrict communications to only occur between sanctioned microservice pairs
   title: Boundary Protection Management
@@ -135,6 +145,8 @@ guidelines:
   applicability:
   - CNSWP-v1.0
   - CNSWP-v2.0
+  see-also:
+  - CNSC-35
 - id: CNSC-37
   objective: Use a policy agent to control and enforce authorized, signed container images
   title: Policy Enforcement Management
@@ -142,6 +154,8 @@ guidelines:
   applicability:
   - CNSWP-v1.0
   - CNSWP-v2.0
+  see-also:
+  - CNSC-38
 - id: CNSC-38
   objective: Use a policy agent to control provenance assurance for operational workloads
   title: Policy Enforcement Management
@@ -149,6 +163,8 @@ guidelines:
   applicability:
   - CNSWP-v1.0
   - CNSWP-v2.0
+  see-also:
+  - CNSC-37
 - id: CNSC-39
   objective: Use a service mesh that eliminates implicit trust through data-in-motion encryption (data in transit)
   title: Data Trust Management

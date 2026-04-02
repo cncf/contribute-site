@@ -102,9 +102,18 @@ func joinDedupedRelationships(group []gemara.Mapping) string {
 }
 
 func crosswalkEntriesFromGroup(group []gemara.Mapping) []CrosswalkEntry {
-	parts := make([]CrosswalkEntry, len(group))
-	for i, m := range group {
-		parts[i] = CrosswalkEntry{Targets: m.Targets, Remarks: m.Remarks}
+	var parts []CrosswalkEntry
+	for _, m := range group {
+		for _, t := range m.Targets {
+			remarks := t.Rationale
+			if remarks == "" {
+				remarks = m.Remarks
+			}
+			parts = append(parts, CrosswalkEntry{
+				Targets: []gemara.MappingTarget{t},
+				Remarks: remarks,
+			})
+		}
 	}
 	return parts
 }

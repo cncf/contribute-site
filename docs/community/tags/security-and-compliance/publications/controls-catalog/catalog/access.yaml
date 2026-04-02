@@ -5,6 +5,8 @@ guidelines:
   group: Access
   applicability:
   - CNSWP-v1.0
+  see-also:
+  - CNSC-21
 - id: CNSC-2
   objective: Applications and workloads are explicitly authorized to communicate with each other using mutual authentication
   title: Mutual Authentication
@@ -39,12 +41,16 @@ guidelines:
   group: Access
   applicability:
   - CNSWP-v1.0
+  see-also:
+  - CNSC-7
 - id: CNSC-7
   objective: Authentication and authorization are enforced independently
   title: Authentication and Authorization Enforcement
   group: Access
   applicability:
   - CNSWP-v1.0
+  see-also:
+  - CNSC-6
 - id: CNSC-8
   objective: Access control and file permissions are updated in real-time
   title: Continuous System Monitoring
@@ -59,12 +65,16 @@ guidelines:
   group: Access
   applicability:
   - CNSWP-v1.0
+  see-also:
+  - CNSC-10
 - id: CNSC-10
   objective: ABAC and RBAC are used
   title: ABAC and RBAC
   group: Access
   applicability:
   - CNSWP-v1.0
+  see-also:
+  - CNSC-9
 - id: CNSC-11
   objective: End user identity is capable of being accepted, consumed, and forwarded on for contextual or dynamic authorization
   title: Authorization and Identity Management
@@ -95,6 +105,8 @@ guidelines:
   applicability:
   - CNSWP-v1.0
   - CNSWP-v2.0
+  see-also:
+  - CNSC-208
 - id: CNSC-15
   objective: HSMs are used to physically protect cryptographic secrets with an encryption key residing in the HSM
   title: HSMs Protection of Cryptographic Secrets
@@ -119,6 +131,7 @@ guidelines:
   see-also:
   - CNSC-19
   - CNSC-15
+  - CNSC-17
 - id: CNSC-17
   objective: Time to live and expiration period on secrets is verified to prevent reuse
   title: Secrets Lifecycle Management
@@ -128,6 +141,9 @@ guidelines:
   - CNSWP-v2.0
   recommendations:
   - Leverage tool-specific capabilities of secret manager
+  see-also:
+  - CNSC-16
+  - CNSC-19
 - id: CNSC-18
   objective: Secrets management systems are highly available
   title: Secrets Management System
@@ -147,6 +163,7 @@ guidelines:
   see-also:
   - CNSC-15
   - CNSC-16
+  - CNSC-17
 - id: CNSC-20
   objective: Secrets are distributed through secured communication channels protected commensurate with the level of access
     or data they are protecting
@@ -165,9 +182,13 @@ guidelines:
   recommendations:
   - Even short lived secrets may be reused if caught in time by an interested attacker. Logs, audit, and systems dumps (i.e.
     in-memory shared volumes instead of environment variables) are all areas where runtime injected secrets show up
+  see-also:
+  - CNSC-1
 - id: CNSC-208
   objective: Identity federation uses multi-factor authentication for human users
   title: Multi-factor Authentication
   group: Access
   applicability:
   - CNSWP-v2.0
+  see-also:
+  - CNSC-14
