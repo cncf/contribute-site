@@ -90,8 +90,10 @@ const config = {
               return feedItems.map((item) => {
                 const post = postsByPermalink.get(item.link);
                 if (!post) return item;
+                const description = post.metadata.description;
                 return {
                   ...item,
+                  ...(description ? {content: description} : {}),
                   category: post.metadata.tags.map((tag) => ({
                     name: tag.label,
                     domain: tag.permalink,
