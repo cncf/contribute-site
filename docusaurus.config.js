@@ -81,6 +81,24 @@ const config = {
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
+            createFeedItems: async (params) => {
+              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              const feedItems = await defaultCreateFeedItems({blogPosts, ...rest});
+              const postsByPermalink = new Map(
+                blogPosts.map((post) => [post.metadata.permalink, post])
+              );
+              return feedItems.map((item) => {
+                const post = postsByPermalink.get(item.link);
+                if (!post) return item;
+                return {
+                  ...item,
+                  category: post.metadata.tags.map((tag) => ({
+                    name: tag.label,
+                    domain: tag.permalink,
+                  })),
+                };
+              });
+            },
           },
           editUrl: 'https://github.com/cncf/contribute-site/tree/main/',
           // Useful options to enforce blogging best practices
