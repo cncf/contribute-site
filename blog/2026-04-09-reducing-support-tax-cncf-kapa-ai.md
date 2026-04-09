@@ -13,6 +13,8 @@ The CNCF is pleased to announce a partnership with [Kapa.ai](https://kapa.ai). T
 
 <!-- truncate -->
 
+![OpenTelemetry's Kapa.ai AI Assistant](/images/kapa-otel.png)
+
 ## What is Kapa.ai?
 
 Kapa.ai helps technical communities build AI assistants that work for complex products. Unlike a general-purpose LLM that might guess when it doesn't know an answer, Kapa uses Retrieval Augmented Generation (RAG) to ground its responses in your project's specific documentation and knowledge base.
