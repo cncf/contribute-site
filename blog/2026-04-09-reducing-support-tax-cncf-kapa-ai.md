@@ -13,7 +13,7 @@ The CNCF is pleased to announce a partnership with [Kapa.ai](https://kapa.ai). T
 
 <!-- truncate -->
 
-![OpenTelemetry's Kapa.ai AI Assistant](/images/kapa-otel.png)
+<img src="/images/kapa-otel.png" alt="OpenTelemetry's Kapa.ai AI Assistant" style="width:100%" />
 
 ## What is Kapa.ai?
 
