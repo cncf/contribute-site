@@ -63,6 +63,4 @@ If your project is part of the CNCF, you can apply for free access to Kapa.ai di
 
 - [Kapa.ai](https://kapa.ai) — AI assistant platform for technical communities
 - [CNCF Service Desk](https://servicedesk.cncf.io) — Submit a request for Kapa.ai access
-- [OpenTelemetry](https://opentelemetry.io) — CNCF Graduated project using Kapa.ai
-- [Envoy Gateway](https://gateway.envoyproxy.io) — CNCF project using Kapa.ai
-- [Docker Sponsored Open Source Program Guide](https://contribute.cncf.io/blog/2026/01/15/applying-for-the-docker-sponsored-open-source-program-a-guide-for-cncf-maintainers) — Related CNCF partnership announcement
+
