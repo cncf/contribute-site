@@ -1,7 +1,7 @@
 ---
 title: "Reducing the Support Tax: CNCF Partners with Kapa.ai to Help Project Maintainers"
 date: 2026-04-09
-authors: [idvoretskyi]
+authors: [idvoretskyi, nate-double-u]
 tags: [maintainers, services, projects]
 ---
 
