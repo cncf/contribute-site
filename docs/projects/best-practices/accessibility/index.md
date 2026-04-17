@@ -13,5 +13,5 @@ If you share our passion for fostering inclusivity and accessibility, we invite 
 
 ## Unknown Terms?
 
-If you encounter any unfamiliar terms in this document or on our website, we have a [glossary](/resources/glossary)
+If you encounter any unfamiliar terms in this document or on our website, we have a [glossary](https://glossary.cncf.io/)
 available.
