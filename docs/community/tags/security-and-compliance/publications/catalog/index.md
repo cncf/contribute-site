@@ -34,6 +34,10 @@ of compromise needs added, please include that as well.
 <!-- cSpell:disable -->
 | Name              | Year               | Type of compromise    | Link        |
 | ----------------- | ------------------ | ------------------    | ----------- |
+| [axios compromise](2026/axios.md) | 2026 | Social Engineering/Phishing Attack/Attack Chaining | [1](https://www.stepsecurity.io/blog/axios-compromised-on-npm-malicious-versions-drop-remote-access-trojan) |
+| [LiteLLM and Telnyx](2026/litellm.md) | 2026 | Attack Chaining | [1](https://blog.pypi.org/posts/2026-04-02-incident-report-litellm-telnyx-supply-chain-attack/) |
+| [Trivy](2026/trivy.md) | 2026 | Source Code/Trust and Signing | [1](https://www.aquasec.com/blog/trivy-supply-chain-attack-what-you-need-to-know/) |
+| [hackerbot-claw](2026/hackerbot-claw.md) | 2026 |  Publishing Infrastructure | [1](https://www.stepsecurity.io/blog/hackerbot-claw-github-actions-exploitation) |
 | [Shai-Hulud](2025/shai-hulud.md) | 2025 | Attack Chaining | [1](https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem) [2](https://socket.dev/blog/ongoing-supply-chain-attack-targets-crowdstrike-npm-packages) |
 | [npm phishing campaign](2025/qix.md) | 2025 | Social Engineering/Phishing Attack/Attack Chaining | [1](https://www.aikido.dev/blog/npm-debug-and-chalk-packages-compromised) |
 | [nullifAI](2025/nullifAI.md) | 2025 | Trust and Signing | [1](https://www.reversinglabs.com/blog/rl-identifies-malware-ml-model-hosted-on-hugging-face) |
