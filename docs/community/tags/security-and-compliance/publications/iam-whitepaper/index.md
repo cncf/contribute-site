@@ -16,7 +16,7 @@ sidebar_position: 1
 
 * **Contributors**: Yoshiyuki Tabata, Hiroyuki Wada, Satarupa Deb
 
-* **Reviewers**: Takashi Norimatsu, Kyohei Mizumoto, Omri Gazitt, Maia Iyer, Yujia Lin, Eddie Knight, Evan Anderson, Brandt Keller, Jennifer Power, Justin Cappos, Marina Moore, John Kjell, Michael Lieberman, Jim Bugwadia, Andrew Block, Faseela K
+* **Reviewers**: Takashi Norimatsu, Kyohei Mizumoto, Omri Gazitt, Maia Iyer, Yujia Lin, Eddie Knight, Evan Anderson, Brandt Keller, Jennifer Power, Justin Cappos, Marina Moore, John Kjell, Michael Lieberman, Jim Bugwadia, Andrew Block, Faseela K, Karena Angell
 
 <!-- cspell:enable -->
 
