@@ -6,17 +6,17 @@ sidebar_position: 1
 # Identity and Access Management Whitepaper
 <!-- markdownlint-disable MD001 MD009 MD010 MD012 MD013 MD022 MD024 MD026 MD030 MD033 MD034 MD036 MD037 MD041 MD045 -->
 <!-- cspell:disable -->
-**Version**: 1.0 **Created**: 22 Mar 2026 **Status**: WIP | **In Review** | Approved
+**Version**: 1.1 **Created**: 22 Mar 2026 **Status**: WIP | In Review | **Approved**
 
-**Last Reviewed**: TBD, **PDF Published**: TBD **Release Version**: 1.0
+**Last Reviewed**: 24 Apr 2026 **PDF Published**: TBD **Release Version**: 1.1
 
 **Final PDF Approvers** TBD
 
-**Version 1 (Mar 2026)**
+**Version 1 (Apr 2026)**
 
 * **Contributors**: Yoshiyuki Tabata, Hiroyuki Wada, Satarupa Deb
 
-* **Reviewers**: Takashi Norimatsu, Kyohei Mizumoto, Omri Gazitt, Maia Iyer, Yujia Lin, Eddie Knight, Evan Anderson, Brandt Keller, Jennifer Power, Justin Cappos, Marina Moore, John Kjell, Michael Lieberman, Jim Bugwadia, Andrew Block
+* **Reviewers**: Takashi Norimatsu, Kyohei Mizumoto, Omri Gazitt, Maia Iyer, Yujia Lin, Eddie Knight, Evan Anderson, Brandt Keller, Jennifer Power, Justin Cappos, Marina Moore, John Kjell, Michael Lieberman, Jim Bugwadia, Andrew Block, Faseela K, Karena Angell
 
 <!-- cspell:enable -->
 
@@ -40,7 +40,7 @@ This white paper aims to provide a practical guide to help cloud native ecosyste
 
 ### 1.1. Audience & Scope
 
-This white paper is intended for cloud native ecosystem architects and application developers. It is also suitable for individuals at a beginner or novice level who may not yet be very familiar with identity and access management concepts and technologies. Additionally, to lower the barrier for beginners and novices, we have written technical terms in general terms whenever possible and included diagrams, figures, flowcharts, and references throughout the paper.
+This white paper is intended for cloud native ecosystem architects and application developers. It is also intended to be accessible to individuals at a beginner or novice level who may not yet be very familiar with identity and access management concepts and technologies, particularly in its introductory sections. Additionally, to lower the barrier for beginners and novices, we have written technical terms in general terms whenever possible and included diagrams, figures, flowcharts, and references throughout the paper.
 
 IAM is a broad term, so this white paper only describes how to achieve authentication and authorization in the cloud native ecosystem. It does not explain how to design identity providers (IdPs) or IAM products themselves, nor does it provide detailed implementation examples[^6]. While this paper focuses on practical guidance, it assumes that audiences are familiar with the basic distinction between authentication and authorization[^7].
 
@@ -60,7 +60,7 @@ IAM is essential for maintaining security and operations. It acts as a checkpoin
 
 At an organizational level, IAM works to restrict access to sensitive information to only authorized users and systems. As a result, the risk of data breaches is reduced. However, IAM must be properly implemented to deal with sophisticated cyber threats, as most failures arise from implementation issues, including misconfigurations or insufficient understanding of IAM concepts and technologies. At the same time, design weaknesses can also contribute to incidents, so systems should avoid patterns that are easy to misuse even when they are implemented as intended. 
 
-Robust authentication protocols and access controls are crucial for counteracting insider threats, preventing unauthorized access, and protecting against credential theft. One of the most important security features of IAM is its ability to rapidly revoke access when users or systems must no longer be permitted to access resources, whether due to lifecycle events such as termination or deactivation, or due to security incidents such as account compromise. This helps eliminate potential security holes that could result from former users and decommissioned systems still having access rights. Complementary mechanisms such as just-in-time (JIT) access further reduce risk by minimizing the duration of granted privileges.
+Robust authentication protocols and access controls are crucial for counteracting insider threats, preventing unauthorized access, and protecting against credential theft. One of the most important security features of IAM is its ability to rapidly revoke access when users or systems must no longer be permitted to access resources, whether due to lifecycle events such as termination or deactivation, or due to security incidents such as account compromise. This helps eliminate potential security holes that could result from former users and decommissioned systems still having access rights. Complementary mechanisms such as just-in-time (JIT) access and the avoidance of long-lived credentials further reduce risk by limiting the duration of granted privileges and credentials.
 
 #### 1.2.2. Why IAM is Critical in Cloud Native Environments
 
@@ -69,7 +69,9 @@ Robust authentication protocols and access controls are crucial for counteractin
 3. Cloud native applications consist of many microservices that communicate to complete tasks, similar to an online order passing through a website, payment, inventory, and delivery services. These services may be managed by different teams or hosted across different clouds. IAM enables secure workload-to-workload (service-to-service) communication through federated identity, short-lived tokens, and mutual authentication, maintaining security as requests hop across services without requiring each to manage separate authentication systems.  
 4. Cloud native development treats infrastructure and security policies as code rather than manual configurations. IAM integrates into automated development pipelines, allowing security teams to define access policies as code that's version-controlled and automatically applied. This "shift-left" approach catches security issues before deployment-for example, preventing unintended cross-environment access when the same service is deployed across development, testing, and production environments. This prevents misconfigurations, ensures consistency, and maintains an audit trail while preserving the speed that cloud native development requires.
 
-In cloud native environments, IAM must also address compliance and operational requirements that arise from highly distributed architectures. Multi‑cluster and multi‑cloud deployments require consistent auditability across environments, and short‑lived identities help reduce long‑term credential exposure. Automated policy enforcement ensures that least‑privilege access is maintained even as workloads scale dynamically or move across clusters. These capabilities allow organizations to maintain compliance and operational consistency without relying on manual processes that cannot keep pace with cloud native systems.
+In cloud native environments, IAM must support compliance and operational requirements in highly distributed, multi‑cluster, and multi‑cloud architectures, where consistent auditability and automated enforcement are necessary to maintain least‑privilege access at scale. From a threat‑modeling perspective, such environments must account for risks including lateral movement between workloads, workload or user impersonation, and credential theft.
+
+AI‑driven and agent‑based workloads are increasingly deployed on cloud native platforms, making a solid understanding of foundational IAM concepts important as a basis for securing both current applications and emerging classes of workloads.
 
 ### 1.3. Applicable Standards
 
@@ -81,7 +83,7 @@ The Relevance of Adhering to Standards:
 
 **Ease of Integration** – Established standards ensure a wealth of interoperable IAM libraries and SDKs are available, reducing development effort and facilitating seamless integration with third-party services.
 
-This white paper references the following standard specifications as best practices.
+This white paper references the following standard specifications as best practices, selected based on their maturity, broad adoption, interoperability, and relevance to cloud native environments.
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119 and RFC 8174 (BCP 14).
 
@@ -98,16 +100,16 @@ Standardization in authentication and authorization is an ongoing process. Curre
 
 This white paper assumes several types of actors commonly found in cloud native systems. These actors interact with the system in different ways and therefore require different authentication and authorization mechanisms.
 
-| Actor | Description | Typical interaction |
-| :---- | :---- | :---- |
-| End user | External users such as customers | Participate in runtime authentication flows when accessing applications |
-| Internal user | Internal users such as support or operations staff | Access applications or APIs that are not exposed to external users |
-| Administrator | Users who manage policies or system configuration | Perform management and configuration tasks such as configuring identity federation, client registration, and authorization policies |
-| Non-human actor | Workloads or devices | Interact with the system through service-to-service authentication and authorization mechanisms |
+| Actor | Description | Typical interaction | Typical risks introduced by the actor |
+| :---- | :---- | :---- | :---- |
+| End user | External users such as customers | Participate in runtime authentication flows when accessing applications | Impersonation, credential theft |
+| Internal user | Internal users such as support or operations staff | Access applications or APIs that are not exposed to external users | Privilege misuse, insider threats |
+| Administrator | Users who manage policies or system configuration | Perform management and configuration tasks such as configuring identity federation, client registration, and authorization policies | Misconfiguration, over‑privileged access |
+| Non-human actor | Workloads or devices | Interact with the system through service-to-service authentication and authorization mechanisms | Workload impersonation, lateral movement |
 
 _Table 1: Actor definition and their interaction_
 
-This distinction, particularly the increase in non-human and internal interactions, helps explain the threat models addressed by the basic and advanced patterns described later in this paper.
+This distinction, particularly the increase in non-human and internal interactions, helps explain the threat models addressed by the basic and advanced patterns described later in this paper, where many cloud native requests involve both user identity and workload identity.
 
 ### 1.5. Privacy Principles
 
@@ -119,7 +121,7 @@ Authentication and authorization systems inevitably process information related 
 
 • Right to erasure: When opaque identifiers are used, deleting the mapping between the identifier and the individual MAY support user deletion requests without requiring changes to downstream authorization systems.
 
-• Secure handling of identity data: Token contents, logs, and policy inputs SHOULD be protected to prevent unauthorized disclosure of identity‑related information.
+• Exposure limitation: Systems that process identity-related data, including tokens, logs, and policy inputs, SHOULD limit unnecessary exposure of such data to prevent unauthorized disclosure.
 
 These principles do not replace formal privacy or regulatory requirements, but they provide practical guidance for designing authentication and authorization mechanisms that reduce unnecessary exposure of personal data.
 
@@ -129,7 +131,7 @@ These principles do not replace formal privacy or regulatory requirements, but t
 
 #### 2.1.1. Stateful Workload
 
-This use case describes a stateful workload that manages the session. The workload delegates authentication to the OpenID Provider (OIDC OP), verifies the authentication result based on the issued ID token, and manages the session. The source of external access is assumed to be a user agent such as a browser, and it does not send an access token. Instead, the user agent sends a session identifier, such as a cookie, that the workload uses to look up and manage the server-side session. The user agent does not send workload information.
+This use case describes a stateful workload that manages the session. The workload delegates authentication to the OpenID Provider (OIDC OP), verifies the authentication result based on the issued ID token, and manages the session. The source of external access is assumed to be a user agent such as a browser, and it does not send an access token. Instead, the user agent sends a session identifier, such as a cookie, that the workload uses to look up and manage the server-side session. The user agent does not send workload information. This pattern applies to browser-based applications that rely on server-side sessions, including SPAs that adopt a backend-for-frontend (BFF) pattern, and is distinct from application architectures in which access tokens are handled by the user agent and directly used for API access.
 
 ![Figure 1](figure1.png)
 
@@ -137,7 +139,7 @@ _Figure 1: Conceptual diagram of a stateful workload use case with session manag
 
 #### 2.1.2. Stateless Workload
 
-This use case describes a stateless workload that does not manage the session. The source of external access is assumed to be an API client, which sends an access token. The workload invoked acts as the API server.
+This use case describes a stateless workload that does not manage the session. The source of external access is assumed to be an API client, which sends an access token. The workload invoked acts as the API server. This pattern applies to application architectures in which access tokens are handled by the client and directly used for API access.
 
 ![Figure 2](figure2.png)
 
@@ -185,7 +187,7 @@ To effectively address the diverse security requirements of cloud native systems
 
 The Basic Pattern provides a minimal security baseline suitable for systems with limited external exposure or sensitivity. It treats the Kubernetes cluster as a single implicit trust zone, applying authentication and authorization primarily at the perimeter. This makes it appropriate for environments handling non‑sensitive data or operating within restricted networks.
 
-The Advanced Pattern adopts a zero-trust approach, treating each workload as its own trust boundary and protecting against internal threats such as lateral movement and privilege escalation. It SHOULD be used for systems handling sensitive data, public‑facing environments, or situations where the number of users is uncontrolled.
+The Advanced Pattern adopts a zero-trust approach, treating each workload as its own trust boundary and protecting against internal threats such as lateral movement and privilege escalation. It SHOULD be used for systems handling sensitive data, public‑facing environments, or situations where the number of users is uncontrolled. However, this pattern is intentionally scoped as a general-purpose reference architecture for cloud native systems operating within a single trust domain and does not assume specific regulatory contexts. When systems are subject to regulatory security requirements, a full security profile, such as FAPI, SHOULD be considered instead of selectively extending this pattern to approximate requirements defined by FAPI.
 
 The following table summarizes the threat models and protection mechanisms associated with each pattern. This comparison helps clarify the rationale behind their design and guides practitioners in selecting the appropriate pattern based on their system’s risk profile and operational context.
 
@@ -251,8 +253,7 @@ This section describes the component structure and the end‑to‑end flows spec
 _Figure 4-1: Advanced pattern with zero-trust architecture and workload authentication (use case 1\)_
 
 0. **Issue SVID:**  
-   The SPIFFE Signing Authority issues SVIDs, which are delivered to each workload through the SPIFFE Workload API exposed by the local SPIFFE Workload Endpoint. This enables mutual TLS (mTLS) authentication within the cluster.  
-   The SVID establishes the workload identity of workload \#1 and workload \#2 via the mTLS connection. Note that the communication between the SPIFFE Signing Authority and the SPIFFE Workload Endpoint is implementation-specific and outside the scope of the SPIFFE specification.  
+   This step represents a setup phase that occurs independently of the per-request flow described below. The SPIFFE Signing Authority issues SVIDs, which are delivered to each workload through the SPIFFE Workload API exposed by the local SPIFFE Workload Endpoint. This enables mutual TLS (mTLS) authentication within the cluster. The SVID establishes the workload identity of workload \#1 and workload \#2 via the mTLS connection. Note that the communication between the SPIFFE Signing Authority and the SPIFFE Workload Endpoint is implementation-specific and outside the scope of the SPIFFE specification.  
 1. **Call w/o access token:**  
    The browser sends a request to workload \#1 using a session identifier such as a cookie, without including an access token.  
 2. **Issue ID token and access token:**  
@@ -270,7 +271,7 @@ _Figure 4-1: Advanced pattern with zero-trust architecture and workload authenti
 _Figure 4-2: Advanced pattern with zero-trust architecture and workload authentication (use case 2\)_
 
 0. **Issue SVID:**  
-   The SPIFFE Signing Authority issues SVIDs, which are delivered to each workload through the SPIFFE Workload API exposed by the local SPIFFE Workload Endpoint. This enables mutual TLS (mTLS) authentication within the cluster.  
+   This step represents a setup phase that occurs independently of the per-request flow described below. The SPIFFE Signing Authority issues SVIDs, which are delivered to each workload through the SPIFFE Workload API exposed by the local SPIFFE Workload Endpoint. This enables mutual TLS (mTLS) authentication within the cluster.  
    The SVID establishes the workload identity of workload \#1 and workload \#2 via the mTLS connection. Note that the communication between the SPIFFE Signing Authority and the SPIFFE Workload Endpoint is implementation-specific and outside the scope of the SPIFFE specification.  
 1. **Issue (external) access token:**   
    The API client, acting as the OAuth client, initiates the OIDC authorization code flow to request an (external) access token. The OIDC OP issues the token after successful authentication and user consent.  
@@ -376,7 +377,9 @@ _Figure 4-2: Advanced pattern with zero-trust architecture and workload authenti
 
    5. Subject: Verify that the token’s subject identifies a currently active principal in the correct trust domain for this OAuth RS.
 
-   6. Revocation: Verify that the token has not been revoked. Note that OAuth RS MAY cache revoked tokens for the duration of the tokens' expiration to improve performance.
+   6. Sender constraint: If access tokens are issued to external OAuth clients as sender-constrained tokens (e.g., using DPoP or OAuth 2.0 Mutual-TLS), the OAuth RS MUST validate the corresponding proof-of-possession to ensure that the token is used only by the legitimate client.
+
+   7. Revocation: Verify that the token has not been revoked. Note that OAuth RS MAY cache revoked tokens for the duration of the tokens' expiration to improve performance.
 
    Note that scope validation is classified as authorization, so this is not included here. Authorization is decided by the PDP, as described in the Authorization Requirements section below.
 
@@ -437,14 +440,14 @@ _Figure 4-2: Advanced pattern with zero-trust architecture and workload authenti
    Additionally, signing keys MUST be securely managed with appropriate protection, access controls, and regular rotation policies.
 
 5. **MUST provide required OIDC endpoints and support OIDC Discovery.**  
-   This includes providing the Authorization Endpoint, Token Endpoint, and UserInfo Endpoint as defined in the OIDC specification. When optional features are supported, the OP MUST expose the corresponding endpoints defined by the relevant standards (e.g., OIDC logout, RFC 7009 token revocation, RFC 7662 token introspection). The OP MUST support OIDC Discovery to publish configuration metadata.
+   This includes providing the Authorization Endpoint, Token Endpoint, and UserInfo Endpoint as defined in the OIDC specification. When optional features are supported, the OIDC OP MUST expose the corresponding endpoints defined by the relevant standards (e.g., OIDC logout, RFC 7009 token revocation, RFC 7662 token introspection). The OIDC OP MUST support OIDC Discovery to publish configuration metadata.
 
 6. **MAY support dynamic client registration while ensuring secure management of client credentials.**  
    This is to support use cases, such as mobile application instances, registering for installation-specific credentials. In this case, each installed instance registers dynamically to obtain a unique client ID and appropriate authentication credentials. The specific authentication method (client secret, OAuth 2.0 Mutual-TLS, or private\_key\_jwt) SHOULD be chosen based on the application's security requirements. For example, enhanced security contexts, such as FAPI, require OAuth 2.0 Mutual-TLS or private\_key\_jwt. This prevents hardcoded credentials from being extracted and allows the app to be treated as a confidential client.
 
 7. **MAY support sender-constrained tokens for access and refresh tokens**
 
-   Access tokens and refresh tokens can be bound to the client using DPoP or OAuth 2.0 Mutual-TLS to prevent unauthorized or illegitimate parties from using leaked or stolen tokens.
+   Access tokens and refresh tokens MAY be bound to external OAuth clients using DPoP or OAuth 2.0 Mutual-TLS to prevent unauthorized or illegitimate parties from using leaked or stolen tokens.
 
 ### 3.5. PDP Requirements
 
@@ -482,7 +485,7 @@ _Figure 4-2: Advanced pattern with zero-trust architecture and workload authenti
 
 1. **MUST encrypt all communications between all components using TLS (Transport Layer Security).**
 
-   This is to ensure the confidentiality and integrity of data exchanged between each component, which is an implicit trust zone.
+   This is to ensure the confidentiality and integrity of data exchanged between each component, which is an implicit trust zone. This requirement applies to all communications, including those within the Kubernetes cluster and those that cross the cluster boundary.
 
 2. **MUST require multiple authentication factors.**  
    This is to ensure protection against password-based attacks and credential theft. All authentication flows MUST enforce AAL2 as minimum, prohibiting AAL1.
@@ -501,6 +504,9 @@ There are no requirements in addition to those for the Basic Pattern.
 2. **MUST encrypt sensitive session state when stored.**  
    This is to reduce the risk of token leakage and unauthorized access in the event of storage compromise. Session state that includes authentication context or tokens MUST be encrypted at rest using appropriate mechanisms.
 
+3. **MUST use received access tokens for subsequent workload calls.**  
+   This allows OIDC RP to use access tokens received from the OIDC OP for calling downstream workloads on behalf of the authenticated user. In this pattern, the SVID establishes the identity of the calling workload via mTLS, while the access token carries user identity and authorization context. This separation allows authorization decisions to be based on both the workload and the end user.
+
 #### 4.2.3. Stateless Workload \#1 Requirements
 
 1. **MUST perform client authentication to OIDC OP with an SVID.**  
@@ -510,7 +516,7 @@ There are no requirements in addition to those for the Basic Pattern.
    This is to reduce the risk of unauthorized or unintended disclosure of sensitive information due to attacks, misconfigurations, or operational errors.
 
 3. **SHOULD exchange external access tokens for internal access tokens.**  
-   This is to prevent private information from being leaked from external access tokens by removing sensitive information such as Personally Identifiable Information (PII) from external access tokens and including sensitive information only in internal access tokens. Also, this is to propagate user identity and workload identity to subsequent workloads with internal access tokens for use in their application logic. Note that rather than exchanging the external access token for an internal access token, you MAY propagate the external access token to subsequent workloads as is.
+   This is to prevent private information from being leaked from external access tokens by removing sensitive information such as Personally Identifiable Information (PII) from external access tokens and including sensitive information only in internal access tokens. Also, this is to propagate user identity and workload identity to subsequent workloads with internal access tokens for use in their application logic. Note that rather than exchanging the external access token for an internal access token, you MAY propagate the external access token to subsequent workloads as is. In this pattern, the SVID establishes the identity of the calling workload via mTLS, while the internal access token carries user identity and authorization context. This separation allows authorization decisions to be based on both the workload and the end user.
 
 ### 4.3. Workload \#2 Requirements
 
@@ -545,7 +551,8 @@ There are no requirements in addition to those for the Basic Pattern.
 
 ### 4.4. OIDC OP Requirements
 
-There are no requirements in addition to those for the Basic Pattern.
+1. **MUST support sender-constrained tokens for access and refresh tokens**  
+   Access tokens and refresh tokens MUST be bound to external OAuth clients using DPoP or OAuth 2.0 Mutual-TLS to prevent unauthorized or illegitimate parties from using leaked or stolen tokens.
 
 ### 4.5. PDP Requirements
 
@@ -589,7 +596,7 @@ Note that the SPIFFE specification does not define the relationship between the 
    This is to improve response times for SVID requests and reduce load on the SPIFFE Signing Authority.
 
 3. **MUST implement secure workload identity delivery mechanisms.**  
-   This is to ensure that SVIDs are delivered only to legitimate workloads as intended by the SPIFFE Signing Authority. The SPIFFE Workload Endpoint MUST verify workload identity through platform-specific mechanisms before providing access to SVIDs. The delivery mechanism MAY use the SPIFFE Workload API, Kubernetes Secrets, Envoy SDS, or other implementation-specific methods.
+   This is to ensure that SVIDs are delivered only to legitimate workloads as intended by the SPIFFE Signing Authority. The SPIFFE Workload Endpoint MUST verify workload identity through platform-specific mechanisms before providing access to SVIDs. The delivery mechanism MAY use the SPIFFE Workload API, CSI-based mechanisms such as the SPIFFE CSI Driver, SPIFFE Helper, Envoy SDS, or other implementation-specific methods.
 
 4. **(When deployed separately from SPIFFE Signing Authority) MUST use secure communication with the SPIFFE Signing Authority.**  
    This is to protect workload identity requests and responses from interception or tampering. Communication security varies depending on the phase. During initial bootstrap, the SPIFFE Workload Endpoint MUST use implementation-specific identification mechanisms such as platform-specific attestation, pre-shared join tokens, or other secure bootstrapping methods (as mTLS is not possible without an existing SVID). After obtaining an initial SVID, the SPIFFE Workload Endpoint MUST use mTLS for subsequent communications with the SPIFFE Signing Authority to provide mutual authentication and prevent spoofing.
@@ -783,7 +790,7 @@ A digital representation of a user, including identifying information, authentic
 
 A digital representation of a workload, including identifying information, authentication credentials, and associated attributes that define a workload’s digital presence.
 
-**FAPI (Financial-grade API)**
+**FAPI**
 
 A set of security profiles developed by the OpenID Foundation to strengthen OAuth and OIDC for high-security API environments. FAPI introduces formally verified requirements for authorization flows, including such as PKCE. It is designed to mitigate threats such as token leakage and replay attacks.
 
