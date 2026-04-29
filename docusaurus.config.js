@@ -130,12 +130,6 @@ const config = {
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'CNCF Contributors' },
       ],
-      announcementBar: {
-        id: `hello-bar`,
-        content: `KubeCon + CloudNativeCon Europe 2026 · 23-26 March · Amsterdam · <b><a target="_blank" href="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/?utm_source=cncf&utm_medium=subpage&utm_campaign=18269725-KubeCon-EU-2026&utm_content=hello-bar">REGISTER NOW</a></b>`,
-        backgroundColor: 'rgb(1, 117, 228)', // Defaults to `#fff`
-        textColor: '#fff', // Defaults to `#000`
-      },
       navbar: {
         title: '',
         logo: {
@@ -255,6 +249,12 @@ const config = {
         highlightResult: true,
       },
     ],
+  ],
+  scripts: [
+    {
+      src: 'https://www.cncf.io/wp-content/themes/cncf-twenty-two/source/js/on-demand/hello-bar-embed.js',
+      async: true,
+    },
   ],
 };
 
