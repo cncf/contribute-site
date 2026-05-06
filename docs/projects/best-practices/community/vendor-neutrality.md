@@ -40,7 +40,7 @@ Many adopters may be interested in commercial support for CNCF projects, but may
 
 Wherever possible, community meetings, events, resources, and infrastructure should be hosted on resources belonging to the CNCF, or on other neutral, 3rd-party resources (like GitHub).  Good resources to use include:
 
-* CNCF Zoom or Bevy for meetings
+* CNCF Zoom or Open Community Groups for meetings
 * GitHub or Netlify static site hosting for website and docs
 * CNCF cloud credits for testing
 * CNCF-shared YouTube account for videos
