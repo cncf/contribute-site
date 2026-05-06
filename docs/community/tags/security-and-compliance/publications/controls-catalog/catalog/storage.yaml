@@ -1,0 +1,106 @@
+guidelines:
+- id: CNSC-127
+  objective: Storage control plane management interface requires mutual authentication and TLS for connections
+  title: Control Plane Authentication
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-128
+  objective: Data availability is achieved through parity or mirroring, erasure coding or replicas
+  title: Data Availability Mechanism
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-129
+  objective: Hashing and checksums are added to blocks, objects or files
+  title: Integrity Validation
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - primarily designed to detect and recover from corrupted data, but can also add a layer of protection against the tampering
+    of data.
+- id: CNSC-130
+  objective: Data backup storage locations employ like access controls and security policies to that of the data storage source
+  title: Data Source Storage Management
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-131
+  objective: Secure erasure adhering to OPAL standards is employed for returned or non-functional devices
+  title: System Backup
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-132
+  objective: Encryption at rest considers data path, size, and frequency of access when determining additional security protections
+    and cryptographic algorithms to employ
+  title: Encryption of Data at Rest
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - The encryption may be implemented in the storage client or storage server and granularity of the encryption will vary
+    by system (e.g. per volume, per group or global keys)
+- id: CNSC-133
+  objective: Caching is considered for determining encryption requirements in architectures
+  title: Encryption Requirements
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-134
+  objective: Namespaces have defined trust boundaries to cordon access to volumes
+  title: Boundary Protection
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-135
+  objective: Security policies are used to prevent containers from accessing volume mounts on worker nodes
+  title: Security Policy Management
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-136
+  objective: Security policies are used enforce authorized worker node access to volumes
+  title: Security Policy Enforcement
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-137
+  objective: Volume UID and GID are inaccessible to containers
+  title: Information Flow Management
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-138
+  objective: Artifact registry supports OCI artifacts
+  title: Artifact Registry Management
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-139
+  objective: Artifact registry supports signed artifacts
+  title: Signed Artifact Support
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-140
+  objective: Artifact registry verifies artifacts against organizational policies
+  title: Artifact Registry Policy Verification
+  group: Storage
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0

@@ -1,0 +1,1159 @@
+# Validate: cue vet -c -d '#MappingDocument' github.com/gemaraproj/gemara@v1.0.0-rc.1 this-file.catalog
+title: Cloud Native Security Controls (CNSC) to NIST SP 800-53 Rev. 5 Mapping
+metadata:
+  id: CNSC-NIST-800-53-MAPPING
+  type: MappingDocument
+  gemara-version: '1.0.0-rc.1'
+  version: 1.0.0
+  description: This document maps the Cloud Native Security Controls Catalog to NIST 800-53 SP Rev.5 Guidelines.
+  author:
+    id: tag-sc
+    name: TAG Security and Compliance
+    type: Software Assisted
+  mapping-references:
+  - id: CNSC-CATALOG
+    title: Cloud Native Security Controls Catalog (contribute-site)
+    version: 1.1.0
+    description: Layer 1 guidance catalog; CNSC guideline identifiers.
+    url: https://github.com/cncf/contribute-site/tree/main/docs/community/tags/security-and-compliance/publications/controls-catalog/catalog
+  - id: NIST-800-53
+    title: NIST SP 800-53 Rev. 5
+    version: rev5
+    description: Security and Privacy Controls for Information Systems and Organizations.
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+source-reference:
+  reference-id: CNSC-CATALOG
+  entry-type: Guideline
+target-reference:
+  reference-id: NIST-800-53
+  entry-type: Control
+mappings:
+- id: CNSC-1
+  source: CNSC-1
+  targets:
+  - entry-id: IA-5(7)
+    rationale: Runtime injection prevents static authenticators from being embedded in application code or container images
+  relationship: relates-to
+- id: CNSC-10
+  source: CNSC-10
+  targets:
+  - entry-id: AC-3(13)
+    rationale: ABAC enforces access decisions based on workload and environmental attributes
+  - entry-id: AC-3(7)
+    rationale: RBAC enforces access decisions based on pre-defined role assignments
+  relationship: relates-to
+- id: CNSC-100
+  source: CNSC-100
+  targets:
+  - entry-id: IA-3(1)
+    rationale: Mutual TLS for registry connections requires cryptographic bidirectional device authentication
+  relationship: relates-to
+- id: CNSC-101
+  source: CNSC-101
+  targets:
+  - entry-id: SI-7
+    rationale: Signing images and metadata provides integrity verification for distributed artifacts
+  relationship: relates-to
+- id: CNSC-102
+  source: CNSC-102
+  targets:
+  - entry-id: SI-7
+    rationale: Signed configuration prevents unauthorized modification of workload settings
+  relationship: relates-to
+- id: CNSC-103
+  source: CNSC-103
+  targets:
+  - entry-id: SI-7
+    rationale: Signed packages provide integrity verification for distributed software
+  relationship: relates-to
+- id: CNSC-104
+  source: CNSC-104
+  targets:
+  - entry-id: SI-7
+    rationale: Image integrity validation detects unauthorized modification of container artifacts
+  relationship: relates-to
+- id: CNSC-105
+  source: CNSC-105
+  targets:
+  - entry-id: RA-5
+    rationale: Image scanning detects known vulnerabilities and malware in container artifacts
+  - entry-id: SA-3
+    rationale: Vulnerability scanning of images is integrated into the development lifecycle
+  relationship: relates-to
+- id: CNSC-106
+  source: CNSC-106
+  targets:
+  - entry-id: SC-12
+    rationale: Key revocation invalidates trust in artifacts signed by compromised keys
+  relationship: relates-to
+- id: CNSC-107
+  source: CNSC-107
+  targets:
+  - entry-id: SI-2(3)
+    rationale: Prioritizing security updates is a flaw remediation scheduling activity
+  relationship: relates-to
+- id: CNSC-108
+  source: CNSC-108
+  targets:
+  - entry-id: SC-12(3)
+    rationale: HSMs provide asymmetric key infrastructure for credential protection
+  relationship: relates-to
+- id: CNSC-109
+  source: CNSC-109
+  targets:
+  - entry-id: SI-2(3)
+    rationale: Acting on container image scanning findings is flaw remediation
+  relationship: relates-to
+- id: CNSC-11
+  source: CNSC-11
+  targets:
+  - entry-id: AC-24
+    rationale: Forwarded identity context enables dynamic authorization decisions at each service boundary
+  relationship: relates-to
+- id: CNSC-110
+  source: CNSC-110
+  targets:
+  - entry-id: PL-1
+    rationale: Enforcing organizational compliance rules is a planning and policy activity
+  relationship: relates-to
+- id: CNSC-112
+  source: CNSC-112
+  targets:
+  - entry-id: AC-6(3)
+    rationale: Restricting public registry pulls to authorized engineers enforces network access to privileged commands
+  relationship: relates-to
+- id: CNSC-113
+  source: CNSC-113
+  targets:
+  - entry-id: SC-12(2)
+    rationale: Image encryption uses symmetric keys for bulk data protection
+  - entry-id: SC-12(3)
+    rationale: Key attestation and credential distribution use asymmetric keys for authorization
+  relationship: relates-to
+- id: CNSC-114
+  source: CNSC-114
+  targets:
+  - entry-id: SI-2(3)
+    rationale: Risk-based prioritization using exploit maturity and vulnerable paths refines flaw remediation scheduling
+  relationship: relates-to
+- id: CNSC-115
+  source: CNSC-115
+  targets:
+  - entry-id: AC-6(3)
+    rationale: East-west network policies restrict lateral communication to authorized network-level privileged commands
+  relationship: relates-to
+- id: CNSC-116
+  source: CNSC-116
+  targets:
+  - entry-id: CA-7
+    rationale: Cloud native incident response requires continuous monitoring of workload behavior
+  - entry-id: IR-4
+    rationale: Incident handling processes must account for cloud native workload dynamics
+  - entry-id: IR-4(5)
+    rationale: Automated disabling of compromised cloud native workloads
+  relationship: relates-to
+- id: CNSC-117
+  source: CNSC-117
+  targets:
+  - entry-id: IR-5(1)
+    rationale: Evidence handling and collection for cloud native workloads requires automated tracking and data collection
+  relationship: relates-to
+- id: CNSC-12
+  source: CNSC-12
+  targets:
+  - entry-id: IA-2
+    rationale: Cluster and workload operators are organizational users requiring unique identification and authentication
+  relationship: relates-to
+- id: CNSC-120
+  source: CNSC-120
+  targets:
+  - entry-id: AC-3(3)
+    rationale: MAC implementations enforce mandatory access control policies
+  relationship: relates-to
+- id: CNSC-121
+  source: CNSC-121
+  targets:
+  - entry-id: SA-11(2)
+    rationale: Threat modeling of code and infrastructure informs vulnerability analysis
+  relationship: relates-to
+- id: CNSC-122
+  source: CNSC-122
+  targets:
+  - entry-id: IA-9
+    rationale: Independent authentication of entity identities is service-level identification and authentication
+  relationship: relates-to
+- id: CNSC-123
+  source: CNSC-123
+  targets:
+  - entry-id: IA-9
+    rationale: Proof of identity creation enables service identification and authentication
+  relationship: relates-to
+- id: CNSC-124
+  source: CNSC-124
+  targets:
+  - entry-id: CM-14
+    rationale: Trusted OS and BIOS for orchestrators requires signed and verified system components
+  relationship: relates-to
+- id: CNSC-125
+  source: CNSC-125
+  targets:
+  - entry-id: SI-6
+    rationale: Verifying container claims is a security function verification activity
+  relationship: relates-to
+- id: CNSC-127
+  source: CNSC-127
+  targets:
+  - entry-id: SC-8
+    rationale: Mutual authentication and TLS for control plane connections protects transmission confidentiality and integrity
+  relationship: relates-to
+- id: CNSC-128
+  source: CNSC-128
+  targets:
+  - entry-id: SI-13
+    rationale: Parity, mirroring, and replicas are predictable failure prevention mechanisms for data availability
+  relationship: relates-to
+- id: CNSC-129
+  source: CNSC-129
+  targets:
+  - entry-id: CM-7
+    rationale: Checksums constrain storage to validated data, supporting least functionality
+  - entry-id: SI-7
+    rationale: Hashing and checksums verify data integrity
+  relationship: relates-to
+- id: CNSC-13
+  source: CNSC-13
+  targets:
+  - entry-id: AC-3
+    rationale: Operator actions are evaluated against access control policies governing context, purpose, and output
+  relationship: relates-to
+- id: CNSC-130
+  source: CNSC-130
+  targets:
+  - entry-id: SA-9
+    rationale: Backup locations with equivalent security controls are managed as external system services
+  relationship: relates-to
+- id: CNSC-131
+  source: CNSC-131
+  targets:
+  - entry-id: CP-9
+    rationale: Data is backed up before device disposition
+  - entry-id: MP-6
+    rationale: OPAL-standard erasure of returned devices is media sanitization
+  relationship: relates-to
+- id: CNSC-132
+  source: CNSC-132
+  targets:
+  - entry-id: SC-28
+    rationale: Data-at-rest encryption decisions based on access patterns align with protection of information at rest
+  relationship: relates-to
+- id: CNSC-135
+  source: CNSC-135
+  targets:
+  - entry-id: CM-6
+    rationale: Volume mount access restrictions are configuration settings
+  - entry-id: SA-8
+    rationale: Volume access restrictions implement security engineering isolation principles
+  - entry-id: SC-7
+    rationale: Preventing container access to worker node volumes is boundary protection
+  relationship: relates-to
+- id: CNSC-136
+  source: CNSC-136
+  targets:
+  - entry-id: CM-6
+    rationale: Enforced volume access policies are configuration settings
+  - entry-id: SA-8
+    rationale: Authorized volume access enforcement applies security engineering principles
+  - entry-id: SC-7
+    rationale: Worker node volume access restrictions enforce boundary protection
+  relationship: relates-to
+- id: CNSC-137
+  source: CNSC-137
+  targets:
+  - entry-id: AC-16
+    rationale: Volume UID/GID are security attributes controlling access scope
+  - entry-id: AC-4
+    rationale: Restricting UID/GID access enforces information flow between containers and volumes
+  - entry-id: SI-7
+    rationale: Protecting volume UID/GID from container access preserves file system integrity
+  relationship: relates-to
+- id: CNSC-139
+  source: CNSC-139
+  targets:
+  - entry-id: CM-14
+    rationale: Registry support for signed artifacts enables component signature verification
+  relationship: relates-to
+- id: CNSC-14
+  source: CNSC-14
+  targets:
+  - entry-id: IA-2(1)(2)
+    rationale: Identity federation requiring MFA applies to both privileged and non-privileged account access
+  relationship: relates-to
+- id: CNSC-140
+  source: CNSC-140
+  targets:
+  - entry-id: AU-10
+    rationale: Policy-based artifact verification provides a non-repudiation mechanism
+  - entry-id: CM-6
+    rationale: Organizational artifact policies are configuration settings enforced by the registry
+  relationship: relates-to
+- id: CNSC-141
+  source: CNSC-141
+  targets:
+  - entry-id: SI-1
+    rationale: Build process attestation establishes integrity policy for each pipeline stage
+  - entry-id: SI-7
+    rationale: Signing each build step provides verifiable integrity of the build process
+  relationship: relates-to
+- id: CNSC-142
+  source: CNSC-142
+  targets:
+  - entry-id: SI-1
+    rationale: Verifying signatures at each build step enforces integrity policy compliance
+  - entry-id: SI-7
+    rationale: Signature verification at each stage detects unauthorized modification of build artifacts
+  relationship: relates-to
+- id: CNSC-143
+  source: CNSC-143
+  targets:
+  - entry-id: IA-5
+    rationale: The signing framework manages cryptographic authenticators for artifact identity
+  relationship: relates-to
+- id: CNSC-144
+  source: CNSC-144
+  targets:
+  - entry-id: AC-4(6)
+    rationale: Attestation metadata controls information flow decisions about artifact provenance
+  relationship: relates-to
+- id: CNSC-145
+  source: CNSC-145
+  targets:
+  - entry-id: AC-6
+    rationale: Limiting certification authority applies the principle of least privilege to artifact signing
+  relationship: relates-to
+- id: CNSC-146
+  source: CNSC-146
+  targets:
+  - entry-id: SC-12
+    rationale: Private key rotation and revocation are key management lifecycle activities
+  relationship: relates-to
+- id: CNSC-148
+  source: CNSC-148
+  targets:
+  - entry-id: IA-5
+    rationale: Decryption capabilities are managed as platform authenticators
+  - entry-id: SC-12
+    rationale: Encryption keys require lifecycle management
+  - entry-id: SC-13
+    rationale: Artifact encryption uses approved cryptographic mechanisms
+  - entry-id: SC-28(1)
+    rationale: Encrypted artifacts at rest use cryptographic protection
+  - entry-id: SC-8
+    rationale: Encrypted distribution protects artifact confidentiality and integrity in transit
+  relationship: relates-to
+- id: CNSC-149
+  source: CNSC-149
+  targets:
+  - entry-id: CM-3(6)
+    rationale: Cryptographic guarantees of policy adherence provide tamper-evident configuration change control
+  relationship: relates-to
+- id: CNSC-15
+  source: CNSC-15
+  targets:
+  - entry-id: SC-12(1)
+    rationale: HSMs provide hardware-based key storage and management for cryptographic secret protection
+  - entry-id: SC-3(1)
+    rationale: HSMs enforce hardware separation of cryptographic security functions from the general-purpose environment
+  relationship: relates-to
+- id: CNSC-150
+  source: CNSC-150
+  targets:
+  - entry-id: CM-3(2)
+    rationale: Validating environments and dependencies before usage tests configuration changes for impact
+  relationship: relates-to
+- id: CNSC-151
+  source: CNSC-151
+  targets:
+  - entry-id: CM-3(4)
+    rationale: Build worker runtime security validation is an automated security response to configuration changes
+  relationship: relates-to
+- id: CNSC-152
+  source: CNSC-152
+  targets:
+  - entry-id: CM-3(4)
+    rationale: Reproducible builds provide automated verification of configuration change outcomes
+  relationship: relates-to
+- id: CNSC-153
+  source: CNSC-153
+  targets:
+  - entry-id: CM-3(2)
+    rationale: Locking and verifying external requirements tests configuration changes for impact before execution
+  relationship: relates-to
+- id: CNSC-155
+  source: CNSC-155
+  targets:
+  - entry-id: CM-3(1)
+    rationale: Recording the build environment provides automated documentation of configuration changes
+  relationship: relates-to
+- id: CNSC-156
+  source: CNSC-156
+  targets:
+  - entry-id: CM-3(3)
+    rationale: Automated build environment creation implements automated change implementation mechanisms
+  relationship: relates-to
+- id: CNSC-157
+  source: CNSC-157
+  targets:
+  - entry-id: CM-3(3)
+    rationale: Distributing builds across infrastructure uses automated change mechanisms to reduce single points of failure
+  relationship: relates-to
+- id: CNSC-158
+  source: CNSC-158
+  targets:
+  - entry-id: SA-3
+    rationale: Pipeline-as-code defines the system development lifecycle for build automation
+  relationship: relates-to
+- id: CNSC-16
+  source: CNSC-16
+  targets:
+  - entry-id: SI-12
+    rationale: Short expiration periods enforce timely disposal of secrets as a retention lifecycle policy
+  relationship: relates-to
+- id: CNSC-161
+  source: CNSC-161
+  targets:
+  - entry-id: AC-2
+    rationale: Single-use build workers enforce ephemeral account management for build processes
+  relationship: relates-to
+- id: CNSC-162
+  source: CNSC-162
+  targets:
+  - entry-id: SC-7(3)
+    rationale: Minimal network connectivity for the software factory restricts access points as boundary protection
+  relationship: relates-to
+- id: CNSC-163
+  source: CNSC-163
+  targets:
+  - entry-id: AC-5
+    rationale: Segregating build worker duties enforces separation of duties in the build pipeline
+  relationship: relates-to
+- id: CNSC-164
+  source: CNSC-164
+  targets:
+  - entry-id: CM-2(2)
+    rationale: Passing in environment and commands enforces baseline configuration through automation
+  relationship: relates-to
+- id: CNSC-165
+  source: CNSC-165
+  targets:
+  - entry-id: AU-9(2)
+    rationale: Secured output storage protects build audit information in a separate repository
+  relationship: relates-to
+- id: CNSC-167
+  source: CNSC-167
+  targets:
+  - entry-id: AC-2
+    rationale: Defining user roles for the build pipeline is an account management activity
+  relationship: relates-to
+- id: CNSC-168
+  source: CNSC-168
+  targets:
+  - entry-id: SC-17
+    rationale: Offline root of trust establishment aligns with PKI certificate management practices
+  relationship: relates-to
+- id: CNSC-169
+  source: CNSC-169
+  targets:
+  - entry-id: SC-23(5)
+    rationale: Short-lived workload certificates enforce session authenticity with time-bound validity
+  relationship: relates-to
+- id: CNSC-17
+  source: CNSC-17
+  targets:
+  - entry-id: IA-5
+    rationale: Verification of secret expiration and TTL prevents reuse of stale authenticators
+  relationship: relates-to
+- id: CNSC-170
+  source: CNSC-170
+  targets:
+  - entry-id: SI-7
+    rationale: Client-side artifact verification confirms integrity before consumption
+  relationship: relates-to
+- id: CNSC-171
+  source: CNSC-171
+  targets:
+  - entry-id: SI-7
+    rationale: Freshness verification detects stale or replayed artifacts
+  relationship: relates-to
+- id: CNSC-173
+  source: CNSC-173
+  targets:
+  - entry-id: SA-11
+    rationale: Verification of third-party artifacts is a supply chain evaluation activity
+  relationship: relates-to
+- id: CNSC-174
+  source: CNSC-174
+  targets:
+  - entry-id: CM-8
+    rationale: Third-party SBOMs provide component inventory for supply chain transparency
+  relationship: relates-to
+- id: CNSC-175
+  source: CNSC-175
+  targets:
+  - entry-id: CM-10
+    rationale: Tracking open source component dependencies enforces software usage restrictions
+  relationship: relates-to
+- id: CNSC-179
+  source: CNSC-179
+  targets:
+  - entry-id: RA-5
+    rationale: Software vulnerability scanning identifies known weaknesses in third-party materials
+  relationship: relates-to
+- id: CNSC-18
+  source: CNSC-18
+  targets:
+  - entry-id: SC-12(1)
+    rationale: Secrets management system availability ensures continuous access to cryptographic key infrastructure
+  relationship: relates-to
+- id: CNSC-180
+  source: CNSC-180
+  targets:
+  - entry-id: CM-10
+    rationale: License compliance scanning enforces software usage restrictions for legal compliance
+  relationship: relates-to
+- id: CNSC-181
+  source: CNSC-181
+  targets:
+  - entry-id: SA-11(1)(8)
+    rationale: SCA combines static analysis and runtime testing to evaluate ingested software
+  relationship: relates-to
+- id: CNSC-182
+  source: CNSC-182
+  targets:
+  - entry-id: SI-7
+    rationale: Signed commits and tags establish integrity and authorship of source code changes
+  relationship: relates-to
+- id: CNSC-183
+  source: CNSC-183
+  targets:
+  - entry-id: AC-6(3)
+    rationale: Attestation enforcement for protected branches restricts code modification to authorized privileged commands
+  relationship: relates-to
+- id: CNSC-184
+  source: CNSC-184
+  targets:
+  - entry-id: SC-12(3)
+    rationale: Encrypting secrets before repository commit requires asymmetric key infrastructure
+  relationship: relates-to
+- id: CNSC-185
+  source: CNSC-185
+  targets:
+  - entry-id: PL-1
+    rationale: Defining repository write access is an access planning and policy activity
+  relationship: relates-to
+- id: CNSC-186
+  source: CNSC-186
+  targets:
+  - entry-id: RA-5
+    rationale: Automation of security scanning ensures consistent vulnerability detection in source code
+  relationship: relates-to
+- id: CNSC-187
+  source: CNSC-187
+  targets:
+  - entry-id: PL-1
+    rationale: Contribution policies establish governance procedures for source code changes
+  relationship: relates-to
+- id: CNSC-188
+  source: CNSC-188
+  targets:
+  - entry-id: PL-1
+    rationale: Defining roles aligned to functional responsibilities is a planning and policy activity
+  relationship: relates-to
+- id: CNSC-189
+  source: CNSC-189
+  targets:
+  - entry-id: SA-11
+    rationale: The four-eyes principle ensures independent evaluation of code changes
+  relationship: relates-to
+- id: CNSC-19
+  source: CNSC-19
+  targets:
+  - entry-id: IA-5
+    rationale: Periodic rotation and revocation of long-lived secrets is an authenticator management lifecycle activity
+  relationship: relates-to
+- id: CNSC-190
+  source: CNSC-190
+  targets:
+  - entry-id: SA-8
+    rationale: Branch protection rules implement security engineering principles for source code governance
+  relationship: relates-to
+- id: CNSC-191
+  source: CNSC-191
+  targets:
+  - entry-id: IA-2(1)
+    rationale: Repository MFA enforcement requires multi-factor authentication for organizational users accessing source code
+  relationship: relates-to
+- id: CNSC-192
+  source: CNSC-192
+  targets:
+  - entry-id: AC-1
+    rationale: SSH key-based access to repositories implements access control procedures for developer authentication
+  relationship: relates-to
+- id: CNSC-193
+  source: CNSC-193
+  targets:
+  - entry-id: AC-2(1)
+    rationale: Key rotation policy defines prerequisites for automated credential management
+  relationship: relates-to
+- id: CNSC-194
+  source: CNSC-194
+  targets:
+  - entry-id: AC-2(1)
+    rationale: Ephemeral credentials automate credential lifecycle management for machine and service accounts
+  relationship: relates-to
+- id: CNSC-195
+  source: CNSC-195
+  targets:
+  - entry-id: SA-8(23)
+    rationale: Secure default configuration implements the secure defaults engineering principle
+  relationship: relates-to
+- id: CNSC-2
+  source: CNSC-2
+  targets:
+  - entry-id: IA-9
+    rationale: Mutual authentication between workloads establishes bidirectional identity verification before service communication
+  relationship: relates-to
+- id: CNSC-20
+  source: CNSC-20
+  targets:
+  - entry-id: SC-8
+    rationale: Secrets distributed through communication channels require transmission confidentiality and integrity proportional to sensitivity
+  relationship: relates-to
+- id: CNSC-208
+  source: CNSC-208
+  targets:
+  - entry-id: IA-2(1)(2)
+    rationale: Identity federation with MFA requires multi-factor authentication for both privileged and non-privileged users
+  relationship: relates-to
+- id: CNSC-21
+  source: CNSC-21
+  targets:
+  - entry-id: AU-9
+    rationale: Runtime secrets are masked or excluded to protect audit information from credential exposure
+  relationship: relates-to
+- id: CNSC-22
+  source: CNSC-22
+  targets:
+  - entry-id: SI-7(9)
+    rationale: Bootstrapping verification of compute location is a boot process integrity check
+  relationship: relates-to
+- id: CNSC-23
+  source: CNSC-23
+  targets:
+  - entry-id: SC-39
+    rationale: Workloads with different data sensitivity classifications require separate kernel-level execution domains
+  - entry-id: SC-7(21)
+    rationale: Isolation of workload components based on data sensitivity classification
+  relationship: relates-to
+- id: CNSC-233
+  source: CNSC-233
+  targets:
+  - entry-id: SC-7
+    rationale: Service mesh data-in-motion protection establishes boundary protection through confidentiality, integrity, and authentication
+  relationship: relates-to
+- id: CNSC-24
+  source: CNSC-24
+  targets:
+  - entry-id: CM-2(2)
+    rationale: Automated detection of runtime configuration drift from the established baseline
+  - entry-id: CM-3(7)
+    rationale: Runtime configuration changes are reviewed and correlated against authorized modifications
+  relationship: relates-to
+- id: CNSC-25
+  source: CNSC-25
+  targets:
+  - entry-id: AU-2
+    rationale: Filtered API auditing defines the specific events and verbs captured for logging
+  relationship: relates-to
+- id: CNSC-259
+  source: CNSC-259
+  targets:
+  - entry-id: SA-11(1)
+    rationale: Integrating scanning in IDE and CI during pull request shifts static analysis left
+  relationship: relates-to
+- id: CNSC-26
+  source: CNSC-26
+  targets:
+  - entry-id: CM-2
+    rationale: Container-specific operating systems establish a purpose-built hardened baseline
+  - entry-id: CM-7
+    rationale: Container-specific operating systems remove unnecessary services and functionality by design
+  relationship: relates-to
+- id: CNSC-265
+  source: CNSC-265
+  targets:
+  - entry-id: SA-11(4)
+    rationale: Requiring a non-author reviewer prior to merging is a manual code review gate
+  relationship: relates-to
+- id: CNSC-27
+  source: CNSC-27
+  targets:
+  - entry-id: SI-7
+    rationale: TPM and vTPM provide a hardware root of trust for software and firmware integrity verification
+  relationship: relates-to
+- id: CNSC-271
+  source: CNSC-271
+  targets:
+  - entry-id: SC-39
+    rationale: CI server isolation and hardening prevents compromise of build infrastructure
+  relationship: relates-to
+- id: CNSC-28
+  source: CNSC-28
+  targets:
+  - entry-id: AC-6
+    rationale: Minimizing administrative access to the control plane applies the principle of least privilege
+  relationship: relates-to
+- id: CNSC-29
+  source: CNSC-29
+  targets:
+  - entry-id: SC-6
+    rationale: Cgroup resource requests and limits enforce allocation boundaries to prevent resource exhaustion
+  - entry-id: SC-39
+    rationale: Cgroups provide process-level isolation of resource consumption between workloads
+  relationship: relates-to
+- id: CNSC-297
+  source: CNSC-297
+  targets:
+  - entry-id: SI-7
+    rationale: Signed workload configuration prevents unauthorized modification
+  relationship: relates-to
+- id: CNSC-298
+  source: CNSC-298
+  targets:
+  - entry-id: SI-7
+    rationale: Signed workload packages provide integrity verification for deployment artifacts
+  relationship: relates-to
+- id: CNSC-3
+  source: CNSC-3
+  targets:
+  - entry-id: SC-12
+    rationale: Key rotation is a key management lifecycle activity addressed by SC-12
+  relationship: relates-to
+- id: CNSC-30
+  source: CNSC-30
+  targets:
+  - entry-id: SI-4(13)
+    rationale: Alert tuning for false positives refines traffic and event pattern analysis effectiveness
+  relationship: relates-to
+- id: CNSC-303
+  source: CNSC-303
+  targets:
+  - entry-id: SC-12(3)
+    rationale: HSMs or software credential managers protect asymmetric keys for stored credentials
+  relationship: relates-to
+- id: CNSC-31
+  source: CNSC-31
+  targets:
+  - entry-id: IA-9
+    rationale: Control plane components use mutual authentication and certificate validation to verify service identity
+  - entry-id: SC-12
+    rationale: Periodic certificate rotation for control plane communication is a key management lifecycle activity
+  relationship: relates-to
+- id: CNSC-32
+  source: CNSC-32
+  targets:
+  - entry-id: CM-2
+    rationale: Seccomp filters define a baseline of sanctioned system calls for container execution
+  - entry-id: CM-7
+    rationale: Restricting container capabilities and system calls enforces least functionality
+  relationship: relates-to
+- id: CNSC-33
+  source: CNSC-33
+  targets:
+  - entry-id: CM-5
+    rationale: Protecting critical mount points and files from unauthorized modification is an access restriction for change
+  relationship: relates-to
+- id: CNSC-34
+  source: CNSC-34
+  targets:
+  - entry-id: CM-5
+    rationale: Runtime immutability of binaries, certificates, and remote access configurations restricts unauthorized change
+  relationship: relates-to
+- id: CNSC-35
+  source: CNSC-35
+  targets:
+  - entry-id: SC-7
+    rationale: Container-level ingress and egress restrictions enforce network boundary protection at runtime
+  relationship: relates-to
+- id: CNSC-36
+  source: CNSC-36
+  targets:
+  - entry-id: SC-7
+    rationale: Microservice communication allow-listing is application-layer network segmentation
+  relationship: relates-to
+- id: CNSC-37
+  source: CNSC-37
+  targets:
+  - entry-id: CM-14
+    rationale: Policy agents enforcing image signatures validate that only signed components are admitted
+  relationship: relates-to
+- id: CNSC-38
+  source: CNSC-38
+  targets:
+  - entry-id: SR-4(3)
+    rationale: Policy agents enforce provenance validation to confirm workload origin and integrity
+  relationship: relates-to
+- id: CNSC-39
+  source: CNSC-39
+  targets:
+  - entry-id: SC-8
+    rationale: Service mesh encryption of data in transit protects transmission confidentiality and integrity
+  relationship: relates-to
+- id: CNSC-4
+  source: CNSC-4
+  targets:
+  - entry-id: SC-12
+    rationale: Short key lifespan is a key management lifecycle policy addressed by SC-12
+  relationship: relates-to
+- id: CNSC-40
+  source: CNSC-40
+  targets:
+  - entry-id: SI-4
+    rationale: Container-level observation of system calls and network traffic implements system monitoring
+  relationship: relates-to
+- id: CNSC-41
+  source: CNSC-41
+  targets:
+  - entry-id: SI-3
+    rationale: Dynamic behavioral scanning detects zero-day and previously unknown malicious activity in running workloads
+  relationship: relates-to
+- id: CNSC-42
+  source: CNSC-42
+  targets:
+  - entry-id: RA-5
+    rationale: Continuous environment scanning for workload vulnerabilities is a vulnerability monitoring activity
+  relationship: relates-to
+- id: CNSC-43
+  source: CNSC-43
+  targets:
+  - entry-id: AU-3
+    rationale: Sufficient audit record content is a prerequisite for log correlation and incident response decision-making
+  relationship: relates-to
+- id: CNSC-44
+  source: CNSC-44
+  targets:
+  - entry-id: AC-6
+    rationale: Least privilege limits workload and operator permissions to the minimum required
+  - entry-id: AC-5
+    rationale: Segregation of duties prevents any single actor from controlling an entire critical function
+  relationship: relates-to
+- id: CNSC-45
+  source: CNSC-45
+  targets:
+  - entry-id: SI-7
+    rationale: Policy-based violation detection verifies system state integrity against organizational rules
+  relationship: relates-to
+- id: CNSC-46
+  source: CNSC-46
+  targets:
+  - entry-id: SC-12
+    rationale: External KMS integration for native secret store encryption is a key management infrastructure decision
+  relationship: relates-to
+- id: CNSC-47
+  source: CNSC-47
+  targets:
+  - entry-id: SC-28(1)
+    rationale: Secret stores must use cryptographic protection rather than encoding for data at rest
+  relationship: relates-to
+- id: CNSC-48
+  source: CNSC-48
+  targets:
+  - entry-id: SI-4
+    rationale: Detection and denial of traffic to malicious domains is network-level system monitoring
+  relationship: relates-to
+- id: CNSC-49
+  source: CNSC-49
+  targets:
+  - entry-id: SC-28
+    rationale: Encrypted containers protect sensitive data at rest within container images and filesystems
+  relationship: relates-to
+- id: CNSC-5
+  source: CNSC-5
+  targets:
+  - entry-id: SA-9
+    rationale: Independent credential management addresses risk from reliance on external cloud provider services
+  - entry-id: SC-12
+    rationale: Generation and management of credentials is a key management lifecycle activity
+  relationship: relates-to
+- id: CNSC-50
+  source: CNSC-50
+  targets:
+  - entry-id: CM-8
+    rationale: SBOMs serve as a machine-readable component inventory for identifying vulnerable dependencies
+  relationship: relates-to
+- id: CNSC-51
+  source: CNSC-51
+  targets:
+  - entry-id: CM-2
+    rationale: Function allow-listing defines a baseline of permitted process execution
+  - entry-id: CM-7
+    rationale: Restricting processes to explicitly allowed functions enforces least functionality
+  relationship: relates-to
+- id: CNSC-52
+  source: CNSC-52
+  targets:
+  - entry-id: CM-5
+    rationale: Preventing function-level modifications to critical filesystem mount points is an access restriction for change
+  relationship: relates-to
+- id: CNSC-53
+  source: CNSC-53
+  targets:
+  - entry-id: AC-3
+    rationale: Restricting function access to sanctioned services enforces service-level access control
+  relationship: relates-to
+- id: CNSC-54
+  source: CNSC-54
+  targets:
+  - entry-id: SI-4
+    rationale: Egress monitoring for command and control traffic detects compromised workload communication
+  relationship: relates-to
+- id: CNSC-55
+  source: CNSC-55
+  targets:
+  - entry-id: SI-4
+    rationale: Ingress inspection for malicious payloads and commands is inbound network monitoring
+  relationship: relates-to
+- id: CNSC-56
+  source: CNSC-56
+  targets:
+  - entry-id: SC-7(21)
+    rationale: Tenant-based isolation of serverless functions by data classification implements component isolation
+  relationship: relates-to
+- id: CNSC-57
+  source: CNSC-57
+  targets:
+  - entry-id: SR-4(3)
+    rationale: Image signature verification confirms the artifact is genuine and unaltered
+  - entry-id: SR-4(4)
+    rationale: Validating the signature source traces the artifact back to an authorized origin
+  relationship: relates-to
+- id: CNSC-58
+  source: CNSC-58
+  targets:
+  - entry-id: CM-4
+    rationale: Pre-deployment policy enforcement gates image admission on integrity and trust criteria
+  relationship: relates-to
+- id: CNSC-59
+  source: CNSC-59
+  targets:
+  - entry-id: SR-4(3)
+    rationale: Pre-deployment integrity verification confirms the image has not been altered
+  - entry-id: SR-4(4)
+    rationale: Pre-deployment signature verification traces the image to its authorized build origin
+  relationship: relates-to
+- id: CNSC-6
+  source: CNSC-6
+  targets:
+  - entry-id: IA-13
+    rationale: Independent authentication and authorization map to the separation of identity providers from authorization servers
+  - entry-id: AC-3
+    rationale: Authorization decisions are enforced as a distinct process from identity authentication
+  relationship: relates-to
+- id: CNSC-60
+  source: CNSC-60
+  targets:
+  - entry-id: AU-2
+    rationale: Authentication, authorization, action, and failure events are identified for application logging
+  - entry-id: AU-3
+    rationale: Application logs include authentication, authorization, action, and failure content
+  relationship: relates-to
+- id: CNSC-62
+  source: CNSC-62
+  targets:
+  - entry-id: SI-3
+    rationale: AI/ML-based heuristic analysis extends malicious code detection beyond signature-based methods
+  relationship: relates-to
+- id: CNSC-63
+  source: CNSC-63
+  targets:
+  - entry-id: SA-3(1)
+    rationale: A dedicated production environment implies managed separation from preproduction stages
+  relationship: relates-to
+- id: CNSC-64
+  source: CNSC-64
+  targets:
+  - entry-id: SA-8(31)
+    rationale: Dynamic deployment strategies (canary, blue-green, rolling) are secure system modification techniques
+  relationship: relates-to
+- id: CNSC-65
+  source: CNSC-65
+  targets:
+  - entry-id: SA-11(1)
+    rationale: IDE and pull request scanning shifts static analysis to the earliest point in the development lifecycle
+  relationship: relates-to
+- id: CNSC-66
+  source: CNSC-66
+  targets:
+  - entry-id: SA-15
+    rationale: Segregation of development, testing, and production environments is a development process standard
+  relationship: relates-to
+- id: CNSC-67
+  source: CNSC-67
+  targets:
+  - entry-id: SA-11
+    rationale: Testing business-critical code is a developer evaluation activity
+  relationship: relates-to
+- id: CNSC-68
+  source: CNSC-68
+  targets:
+  - entry-id: SA-11
+    rationale: Testing business-critical infrastructure is a developer evaluation activity
+  relationship: relates-to
+- id: CNSC-69
+  source: CNSC-69
+  targets:
+  - entry-id: SA-11
+    rationale: Local test execution enables developer evaluation before code integration
+  relationship: relates-to
+- id: CNSC-7
+  source: CNSC-7
+  targets:
+  - entry-id: AC-3
+    rationale: Independent enforcement of authorization is distinct from the authentication mechanism that establishes identity
+  relationship: relates-to
+- id: CNSC-70
+  source: CNSC-70
+  targets:
+  - entry-id: SA-11
+    rationale: Shared test environments enable collaborative developer evaluation
+  relationship: relates-to
+- id: CNSC-71
+  source: CNSC-71
+  targets:
+  - entry-id: SA-11(4)
+    rationale: Non-author code review is a manual evaluation gate prior to integration
+  relationship: relates-to
+- id: CNSC-73
+  source: CNSC-73
+  targets:
+  - entry-id: SA-11
+    rationale: Full infrastructure testing validates the complete deployment target
+  relationship: relates-to
+- id: CNSC-74
+  source: CNSC-74
+  targets:
+  - entry-id: SA-11
+    rationale: Regression testing verifies existing functionality is preserved after changes
+  relationship: relates-to
+- id: CNSC-75
+  source: CNSC-75
+  targets:
+  - entry-id: SA-11
+    rationale: Security regression tests evolve developer evaluation against emerging threats
+  relationship: relates-to
+- id: CNSC-76
+  source: CNSC-76
+  targets:
+  - entry-id: SA-3(1)
+    rationale: A dedicated testing environment is a managed preproduction stage in the development lifecycle
+  relationship: relates-to
+- id: CNSC-77
+  source: CNSC-77
+  targets:
+  - entry-id: SC-39
+    rationale: CI server isolation prevents build processes from affecting or being affected by other workloads
+  relationship: relates-to
+- id: CNSC-78
+  source: CNSC-78
+  targets:
+  - entry-id: SA-11(2)
+    rationale: Threat model results inform test development priorities and investment decisions
+  relationship: relates-to
+- id: CNSC-8
+  source: CNSC-8
+  targets:
+  - entry-id: SI-4(2)
+    rationale: Real-time access control and permission updates require automated monitoring to detect and respond to changes
+  relationship: relates-to
+- id: CNSC-85
+  source: CNSC-85
+  targets:
+  - entry-id: RA-5
+    rationale: Manifest scanning in CI detects vulnerabilities in declared dependencies before deployment
+  relationship: relates-to
+- id: CNSC-86
+  source: CNSC-86
+  targets:
+  - entry-id: SC-39
+    rationale: Isolating CI servers for sensitive workloads prevents cross-contamination of build processes
+  relationship: relates-to
+- id: CNSC-87
+  source: CNSC-87
+  targets:
+  - entry-id: SC-39
+    rationale: Dedicating servers for privileged builds isolates elevated-privilege execution from other processes
+  relationship: relates-to
+- id: CNSC-88
+  source: CNSC-88
+  targets:
+  - entry-id: SA-1
+    rationale: Build policy enforcement establishes CI pipeline governance procedures
+  relationship: relates-to
+- id: CNSC-89
+  source: CNSC-89
+  targets:
+  - entry-id: SI-7
+    rationale: Signed pipeline metadata ensures integrity of build process records
+  relationship: relates-to
+- id: CNSC-9
+  source: CNSC-9
+  targets:
+  - entry-id: AC-3(13)
+    rationale: Workload authorization based on pre-assigned attributes aligns with attribute-based access control enforcement
+  - entry-id: AC-3(7)
+    rationale: Workload authorization based on pre-assigned roles and permissions aligns with role-based access control enforcement
+  relationship: relates-to
+- id: CNSC-90
+  source: CNSC-90
+  targets:
+  - entry-id: SI-7
+    rationale: Stage-gate verification ensures integrity is maintained between build phases
+  relationship: relates-to
+- id: CNSC-91
+  source: CNSC-91
+  targets:
+  - entry-id: RA-5
+    rationale: CI pipeline image scanning detects vulnerabilities before artifacts leave the build process
+  relationship: relates-to
+- id: CNSC-92
+  source: CNSC-92
+  targets:
+  - entry-id: SA-1
+    rationale: Coupling vulnerability scans with compliance rules integrates security into pipeline procedures
+  relationship: relates-to
+- id: CNSC-93
+  source: CNSC-93
+  targets:
+  - entry-id: SA-11(8)
+    rationale: DAST validates application security through runtime interaction testing
+  relationship: relates-to
+- id: CNSC-94
+  source: CNSC-94
+  targets:
+  - entry-id: SI-4
+    rationale: Application instrumentation provides runtime observability for system monitoring
+  relationship: relates-to
+- id: CNSC-97
+  source: CNSC-97
+  targets:
+  - entry-id: SI-4
+    rationale: Build and deploy-time security health checks are automated monitoring gates
+  relationship: relates-to
+- id: CNSC-99
+  source: CNSC-99
+  targets:
+  - entry-id: CA-8
+    rationale: Automated security testing includes penetration testing techniques
+  - entry-id: SA-11
+    rationale: Automation of security testing ensures consistent developer evaluation
+  relationship: relates-to
+remarks: Auto-generated from YAML family files; 205 atomic guideline-to-control relationships.

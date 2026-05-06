@@ -1,0 +1,293 @@
+guidelines:
+- id: CNSC-79
+  objective: Trust is verified
+  title: Trust Verification
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-80
+  objective: Artifacts ready for deployment are managed in a staging or pre-prod registry
+  title: Staging Registry Management
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-81
+  objective: Container images are hardened following best practices
+  title: Container Image Hardening
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Images contain least permissions to remain functional, do not allow for shell, do not include unnecessary libraries and
+    dependencies, do not bind mount files in from the host, etc.
+- id: CNSC-82
+  objective: Static application security testing (SAST) is performed
+  title: Static Application Security Testing
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Static analysis is performed by dedicated SAST tools as well as linters
+- id: CNSC-83
+  objective: Test suites follow the test pyramid
+  title: Test Pyramid Adherence
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-84
+  objective: Artifacts undergoing active development are held in a private registry
+  title: Private Development Registry
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-85
+  objective: Application manifests are scanned in CI pipeline
+  title: Manifest Scanning
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-86
+  objective: CI servers for sensitive workloads are isolated from other workloads
+  title: CI Server Isolation
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-87
+  objective: Builds requiring elevated privileges run on dedicated servers
+  title: Privileged Build Isolation
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-88
+  objective: Build policies are enforced on the CI pipeline
+  title: Build Policy Enforcement
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-89
+  objective: Pipeline metadata is signed
+  title: Pipeline Metadata Signing
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-90
+  objective: Build stages are verified prior to the next stage executing
+  title: Build Stage Verification
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-91
+  objective: Images are scanned within the CI pipeline
+  title: CI Pipeline Scanning
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-92
+  objective: Vulnerability scans are coupled with pipeline compliance rules
+  title: Pipeline Compliance Integration
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Prevent insecure images and artifacts from being deployed
+- id: CNSC-93
+  objective: Dynamic application security testing (DAST) is performed
+  title: Dynamic Application Security Testing
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-94
+  objective: Application instrumentation is employed
+  title: Application Instrumentation
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-95
+  objective: Automated test results map back to requirements
+  title: Test Traceability
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Requirements include feature, function, security, and compliance
+- id: CNSC-96
+  objective: Infrastructure security tests are employed
+  title: Infrastructure Security Testing
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - firewall rules open to the world, overprivileged Identity & Access Management (IAM) policies, unauthenticated endpoints,
+    etc
+- id: CNSC-97
+  objective: Tests to verify security health are executed at build and deploy time
+  title: Security Health Verification
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - to evaluate any changes or regressions that may have occurred throughout the lifecycle.
+- id: CNSC-98
+  objective: Infrastructure as Code is subject to the same pipeline policy controls as application code
+  title: IaC Policy Controls
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-99
+  objective: Security testing is automated
+  title: Automated Security Testing
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-100
+  objective: Registries require mutually authenticated TLS for all registry connections
+  title: Registry Authentication
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-101
+  objective: Image and metadata are signed
+  title: Image Signing
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-102
+  objective: Configuration is signed
+  title: Configuration Signing
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-103
+  objective: Package is signed
+  title: Package Signing
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-104
+  objective: Integrity of images is validated
+  title: Image Integrity Validation
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-105
+  objective: Images are scanned for vulnerabilities and malware
+  title: Image Vulnerability Scanning
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-106
+  objective: Image signing key revocation is enabled in the event of compromise
+  title: Key Revocation
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-107
+  objective: Security updates are prioritized
+  title: Security Update Prioritization
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-108
+  objective: HSMs or credential managers are used for protecting credentials
+  title: Credential Protection
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-109
+  objective: Container image scanning findings are acted upon
+  title: Scanning Remediation
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-110
+  objective: Organizational compliance rules are enforced
+  title: Compliance Enforcement
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-111
+  objective: Incremental hardening of the infrastructure is employed
+  title: Infrastructure Hardening
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-112
+  objective: Pulls from public registries are controlled and only from authorized engineers or internal registries
+  title: Public Registry Access Control
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-113
+  objective: Image encryption is coupled with key management attestation and/or authorization and credential distribution
+  title: Image Encryption Management
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - This restricts the image to only be deployed to authorized platforms. Container image authorization is useful for compliance
+    use cases such as geo-fencing or export control and digital rights media management
+- id: CNSC-114
+  objective: At-risk applications are prioritized for remediation by exploit maturity and vulnerable path presence in addition
+    to the CVSS score
+  title: Risk-Based Remediation Prioritization
+  group: Distribute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-274
+  objective: Should software artifacts become untrusted due to compromise or other incident, teams should revoke signing keys
+    to ensure repudiation
+  title: Signing Key Revocation
+  group: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-297
+  objective: Workload-related configuration is signed
+  title: Configuration Signing
+  group: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-298
+  objective: Workload-related package is signed
+  title: Package Signing
+  group: Distribute
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-303
+  objective: HSMs or credential managers should be used for protecting credentials. If this is not possible, software-based
+    credential managers should be used.
+  title: Credential Protection
+  group: Distribute
+  applicability:
+  - CNSWP-v2.0
