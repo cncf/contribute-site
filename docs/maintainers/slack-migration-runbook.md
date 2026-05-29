@@ -12,7 +12,7 @@ The [cloud-native workspace](https://cloud-native.slack.com) is owned and operat
 - **Unlimited message history** — workspace message history is not restricted by plan
 - **Dedicated administration** — handled by the CNCF Projects Team, reachable via [`#slack-admin-support`](https://cloud-native.slack.com/archives/slack-admin-support), [`#slack-faq`](https://cloud-native.slack.com/archives/slack-faq), and the [CNCF Service Desk](https://github.com/cncf/servicedesk)
 - **Content moderation** — inappropriate messages flagged by the "Report To Slack" mechanism are reported to the CNCF Projects Team for deletion
-- **Community proximity** — places your project and community at the heart of a massive community of cloud native projects, closer to CNCF Staff
+- **Community proximity** — places your project and community at the heart of a community of cloud native projects, closer to CNCF Staff
 
 New members can join via [communityinviter.com](https://communityinviter.com/apps/cloud-native/cncf) (also accessible at [slack.cncf.io](https://slack.cncf.io/)).
 
