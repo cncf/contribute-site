@@ -18,8 +18,9 @@ Most services can be requested through a Service Desk ticket, unless otherwise n
 - [Netlify](https://netlify.com) for website hosting, DNS management, and improved workflow/automation around documentation and websites.
 - [Discourse](https://www.discourse.org/) for community discussion (e.g., [discuss.kubernetes.io](https://discuss.kubernetes.io)).
 - [Slack](https://slack.com) for communication for all projects in the Cloud Native Computing Foundation Slack.
-- [FOSSA](https://fossa.io) for license and security scanning.
-- [Snyk](https://snyk.io) for container image scanning.
+- [CNCF FOSSA](https://fossa.io) a dedicated CNCF FOSSA Instance where we setup CNCF Projects to scan for third-party licenses not on the [approved allow list](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md#approved-licenses-for-allowlist). 
+- [CNCF Snyk](https://snyk.io)  a dedicated CNCF Snyk Tenancy where we setup CNCF Projects to scan for third-party licenses not on the [approved allow list](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md#approved-licenses-for-allowlist). CNCF Projects can use either CNCF FOSSA or CNCF Snyk or both!
+- [CNCF License Exceptions Dashboard](https://cncf-license-exceptions.netlify.app/) presents a list of software components that have been sucessfully exempted via the process to [apply for a license exception](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md#process-for-applying-for-an-exception)
 - [LFX Security](https://lfx.linuxfoundation.org/tools/security/) for source code security scanning and license compliance (white-labeled Snyk)
 - [Fastly](https://www.fastly.com/) has provided a [commitment to support CNCF and LF projects](https://www.fastly.com/blog/fast-forward-were-here-for-the-maintainers/). Apply for access directly with Fastly through that page.
 - [Scarf](https://scarf.sh) for advanced analytics for container & artifact distribution, package installation, and web traffic to source documentation. [Get started](https://docs.scarf.sh/quick-start/).
