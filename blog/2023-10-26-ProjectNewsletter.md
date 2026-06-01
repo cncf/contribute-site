@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Project Monthly (CNPM) October 2023
-date: 2023-10-26  
+date: 2023-10-26
+authors: [castrojo]
 ---
 
 ## 🗺️A Maintainer’s Guide to KubeCon + CloudNativeCon!

@@ -1,0 +1,57 @@
+name: Blog Post Submission
+description: Submit a blog post for the CNCF Contributors site
+title: "[Blog Post]: "
+labels: ["blog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing a blog post to the CNCF Contributors site! Please fill out the form below.
+        
+  - type: input
+    id: title
+    attributes:
+      label: Blog Post Title
+      description: Enter the title for your blog post
+      placeholder: e.g., "Getting Started with Cloud Native Contributing"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: content
+    attributes:
+      label: Blog Post Content
+      description: Enter the technical content of your blog post (Markdown format supported)
+      placeholder: |
+        Write your blog post content here using Markdown format.
+        
+        You can include:
+        - Headings (## Section Title)
+        - Lists
+        - Code blocks
+        - Links
+        - Images
+        
+        Example:
+        ## Introduction
+        
+        This blog post covers...
+      render: markdown
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: author
+    attributes:
+      label: Author
+      description: Select the author for this blog post
+      options:
+        - castrojo
+        - caniszczyk
+        - idvoretskyi
+        - jeefy
+        - krook
+        - mrbobbytables
+        - nate-double-u
+    validations:
+      required: true

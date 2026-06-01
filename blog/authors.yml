@@ -12,7 +12,7 @@ castrojo:
 caniszczyk:
   name: Chris Aniszczyk
   page: true
-  title: fixme
+  title: CTO
   url: https://github.com/caniszczyk
   image_url: https://github.com/caniszczyk.png
   email: todo
@@ -23,10 +23,15 @@ idvoretskyi:
   url: https://github.com/idvoretskyi
   image_url: https://github.com/idvoretskyi.png
   email: ihor@cncf.io
+  socials:
+    bluesky: idvoretskyi.bsky.social
+    github: idvoretskyi
+    linkedin: idvoretskyi
+    x: idvoretskyi
 jeefy:
   name: Jeffrey Sica
   page: true
-  title: fixme
+  title: Head of Projects
   url: https://github.com/jeefy
   image_url: https://github.com/jeefy.png
   email: fixme
@@ -53,9 +58,8 @@ mrbobbytables:
     github: mrbobbytables
     linkedin: mrbobbytables
     x: mrbobbytables
-
 nate-double-u:
-  name: Nate Waddington
+  name: Nate W.
   page: true
   title: Head of Mentorship and Documentation
   url: https://hackabletype.com/
@@ -63,4 +67,23 @@ nate-double-u:
   email: natew@cncf.io
   socials:
     github: nate-double-u
+    linkedin: nate-double-u
     mastodon: https://mstdn.ca/@natew
+riaankleinhans:
+  name: Riaan Kleinhans
+  page: true
+  title: Technical Program Manager
+  image_url: https://github.com/riaankleinhans.png
+  email: todo
+  socials:
+    github: riaankleinhans
+    linkedin: riaankleinhans
+robertkielty:
+  name: Robert Kielty
+  page: true
+  title: Projects Team
+  image_url: https://github.com/robertkielty.png
+  email: todo
+  socials:
+    github: robertkielty
+    linkedin: rkielty

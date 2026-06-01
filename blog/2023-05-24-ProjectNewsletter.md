@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Project Monthly (CNPM) May 2023
 date: 2023-05-24
+authors: [castrojo]
 ---
 
 This is our Projects update, this will go out once a month letting CNCF maintainers know of upcoming deadlines, outreach or other useful things going on in the wider community of CNCF.
@@ -14,7 +15,7 @@ Pyroscope for profiles, and Faro for real end user monitoring, projects can get 
 
 ## Maintainers' Survey
 We've opened the CNCF maintainers survey for the first half of 2023, now available here: 
-http://maintainers-survey.cncf.io/ 
+https://maintainers-survey.cncf.io/ 
 
 We've also changed the questions on the survey to highlight some of the areas that we'd like your feedback on. We'll be publishing the survey data, minus any personally identifying information, at the end of this survey round.
 

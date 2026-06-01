@@ -17,3 +17,73 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+awards:
+  label: Awards
+  permalink: /awards
+  description: CNCF Community Awards and recognition
+
+community:
+  label: Community
+  permalink: /community
+  description: CNCF community news and updates
+
+nominations:
+  label: Nominations
+  permalink: /nominations
+  description: Call for nominations and submissions
+
+kubecon:
+  label: KubeCon
+  permalink: /kubecon
+  description: KubeCon + CloudNativeCon event coverage
+
+events:
+  label: Events
+  permalink: /events
+  description: CNCF and community events
+
+project-pavilion:
+  label: Project Pavilion
+  permalink: /project-pavilion
+  description: Project Pavilion kiosk information and updates
+
+maintainers:
+  label: Maintainers
+  permalink: /maintainers
+  description: Of interest to maintainers
+
+projects:
+  label: Projects
+  permalink: /projects
+  description: Of interest to projects
+
+services:
+  label: Services
+  permalink: /services
+  description: About services for maintainers
+
+newsletter:
+  label: Newsletter
+  permalink: /newsletter
+  description: CNCF newsletter and updates
+
+mentorship:
+  label: Mentorship
+  permalink: /mentorship
+  description: CNCF mentorship programs and opportunities
+
+lfx:
+  label: LFX
+  permalink: /lfx
+  description: Linux Foundation LFX platform and programs
+
+gsoc:
+  label: GSoC
+  permalink: /gsoc
+  description: Google Summer of Code participation and updates
+
+security:
+  label: Security
+  permalink: /security
+  description: Security updates and best practices for CNCF projects

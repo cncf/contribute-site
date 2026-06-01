@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Project Monthly (CNPM) March 2024 (KubeCon Edition)
 date: 2024-03-14
+authors: [jeefy]
 ---
 
 ## KubeCon + CloudNativeCon, the Final Frontier

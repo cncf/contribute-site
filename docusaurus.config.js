@@ -8,15 +8,19 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const TECHDOCS_EDIT_BASE = 'https://github.com/cncf/techdocs/edit/main/docs';
+const TECHDOCS_ANALYSES_EDIT_BASE = 'https://github.com/cncf/techdocs/edit/main/analyses';
+const LOCAL_EDIT_BASE = 'https://github.com/cncf/contribute-site/edit/main/docs';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'CNCF Contributors',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Learn, connect, and contribute—the CNCF way',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    // v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
   // Set the production url of your site here
@@ -35,6 +39,16 @@ const config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+    path: 'i18n',
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        calendar: 'gregory',
+        path: 'en',
+      },
+    },
   },
 
   presets: [
@@ -43,14 +57,50 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          editUrl: ({ docPath }) => {
+            const p = docPath.replace(/\\/g, '/');
+
+            // docs/techdocs/analyses/** -> cncf/techdocs/analyses/**
+            if (p.startsWith('techdocs/analyses/')) {
+              return `${TECHDOCS_ANALYSES_EDIT_BASE}/${p.replace(/^techdocs\/analyses\//, '')}`;
+            }
+
+            // docs/techdocs/** -> cncf/techdocs/docs/**
+            if (p.startsWith('techdocs/')) {
+              return `${TECHDOCS_EDIT_BASE}/${p.replace(/^techdocs\//, '')}`;
+            }
+
+            // everything else stays local
+            return `${LOCAL_EDIT_BASE}/${p}`;
+          },
+          routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/cncf/contribute-site/tree/main',
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
+            createFeedItems: async (params) => {
+              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              const feedItems = await defaultCreateFeedItems({blogPosts, ...rest});
+              const postsByPermalink = new Map(
+                blogPosts.map((post) => [post.metadata.permalink, post])
+              );
+              return feedItems.map((item) => {
+                const post = postsByPermalink.get(item.link);
+                if (!post) return item;
+                const description = post.metadata.description;
+                return {
+                  ...item,
+                  ...(description ? {content: description} : {}),
+                  category: post.metadata.tags.map((tag) => ({
+                    name: tag.label,
+                    domain: tag.permalink,
+                  })),
+                };
+              });
+            },
           },
           editUrl: 'https://github.com/cncf/contribute-site/tree/main/',
           // Useful options to enforce blogging best practices
@@ -61,6 +111,9 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        googleTagManager: {
+          containerId: 'GTM-WJJ7VKZ',
+        },
       }),
     ],
   ],
@@ -70,11 +123,19 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/cloud-native-contributors.jpg',
+      metadata: [
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@CloudNativeFdn' },
+        { name: 'twitter:creator', content: '@CloudNativeFdn' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'CNCF Contributors' },
+      ],
       navbar: {
         title: '',
         logo: {
           alt: 'Contribute to Cloud Native',
           src: 'img/logo.svg',
+          srcDark: 'img/logo-dark.svg',
         },
         items: [
           // Left
@@ -84,7 +145,7 @@ const config = {
             position: 'left',
             label: 'Maintainers',
           },
-            {
+          {
             type: 'docSidebar',
             sidebarId: 'projectsSidebar',
             position: 'left',
@@ -95,6 +156,12 @@ const config = {
             sidebarId: 'communitySidebar',
             position: 'left',
             label: 'Community',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'techdocsSidebar',
+            position: 'left',
+            label: 'TechDocs',
           },
 
           // Right
@@ -168,19 +235,25 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} The CNCF Authors.`,
+        copyright: `Copyright The CNCF Authors.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
     }),
-  plugins: [require.resolve('docusaurus-plugin-search-local')],
-
+  plugins: [
+    [
+      require.resolve('docusaurus-lunr-search'),
+      {
+        highlightResult: true,
+      },
+    ],
+  ],
   scripts: [
     {
       src: 'https://www.cncf.io/wp-content/themes/cncf-twenty-two/source/js/on-demand/hello-bar-embed.js',
-      defer: true,
+      async: true,
     },
   ],
 };
