@@ -87,3 +87,31 @@ robertkielty:
   socials:
     github: robertkielty
     linkedin: rkielty
+sonupreetam:
+  name: Sonu Preetam
+  page: true
+  title: Product Security Engineer
+  image_url: https://github.com/sonupreetam.png
+  socials:
+    github: sonupreetam
+jpower432:
+  name: Jennifer Power
+  page: true
+  title: Principal Product Security Engineer
+  image_url: https://github.com/jpower432.png
+  socials:
+    github: jpower432
+hbraswelrh:
+  name: Hannah Braswell
+  page: true
+  title: Associate Product Security Engineer
+  image_url: https://github.com/hbraswelrh.png
+  socials:
+    github: hbraswelrh
+eddie-knight:
+  name: Eddie Knight
+  page: true
+  title: CTO
+  image_url: https://github.com/eddie-knight.png
+  socials:
+    github: eddie-knight
