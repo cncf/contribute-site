@@ -79,6 +79,8 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarTitle: 'Recent posts',
+          blogSidebarCount: 15,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
@@ -184,7 +186,15 @@ const config = {
             position: 'right',
             label: 'Events',
           },
-          { to: '/blog', label: 'Blog', position: 'right' },
+          {
+            type: 'dropdown',
+            label: 'Blog',
+            position: 'right',
+            items: [
+              { to: '/blog', label: 'Recent posts' },
+              { to: '/blog/archive', label: 'Archive (by year)' },
+            ],
+          },
         ],
       },
       footer: {
