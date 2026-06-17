@@ -3,7 +3,8 @@
  *
  * Changes vs. upstream:
  *   - Each year is rendered as a native <details>/<summary> collapsible group.
- *   - The current calendar year starts expanded; all older years start collapsed.
+ *   - The current calendar year (or any year containing the active post) starts
+ *     expanded; all other years start collapsed.
  *   - A post-count badge is shown next to each year heading.
  *
  * Uses only public client APIs from @docusaurus/plugin-content-blog/client so
@@ -18,6 +19,8 @@ import React, {memo} from 'react';
 import clsx from 'clsx';
 import {translate} from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
+import {useLocation} from '@docusaurus/router';
+import {isSamePath} from '@docusaurus/theme-common/internal';
 import {
   useVisibleBlogSidebarItems,
   groupBlogSidebarItemsByYear,
@@ -26,11 +29,16 @@ import styles from './styles.module.css';
 
 const currentYear = String(new Date().getFullYear());
 
-function YearGroup({year, items}) {
+function YearGroup({year, items, pathname}) {
+  // Expand the group when it holds the active post so that navigating to an
+  // older post does not re-collapse it and hide the active item.
+  const hasActivePost = items.some((item) =>
+    isSamePath(item.permalink, pathname),
+  );
   return (
     <details
       className={styles.yearGroup}
-      open={year === currentYear}
+      open={year === currentYear || hasActivePost}
     >
       <summary className={styles.yearSummary}>
         <span className={styles.yearLabel}>{year}</span>
@@ -57,6 +65,7 @@ function YearGroup({year, items}) {
 function BlogSidebarDesktop({sidebar}) {
   const items = useVisibleBlogSidebarItems(sidebar.items);
   const itemsByYear = groupBlogSidebarItemsByYear(items);
+  const {pathname} = useLocation();
 
   return (
     <aside className="col col--3">
@@ -64,15 +73,20 @@ function BlogSidebarDesktop({sidebar}) {
         className={clsx(styles.sidebar, 'thin-scrollbar')}
         aria-label={translate({
           id: 'theme.blog.sidebar.navAriaLabel',
-          message: 'Blog recent posts navigation',
-          description: 'The ARIA label for recent posts in the blog sidebar',
+          message: 'Blog posts navigation',
+          description: 'The ARIA label for the posts archive in the blog sidebar',
         })}
       >
         <div className={clsx(styles.sidebarTitle, 'margin-bottom--md')}>
           {sidebar.title}
         </div>
         {itemsByYear.map(([year, yearItems]) => (
-          <YearGroup key={year} year={year} items={yearItems} />
+          <YearGroup
+            key={year}
+            year={year}
+            items={yearItems}
+            pathname={pathname}
+          />
         ))}
       </nav>
     </aside>
