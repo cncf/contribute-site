@@ -1,0 +1,5 @@
+# Docusaurus ignore file
+# Files and directories listed here will be excluded from documentation generation
+
+# Exclude README.md files from being rendered as documentation pages
+**/README.md

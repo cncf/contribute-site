@@ -16,10 +16,16 @@ We traditionally have the following awards, rewarded at different times of each 
 
 ## Table of contents
 
-- [CNCF Community Awards](#cncf-community-awards)
+- CNCF Community Awards
 - [Awarded](#awarded)
   - [2025](#2025)
-    - [Top End User](#2025-top-end-user)
+    - [Top End Users](#2025-top-end-users)
+    - [Lifetime Achievement](#2025-lifetime-achievement)
+    - [Top Committer](#2025-top-committer)
+    - [Lorem Ipsum (Previously Top Documentarian)](#2025-lorem-ipsum-previously-top-documentarian)
+    - [Chop Wood Carry Water](#2025-chop-wood-carry-water)
+    - [The TAGGIE](#2025-the-taggie)
+    - [Outstanding Mentor](#2025-outstanding-mentor)
   - [2024](#2024)
     - [Top End User](#2024-top-end-user)
     - [Lifetime Achievement](#2024-lifetime-achievement)
@@ -73,8 +79,45 @@ We traditionally have the following awards, rewarded at different times of each 
 
 ### 2025
 
-#### 2025 Top End User
-  - [Ant Group](https://www.cncf.io/announcements/2025/04/03/cloud-native-computing-foundation-announces-ant-group-as-the-top-end-user-award-winner/)
+#### 2025 Top End Users
+
+- [ANT Group](https://www.cncf.io/announcements/2025/04/03/cloud-native-computing-foundation-announces-ant-group-as-the-top-end-user-award-winner/)
+- [Michelin](https://www.cncf.io/announcements/2025/11/12/cncf-honors-innovators-and-defenders-with-2025-community-awards-at-kubecon-cloudnativecon-north-america/)
+
+#### 2025 Lifetime Achievement
+
+Dawn Chen ([dchen1107](https://github.com/dchen1107))
+Kevin Wang ([kevin-wangzefeng](https://github.com/kevin-wangzefeng))
+
+#### 2025 Top Committer
+
+John Howard ([howardjohn](https://github.com/howardjohn))
+
+#### 2025 Lorem Ipsum (Previously Top Documentarian)
+
+- Aidan Delaney ([AidanDelaney](https://github.com/AidanDelaney))
+- Seokho Son ([seokho-son](https://github.com/seokho-son))
+- Tiffany Hrabusa ([tiffany76](https://github.com/tiffany76))
+
+#### 2025 Chop Wood Carry Water
+
+- Daniel Hawton ([dhawton](https://github.com/dhawton))
+- Han Kang ([logicalhan](https://github.com/logicalhan))
+- Janet Kuo ([janetkuo](https://github.com/janetkuo))
+- Lubomir I. Ivanov ([neolit123](https://github.com/neolit123))
+- Mario Jason Braganza ([jasonbraganza](https://github.com/jasonbraganza))
+- Yuichi Nakamura ([yuichi-nakamura](https://github.com/yuichi-nakamura))
+
+#### 2025 The TAGGIE
+
+- Dawn Foster ([geekygirldawn](https://github.com/geekygirldawn))
+- Leo Pahlke ([leonardpahlke](https://github.com/leonardpahlke))
+- Marina Moore ([mnm678](https://github.com/mnm678))
+- Mauricio Salatino ([salaboy](https://github.com/salaboy))
+
+#### 2025 Outstanding Mentor
+
+Lee Calcote ([leecalcote](https://github.com/leecalcote))
 
 ### 2024
 

@@ -47,3 +47,43 @@ project-pavilion:
   label: Project Pavilion
   permalink: /project-pavilion
   description: Project Pavilion kiosk information and updates
+
+maintainers:
+  label: Maintainers
+  permalink: /maintainers
+  description: Of interest to maintainers
+
+projects:
+  label: Projects
+  permalink: /projects
+  description: Of interest to projects
+
+services:
+  label: Services
+  permalink: /services
+  description: About services for maintainers
+
+newsletter:
+  label: Newsletter
+  permalink: /newsletter
+  description: CNCF newsletter and updates
+
+mentorship:
+  label: Mentorship
+  permalink: /mentorship
+  description: CNCF mentorship programs and opportunities
+
+lfx:
+  label: LFX
+  permalink: /lfx
+  description: Linux Foundation LFX platform and programs
+
+gsoc:
+  label: GSoC
+  permalink: /gsoc
+  description: Google Summer of Code participation and updates
+
+security:
+  label: Security
+  permalink: /security
+  description: Security updates and best practices for CNCF projects

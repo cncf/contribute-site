@@ -7,10 +7,14 @@ description: A guide to creating events that enable full participation, by visua
 
 ## Setting The Stage
 
-This guide is designed to illuminate the unique experiences of blind and visually impaired individuals and guide you in creating events that enable full participation, meaningful engagement, and the sharing of expertise.  
+This guide is designed to illuminate the unique experiences of blind and visually impaired individuals and guide you in creating events that enable full participation, meaningful engagement, and the sharing of expertise.
+
 Consider attending a conference where you need to navigate unfamiliar spaces—from finding accessible restrooms and maneuvering buffet lines to locating your hotel room in a bustling hallway—where visual presentations lack description, and where meeting new people means missing the subtle visual cues that help others gauge interest, availability, or conversational flow. For blind and visually impaired attendees, these situations require additional mental energy and strategies. When there are clear verbal descriptions, accessible materials, and navigation support, you enable talented professionals to focus on what they came to do: learn, teach, and connect.  
-We recognize that creating truly accessible events involves coordination, planning, and resources. You're already managing countless moving parts—venue logistics, speaker coordination, catering, technology setup, and sponsor relationships. Adding accessibility considerations means learning new requirements, building relationships with specialized service providers, training staff on unfamiliar protocols, and often working within budget constraints that weren't designed with these needs in mind. It can feel overwhelming to ensure you're getting it right when the stakes matter so much to the people you're trying to serve. We deeply appreciate organizers who choose to take on this challenge—your commitment to inclusion makes a meaningful difference in people's careers and professional lives\!  
+
+We recognize that creating truly accessible events involves coordination, planning, and resources. You're already managing countless moving parts—venue logistics, speaker coordination, catering, technology setup, and sponsor relationships. Adding accessibility considerations means learning new requirements, building relationships with specialized service providers, training staff on unfamiliar protocols, and often working within budget constraints that weren't designed with these needs in mind. It can feel overwhelming to ensure you're getting it right when the stakes matter so much to the people you're trying to serve. We deeply appreciate organizers who choose to take on this challenge—your commitment to inclusion makes a meaningful difference in people's careers and professional lives!  
+
 This investment primarily creates value for blind and visually impaired participants by removing barriers to participation. These improvements can also provide secondary benefits, such as clearer communication for attendees whose first language isn't English.  
+
 This guide provides practical approaches that work within real-world constraints while meaningfully improving accessibility. We also include a [comprehensive checklist](https://docs.google.com/spreadsheets/d/1tCkmOZA5Xji42vN2bxozWO7JtNRI7bcIBMEao2b14aA/edit?gid=0#gid=0) to help you implement these practices systematically—because accessibility works best when it's planned, not improvised.
 
 Thank you for your interest\! Please visit the \#blind-and-visually-impaired  channel on the CNCF slack if you have any questions.
@@ -20,6 +24,7 @@ Thank you for your interest\! Please visit the \#blind-and-visually-impaired  ch
 ## Budget and Coordination Planning
 
 Include accessibility accommodations in your conference budget from the start, alongside audio/video equipment, catering, and other essential services. Planning accessibility retroactively—after receiving specific requests—often means insufficient funds or lead time to provide meaningful accommodations.  
+
 Accessibility costs vary depending on your event's size and scope, but typical considerations include:  
 * Professional transcription and alt-text services  
 * Sighted guide coordination or volunteer programs    
@@ -55,7 +60,7 @@ While this document provides the context and reasoning behind each recommendatio
 
 ### Information for Assistive Services
 
-* **Partner Services**: Establish partnerships with navigation services like Aira Explorer, Visual Eyes Access, or Be My Eyes. Share detailed venue maps, floorplans, session times, and exhibitor information in advance so that external agents can assist VI attendees effectively.  
+* **Partner Services**: Establish partnerships with navigation services like Aira Explorer, Visual Eyes Access, or Be My Eyes. Share detailed venue maps, floorplans, session times, and exhibitor information in advance so that external agents can assist visually impaired (VI) attendees effectively.  
 * **Guide Compensation Model**: Offer discounted or free “companion” or “buddy passes” for a technical colleague or friend who can serve as a sighted guide with relevant subject-matter understanding. This ensures navigation support coupled with contextual assistance in technical sessions.
 
 ---

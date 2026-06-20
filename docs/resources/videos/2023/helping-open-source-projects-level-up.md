@@ -7,7 +7,7 @@ speakers:
   - name: Swapnil Bhartiya
     url: https://www.linkedin.com/in/swapnilbhartiya/
   - name: Josh Berkus
-    url: https://github.com/jbkerkus
+    url: https://github.com/jberkus
   - name: Carolyn Van Slyck
     url: https://github.com/carolynvs
 youtubeID: PHSk1Wtm04g

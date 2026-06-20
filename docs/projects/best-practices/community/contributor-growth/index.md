@@ -18,11 +18,11 @@ The first version of this document summarizes the experience different project m
 
 **NOTE:** We want this to be a living document where projects keep updating and adding new ideas as their experience grows. If you've learned something other projects can benefit from, please submit a PR with your advice. 
 
-This framework has five independent sections, so feel free to jump into whichever section interests you most.
+This framework has six independent sections, so feel free to jump into whichever section interests you most.
 
-1. [Motivating users to contribute](motivation/)
-2. [A successful PR workflow](pr-workflow/)
-3. [Keeping contributors engaged after their first contribution](engagement/)
-4. [Incentivizing contributors to move up the ladder](incentivizing-contributors/)
-5. [Incentivizing non-code contributions](incentivizing-non-code/)
-6. [Long-term contributors](long-term-contributors/)
+1. [Motivating users to contribute](motivation)
+2. [A successful PR workflow](pr-workflow)
+3. [Keeping contributors engaged after their first contribution](engagement)
+4. [Incentivizing contributors to move up the ladder](incentivizing-contributors)
+5. [Incentivizing non-code contributions](incentivizing-non-code)
+6. [Long-term contributors](long-term-contributors)

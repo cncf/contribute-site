@@ -24,10 +24,7 @@ However, contributing to the CNCF ecosystem is not just about coding. There are 
 
 Are you new to open source? If so, we recommend checking out our comprehensive guide, ["Start Contributing to Open Source"](getting-started.md). This guide is filled with helpful tips and tricks to help you get started with contributing to open source projects. You'll learn about communities and projects, how to find them, how to conform to community standards, and much more.
 
-## Unknown Terms?
-
-If you encounter any unfamiliar terms in this document or on our website, we have a [glossary](/resources/glossary)
-available.
+Have questions as you get started? Check out our [Frequently Asked Questions](faq.md) page, which covers common questions from new contributors about getting started, finding issues, technical setup, pull requests, and more.
 
 ## Contribution Opportunities
 
@@ -45,9 +42,8 @@ If you are interested in participating in one of the programs, please check out 
 
 The CNCF projects are always looking for new contributors. If you're interested in contributing to a CNCF project, check out the following:
 
-- [CNCF Landscape](https://landscape.cncf.io/) - a map of all CNCF projects, along with their maturity level and their category
-- [CLOTributor](https://clotributor.dev/) - a tool that helps you find beginner-friendly tasks in CNCF projects
-
+* [CNCF Landscape](https://landscape.cncf.io/) - a map of all CNCF projects, along with their maturity level and their category
+* [CLOTributor](https://clotributor.dev/) - a tool that helps you find beginner-friendly tasks in CNCF projects
 
 ### Technical Advisory Groups (TAGs)
 
@@ -55,8 +51,7 @@ CNCF Technical Advisory Groups (TAGs) are responsible for overseeing and coordin
 
 Although TAGs are designed to focus on specific areas, you can begin contributing through working groups (WGs) that operate under the TAGs with even more narrow scopes. WGs are community-driven groups that encourage ongoing collaboration in specific areas of interest.
 
-Learn more about [CNCF TAGs](https://github.com/cncf/toc/blob/main/tags/cncf-tags.md) and view a [list of the CNCF TAGs](https://github.com/cncf/toc/tree/main/tags).
-
+Learn more about [CNCF TAGs](https://github.com/cncf/toc/tree/main/tags) and view a [list of the CNCF TAGs](https://github.com/cncf/toc/tree/main/tags).
 
 ### Community Groups
 
@@ -71,4 +66,3 @@ Are you passionate about Cloud Native technologies and interested in starting a 
 Successful ambassadors are people such as bloggers, influencers, evangelists who are already engaged with a CNCF project in some way including contributing to forums, online groups, community events, etc.
 
 Details on the Ambassadors program, as well as information on how to join CNCF as an Ambassador, are available at the [Cloud Native Ambassadors repository](https://github.com/cncf/ambassadors).
-

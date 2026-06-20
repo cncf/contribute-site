@@ -5,7 +5,7 @@ date: "2022-06-01"
 conference: KubeCon Europe
 speakers:
   - name: Josh Berkus
-    url: https://github.com/jbkerkus
+    url: https://github.com/jberkus
   - name: Catherine Paganini
     url: https://github.com/CathPag
 youtubeID: WnOKjfe3TUM

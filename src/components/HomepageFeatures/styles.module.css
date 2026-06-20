@@ -9,3 +9,13 @@
   height: 200px;
   width: 200px;
 }
+
+.features .featureLink {
+  text-decoration: none;
+  color: var(--ifm-font-color-base) !important;
+  display: block;
+}
+
+.features .featureLink:hover {
+  text-decoration: none !important;
+}

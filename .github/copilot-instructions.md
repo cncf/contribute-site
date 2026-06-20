@@ -63,7 +63,6 @@ Be very strict with the instructions in this section:
 - Always ensure that the vocabulary and definitions for everything you create match the official definitions in @cncf/glossary
 - Use https://github.com/cncf/toc/blob/main/tags.yaml as the source of truth for individuals who participate in CNCF activities. When modifying any page that lists people, positions, or affiliations, verify against this file and update the page accordingly; if the upstream data is outdated, also submit a PR to @cncf/toc to correct it. 
 
-
 ## Style Guide
 
 - Use @kubernetes/website/blob/main/content/en/docs/contribute/style/style-guide.md as the style guide for this entire site. Only use the content and wording recommendations, do NOT use any Hugo specific content from this source. This is intended to be for content style only.
@@ -74,6 +73,7 @@ Be very strict with the instructions in this section:
 - Always keep the template up to date when a new style is added to this document.
 - Link mentions of github organizations and repositories via `@org/repository` (and so on) to their actual repositories via a markdown link.
 - Make good use of docusaurus admonitions to keep the content well organized and visually appealing.
+- When asked to generate a blog post with the issue template, ONLY make the blog post, do not modify any other files. 
 
 # Project Health Check Criteria Guide
 
@@ -548,7 +548,7 @@ For projects applying to move maturity levels:
 
 ### Supporting Documentation
 
-- [CNCF Licensing Policy](https://github.com/cncf/foundation/blob/main/allowed-third-party-license-policy.md) - Dependency licensing
+- [CNCF Licensing Policy](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md) - Dependency licensing
 - [OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/) - Security badge program
 - [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md) - Community expectations
 - [Vendor Neutrality Guide](https://contribute.cncf.io/maintainers/community/vendor-neutrality/) - Governance expectations

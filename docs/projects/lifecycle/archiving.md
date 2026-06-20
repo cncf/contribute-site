@@ -9,6 +9,7 @@ Open source projects have a lifecycle and there are times that projects become i
 ## Triggering a Review to Archive 
 
 CNCF TOC may also look at a variety of signals, including but not limited to:
+* [LFX Insights](https://insights.linuxfoundation.org/)
 * [CNCF Project health dashboard](https://projecthealth.cncf.io/)
 * If the project would currently meet criteria for acceptance to CNCF
 * Requests to archive by anyone in the wider CNCF community

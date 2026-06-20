@@ -62,37 +62,42 @@ Join the CNCF Slack workspace and connect with the TAG:
 
 ## Focus Areas
 
-TAG Developer Experience works on several key areas:
+TAG Developer Experience focuses on improving developer productivity and reducing friction across the Cloud Native development lifecycle. Our work is organized around three core pillars that reflect how developers actually build, deploy, and operate software.
 
-### Databases
+### Developer Tooling (Inner & Outer Loop)
+Tools and practices that support developers across the full development lifecycle — from writing code locally to deploying and operating systems in production.
 
-- Cloud native database patterns and best practices
-- Data persistence strategies
-- Database operator patterns
+#### Inner Loop
+- Project scaffolding and templates
+- Development environment setup
+- Local testing and validation
+- Local deployment and preview environments
+- Debugging and runtime feedback
 
-### Microservices
+#### Outer Loop
+- Continuous Integration (CI) pipelines
+- Artifact management and promotion
+- Continuous Delivery and GitOps practices
+- Deployment and release strategies
+- Post-deployment observability
+- Incident response and learning loops
 
-- Service design and architecture
-- Service communication patterns
-- Service mesh integration
+### Application Runtime
+Cloud Native runtime patterns that shape how applications behave in production and significantly influence both operational complexity and developer experience.
+- Communication & Traffic Management
+- Data & State Management
+- Eventing, Messaging & Streaming Solutions
+- Workload Isolation & Multitenancy
+- Deployment Topology
 
-### Streaming & Messaging
-
-- Event-driven architectures
-- Message broker selection and usage
-- Stream processing patterns
-
-### API Management
-
-- API gateway patterns
-- API versioning and lifecycle
-- GraphQL and REST best practices
-
-### Developer Frameworks
-
-- Framework selection guidance
-- Cloud native framework patterns
-- Developer tooling recommendations
+### Platform Engineering Enablement
+Cross-cutting platform capabilities that improve developer experience and scalability across organizations.
+- Golden paths and developer templates
+- Self-service infrastructure and platform APIs
+- Policy and governance automation
+- Secure software supply chains
+- Developer portals and platform interfaces
+- Feedback loops, telemetry, and developer productivity metrics
 
 ## Subprojects
 
@@ -131,7 +136,7 @@ Browse [active initiatives](https://github.com/cncf/toc/issues?q=state%3Aopen+la
 
 ## Resources
 
-- [Charter](https://github.com/cncf/toc/blob/main/tags/tag-developer-experience/charter.md)
+- [Charter](charter.md)
 - [TAG Governance](../../governance/tech-group-governance.md)
 - [CNCF TOC Repository](https://github.com/cncf/toc)
 - [All TAGs](../index.md)

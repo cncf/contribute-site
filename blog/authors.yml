@@ -23,6 +23,11 @@ idvoretskyi:
   url: https://github.com/idvoretskyi
   image_url: https://github.com/idvoretskyi.png
   email: ihor@cncf.io
+  socials:
+    bluesky: idvoretskyi.bsky.social
+    github: idvoretskyi
+    linkedin: idvoretskyi
+    x: idvoretskyi
 jeefy:
   name: Jeffrey Sica
   page: true
@@ -62,4 +67,23 @@ nate-double-u:
   email: natew@cncf.io
   socials:
     github: nate-double-u
+    linkedin: nate-double-u
     mastodon: https://mstdn.ca/@natew
+riaankleinhans:
+  name: Riaan Kleinhans
+  page: true
+  title: Technical Program Manager
+  image_url: https://github.com/riaankleinhans.png
+  email: todo
+  socials:
+    github: riaankleinhans
+    linkedin: riaankleinhans
+robertkielty:
+  name: Robert Kielty
+  page: true
+  title: Projects Team
+  image_url: https://github.com/robertkielty.png
+  email: todo
+  socials:
+    github: robertkielty
+    linkedin: rkielty

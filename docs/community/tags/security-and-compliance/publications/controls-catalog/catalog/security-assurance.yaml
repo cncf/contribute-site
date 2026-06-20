@@ -1,0 +1,176 @@
+guidelines:
+- id: CNSC-115
+  objective: Network policies enforce east-west network communication within the container deployment is limited to only that
+    which is authorized for access
+  title: East-West Network Policy
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-116
+  objective: Incident response considers cloud native workloads
+  title: Incident Response
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - workloads which may not always conform with some underlying assumptions about node isolation (new pod instances could
+    run on a different server), networking (e.g. IP addresses are assigned dynamically) and immutability (e.g. runtime changes
+    to container are not persisted across restarts)
+- id: CNSC-117
+  objective: Incident response accounts for appropriate evidence handling and collection of cloud native workloads
+  title: Incident Monitoring
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-118
+  objective: Rootless builds are employed
+  title: Security Assurance Management
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-119
+  objective: Cgroups and system groups are used to isolate workloads and deployments
+  title: Workload and Deployment Isolation
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-120
+  objective: MAC implementations are employed
+  title: Mandatory Access Controls
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - SELinux, AppArmor
+- id: CNSC-121
+  objective: Threat model code and infrastructure
+  title: Threat Modeling and Vulnerability Analysis
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-122
+  objective: Entities are able to independently authenticate other identities
+  title: Authentication Management
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Public Key Infrastructure
+- id: CNSC-123
+  objective: Each entity can create proof of who the identity is
+  title: Identity Management
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-124
+  objective: Orchestrator is running on a trusted OS, BIOS, etc
+  title: Trusted Components
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-125
+  objective: Orchestrator verifies the claims of a container
+  title: Security Verification
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-126
+  objective: Orchestrator network policies are used in conjunction with a service mesh
+  title: Network Policy Management
+  group: Security Assurance
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-196
+  objective: Supply chain security best practices are adhered to
+  title: Supply Chain Security Best Practices
+  group: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+  recommendations:
+  - The SSCP controls in this document provide the necessary controls for best practices
+- id: CNSC-197
+  objective: Access to repository and branches is restricted
+  title: Repository and Branch Access Control
+  group: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+- id: CNSC-198
+  objective: Unencrypted credentials or secrets are never stored in the Git repository and sensitive data is blocked from
+    being pushed
+  title: Git Secret Prevention
+  group: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+- id: CNSC-199
+  objective: Strong identity is enforced with GPG Signed Commits for accountability and traceability
+  title: Commit Identity Enforcement
+  group: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+- id: CNSC-200
+  objective: Linear history is required and commit history is maintained by disallowing force pushes
+  title: Linear History Enforcement
+  group: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+- id: CNSC-201
+  objective: Branching policy is enforced with main branch protection and code review required before merging
+  title: Branching Policy Enforcement
+  group: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+- id: CNSC-202
+  objective: Vulnerabilities are monitored and Git and GitOps tools are kept up to date
+  title: Git Tool Security Monitoring
+  group: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+- id: CNSC-203
+  objective: SSH keys and Personal Access Tokens are rotated and unauthorized access to Git repositories is blocked
+  title: Repository Credential Management
+  group: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+- id: CNSC-204
+  objective: Dedicated non-user technical accounts are used for access with frequently rotated short-lived credentials
+  title: Technical Account Management
+  group: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
+- id: CNSC-205
+  objective: Users who can elevate permissions to remove security features are limited to prevent deletion of audit trails
+    and silencing of alerts
+  title: Privilege Escalation Prevention
+  group: Security Assurance
+  applicability:
+  - CNSWP-v2.0
+  recommendations:
+  - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices

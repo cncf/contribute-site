@@ -202,7 +202,7 @@ All TCGs must meet basic requirements:
 
 - **Website**: [community.cncf.io](https://community.cncf.io)
 - **GitHub**: [cncf/communitygroups](https://github.com/cncf/communitygroups)
-- **Organizer Guide**: [Organizer Roles and Responsibilities](https://github.com/cncf/communitygroups/blob/main/organizer_roles.md)
+- **Organizer Guide**: [Organizer Roles and Responsibilities](https://github.com/cncf/communitygroups/blob/main/organizers.md)
 
 ### Governance
 

@@ -10,14 +10,17 @@ CNCF Projects may freely select their own tools, produce their own documentation
 
 Most services can be requested through a Service Desk ticket, unless otherwise noted below.
 
-- [Docker Hub and other services](https://www.cncf.io/announcements/2025/09/18/cncf-expands-infrastructure-support-for-project-maintainers-through-partnership-with-docker/). Projects get direct access to Docker's Sponsored Open Source (DSOS) program, unlocking upgraded registry, security, and support services.
+- [GitHub Copilot](https://docs.github.com/en/copilot). Maintainers get access to Copilot Enterprise. Learn more in [this blog post](https://contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers).
+- [Docker Hub, Docker Hardened Images, and other services](https://www.cncf.io/announcements/2025/09/18/cncf-expands-infrastructure-support-for-project-maintainers-through-partnership-with-docker/). Projects get direct access to Docker's Sponsored Open Source (DSOS) program, unlocking upgraded registry, security, and support services. Learn more in [this announcement from Docker](https://www.docker.com/blog/docker-hardened-images-for-every-developer/).
+- [Kusari Inspector](https://docs.kusari.cloud/docs/Inspector/) gives full visibility into versions, licenses, and security risks for direct and transitive dependencies. [Learn more here](https://contribute.cncf.io/blog/2025/12/17/cloud-native-project-monthly-december-2025#%EF%B8%8F-kusari-gadget-free-for-projects).
 - [Zoom](https://zoom.us/) video conferencing Pro accounts for video meetings, recordings, and scheduling.
 - [LastPass](https://www.lastpass.com/), [1Password](https://github.com/1Password/1password-teams-open-source), and [Keybase](https://keybase.io) to manage access to shared secrets.
 - [Netlify](https://netlify.com) for website hosting, DNS management, and improved workflow/automation around documentation and websites.
-- [Discourse](https://www.discourse.org/) for community discussion (e.g., [discuss.kubernetes.io](https://discuss.kubernetes.io)
+- [Discourse](https://www.discourse.org/) for community discussion (e.g., [discuss.kubernetes.io](https://discuss.kubernetes.io)).
 - [Slack](https://slack.com) for communication for all projects in the Cloud Native Computing Foundation Slack.
-- [FOSSA](https://fossa.io) for license and security scanning.
-- [Snyk](https://snyk.io) for container image scanning.
+- [CNCF FOSSA](https://fossa.io) a dedicated CNCF FOSSA Instance where we setup CNCF Projects to scan for third-party licenses not on the [approved allow list](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md#approved-licenses-for-allowlist). 
+- [CNCF Snyk](https://snyk.io)  a dedicated CNCF Snyk Tenancy where we setup CNCF Projects to scan for third-party licenses not on the [approved allow list](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md#approved-licenses-for-allowlist). CNCF Projects can use either CNCF FOSSA or CNCF Snyk or both!
+- [CNCF License Exceptions Dashboard](https://cncf-license-exceptions.netlify.app/) presents a list of software components that have been sucessfully exempted via the process to [apply for a license exception](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md#process-for-applying-for-an-exception)
 - [LFX Security](https://lfx.linuxfoundation.org/tools/security/) for source code security scanning and license compliance (white-labeled Snyk)
 - [Fastly](https://www.fastly.com/) has provided a [commitment to support CNCF and LF projects](https://www.fastly.com/blog/fast-forward-were-here-for-the-maintainers/). Apply for access directly with Fastly through that page.
 - [Scarf](https://scarf.sh) for advanced analytics for container & artifact distribution, package installation, and web traffic to source documentation. [Get started](https://docs.scarf.sh/quick-start/).
@@ -44,9 +47,9 @@ When projects come to the CNCF requesting some form of CI help, we try to steer 
 
 ## Cloud Infrastructure
 
-CNCF staff is familiar with and can help projects with, hosting on AWS, GCP, Oracle, and Azure clouds. In some cases, we have free credits ([AWS](https://www.cncf.io/announcement/2019/11/19/cloud-native-computing-foundation-receives-200000-in-credits-from-amazon-web-services-aws/), [GCP](https://www.cncf.io/google-cloud-recommits-3m-to-kubernetes/), [Oracle](https://www.cncf.io/blog/2024/02/02/oracle-oci-credits-are-now-available-to-cncf-projects-here-is-what-you-need-to-know/)) for free hosting.
+CNCF staff is familiar with and can help projects with, hosting on AWS, GCP, Oracle, Akamai/Linode, and Azure clouds. In some cases, we have free credits ([AWS](https://www.cncf.io/announcement/2019/11/19/cloud-native-computing-foundation-receives-200000-in-credits-from-amazon-web-services-aws/), [GCP](https://www.cncf.io/google-cloud-recommits-3m-to-kubernetes/), [Oracle](https://www.cncf.io/blog/2024/02/02/oracle-oci-credits-are-now-available-to-cncf-projects-here-is-what-you-need-to-know/), [Akamai/Linode](https://www.cncf.io/blog/2025/11/05/akamai-builds-cloud-native-resilience-cloud-credits-to-power-cncf-projects/)) for free hosting.
 
-If you are a CNCF project maintainer, feel free to apply directly through the [CNCF Service Desk](http://servicedesk.cncf.io) for access to these credits.
+If you are a CNCF project maintainer, feel free to apply directly through the [CNCF Service Desk](https://servicedesk.cncf.io) for access to these credits.
 
 ## Credly
 
@@ -56,7 +59,7 @@ This service is available for all Graduated projects, and is limited to **4 badg
 
 Each year the Credly badge will "expire" (still be visible but will not be considered active) in order to allow for Yearly badges (such as "Kubernetes Maintainer 2025")
 
-Please direct Credly requests to CNCF Staff through the [CNCF Service Desk](http://servicedesk.cncf.io).
+Please direct Credly requests to CNCF Staff through the [CNCF Service Desk](https://servicedesk.cncf.io).
 
 ## Domains
 

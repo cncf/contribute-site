@@ -630,7 +630,7 @@ meetings, promoting the group, and coordinating the creation of initiatives.
 - SHOULD remain active and responsive in their role.
 
 
-[Community Group Organizer Requirements]: https://github.com/cncf/communitygroups/blob/main/organizer_roles.md
+[Community Group Organizer Requirements]: https://github.com/cncf/communitygroups/blob/main/organizers.md
 
 
 #### Duties
@@ -668,8 +668,8 @@ meetings, promoting the group, and coordinating the creation of initiatives.
 #### Other Roles
 
 TCG's MAY have other roles, but they are REQUIRED to be documented in an
-easily discovered area, such as the groups's page on Bevy; the platform used
-by Community Groups.
+easily discovered area, such as the groups's page on Open Community Grouos; the platform used
+by Cloud Native Community Groups (CNCGs).
 
 - MUST be documented with a description, scope, and responsibilities.
 - MUST adhere to the [Technical Leadership Principles].
