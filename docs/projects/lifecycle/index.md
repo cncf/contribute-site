@@ -69,6 +69,35 @@ All CNCF projects are subject to the [Trademark Usage Policies](https://www.linu
 **Note: The TOC has changed the sandbox application process to a more transparent and streamlined workflow within the :package: [Sandbox Applications repository](https://github.com/cncf/sandbox) :package:.**
 
 Projects apply for sandbox through the Sandbox Repo's *[Issue Form](https://github.com/cncf/sandbox/issues/new?assignees=&labels=New&projects=&template=application.yml&title=%5BSandbox%5D+%3CProject+Name%3E)*. More information on this process is found on the main [Sandbox repo page](https://github.com/cncf/sandbox).
+
+#### Common reasons applications are closed
+
+To avoid common pitfalls that result in applications being closed without TOC review, ensure your project meets these critical requirements **before** applying:
+
+**License Compliance:**
+- Project must use Apache 2.0 or a [CNCF allowlist license](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md)
+- License must be compliant **before** acceptance (not "will convert after acceptance")
+- BSL (Business Source License) and GPL family licenses are not acceptable
+- **License exceptions:** If you believe your project is a good fit despite using a non-allowlist license, you may [request a license exception](https://contribute.cncf.io/projects/submit-license-exception-request/) from the CNCF Governing Board (rarely granted)
+
+**MAINTAINERS File:**
+- Must provide direct link to MAINTAINERS.md or MAINTAINERS file in your GitHub or GitLab repository (not contributors graph)
+- File must contain a table with Name, GitHub/GitLab ID, and Company/Organization columns
+- Cannot be "N/A", "TBD", or "will be added after acceptance"
+
+**Organization Diversity:**
+- Minimum **3 maintainers from 2+ different organizations** (employers/companies)
+- "Organization" means employer, not GitHub/GitLab organization memberships
+- All maintainers from the same company = single organization (does not meet requirement)
+
+**Subproject Separation:**
+- If your project is currently part of another project's GitHub or GitLab organization, you must provide a link to a public issue in the parent project's repository showing maintainer consensus to split into a separate CNCF project
+- This applies to **any** parent project, not just CNCF projects
+
+**Project vs Reference Architecture:**
+- CNCF Sandbox accepts reusable projects, not reference architectures or reference implementations
+- If your project demonstrates how to wire together existing tools rather than building a new reusable tool, submit to [CNCF Reference Architectures](https://architecture.cncf.io/) instead
+
 All exceptions and "declined" or "postponed" outcomes are handled by the TOC. Projects may be encouraged to re-apply after addressing areas called out in the application comments on the corresponding issue. Please refer to the instructions in the [Sandbox repo README](https://github.com/cncf/sandbox) for more details on re-application.
 
 ### Applying to become an Incubating or Graduating project

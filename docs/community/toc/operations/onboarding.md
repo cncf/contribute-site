@@ -134,6 +134,35 @@ We operate on lazy consensus, if a TOC member is not participating in a discussi
 
 Another element of the TOC's work is to review project applications for Sandbox level. The TOC typically gets through 10-12 applications in a single session. TOC members are expected to review the "Upcoming" queue of the [Sandbox Application Board](https://github.com/orgs/cncf/projects/14), pose any clarifying or expanding questions on the application to the project in advance of the meeting in order to ensuring enough information is present to make a decision from. TOC members are also expected to speak about their perspective or opinion on including the project in CNCF. If the application is unclear on how the project fits into the ecosystem or if you feel we need a recommendation from the TAG and one has not yet been given, add a comment requesting the project present to the TAG and request a recommendation from the TAG on application by adding the GitHub handles of the TAG co-chairs and requesting it.
 
+#### Common auto-close criteria
+
+Many applications can be closed without deep TOC review if they fail to meet basic eligibility criteria. When reviewing applications, check for these common blockers:
+
+**License Compliance:**
+- Non-allowlist licenses (BSL, GPL, LGPL, AGPL) without approved exception
+- Promises to "convert to Apache 2.0 after acceptance" (license must be compliant before acceptance)
+- Projects may [request license exceptions](https://contribute.cncf.io/projects/submit-license-exception-request/) but these are rarely granted
+
+**MAINTAINERS File:**
+- Invalid links: contributors graph, external website, "N/A", "will be added"
+- Missing Company/Organization column demonstrating employer diversity
+- File doesn't exist at provided link
+
+**Organization Diversity:**
+- Fewer than 3 maintainers from 2+ different organizations (employers)
+- Common mistake: All maintainers from same company but members of different GitHub/GitLab orgs (does not meet requirement)
+- "Organization" = employer, not GitHub/GitLab organization memberships
+
+**Subproject Separation:**
+- Project is under another project's GitHub/GitLab organization without public vote issue from parent project maintainers
+- Applies to any parent project (not just CNCF projects)
+
+**Reference Architecture:**
+- Project is a reference architecture/implementation showing how to use existing tools rather than building a reusable tool
+- Should be directed to [CNCF Reference Architectures](https://architecture.cncf.io/)
+
+When closing applications for these reasons, provide specific guidance on what needs to be addressed before reapplying.
+
 ### Due Diligence (Incubating and Graduating)
 
 The primary work a TOC member engages is in conducting the due diligence of cloud native projects as they advance in their maturity, this process is commonly referred to the moving levels or maturation process. After a TOC member steps forward to sponsor a project, it is anticipated that a kick-off meeting is held to set expectations for what the process will be like, provide rough timelines, collect additional information and allow the project to ask any questions.  This kick-off is commonly conducted as a virtual meeting, not lasting more than an hour. Additionally, TOC members should anticipate a few hours of concentrated review, analyzing the project, its repository(ies), and clarifying the content of the due diligence. Additional time is expected to be spent conducting and summarizing Adopter interviews to ascertain the current usage of the project within the industry.
