@@ -41,7 +41,7 @@ function YearGroup({year, items, pathname}) {
       open={year === currentYear || hasActivePost}
     >
       <summary className={styles.yearSummary}>
-        <span className={styles.yearLabel}>{year}</span>
+        <span>{year}</span>
         <span className={styles.yearCount}>{items.length}</span>
       </summary>
       <ul className={clsx(styles.postList, 'clean-list')}>
