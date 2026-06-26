@@ -1,7 +1,7 @@
 ---
 title: 'Strengthening LFX Mentoring: A Fairer Stipend Model and a Shared Standard of Excellence'
 description: Two updates that help our growing mentorship community do its best work.
-date: 2026-06-29
+date: 2026-06-26
 authors: [nate-double-u]
 tags: [LFX, mentorship, community]
 ---
