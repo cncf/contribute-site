@@ -91,7 +91,7 @@ Code scanning is an automated security test to identify vulnerabilities and erro
 
 In addition to scanning your code for identifying vulnerabilities and errors, managing the vulnerabilities dependencies is also important. [Dependabot](https://github.com/dependabot) is one tool that helps in managing vulnerabilities in dependencies by automatically raising a pull request to update vulnerable versions to secure versions of that dependency. These pull requests can be then analyzed, and further action can be taken. Further details of Dependabot and configuring it in your project code repository can be found at [GitHub Docs - Automatically updating dependencies with known vulnerabilities with Dependabot security updates](https://docs.github.com/en/code-security/dependabot/dependabot-security-updates).
 
-For further information on securing the code repository, we recommend reviewing the **GitOps section** of the [CNCF Cloud Native Security Whitepaper](/security-whitepaper/v2/cloud-native-security-whitepaper.md#gitopsnew-in-v2) and the **Control Environments** sections of the [CNCF Software Supply Chain Best Practices paper](/supply-chain-security/supply-chain-security-paper/CNCF_SSCP_v1.pdf)
+For further information on securing the code repository, we recommend reviewing the **GitOps section** of the [CNCF Cloud Native Security Whitepaper](https://tag-security.cncf.io/community/resources/security-whitepaper/v2/CNCF_cloud-native-security-whitepaper-May2022-v2.pdf) and the **Control Environments** sections of the [CNCF Software Supply Chain Best Practices paper](https://tag-security.cncf.io/community/working-groups/supply-chain-security/supply-chain-security-paper-v2/Software_Supply_Chain_Practices_whitepaper_v2.pdf)
 
 ## 2. Self-assessment
 
@@ -110,13 +110,13 @@ Self-assessment dives into the following aspects of the project to understand th
 7. Secure development practices
 8. Resolving security issues
 
-A template to perform the self assessment is available at [CNCF TAG Security Project Resources - Self-assessment](/community/assessments/guide/self-assessment.md). All the assessments (self-assessment and joint assessment) conducted by TAG Security can be found at TAG Security GitHub repository. As an example, self assessments are available within the dedicated project folders at [Assessments folder of the CNCF TAG Security GitHub repository](/community/assessments/projects). Further sections (SECURITY.md in particular) in this document provide some of the pointers to address the gaps and create the necessary process & documentation.
+A template to perform the self assessment is available at [CNCF TAG Security Project Resources - Self-assessment](https://tag-security.cncf.io/community/assessments/guide/self-assessment/). All the assessments (self-assessment and joint assessment) conducted by TAG Security can be found at TAG Security GitHub repository. As an example, self assessments are available within the dedicated project folders at [Assessments folder of the CNCF TAG Security GitHub repository](https://tag-security.cncf.io/community/assessments/). Further sections (SECURITY.md in particular) in this document provide some of the pointers to address the gaps and create the necessary process & documentation.
 
 ## 3. SECURITY.md
 
 Awareness and processes are a big part of enforcing security in any project. A SECURITY.md file in your repository should talk about the security considerations of the project, and the efforts undertaken to ensure that there are policies and processes in place to report vulnerabilities to the project maintainers, and for project maintainers to notify the community of the status of the vulnerabilities. It should also list the dedicated personnel responsible to address these vulnerabilities in a timely manner. In GitHub, the SECURITY.md file creates a security policy, and when someone creates an issue in your repository, they will see a link to your project's security policy. Further information regarding security policy is available at [GitHub Docs - Adding a security policy to your repository](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository).
 
-CNCF Technical Advisory Group for Security maintains a number of templates to assist projects in addressing these sections, which can be found at [CNCF TAG Security GitHub repository, under Project resources folder](/project-resources). A special thank you to Google's OSS vulnerability guide folks for making the Security TAG aware of this collection of resources upon which much of this content was built on.
+CNCF Technical Advisory Group for Security maintains a number of templates to assist projects in addressing these sections, which can be found at [CNCF TAG Security GitHub repository, under Project resources folder](https://github.com/cncf/tag-security/tree/main/project-resources). A special thank you to Google's OSS vulnerability guide folks for making the Security TAG aware of this collection of resources upon which much of this content was built on.
 
 Disclaimer: These resources are designed to be helpful to projects and organizations, they require customization and configuration by the project intending to use them. It does not prevent security issues from being found in a project, will not automatically resolve them, and does not place CNCF Security TAG as the responsible party. If changes are made to these templates, projects are not required to pull in a new update.
 
@@ -237,8 +237,8 @@ The [OpenSSF Scorecards](https://securityscorecards.dev/) project helps quickly 
 
 This paper is influenced by the publications of CNCF Technical Advisory Group for Security, particularly the Cloud Native Security Whitepaper[[1]] and Software Supply Chain Security Best Practices Whitepaper,[[2]] and CNCF Cloud Native Security Map[[3]], programs and initiatives by OpenSSF[[4]] [[6]]. Our sincere gratitude for the contributors of these programs and publications, and to Emily Fox for suggesting the creation of this paper, to the contributors and reviewers of this paper.
 
-[1]: /security-whitepaper/v2/cloud-native-security-whitepaper.md
-[2]: /supply-chain-security/supply-chain-security-paper/CNCF_SSCP_v1.pdf
+[1]: https://tag-security.cncf.io/community/resources/security-whitepaper/v2/CNCF_cloud-native-security-whitepaper-May2022-v2.pdf
+[2]: https://tag-security.cncf.io/community/working-groups/supply-chain-security/supply-chain-security-paper-v2/Software_Supply_Chain_Practices_whitepaper_v2.pdf
 [3]: https://cnsmap.github.io/
 [4]: https://bestpractices.coreinfrastructure.org/en
 [5]: /publications/README.md
