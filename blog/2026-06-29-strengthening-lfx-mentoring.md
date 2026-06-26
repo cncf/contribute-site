@@ -7,10 +7,10 @@ tags: [LFX, mentorship, community]
 ---
 
 <head>
-  <link rel="canonical" href="https://example.com" />
+  <link rel="canonical" href="https://www.linuxfoundation.org/blog/strengthening-lfx-mentoring-a-fairer-stipend-model-and-a-shared-standard-of-excellence" />
 </head>
 
-*This post was originally published on the [Linux Foundation blog](https://www.linuxfoundation.org/blog/strengthening-lfx-mentoring-a-fairer-stipend-model-and-a-shared-standard-of-excellence/).*
+*This post was originally published on the [Linux Foundation blog](https://www.linuxfoundation.org/blog/strengthening-lfx-mentoring-a-fairer-stipend-model-and-a-shared-standard-of-excellence).*
 
 *Two updates that help our growing mentorship community do its best work.*
 
