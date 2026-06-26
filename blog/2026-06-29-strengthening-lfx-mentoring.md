@@ -12,6 +12,8 @@ tags: [community, mentorship, projects]
 
 *This post was originally published on the [Linux Foundation blog](https://www.linuxfoundation.org/blog/strengthening-lfx-mentoring-a-fairer-stipend-model-and-a-shared-standard-of-excellence/).*
 
+*Two updates that help our growing mentorship community do its best work.*
+
 LFX Mentoring has grown into one of the largest open source mentorship programs in the world, connecting new contributors with experienced maintainers across hundreds of projects every year. As the program scales, we're making two updates that keep it fair, sustainable and welcoming for everyone.
 
 ## A more equitable stipend model
