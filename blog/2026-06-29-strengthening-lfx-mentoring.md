@@ -3,7 +3,7 @@ title: 'Strengthening LFX Mentoring: A Fairer Stipend Model and a Shared Standar
 description: Two updates that help our growing mentorship community do its best work.
 date: 2026-06-29
 authors: [nate-double-u]
-tags: [community, mentorship, projects]
+tags: [LFX, mentorship, community]
 ---
 
 <head>
