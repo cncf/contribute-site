@@ -36,24 +36,25 @@ The technical direction of the ecosystem is problem-centric. The TOC encourages 
 | Name | GitHub | Term | Appointment Type | Role |
 |------|--------|------|------------------|------|
 | **Karena Angell** | [@angellk](https://github.com/angellk) | 2025-03-04 to 2027-03-04 | GB-appointed | **TOC Chair** |
+| Ahmed Bebars | [@abebars](https://github.com/abebars) | 2026-05-12 to 2028-05-12 | EndUser-appointed | Member |
 | Alex Chircop | [@chira001](https://github.com/chira001) | 2025-03-04 to 2027-03-04 | TOC-appointed | Member |
+| Brandt Keller | [@brandtkeller](https://github.com/brandtkeller) | 2026-05-12 to 2028-05-12 | TOC-appointed | Member |
 | Chad Beaudin | [@chadbeaudin](https://github.com/chadbeaudin) | 2025-03-04 to 2027-03-04 | EndUser-appointed | Member |
-| Davanum Srinivas | [@dims](https://github.com/dims) | 2024-02-16 to 2026-02-16 | TOC-appointed | Member |
-| Emily Fox | [@TheFoxAtWork](https://github.com/TheFoxAtWork) | 2024-02-04 to 2026-03-04 | GB-appointed | Member |
 | Faseela K | [@kfaseela](https://github.com/kfaseela) | 2025-03-04 to 2027-03-04 | GB-appointed | Member |
 | Jeremy Rickard | [@jeremyrickard](https://github.com/jeremyrickard) | 2025-03-04 to 2027-03-04 | GB-appointed | Member |
-| Katie Gamanji | [@kgamanji](https://github.com/kgamanji) | 2022-03-18 to 2026-02-04 | GB-appointed | Member |
-| Kevin Wang | [@kevin-wangzefeng](https://github.com/kevin-wangzefeng) | 2024-02-04 to 2026-02-04 | Maintainer-appointed | Member |
-| Lin Sun | [@linsun](https://github.com/linsun) | 2024-02-04 to 2026-02-04 | GB-appointed | Member |
-| Ricardo Rocha | [@rochaporto](https://github.com/rochaporto) | 2024-02-04 to 2026-02-04 | EndUser-appointed | Member |
+| Joseph Sandoval | [@jrsapi](https://github.com/jrsapi) | 2026-05-12 to 2028-05-12 | GB-appointed | Member |
+| Kevin Wang | [@kevin-wangzefeng](https://github.com/kevin-wangzefeng) | 2026-05-12 to 2028-05-12 | GB-appointed | Member |
+| Mario Fahlandt | [@mfahlandt](https://github.com/mfahlandt) | 2026-05-12 to 2028-05-12 | GB-appointed | Member |
+| Mauricio Salatino | [@salaboy](https://github.com/salaboy) | 2026-05-12 to 2028-05-12 | Maintainer-appointed | Member |
 
-### TOC Shadows
+### TOC Alternates
 
 | Name | GitHub | Term | Appointment Type |
 |------|--------|------|------------------|
-| Ricardo Aravena | [@raravena80](https://github.com/raravena80) | 2025-03-04 to 2026-03-04 | GB-appointed |
+| Katie Gamanji | [@kgamanji](https://github.com/kgamanji) | 2026-05-12 to 2027-05-12 | GB-appointed |
+| Ricardo Aravena | [@raravena80](https://github.com/raravena80) | 2026-05-12 to 2027-05-12 | GB-appointed |
 
-The shadow program provides an opportunity for community members to learn about TOC operations and prepare for potential future TOC service.
+TOC Alternates are non-voting members of the TOC who step in when a voting member is unavailable.
 
 ## Meeting Information
 
