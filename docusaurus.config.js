@@ -75,12 +75,33 @@ const config = {
           },
           routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: './sidebars.js',
+          exclude: ['**/README.md'], // Exclude README.md files from being rendered as docs
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
+            createFeedItems: async (params) => {
+              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              const feedItems = await defaultCreateFeedItems({blogPosts, ...rest});
+              const postsByPermalink = new Map(
+                blogPosts.map((post) => [post.metadata.permalink, post])
+              );
+              return feedItems.map((item) => {
+                const post = postsByPermalink.get(item.link);
+                if (!post) return item;
+                const description = post.metadata.description;
+                return {
+                  ...item,
+                  ...(description ? {content: description} : {}),
+                  category: post.metadata.tags.map((tag) => ({
+                    name: tag.label,
+                    domain: tag.permalink,
+                  })),
+                };
+              });
+            },
           },
           editUrl: 'https://github.com/cncf/contribute-site/tree/main/',
           // Useful options to enforce blogging best practices
@@ -110,12 +131,6 @@ const config = {
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'CNCF Contributors' },
       ],
-      announcementBar: {
-        id: `hello-bar`,
-        content: `KubeCon + CloudNativeCon Europe 2026 · 23-26 March · Amsterdam · <b><a target="_blank" href="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/?utm_source=cncf&utm_medium=subpage&utm_campaign=18269725-KubeCon-EU-2026&utm_content=hello-bar">REGISTER NOW</a></b>`,
-        backgroundColor: 'rgb(1, 117, 228)', // Defaults to `#fff`
-        textColor: '#fff', // Defaults to `#000`
-      },
       navbar: {
         title: '',
         logo: {
@@ -235,6 +250,12 @@ const config = {
         highlightResult: true,
       },
     ],
+  ],
+  scripts: [
+    {
+      src: 'https://www.cncf.io/wp-content/themes/cncf-twenty-two/source/js/on-demand/hello-bar-embed.js',
+      async: true,
+    },
   ],
 };
 

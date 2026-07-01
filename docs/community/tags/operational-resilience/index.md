@@ -19,22 +19,24 @@ Observability, Management, Business Continuity, Resource Optimization, Cost Effi
 
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
-| Mario Fahlandt | [@mfahlandt](https://github.com/mfahlandt) | - | 2025-07-01 to 2027-06-30 |
-| Rafael Brito | [@brito-rafa](https://github.com/brito-rafa) | - | 2025-07-01 to 2026-06-30 |
+| Alolita Sharma | [@alolita](https://github.com/alolita) | - | 2026-06-09 to 2028-06-30 |
+| Carol Valencia | [@krol3](https://github.com/krol3) | - | 2026-06-09 to 2028-06-30 |
 | Saiyam Pathak | [@saiyam1814](https://github.com/saiyam1814) | - | 2025-07-01 to 2027-06-30 |
 
 ### Tech Leads
 
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
-| Alolita Sharma | [@alolita](https://github.com/alolita) | - | 2025-07-02 to 2026-06-30 |
-| Carol Valencia | [@krol3](https://github.com/krol3) | - | 2025-07-02 to 2027-06-30 |
 | Raffaele Spazzoli | [@raffaelespazzoli](https://github.com/raffaelespazzoli) | - | 2025-07-02 to 2026-06-30 |
 | Matt Young | [@halcyondude](https://github.com/halcyondude) | - | 2025-07-02 to 2027-06-30 |
 | Nabarun Pal | [@palnabarun](https://github.com/palnabarun) | - | 2025-07-02 to 2027-06-30 |
 
-### TOC Liaison
+### TOC Liaisons
 
+- Chad Beaudin ([@chadbeaudin](https://github.com/chadbeaudin))
+- Faseela K ([@kfaseela](https://github.com/kfaseela))
+- Mauricio Salatino ([@salaboy](https://github.com/salaboy))
+- Mario Fahlandt ([@mfahlandt](https://github.com/mfahlandt))
 - Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard))
 
 ## Meetings
@@ -43,6 +45,7 @@ Observability, Management, Business Continuity, Resource Optimization, Cost Effi
 
 - **Calendar**: [View and join meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-operational-resilience?view=list)
 - **Recordings**: [YouTube Channel](https://www.youtube.com/@TAGOperationalResilience)
+- **Meeting Notes**: [View notes](https://notes.cncf.io/s/oWHc3r0r7)
 
 All meetings are open to the public. No registration required - simply join the meeting from the calendar link.
 
@@ -133,6 +136,7 @@ TAG Operational Resilience works on several key operational domains:
 The purpose of the Green Reviews Subproject is to help CNCF projects to review their cloud native sustainability footprint. Through this review, projects aiming for graduation can show how their project uses resources at scale. The Green Reviews pipeline can integrate an environmental sustainability project review in each release cycle. Furthermore, this project strives to empower end users to assess the sustainability of the cloud native workloads within their systems.
 To support CNCF projects, project maintainers and contributors, there is a need for a systematic approach to assess every project's sustainability footprint and energy consumption. Implementing a structured review process for this purpose would greatly benefit the CNCF ecosystem, establishing it as a best practice. Such a process would enable stakeholders to evaluate and enhance the sustainability of CNCF projects, promoting their long-term viability and environmental responsibility.
 
+- **Subproject Leads**: Niki Manoledaki ([@nikimanoledaki](https://github.com/nikimanoledaki)), Antonio Di Turi ([@AntonioDiTuri](https://github.com/AntonioDiTuri))
 - [Mailing List](https://lists.cncf.io/g/cncf-tag-operational-resilience)
 
 ## Initiatives

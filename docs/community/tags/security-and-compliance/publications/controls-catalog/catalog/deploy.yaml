@@ -1,0 +1,67 @@
+guidelines:
+- id: CNSC-57
+  objective: Trust confirmation verifies the image has a valid signature from an authorized source
+  title: Trust Confirmation
+  group: Deploy
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-58
+  objective: Image runtime policies are enforced prior to deployment
+  title: Runtime Policy Enforcement
+  group: Deploy
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-59
+  objective: Image integrity and signature are verified prior to deployment
+  title: Image Integrity Verification
+  group: Deploy
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-60
+  objective: Applications provide logs regarding authentication, authorization, actions, and failures
+  title: Application Logging
+  group: Deploy
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-61
+  objective: Forensics capabilities are integrated into an incident response plan and procedures
+  title: Forensics Integration
+  group: Deploy
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-62
+  objective: AI, ML, or statistical modeling are used for behavioural and heuristic environment analysis to detect unwanted
+    activities
+  title: Behavioral Analysis
+  group: Deploy
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-170
+  objective: Clients can perform verification of artefacts and associated metadata
+  title: Artifact Verification
+  group: Deploy
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-171
+  objective: Clients can verify the freshness of files
+  title: Freshness Verification
+  group: Deploy
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - Ensure clients can access latest versions and can verify if the provided files are out of date
+- id: CNSC-172
+  objective: A framework is used for managing software updates
+  title: Update Framework
+  group: Deploy
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - Consider using The Update Framework (TUF) to enforce the updating of software. TUF is a specification for delivering software
+    updates in a secure, reliable and trusted way

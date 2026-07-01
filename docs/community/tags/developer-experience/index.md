@@ -20,22 +20,23 @@ Databases, Microservices, Streaming, Messaging, API Management, Dev Frameworks.
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
 | Daniel Oh | [@danieloh30](https://github.com/danieloh30) | - | 2025-07-01 to 2027-06-30 |
-| Mauricio Salatino | [@salaboy](https://github.com/salaboy) | - | 2025-07-01 to 2026-06-30 |
+| Graziano Casto | [@graz-dev](https://github.com/graz-dev) | - | 2026-06-09 to 2028-06-30 |
 | Mona Borham | [@SwEngin](https://github.com/SwEngin) | - | 2025-07-01 to 2027-06-30 |
 
 ### Tech Leads
 
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
-| Graziano Casto | [@graz-dev](https://github.com/graz-dev) | - | 2025-07-02 to 2026-06-30 |
 | Joshua Bezaleel Abednego | [@joshuabezaleel](https://github.com/joshuabezaleel) | - | 2025-07-02 to 2027-06-30 |
 | Julien Semaan | [@julsemaan](https://github.com/julsemaan) | - | 2025-07-02 to 2027-06-30 |
 | Kevin Dubois | [@kdubois](https://github.com/kdubois) | - | 2025-07-02 to 2026-06-30 |
 | Mélony QIN | [@cloudmelon](https://github.com/cloudmelon) | - | 2025-07-02 to 2027-06-30 |
 
-### TOC Liaison
+### TOC Liaisons
 
-- Katie Gamanji ([@kgamanji](https://github.com/kgamanji))
+- Mauricio Salatino ([@salaboy](https://github.com/salaboy))
+- Ahmed Bebars ([@abebars](https://github.com/abebars))
+- Joseph Sandoval ([@jrsapi](https://github.com/jrsapi))
 
 ## Meetings
 
@@ -43,6 +44,7 @@ Databases, Microservices, Streaming, Messaging, API Management, Dev Frameworks.
 
 - **Calendar**: [View and join meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-developer-experience?view=list)
 - **Recordings**: [YouTube Channel](https://www.youtube.com/@CNCFTAGDeveloperExperience)
+- **Meeting Notes**: [View notes](https://docs.google.com/document/d/1dRS0DUzp3TY-u-iKmCdk_fuGZHaYfI4_TG1A6Ponxws/edit?usp=sharing)
 
 All meetings are open to the public. No registration required - simply join the meeting from the calendar link.
 
@@ -62,41 +64,42 @@ Join the CNCF Slack workspace and connect with the TAG:
 
 ## Focus Areas
 
-TAG Developer Experience works on several key areas:
+TAG Developer Experience focuses on improving developer productivity and reducing friction across the Cloud Native development lifecycle. Our work is organized around three core pillars that reflect how developers actually build, deploy, and operate software.
 
-### Databases
+### Developer Tooling (Inner & Outer Loop)
+Tools and practices that support developers across the full development lifecycle — from writing code locally to deploying and operating systems in production.
 
-- Cloud native database patterns and best practices
-- Data persistence strategies
-- Database operator patterns
+#### Inner Loop
+- Project scaffolding and templates
+- Development environment setup
+- Local testing and validation
+- Local deployment and preview environments
+- Debugging and runtime feedback
 
-### Microservices
+#### Outer Loop
+- Continuous Integration (CI) pipelines
+- Artifact management and promotion
+- Continuous Delivery and GitOps practices
+- Deployment and release strategies
+- Post-deployment observability
+- Incident response and learning loops
 
-- Service design and architecture
-- Service communication patterns
-- Service mesh integration
+### Application Runtime
+Cloud Native runtime patterns that shape how applications behave in production and significantly influence both operational complexity and developer experience.
+- Communication & Traffic Management
+- Data & State Management
+- Eventing, Messaging & Streaming Solutions
+- Workload Isolation & Multitenancy
+- Deployment Topology
 
-### Streaming & Messaging
-
-- Event-driven architectures
-- Message broker selection and usage
-- Stream processing patterns
-
-### API Management
-
-- API gateway patterns
-- API versioning and lifecycle
-- GraphQL and REST best practices
-
-### Developer Frameworks
-
-- Framework selection guidance
-- Cloud native framework patterns
-- Developer tooling recommendations
-
-## Subprojects
-
-- **Developer Experience-sub-foo**: [Mailing List](https://lists.cncf.io/g/cncf-tag-developer-experience/)
+### Platform Engineering Enablement
+Cross-cutting platform capabilities that improve developer experience and scalability across organizations.
+- Golden paths and developer templates
+- Self-service infrastructure and platform APIs
+- Policy and governance automation
+- Secure software supply chains
+- Developer portals and platform interfaces
+- Feedback loops, telemetry, and developer productivity metrics
 
 ## Initiatives
 

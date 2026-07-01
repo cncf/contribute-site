@@ -1,0 +1,194 @@
+guidelines:
+- id: CNSC-1
+  objective: Secrets are injected at runtime
+  title: Runtime Secret Injection
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  see-also:
+  - CNSC-21
+- id: CNSC-2
+  objective: Applications and workloads are explicitly authorized to communicate with each other using mutual authentication
+  title: Mutual Authentication
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-3
+  objective: Keys are rotated frequently
+  title: Cryptographic Key Management
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-4
+  objective: Key lifespan is short
+  title: Cryptographic Key Lifecycle Management
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-5
+  objective: Credentials and keys protecting sensitive workloads (health/finance/etc) are generated and managed independent
+    of a cloud service provider
+  title: Sensitive Credential Management
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  recommendations:
+  - KMS and HMS are common technologies to achieve this. FIPS 140-2 compliance is strongly suggested. Cloud KMS tends to be
+    FIPS 140-2 Level 2 or greater.
+- id: CNSC-6
+  objective: Authentication and authorization are determined independently
+  title: Identification and Authentication
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  see-also:
+  - CNSC-7
+- id: CNSC-7
+  objective: Authentication and authorization are enforced independently
+  title: Authentication and Authorization Enforcement
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  see-also:
+  - CNSC-6
+- id: CNSC-8
+  objective: Access control and file permissions are updated in real-time
+  title: Continuous System Monitoring
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  recommendations:
+  - where possible as caching may permit unauthorized access
+- id: CNSC-9
+  objective: Authorization for workloads is granted based on attributes and roles/permissions previously assigned
+  title: Privileged-based Authorization
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  see-also:
+  - CNSC-10
+- id: CNSC-10
+  objective: ABAC and RBAC are used
+  title: ABAC and RBAC
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  see-also:
+  - CNSC-9
+- id: CNSC-11
+  objective: End user identity is capable of being accepted, consumed, and forwarded on for contextual or dynamic authorization
+  title: Authorization and Identity Management
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  recommendations:
+  - This can be achieved through the use of identity documents and tokens.
+- id: CNSC-12
+  objective: All cluster and workloads operators are authenticated
+  title: Cluster Authentication Management
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-13
+  objective: Cluster and workloads operate actions are evaluated against access control policies governing context, purpose,
+    and output
+  title: Authentication Policy Management
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-14
+  objective: Identity federation uses multi-factor authentication
+  title: Multi-factor Authentication
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  see-also:
+  - CNSC-208
+- id: CNSC-15
+  objective: HSMs are used to physically protect cryptographic secrets with an encryption key residing in the HSM
+  title: HSMs Protection of Cryptographic Secrets
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - If this is not possible, software-based credential managers should be used.
+  see-also:
+  - CNSC-16
+  - CNSC-19
+- id: CNSC-16
+  objective: Secrets should have a short expiration period or time to live
+  title: Secrets Management
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Leverage tool-specific capabilities of secret manager
+  see-also:
+  - CNSC-19
+  - CNSC-15
+  - CNSC-17
+- id: CNSC-17
+  objective: Time to live and expiration period on secrets is verified to prevent reuse
+  title: Secrets Lifecycle Management
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Leverage tool-specific capabilities of secret manager
+  see-also:
+  - CNSC-16
+  - CNSC-19
+- id: CNSC-18
+  objective: Secrets management systems are highly available
+  title: Secrets Management System
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-19
+  objective: Long-lived secrets adhere to periodic rotation and revocation
+  title: Secrets Rotation Management
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Long-lived secrets are not recommended, but some capabilities require them
+  see-also:
+  - CNSC-15
+  - CNSC-16
+  - CNSC-17
+- id: CNSC-20
+  objective: Secrets are distributed through secured communication channels protected commensurate with the level of access
+    or data they are protecting
+  title: Secrets Protection
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-21
+  objective: Secrets injected at runtime are masked or dropped from logs, audit, or system dumps
+  title: Secret Injection Lifecycle
+  group: Access
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Even short lived secrets may be reused if caught in time by an interested attacker. Logs, audit, and systems dumps (i.e.
+    in-memory shared volumes instead of environment variables) are all areas where runtime injected secrets show up
+  see-also:
+  - CNSC-1
+- id: CNSC-208
+  objective: Identity federation uses multi-factor authentication for human users
+  title: Multi-factor Authentication
+  group: Access
+  applicability:
+  - CNSWP-v2.0
+  see-also:
+  - CNSC-14

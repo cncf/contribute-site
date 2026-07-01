@@ -34,9 +34,18 @@ of compromise needs added, please include that as well.
 <!-- cSpell:disable -->
 | Name              | Year               | Type of compromise    | Link        |
 | ----------------- | ------------------ | ------------------    | ----------- |
+| [GitHub Source Code Leak](2026/github-vscode.md) | 2026 | Dev Tooling | [1](https://www.securityweek.com/github-confirms-hack-impacting-3800-internal-repositories/) |
+| [GitHub Push RCE](2026/github-push-rce.md) | 2026 | Publishing Infrastructure | [1](https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/) |
+| [Mini Shai Hulud](2026/mini-shai-hulud.md) | 2026 | Publishing Infrastructure/Attack Chaining | [1](https://socket.dev/supply-chain-attacks/mini-shai-hulud) |
+| [axios compromise](2026/axios.md) | 2026 | Social Engineering/Phishing Attack/Attack Chaining | [1](https://www.stepsecurity.io/blog/axios-compromised-on-npm-malicious-versions-drop-remote-access-trojan) |
+| [LiteLLM and Telnyx](2026/litellm-telnyx.md) | 2026 | Attack Chaining | [1](https://blog.pypi.org/posts/2026-04-02-incident-report-litellm-telnyx-supply-chain-attack/) |
+| [Trivy](2026/trivy.md) | 2026 | Source Code/Trust and Signing | [1](https://www.aquasec.com/blog/trivy-supply-chain-attack-what-you-need-to-know/) |
+| [hackerbot-claw](2026/hackerbot-claw.md) | 2026 |  Publishing Infrastructure | [1](https://www.stepsecurity.io/blog/hackerbot-claw-github-actions-exploitation) |
+| [tj-actions](2025/tj-actions.md) | 2025 | Publishing Infrastructure | [1](https://www.cisa.gov/news-events/alerts/2025/03/18/supply-chain-compromise-third-party-tj-actionschanged-files-cve-2025-30066-and-reviewdogaction) |
 | [Shai-Hulud](2025/shai-hulud.md) | 2025 | Attack Chaining | [1](https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem) [2](https://socket.dev/blog/ongoing-supply-chain-attack-targets-crowdstrike-npm-packages) |
 | [npm phishing campaign](2025/qix.md) | 2025 | Social Engineering/Phishing Attack/Attack Chaining | [1](https://www.aikido.dev/blog/npm-debug-and-chalk-packages-compromised) |
 | [nullifAI](2025/nullifAI.md) | 2025 | Trust and Signing | [1](https://www.reversinglabs.com/blog/rl-identifies-malware-ml-model-hosted-on-hugging-face) |
+| [ultralytics](2024/ultralytics.md) | 2024 | Publishing Infrastructure | [1](https://blog.pypi.org/posts/2024-12-11-ultralytics-attack-analysis/) |
 | [Solana Web3.js Code Injection](2024/solana_web3js.md) | 2024 | Social Engineering/Phishing Attack | [1](https://www.reversinglabs.com/blog/malware-found-in-solana-npm-library-with-50m-downloads) [2](https://x.com/0xMert_/status/1864069157257613719) |
 | [Polyfill.io Infrastructure Takeover Leading to Malware Distribution](2024/polyfill.md) | 2024 | Publishing Infrastructure | [1](https://sansec.io/research/polyfill-supply-chain-attack) |
 | [Malware Disguised as Installer used to target Korean Public Institution](2024/targeted-signed-endoor.md) | 2024 | Trust and Signing | [1](https://asec.ahnlab.com/en/63396/) |

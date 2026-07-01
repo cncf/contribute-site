@@ -21,7 +21,7 @@ Security Hygiene, Policy-as-Code, Compliance, Auditing, Threat Modeling, Secure 
 
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
-| Evan Anderson | [@evankanderson](https://github.com/evankanderson) | Custcodian | 2025-07-01 to 2026-06-30 |
+| Evan Anderson | [@evankanderson](https://github.com/evankanderson) | Custcodian | 2026-06-09 to 2028-06-30 |
 | John Kjell | [@jkjell](https://github.com/jkjell) | Control-Plane.io | 2025-07-02 to 2027-06-30 |
 | Marina Moore | [@mnm678](https://github.com/mnm678) | Edera | 2025-07-01 to 2027-06-30 |
 
@@ -38,8 +38,8 @@ Security Hygiene, Policy-as-Code, Compliance, Auditing, Threat Modeling, Secure 
 
 ### TOC Liaisons
 
-- Faseela K ([@kfaseela](https://github.com/kfaseela))
-- Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard))
+- Karena Angell ([@angellk](https://github.com/angellk))
+- Mario Fahlandt ([@mfahlandt](https://github.com/mfahlandt))
 
 ## Meetings
 
@@ -47,6 +47,7 @@ Security Hygiene, Policy-as-Code, Compliance, Auditing, Threat Modeling, Secure 
 
 - **Calendar**: [View and join meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-security-and-compliance?view=list)
 - **Recordings**: [YouTube Channel](https://www.youtube.com/@CNCFTAGSecurityandCompliance)
+- **Meeting Notes**: [View notes](https://docs.google.com/document/d/1M4bPKmjothdFFnhV3ox7uiur50faDDh909UlEpdk5JQ/edit?tab=t.0)
 
 All meetings are open to the public. No registration required - simply join the meeting from the calendar link.
 
@@ -171,6 +172,7 @@ artifacts or the TSSA package.
 
 [Learn more about Security Assessments](./operations/index.md)
 
+- **Subproject Leads**: Justin Cappos ([@JustinCappos](https://github.com/JustinCappos)), Eddie Knight ([@eddie-knight](https://github.com/eddie-knight))
 - [Mailing List](https://lists.cncf.io/g/cncf-tag-security-and-compliance)
 
 ## Initiatives
