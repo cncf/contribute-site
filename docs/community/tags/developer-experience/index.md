@@ -20,22 +20,23 @@ Databases, Microservices, Streaming, Messaging, API Management, Dev Frameworks.
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
 | Daniel Oh | [@danieloh30](https://github.com/danieloh30) | - | 2025-07-01 to 2027-06-30 |
-| Mauricio Salatino | [@salaboy](https://github.com/salaboy) | - | 2025-07-01 to 2026-06-30 |
+| Graziano Casto | [@graz-dev](https://github.com/graz-dev) | - | 2026-06-09 to 2028-06-30 |
 | Mona Borham | [@SwEngin](https://github.com/SwEngin) | - | 2025-07-01 to 2027-06-30 |
 
 ### Tech Leads
 
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
-| Graziano Casto | [@graz-dev](https://github.com/graz-dev) | - | 2025-07-02 to 2026-06-30 |
 | Joshua Bezaleel Abednego | [@joshuabezaleel](https://github.com/joshuabezaleel) | - | 2025-07-02 to 2027-06-30 |
 | Julien Semaan | [@julsemaan](https://github.com/julsemaan) | - | 2025-07-02 to 2027-06-30 |
 | Kevin Dubois | [@kdubois](https://github.com/kdubois) | - | 2025-07-02 to 2026-06-30 |
 | Mélony QIN | [@cloudmelon](https://github.com/cloudmelon) | - | 2025-07-02 to 2027-06-30 |
 
-### TOC Liaison
+### TOC Liaisons
 
-- Katie Gamanji ([@kgamanji](https://github.com/kgamanji))
+- Mauricio Salatino ([@salaboy](https://github.com/salaboy))
+- Ahmed Bebars ([@abebars](https://github.com/abebars))
+- Joseph Sandoval ([@jrsapi](https://github.com/jrsapi))
 
 ## Meetings
 
@@ -43,6 +44,7 @@ Databases, Microservices, Streaming, Messaging, API Management, Dev Frameworks.
 
 - **Calendar**: [View and join meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-developer-experience?view=list)
 - **Recordings**: [YouTube Channel](https://www.youtube.com/@CNCFTAGDeveloperExperience)
+- **Meeting Notes**: [View notes](https://docs.google.com/document/d/1dRS0DUzp3TY-u-iKmCdk_fuGZHaYfI4_TG1A6Ponxws/edit?usp=sharing)
 
 All meetings are open to the public. No registration required - simply join the meeting from the calendar link.
 
@@ -98,10 +100,6 @@ Cross-cutting platform capabilities that improve developer experience and scalab
 - Secure software supply chains
 - Developer portals and platform interfaces
 - Feedback loops, telemetry, and developer productivity metrics
-
-## Subprojects
-
-- **Developer Experience-sub-foo**: [Mailing List](https://lists.cncf.io/g/cncf-tag-developer-experience/)
 
 ## Initiatives
 
