@@ -48,7 +48,7 @@ Planning to attend KubeCon + CloudNativeCon Japan? Browse the CNCF projects part
 
 Interested in speaking? The Observability Summit CFP is now open. [Learn more](https://events.linuxfoundation.org/observability-summit-europe/program/cfp/#overview) about session topics, presentation formats, and submission requirements.
 
-[Submit a Talk](https://events.linuxfoundation.org/observability-summit-europe/program/cfp/#overview) - DUE Sunday, July 7, 23:59 CEST
+[Submit a Talk](https://events.linuxfoundation.org/observability-summit-europe/program/cfp/#overview) - DUE Tuesday, July 7, 23:59 CEST
 
 ### Maintainer Summit North America
 
