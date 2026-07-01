@@ -26,7 +26,7 @@ LFX Mentoring has grown into one of the largest open source mentorship programs 
 
 ## Oracle Cloud Usage Optimization
 
-Nearly 50 projects have adopted Oracle Cloud Infrastructure for ARM compute, CI/CD pipelines, and compatibility testing over the past 3 years. Please review your current usage and be shut down any idle or unused resources so we can continue to be conscientious stewards of these donated resources.
+Nearly 50 projects have adopted Oracle Cloud Infrastructure for ARM compute, CI/CD pipelines, and compatibility testing over the past 3 years. Please review your current usage and shut down any idle or unused resources so we can continue to be conscientious stewards of these donated resources.
 
 ## KubeCon + CloudNativeCon 2026 Opportunities and Deadlines
 
@@ -34,7 +34,7 @@ Nearly 50 projects have adopted Oracle Cloud Infrastructure for ARM compute, CI/
 
 Planning to attend KubeCon + CloudNativeCon Japan? Browse the CNCF projects participating in the Project Pavilion and hear directly from the maintainers behind them. See the [Project Table Directory](https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/features-add-ons/project-engagement/#project-table-directory).
 
-### KubeCon+CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines
+### KubeCon + CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines
 
 | Region | Type | Application Deadline | Notifications |
 |--------|------|---------------------|---------------|
@@ -49,15 +49,19 @@ Planning to attend KubeCon + CloudNativeCon Japan? Browse the CNCF projects part
 
 Interested in speaking? The Observability Summit CFP is now open. [Learn more](https://events.linuxfoundation.org/observability-summit-europe/program/cfp/#overview) about session topics, presentation formats, and submission requirements.
 
-[Submit a Talk](https://events.linuxfoundation.org/observability-summit-europe/program/cfp/#overview) - DUE Sunday, July 7, 23:59  CEST
+[Submit a Talk](https://events.linuxfoundation.org/observability-summit-europe/program/cfp/#overview) - DUE Sunday, July 7, 23:59 CEST
 
 ### Maintainer Summit North America
 
-Join fellow maintainers on Sunday, November 8 for a day of collaboration, knowledge sharing, and community building. Before registering, please review the [Maintainer Summit eligibility requirements](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/#eligibility) to ensure you qualify to participate.
+Join fellow maintainers on [Sunday, November 8 for a day of collaboration, knowledge sharing, and community building](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/#about).
+
+Before registering, please review the [eligibility requirements](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/#eligibility) to ensure you qualify to participate. If you've already adopted [`.project`](https://contribute.cncf.io/blog/2026/04/22/introducing-dot-project-for-maintainers) for your maintainer list, the CSV that's mentioned will be updated on your behalf.
 
 :::tip Maintainer Summit NA
 
-**[Register for the Maintainer Summit today!](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/#registration)** Attendance at the Maintainer Summit requires separate registration for KubeCon + CloudNativeCon North America.
+**[Register for the Maintainer Summit today!](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/#registration)**
+
+Attendance at the Maintainer Summit requires separate registration for KubeCon + CloudNativeCon North America.
 
 :::
 
