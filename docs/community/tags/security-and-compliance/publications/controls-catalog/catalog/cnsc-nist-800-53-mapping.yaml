@@ -1,9 +1,9 @@
-# Validate: cue vet -c -d '#MappingDocument' github.com/gemaraproj/gemara@v1.0.0-rc.1 this-file.catalog
+# Validate: cue vet -c -d '#MappingDocument' github.com/gemaraproj/gemara@v1.3.0 this-file.yaml
 title: Cloud Native Security Controls (CNSC) to NIST SP 800-53 Rev. 5 Mapping
 metadata:
   id: CNSC-NIST-800-53-MAPPING
   type: MappingDocument
-  gemara-version: '1.0.0-rc.1'
+  gemara-version: '1.3.0'
   version: 1.0.0
   description: This document maps the Cloud Native Security Controls Catalog to NIST 800-53 SP Rev.5 Guidelines.
   author:
@@ -285,8 +285,10 @@ mappings:
 - id: CNSC-14
   source: CNSC-14
   targets:
-  - entry-id: IA-2(1)(2)
-    rationale: Identity federation requiring MFA applies to both privileged and non-privileged account access
+  - entry-id: IA-2(1)
+    rationale: Identity federation requiring MFA applies to privileged account access
+  - entry-id: IA-2(2)
+    rationale: Identity federation requiring MFA applies to non-privileged account access
   relationship: relates-to
 - id: CNSC-140
   source: CNSC-140
@@ -523,8 +525,8 @@ mappings:
 - id: CNSC-181
   source: CNSC-181
   targets:
-  - entry-id: SA-11(1)(8)
-    rationale: SCA combines static analysis and runtime testing to evaluate ingested software
+  - entry-id: SA-11(1)
+    rationale: SCA combines static analysis to evaluate ingested software
   relationship: relates-to
 - id: CNSC-182
   source: CNSC-182
@@ -631,8 +633,10 @@ mappings:
 - id: CNSC-208
   source: CNSC-208
   targets:
-  - entry-id: IA-2(1)(2)
-    rationale: Identity federation with MFA requires multi-factor authentication for both privileged and non-privileged users
+  - entry-id: IA-2(1)
+    rationale: Identity federation with MFA requires multi-factor authentication for privileged users
+  - entry-id: IA-2(2)
+    rationale: Identity federation with MFA requires multi-factor authentication for non-privileged users
   relationship: relates-to
 - id: CNSC-21
   source: CNSC-21

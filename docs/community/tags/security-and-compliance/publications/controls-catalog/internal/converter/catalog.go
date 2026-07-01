@@ -2,6 +2,7 @@
 package converter
 
 import (
+	"context"
 	_ "embed"
 	"fmt"
 	"net/url"
@@ -12,6 +13,7 @@ import (
 	"text/template"
 
 	"github.com/gemaraproj/go-gemara"
+	"github.com/gemaraproj/go-gemara/fetcher"
 	"github.com/goccy/go-yaml"
 )
 
@@ -152,7 +154,7 @@ func (c *CNSCCatalog) loadGroupFiles(cat *gemara.GuidanceCatalog) error {
 	if err != nil {
 		return err
 	}
-	if err := cat.LoadFiles(uris); err != nil {
+	if err := cat.LoadFiles(context.Background(), &fetcher.URI{}, uris); err != nil {
 		return fmt.Errorf("load group YAML: %w", err)
 	}
 	return nil

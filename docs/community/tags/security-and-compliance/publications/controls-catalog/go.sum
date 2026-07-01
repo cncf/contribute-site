@@ -1,9 +1,11 @@
 github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc h1:U9qPSI2PIWSS1VwoXQT9A3Wy9MM3WgvqSxFWenqJduM=
 github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/gemaraproj/go-gemara v0.0.3-0.20260401004727-1c36b5e8be13 h1:pYux3qaOJaU31EzSJjWKCT38L6tCPqE9gQzK2P+9vHM=
-github.com/gemaraproj/go-gemara v0.0.3-0.20260401004727-1c36b5e8be13/go.mod h1:hm4ELSJ9W/L413seDnlFIbHrXbNq6+YJK7DFQHHjNk4=
+github.com/gemaraproj/go-gemara v0.7.0 h1:cDIuKD03DF1bhrG3dmBoiJoF3h2mSMJ3YtDRr4LjvXE=
+github.com/gemaraproj/go-gemara v0.7.0/go.mod h1:h5Yepw+9Gww3x97Yk4X0pVnnci9S/W2Yo/66rp4WN54=
 github.com/goccy/go-yaml v1.19.2 h1:PmFC1S6h8ljIz6gMRBopkjP1TVT7xuwrButHID66PoM=
 github.com/goccy/go-yaml v1.19.2/go.mod h1:XBurs7gK8ATbW4ZPGKgcbrY1Br56PdM69F7LkFRi1kA=
+github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
+github.com/google/go-cmp v0.7.0/go.mod h1:pXiqmnSA92OHEEa9HXL2W4E7lf9JzCmGVUdgjX3N/iU=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 h1:Jamvg5psRIccs7FGNTlIRMkT8wgtp5eCXdBlqhYGL6U=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/testify v1.11.1 h1:7s2iGBzp5EwR7/aIZr8ao5+dra3wiQyKjjFuvgVKu7U=
