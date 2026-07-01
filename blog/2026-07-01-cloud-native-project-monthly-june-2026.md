@@ -71,7 +71,7 @@ Interested in speaking? [The Maintainer Summit CFP is now open](https://events.l
 
 ### KubeCon + CloudNativeCon North America
 
-Project CFPs and Interest Forms are open for KubeCon + CloudNativeCon North America. Submit to participate in Project Lightning Talks, Maintainer Track, Project Kiosks, and PR Support — see the links below for details.
+Project CFPs and Interest Forms are open for KubeCon + CloudNativeCon North America. Submit to participate in Project Lightning Talks, Maintainer Track, Project Kiosks, and PR Support - see the links below for details.
 
 [Submit a Talk](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/project-opportunities/#description-of-opportunities) - DUE Sunday, July 12, 11:59 PM MDT
 
