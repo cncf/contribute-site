@@ -42,7 +42,6 @@ Planning to attend KubeCon + CloudNativeCon Japan? Browse the CNCF projects part
 | **China** | [✈️ Travel Funding](https://www.lfopensource.cn/kubecon-cloudnativecon-openinfra-summit-pytorch-conference-china/attend/scholarships-travel-funding/#travel-funding) | 6 Jul, 23:59 CST | 20 Jul |
 | **North America** | 🎓 Scholarships | Coming Soon | Coming Soon |
 | **North America** | ✈️ Travel Funding | Coming Soon | Coming Soon |
-
 ### Observability Summit Europe
 
 [Register](https://events.linuxfoundation.org/observability-summit-europe/register/) by July 31 to get Early Bird pricing for Observability Summit Europe.
