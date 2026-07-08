@@ -16,7 +16,14 @@ Feel free to expand your governance where it fits. Today's example is to expand 
 
 First off is something I find myself reminding projects constantly: Your governance is yours to adapt! You can add a few simple lines to your existing documentation to bring in people: 
 
-https://github.com/bootc-dev/bootc/blob/main/MAINTAINERS.md
+:::tip[Check out how `bootc` does it]
+
+Defined non-code contributors in [MAINTAINERS.md](https://github.com/bootc-dev/bootc/blob/main/MAINTAINERS.md)
+
+:::
+
+
+
 
 > Examples: CNCF Service Desk tickets, coordinating with CNCF Project and Events teams, and LFX Administration. No code or code review rights.
 
