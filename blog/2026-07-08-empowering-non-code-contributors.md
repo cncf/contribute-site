@@ -22,16 +22,13 @@ Defined non-code contributors in [MAINTAINERS.md](https://github.com/bootc-dev/b
 
 :::
 
-
-
-
 > Examples: CNCF Service Desk tickets, coordinating with CNCF Project and Events teams, and LFX Administration. No code or code review rights.
 
 We're so used to the files in our repositories being only relegated to the code! 
 
 ### It's about trust
 
-There are five global KubeCons and tons of [https://www.cncf.io/kcds/](KCDs) - scaling this at the contributor level is difficult, which is why decoupling it from the code is a nice hack. 
+There are five global KubeCons and tons of [KCDs](https://www.cncf.io/kcds/) - scaling this at the contributor level is difficult, which is why decoupling it from the code is a nice hack. 
 
 This lets you pull in those community managers, project and product managers - they bring in those crucial skills that we all need. And when they are declared in your governance as Contributors it shows that the project is looking at its contributor ladder as a whole. 
 
