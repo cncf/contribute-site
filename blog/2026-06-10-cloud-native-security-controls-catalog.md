@@ -1,6 +1,6 @@
 ---
 title: "Cloud Native Security Controls Catalog: Refreshed, Structured, and Machine-Readable"
-date: 2026-06-10
+date: 2026-07-08
 authors: [sonupreetam, jpower432, hbraswelrh, eddie-knight]
 tags: [security, community]
 ---
