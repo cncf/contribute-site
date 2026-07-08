@@ -25,7 +25,7 @@ The criteria for moving levels sets the expectations for what projects are to co
 
 The process of conducting Due Diligence is not to create unnecessary work for projects, rather to ensure projects are set up to succeed in a way that works for them against the values, principles, and definitions of cloud native and the expectations adopters carry for scalable, secure, production-ready software.
 
-It is important to remember that the CNCF is for the benefit of its members. This means the CNCF, through the TOC, defines the technical and community expectations for projects to receive benefits of the foundation. The criteria, Due Diligence process, security audits, templates, code of conduct, and community management practices are several expectations for projects to receive benefits. Adherence to these, and confirmation of adherence for each project's maturity level is essential to continuously receive those benefits. 
+It is important to remember that the CNCF is for the benefit of its members. This means the CNCF, through the TOC, defines the technical and community expectations for projects to receive benefits of the foundation. The criteria, Due Diligence process, security audits, templates, code of conduct, and community management practices are several expectations for projects to receive benefits. Adherence to these, and confirmation of adherence for each project's maturity level is essential to continuously receive those benefits.
 
 As a matter of balance, it is important to note that while these benefits provide value to projects, the TOC is responsible for continuously assessing the criteria, Due Diligence process, and overall levels framework to ensure we are adapting to shifts and changes in the landscape and market, as well as responding to the needs and limitations experienced by projects. _The community and projects are our partners in effecting that change, so feedback is crucial._
 
@@ -59,7 +59,7 @@ We expect all TOC members to be mindful of their obligations and timelines, whet
 
 ### Project has applied to move levels
 
-**Projects apply to move levels by submitting an Issue on the TOC repo that details their conformance to the criteria.** These Issues go into the [TOC backlog](https://github.com/orgs/cncf/projects/27/views/9) and are worked on a first-in, first-out/started basis to the extent that is reasonably practical - each TOC member has subject matter expertise in one domain or another and each TOC member serves as a liaison to a Technical Advisory Group that may or may not align with that domain. The TOC strives to align their skills and background with the project applying they are assigned to ensure they have the context to understand the project within that domain. 
+**Projects apply to move levels by submitting an Issue on the TOC repo that details their conformance to the criteria.** These Issues go into the [TOC backlog](https://github.com/orgs/cncf/projects/27/views/9) and are worked on a first-in, first-out/started basis to the extent that is reasonably practical - each TOC member has subject matter expertise in one domain or another and each TOC member serves as a liaison to a Technical Advisory Group that may or may not align with that domain. The TOC strives to align their skills and background with the project applying they are assigned to ensure they have the context to understand the project within that domain.
 
 The issue will contain a limited set of information about the project at the time of its application, commonly asserting its conformance to the stated criteria with links to where or descriptions as to how they are implemented.
 
@@ -69,7 +69,7 @@ All TOC members are expected to assist in the triaging of project applications t
 
 This light-weight triage/evaluation must cover the list below (it is not exhaustive and is a minimum triage set from the [incubation template retrieved 12 DEC 2025](https://github.com/cncf/toc/blob/c2943ffc98064dd88e9ef9c4afd5a8856898942f/.github/ISSUE_TEMPLATE/template-incubation-application.md)):
 * Adoption Assertion includes the Adopters file link, and the project has an entry in the Adopter's form responses to provide 5-7 adopters to reach out to. [Check here](https://github.com/cncf/toc/blob/main/FAQ.md#what-is-the-definition-of-an-adopter) for the definition of an Adopter.
-* Application Process Principles provides 
+* Application Process Principles provides
   * Either: the link to the Recording, issue, and/or meeting notes from a TAG meeting where the project presented with the domain specific TAG -or- completion of the [General Technical Review (GTR)](https://github.com/cncf/toc/blob/main/toc_subprojects/project-reviews-subproject/general-technical-questions.md) or [Domain Technical Review (DTR)](https://github.com/cncf/toc/blob/main/toc_subprojects/project-reviews-subproject/tag-domain-technical-review-template.md) in lieu of a TAG meeting
   * assertion of vendor neutrality
   * assertion of review and acknowledge of expectations of CNCF projects and requirements for moving forward through the CNCF maturity levels
@@ -101,7 +101,7 @@ This light-weight triage/evaluation must cover the list below (it is not exhaust
   * link to (scorecard: scan for branch protection, token permissions, SAST, and CI best practices in results) or link to other evidence of repo hardening
   * link to security report resolution process and roles
   * link to completed or PR filed self-assessment
-  * link to best practices badge, confirm it is "passing" and 100% complete 
+  * link to best practices badge, confirm it is "passing" and 100% complete
 * Ecosystem
   * link to adopters file
   * link to integrations/ compatibility information of other projects and products
@@ -110,15 +110,15 @@ Projects should NOT be blocked if they do not have a Governance Review or a GTR/
 
 If some of the criteria are not yet met, or missing, the TOC member triaging will add a comment detailing all items that are unmet or missing and close the application; affixing the "not-ready" label and move the card to the "Not-Ready-Will Return" column of the [TOC project board](https://github.com/orgs/cncf/projects/27/views/9)'s Applications to Move levels tab. Projects are expected to re-apply upon completion of outstanding items. When the project is ready to reapply, they should link to the previous application so the TOC may leverage and reuse as much prior work as reasonable.
 
-Once the TOC has triaged the application and found all criteria to have content, the TOC member performing triage comment the application is complete and ready for assignment. The TOC member will affix the "ready" label and move the project from the "new" column on the application's board. The project's application will be updated by the TOC member with a comment that details where work still needs to be completed, next steps associated with completion of those, and an estimated timeframe that the project is likely to complete those items by. 
+Once the TOC has triaged the application and found all criteria to have content, the TOC member performing triage comment the application is complete and ready for assignment. The TOC member will affix the "ready" label and move the project from the "new" column on the application's board. The project's application will be updated by the TOC member with a comment that details where work still needs to be completed, next steps associated with completion of those, and an estimated timeframe that the project is likely to complete those items by.
 
-TOC members are expected to triage projects in the "new" column on the board for projects that are returning from a previous not-ready application, verify completion, and move them to the top of the ready for assignment column. 
+TOC members are expected to triage projects in the "new" column on the board for projects that are returning from a previous not-ready application, verify completion, and move them to the top of the ready for assignment column.
 
 TOC members are to prioritize selecting projects from the ready for assignment column over the new column to expedite the queue and make the best use of TOC time.
 
 ### TOC member(s) step forward to be assigned
 
-Commonly referred to as the Project's Application Sponsor, TOC members assign themselves to projects to sponsor the application for moving levels. Sponsoring an application ensures a focused point of contact exists for both the project and the TOC in completing the Due Diligence, public comment, and execution of voting. 
+Commonly referred to as the Project's Application Sponsor, TOC members assign themselves to projects to sponsor the application for moving levels. Sponsoring an application ensures a focused point of contact exists for both the project and the TOC in completing the Due Diligence, public comment, and execution of voting.
 
 The TOC member that assigns themselves a project to sponsor the application for moving levels may request a secondary TOC member to support the Due Diligence according to eligibility.
 
@@ -142,15 +142,15 @@ A TOC member will require a co-sponsor for a project if any of the following con
 
  This does not mean they can't have any involvement with a project at all as contributing to pull requests or adopting the project are signals of a healthy interest and knowledge of the project. To ensure appropriate evaluation without bias, a second, unconflicted TOC member must be assigned to co-sponsor the project with them.
 
-If a conflict of interest is present, the TOC member will state they have a conflict and seek a second _primary_ sponsor on the project's application issue prior to proceeding. 
+If a conflict of interest is present, the TOC member will state they have a conflict and seek a second _primary_ sponsor on the project's application issue prior to proceeding.
 
 ### Kicking off the Due Diligence
 
-Once the project is assigned to the TOC member(s), the TOC member(s) engages the project's maintainers or leadership group to kick off the Due Diligence. This can be done by commenting on the Issue, starting a slack channel (public or private), slack group direct message, email exchange, or thread in the project's primary communication channel. We strive to keep these discussions transparent and visible but should consider any potential sensitive issues that come about as a result of the review (resolution of vulnerabilities for instance). 
+Once the project is assigned to the TOC member(s), the TOC member(s) engages the project's maintainers or leadership group to kick off the Due Diligence. This can be done by commenting on the Issue, starting a slack channel (public or private), slack group direct message, email exchange, or thread in the project's primary communication channel. We strive to keep these discussions transparent and visible but should consider any potential sensitive issues that come about as a result of the review (resolution of vulnerabilities for instance).
 
-Any form of communication must include _two members_ of CNCF staff to ensure consistency and continuity throughout the process. 
+Any form of communication must include _two members_ of CNCF staff to ensure consistency and continuity throughout the process.
 
-TOC members, with support from CNCF staff, should schedule a meeting with the project to the extent possible given availability and timezones. Asynchronous kick-offs can occur, but may result in additional back and forth or delays. Each Kick-off meeting should have a central kick-off document that allows the TOC and the project to capture expectations, decisions, timelines, and other pertinent references needed for successful completion of the Due Diligence. A [kick-off meeting template](toc-templates/kickoff-notes.md) is located in the [toc-templates](toc-templates/) folder.
+TOC members, with support from CNCF staff, should schedule a meeting with the project to the extent possible given availability and timezones. Asynchronous kick-offs can occur, but may result in additional back and forth or delays. Each Kick-off meeting should have a central kick-off document that allows the TOC and the project to capture expectations, decisions, timelines, and other pertinent references needed for successful completion of the Due Diligence. A [kick-off meeting template](toc-templates/kickoff-notes.md) is located in the [toc-templates](toc-templates/index.md) folder.
 
 Once the Kick-off is scheduled, the TOC member(s) should move the project's card on the [Application to Move Levels board](https://github.com/orgs/cncf/projects/27/views/9) to "In Due Diligence". It is *strongly* recommended that you inform the project to verify compliance with the CNCF's licensing policy (set forth in the [Section 11 of the Charter](https://github.com/cncf/foundation/blob/master/charter.md) with [additional information here](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md)).
 
@@ -172,7 +172,7 @@ It is expected that the TOC's evaluation of a project's completion of the criter
 
 #### Sub-projects
 
-When reviewing a project, you may find multiple sub-projects within their organization or repositories. It is important that the Due Diligence document reflects the scope of evaluation for a given project and what that includes. Sub-projects are often broken out into two categories: packaged with the project, and independent but related to the project (SDK reference implementations for instance). 
+When reviewing a project, you may find multiple sub-projects within their organization or repositories. It is important that the Due Diligence document reflects the scope of evaluation for a given project and what that includes. Sub-projects are often broken out into two categories: packaged with the project, and independent but related to the project (SDK reference implementations for instance).
 
 Sub-projects packaged with the main project are within scope of the Due Diligence evaluation. Any sub-project not packaged is outside the scope of the Due Diligence evaluation and must be indicated in the Due Diligence as "un-evalauted" and the reason. TOC members must verify that the main project has sufficient governance of its sub-projects that allows adopters and contributors to understand the stability, maturity, and requirements or criteria to be a sub-project, their relation to the main project, and other information necessary commensurate with the maturity level of the project.
 
@@ -196,7 +196,7 @@ The TOC member(s) may then file the PR and place it in draft until the Adopter I
 
 #### Engaging TAGs
 
-If the project has previously engage with a TAG, the TOC may request an update or summary regarding the engagement and the TAG's assessment of the project in the context of the domain of the project. For instance, a policy-as-code project may present to TAG Security, TAG Security may summarize their recommendations to the project and link to supplemental material (like the project's self-assessment or joint-assessment) which is then added in the Due Diligence PR. 
+If the project has previously engage with a TAG, the TOC may request an update or summary regarding the engagement and the TAG's assessment of the project in the context of the domain of the project. For instance, a policy-as-code project may present to TAG Security, TAG Security may summarize their recommendations to the project and link to supplemental material (like the project's self-assessment or joint-assessment) which is then added in the Due Diligence PR.
 
 Feedback by the TAG is encouraged prior to Due Diligence being initiated, as requesting feedback when Due Diligence is occurring may prolong the Due Diligence process. It is expected that the project will have completed all criteria prior to applying, if this is not the case, Due Diligence should not commence.
 
@@ -208,13 +208,13 @@ The TOC member(s) begin reaching out to the 5-7 potential adopters provided by t
 
 Projects should not coach or instruct adopters with answers to interview questions and may encourage adopters to be open and transparent during the interviews. All interview notes are kept private unless permission is received from the adopter's organization for the notes to be made public.
 
-The TOC maintains a [core list of questions](/operations/toc-templates/template-adopter-questions.md) intended to initiate discussion with adopters, but may add additional questions, or skip questions depending on the course of the interview and the organization's level of comfort in providing responses.
+The TOC maintains a [core list of questions](toc-templates/adopter-questions.md) intended to initiate discussion with adopters, but may add additional questions, or skip questions depending on the course of the interview and the organization's level of comfort in providing responses.
 
 Interviews typically do not take more than 30-60 minutes to complete, and TOC and TAB members should anticipate about 1 hour of time dedicated to summarizing adopter responses. Some interviews may take more or less time, dependent upon the interview, any prior interviews that may introduce conflicting stories among adopters, or other concerns noted by the TOC members and the community.
 
 #### Reaching out to Adopters
 
-Once a TOC member has a listing of potential interviewees, they should leverage the [Adopter Interview Request email template](/operations/toc-templates/template-adopter-interview-request.md) to engage and include any TAB members interested in supporting the interview. The email template provides the essential information needed for interviewers to coordinate with their marketing, PR, or other outreach team for approval and allows adopters the opportunity to remain anonymous.
+Once a TOC member has a listing of potential interviewees, they should leverage the [Adopter Interview Request email template](toc-templates/adopter-interview-request.md) to engage and include any TAB members interested in supporting the interview. The email template provides the essential information needed for interviewers to coordinate with their marketing, PR, or other outreach team for approval and allows adopters the opportunity to remain anonymous.
 
 It is imperative that the TOC honor any anonymity concerns and work to address them with adopters, the final approval of the summarized response is a mechanism that allows us to confirm with the adopter their comfort and approval of the final content intended for publication and make any corrections they feel are warranted. TOC members are free to bring in the Chair or Vice Chair to assist in addressing such concerns.
 
@@ -226,7 +226,7 @@ For projects moving from Incubation to Graduation, if considerable time has pass
 
 #### Recording Responses
 
-**Adopter interviews are expected to be interactive**. The [adopter questions template](toc-templates/adopter-questions.md) should serve as a starting point for questions when interviewing, however TOC members are expected to use their best judgement in asking questions, deep diving on responses, and crafting additional questions or skipping others. 
+**Adopter interviews are expected to be interactive**. The [adopter questions template](toc-templates/adopter-questions.md) should serve as a starting point for questions when interviewing, however TOC members are expected to use their best judgement in asking questions, deep diving on responses, and crafting additional questions or skipping others.
 
 You may need to record the meeting to fully capture the responses or take sufficient notes that you can summarize the discussion and convey, with enough breadth, how the adopter is using the project, what environments (such as dev, test, prod), their engagement with the project, use, experience, and future plans.
 
@@ -234,7 +234,7 @@ TOC and TAB members are NOT to email questions to adopters in order for them to 
 
 #### Summary Approval
 
-TOC members will summarize responses to the questions asked in a separate, non-public document until the Adopter approves the content. 
+TOC members will summarize responses to the questions asked in a separate, non-public document until the Adopter approves the content.
 
 Once you have summarized the interview, typically about 5 paragraphs in length depending on the detail allowed to be conveyed, share the doc with the interviewee so they have permissions to make any changes. Provide the Interviewee with the doc, ask them to make any changes and provide approval two weeks from the date of sending. This provides you with a timeframe to follow-up with them so that it does not get lost or overlooked.
 
@@ -249,32 +249,32 @@ Once you have completed evaluating the project's implementation of the criteria 
 Evaluation summary is composed of two parts: the Criteria and the Adoption. The evaluation summary should read like an executive summary of the Due Diligence, conveying any notable areas and the assessment of sufficient adoption for the level the project applied. An example structure is provided below:
 
 > $TOCMEMBER conducted the Due Diligence of $PROJECT who applied for $LEVEL. The project [has/has not] completed the criteria that show its maturity at $LEVEL. The following criteria implementations are noteworthy to call out... $NOTABLES. The following actions were provided to the project that were considered blocking but since resolved... $BLOCKERS. The following recommendations were provided to the project that are non-blocking in the TOC's assessment but should be completed by the project to ensure continued viability of the project... $RECOMMENDATIONS.
-> 
+>
 > The adopter interviews reflect a project [in use/too early] for the level which the project applied. They show ... $INTERVIEWSUMMARY.
-> 
+>
 > [The TOC has found the project to have satisfied the criteria for $LEVEL/ The TOC's evaluation of the project shows a needed focus to complete the outstanding blockers and reapply when the following conditions are met ... $CONDITIONS].
 
 ## TOC Internal Review
 
 Once the TOC member(s) has completed the Due Diligence, they should create a PR in their personal TOC repo and share the link with the TOC for review. The TOC member(s) should move the project's card on the [Application to Move Levels board](https://github.com/orgs/cncf/projects/27/views/9) to "TOC Review".
 
-The TOC member(s) should craft a slack message thread that provides the project name, level applied, links to the PR and issue, and thread any additional call outs, questions, or potential issues warranting further discussion not otherwise captured in the PR. The internal review is expected to last 1 week, assuming no issues are brought up. 
+The TOC member(s) should craft a slack message thread that provides the project name, level applied, links to the PR and issue, and thread any additional call outs, questions, or potential issues warranting further discussion not otherwise captured in the PR. The internal review is expected to last 1 week, assuming no issues are brought up.
 
 The TOC member(s) is responsible for updating the project with the change in status for internal review.
 
 ### Reapplication
 
-In the event a project was not ready to move levels after the Due Diligence was completed and the project has reapplied through an issue, the previous or new TOC member(s) assigned will initiate a new Due Diligence based on the previous one. The TOC should refresh the prior evaluations with corresponding dates to show changes and improvements and amend the evaluation statements accordingly. 
+In the event a project was not ready to move levels after the Due Diligence was completed and the project has reapplied through an issue, the previous or new TOC member(s) assigned will initiate a new Due Diligence based on the previous one. The TOC should refresh the prior evaluations with corresponding dates to show changes and improvements and amend the evaluation statements accordingly.
 
 ## Public Comment Period
 
 Assuming no issues have come up during the TOC internal review, the TOC member may put the Due Diligence out for public comment. The TOC member(s) should move the project's card on the [Application to Move Levels board](https://github.com/orgs/cncf/projects/27/views/9) to "Public Comment".
- 
+
 TOC members are to leverage the [public comment template](toc-templates/dd-public-comment.md) and be mindful of the timeline to consider if a freeze is in effect or soon will be. All public comment messages are to be sent on the [TOC public mailing list](https://lists.cncf.io/g/cncf-toc/topics).  Once sent, they should be linked on the PR and the project notified.
 
 ## Voting
 
-Once the public comment period is complete, the TOC member needs to adjudicate any responses and comments on the PR. Provided no new or blocking information has been shared, the TOC member should request CNCF Staff to initiate voting on the PR, at which point the project's card on the [Application to Move Levels board](https://github.com/orgs/cncf/projects/27/views/9) to "Voting". 
+Once the public comment period is complete, the TOC member needs to adjudicate any responses and comments on the PR. Provided no new or blocking information has been shared, the TOC member should request CNCF Staff to initiate voting on the PR, at which point the project's card on the [Application to Move Levels board](https://github.com/orgs/cncf/projects/27/views/9) to "Voting".
 
 TOC members, especially those who filed the PR, need to record their vote by the thumbs up or thumbs down on the PR comment where gitvote was initiated.
 

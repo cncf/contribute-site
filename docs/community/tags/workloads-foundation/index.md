@@ -19,7 +19,7 @@ To define and advance practices and standards for fundamental cloud native workl
 
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
-| Danielle Tal | [@miao0miao](https://github.com/miao0miao) | - | 2025-07-01 to 2026-06-30 |
+| Marlow Warnicke | [@catblade](https://github.com/catblade) | NVIDIA | 2026-06-09 to 2028-06-30 |
 | Paco Xu | [@pacoxu](https://github.com/pacoxu) | DaoCloud | 2025-07-01 to 2027-06-30 |
 | Yuan Tang | [@terrytangyuan](https://github.com/terrytangyuan) | Red Hat | 2025-07-01 to 2027-06-30 |
 
@@ -36,7 +36,9 @@ To define and advance practices and standards for fundamental cloud native workl
 ### TOC Liaisons
 
 - Alex Chircop ([@chira001](https://github.com/chira001))
-- Kevin Wang ([@kevin-wangzefeng](https://github.com/kevin-wangzefeng))
+- Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard))
+- Joseph Sandoval ([@jrsapi](https://github.com/jrsapi))
+- Chad Beaudin ([@chadbeaudin](https://github.com/chadbeaudin))
 
 ## Meetings
 
@@ -44,6 +46,7 @@ To define and advance practices and standards for fundamental cloud native workl
 
 - **Calendar**: [View and join meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-workloads-foundation?view=list)
 - **Recordings**: [YouTube Channel](https://www.youtube.com/@CNCFTAGWorkloadsFoundation)
+- **Meeting Notes**: [View notes](https://notes.cncf.io/s/1aNdplhtl)
 
 All meetings are open to the public. No registration required - simply join the meeting from the calendar link.
 
@@ -103,7 +106,7 @@ TAG Workloads Foundation works on fundamental aspects of cloud native workload e
 ## Subprojects
 
 ### Batch
-To enhance collaboration among projects, improve interoperability, and empower users to efficiently leverage batch systems in cloud-native environments.
+The cloud-native batch scheduling ecosystem is fragmented — different projects tackle job scheduling, queueing, and resource management in incompatible ways. The Batch subproject brings together maintainers and users across the ecosystem to reduce that fragmentation: aligning on common Kubernetes APIs and primitives, developing best practices, and improving outcomes for batch workloads — whether HPC, AI/ML, data analytics, or CI — in cloud-native environments.
 
 In scope:
 
@@ -133,6 +136,7 @@ Deliverable(s) or exit criteria:
 * Benchmarking suite for Batch systems (already in process)
 * User stories published doc for Batch systems (already in process)
 
+- **Subproject Leads**: Alex Scammon ([@stackedsax](https://github.com/stackedsax)), Marlow Warnicke ([@catblade](https://github.com/catblade)), Abhishek Malvankar ([@asm582](https://github.com/asm582))
 - [Mailing List](https://lists.cncf.io/g/cncf-tag-workloads-foundation)
 
 ## Initiatives

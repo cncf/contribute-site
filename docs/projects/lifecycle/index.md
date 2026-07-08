@@ -72,6 +72,35 @@ All CNCF projects are subject to the [Trademark Usage Policies](https://www.linu
 **Note: The TOC has changed the sandbox application process to a more transparent and streamlined workflow within the :package: [Sandbox Applications repository](https://github.com/cncf/sandbox) :package:.**
 
 Projects apply for sandbox through the Sandbox Repo's *[Issue Form](https://github.com/cncf/sandbox/issues/new?assignees=&labels=New&projects=&template=application.yml&title=%5BSandbox%5D+%3CProject+Name%3E)*. More information on this process is found on the main [Sandbox repo page](https://github.com/cncf/sandbox).
+
+#### Common reasons applications are closed
+
+To avoid common pitfalls that result in applications being closed without TOC review, ensure your project meets these critical requirements **before** applying:
+
+**License Compliance:**
+- Project must use Apache 2.0 or a [CNCF allowlist license](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md)
+- License must be compliant **before** acceptance (not "will convert after acceptance")
+- BSL (Business Source License) and GPL family licenses are not acceptable
+- **License exceptions:** If you believe your project is a good fit despite using a non-allowlist license, you may [request a license exception](https://contribute.cncf.io/projects/submit-license-exception-request/) from the CNCF Governing Board (rarely granted)
+
+**MAINTAINERS File:**
+- Must provide direct link to MAINTAINERS.md or MAINTAINERS file in your GitHub or GitLab repository (not contributors graph)
+- File must contain a table with Name, GitHub/GitLab ID, and Company/Organization columns
+- Cannot be "N/A", "TBD", or "will be added after acceptance"
+
+**Organization Diversity:**
+- Minimum **3 maintainers from 2+ different organizations** (employers/companies)
+- "Organization" means employer, not GitHub/GitLab organization memberships
+- All maintainers from the same company = single organization (does not meet requirement)
+
+**Subproject Separation:**
+- If your project is currently part of another project's GitHub or GitLab organization, you must provide a link to a public issue in the parent project's repository showing maintainer consensus to split into a separate CNCF project
+- This applies to **any** parent project, not just CNCF projects
+
+**Project vs Reference Architecture:**
+- CNCF Sandbox accepts reusable projects, not reference architectures or reference implementations
+- If your project demonstrates how to wire together existing tools rather than building a new reusable tool, submit to [CNCF Reference Architectures](https://architecture.cncf.io/) instead
+
 All exceptions and "declined" or "postponed" outcomes are handled by the TOC. Projects may be encouraged to re-apply after addressing areas called out in the application comments on the corresponding issue. Please refer to the instructions in the [Sandbox repo README](https://github.com/cncf/sandbox) for more details on re-application.
 
 ### Applying to become an Incubating or Graduating project
@@ -145,9 +174,9 @@ While the details of the process are described in detail further for Incubating 
 
 #### Criteria
 
-Projects can find the criteria for Incubation by reviewing the [Incubation application template](../.github/ISSUE_TEMPLATE/template-incubation-application.md).
+Projects can find the criteria for Incubation by reviewing the [Incubation application template](https://github.com/cncf/toc/blob/main/.github/ISSUE_TEMPLATE/template-incubation-application.md).
 
-Projects can find the criteria for Graduation by reviewing the [Graduation application template](../.github/ISSUE_TEMPLATE/template-graduation-application.md).
+Projects can find the criteria for Graduation by reviewing the [Graduation application template](https://github.com/cncf/toc/blob/main/.github/ISSUE_TEMPLATE/template-graduation-application.md).
 
 ---
 
@@ -217,10 +246,10 @@ A: Projects are strongly encouraged to meet with their TAG to receive feedback o
 
 ### Project resources and guide posts
 
-The TOC, with support from the [Technical Advisory Groups](/tags/README.md), have a wide variety of resources available to assist projects.  Current and aspiring maintainers of cloud native projects can find a lot of information and templates on [contribute.cncf.io/maintainers](https://contribute.cncf.io/maintainers/). The TOC also maintains [project Guide Posts](../docs/project_guideposts.md) - a collection of guiding points that have assisted cloud native projects as they grow and mature in the ecosystem. These are not requirements for moving levels, those may be found in the respective application issue templates ([Incubation](../.github/ISSUE_TEMPLATE/template-incubation-application.md), [Graduation](../.github/ISSUE_TEMPLATE/template-graduation-application.md)). The [Guide Posts](../docs/project_guideposts.md) are resources for projects to leverage that are beneficial in meeting or exceeding the criteria defined.
+The TOC, with support from the [Technical Advisory Groups](/community/tags/), have a wide variety of resources available to assist projects.  Current and aspiring maintainers of cloud native projects can find a lot of information and templates on [contribute.cncf.io/maintainers](/maintainers/). The TOC also maintains [project Guide Posts](https://github.com/cncf/toc/blob/main/resources/project_guideposts.md) - a collection of guiding points that have assisted cloud native projects as they grow and mature in the ecosystem. These are not requirements for moving levels, those may be found in the respective application issue templates ([Incubation](https://github.com/cncf/toc/blob/main/.github/ISSUE_TEMPLATE/template-incubation-application.md), [Graduation](https://github.com/cncf/toc/blob/main/.github/ISSUE_TEMPLATE/template-graduation-application.md)). The [Guide Posts](https://github.com/cncf/toc/blob/main/resources/project_guideposts.md) are resources for projects to leverage that are beneficial in meeting or exceeding the criteria defined.
 
 Additionally, projects interested in preparing to apply to move levels are encouraged to pursue the following activities as the resulting artifacts can and often are leveraged in the TOC's completion of the Due Diligence in lieu of certain sections of the DD.
 
-- Pursue a [Governance Review with TAG Contributor Strategy](https://github.com/cncf/tag-contributor-strategy/issues/new?template=governance-review-request.yaml) - A governance review is an in depth look at how your project is governed, its documentation, its practices, and general project operations. For more information please [checkout the maintainer page on governance](https://contribute.cncf.io/maintainers/governance/overview/) or join the [Governance Review Group](https://github.com/cncf/tag-contributor-strategy/tree/main/governance).
-- Complete a [General Technical Review (GTR)](../tags/resources/toc-supporting-guides/general-technical-questions.md) or [Domain Technical Review (DTR)](../tags/resources/toc-supporting-guides/tag-domain-technical-review-template.md) - these reviews provide a structured framework to explore the technical lifecycle aspects of a project experienced or sought by adopters as well as dive deep on the design and architecture of the project within its technical domain of focus. The results of these can support projects in identifying next steps to increase usability, resilience, scale, performance, and ease-of-use.
+- Pursue a [Governance Review with TAG Contributor Strategy](https://github.com/cncf/tag-contributor-strategy/tree/main/governance) - A governance review is an in depth look at how your project is governed, its documentation, its practices, and general project operations. For more information please [checkout the maintainer page on governance](https://contribute.cncf.io/maintainers/governance/overview/) or join the [Governance Review Group](https://github.com/cncf/tag-contributor-strategy/tree/main/governance).
+- Complete a [General Technical Review (GTR)](https://github.com/cncf/toc/blob/main/toc_subprojects/project-reviews-subproject/general-technical-questions.md) or [Domain Technical Review (DTR)](https://github.com/cncf/toc/blob/main/toc_subprojects/project-reviews-subproject/tag-domain-technical-review-template.md) - these reviews provide a structured framework to explore the technical lifecycle aspects of a project experienced or sought by adopters as well as dive deep on the design and architecture of the project within its technical domain of focus. The results of these can support projects in identifying next steps to increase usability, resilience, scale, performance, and ease-of-use.
 - Collaborate with [TAG Security on a joint-review](https://github.com/cncf/tag-security/blob/main/community/assessments/guide/README.md#joint-assessment) - highly recommended for currently incubating projects, the joint review is a comprehensive assessment of a project's security, it helps project's prepare for a successful security audit.

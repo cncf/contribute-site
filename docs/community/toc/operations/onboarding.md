@@ -6,11 +6,11 @@ sidebar_position: 1
 
 # Welcome to the TOC!
 
-We are so glad you are here. You have been elected to the Technical Oversight Committee, the body responsible for reviewing, accepting/rejecting, and overseeing projects in the cloud native ecosystem.  This onboarding document and its various files and links are here to help get you up to speed and set you up for success as a TOC member. If you haven't already done so, now is a great time to familiarize yourself with the [Definition of Cloud Native](../DEFINITION.md).
+We are so glad you are here. You have been elected to the Technical Oversight Committee, the body responsible for reviewing, accepting/rejecting, and overseeing projects in the cloud native ecosystem.  This onboarding document and its various files and links are here to help get you up to speed and set you up for success as a TOC member. If you haven't already done so, now is a great time to familiarize yourself with the [Definition of Cloud Native](https://github.com/cncf/toc/blob/main/DEFINITION.md).
 
 #### About this document
 
-This onboarding document is designed to provide some introductory information to new TOC members. It contains limited information to set expectations and provide a TOC member with generalities about the role and work we do. For specific instructions, guidance, templates, etc. please refer to the various files and content in the [Operations Directory](README.md).
+This onboarding document is designed to provide some introductory information to new TOC members. It contains limited information to set expectations and provide a TOC member with generalities about the role and work we do. For specific instructions, guidance, templates, etc. please refer to the various files and content in the [Operations Directory](index.md).
 
 ## The Charter
 
@@ -20,7 +20,7 @@ Within the scope of the Charter, the TOC is responsible for defining how we achi
 
 ## Accesses, Openness, and Transparency
 
-As TOC members, we manage our repository with the support of CNCF Staff. You will be added to the toc-members group and granted appropriate permissions on the repository so you may create, review, and merge pull requests in accordance with our [PR processes](../toc-decision-process.md). We bear the responsibility of managing our repository equally among the TOC and expect all TOC members to support the collective group in managing the repo. 
+As TOC members, we manage our repository with the support of CNCF Staff. You will be added to the toc-members group and granted appropriate permissions on the repository so you may create, review, and merge pull requests in accordance with our [PR processes](toc-decision-process.md). We bear the responsibility of managing our repository equally among the TOC and expect all TOC members to support the collective group in managing the repo. 
 
 The TOC maintains both public and private communication mediums. In accordance with the [CNCF values](https://github.com/cncf/foundation/blob/main/charter.md#3-values), we strive for openness and transparency - our technical work must be available to all. Our processes and decisions shall be transparent, visible, and discoverable. The nature of some TOC discussions may be sensitive as they impact individuals, projects, and organizations. Therefore TOC members are expected to use their best judgement in determining if a discussion should be held in private to allow the TOC members to speak their mind or raise doubts fully and frankly without the fear of being misunderstood or revealing their ignorance in front of a wider audience.  Once consensus is reached, the rationale and reasoning will be summarized, well documented, and a decision may be put forward for the community publicly, either as informative or for public review and finalization through voting. 
 
@@ -30,7 +30,7 @@ You will be added to both public and private slacks, mailing lists, and receive 
 
 The expected time commitment of a TOC member is anywhere from **10-25% of their monthly regular work time** and will vary month to month with surges and slow downs throughout their term. TOC members should also anticipate travel to conferences and offsites at least twice a year, with participation and attendance at various meetings during the CNCF flagship conference: KubeCon+CloudNativeCon (KCCN).
 
-The TOC has four (4) hour-long meetings per month held on Tuesdays at 0800 PST/1100 EST/1700 CET.  The first meeting of each month are [Technical Advisory Group (TAG)](../tags/README.md#cncf-technical-advisory-groups-tags) updates and discussion. As a [Liaison](../../tags/cncf-tags.md#toc-liaisons) to one or more TAGs, the content presented and discussed by the TAG should be information you are already aware of. For TAGs that you are not a liaison for, this is your opportunity to become aware of the broader work being done within specialty technical domains and verticals.  It allows you to connect various TAGs and projects together, promoting interoperability for the benefit of the technical community and its adopters.
+The TOC has four (4) hour-long meetings per month held on Tuesdays at 0800 PST/1100 EST/1700 CET.  The first meeting of each month are [Technical Advisory Group (TAG)](../../tags/index.md) updates and discussion. As a [Liaison](../../tags/index.md) to one or more TAGs, the content presented and discussed by the TAG should be information you are already aware of. For TAGs that you are not a liaison for, this is your opportunity to become aware of the broader work being done within specialty technical domains and verticals.  It allows you to connect various TAGs and projects together, promoting interoperability for the benefit of the technical community and its adopters.
 
 The second and fourth meetings are generally private meetings. During these meetings, the TOC meets to review issues on the repo, conduct vote parties (to ensure outstanding votes are completed), and discuss any open issues, activities, tasks, and other efforts. Periodically, we may invite the Maintainers, projects, or other groups to join us so we may connect with them, understand any challenges and successes they encounter, and take feedback to improve our engagements.
 
@@ -77,7 +77,7 @@ In addition to the expectations defined Composition 6(b)ii and Criteria 6(d) for
 
 #### Governing Board
 
-The TOC attends Governing Board meetings periodically when invited, our participation is typically limited to 1 hr ([except for the TOC Chair](toc-chair.md#Governing-board-meetings)). The most common of these is the Strategy Meeting typically held during KubeCon+CloudNativeCon (KCCN). As the overseeing technical body, it is anticipated the TOC guides any technical strategy discussions. The TOC collectively crafts the messaging and structure for this in response to interest areas expressed by the Governing Board or by technical trends in broader industry and within the ecosystem.
+The TOC attends Governing Board meetings periodically when invited, our participation is typically limited to 1 hr ([except for the TOC Chair](toc-chair-vicechair.md#Governing-board-meetings)). The most common of these is the Strategy Meeting typically held during KubeCon+CloudNativeCon (KCCN). As the overseeing technical body, it is anticipated the TOC guides any technical strategy discussions. The TOC collectively crafts the messaging and structure for this in response to interest areas expressed by the Governing Board or by technical trends in broader industry and within the ecosystem.
 
 #### KubeCon+CloudNativeCon (KCCN)
 
@@ -134,6 +134,35 @@ We operate on lazy consensus, if a TOC member is not participating in a discussi
 
 Another element of the TOC's work is to review project applications for Sandbox level. The TOC typically gets through 10-12 applications in a single session. TOC members are expected to review the "Upcoming" queue of the [Sandbox Application Board](https://github.com/orgs/cncf/projects/14), pose any clarifying or expanding questions on the application to the project in advance of the meeting in order to ensuring enough information is present to make a decision from. TOC members are also expected to speak about their perspective or opinion on including the project in CNCF. If the application is unclear on how the project fits into the ecosystem or if you feel we need a recommendation from the TAG and one has not yet been given, add a comment requesting the project present to the TAG and request a recommendation from the TAG on application by adding the GitHub handles of the TAG co-chairs and requesting it.
 
+#### Common auto-close criteria
+
+Many applications can be closed without deep TOC review if they fail to meet basic eligibility criteria. When reviewing applications, check for these common blockers:
+
+**License Compliance:**
+- Non-allowlist licenses (BSL, GPL, LGPL, AGPL) without approved exception
+- Promises to "convert to Apache 2.0 after acceptance" (license must be compliant before acceptance)
+- Projects may [request license exceptions](https://contribute.cncf.io/projects/submit-license-exception-request/) but these are rarely granted
+
+**MAINTAINERS File:**
+- Invalid links: contributors graph, external website, "N/A", "will be added"
+- Missing Company/Organization column demonstrating employer diversity
+- File doesn't exist at provided link
+
+**Organization Diversity:**
+- Fewer than 3 maintainers from 2+ different organizations (employers)
+- Common mistake: All maintainers from same company but members of different GitHub/GitLab orgs (does not meet requirement)
+- "Organization" = employer, not GitHub/GitLab organization memberships
+
+**Subproject Separation:**
+- Project is under another project's GitHub/GitLab organization without public vote issue from parent project maintainers
+- Applies to any parent project (not just CNCF projects)
+
+**Reference Architecture:**
+- Project is a reference architecture/implementation showing how to use existing tools rather than building a reusable tool
+- Should be directed to [CNCF Reference Architectures](https://architecture.cncf.io/)
+
+When closing applications for these reasons, provide specific guidance on what needs to be addressed before reapplying.
+
 ### Due Diligence (Incubating and Graduating)
 
 The primary work a TOC member engages is in conducting the due diligence of cloud native projects as they advance in their maturity, this process is commonly referred to the moving levels or maturation process. After a TOC member steps forward to sponsor a project, it is anticipated that a kick-off meeting is held to set expectations for what the process will be like, provide rough timelines, collect additional information and allow the project to ask any questions.  This kick-off is commonly conducted as a virtual meeting, not lasting more than an hour. Additionally, TOC members should anticipate a few hours of concentrated review, analyzing the project, its repository(ies), and clarifying the content of the due diligence. Additional time is expected to be spent conducting and summarizing Adopter interviews to ascertain the current usage of the project within the industry.
@@ -170,7 +199,7 @@ Ultimately voting is the final arbitration to reduce bias as a result of conflic
 
 ## Lobbying and Direct Messages
 
-Historically, the TOC has had a problem with “lobbying”, e.g. a project approaching individual TOC members for feedback / comment, often moving on to another TOC member if they didn’t get the answer they wanted. This was particularly true for the old Sandbox model and was a key reason for changing from sponsorship to a voting model. With this in mind, TOC members should disclose to the rest of the TOC if they have been approached by a project or individual within the community or have any hard or soft conflicts of interest. It is acceptable and expected that projects or community members will reach out to the TOC for advice, however to maintain consistency in expectations, *all TOC members should be made aware of those discussions, with the opportunity to provide additional information or recommendations*. This ensures the TOC maintains a strong, clear voice to our technical community, consistent with our processes, [values](https://github.com/cncf/foundation/blob/main/charter.md#3-values), [principles](../PRINCIPLES.md), and the Charter.
+Historically, the TOC has had a problem with “lobbying”, e.g. a project approaching individual TOC members for feedback / comment, often moving on to another TOC member if they didn’t get the answer they wanted. This was particularly true for the old Sandbox model and was a key reason for changing from sponsorship to a voting model. With this in mind, TOC members should disclose to the rest of the TOC if they have been approached by a project or individual within the community or have any hard or soft conflicts of interest. It is acceptable and expected that projects or community members will reach out to the TOC for advice, however to maintain consistency in expectations, *all TOC members should be made aware of those discussions, with the opportunity to provide additional information or recommendations*. This ensures the TOC maintains a strong, clear voice to our technical community, consistent with our processes, [values](https://github.com/cncf/foundation/blob/main/charter.md#3-values), [principles](https://github.com/cncf/toc/blob/main/PRINCIPLES.md), and the Charter.
 
 As the TOC continues to work through updating our documentation on the repo, older references to "seeking sponsorship" may result in projects reaching out to TOC members directly to "sponsor" their project for moving levels.  When this occurs, kindly direct them to the Moving Levels resources which details how projects are recommended for promotion to the next level.  The TOC strives to pick up projects from the backlog in the order which they are recommended for promotion, while balancing alignment of TOC member expertise, liaisoning assignment, and availability of our members. 
 
@@ -178,4 +207,4 @@ As the TOC continues to work through updating our documentation on the repo, old
 
 As a member of the TOC, you may receive requests to speak at conferences, community days or events, or even on podcasts and webcasts and contribute to or participate in panels, blogs, and articles. It is important that you are aware of the capacity that you are participating in these activities in.  Depending on the activity, particularly for conferences and community days or events facilitated by the CNCF, support may be available to allow a TOC member to attend and speak. If you are approached to do this for a CNCF facilitated event and interested, reach out to CNCF Staff.
 
-It is important that you conduct yourself in a manner expected of a Technical Leader that aligns, exemplifies, and promotes the [TOC Leadership Principles](../PRINCIPLES.md).
+It is important that you conduct yourself in a manner expected of a Technical Leader that aligns, exemplifies, and promotes the [TOC Leadership Principles](https://github.com/cncf/toc/blob/main/PRINCIPLES.md).

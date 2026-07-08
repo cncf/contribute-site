@@ -17,4 +17,4 @@ definition.
 
 ## References
 
-- [NPM Package mathjs-min Contains Credential Stealer](https://blog.phylum.io/phylum-discovers-npm-package-mathjs-min-contains-discord-token-grabber)
+- [Phylum Discovers NPM Package mathjs-min Contains Credential Stealer](https://www.veracode.com/blog/phylum-discovers-npm-package-mathjs-min-contains-discord-token-grabber/)
