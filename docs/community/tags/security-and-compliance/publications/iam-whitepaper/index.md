@@ -8,9 +8,7 @@ sidebar_position: 1
 <!-- cspell:disable -->
 **Version**: 1.1 **Created**: 22 Mar 2026 **Status**: WIP | In Review | **Approved**
 
-**Last Reviewed**: 24 Apr 2026 **PDF Published**: TBD **Release Version**: 1.1
-
-**Final PDF Approvers** TBD
+**Last Reviewed**: 24 Apr 2026 **PDF Published**: 04 Jun 2026 **Release Version**: 1.1
 
 **Version 1 (Apr 2026)**
 
