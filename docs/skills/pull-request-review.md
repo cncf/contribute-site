@@ -52,6 +52,7 @@ Reviewers should pay particular attention to:
 - changes to workflows, scripts, or automation that may affect CI or local build behavior
 - any edits to files under `.github/` that may change PR or review expectations
 - correct usage of [CNCF Glossary](https://glossary.cncf.io/)
+- cspell/spellcheck configurations — the `check:spelling` script is configured with `.cspell.yml` which might be missing from the repository root; check spelling using default cspell settings on changed files if needed
 
 ## Suggested output format
 
