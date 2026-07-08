@@ -1020,7 +1020,7 @@ It is critical to note, however, that organizations are entirely responsible for
      The CNCF and Cloud Native Security provide no endorsement of the United States Air Force, the US Department of Defense, or its partner organizations. The reference of the USAFSoftware Factory is from the perspective of good security implemented in a base framework, and the intent is to build on top of this work.
 
 [^3]:
-     https://github.com/cncf/tag-security/blob/main/supply-chain-security/supply-chain-security-paper/secure-supply-chain-assessment.md
+     https://github.com/cncf/contribute-site/blob/main/docs/projects/best-practices/security/supply-chain/secure-supply-chain-assessment.md
 
 [^4]:
      https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/

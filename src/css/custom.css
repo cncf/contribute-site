@@ -108,3 +108,8 @@
 .navbar__logo:not(#\#):not(#\#) {
   height: 2.5rem;
 }
+
+.controls-catalog-doc a[id^='crosswalk-'] {
+    scroll-margin-top: 5rem;
+}
+

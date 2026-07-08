@@ -21,7 +21,7 @@ Data, Storage, Network, DNS, Compute, Service Mesh, Infrastructure-as-Code, Edge
 |------|--------|--------------|------|
 | Dylan Page | [@GenPage](https://github.com/GenPage) | - | 2025-07-01 to 2027-06-30 |
 | Kashif Khan | [@kashifest](https://github.com/kashifest) | - | 2025-07-01 to 2027-06-30 |
-| Xing Yang | [@xing-yang](https://github.com/xing-yang) | - | 2025-07-01 to 2026-06-30 |
+| Xing Yang | [@xing-yang](https://github.com/xing-yang) | - | 2026-06-09 to 2028-06-30 |
 
 ### Tech Leads
 
@@ -35,8 +35,9 @@ Data, Storage, Network, DNS, Compute, Service Mesh, Infrastructure-as-Code, Edge
 
 ### TOC Liaisons
 
-- Ricardo Rocha ([@rochaporto](https://github.com/rochaporto))
-- Karena Angell ([@angellk](https://github.com/angellk))
+- Brandt Keller ([@brandtkeller](https://github.com/brandtkeller))
+- Faseela K ([@kfaseela](https://github.com/kfaseela))
+- Alex Chircop ([@chira001](https://github.com/chira001))
 
 ## Meetings
 
@@ -44,6 +45,7 @@ Data, Storage, Network, DNS, Compute, Service Mesh, Infrastructure-as-Code, Edge
 
 - **Calendar**: [View and join meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-infrastructure?view=list)
 - **Recordings**: [YouTube Channel](https://www.youtube.com/@CNCFTAGInfrastructure)
+- **Meeting Notes**: [View notes](https://notes.cncf.io/6iwUCAaIQ72QAKr4MTCnUQ)
 
 All meetings are open to the public. No registration required - simply join the meeting from the calendar link.
 
@@ -107,10 +109,6 @@ TAG Infrastructure works on several key infrastructure domains:
 - Data sovereignty requirements
 - Distributed infrastructure management
 - Hybrid and multi-cloud patterns
-
-## Subprojects
-
-- **Infrastructure-sub-foo**: [Mailing List](https://lists.cncf.io/g/cncf-tag-infrastructure)
 
 ## Initiatives
 

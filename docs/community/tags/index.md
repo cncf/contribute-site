@@ -39,7 +39,7 @@ The CNCF has five active Technical Advisory Groups organized by domain:
 Improving the developer experience in cloud native environments through better tools, frameworks, and practices.
 
 **Leadership**: 3 Chairs, 5 Tech Leads  
-**TOC Liaison**: Katie Gamanji ([@kgamanji](https://github.com/kgamanji))
+**TOC Liaisons**: Mauricio Salatino ([@salaboy](https://github.com/salaboy)), Ahmed Bebars ([@abebars](https://github.com/abebars)), Joseph Sandoval ([@jrsapi](https://github.com/jrsapi))
 
 - [Learn more →](./developer-experience/index.md)
 - [Slack: #tag-developer-experience](https://cloud-native.slack.com/archives/C08KGCXB458)
@@ -56,7 +56,7 @@ Improving the developer experience in cloud native environments through better t
 Developing practices, standards, and assessments for core cloud native infrastructure to enable scalable, resilient, secure, and performant systems.
 
 **Leadership**: 3 Chairs, 5 Tech Leads  
-**TOC Liaisons**: Ricardo Rocha ([@rochaporto](https://github.com/rochaporto)), Karena Angell ([@angellk](https://github.com/angellk))
+**TOC Liaisons**: Brandt Keller ([@brandtkeller](https://github.com/brandtkeller)), Faseela K ([@kfaseela](https://github.com/kfaseela)), Alex Chircop ([@chira001](https://github.com/chira001))
 
 - [Learn more →](./infrastructure/index.md)
 - [Slack: #tag-infrastructure](https://cloud-native.slack.com/archives/C08KBH3RA1K)
@@ -73,7 +73,7 @@ Developing practices, standards, and assessments for core cloud native infrastru
 Dedicated to operational resilience and reliability practices in cloud native systems.
 
 **Leadership**: 3 Chairs, 5 Tech Leads  
-**TOC Liaison**: Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard))
+**TOC Liaisons**: Chad Beaudin ([@chadbeaudin](https://github.com/chadbeaudin)), Faseela K ([@kfaseela](https://github.com/kfaseela)), Mauricio Salatino ([@salaboy](https://github.com/salaboy)), Mario Fahlandt ([@mfahlandt](https://github.com/mfahlandt)), Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard))
 
 - [Learn more →](./operational-resilience/index.md)
 - [Slack: #tag-operational-resilience](https://cloud-native.slack.com/archives/C08KGDENK34)
@@ -90,7 +90,7 @@ Dedicated to operational resilience and reliability practices in cloud native sy
 Addressing security and compliance concerns in cloud native systems through best practices, assessments, and tooling.
 
 **Leadership**: 3 Chairs, 6 Tech Leads  
-**TOC Liaisons**: Faseela K ([@kfaseela](https://github.com/kfaseela)), Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard))
+**TOC Liaisons**: Karena Angell ([@angellk](https://github.com/angellk)), Mario Fahlandt ([@mfahlandt](https://github.com/mfahlandt))
 
 - [Learn more →](./security-and-compliance/index.md)
 - [Slack: #tag-security-and-compliance](https://cloud-native.slack.com/archives/C08JZ9YLAA3)
@@ -107,7 +107,7 @@ Addressing security and compliance concerns in cloud native systems through best
 Defining practices and standards for cloud native workload execution within systems, applications, and architectures.
 
 **Leadership**: 3 Chairs, 5 Tech Leads  
-**TOC Liaisons**: Alex Chircop ([@chira001](https://github.com/chira001)), Kevin Wang ([@kevin-wangzefeng](https://github.com/kevin-wangzefeng))
+**TOC Liaisons**: Alex Chircop ([@chira001](https://github.com/chira001)), Jeremy Rickard ([@jeremyrickard](https://github.com/jeremyrickard)), Joseph Sandoval ([@jrsapi](https://github.com/jrsapi)), Chad Beaudin ([@chadbeaudin](https://github.com/chadbeaudin))
 
 - [Learn more →](./workloads-foundation/index.md)
 - [Slack: #tag-workloads-foundation](https://cloud-native.slack.com/archives/C08K71W9HAS)

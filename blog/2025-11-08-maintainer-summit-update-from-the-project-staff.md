@@ -7,11 +7,11 @@ tags: [maintainers, community, projects, services]
 
 Greetings maintainers! We have some exciting updates about resources newly available to you and your projects.
 
-And please make sure to take the [maintainer survey](http://maintainers-survey.cncf.io)! This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and influence our priorities in 2026.
+And please make sure to take the [maintainer survey](https://maintainers-survey.cncf.io)! This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and influence our priorities in 2026.
 
 :::tip Take the Maintainer Survey
 
-**Help us help you**: [maintainers-survey.cncf.io](http://maintainers-survey.cncf.io)
+**Help us help you**: [maintainers-survey.cncf.io](https://maintainers-survey.cncf.io)
 
 :::
 
@@ -19,7 +19,7 @@ And please make sure to take the [maintainer survey](http://maintainers-survey.c
 
 ### GitHub Copilot
 
-We are excited to announce an expanded partnership with GitHub to provide free Copilot Enterprise licenses to CNCF project maintainers. This benefit is part of a limited pilot program and will be rolling out in the coming weeks. Eligibility will be validated against the list at [maintainers.cncf.io](http://maintainers.cncf.io), so please ensure your project's information is up to date.
+We are excited to announce an expanded partnership with GitHub to provide free Copilot Enterprise licenses to CNCF project maintainers. This benefit is part of a limited pilot program and will be rolling out in the coming weeks. Eligibility will be validated against the list at [maintainers.cncf.io](https://maintainers.cncf.io), so please ensure your project's information is up to date.
 
 ### Docker Sponsored Open Source Program
 
@@ -37,9 +37,9 @@ The latest version of [Insights was launched at Open Source Summit in June](http
 
 [The CNCF has moved its community calendar to PCC](https://www.cncf.io/blog/2025/10/23/cncf-embraces-lfx-self-service-for-calendar-management/) which now enables maintainers to publish and update their own entries on the [CNCF community calendar](https://www.cncf.io/calendar/). This eliminates a project and staff bottleneck as entries were previously handled as Service Desk tickets. PCC also recently added an often-requested feature: the automatic upload of project meetings to the project's designated YouTube channel. Projects have control over any video changes before publication.
 
-### [ask.cncf.io](http://ask.cncf.io)
+### [ask.cncf.io](https://ask.cncf.io)
 
-[ask.cncf.io](http://ask.cncf.io) is an AI assistant built with Dosu designed to answer questions about the Cloud Native Computing Foundation (CNCF) ecosystem, including projects, governance, events, and contributor information. This is not a general LLM chatbot. It only contains information from official repositories and documentation across the CNCF. Give it a try and come back often to see how it improves over time.
+[ask.cncf.io](https://ask.cncf.io) is an AI assistant built with Dosu designed to answer questions about the Cloud Native Computing Foundation (CNCF) ecosystem, including projects, governance, events, and contributor information. This is not a general LLM chatbot. It only contains information from official repositories and documentation across the CNCF. Give it a try and come back often to see how it improves over time.
 
 ### [contribute.cncf.io](http://contribute.cncf.io)
 
@@ -49,7 +49,7 @@ We've relaunched the [contribute.cncf.io](http://contribute.cncf.io) site 🎉. 
 
 * The [contribute.cncf.io resource page](https://contribute.cncf.io/resources/) is up to date with everything that's available to projects and maintainers.
 * [Service Desk](https://servicedesk.cncf.io/) is where you can make a variety of requests, ask questions, and connect with CNCF staff.
-* Please make sure all of your maintainers are up to date on [maintainers.cncf.io](http://maintainers.cncf.io). This is how we validate Maintainer Summit registrations, send invites to Service Desk, and make sure projects are up to speed on upcoming event opportunities.
+* Please make sure all of your maintainers are up to date on [maintainers.cncf.io](https://maintainers.cncf.io). This is how we validate Maintainer Summit registrations, send invites to Service Desk, and make sure projects are up to speed on upcoming event opportunities.
 
 ## Other news
 
@@ -58,11 +58,11 @@ We've relaunched the [contribute.cncf.io](http://contribute.cncf.io) site 🎉. 
 
 ## Please fill out the survey so we can serve you better
 
-* Yes, another reminder 🙂. Please make sure to take the [maintainer survey](http://maintainers-survey.cncf.io)! This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and influence our priorities in 2026.
+* Yes, another reminder 🙂. Please make sure to take the [maintainer survey](https://maintainers-survey.cncf.io)! This is your chance to tell us how we're doing, gauge your understanding of the benefits of hosting a project at the CNCF, and influence our priorities in 2026.
 
 :::tip Take the Maintainer Survey
 
-**Help us help you**: [maintainers-survey.cncf.io](http://maintainers-survey.cncf.io)
+**Help us help you**: [maintainers-survey.cncf.io](https://maintainers-survey.cncf.io)
 
 :::
 

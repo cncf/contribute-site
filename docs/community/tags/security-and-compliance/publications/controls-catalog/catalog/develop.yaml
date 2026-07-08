@@ -1,0 +1,142 @@
+guidelines:
+- id: CNSC-63
+  objective: A dedicated production environment is established
+  title: Production Environment
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Ensure that production workloads are in a separate, dedicated environment from non-production workloads. In the context
+    of containers, this can mean separate clusters. In the case of VMs, separate networks.
+- id: CNSC-64
+  objective: Dynamic deployments are leveraged for safer releases
+  title: Dynamic Deployments
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Blue/Green, Alpha/Beta, Canary, red-black deployments
+- id: CNSC-65
+  objective: Vulnerability and configuration scanning is integrated in the IDE or at the pull request
+  title: Early Vulnerability Scanning
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-66
+  objective: Dedicated development, testing, and production environments are established
+  title: Environment Segregation
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-67
+  objective: Tests are built for business-critical code
+  title: Business-Critical Code Testing
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-68
+  objective: Tests are built for business-critical infrastructure
+  title: Infrastructure Testing
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-69
+  objective: Test suites are able to be run locally
+  title: Local Test Execution
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-70
+  objective: Test suites are available to run in a shared environment
+  title: Shared Test Execution
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-71
+  objective: Two non-author reviewers or approvers are required prior to merging
+  title: Code Review Requirements
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-72
+  objective: Code is clean and well commented
+  title: Code Quality
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-73
+  objective: Full infrastructure tests are used
+  title: Full Infrastructure Testing
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-74
+  objective: Regression tests are used
+  title: Regression Testing
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-75
+  objective: Test suites are updated against new and emerging threats and developed into security regression tests
+  title: Security Regression Testing
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-76
+  objective: A dedicated testing environment is established
+  title: Testing Environment
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-77
+  objective: Continuous integration server is isolated
+  title: CI Server Isolation
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-78
+  objective: Threat model results are used to determine ROI for test development
+  title: Threat-Informed Test Development
+  group: Develop
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-195
+  objective: Secure configuration is implemented as the default state of the system
+  title: Secure Configuration Defaults
+  group: Develop
+  applicability:
+  - CNSWP-v2.0
+  recommendations:
+  - Transitioning towards such a system involves making security a design requirement, inheriting default security configuration
+    and supporting an exception process
+- id: CNSC-259
+  objective: Integrate vulnerability and configuration scanning in both the IDE and at the CI system during pull request
+  title: Early Vulnerability Scanning
+  group: Develop
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-265
+  objective: Implement at least one other non-author reviewer/approver prior to merging
+  title: Code Review Requirements
+  group: Develop
+  applicability:
+  - CNSWP-v2.0
+- id: CNSC-271
+  objective: Continuous integration server is isolated and hardened
+  title: CI Server Isolation
+  group: Develop
+  applicability:
+  - CNSWP-v2.0

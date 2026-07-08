@@ -7,7 +7,7 @@ type: single
 
 This is the main portal you should use to get support, you should receive a response within 48 hours.
 
-## [maintainers.cncf.io](http://maintainers.cncf.io/)
+## [maintainers.cncf.io](https://maintainers.cncf.io/)
 
 All CNCF maintainers are listed in this file, if you are a maintainer of a CNCF Project and need to add yourself follow these TODO: instructions.
 
