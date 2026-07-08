@@ -2,13 +2,12 @@
 #
 # cncf/cncf-projects - cncf projects team staff
 # cncf/cncf-toc - both TOC & TOC Shadows
-# cncf/cncf-toc-voters - JUST the TOC
 # cncf/tag-*-leads - TAG leads for each TAG
 #
 # teams config: https://github.com/cncf/people/blob/main/config.yaml
 
 # default catch-all for approvals
-* @cncf/cncf-projects @cncf/cncf-toc-voters @cncf/cncf-tech-docs
+* @cncf/cncf-projects @cncf/cncf-toc @cncf/cncf-tech-docs
 
 
 # TAG directories
