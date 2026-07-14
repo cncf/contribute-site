@@ -29,8 +29,9 @@ Databases, Microservices, Streaming, Messaging, API Management, Dev Frameworks.
 |------|--------|--------------|------|
 | Joshua Bezaleel Abednego | [@joshuabezaleel](https://github.com/joshuabezaleel) | - | 2025-07-02 to 2027-06-30 |
 | Julien Semaan | [@julsemaan](https://github.com/julsemaan) | - | 2025-07-02 to 2027-06-30 |
-| Kevin Dubois | [@kdubois](https://github.com/kdubois) | - | 2025-07-02 to 2026-06-30 |
+| Kevin Dubois | [@kdubois](https://github.com/kdubois) | - | 2026-07-07 to 2028-07-06 |
 | Mélony QIN | [@cloudmelon](https://github.com/cloudmelon) | - | 2025-07-02 to 2027-06-30 |
+| Sean McGinnis | [@stmcginnis](https://github.com/stmcginnis) | - | 2026-07-07 to 2028-07-06 |
 
 ### TOC Liaisons
 
