@@ -29,12 +29,12 @@ Security Hygiene, Policy-as-Code, Compliance, Auditing, Threat Modeling, Secure 
 
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
-| Brandt Keller | [@brandtkeller](https://github.com/brandtkeller) | Defense Unicorns | 2025-07-02 to 2026-06-30 |
-| Eddie Knight | [@eddie-knight](https://github.com/eddie-knight) | Sonatype | 2025-07-01 to 2026-06-30 |
-| Jennifer Power | [@jpower432](https://github.com/jpower432) | Red Hat | 2025-07-02 to 2026-06-30 |
+| Andrew McNamara | [@arewm](https://github.com/arewm) | Red Hat | 2026-07-07 to 2028-07-06 |
 | Justin Cappos | [@JustinCappos](https://github.com/JustinCappos) | New York University | 2025-07-02 to 2027-06-30 |
-| Michael Lieberman | [@mlieberman85](https://github.com/mlieberman85) | Kusari | 2025-07-02 to 2026-06-30 |
-| Yoshiyuki Tabata | [@y-tabata](https://github.com/y-tabata) | Hitachi | 2025-07-02 to 2026-06-30 |
+| Maxime Coquerel | [@zigmax](https://github.com/zigmax) | - | 2026-07-07 to 2028-07-06 |
+| Sherine Khoury | [@sherine-k](https://github.com/sherine-k) | - | 2026-07-07 to 2028-07-06 |
+| Shuting Zhao | [@realshuting](https://github.com/realshuting) | Nirmata | 2026-07-07 to 2028-07-06 |
+| Yoshiyuki Tabata | [@y-tabata](https://github.com/y-tabata) | Hitachi | 2026-07-07 to 2028-07-06 |
 
 ### TOC Liaisons
 
