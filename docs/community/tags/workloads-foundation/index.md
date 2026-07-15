@@ -27,11 +27,11 @@ To define and advance practices and standards for fundamental cloud native workl
 
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
-| Alexander D. Kanevskiy | [@kad](https://github.com/kad) | Intel | 2025-07-02 to 2026-06-30 |
 | Hongcai Ren | [@RainbowMango](https://github.com/RainbowMango) | Huawei | 2025-07-02 to 2027-06-30 |
 | Kante Yin | [@kerthcet](https://github.com/kerthcet) | Hiverge | 2025-07-02 to 2027-06-30 |
+| Pavan Madduri | [@pmady](https://github.com/pmady) | W.W.Grainger | 2026-07-07 to 2028-07-06 |
 | Rajas Kakodkar | [@rajaskakodkar](https://github.com/rajaskakodkar) | Broadcom | 2025-07-02 to 2027-06-30 |
-| Stephen Rust | [@srust](https://github.com/srust) | Akamai | 2025-07-02 to 2026-06-30 |
+| Stephen Rust | [@srust](https://github.com/srust) | Akamai | 2026-07-07 to 2028-07-06 |
 
 ### TOC Liaisons
 
