@@ -1,4 +1,4 @@
-﻿---
+---
 title: Environmental Sustainability Technical Community Group
 sidebar_label: Environmental Sustainability
 tags:
@@ -9,15 +9,11 @@ tags:
 
 # Environmental Sustainability Technical Community Group
 
-The Environmental Sustainability Technical Community Group (TCG) continues the work of the former CNCF TAG Environmental Sustainability, advocating for, developing, supporting, and evaluating environmental sustainability initiatives in cloud native technologies.
+The Environmental Sustainability Technical Community Group (TCG) advocates for, develops, supports, and evaluates environmental sustainability initiatives in cloud native technologies and practices.
 
 ## Mission
 
-The Environmental Sustainability TCG serves as a community rallying point for discussing, sharing knowledge, and coordinating initiatives that help reduce the energy consumption and carbon footprint of cloud native tooling. The group continues to grow a community of practitioners, vendors, and end users focused on making sustainability a first-class concern across the cloud native landscape.
-
-## Background
-
-This TCG carries forward the work of the former TAG Environmental Sustainability, which was consolidated into TAG Operational Resilience as part of the 2025 CNCF TAG restructuring. The TCG gives the sustainability community - over 800 members strong on CNCF Slack - a dedicated, discoverable home to continue its work.
+The Environmental Sustainability TCG serves as a community rallying point for discussing, sharing knowledge, and coordinating initiatives that help reduce the energy consumption and carbon footprint of cloud native technologies and practices. The group brings together practitioners, vendors, and end users focused on making sustainability a first-class concern across the cloud native landscape.
 
 ## Focus Areas
 
@@ -29,7 +25,6 @@ This TCG carries forward the work of the former TAG Environmental Sustainability
 
 ### Best Practices and Guidance
 
-- **Green Reviews**: Evaluating the environmental impact of CNCF projects and sharing recommendations
 - **Optimization Guidance**: Recommendations for reducing consumption in cloud native deployments
 - **Education**: Resources for end users, developers, and stakeholders on sustainable cloud native practices
 
@@ -67,10 +62,6 @@ To become an organizer or learn more about current organizers, check the group's
 - [Technical Community Groups Overview](../index.md)
 - [TCG Governance](../../governance/tech-group-governance.md#technical-community-groups)
 - [CNCF Community Groups Program](https://github.com/cncf/communitygroups)
-
-### Related CNCF Groups
-
-- [TAG Operational Resilience](../../tags/operational-resilience/index.md) - Current home of legacy TAG ENV initiatives
 
 ### External Resources
 
