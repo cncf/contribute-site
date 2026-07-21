@@ -63,6 +63,10 @@ To become an organizer or learn more about current organizers, check the group's
 - [TCG Governance](../../governance/tech-group-governance.md#technical-community-groups)
 - [CNCF Community Groups Program](https://github.com/cncf/communitygroups)
 
+### Related CNCF Groups
+
+- [TAG Operational Resilience](../../tags/operational-resilience/index.md) - Broader operational and sustainability topics
+
 ### External Resources
 
 - [Kepler](https://sustainable-computing.io/) - Kubernetes-based Efficient Power Level Exporter
