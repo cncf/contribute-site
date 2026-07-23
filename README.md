@@ -50,12 +50,14 @@ npm install
 
 There are two different options you can adopt to run this website locally:
 
-> Note: `npm start` and `npm run build` automatically sync TechDocs content into
-> `docs/techdocs/` if it does not exist yet. The first run may take longer
-> because it clones `https://github.com/cncf/techdocs.git`.
+> Note: `npm start` and `npm run build` automatically sync TechDocs content
+> into `docs/techdocs/` if it does not exist yet, and build scripts also sync
+> remote-maintained docs such as `docs/community/awards.md`. The first run may
+> take longer because it fetches source content from upstream repositories.
 >
-> Source of truth: [@cncf/techdocs](https://github.com/cncf/techdocs). Treat
-> local `docs/techdocs/` content in this repository as synced/generated.
+> Source of truth: [@cncf/techdocs](https://github.com/cncf/techdocs) for
+> TechDocs and [@cncf/awards](https://github.com/cncf/awards) for Community
+> Awards. Treat the synced local copies in this repository as generated.
 
 #### Option 1: Using Devcontainer
 
