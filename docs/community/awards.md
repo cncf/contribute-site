@@ -1,31 +1,28 @@
 ---
-title: Community Awards
-description: Individuals and organizations that have made significant contributions to the cloud native ecosystem
+title: "Community Awards"
+description: "Individuals and organizations that have made significant contributions to the cloud native ecosystem"
 sidebar_position: 7
 ---
+# CNCF Community Awards
 
 CNCF Community Awards will reward the community members, developers and advocates working hardest to advance cloud native.
 
 We traditionally have the following awards, rewarded at different times of each calendar year:
 
+- **Top Ambassador**: A champion for the cloud native space, this individual helps spread awareness of the CNCF and its projects. The CNCF Ambassador leverages multiple platforms, both online as well as speaking engagements, driving interest and excitement around the ecosystem.
 - **Top Committer**: This award recognizes excellence in technical contributions to CNCF and its hosted projects. The CNCF Top Committer has made key commits to projects and, more importantly, contributes in a way that benefits the project as a whole.
-- **Top End User**: The special award for the [CNCF End User Community](https://www.cncf.io/enduser/) representatives in recognition of major contributions to the cloud native ecosystem. All end users can be nominated, but end user members can not win two consecutive years in a row.
-- **Lorem Ipsum (prev. Top Documentarian)** (since 2021): This award recognizes excellence in documentation contributions to CNCF and its projects. Excellent technical documentation is one of the best ways projects can lower the barrier to contribution.
+- **Top End User**: The special award for the [CNCF End User Community](https://www.cncf.io/enduser/) representatives in recognition of major contributions to the cloud native ecosystem. All end users can be nominated, but end user members can not win two consecutive years in a row. The winner is announced once per year at KubeCon + CloudNativeCon North America and is selected from [Case Studies](https://www.cncf.io/case-studies/), [Video Spotlights](https://www.cncf.io/video-spotlight/), [Reference Architectures](https://architecture.cncf.io/), and similar content contributed by end users. To be eligible for consideration for a particular year's award, the contribution must be received (i) at least 6 weeks prior to that year's KubeCon North America conference and (ii) within the last 15 months.
+- **Top Documentarian** (since 2021): This award recognizes excellence in documentation contributions to CNCF and its projects. Excellent technical documentation is one of the best ways projects can lower the barrier to contribution.
 - **Chop Wood Carry Water Award**: This award is given to community members helping behind the scenes, dedicating countless hours to open source projects, hosting and building community meetups, and often completing thankless tasks for the benefit of the community.
 - **The TAGGIE**: This award is presented to the person who has done the most to advance CNCF’s [Technical Advisory Groups](https://github.com/cncf/toc/tree/main/tags) (TAGs). TAGs scale contributions by the CNCF technical and user community, while retaining integrity and increasing quality in support of CNCF’s mission of making cloud native ubiquitous.
+- **Small but Mighty**: This award recognizes the company or organization in the community with the largest impact. CNCF is made up of hundreds of thousands of individuals and organizations, each providing valuable contributions, but this award is presented to an organization punching above its weight.
 
 ## Table of contents
 
-- CNCF Community Awards
+- [CNCF Community Awards](#cncf-community-awards)
 - [Awarded](#awarded)
   - [2025](#2025)
-    - [Top End Users](#2025-top-end-users)
-    - [Lifetime Achievement](#2025-lifetime-achievement)
-    - [Top Committer](#2025-top-committer)
-    - [Lorem Ipsum (Previously Top Documentarian)](#2025-lorem-ipsum-previously-top-documentarian)
-    - [Chop Wood Carry Water](#2025-chop-wood-carry-water)
-    - [The TAGGIE](#2025-the-taggie)
-    - [Outstanding Mentor](#2025-outstanding-mentor)
+    - [Top End User](#2025-top-end-user)
   - [2024](#2024)
     - [Top End User](#2024-top-end-user)
     - [Lifetime Achievement](#2024-lifetime-achievement)
@@ -80,9 +77,8 @@ We traditionally have the following awards, rewarded at different times of each 
 ### 2025
 
 #### 2025 Top End Users
-
-- [ANT Group](https://www.cncf.io/announcements/2025/04/03/cloud-native-computing-foundation-announces-ant-group-as-the-top-end-user-award-winner/)
-- [Michelin](https://www.cncf.io/announcements/2025/11/12/cncf-honors-innovators-and-defenders-with-2025-community-awards-at-kubecon-cloudnativecon-north-america/)
+  - [ANT Group](https://www.cncf.io/announcements/2025/04/03/cloud-native-computing-foundation-announces-ant-group-as-the-top-end-user-award-winner/)
+  - [Michelin](https://www.cncf.io/announcements/2025/11/12/cncf-honors-innovators-and-defenders-with-2025-community-awards-at-kubecon-cloudnativecon-north-america/)
 
 #### 2025 Lifetime Achievement
 
@@ -115,7 +111,7 @@ John Howard ([howardjohn](https://github.com/howardjohn))
 - Marina Moore ([mnm678](https://github.com/mnm678))
 - Mauricio Salatino ([salaboy](https://github.com/salaboy))
 
-#### 2025 Outstanding Mentor
+#### 2025 Outsanding Mentor
 
 Lee Calcote ([leecalcote](https://github.com/leecalcote))
 
