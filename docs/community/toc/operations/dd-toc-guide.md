@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # TOC Due Diligence Guide
 
-This document provides the TOC with guidance on how to execute Due Diligence of CNCF projects for each level of maturity.  It complements the Moving Levels process detailed in the [Process Directory](../process/README.md).
+This document provides the TOC with guidance on how to execute Due Diligence of CNCF projects for each level of maturity. It complements the Moving Levels process detailed in the [Process Directory](https://github.com/cncf/toc/tree/main/process).
 
 ## Quick Links
 
@@ -70,7 +70,7 @@ All TOC members are expected to assist in the triaging of project applications t
 This light-weight triage/evaluation must cover the list below (it is not exhaustive and is a minimum triage set from the [incubation template retrieved 12 DEC 2025](https://github.com/cncf/toc/blob/c2943ffc98064dd88e9ef9c4afd5a8856898942f/.github/ISSUE_TEMPLATE/template-incubation-application.md)):
 * Adoption Assertion includes the Adopters file link, and the project has an entry in the Adopter's form responses to provide 5-7 adopters to reach out to. [Check here](https://github.com/cncf/toc/blob/main/FAQ.md#what-is-the-definition-of-an-adopter) for the definition of an Adopter.
 * Application Process Principles provides
-  * Either: the link to the Recording, issue, and/or meeting notes from a TAG meeting where the project presented with the domain specific TAG -or- completion of the [General Technical Review (GTR)](../toc_subprojects/project-reviews-subproject/general-technical-questions.md) or [Domain Technical Review (DTR)](../toc_subprojects/project-reviews-subproject/tag-domain-technical-review-template.md) in lieu of a TAG meeting
+  * Either: the link to the Recording, issue, and/or meeting notes from a TAG meeting where the project presented with the domain specific TAG -or- completion of the [General Technical Review (GTR)](https://github.com/cncf/toc/blob/main/toc_subprojects/project-reviews-subproject/general-technical-questions.md) or [Domain Technical Review (DTR)](https://github.com/cncf/toc/blob/main/toc_subprojects/project-reviews-subproject/tag-domain-technical-review-template.md) in lieu of a TAG meeting
   * assertion of vendor neutrality
   * assertion of review and acknowledge of expectations of CNCF projects and requirements for moving forward through the CNCF maturity levels
   * provided any additional documentation links the project feels is appropriate for its type

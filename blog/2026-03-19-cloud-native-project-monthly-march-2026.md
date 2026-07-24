@@ -9,6 +9,8 @@ Welcome to the March 2026 edition of the Cloud Native Project Monthly (CNPM) New
 
 CNCF staff will be at the [Maintainer Summit](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/maintainer-summit/) and the [Project Pavilion](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/project-engagement/#project-pavilion) throughout the week. Please find us if you have any questions about support for your projects.
 
+<!-- truncate -->
+
 ## Table of contents
 
 * [PCC Adoption Gathers Momentum: Streamline Your Project's Meetings](#pcc-adoption-gathers-momentum-streamline-your-projects-meetings)
@@ -16,8 +18,6 @@ CNCF staff will be at the [Maintainer Summit](https://events.linuxfoundation.org
 * [Rolling out `.project` for Project Metadata](#rolling-out-project-for-project-metadata)
 * [Looking for a New Role? Check out GitJobs](#looking-for-a-new-role-check-out-gitjobs)
 * [Happenings at KubeCon + CloudNativeCon EU](#happenings-at-kubecon--cloudnativecon-eu)
-
-<!-- truncate -->
 
 ## PCC Adoption Gathers Momentum: Streamline Your Project’s Meetings
 

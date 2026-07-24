@@ -15,6 +15,8 @@ And please take the 2H 2025 Maintainer Survey when you have a chance. It will he
 
 Thank you, we hope you enjoy the end of year downtime and we wish you the best in the new year!
 
+<!-- truncate -->
+
 * [✍️ Please take the Maintainer Survey](#️-please-take-the-maintainer-survey)
 * [🚲 Upcoming project opportunity deadline (TODAY!)](#-upcoming-project-opportunity-deadline-today)
 * [🎥 Maintainer Summit recordings available](#-maintainer-summit-recordings-available)
@@ -26,10 +28,7 @@ Thank you, we hope you enjoy the end of year downtime and we wish you the best i
 * [🕵️ Kusari Inspector free for projects](#️-kusari-inspector-free-for-projects)
 * [🐳 Docker Hardened Images free for projects](#-docker-hardened-images-free-for-projects)
 * [📈 Telemetry collection and privacy guidelines](#-telemetry-collection-and-privacy-guidelines)
-* [🙏 Please take the Maintainer Survey](#-please-take-the-maintainer-survey-1)
 * [🎉 Thank you for an amazing year](#-thank-you-for-an-amazing-year)
-
-<!-- truncate -->
 
 ## ✍️ Please take the Maintainer Survey
 

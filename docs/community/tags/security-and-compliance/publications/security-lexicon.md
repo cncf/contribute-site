@@ -23,7 +23,6 @@ SPDX-License-Identifier: CC-BY-4.0
 
 - [Cloud Native Security Lexicon](#cloud-native-security-lexicon)
   - [Index](#index)
-- [Cloud Native Security Lexicon](#cloud-native-security-lexicon-1)
 - [Executive Summary](#executive-summary)
 - [Purpose](#purpose)
 - [Lexicon](#lexicon)
@@ -76,8 +75,6 @@ SPDX-License-Identifier: CC-BY-4.0
     - [Software Composition Analysis](#software-composition-analysis)
     - [Runtime compliance or Runtime Application self-protection (RASP)](#runtime-compliance-or-runtime-application-self-protection-rasp)
 - [Acknowledgements](#acknowledgements)
-
-# Cloud Native Security Lexicon
 
 # Executive Summary
 
