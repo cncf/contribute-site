@@ -21,7 +21,6 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ## Index
 
-- [Index](#index)
 - [Executive Summary](#executive-summary)
 - [Purpose](#purpose)
 - [Lexicon](#lexicon)

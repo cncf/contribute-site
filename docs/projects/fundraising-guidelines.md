@@ -55,7 +55,7 @@ Before creating an initiative, document:
 - Use project channels to announce and update initiatives.
 - Acknowledge sponsors consistently and transparently.
 - Follow CNCF vendor-neutrality expectations in all fundraising and sponsor
-	messaging.
+  messaging.
 
 ### 4. Publish updates during and after fundraising
 
