@@ -1,5 +1,6 @@
 ---
 title: Update a Project in the CNCF Landscape
+sidebar_position: 9
 ---
 
 Project information like website URLs, graduation and incubation dates, and other crucial information about projects is maintained at [landscape.cncf.io](https://l.cncf.io).

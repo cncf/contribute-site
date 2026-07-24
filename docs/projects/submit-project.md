@@ -1,6 +1,7 @@
 ---
 title: How to Submit a Project
 description: A guide on how to submit a project to the CNCF
+sidebar_position: 8
 ---
 
 The primary entry point into the CNCF is through the [Sandbox application process](https://github.com/cncf/sandbox). On rare occasions, projects can apply directly to Incubation. In any case, applications, reviews, and onboarding steps follow the same steps.
