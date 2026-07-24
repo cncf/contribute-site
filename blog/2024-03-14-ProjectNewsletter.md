@@ -70,4 +70,4 @@ This limit is subject to change as we watch adoption. We’ll let you know if th
 
 ## Contribute!
 Want to contribute to the next newsletter? 
-[Contribute Today!](projects@cncf.io)
+[Contribute Today!](mailto:projects@cncf.io)

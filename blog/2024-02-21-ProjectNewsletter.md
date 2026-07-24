@@ -76,7 +76,7 @@ Here are the upcoming deadlines for CFPs:
 
 
 Want to contribute to March's newsletter? 
-[Contribute Today!](projects@cncf.io)
+[Contribute Today!](mailto:projects@cncf.io)
 
 
 

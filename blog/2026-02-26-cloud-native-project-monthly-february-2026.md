@@ -11,6 +11,8 @@ We hope you’re excited for [KubeCon + CloudNativeCon Europe](https://events.li
 
 You can learn more about the event and other worldwide KubeCon + CloudNativeCon opportunities in this month’s newsletter.
 
+<!-- truncate -->
+
 * [Scholarships & Travel Funding Deadlines](#scholarships--travel-funding-deadlines)
 * [KubeCon + CloudNativeCon EU 2026](#kubecon--cloudnativecon-eu-2026)
 * [KubeCon + CloudNativeCon Worldwide](#kubecon--cloudnativecon-worldwide)
@@ -18,8 +20,6 @@ You can learn more about the event and other worldwide KubeCon + CloudNativeCon 
 * [Update Your Project Logos](#update-your-project-logos)
 * [Call for Kubernetes AI Conformance applications and reference architectures](#call-for-kubernetes-ai-conformance-applications-and-reference-architectures)
 * [See you next month](#see-you-next-month)
-
-<!-- truncate -->
 
 ## Scholarships & Travel Funding Deadlines
 

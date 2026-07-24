@@ -1,5 +1,6 @@
 ---
 title: Project Lifecycle and Process
+sidebar_position: 4
 ---
 
 # CNCF Project Lifecycle & Process
