@@ -77,7 +77,7 @@ In addition to the expectations defined Composition 6(b)ii and Criteria 6(d) for
 
 #### Governing Board
 
-The TOC attends Governing Board meetings periodically when invited, our participation is typically limited to 1 hr ([except for the TOC Chair](toc-chair-vicechair.md#Governing-board-meetings)). The most common of these is the Strategy Meeting typically held during KubeCon+CloudNativeCon (KCCN). As the overseeing technical body, it is anticipated the TOC guides any technical strategy discussions. The TOC collectively crafts the messaging and structure for this in response to interest areas expressed by the Governing Board or by technical trends in broader industry and within the ecosystem.
+The TOC attends Governing Board meetings periodically when invited, our participation is typically limited to 1 hr ([except for the TOC Chair](toc-chair-vicechair.md#governing-board-meetings)). The most common of these is the Strategy Meeting typically held during KubeCon+CloudNativeCon (KCCN). As the overseeing technical body, it is anticipated the TOC guides any technical strategy discussions. The TOC collectively crafts the messaging and structure for this in response to interest areas expressed by the Governing Board or by technical trends in broader industry and within the ecosystem.
 
 #### KubeCon+CloudNativeCon (KCCN)
 

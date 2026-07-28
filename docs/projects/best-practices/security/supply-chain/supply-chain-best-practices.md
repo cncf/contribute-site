@@ -45,7 +45,7 @@ sidebar_position: 2
 - [Appendix II - Software Groups](#appendix-ii---software-groups)
 
 
-# Executive Summary
+## Executive Summary
 
 High-profile SUNBURST supply chain attacks in 2020[^1] grabbed headlines and directed attention to the importance of how software is built, and what vulnerabilities are left open by that process. Supply chains require more than one linked process, and supply chain security relies on the validation and verification of each process. While software supply chains grow increasingly complex, consensus on "best practices" and security has been lacking. This paper aims to offer the community a holistic approach to supply chain security by highlighting the importance of layered defensive practices. It draws recommendations and insights from the collective knowledge and experience of security practitioners in industry, state-of-the-art academic research, and the work of the United States Air Force[^2] (most notably, the "software factory" approach). It provides  a reference on how to design a secure software supply chain, and provides insight into commonly used tooling.
 
@@ -66,7 +66,7 @@ Additionally, the build pipeline itself must be secured, requiring the "separati
 
 
 
-# Introduction
+## Introduction
 
 Software supply chain attacks occur when the materials or processes of producing software are themselves compromised, resulting in vulnerabilities targeting downstream consumers of the software produced. Although the number of known, successful exploits remains comparatively small, the impact of these attacks has been extensive, as evidenced by NotPetya[^4] and Solarwinds[^5]. The CNCF Technical Advisory Group (TAG) for Security maintains a detailed catalogue[^6] of known supply chain attacks to raise awareness of increased occurrences coupled with lower barriers to success. Aggregated risk from software supply chain compromises continues to grow[^7] as the relative ease of exploitation and exponential network effects of compromise have been demonstrated, and entice further attackers.
 
@@ -190,7 +190,7 @@ In this paper, we explore this methodology for securing a software supply chain 
 Each of these stages are designed to complement one another for a comprehensive and holistic approach. Implementing all or portions of these should be evaluated against an organization's assurance requirements and environment risk appetite[^17].
 
 
-# Securing the Source Code
+## Securing the Source Code
 
 The foundational construct of any software supply chain is the source code. The initial step in securing a supply chain is establishing and ensuring the integrity of the source code. "Integrity" in this context means that the source code and tags found in the repository have not changed or altered from the code created by the developer. This includes potential malicious changes introduced by a local compromise on the developers machine. To maintain integrity, organizations must take steps to verify the source of the code added to their first party products and libraries.
 
@@ -316,7 +316,7 @@ For CI/CD pipeline agents, short-lived access tokens should be considered instea
 
 
 
-# Securing Materials
+## Securing Materials
 
 Overall quality and consistency of any "manufacturing" process is largely dependent on the quality and consistency of the goods used as inputs.  Therefore, care must be taken to validate the quality of these raw materials. For software pipelines this concerns the quality of the dependent libraries, be they direct or transitive dependencies. A key part of the software factory process is to ensure dependencies are drawn from a trusted source and have not been tampered with. Depending upon the required risk profile it may be appropriate to identify trusted repositories and rely directly upon them, in addition to disabling access to all other repositories.
 
@@ -409,7 +409,7 @@ At a minimum a SCA tool should be run against any dependencies used within the p
 
 
 
-# Securing Build Pipelines
+## Securing Build Pipelines
 
 When thinking of an industrial factory, we often think of the assembly line itself. Similarly, the heart of a software factory is the actual build pipeline. Drawing from the first, second, and third party materials already discussed, the build pipeline "assembles" the completed software artefacts that will be made available to downstream software consumers.
 
@@ -722,7 +722,7 @@ Additional security techniques should be integrated into the software factory it
 
 
 
-# Securing Artefacts
+## Securing Artefacts
 
 An artefact is the output of the build phase. Software artefacts, along with corresponding build metadata, must be hashed and signed by authorized entities. The signing of software artefacts describes the process ensuring the integrity and provenance of the artefact at build time, helping to establish trust. The signing of an artefact is a method of indicating that an artefact has been vetted and approved to be used in a given environment and authorized for use by a trusted authority. Trust is generated through cryptographically generated signatures at build time based on a secure hash of the artefact and, in more complex scenarios, whether the artefact has been signed by another process in the supply chain. For example, consider a scenario where the artefact is signed at build time and the resulting signature is verified before the artefact is scanned for compliance and security.
 
@@ -799,7 +799,7 @@ The confidentiality of the image and its contents can be protected by encrypting
 Encrypting artefacts allows its view or use to be tied to a key relying less on the trust of the distribution infrastructure (e.g. registries). It is recommended organizations use key management and distribution systems with identity and attestation mechanisms (e.g. SPIFFE/SPIRE) to accomplish this.
 
 
-# Securing Deployments
+## Securing Deployments
 
 Software delivery systems have been historically prone to several types of attacks. The Update Framework (TUF)[^51] has been designed to be resistant to these attacks. Therefore, any system designed to distribute software artefacts and their corresponding metadata must have several properties that enable them to counter the attacks defined in the TUF spec: Trust, Compromise Resilience, Integrity, and Freshness. In addition the system must contain preventive and detective capabilities to monitor its security posture and report if attempts to compromise are discovered.
 
@@ -839,7 +839,7 @@ TUF has also been used to bootstrap trust in delivering software supply chain me
 
 
 
-# Prior Art and References:
+## Prior Art and References:
 
 **CISQ Tool to Tool Software Bill of Materials Exchange -** https://www.it-cisq.org/software-bill-of-materials/
 
@@ -930,7 +930,7 @@ TUF has also been used to bootstrap trust in delivering software supply chain me
 **DoD Enterprise DevSecOps Reference Design:** [https://dodcio.defense.gov/Portals/0/Documents/DoD%20Enterprise%20DevSecOps%20Reference%20Design%20v1.0_Public%20Release.pdf?ver=2019-09-26-115824-583](https://dodcio.defense.gov/Portals/0/Documents/DoD%20Enterprise%20DevSecOps%20Reference%20Design%20v1.0_Public%20Release.pdf?ver=2019-09-26-115824-583)
 
 
-# Appendix I - Containers
+## Appendix I - Containers
 
 
 ## Base Container Images
@@ -985,7 +985,7 @@ Many projects rely on pre-existing container images to build software. It may lo
 *   Configuration files (frequently a part of Infrastructure as Code) often point to pre-existing container images. These configuration files should be source controlled and updated with container images pointing to the most updated digest. Do not use mutable tags to refer to images.
 
 
-# Appendix II - Software Groups
+## Appendix II - Software Groups
 
 
 ## Software Sources

@@ -29,7 +29,7 @@ The LFX Mentorship 2024 Term 01: March - May is open now open for project ideas:
 
 Project submission and application timeline:
 
-- Project proposal period: January 8 - 24. If you miss this deadline by a day or so, please contact [nwaddington@linuxfoundation.org](nwaddington@linuxfoundation.org)
+- Project proposal period: January 8 - 24. If you miss this deadline by a day or so, please contact [nwaddington@linuxfoundation.org](mailto:nwaddington@linuxfoundation.org)
 - Mentee applications open: January 29 - February 13 (2 weeks)
 - Application review/admission decisions/HR paperwork: February 14 - February 27
 - We look forward to seeing all the project ideas you're interested in working on!
@@ -65,6 +65,6 @@ Here are the upcoming deadlines for CFPs:
 
 
 Want to contribute to February's newsletter? 
-[Contribute Today!](projects@cncf.io)
+[Contribute Today!](mailto:projects@cncf.io)
 
 

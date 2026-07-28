@@ -44,6 +44,8 @@ Google has also put together a set of templates that may be useful:
 
 The CNCF doesn't enforce the projects to use any specific tool for sharing credentials, passwords or other confidential information, however we recommend using [Keybase][keybase] or applying for 1Password's [free open source plan][1password-oss].
 
+## Tools
+
 ### How can I use the computing infrastructure provided by the CNCF?
 
 We have partnered with various providers that offer discounted or free services for CNCF projects. For example, CNCF projects may use the credits offered by [Amazon Web Services][aws-credits], [Oracle][oracle-credits], or [Akamai/Linode][akamai-credits] for their upstream testing, CI/CD, and other purposes. See the [Tools](#tools) sections on this page for more details.
