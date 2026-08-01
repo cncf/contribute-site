@@ -113,7 +113,7 @@ While the details of the process are described in detail further for Incubating 
 *Who: Project*
 
 - Projects seeking to move to incubation should submit the Incubation Application issue and detail how they meet the incubation level criteria with links to evidence of implementation, existing incubating projects seeking to move to graduation should submit the Graduation Application issue and detail how they meet the graduation level criteria with links to evidence of implementation.
-- **Project must complete the [Adopter Interview Form with 5-7 adopters willing to be interviewed](https://docs.google.com/forms/d/1n1oLC6IKj5-7S_xeEjIdEjbtS9SWniuAo7IIOyLFuK8/)**.
+- **Project must complete the [Adopter Interview Form with 5-7 adopters willing to be interviewed](https://docs.google.com/forms/d/1n1oLC6IKj5-7S_xeEjIdEjbtS9SWniuAo7IIOyLFuK8/)**. A project's inclusion in a published [TAB Reference Architecture](https://github.com/cncf/tab/blob/main/process/reference-architectures.md) may serve as a replacement for an individual adopter interview.
 - As prior applications are closed, the TOC selects the next project from the "ready for assignment" column of the [TOC project board](https://github.com/orgs/cncf/projects/27/views/9)'s **Applications to Move levels** tab.
 
 #### The TOC triages project applications for completeness
