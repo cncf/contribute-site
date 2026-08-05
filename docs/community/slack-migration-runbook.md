@@ -1,9 +1,9 @@
 ---
-title: 'Migrating Your Slack Workspace to the CNCF Cloud-Native Workspace'
+title: 'Migrating Your Slack Workspace to the CNCF Cloud Native Workspace'
 date: 2026-07-13
 description:
   "A guide for CNCF project maintainers on migrating an existing Slack workspace
-  to the CNCF's shared cloud-native workspace."
+  to the CNCF's shared cloud native workspace."
 ---
 
 ## Overview
@@ -43,7 +43,7 @@ New members can join by inviting themselves via [slack.cncf.io](https://slack.cn
 :::note
 
 CNCF does not mandate chat platforms - individual projects can choose their own
-communication tools. However, migrating to the cloud-native workspace is
+communication tools. However, migrating to the cloud native workspace is
 strongly encouraged and is part of the standard
 [project onboarding process](https://github.com/cncf/sandbox/blob/main/.github/ISSUE_TEMPLATE/project-onboarding.md).
 
@@ -57,12 +57,12 @@ includes both community and technical work.
 ### Community work
 
 1. **Announce the migration** - Let your community know that their workspace is
-   being migrated to the CNCF's cloud-native workspace. Dates and times can be
+   being migrated to the CNCF's cloud native workspace. Dates and times can be
    coordinated with your partner in the CNCF Projects Team.
 
 2. **Set expectations** - Let the members of your project workspace know that:
    - The CNCF Projects Team sends invitations to members who are not already in
-     the cloud-native workspace.
+     the cloud native workspace.
    - Channel names in the new workspace use the project name as a prefix (for
      example, `#general` becomes `#<project-name>-general`).
 
@@ -73,12 +73,12 @@ Working with your CNCF Projects Team partner:
 1. **Select channels** - Decide which channels need to be migrated
 2. **Rename channels** - Ensure that those channel names are renamed on the
    source workspace to include a project prefix (this avoids name clashes with
-   other CNCF projects in the cloud-native workspace)
+   other CNCF projects in the cloud native workspace)
 3. **Export workspace data** - Ask a workspace Owner to carry out a workspace
    export using
    [Slack's built-in export functionality](https://slack.com/help/articles/201658943-Export-your-workspace-data)
-4. **Import into cloud-native workspace** - The CNCF Projects Team imports the
-   exported data into the cloud-native workspace using
+4. **Import into cloud native workspace** - The CNCF Projects Team imports the
+   exported data into the cloud native workspace using
    [Slack's native import mechanism](https://slack.com/help/articles/217872578-Import-data-from-one-Slack-workspace-to-another)
 
 ## Optional: Backing up private channels and DMs
@@ -113,4 +113,4 @@ The backup guide also covers viewer tools for reviewing exported data
   and migration support
 - [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md)
   - Community standards that apply to all Slack interactions
-- [Join the cloud-native workspace](https://slack.cncf.io)
+- [Join the cloud native workspace](https://slack.cncf.io)
