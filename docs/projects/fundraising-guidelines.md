@@ -28,7 +28,11 @@ See [Code Analysis & Audits](/resources/services/audits/) and the
 ## Guidelines
 
 Maintainers that would like to raise funds for their projects should use
-[LFX Crowdfunding](https://crowdfunding.linuxfoundation.org/). Maintainers
+[LFX Crowdfunding](https://crowdfunding.linuxfoundation.org/).
+
+If funding has been raised elsewhere (such as through a grant or donation from an organization) it should be directed to LFX Crowdfunding to manage.
+
+Maintainers
 should jointly decide how the money raised by their initiatives is spent and
 record those decisions in public project channels.
 
