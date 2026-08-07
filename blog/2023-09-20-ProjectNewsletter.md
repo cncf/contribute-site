@@ -39,7 +39,7 @@ Learn More Now: [Link](https://events.linuxfoundation.org/kubecon-cloudnativecon
 Proposals due for KubeCon Europe 2024 or Open Source Summit North America 2024 - October 2
 Notifications for KubeCon Europe or Open Source Summit North America 2024 - Week of October 16
 
-We're here to support CNCF's growth journey. Reach out to [Link](cncfcolocatedevents@linuxfoundation.org) if you have questions.
+We're here to support CNCF's growth journey. Reach out to [cncfcolocatedevents@linuxfoundation.org](mailto:cncfcolocatedevents@linuxfoundation.org) if you have questions.
 
 ## 📊 CNCF Annual Survey
 In 2022, our Annual Survey with LF Research revealed a rising trend among Web Assembly and the cloud native ecosystem. What will 2023 bring for cloud native adoption and trends? 
@@ -57,4 +57,4 @@ Here are the upcoming deadlines for CFPs:
 
 
 Want to contribute to October's newsletter? 
-Drop a note to [Link](projects@cncf.io).
+Drop a note to [projects@cncf.io](mailto:projects@cncf.io).

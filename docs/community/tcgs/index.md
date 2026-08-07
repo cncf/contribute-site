@@ -82,7 +82,7 @@ TCGs have minimal governance requirements compared to TAGs:
 
 TCGs leverage the CNCF Community Groups infrastructure:
 
-- **Bevy Platform**: Community group pages on [community.cncf.io](https://community.cncf.io)
+- **Open Community Groups Platform**: Community group pages on [community.cncf.io](https://community.cncf.io)
 - **Slack Channels**: Dedicated channels on CNCF Slack
 - **Mailing Lists**: For announcements and asynchronous discussion
 - **GitHub**: For tracking initiatives and deliverables
@@ -202,7 +202,7 @@ All TCGs must meet basic requirements:
 
 - **Website**: [community.cncf.io](https://community.cncf.io)
 - **GitHub**: [cncf/communitygroups](https://github.com/cncf/communitygroups)
-- **Organizer Guide**: [Organizer Roles and Responsibilities](https://github.com/cncf/communitygroups/blob/main/organizer_roles.md)
+- **Organizer Guide**: [Organizer Roles and Responsibilities](https://github.com/cncf/communitygroups/blob/main/organizers.md)
 
 ### Governance
 

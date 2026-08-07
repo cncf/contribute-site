@@ -156,3 +156,7 @@
     width: 6rem;
   }
 }
+
+.controls-catalog-doc a[id^='crosswalk-'] {
+    scroll-margin-top: 5rem;
+}

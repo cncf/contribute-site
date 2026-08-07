@@ -12,9 +12,9 @@ the repository for the source code that powers `pear.php.net`
 
 ## Type of Compromise
 
-This incident fits the [Negligence](../compromise-definitions.md#Negligence)
+This incident fits the [Negligence](../compromise-definitions.md#negligence)
 definition.
 
 ## References
 
-- [NPM Package mathjs-min Contains Credential Stealer](https://blog.phylum.io/phylum-discovers-npm-package-mathjs-min-contains-discord-token-grabber)
+- [Phylum Discovers NPM Package mathjs-min Contains Credential Stealer](https://www.veracode.com/blog/phylum-discovers-npm-package-mathjs-min-contains-discord-token-grabber/)

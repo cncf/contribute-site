@@ -76,4 +76,4 @@ Here are the upcoming deadlines for CFPs:
 
 
 Want to contribute to November's newsletter? 
-Drop a note to [Link](projects@cncf.io).
+Drop a note to [projects@cncf.io](mailto:projects@cncf.io).

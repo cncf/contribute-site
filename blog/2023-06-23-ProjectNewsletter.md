@@ -35,7 +35,7 @@ Just join us on Zoom (https://zoom.us/j/98293716536?pwd=SElSK2FVMkxCbzJidTB1dXJ1
 
 ## Mentoring
 LFX Term 02 - 2023 June - August (https://github.com/cncf/mentoring/tree/main/programs/lfx-mentorship/2023/02-Jun-Aug) has kicked off, thanks to all the mentors who are participating (55 of you!). 
-It’s early yet, but Term 03 - 2023 September - November (https://www.google.com/url?q=https://github.com/cncf/mentoring/tree/main/programs/lfx-mentorship/2023/03-Sep-Nov&sa=D&source=docs&ust=1692652539211219&usg=AOvVaw0NIcxPWGHkMnl_zeVeFPcS)
+It’s early yet, but Term 03 - 2023 September - November (https://github.com/cncf/mentoring/tree/main/programs/lfx-mentorship/2023/03-Sep-Nov)
 is open for project proposals—but we're excited to see what you're interested in working on!
 
 ## CNCF Project Summary Table
