@@ -1,0 +1,322 @@
+guidelines:
+- id: CNSC-22
+  objective: Bootstrapping is employed to verify correct physical and logical location of compute
+  title: Compute Bootstrapping Verification
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Secure Boot with TPM 2.0 or similar control
+  see-also:
+  - CNSC-27
+- id: CNSC-23
+  objective: Disparate data sensitive workloads are not run on the same host OS kernel
+  title: Boundary Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - 'There are at least three implementing controls possible: workloads may be  separated by running in a separate cluster,
+    on a separate node, or by implementing pods in independent VMs. It is also possible to emulate the kernel via an application
+    kernel (e.g. gvisor)'
+- id: CNSC-24
+  objective: Monitor and detect any changes to the initial configurations made in runtime
+  title: Runtime Configuration Monitoring
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Preventative controls should be the primary control. Detective controls monitoring  filesystem changes should be used
+    to verify primary controls are operating properly.
+- id: CNSC-25
+  objective: API auditing is enabled with a filter for a specific set of API Groups or verbs
+  title: API Auditing Implementation
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - API audits of the application, kubernetes API server, and kernel should be implemented.
+- id: CNSC-26
+  objective: Container specific operating systems are in use
+  title: Operating System Configuration
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - A read-only OS with other services disabled. This provides isolation and resource confinement  that enables developers
+    to run isolated applications on a shared host kernel
+- id: CNSC-27
+  objective: The hardware root of trust is based in a Trusted Platform Module (TPM) or virtual TPM (vTPM)
+  title: Trust Implementation
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on
+  see-also:
+  - CNSC-22
+    the system.
+- id: CNSC-28
+  objective: Minimize administrative access to the control plane
+  title: Least Privilege
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Ensure both users and pods have the minimum necessary access
+- id: CNSC-29
+  objective: Object level and resource requests and limits are controlled through cgroups
+  title: Resource Control Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - helps prevent exhaustion of node and cluster level resources by one misbehaving workload due to an intentional (e.g.,
+    fork bomb attack or cryptocurrency mining) or unintentional (e.g., reading a large file in memory without input validation,
+    horizontal autoscaling to exhaust compute resources) issue
+- id: CNSC-30
+  objective: Systems processing alerts are periodically tuned for false positives
+  title: System Alert Monitoring
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - to avoid alert flooding, fatigue, and false negatives after security incidents that were not detected by the system
+- id: CNSC-31
+  objective: All orchestrator control plane components are configured to communicate via mutual authentication and certificate
+    validation with a periodically rotated certificate
+  title: Control Plane Configuration
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - In unfederated clusters, the CA should be used exclusively for the current cluster.
+- id: CNSC-32
+  objective: Only sanctioned capabilities and system calls (e.g. seccomp filters), are allowed to execute or be invoked in
+    a container by the host operating system
+  title: Baseline Configured Functionality
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Additional tooling should be installed that go beyond k8s capabilities to limit system calls. E.g. Falco.
+- id: CNSC-33
+  objective: Changes to critical mount points and files are prevented, monitored, and alerted
+  title: Critical Change Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  see-also:
+  - CNSC-34
+- id: CNSC-34
+  objective: Runtime configuration control prevents changes to binaries, certificates, and remote access configurations
+  title: Runtime Configuration for Change Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  see-also:
+  - CNSC-33
+- id: CNSC-35
+  objective: Runtime configuration prevents ingress and egress network access for containers to only what is required to operate
+  title: Runtime Boundary Protection Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  see-also:
+  - CNSC-36
+- id: CNSC-36
+  objective: Policies are defined that restrict communications to only occur between sanctioned microservice pairs
+  title: Boundary Protection Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  see-also:
+  - CNSC-35
+- id: CNSC-37
+  objective: Use a policy agent to control and enforce authorized, signed container images
+  title: Policy Enforcement Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  see-also:
+  - CNSC-38
+- id: CNSC-38
+  objective: Use a policy agent to control provenance assurance for operational workloads
+  title: Policy Enforcement Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  see-also:
+  - CNSC-37
+- id: CNSC-39
+  objective: Use a service mesh that eliminates implicit trust through data-in-motion encryption (data in transit)
+  title: Data Trust Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+- id: CNSC-40
+  objective: Use components that detect, track, aggregate and report system calls and network traffic from a container
+  title: System Monitoring Components
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - should be leveraged to look for unexpected or malicious behavior
+- id: CNSC-41
+  objective: Workloads should be dynamically scanned to detect malicious or insidious behavior for which no known occurrence
+    yet exists
+  title: Dynamic Workload Scanning
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Events such as an extended sleep command that executes data exfiltration from etcd after the workload has been running
+    for X amount of days are not expected in the majority of environments and therefore are not included in security tests.
+    The aspect that workloads can have time or event delayed trojan horses is only detectable by comparing to baseline expected
+    behavior, often discovered during thorough activity and scan monitoring
+- id: CNSC-42
+  objective: Environments are continuously scanned to detect new vulnerabilities in workloads
+  title: Continuous Monitoring and Scanning
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Vulnerabilities are constantly being discovered, just because it wasn't vulnerable at deploy, doesn't mean it won't be
+    vulnerable in two weeks
+- id: CNSC-43
+  objective: Actionable audit events are generated that correlate/contextualize data from logs into "information" that can
+    drive decision trees/incident response
+  title: Audit Event Logging
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-44
+  objective: Segregation of duties and the principle of least privilege is enforced
+  title: Privilege Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-45
+  objective: Non-compliant violations are detected based on a pre-configured set of rules defined by the organization's policies
+  title: Information Integrity
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-46
+  objective: Native secret stores encrypt with keys from an external Key Management Store (KMS)
+  title: Key Management Storage
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-47
+  objective: Native secret stores are not configured for base64 encoding or stored in clear-text in the key-value store by
+    default
+  title: Secret Storage Configuration
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Encoding is not encryption
+- id: CNSC-48
+  objective: Network traffic to malicious domains is detected and denied
+  title: System Monitoring
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-49
+  objective: Use encrypted containers for sensitive sources, methods, and data
+  title: Sensitive Data Encryption
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-50
+  objective: Use SBOMs to identify current deployments of vulnerable libraries, dependencies, and packages
+  title: SBOM Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-51
+  objective: Processes must execute only functions explicitly defined in an allow list
+  title: Functionality Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-52
+  objective: Functions are not be allowed to make changes to critical file system mount points
+  title: Access and Change Restrictions
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-53
+  objective: Function access is only permitted to sanctioned services
+  title: Access Configuration
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - Either through networking restrictions or least privilege in permission models
+- id: CNSC-54
+  objective: Egress network connection is monitored to detect and prevent access to C&C (command and control) and other malicious
+    network domains
+  title: System Monitoring
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+- id: CNSC-55
+  objective: Ingress network inspection is employed detect and remove malicious payloads and commands
+  title: System Monitoring Management
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - For instance, SQL injection attacks can be detected using inspection.
+- id: CNSC-56
+  objective: Serverless functions are run in tenant-based resource or performance isolation for similar data classifications
+  title: System Component Isolation
+  group: Compute
+  applicability:
+  - CNSWP-v1.0
+  - CNSWP-v2.0
+  recommendations:
+  - This may impact the performance due to limitations in the address space available to the isolation environment and should
+    be considered for only the most sensitive workloads.
+- id: CNSC-233
+  objective: Use a service mesh that eliminates implicit trust through data-in-motion protection (i.e. confidentiality, integrity,
+    authentication, authorization)
+  title: Data Trust Management
+  group: Compute
+  applicability:
+  - CNSWP-v2.0

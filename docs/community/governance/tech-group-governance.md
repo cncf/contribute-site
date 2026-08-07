@@ -28,13 +28,12 @@ different purposes or have different scopes:
   rallying point for community members to discuss, share knowledge, and
   coordinate potential future initiatives.
 
-- [CNCF Technical Group Governance](#cncf-technical-group-governance)
 - [Keywords](#keywords)
-- [Technical Advisory Group (TAG)](#technical-advisory-groups-\(tags\))
+- [Technical Advisory Group (TAG)](#technical-advisory-groups-tags)
   - [Goals](#goals)
   - [Formation](#formation)
   - [Requirements](#requirements)
-  - [Roles, Terms, and Elections](#roles,-terms,-and-elections)
+  - [Roles, Terms, and Elections](#roles-terms-and-elections)
     - [Chair](#chair)
       - [Requirements](#requirements-1)
       - [Duties](#duties)
@@ -50,7 +49,7 @@ different purposes or have different scopes:
   - [Goals](#goals-1)
   - [Formation](#formation-1)
   - [Requirements](#requirements-3)
-  - [Roles, Terms, and Elections](#roles,-terms,-and-elections-1)
+  - [Roles, Terms, and Elections](#roles-terms-and-elections-1)
     - [Subproject Leads](#subproject-leads)
       - [Requirements](#requirements-4)
       - [Duties](#duties-2)
@@ -66,7 +65,6 @@ different purposes or have different scopes:
   - [Requirements](#requirements-5)
   - [Roles](#roles)
 - [Community Groups](#technical-community-groups)
-  - [Rules & Guidelines](#rules--guidelines)
   - [Formation](#formation-3)
 
 ## Keywords
@@ -630,7 +628,7 @@ meetings, promoting the group, and coordinating the creation of initiatives.
 - SHOULD remain active and responsive in their role.
 
 
-[Community Group Organizer Requirements]: https://github.com/cncf/communitygroups/blob/main/organizer_roles.md
+[Community Group Organizer Requirements]: https://github.com/cncf/communitygroups/blob/main/organizers.md
 
 
 #### Duties
@@ -668,8 +666,8 @@ meetings, promoting the group, and coordinating the creation of initiatives.
 #### Other Roles
 
 TCG's MAY have other roles, but they are REQUIRED to be documented in an
-easily discovered area, such as the groups's page on Bevy; the platform used
-by Community Groups.
+easily discovered area, such as the groups's page on Open Community Grouos; the platform used
+by Cloud Native Community Groups (CNCGs).
 
 - MUST be documented with a description, scope, and responsibilities.
 - MUST adhere to the [Technical Leadership Principles].

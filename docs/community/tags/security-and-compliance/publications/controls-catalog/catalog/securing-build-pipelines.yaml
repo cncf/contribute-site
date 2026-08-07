@@ -1,0 +1,163 @@
+guidelines:
+- id: CNSC-149
+  objective: Policy adherence is cryptographically guaranteed
+  title: Cryptographic Policy Guarantee
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - The presence and output of each build step should be attested during the build. The CNCF maintains the in-toto project
+    that can be used to secure a chain of pipeline stages end-to-end with cryptographic guarantees. Build metadata should
+    be evaluated against the policy template by using tools such as Open Policy Agent.
+- id: CNSC-150
+  objective: Environments and dependencies are validated before usage
+  title: Environment and Dependency Validation
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - The build environment’s sources and dependencies must come from a secure, trusted source of truth. Checksums and any signatures
+    should be validated both in the downloading or ingestion process, and again by the build worker. This should include validating
+    package manager signatures, checking out specific Git commit hashes, and verifying SHA sums of input sources and binaries.
+    After completing this validation, the downloading process should sign all binaries or libraries it is adding to the secure
+    source
+- id: CNSC-151
+  objective: Runtime security of build workers is validated
+  title: Build Worker Runtime Security
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - Out-of-band verification of runtime environment security, as defined by execution of policies using tools such as seccomp,
+    AppArmor, and SELinux, provides defense in depth against attacks on build infrastructure. High privilege kernel capabilities
+    such as debugger, device, and network attachments should be restricted and monitored.
+- id: CNSC-152
+  objective: Build artefacts are validated through verifiably reproducible builds
+  title: Reproducible Builds
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - A verifiably reproducible build is a build process where, given a source code commit hash and a set of build instructions,
+    an end user should be able to reproduce the built artefact bit for bit.
+- id: CNSC-153
+  objective: External requirements from the build process are locked and verified
+  title: External Requirement Verification
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-154
+  objective: Sources of non-determinism are found and eliminated
+  title: Build Determinism
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - Reproducible-builds.org documents and offers solutions for many of these things. Diffoscope can be used to dig in and
+    find the cause of differences when tracking down sources of non-determinism.
+- id: CNSC-155
+  objective: The build environment is recorded
+  title: Build Environment Recording
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - Ensure best practices outlined in cloud native security paper are followed to deploy a secure orchestration layer
+- id: CNSC-156
+  objective: Creation of the build environment is automated
+  title: Build Environment Automation
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-157
+  objective: Builds are distributed across different infrastructure
+  title: Build Distribution
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-158
+  objective: Build and related CI/CD steps are automated through a pipeline delivered as code
+  title: Pipeline as Code
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-159
+  objective: Pipelines are standardized across projects
+  title: Pipeline Standardization
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-160
+  objective: A secured orchestration platform is provisioned to host the software factory
+  title: Software Factory Platform
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-161
+  objective: Build workers are single use
+  title: Single-Use Build Workers
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-162
+  objective: Software factory has minimal network connectivity
+  title: Software Factory Network Isolation
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - The software factory should have no network connectivity other than to connect to the trusted sources of hardened source
+    code, the dependency repository and code signing infrastructure.
+- id: CNSC-163
+  objective: Duties of each build worker are segregated
+  title: Build Worker Duty Segregation
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-164
+  objective: Build worker environment and commands are passed in
+  title: Build Worker Environment Control
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - Inorder to limit hostile tooling and persistent impants from attackers, a Build Worker should start with a clean and isolated
+    environmment. It should not be able to pull its own environment. Ensure environment variables and commands are explicitly
+    passed to avoid any complicated and opaque build process
+- id: CNSC-165
+  objective: Output is written to a separate secured storage repo
+  title: Secured Output Storage
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - The output artefact should be written to a separate shared storage from the inputs. A process separate from the Build
+    Worker should then upload that artefact to an appropriate repository.
+- id: CNSC-166
+  objective: Pipeline modification is only allowed through pipeline as code
+  title: Pipeline Modification Control
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+  recommendations:
+  - The pipeline configuration (pipeline as code) should be immutable and any modification shouldn't be possible. This prevents
+    attackers from interacting and modifying the configuration. This model then requires appropriate authentication and authorization
+    to be in place for the software and configuration of the pipeline
+- id: CNSC-167
+  objective: User roles are defined
+  title: User Role Definition
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-168
+  objective: Established practices are followed for establishing a root of trust from an offline source
+  title: Root of Trust Establishment
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0
+- id: CNSC-169
+  objective: Short-lived workload certificates are used
+  title: Short-Lived Certificates
+  group: Securing Build Pipelines
+  applicability:
+  - SSCP-v1.0

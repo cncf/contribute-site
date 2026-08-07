@@ -8,7 +8,7 @@ speakers:
   - name: Dawn Foster
     url: https://github.com/geekygirldawn
   - name: Josh Berkus
-    url: https://github.com/jbkerkus
+    url: https://github.com/jberkus
   - name: Catherine Paganini
     url: https://github.com/CathPag
   - name: Deepthi Sigireddi

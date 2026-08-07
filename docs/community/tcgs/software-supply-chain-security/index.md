@@ -114,6 +114,10 @@ Technical Community Groups are led by community organizers who facilitate meetin
 
 To become an organizer or learn more about current organizers, check the group's page on [community.cncf.io](https://community.cncf.io) or reach out via the CNCF Slack.
 
+### TOC Liaisons
+
+- Mario Fahlandt ([@mfahlandt](https://github.com/mfahlandt))
+
 ## Key Standards and Frameworks
 
 ### SLSA (Supply Chain Levels for Software Artifacts)

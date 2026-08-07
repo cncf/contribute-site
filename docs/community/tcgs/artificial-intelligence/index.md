@@ -109,6 +109,11 @@ Technical Community Groups are led by community organizers who facilitate meetin
 
 To become an organizer or learn more about current organizers, check the group's page on [community.cncf.io](https://community.cncf.io) or reach out via the CNCF Slack.
 
+### TOC Liaisons
+
+- Mauricio Salatino ([@salaboy](https://github.com/salaboy))
+- Kevin Wang ([@kevin-wangzefeng](https://github.com/kevin-wangzefeng))
+
 ## Resources
 
 ### CNCF Resources

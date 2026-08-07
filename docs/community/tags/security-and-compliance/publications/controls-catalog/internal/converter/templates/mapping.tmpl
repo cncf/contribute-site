@@ -1,0 +1,31 @@
+{{- define "mappingDocument" -}}
+---
+title: {{.Title}}
+sidebar_position: 7
+toc_max_heading_level: 3
+---
+
+<!--
+Auto-generated from catalog/cnsc-nist-800-53-mapping.yaml.
+Do not edit manually.
+
+  go run cmd/catalog/main.go -md index.md
+-->
+
+<div class="controls-catalog-doc">
+
+# {{.Title}}
+
+This document maps the [Cloud Native Security Controls Catalog](./index.md) to NIST 800-53 SP Rev.5 Guidelines.
+
+## NIST SP 800-53 crosswalk {#nist-sp-800-53-crosswalk}
+
+| CNSC guideline | Relationship | NIST control(s) | Notes |
+|----------------|--------------|-----------------|---------|
+{{- $titles := .Titles -}}
+{{- range crosswalkRows .Mappings }}
+| <a id="{{crosswalkAnchor .Source}}"></a>`{{.Source}}` | {{tableCell .Relationship}} | {{controlsCell .Parts}} | {{notesCell .Source .Parts $titles}} |
+{{- end }}
+
+</div>
+{{- end -}}

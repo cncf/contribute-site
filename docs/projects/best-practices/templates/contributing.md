@@ -59,7 +59,7 @@ Let contributors know how they should indicate that they want to work on an issu
 
 If your project doesn't always have issues labeled and ready to find, and you are willing to help find suitable issues, let new contributors know how to ask for something to work on.
 
-[issue-labels]: /maintainers/github/issue-labels/
+[issue-labels]: /projects/best-practices/templates/issue-labels/
 
 ## Ask for Help
 

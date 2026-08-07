@@ -7,7 +7,7 @@ type: single
 
 This is the main portal you should use to get support, you should receive a response within 48 hours.
 
-## [maintainers.cncf.io](http://maintainers.cncf.io/)
+## [maintainers.cncf.io](https://maintainers.cncf.io/)
 
 All CNCF maintainers are listed in this file, if you are a maintainer of a CNCF Project and need to add yourself follow these TODO: instructions.
 
@@ -43,6 +43,8 @@ Google has also put together a set of templates that may be useful:
 ### How do I share credentials, passwords, or other confidential information?
 
 The CNCF doesn't enforce the projects to use any specific tool for sharing credentials, passwords or other confidential information, however we recommend using [Keybase][keybase] or applying for 1Password's [free open source plan][1password-oss].
+
+## Tools
 
 ### How can I use the computing infrastructure provided by the CNCF?
 

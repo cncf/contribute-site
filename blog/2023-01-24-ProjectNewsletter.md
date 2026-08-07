@@ -16,7 +16,7 @@ As we approach 2023, the prestigious CNA program has been refreshed and we are n
 
 The LFX Mentorship 2023 Term 01 March - May is open now open for project ideas:
 
-https://github.com/cncf/mentoring/tree/main/lfx-mentorship/2023/01-Mar-May
+https://github.com/cncf/mentoring/tree/main/programs/lfx-mentorship/2023/01-Mar-May
 
 Project submission and application timeline:
 

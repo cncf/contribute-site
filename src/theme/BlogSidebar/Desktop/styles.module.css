@@ -1,0 +1,112 @@
+/**
+ * Styles for the custom collapsible-year BlogSidebar/Desktop.
+ * Inherits Infima CSS variables for colours, spacing, and dark-mode support.
+ */
+
+/* ── Sticky scrollable sidebar ─────────────────────────────────────────── */
+.sidebar {
+  max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  overflow-y: auto;
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 2rem);
+}
+
+@media (max-width: 996px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* ── Section title ("Posts") ────────────────────────────────────────────── */
+.sidebarTitle {
+  font-size: var(--ifm-h3-font-size);
+  font-weight: var(--ifm-font-weight-bold);
+}
+
+/* ── Year group (<details>) ─────────────────────────────────────────────── */
+.yearGroup {
+  border: none;
+  margin-bottom: 0.25rem;
+}
+
+/* ── Year summary row ───────────────────────────────────────────────────── */
+.yearSummary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  gap: 0.4rem;
+  letter-spacing: 0.04em;
+  list-style: none;
+  padding: 0.4rem 0;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+/* Remove the default browser triangle on all engines */
+.yearSummary::-webkit-details-marker {
+  display: none;
+}
+
+.yearSummary::before {
+  border-color: transparent transparent transparent var(--ifm-color-emphasis-600);
+  border-style: solid;
+  border-width: 0.3em 0 0.3em 0.45em;
+  content: '';
+  display: inline-block;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+details[open] > .yearSummary::before {
+  border-color: transparent transparent transparent var(--ifm-color-primary);
+  transform: rotate(90deg);
+}
+
+.yearSummary:hover {
+  color: var(--ifm-color-primary);
+}
+
+details[open] > .yearSummary {
+  color: var(--ifm-color-primary);
+}
+
+/* ── Post count badge ───────────────────────────────────────────────────── */
+.yearCount {
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.7rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  line-height: 1;
+  margin-left: auto;
+  padding: 0.15em 0.5em;
+}
+
+/* ── Post list ──────────────────────────────────────────────────────────── */
+.postList {
+  font-size: 0.875rem;
+  padding-left: 0.75rem;
+}
+
+.postItem {
+  margin-top: 0.5rem;
+}
+
+/* ── Post link ──────────────────────────────────────────────────────────── */
+.postLink {
+  color: var(--ifm-font-color-base);
+  display: block;
+  line-height: 1.35;
+}
+
+.postLink:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.postLinkActive {
+  color: var(--ifm-color-primary) !important;
+  font-weight: var(--ifm-font-weight-semibold);
+}

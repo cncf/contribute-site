@@ -110,6 +110,11 @@ Technical Community Groups are led by community organizers who facilitate meetin
 
 To become an organizer or learn more about current organizers, check the group's page on [community.cncf.io](https://community.cncf.io) or reach out via the CNCF Slack.
 
+### TOC Liaisons
+
+- Brandt Keller ([@brandtkeller](https://github.com/brandtkeller))
+- Alex Chircop ([@chira001](https://github.com/chira001))
+
 ## Use Cases
 
 Platform engineering addresses various organizational needs:

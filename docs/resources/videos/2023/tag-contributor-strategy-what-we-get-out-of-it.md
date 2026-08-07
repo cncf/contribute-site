@@ -12,7 +12,7 @@ speakers:
   - name: Dave Sudia
     url: https://github.com/thedevelopnik
   - name: Josh Berkus
-    url: https://github.com/jbkerkus
+    url: https://github.com/jberkus
   - name: Catherine Paganini
     url: https://github.com/CathPag
   - name: Jay Tihema
