@@ -29,8 +29,8 @@ Data, Storage, Network, DNS, Compute, Service Mesh, Infrastructure-as-Code, Edge
 |------|--------|--------------|------|
 | Alexa Griffith | [@alexagriffith](https://github.com/alexagriffith) | - | 2025-07-02 to 2027-06-30 |
 | Antonio Ojea | [@aojea](https://github.com/aojea) | - | 2025-07-02 to 2027-06-30 |
-| Bruno Schaatsbergen | [@bschaatsbergen](https://github.com/bschaatsbergen) | - | 2025-07-02 to 2026-06-30 |
-| Nicholas Jackson | [@nicholasjackson](https://github.com/nicholasjackson) | - | 2025-07-02 to 2026-06-30 |
+| Mesut Özdil | [@mesutoezdil](https://github.com/mesutoezdil) | - | 2026-07-07 to 2028-07-06 |
+| Thomas Schuetz | [@thschue](https://github.com/thschue) | TSC Labs | 2026-07-07 to 2028-07-06 |
 | Zhonghu Xu | [@hzxuzhonghu](https://github.com/hzxuzhonghu) | - | 2025-07-02 to 2027-06-30 |
 
 ### TOC Liaisons

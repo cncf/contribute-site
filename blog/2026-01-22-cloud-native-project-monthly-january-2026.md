@@ -11,6 +11,8 @@ In 2025 we saw continued project growth, with the TOC accepting an additional si
 
 Please take a moment to complete the [2H 2025 Maintainer Survey](https://maintainers-survey.cncf.io). Your feedback is vital for us to serve you better this year. The survey will close on January 30th, so please respond as soon as you can!
 
+<!-- truncate -->
+
 * [Google Summer of Code 2026 opportunities](#google-summer-of-code-2026-opportunities)
 * [Please take the Maintainer Survey](#please-take-the-maintainer-survey)
 * [KubeCon+CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines](#kubeconcloudnativecon-2026--scholarships--travel-funding-deadlines)
@@ -21,8 +23,6 @@ Please take a moment to complete the [2H 2025 Maintainer Survey](https://maintai
 * [CNCF Projects Calendar Migration](#cncf-projects-calendar-migration-move-your-projects-meetings-to-lfx-pcc-for-self-service-scheduling)
 * [Help us help you](#help-us-help-you)
 * [See you next month](#see-you-next-month)
-
-<!-- truncate -->
 
 ## Google Summer of Code 2026 opportunities
 

@@ -13,12 +13,12 @@ CNCF staff will be at the various [maintainer-focused activities](https://events
 
 Please take a moment to complete the [2H 2026 Maintainer Survey](https://maintainers-survey.cncf.io). Your feedback is essential for us to serve you better in the second half of the year.
 
+<!-- truncate -->
+
 * [Mentorship Program Updates](#mentorship-program-updates)
 * [Oracle Cloud Usage Optimization](#oracle-cloud-usage-optimization)
 * [KubeCon + CloudNativeCon 2026 Opportunities and Deadlines](#kubecon--cloudnativecon-2026-opportunities-and-deadlines)
 * [Please Complete the 2H 2026 Maintainer Survey](#please-complete-the-2h-2026-maintainer-survey)
-
-<!-- truncate -->
 
 ## Mentorship Program Updates
 

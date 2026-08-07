@@ -13,13 +13,13 @@ We look forward to seeing many of you at [KubeCon + CloudNativeCon India](https:
 
 CNCF staff will be at the various [maintainer-focused activities](https://events.linuxfoundation.org/kubecon-cloudnativecon-india/features-add-ons/project-engagement/) on June 18-19.
 
+<!-- truncate -->
+
 * [The `.project` Repository Rollout Has Started](#the-project-repository-rollout-has-started)
 * [Cloud Native Community Groups Migration](#cloud-native-community-groups-migration)
 * [Kapa.ai Tech Doc Assistants Now Available](#kapaai-tech-doc-assistants-now-available)
 * [PR Support for KubeCon + CloudNativeCon Japan](#pr-support-for-kubecon--cloudnativecon-japan)
 * [CNCF Maintainer and End User Contributor Program](#cncf-maintainer-and-end-user-contributor-program)
-
-<!-- truncate -->
 
 ## The `.project` Repository Rollout Has Started
 

@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # TOC Due Diligence Guide
 
-This document provides the TOC with guidance on how to execute Due Diligence of CNCF projects for each level of maturity.  It complements the Moving Levels process detailed in the [Process Directory](https://github.com/cncf/toc/blob/main/process/README.md).
+This document provides the TOC with guidance on how to execute Due Diligence of CNCF projects for each level of maturity. It complements the Moving Levels process detailed in the [Process Directory](https://github.com/cncf/toc/tree/main/process).
 
 ## Quick Links
 

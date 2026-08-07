@@ -27,9 +27,11 @@ Observability, Management, Business Continuity, Resource Optimization, Cost Effi
 
 | Name | GitHub | Organization | Term |
 |------|--------|--------------|------|
-| Raffaele Spazzoli | [@raffaelespazzoli](https://github.com/raffaelespazzoli) | - | 2025-07-02 to 2026-06-30 |
+| Chad Crowell | [@chadmcrowell](https://github.com/chadmcrowell) | - | 2026-07-07 to 2028-07-06 |
+| Diana Todea | [@didiViking](https://github.com/didiViking) | VictoriaMetrics | 2026-07-07 to 2028-07-06 |
 | Matt Young | [@halcyondude](https://github.com/halcyondude) | - | 2025-07-02 to 2027-06-30 |
-| Nabarun Pal | [@palnabarun](https://github.com/palnabarun) | - | 2025-07-02 to 2027-06-30 |
+| Nabarun Pal | [@palnabarun](https://github.com/palnabarun) | Broadcom | 2025-07-02 to 2027-06-30 |
+| Niki Manoledaki | [@nikimanoledaki](https://github.com/nikimanoledaki) | Grafana Labs | 2026-07-07 to 2028-07-06 |
 
 ### TOC Liaisons
 
