@@ -46,7 +46,7 @@ Observability, Management, Business Continuity, Resource Optimization, Cost Effi
 **TAG Operational Resilience Meetings**
 
 - **Calendar**: [View and join meetings](https://zoom-lfx.platform.linuxfoundation.org/meetings/tag-operational-resilience?view=list)
-- **Recordings**: [YouTube Channel](https://www.youtube.com/@TAGOperationalResilience)
+- **Recordings**: [YouTube Channel](https://www.youtube.com/@cncfTAGOperationalResilience)
 - **Meeting Notes**: [View notes](https://notes.cncf.io/s/oWHc3r0r7)
 
 All meetings are open to the public. No registration required - simply join the meeting from the calendar link.
