@@ -113,3 +113,39 @@
     scroll-margin-top: 5rem;
 }
 
+/**
+ * Fix for issue #202: top nav items overlap the logo/title at
+ * intermediate widths (roughly 1000px-1200px). Docusaurus only
+ * switches to the mobile hamburger menu at 996px and below, so
+ * above that every navbar item renders in a single row. With 8
+ * items (4 left + 4 right, including the logo/title) there isn't
+ * enough horizontal space in that range, causing overlap.
+ *
+ * This tightens spacing and font-size only in that intermediate
+ * range so all items fit on one line without wrapping or
+ * overlapping, while leaving the normal desktop (>1200px) and
+ * mobile (<=996px) layouts untouched.
+ */
+@media (min-width: 997px) and (max-width: 1200px) {
+  .navbar__items {
+    gap: 0.25rem;
+  }
+
+  .navbar__item {
+    padding: 0 0.35rem;
+  }
+
+  .navbar__link {
+    font-size: 0.85rem;
+    padding: var(--ifm-navbar-item-padding-vertical) 0.4rem;
+    white-space: nowrap;
+  }
+
+  .navbar__title {
+    font-size: 0.9rem;
+  }
+
+  .navbar__logo {
+    height: 2rem;
+  }
+}
