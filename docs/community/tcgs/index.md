@@ -30,7 +30,7 @@ Technical Community Groups enable the community to:
 
 ## Current TCGs
 
-The CNCF currently has three active Technical Community Groups:
+The CNCF currently has four active Technical Community Groups:
 
 ### Artificial Intelligence
 
@@ -39,6 +39,16 @@ Focused on artificial intelligence and machine learning in cloud native environm
 **Topics**: AI/ML infrastructure, model serving, training at scale, MLOps, AI governance
 
 - [Learn more →](./artificial-intelligence/index.md)
+
+---
+
+### Environmental Sustainability
+
+Continuing the work of the former TAG Environmental Sustainability, advocating for and developing environmental sustainability initiatives in cloud native technologies.
+
+**Topics**: Energy and carbon metrics, sustainability tooling (Kepler), Green Reviews, sustainability advocacy
+
+- [Learn more →](./environmental-sustainability/index.md)
 
 ---
 
