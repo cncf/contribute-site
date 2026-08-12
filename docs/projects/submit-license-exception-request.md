@@ -1,5 +1,6 @@
 ---
 title: Submit a Request for a Licensing Policy Exception
+sidebar_position: 7
 ---
 
 # License Exceptions

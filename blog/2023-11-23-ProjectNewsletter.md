@@ -46,4 +46,4 @@ Here are the upcoming deadlines for CFPs:
 
 
 Want to contribute to December's newsletter? 
-[Contribute Today!](projects@cncf.io)
+[Contribute Today!](mailto:projects@cncf.io)
