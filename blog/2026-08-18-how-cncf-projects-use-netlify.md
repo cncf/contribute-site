@@ -1,5 +1,6 @@
 ---
-title: > How CNCF Projects Use Netlify: Powering Cloud Native Documentation at Scale
+title: > 
+    How CNCF Projects Use Netlify: Powering Cloud Native Documentation at Scale
 date: 2026-08-18
 authors: [thisisobate]
 tags: [maintainers, community, projects, services]
