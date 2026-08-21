@@ -85,5 +85,8 @@
     "proseWrap": "always",
     "singleQuote": true
   },
-  "homepage": "https://contribute-cncf-io.netlify.app/"
+  "homepage": "https://contribute-cncf-io.netlify.app/",
+  "overrides": {
+    "shell-quote": "1.8.4"
+  }
 }
