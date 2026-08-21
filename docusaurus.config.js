@@ -166,6 +166,11 @@ const config = {
             position: 'left',
             label: 'TechDocs',
           },
+          {
+            to: '/security',
+            position: 'left',
+            label: 'Security',
+          },
 
           // Right
           {

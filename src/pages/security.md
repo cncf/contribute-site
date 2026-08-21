@@ -1,16 +1,15 @@
 ---
 title: Security
 description: >-
-  How to report security vulnerabilities, CNCF's role as a CVE Numbering
-  Authority, and resources for secure open source development.
+  How to report security vulnerabilities and resources for secure open source
+  development in CNCF projects.
 ---
 
 # Security
 
 The Cloud Native Computing Foundation (CNCF) and its hosted projects take
-security seriously. This page explains how to report vulnerabilities, describes
-CNCF's role in the CVE ecosystem, and links to security resources for
-contributors, maintainers, and adopters.
+security seriously. This page explains how to report vulnerabilities and links
+to security resources for contributors, maintainers, and adopters.
 
 ---
 
@@ -43,36 +42,6 @@ Do **not** report security vulnerabilities in public GitHub issues, pull
 requests, or Slack channels. Use the private channels listed above.
 
 :::
-
----
-
-## CNCF as a CVE Numbering Authority
-
-CNCF is a
-[CVE Numbering Authority (CNA)](https://www.cve.org/ProgramOrganization/CNAs)
-authorized to assign
-[CVE identifiers](https://www.cve.org/About/Overview) for vulnerabilities in
-CNCF-hosted projects. This status allows projects to receive CVE IDs quickly
-and manage the disclosure process without routing requests through a third
-party.
-
-### Scope
-
-CNCF's CNA scope covers the projects listed in the
-[CNCF Landscape](https://landscape.cncf.io/) under the
-[cncf](https://github.com/cncf) GitHub organization.
-
-### Requesting a CVE
-
-When a maintainer (or authorized reporter) has confirmed a vulnerability and a
-fix is ready:
-
-1. Email [security@cncf.io](mailto:security@cncf.io) with the subject line
-   `CVE Request: <project name>`.
-2. Include a description of the vulnerability, affected versions, and a patch
-   or advisory draft.
-3. CNCF's security team will assign a CVE ID and coordinate public disclosure
-   timing with the project maintainers.
 
 ---
 
@@ -141,7 +110,6 @@ cover:
 ## References
 
 - [CNCF TAG Security](https://github.com/cncf/tag-security)
-- [CVE Program — CNA list](https://www.cve.org/ProgramOrganization/CNAs)
 - [OpenSSF Best Practices Badge](https://www.bestpractices.dev/)
 - [LFX Security](https://security.lfx.linuxfoundation.org/)
 - [OpenSSF Scorecard](https://scorecard.dev/)
