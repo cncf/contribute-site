@@ -1,0 +1,39 @@
+name: Generate security page
+
+on:
+  schedule:
+    # Daily at 07:15 UTC — after upstream ONBOARDED.md refreshes (~06:10 UTC)
+    - cron: '15 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run generate:security
+
+      - name: Commit and push if changed
+        run: |
+          # Ignore the "_Last updated" line so date-only churn is not committed
+          if git diff --quiet -I'^_Last updated' -- docs/security/index.md; then
+            echo 'No data changes; skipping commit.'
+            git checkout -- docs/security/index.md
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add docs/security/index.md
+          git commit -m 'chore: regenerate project security page'
+          git push
