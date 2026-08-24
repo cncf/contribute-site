@@ -76,6 +76,8 @@ All meetings can be joined directly from the calendar. Meetings are open to the 
 
 ## Communication Channels
 
+Projects looking for the right way to reach the TOC or raise an issue can start with [Contacting the TOC](/projects/contact-the-toc/).
+
 ### Mailing Lists
 
 **Public Mailing List**: For general TOC discussions and announcements
