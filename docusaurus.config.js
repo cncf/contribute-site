@@ -18,24 +18,16 @@ const config = {
   tagline: 'Learn, connect, and contribute—the CNCF way',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     // v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  // Set the production url of your site here
   url: 'https://contribute.cncf.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // onBrokenLinks: 'throw',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -60,22 +52,19 @@ const config = {
           editUrl: ({ docPath }) => {
             const p = docPath.replace(/\\/g, '/');
 
-            // docs/techdocs/analyses/** -> cncf/techdocs/analyses/**
             if (p.startsWith('techdocs/analyses/')) {
               return `${TECHDOCS_ANALYSES_EDIT_BASE}/${p.replace(/^techdocs\/analyses\//, '')}`;
             }
 
-            // docs/techdocs/** -> cncf/techdocs/docs/**
             if (p.startsWith('techdocs/')) {
               return `${TECHDOCS_EDIT_BASE}/${p.replace(/^techdocs\//, '')}`;
             }
 
-            // everything else stays local
             return `${LOCAL_EDIT_BASE}/${p}`;
           },
-          routeBasePath: '/', // Serve the docs at the site's root
+          routeBasePath: '/',
           sidebarPath: './sidebars.js',
-          exclude: ['**/README.md'], // Exclude README.md files from being rendered as docs
+          exclude: ['**/README.md'],
         },
         blog: {
           showReadingTime: true,
@@ -106,7 +95,6 @@ const config = {
             },
           },
           editUrl: 'https://github.com/cncf/contribute-site/tree/main/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -124,7 +112,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/cloud-native-contributors.jpg',
       metadata: [
         { name: 'twitter:card', content: 'summary_large_image' },
@@ -141,7 +128,6 @@ const config = {
           srcDark: 'img/logo-dark.svg',
         },
         items: [
-          // Left
           {
             type: 'docSidebar',
             sidebarId: 'maintainersSidebar',
@@ -166,8 +152,6 @@ const config = {
             position: 'left',
             label: 'TechDocs',
           },
-
-          // Right
           {
             type: 'docSidebar',
             sidebarId: 'contributorsSidebar',
@@ -187,13 +171,6 @@ const config = {
             label: 'Events',
           },
           { to: '/blog', label: 'Blog', position: 'right' },
-          {
-            href: '/blog/rss.xml',
-            label: 'RSS',
-            position: 'right',
-            className: 'header-rss-link',
-            'aria-label': 'Blog RSS feed',
-          },
         ],
       },
       footer: {
@@ -242,14 +219,6 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/cncf/contribute-site',
               },
-              {
-                label: 'RSS Feed',
-                href: '/blog/rss.xml',
-              },
-              {
-                label: 'Atom Feed',
-                href: '/blog/atom.xml',
-              },
             ],
           },
         ],
@@ -277,5 +246,3 @@ const config = {
 };
 
 export default config;
-
-
