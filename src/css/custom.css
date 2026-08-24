@@ -160,3 +160,31 @@
 .controls-catalog-doc a[id^='crosswalk-'] {
     scroll-margin-top: 5rem;
 }
+
+/* Featured "Contacting the TOC" card on the Projects index (/projects) */
+a.card[href*='/projects/contact-the-toc'] {
+  position: relative;
+  border: 2px solid var(--ifm-color-primary);
+  background-color: color-mix(in srgb, var(--ifm-color-primary) 7%, var(--ifm-card-background-color));
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+a.card[href*='/projects/contact-the-toc']:hover {
+  border-color: var(--ifm-color-primary-dark);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+a.card[href*='/projects/contact-the-toc']::after {
+  content: 'Start here';
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}

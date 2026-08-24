@@ -1,7 +1,7 @@
 ---
 title: Contacting the TOC
 description: How CNCF projects can reach the Technical Oversight Committee, raise issues, and find guidance
-sidebar_position: 11
+sidebar_position: 1
 tags:
   - toc
   - projects
