@@ -36,7 +36,7 @@ When you finish editing the template, remove the Instruction links that explain 
 # Maintainer Council Governance
 
 [Maintainer Council] is the most basic formal governance for projects, and as
-such used by more projects than any other. TAG Contributor Stategy developed it to cover 
+such used by more projects than any other. The CNCF developed it to cover 
 a very common circumstance, where the overlap of repository approvers and 
 people who handle other governance issues is 100%.  It was originally based on 
 the governance of the [Jaeger project].

@@ -12,7 +12,7 @@ using Linux Foundation infrastructure.
 Use this page to document the approved process for project fundraising,
 sponsorship outreach, and related communications.
 
-:::tip CNCF Also Funds Core Project Support
+:::tip CNCF also funds core project support
 
 CNCF already funds key project support in addition to project-specific
 fundraising efforts, including:
@@ -28,7 +28,15 @@ See [Code Analysis & Audits](/resources/services/audits/) and the
 ## Guidelines
 
 Maintainers that would like to raise funds for their projects should use
-[LFX Crowdfunding](https://crowdfunding.linuxfoundation.org/). Maintainers
+[LFX Crowdfunding](https://crowdfunding.linuxfoundation.org/).
+
+:::note All funding should be managed through LFX Crowdfunding
+
+If funding has been raised elsewhere (such as through a grant or donation from an organization) it should be directed to LFX Crowdfunding to manage.
+
+:::
+
+Maintainers
 should jointly decide how the money raised by their initiatives is spent and
 record those decisions in public project channels.
 
