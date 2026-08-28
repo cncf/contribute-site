@@ -174,3 +174,4 @@ After processing all files, add a comment to the triggering issue:
 6. **Do not guess.** If you cannot find a valid replacement, skip the link and report it in the summary comment.
 7. **Each PR must be independent.** Reset your working tree between files so PRs do not contain changes from other files.
 8. **Never use closing keywords.** Do not use `Fixes`, `Closes`, or `Resolves` in PR bodies — each PR fixes only one file, not the entire issue. Use only `Contributes to #<number>`.
+9. **Preserve the link's extension style.** When fixing a broken link, only correct what's actually wrong (the path, typo, or domain). Do not add a `.md` extension to a link that didn't originally have one, and do not strip a `.md` extension that was already present. Changing the style is an unrelated edit and violates Rule 4.
