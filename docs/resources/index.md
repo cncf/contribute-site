@@ -9,7 +9,9 @@ This is the main portal you should use to get support, you should receive a resp
 
 ## [maintainers.cncf.io](https://maintainers.cncf.io/)
 
-All CNCF maintainers are listed in this file, if you are a maintainer of a CNCF Project and need to add yourself follow these TODO: instructions.
+All CNCF maintainers are listed in this file, if you are a maintainer of a CNCF Project and need to add yourself open a pull request and complete the steps in the [template](https://github.com/cncf/foundation/blob/main/.github/pull_request_template.md).
+
+If your project has already adopted [`.project`](https://contribute.cncf.io/blog/2026/04/22/introducing-dot-project-for-maintainers) for self-serve maintainer roll management we will use that information to update the spreadsheet on your behalf.
 
 ### What happens if I want to use a tool or service not listed here?
 
