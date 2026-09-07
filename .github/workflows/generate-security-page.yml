@@ -13,7 +13,20 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      - name: Require push token
+        env:
+          TOKEN: ${{ secrets.DOT_PROJECT_UPDATE_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo '::error::DOT_PROJECT_UPDATE_TOKEN secret is not set; cannot push to main.'
+            exit 1
+          fi
+
       - uses: actions/checkout@v4
+        with:
+          # PAT from an actor with ruleset bypass on main; the default
+          # GITHUB_TOKEN cannot push directly (branch rulesets require PRs).
+          token: ${{ secrets.DOT_PROJECT_UPDATE_TOKEN }}
 
       - uses: actions/setup-node@v4
         with:
