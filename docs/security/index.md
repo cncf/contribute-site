@@ -27,7 +27,8 @@ policy and 215 provide a vulnerability reporting channel.
 
 To report a vulnerability in a CNCF project, use the project's vulnerability
 reporting link below. If a project has no reporting channel listed, contact
-[security@cncf.io](mailto:security@cncf.io).
+[projects@cncf.io](mailto:projects@cncf.io?subject=%5BSECURITY%5D%20) with a
+subject line starting with `[SECURITY]`.
 
 :::
 
