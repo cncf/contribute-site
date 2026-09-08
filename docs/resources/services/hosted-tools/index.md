@@ -15,7 +15,7 @@ Most services can be requested through a Service Desk ticket, unless otherwise n
 - [Kusari Inspector](https://docs.kusari.cloud/docs/Inspector/) gives full visibility into versions, licenses, and security risks for direct and transitive dependencies. [Learn more here](https://contribute.cncf.io/blog/2025/12/17/cloud-native-project-monthly-december-2025#%EF%B8%8F-kusari-gadget-free-for-projects).
 - [Kapa.ai](https://www.kapa.ai/) handles thousands of community questions per month, reducing the volume of inbound support questions maintainers manage directly. Learn more in [this blog post](https://contribute.cncf.io/blog/2026/04/09/reducing-support-tax-cncf-kapa-ai).
 - [Zoom](https://zoom.us/) video conferencing Pro accounts for video meetings, recordings, and scheduling.
-- [LastPass](https://www.lastpass.com/), [1Password](https://github.com/1Password/1password-teams-open-source), and [Keybase](https://keybase.io) to manage access to shared secrets.
+- [Keybase](https://keybase.io) to manage access to shared secrets.
 - [Netlify](https://netlify.com) for website hosting, DNS management, and improved workflow/automation around documentation and websites.
 - [Discourse](https://www.discourse.org/) for community discussion (e.g., [discuss.kubernetes.io](https://discuss.kubernetes.io)).
 - [Slack](https://slack.com) for communication for all projects in the Cloud Native Computing Foundation Slack. [Learn about migrating your Slack workspace to the CNCF Slack](/community/slack-migration-runbook).
@@ -24,6 +24,7 @@ Most services can be requested through a Service Desk ticket, unless otherwise n
 - [CNCF License Exceptions Dashboard](https://cncf-license-exceptions.netlify.app/) presents a list of software components that have been sucessfully exempted via the process to [apply for a license exception](https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md#process-for-applying-for-an-exception)
 - [LFX Security](https://lfx.linuxfoundation.org/tools/security/) for source code security scanning and license compliance (white-labeled Snyk)
 - [Fastly](https://www.fastly.com/) has provided a [commitment to support CNCF and LF projects](https://www.fastly.com/blog/fast-forward-were-here-for-the-maintainers/). Apply for access directly with Fastly through that page.
+- [1Password](https://github.com/1Password/for-open-source) offers free Teams accounts to open source projects for managing shared secrets. Apply for access directly through the 1Password for Open Source program.
 - [Scarf](https://scarf.sh) for advanced analytics for container & artifact distribution, package installation, and web traffic to source documentation. [Get started](https://docs.scarf.sh/quick-start/).
 - [Dosu](https://dosu.dev/) is a new AI teammate that lives in your GitHub repo, helping you respond to issues, triage bugs, and build better documentation (early access program, mention CNCF when applying).
 - [Sourcegraph](https://sourcegraph.com/supporting-the-cncf) is offering complimentary AI and code search workspace licenses to eligible OSS developers who actively maintain a CNCF project.

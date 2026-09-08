@@ -44,7 +44,7 @@ Google has also put together a set of templates that may be useful:
 
 ### How do I share credentials, passwords, or other confidential information?
 
-The CNCF doesn't enforce the projects to use any specific tool for sharing credentials, passwords or other confidential information, however we recommend using [Keybase][keybase] or applying for 1Password's [free open source plan][1password-oss].
+The CNCF doesn't enforce the projects to use any specific tool for sharing credentials, passwords or other confidential information, however we recommend using [Keybase][keybase] or applying directly to [1Password's free open source program][1password-oss].
 
 ## Tools
 
@@ -103,7 +103,7 @@ If you aren't happy with the service provided by CNCF staff or with a resolution
 [etcd-security]: https://github.com/etcd-io/etcd/blob/main/security/README.md
 [google-vuln-guide]: https://github.com/google/oss-vulnerability-guide
 [keybase]: https://keybase.io/
-[1password-oss]: https://github.com/1Password/1password-teams-open-source
+[1password-oss]: https://github.com/1Password/for-open-source
 [aws-credits]: https://www.cncf.io/announcement/2019/11/19/cloud-native-computing-foundation-receives-200000-in-credits-from-amazon-web-services-aws/
 [oracle-credits]: https://www.cncf.io/blog/2024/02/02/oracle-oci-credits-are-now-available-to-cncf-projects-here-is-what-you-need-to-know/
 [akamai-credits]: https://www.cncf.io/blog/2025/11/05/akamai-builds-cloud-native-resilience-cloud-credits-to-power-cncf-projects/
