@@ -15,7 +15,7 @@ Most services can be requested through a Service Desk ticket, unless otherwise n
 - [Kusari Inspector](https://docs.kusari.cloud/docs/Inspector/) gives full visibility into versions, licenses, and security risks for direct and transitive dependencies. [Learn more here](https://contribute.cncf.io/blog/2025/12/17/cloud-native-project-monthly-december-2025#%EF%B8%8F-kusari-gadget-free-for-projects).
 - [Kapa.ai](https://www.kapa.ai/) handles thousands of community questions per month, reducing the volume of inbound support questions maintainers manage directly. Learn more in [this blog post](https://contribute.cncf.io/blog/2026/04/09/reducing-support-tax-cncf-kapa-ai).
 - [Zoom](https://zoom.us/) video conferencing Pro accounts for video meetings, recordings, and scheduling.
-- [LastPass](https://www.lastpass.com/) and [Keybase](https://keybase.io) to manage access to shared secrets.
+- [Keybase](https://keybase.io) to manage access to shared secrets.
 - [Netlify](https://netlify.com) for website hosting, DNS management, and improved workflow/automation around documentation and websites.
 - [Discourse](https://www.discourse.org/) for community discussion (e.g., [discuss.kubernetes.io](https://discuss.kubernetes.io)).
 - [Slack](https://slack.com) for communication for all projects in the Cloud Native Computing Foundation Slack. [Learn about migrating your Slack workspace to the CNCF Slack](/community/slack-migration-runbook).
