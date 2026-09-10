@@ -11,7 +11,7 @@ description: >-
   Source: scripts/generate-security-page.mjs
 -->
 
-_Last updated: 2026-09-07_
+_Last updated: 2026-09-10_
 
 This page lists the security policy and vulnerability reporting channel for each
 active CNCF project. The reporting channel is taken from each project's own
@@ -42,7 +42,7 @@ repository — see the
 
 | Project                                                             | Security policy                                                                         | Report a vulnerability                                                                               |
 | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| [Argo](https://github.com/argoproj)                                 | [Security policy](https://github.com/argoproj/argo-workflows/blob/main/SECURITY.md)     | [GitHub Security Advisory](https://github.com/argoproj/argo-workflows/security/advisories/new)       |
+| [Argo](https://github.com/argoproj)                                 | [Security policy](https://github.com/argoproj/argoproj/blob/main/SECURITY.md)           | [GitHub Security Advisory](https://github.com/argoproj/argo-workflows/security/advisories/new)       |
 | [Buildpacks](https://github.com/buildpacks)                         | [Security policy](https://github.com/buildpacks/.github/blob/main/SECURITY.md)          | [GitHub Security Advisory](https://github.com/buildpacks/community/security/advisories/new)          |
 | [cert-manager](https://github.com/cert-manager)                     | [Security policy](https://github.com/cert-manager/cert-manager/blob/master/SECURITY.md) | [cert-manager-security@googlegroups.com](mailto:cert-manager-security@googlegroups.com)              |
 | [Cilium](https://github.com/cilium)                                 | [Security policy](https://github.com/cilium/cilium/blob/main/SECURITY.md)               | [security@cilium.io](mailto:security@cilium.io)                                                      |
