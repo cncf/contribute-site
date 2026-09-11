@@ -11,7 +11,7 @@ description: >-
   Source: scripts/generate-security-page.mjs
 -->
 
-_Last updated: 2026-09-10_
+_Last updated: 2026-09-11_
 
 This page lists the security policy and vulnerability reporting channel for each
 active CNCF project. The reporting channel is taken from each project's own
@@ -20,7 +20,7 @@ security policy (`SECURITY.md`), discovered through the project's
 metadata. It supports the CNCF's obligations as an open source steward under the
 [EU Cyber Resilience Act (CRA)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj).
 
-Of the 219 active projects with a `.project` repository: 172 publish a security
+Of the 220 active projects with a `.project` repository: 172 publish a security
 policy and 215 provide a vulnerability reporting channel.
 
 :::info Report a vulnerability
@@ -276,3 +276,4 @@ repository — see the
 | ----------------------------------------------- | --------------- | ---------------------- |
 | [cedar-policy](https://github.com/cedar-policy) | ⚠️ Missing      | ⚠️ Missing             |
 | [composefs](https://github.com/composefs)       | ⚠️ Missing      | ⚠️ Missing             |
+| [sdcio](https://github.com/sdcio)               | ⚠️ Missing      | ⚠️ Missing             |
