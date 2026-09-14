@@ -11,7 +11,7 @@ description: >-
   Source: scripts/generate-security-page.mjs
 -->
 
-_Last updated: 2026-09-12_
+_Last updated: 2026-09-14_
 
 This page lists the security policy and vulnerability reporting channel for each
 active CNCF project. The reporting channel is taken from each project's own
@@ -20,8 +20,8 @@ security policy (`SECURITY.md`), discovered through the project's
 metadata. It supports the CNCF's obligations as an open source steward under the
 [EU Cyber Resilience Act (CRA)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj).
 
-Of the 219 active projects with a `.project` repository: 171 publish a security
-policy and 214 provide a vulnerability reporting channel.
+Of the 220 active projects with a `.project` repository: 172 publish a security
+policy and 215 provide a vulnerability reporting channel.
 
 :::info Report a vulnerability
 
@@ -69,6 +69,7 @@ repository — see the
 | [Kyverno](https://github.com/kyverno)                               | [Security policy](https://github.com/kyverno/kyverno/blob/main/SECURITY.md)             | [kyverno-security@googlegroups.com](mailto:kyverno-security@googlegroups.com)                        |
 | [Open Policy Agent (OPA)](https://github.com/open-policy-agent)     | [Security policy](https://github.com/open-policy-agent/opa/blob/main/SECURITY.md)       | [GitHub Security Advisory](https://github.com/open-policy-agent/opa/security/advisories/new)         |
 | [OpenTelemetry](https://github.com/open-telemetry)                  | [Security policy](https://github.com/open-telemetry/.github/blob/main/SECURITY.md)      | [GitHub Security Advisory](https://github.com/open-telemetry/opentelemetry.io/security/advisories)   |
+| [Prometheus](https://github.com/prometheus)                         | [Security policy](https://github.com/prometheus/prometheus/blob/main/SECURITY.md)       | [GitHub Security Advisory](https://github.com/prometheus/prometheus/security/advisories/new)         |
 | [Rook](https://github.com/rook)                                     | [Security policy](https://github.com/rook/rook/blob/master/SECURITY.md)                 | [cncf-rook-security@lists.cncf.io](mailto:cncf-rook-security@lists.cncf.io)                          |
 | [SPIFFE](https://github.com/spiffe)                                 | [Security policy](https://github.com/spiffe/spire/blob/main/SECURITY.md)                | [security@spiffe.io](mailto:security@spiffe.io)                                                      |
 | [The Update Framework (TUF)](https://github.com/theupdateframework) | ⚠️ Missing                                                                              | [GitHub Security Advisory](https://github.com/theupdateframework/python-tuf/security/advisories/new) |
@@ -215,7 +216,7 @@ repository — see the
 | [ModelPack](https://github.com/modelpack)                                         | [Security policy](https://github.com/modelpack/model-spec/blob/main/SECURITY.md)                            | [GitHub Security Advisory](https://github.com/modelpack/model-spec/security/advisories/new)                            |
 | [Network Service Mesh](https://github.com/networkservicemesh)                     | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/networkservicemesh/api/security/advisories/new)                          |
 | [NMstate](https://github.com/nmstate)                                             | [Security policy](https://github.com/nmstate/nmstate/blob/base/SECURITY.md)                                 | [GitHub Security Advisory](https://github.com/nmstate/nmstate/security/advisories/new)                                 |
-| [OAuth2 Proxy](https://github.com/oauth2-proxy)                                   | [Security policy](https://github.com/oauth2-proxy/oauth2-proxy/blob/master/SECURITY.md)                     | [GitHub Security Advisory](https://github.com/oauth2-proxy/oauth2-proxy/security/advisories/new)                       |
+| [OAuth2 Proxy](https://github.com/oauth2-proxy)                                   | [Security policy](https://github.com/oauth2-proxy/oauth2-proxy/blob/master/SECURITY.md)                     | [security@oauth2-proxy.dev](mailto:security@oauth2-proxy.dev)                                                          |
 | [Open Cluster Management](https://github.com/open-cluster-management-io)          | [Security policy](https://github.com/open-cluster-management-io/ocm/blob/main/SECURITY.md)                  | [OCM-security@googlegroups.com](mailto:OCM-security@googlegroups.com)                                                  |
 | [Open Policy Containers](https://github.com/opcr-io)                              | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/opcr-io/policy/security/advisories/new)                                  |
 | [Open Workflow Specification](https://github.com/open-workflow-specification)     | [Security policy](https://github.com/open-workflow-specification/specification/blob/main/SECURITY.md)       | [GitHub Security Advisory](https://github.com/serverlessworkflow/specification/security/advisories/new)                |
