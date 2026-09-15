@@ -11,7 +11,7 @@ description: >-
   Source: scripts/generate-security-page.mjs
 -->
 
-_Last updated: 2026-09-14_
+_Last updated: 2026-09-15_
 
 This page lists the security policy and vulnerability reporting channel for each
 active CNCF project. The reporting channel is taken from each project's own
@@ -20,8 +20,8 @@ security policy (`SECURITY.md`), discovered through the project's
 metadata. It supports the CNCF's obligations as an open source steward under the
 [EU Cyber Resilience Act (CRA)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj).
 
-Of the 220 active projects with a `.project` repository: 172 publish a security
-policy and 215 provide a vulnerability reporting channel.
+Of the 221 active projects with a `.project` repository: 173 publish a security
+policy and 216 provide a vulnerability reporting channel.
 
 :::info Report a vulnerability
 
@@ -197,6 +197,7 @@ repository — see the
 | [kube-rs](https://github.com/kube-rs)                                             | [Security policy](https://github.com/kube-rs/kube/blob/main/SECURITY.md)                                    | [GitHub Security Advisory](https://github.com/kube-rs/kube/security/advisories/new)                                    |
 | [kube-vip](https://github.com/kube-vip)                                           | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/kube-vip/kube-vip/security/advisories/new)                               |
 | [Kubean](https://github.com/kubean-io)                                            | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/kubean-io/kubean/security/advisories/new)                                |
+| [KubeArmor](https://github.com/kubearmor)                                         | [Security policy](https://github.com/kubearmor/KubeArmor/blob/main/SECURITY.md)                             | [GitHub Security Advisory](https://github.com/kubearmor/KubeArmor/security/advisories/new)                             |
 | [KubeClipper](https://github.com/kubeclipper)                                     | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/kubeclipper/kubeclipper/security/advisories/new)                         |
 | [KubeElasti](https://github.com/KubeElasti)                                       | [Security policy](https://github.com/KubeElasti/KubeElasti/blob/main/SECURITY.md)                           | [GitHub Security Advisory](https://github.com/KubeElasti/KubeElasti/security/advisories/new)                           |
 | [KubeFleet](https://github.com/kubefleet-dev)                                     | [Security policy](https://github.com/kubefleet-dev/kubefleet/blob/main/SECURITY.md)                         | [-distributors-announce@lists.cncf.io](mailto:-distributors-announce@lists.cncf.io)                                    |
