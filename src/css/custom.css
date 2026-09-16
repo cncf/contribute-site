@@ -107,6 +107,16 @@
 
 .navbar__logo:not(#\#):not(#\#) {
   height: 2.5rem;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+/* Scale the logo down instead of letting it bleed under the navbar items
+   when horizontal space runs out (#202) */
+.navbar__logo img:not(#\#):not(#\#) {
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
 }
 
 /* Reduce navbar crowding at intermediate viewport sizes */
