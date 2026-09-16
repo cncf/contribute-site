@@ -132,6 +132,9 @@ Be very strict with the instructions in this section:
 - Always ensure you are generating valid Markdown, link the final document with
   the same linter docusaurus uses. Don't bother with MDX, always generate plain
   Markdown.
+- Placeholder links in this file carry a `?no-link-check` suffix so the link
+  checker skips them. Ignore the suffix: strip it when filling in templates, and
+  never copy it into generated content.
 - Ensure that the build is ALWAYS PASSING for EVERY PULL REQUEST. Under no
   circumstances propose code that breaks the build.
 - Always ensure that the vocabulary and definitions for everything you create
@@ -708,11 +711,7 @@ complete.
 
 ## Related Work
 
-- [CNCF Health Checks Report](/cncf-health-checks-report) - 2024 health check
-  analysis
-- [Cloud Custodian Health Check](/cloud-custodian-health-check) - Example
-  project health check
-- [CNCF Project Moving Levels Status](/cncf-project-moving-levels-status) -
+- [CNCF Project Moving Levels Status](/projects/moving-levels) -
   Graduation/incubation tracking
 
 ## Maintaining This Guide
@@ -753,7 +752,7 @@ metric 1], [key metric 2], and [key metric 3].]
 [Brief project context: what it does, maturity level (if CNCF), analysis period,
 and scope of review.]
 
-**Repository:** [@org/project](https://github.com/org/project)  
+**Repository:** [@org/project](https://github.com/org/project?no-link-check)  
 **Created:** [Month Year]  
 **Maturity Level:** [Sandbox/Incubating/Graduated] (if CNCF)  
 **Stars:** [Number] (as of [Date])  
@@ -1124,18 +1123,18 @@ and final health grade]
 
 ## Related Work
 
-- [Related Health Check 1](/path-to-doc) - [Brief description]
-- [Related Health Check 2](/path-to-doc) - [Brief description]
-- [TAG Contributor Strategy Health Check Guide](/tag-contributor-strategy-guide)
-- [Relevant external resource](link)
+- [Related Health Check 1](/path-to-doc?no-link-check) - [Brief description]
+- [Related Health Check 2](/path-to-doc?no-link-check) - [Brief description]
+- [TAG Contributor Strategy Health Check Guide](/projects/best-practices/community/project-health)
+- [Relevant external resource](link?no-link-check)
 
 ## References
 
-- [@org/project](https://github.com/org/project) - Project repository
+- [@org/project](https://github.com/org/project?no-link-check) - Project repository
 - [CNCF DevStats](https://devstats.cncf.io/) - Project activity metrics (if
   CNCF)
 - [CNCF Landscape](https://landscape.cncf.io/) - Project listing (if CNCF)
-- [Additional reference](link)
+- [Additional reference](link?no-link-check)
 
 ## CNCF Blog Posts
 
@@ -1150,8 +1149,8 @@ and final health grade]
 
 | Issue #   | Project   | Status                   | Duration | Link                |
 | --------- | --------- | ------------------------ | -------- | ------------------- |
-| #[number] | [Project] | [Open/Resolved/Archived] | [X] days | [Description](link) |
-| #[number] | [Project] | [Open/Resolved/Archived] | [X] days | [Description](link) |
+| #[number] | [Project] | [Open/Resolved/Archived] | [X] days | [Description](link?no-link-check) |
+| #[number] | [Project] | [Open/Resolved/Archived] | [X] days | [Description](link?no-link-check) |
 
 ## Methodology
 
@@ -1178,7 +1177,7 @@ such as no adopter interviews conducted.]
 
 **Report Generated**: [Date]  
 **Analyst**: GitHub Copilot  
-**Data Source**: [@org/project](https://github.com/org/project) repository
+**Data Source**: [@org/project](https://github.com/org/project?no-link-check) repository
 (GitHub API)
 
 **Note on Data:** This analysis focuses on [scope description]. [Any additional

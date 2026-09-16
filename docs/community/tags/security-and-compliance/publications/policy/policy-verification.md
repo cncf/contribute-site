@@ -314,21 +314,21 @@ solvers?
 [2]: http://ts.data61.csiro.au/publications/nicta_full_text/955.pdf
 [3]: https://d1.awsstatic.com/whitepapers/Security/Reachability_Analysis_for_AWS-based_Networks.pdf
 [4]: https://souffle-lang.github.io/docs.html
-[5]: http://discovery.ucl.ac.uk/10067190/1/Subotic_10067190_thesis.pdf
+[5]: https://discovery.ucl.ac.uk/id/eprint/10067190/1/Subotic_10067190_thesis.pdf
 [6]: https://github.com/HarvardPL/formulog
-[7]: http://theory.stanford.edu/~barrett/pubs/LRT+16.pdf
+[7]: https://theory.stanford.edu/~barrett/pubs/LRT+16.pdf
 [8]: https://www.cs.utexas.edu/users/hunt/FMCAD/FMCAD18/papers/paper27.pdf
 [9]: https://pdfs.semanticscholar.org/5988/5d51177d628565c94542373aba78debe89bc.pdf
 [10]: https://resources.mpi-inf.mpg.de/departments/rg1/conferences/vtsa09/slides/schulz.pdf
-[11]: http://www.it.uu.se/research/group/astra/CPmeetsCAV/slides/piskac.pdf
+[11]: https://web.archive.org/web/20240423142736/http://www.it.uu.se/research/group/astra/CPmeetsCAV/slides/piskac.pdf
 [12]: https://stackoverflow.com/questions/11592472/limits-of-smt-solvers
-[13]: http://www.cse.unsw.edu.au/~kleing/papers/sosp09.pdf
+[13]: https://web.archive.org/web/20240419070621/https://www.cse.unsw.edu.au/~kleing/papers/sosp09.pdf
 [14]: https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-601.pdf
-[15]: http://theory.stanford.edu/~zm/papers/cav96dmc.ps.Z
+[15]: https://theory.stanford.edu/~zm/papers/cav96dmc.ps.Z
 [16]: https://crypto.stanford.edu/~uribe/papers/frocos2000.pdf.gz
 [17]: https://pdfs.semanticscholar.org/5988/5d51177d628565c94542373aba78debe89bc.pdf
-[18]: http://theory.stanford.edu/~barrett/pubs/MRT+17.pdf
-[19]: http://klee.github.io/publications/
+[18]: https://theory.stanford.edu/~barrett/pubs/MRT+17.pdf
+[19]: https://klee.github.io/publications/
 [20]: https://ws680.nist.gov/publication/get_pdf.cfm?pub_id=921189
 [21]: https://lmeyerov.github.io/projects/margrave/paper.pdf
 [22]: https://ws680.nist.gov/publication/get_pdf.cfm?pub_id=922390
@@ -338,7 +338,7 @@ solvers?
 [26]: https://en.wikipedia.org/wiki/Promela
 [27]: https://en.wikipedia.org/wiki/SPIN_model_checker
 [28]: https://www.researchgate.net/publication/221585943_Conformance_Checking_of_RBAC_Policies_in_Process-Aware_Information_Systems/link/02e7e51cea9031151c000000/download
-[29]: http://www.sis.pitt.edu/jjoshi/courses/IS2620/Spring11/reading_files/04385334.pdf
+[29]: https://www.sis.pitt.edu/jjoshi/courses/IS2620/Spring11/reading_files/04385334.pdf
 [30]: https://eprint.iacr.org/2000/067.pdf
 
 ### Historical Note

@@ -18,13 +18,13 @@ For each KubeCon + CloudNativeCon, we’ve been collecting community feedback fr
 ## 🚨Project Opportunities Feedback at KubeCon + CloudNativeCon NA 
 Your input matters! We want to ensure our project opportunities at KubeCon + CloudNativeCon fit your needs. Participate in our Project Opportunities Survey and have your say in shaping future initiatives! We welcome you to share your insights and thoughts on potential project offerings for future events.
 
-[Take the Survey Now](https://community.cncf.io/events/details/cncf-cloud-native-security-slam-presents-2023-security-slam-lightning-round/)
+[Take the Survey Now](https://web.archive.org/web/20231209145433/https://community.cncf.io/events/details/cncf-cloud-native-security-slam-presents-2023-security-slam-kubernetes-lightning-round/)
 
 ## ⚡ Announcing... Lightning Round - Security Slam!
 Following the impact of the 2023 Cloud Native Security Slam, the Kubernetes maintainers have scheduled a one-day special event to allow new Kubernetes contributors an easy path to helping commit critical security improvements to Kubernetes. 
 Whether you are joining for one day or would like to become a recurring contributor, this is a perfect opportunity to learn more about what goes on behind the scenes to make Kubernetes the global digital superpower it has become.
 
-[View Details](https://community.cncf.io/events/details/cncf-cloud-native-security-slam-presents-2023-security-slam-lightning-round/)
+[View Details](https://web.archive.org/web/20231209145433/https://community.cncf.io/events/details/cncf-cloud-native-security-slam-presents-2023-security-slam-kubernetes-lightning-round/)
 
 ## 🍎 GitHub Actions: Now with Apple Silicon!
 In case you missed it, exciting news broke this fall regarding projects under the CNCF GitHub Enterprise License. Now, you should have access to the latest GitHub Action Runner type. Check out GitHub's fantastic blog announcement for detailed instructions on setup and more information.
