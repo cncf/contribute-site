@@ -11,7 +11,7 @@ description: >-
   Source: scripts/generate-security-page.mjs
 -->
 
-_Last updated: 2026-09-15_
+_Last updated: 2026-09-16_
 
 This page lists the security policy and vulnerability reporting channel for each
 active CNCF project. The reporting channel is taken from each project's own
@@ -90,6 +90,7 @@ repository — see the
 | [Flatcar Container Linux](https://github.com/flatcar)       | [Security policy](https://github.com/flatcar/scripts/blob/main/SECURITY.md)                   | [security@flatcar-linux.org](mailto:security@flatcar-linux.org)                                        |
 | [Fluid](https://github.com/fluid-cloudnative)               | [Security policy](https://github.com/fluid-cloudnative/fluid/blob/master/SECURITY.md)         | [fluid.opensource.project@gmail.com](mailto:fluid.opensource.project@gmail.com)                        |
 | [gRPC](https://github.com/grpc)                             | [Security policy](https://github.com/grpc/grpc/blob/master/SECURITY.md)                       | [grpc-security@googlegroups.com](mailto:grpc-security@googlegroups.com)                                |
+| [hami](https://github.com/Project-HAMi)                     | [Security policy](https://github.com/Project-HAMi/HAMi/blob/master/SECURITY.md)               | [GitHub Security Advisory](https://github.com/Project-HAMi/HAMi/security/advisories/new)               |
 | [Karmada](https://github.com/karmada-io)                    | [Security policy](https://github.com/karmada-io/karmada/blob/master/SECURITY.md)              | [cncf-karmada-security@lists.cncf.io](mailto:cncf-karmada-security@lists.cncf.io)                      |
 | [Keycloak](https://github.com/keycloak)                     | [Security policy](https://github.com/keycloak/keycloak/blob/main/SECURITY.md)                 | [keycloak-security@googlegroups.com](mailto:keycloak-security@googlegroups.com)                        |
 | [KServe](https://github.com/kserve)                         | [Security policy](https://github.com/kserve/kserve/blob/master/SECURITY.md)                   | [GitHub Security Advisory](https://github.com/kserve/kserve/security/advisories/new)                   |
@@ -158,7 +159,6 @@ repository — see the
 | [Easegress](https://github.com/easegress-io)                                      | [Security policy](https://github.com/easegress-io/easegress/blob/main/SECURITY.md)                          | [GitHub Security Advisory](https://github.com/easegress-io/easegress/security/advisories/new)                          |
 | [Eraser](https://github.com/eraser-dev)                                           | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/eraser-dev/eraser/security/advisories/new)                               |
 | [external-secrets](https://github.com/external-secrets)                           | [Security policy](https://github.com/external-secrets/external-secrets/blob/main/SECURITY.md)               | [cncf-ExternalSecretsOp-maintainers@lists.cncf.io](mailto:cncf-ExternalSecretsOp-maintainers@lists.cncf.io)            |
-| [hami](https://github.com/Project-HAMi)                                           | [Security policy](https://github.com/Project-HAMi/HAMi/blob/master/SECURITY.md)                             | [GitHub Security Advisory](https://github.com/Project-HAMi/HAMi/security/advisories/new)                               |
 | [Headlamp](https://github.com/headlamp-k8s)                                       | [Security policy](https://github.com/headlamp-k8s/plugins/blob/main/SECURITY.md)                            | [GitHub Security Advisory](https://github.com/headlamp-k8s/plugins/security/advisories/new)                            |
 | [Higress](https://github.com/higress-group)                                       | [Security policy](https://github.com/higress-group/higress/blob/main/SECURITY.md)                           | [GitHub Security Advisory](https://github.com/higress-group/higress/security/advisories/new)                           |
 | [HolmesGPT](https://github.com/HolmesGPT)                                         | [Security policy](https://github.com/HolmesGPT/holmesgpt/blob/master/SECURITY.md)                           | [GitHub Security Advisory](https://github.com/HolmesGPT/holmesgpt/security/advisories/new)                             |
