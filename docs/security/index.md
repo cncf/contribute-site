@@ -11,7 +11,7 @@ description: >-
   Source: scripts/generate-security-page.mjs
 -->
 
-_Last updated: 2026-09-16_
+_Last updated: 2026-09-18_
 
 This page lists the security policy and vulnerability reporting channel for each
 active CNCF project. The reporting channel is taken from each project's own
@@ -20,8 +20,8 @@ security policy (`SECURITY.md`), discovered through the project's
 metadata. It supports the CNCF's obligations as an open source steward under the
 [EU Cyber Resilience Act (CRA)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj).
 
-Of the 221 active projects with a `.project` repository: 173 publish a security
-policy and 216 provide a vulnerability reporting channel.
+Of the 221 active projects with a `.project` repository: 174 publish a security
+policy and 217 provide a vulnerability reporting channel.
 
 :::info Report a vulnerability
 
@@ -246,6 +246,7 @@ repository — see the
 | [Runme Notebooks](https://github.com/runmedev)                                    | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/runmedev/runme/security/advisories/new)                                  |
 | [SchemaHero](https://github.com/schemahero)                                       | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/schemahero/schemahero/security/advisories/new)                           |
 | [Score](https://github.com/score-spec)                                            | [Security policy](https://github.com/score-spec/spec/blob/main/SECURITY.md)                                 | [GitHub Security Advisory](https://github.com/score-spec/spec/security/advisories/new)                                 |
+| [SDC (Schema Driven Configuration)](https://github.com/sdcio)                     | [Security policy](https://github.com/sdcio/.github/blob/main/SECURITY.md)                                   | [sdc-security@googlegroups.com](mailto:sdc-security@googlegroups.com)                                                  |
 | [Sermant](https://github.com/sermant-io)                                          | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/sermant-io/Sermant/security/advisories/new)                              |
 | [Serverless Devs](https://github.com/Serverless-Devs)                             | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/Serverless-Devs/Serverless-Devs/security/advisories/new)                 |
 | [Shipwright](https://github.com/shipwright-io)                                    | [Security policy](https://github.com/shipwright-io/.github/blob/main/SECURITY.md)                           | [shipwright-security@lists.cncf.io](mailto:shipwright-security@lists.cncf.io)                                          |
@@ -277,4 +278,3 @@ repository — see the
 | ----------------------------------------------- | --------------- | ---------------------- |
 | [cedar-policy](https://github.com/cedar-policy) | ⚠️ Missing      | ⚠️ Missing             |
 | [composefs](https://github.com/composefs)       | ⚠️ Missing      | ⚠️ Missing             |
-| [sdcio](https://github.com/sdcio)               | ⚠️ Missing      | ⚠️ Missing             |
