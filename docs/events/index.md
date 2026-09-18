@@ -2,6 +2,7 @@
 title: Events
 description: "CNCF Events: KubeCon, Maintainer Summits, and Project Activities"
 sidebar_position: 6
+keywords: [events, kubecon, maintainer summit, cloud native events]
 ---
 
 import DocCardList from '@theme/DocCardList';
