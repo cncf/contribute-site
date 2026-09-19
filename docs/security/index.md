@@ -11,7 +11,7 @@ description: >-
   Source: scripts/generate-security-page.mjs
 -->
 
-_Last updated: 2026-09-18_
+_Last updated: 2026-09-19_
 
 This page lists the security policy and vulnerability reporting channel for each
 active CNCF project. The reporting channel is taken from each project's own
@@ -20,7 +20,7 @@ security policy (`SECURITY.md`), discovered through the project's
 metadata. It supports the CNCF's obligations as an open source steward under the
 [EU Cyber Resilience Act (CRA)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj).
 
-Of the 221 active projects with a `.project` repository: 174 publish a security
+Of the 221 active projects with a `.project` repository: 175 publish a security
 policy and 217 provide a vulnerability reporting channel.
 
 :::info Report a vulnerability
@@ -231,7 +231,7 @@ repository — see the
 | [ORAS](https://github.com/oras-project)                                           | [Security policy](https://github.com/oras-project/oras/blob/main/SECURITY.md)                               | [GitHub Security Advisory](https://github.com/oras-project/oras/security/advisories/new)                               |
 | [OSCAL-COMPASS](https://github.com/oscal-compass)                                 | [Security policy](https://github.com/oscal-compass/community/blob/main/SECURITY.md)                         | [oscal-compass-oversight@googlegroups.com](mailto:oscal-compass-oversight@googlegroups.com)                            |
 | [OVN-Kubernetes](https://github.com/ovn-kubernetes)                               | [Security policy](https://github.com/ovn-kubernetes/ovn-kubernetes/blob/master/SECURITY.md)                 | [GitHub Security Advisory](https://github.com/ovn-kubernetes/ovn-kubernetes/security/advisories/new)                   |
-| [Oxia](https://github.com/oxia-db)                                                | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/oxia-db/oxia/security/advisories/new)                                    |
+| [Oxia](https://github.com/oxia-db)                                                | [Security policy](https://github.com/oxia-db/oxia/blob/main/SECURITY.md)                                    | [GitHub Security Advisory](https://github.com/oxia-db/oxia/security/advisories/new)                                    |
 | [Paralus](https://github.com/paralus)                                             | ⚠️ Missing                                                                                                  | [GitHub Security Advisory](https://github.com/paralus/paralus/security/advisories/new)                                 |
 | [Parsec](https://github.com/parallaxsecond)                                       | [Security policy](https://github.com/parallaxsecond/parsec/blob/main/SECURITY.md)                           | [GitHub Security Advisory](https://github.com/parallaxsecond/parsec/security/advisories)                               |
 | [Perses](https://github.com/perses)                                               | [Security policy](https://github.com/perses/perses/blob/main/SECURITY.md)                                   | [perses-team@googlegroups.com](mailto:perses-team@googlegroups.com)                                                    |
