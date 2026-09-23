@@ -85,5 +85,5 @@ and values / principles. All of this documentation should be consistent with the
 mission and values in the [CNCF
 Charter](https://github.com/cncf/foundation/blob/master/charter.md).
 
-[1]: Note: [SIGs also have charters](https://github.com/cncf/sig-contributor-strategy) 
-      that serve a similar function and often contain mission statements, scope, etc. 
+[1]: Note: [TAGs and TOC subprojects also have charters](https://github.com/cncf/toc/tree/main/toc_subprojects)
+      that serve a similar function and often contain mission statements, scope, etc.

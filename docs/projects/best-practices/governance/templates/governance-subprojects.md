@@ -35,7 +35,7 @@ When you finish editing the template, remove the Instruction links that explain 
 
 [Subproject Governance] is the most complex of our templates, since it covers 
 the most complex situation: a "federated" project that consists of multiple,
-related, but quasi-autonomous subprojects.  The TAG developed it originally
+related, but quasi-autonomous subprojects.  It was developed originally
 for the [Konveyor] project, and has been used by several since then, including
 the [Operator Framework] project.
 

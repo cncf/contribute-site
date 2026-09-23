@@ -9,7 +9,9 @@ This is the main portal you should use to get support, you should receive a resp
 
 ## [maintainers.cncf.io](https://maintainers.cncf.io/)
 
-All CNCF maintainers are listed in this file, if you are a maintainer of a CNCF Project and need to add yourself follow these TODO: instructions.
+All CNCF maintainers are listed in this file, if you are a maintainer of a CNCF Project and need to add yourself open a pull request and complete the steps in the [template](https://github.com/cncf/foundation/blob/main/.github/pull_request_template.md).
+
+If your project has already adopted [`.project`](https://contribute.cncf.io/blog/2026/04/22/introducing-dot-project-for-maintainers) for self-serve maintainer roll management we will use that information to update the spreadsheet on your behalf.
 
 ### What happens if I want to use a tool or service not listed here?
 
@@ -42,7 +44,7 @@ Google has also put together a set of templates that may be useful:
 
 ### How do I share credentials, passwords, or other confidential information?
 
-The CNCF doesn't enforce the projects to use any specific tool for sharing credentials, passwords or other confidential information, however we recommend using [Keybase][keybase] or applying for 1Password's [free open source plan][1password-oss].
+The CNCF doesn't enforce the projects to use any specific tool for sharing credentials, passwords or other confidential information, however we recommend using [Keybase][keybase] or applying directly to [1Password's free open source program][1password-oss].
 
 ## Tools
 
@@ -101,7 +103,7 @@ If you aren't happy with the service provided by CNCF staff or with a resolution
 [etcd-security]: https://github.com/etcd-io/etcd/blob/main/security/README.md
 [google-vuln-guide]: https://github.com/google/oss-vulnerability-guide
 [keybase]: https://keybase.io/
-[1password-oss]: https://github.com/1Password/1password-teams-open-source
+[1password-oss]: https://github.com/1Password/for-open-source
 [aws-credits]: https://www.cncf.io/announcement/2019/11/19/cloud-native-computing-foundation-receives-200000-in-credits-from-amazon-web-services-aws/
 [oracle-credits]: https://www.cncf.io/blog/2024/02/02/oracle-oci-credits-are-now-available-to-cncf-projects-here-is-what-you-need-to-know/
 [akamai-credits]: https://www.cncf.io/blog/2025/11/05/akamai-builds-cloud-native-resilience-cloud-credits-to-power-cncf-projects/
