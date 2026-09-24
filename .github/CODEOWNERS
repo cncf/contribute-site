@@ -17,6 +17,9 @@
 /docs/community/tags/security-and-compliance @cncf/tag-security-compliance-leads
 /docs/community/tags/workloads-foundation @cncf/tag-workloads-foundation-leads
 
+# Publication maintainers inside a TAG directory
+/docs/community/tags/security-and-compliance/publications/automated-governance-maturity-model @cncf/tag-security-compliance-leads @astrogilda
+
 
 # TAG specific owned directories outside of primary TAG directory
 /docs/projects/best-practices/security @cncf/tag-security-compliance-leads
