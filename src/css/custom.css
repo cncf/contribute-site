@@ -198,3 +198,20 @@ a.card[href*='/projects/contact-the-toc']::after {
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
 }
+
+/* Agent directive injected first in <body> (see llmsDirectiveHtml in
+   docusaurus.config.js). Visually hidden but kept in the DOM so agents that
+   read the HTML find it; not display:none. Technique from Bootstrap v5.3.3
+   scss/mixins/_visually-hidden.scss (MIT):
+   https://github.com/twbs/bootstrap/blob/v5.3.3/scss/mixins/_visually-hidden.scss */
+.llms-directive {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
