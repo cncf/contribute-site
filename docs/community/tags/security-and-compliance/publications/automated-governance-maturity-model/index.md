@@ -8,8 +8,7 @@ title: Automated Governance Maturity Model
 > [cncf/tag-security](https://github.com/cncf/tag-security/blob/5fb87f474808e02e7786d7c5548e65ffc1a6e29e/community/resources/automated-governance-maturity-model/README.md),
 > which is archived, as tracked in
 > [cncf/toc#2301](https://github.com/cncf/toc/issues/2301). The text below is
-> unchanged. Maintainer: Sankalp Gilda
-> ([@astrogilda](https://github.com/astrogilda)).
+> unchanged.
 
 <!-- cSpell:ignore Ignácio -->
 
