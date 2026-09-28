@@ -11,7 +11,24 @@ describe('config', () => {
   it('runs only for GET requests that mention text/markdown', () => {
     assert.equal(config.path, '/*');
     assert.deepEqual(config.method, ['GET']);
-    assert.equal(config.header.accept, 'text/markdown');
+    assert.ok(config.header.accept);
+  });
+
+  // Netlify matches header values as case-sensitive regular expressions, but
+  // media types are case-insensitive (RFC 9110 §8.3.1).
+  it('gates on text/markdown in any letter case', () => {
+    const gate = new RegExp(config.header.accept);
+    for (const accept of [
+      'text/markdown',
+      'Text/Markdown',
+      'TEXT/MARKDOWN',
+      'text/html;q=0.9, text/markdown',
+    ]) {
+      assert.ok(gate.test(accept), `${accept} should invoke the function`);
+    }
+    for (const accept of ['text/html', 'text/plain, */*', '*/*']) {
+      assert.ok(!gate.test(accept), `${accept} should not invoke the function`);
+    }
   });
 
   it('never runs for the twins themselves or static assets', () => {

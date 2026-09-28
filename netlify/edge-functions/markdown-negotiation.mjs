@@ -28,7 +28,9 @@ export const config = {
   // Netlify's manifest validator accepts only GET, POST, PUT, PATCH, DELETE,
   // and OPTIONS here; HEAD requests are routed like GET at the CDN.
   method: ['GET'],
-  header: { accept: 'text/markdown' },
+  // Netlify treats this string as a case-sensitive regular expression, while
+  // media types are case-insensitive, so each letter is spelled both ways.
+  header: { accept: '[Tt][Ee][Xx][Tt]/[Mm][Aa][Rr][Kk][Dd][Oo][Ww][Nn]' },
   // Progressive enhancement: on error, fall through to the HTML page.
   onError: 'bypass',
 };
