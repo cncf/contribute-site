@@ -123,6 +123,28 @@ A repo-specific skill for reviewing pull requests in contribute-site.
     );
   });
 
+  // LOCKED: regression for cncf/contribute-site#428 (self-review): a second
+  // pass re-split every already-split section, overwriting each section index
+  // with a two-link stub and rewriting the root to say "all 2 pages".
+  it('is a no-op on a root it has already split', () => {
+    const once = splitLlmsTxt(`${PREAMBLE}\n${SKILLS}`);
+    const twice = splitLlmsTxt(once.root);
+    assert.equal(twice.root, once.root);
+    assert.deepEqual(twice.sections, []);
+  });
+
+  it('leaves a section inline when its first link is not an absolute URL', () => {
+    const text = `${PREAMBLE}
+## Notes
+
+- [First note](/notes/first.md): One.
+- [Second note](/notes/second.md): Two.
+`;
+    const { root, sections } = splitLlmsTxt(text);
+    assert.equal(root, text);
+    assert.deepEqual(sections, []);
+  });
+
   describe('on plugin output', () => {
     const linkLines = (text) =>
       text.split('\n').filter((l) => l.startsWith('- ['));
@@ -196,6 +218,28 @@ describe('split-llms-txt CLI', () => {
       assert.equal(readFileSync(join(dir, path), 'utf8'), content);
     }
     assert.match(stdout, /3 section index(es)?/);
+  });
+
+  // LOCKED: regression for cncf/contribute-site#428 (self-review): running the
+  // CLI twice on the same build directory clobbered the section indexes.
+  it('leaves the build directory unchanged when run a second time', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'split-llms-'));
+    writeFileSync(join(dir, 'llms.txt'), FIXTURE);
+    const run = () =>
+      execFileSync(process.execPath, [SCRIPT, dir], { encoding: 'utf8' });
+
+    run();
+    const { sections } = splitLlmsTxt(FIXTURE);
+    const snapshot = ['llms.txt', ...sections.map((s) => s.path)].map((p) =>
+      readFileSync(join(dir, p), 'utf8'),
+    );
+
+    const stdout = run();
+    const after = ['llms.txt', ...sections.map((s) => s.path)].map((p) =>
+      readFileSync(join(dir, p), 'utf8'),
+    );
+    assert.deepEqual(after, snapshot);
+    assert.match(stdout, /0 section index(es)?/);
   });
 
   it('fails loudly when the root llms.txt is missing', () => {

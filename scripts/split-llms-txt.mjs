@@ -51,13 +51,17 @@ function parseSections(lines) {
 }
 
 // Returns the root replacement and the per-section file for a section that has
-// more than its landing page, or null when the section should stay inline.
+// more than its landing page, or null when the section should stay inline:
+// too few pages, already split, or links the script cannot resolve.
 function splitSection({ title, lines }) {
   const linkLines = lines.filter((line) => LINK.test(line));
   if (linkLines.length < 2) return null;
+  if (linkLines.some(isIndexLink)) return null;
 
   const firstLinkAt = lines.findIndex((line) => LINK.test(line));
-  const firstLink = new URL(LINK.exec(lines[firstLinkAt])[2]);
+  const href = LINK.exec(lines[firstLinkAt])[2];
+  if (!URL.canParse(href)) return null;
+  const firstLink = new URL(href);
   const slug = firstLink.pathname
     .split('/')
     .filter(Boolean)[0]
@@ -94,6 +98,11 @@ function splitSection({ title, lines }) {
 // `### Sub` becomes `## Sub` inside a section file, where the section is the H1.
 function demoteHeading(line) {
   return /^#{3,} /.test(line) ? line.slice(1) : line;
+}
+
+// A link this script wrote on an earlier run, marking the section as split.
+function isIndexLink(line) {
+  return LINK.exec(line)[2].endsWith('/llms.txt');
 }
 
 function main(dir = 'build') {
