@@ -14,7 +14,11 @@ import { dirname, join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const H2 = /^## (.+)$/;
+const SUBHEADING = /^#{3,} /;
 const LINK = /^- \[([^\]]*)\]\(([^)\s]+)\)(?::\s*(.*))?$/;
+// Agents truncate llms.txt files beyond this many characters:
+// https://agentdocsspec.com/spec/web/content-discoverability/
+const SIZE_LIMIT = 50_000;
 
 export function splitLlmsTxt(text) {
   const lines = text.split('\n');
@@ -69,8 +73,15 @@ function splitSection({ title, lines }) {
   if (!slug) return null;
   const isLanding = firstLink.pathname === `/${slug}.md`;
 
-  const intro = lines.slice(0, firstLinkAt);
-  const body = lines.slice(firstLinkAt);
+  // The intro is the section's own text: everything before its first link,
+  // stopping early at a subsection heading so that stays with its pages.
+  const firstSubheadingAt = lines.findIndex((line) => SUBHEADING.test(line));
+  const introEnd =
+    firstSubheadingAt !== -1 && firstSubheadingAt < firstLinkAt
+      ? firstSubheadingAt
+      : firstLinkAt;
+  const intro = lines.slice(0, introEnd);
+  const body = lines.slice(introEnd);
   const description =
     intro.filter((line) => line.trim() !== '').join(' ') ||
     LINK.exec(lines[firstLinkAt])[3] ||
@@ -97,7 +108,7 @@ function splitSection({ title, lines }) {
 
 // `### Sub` becomes `## Sub` inside a section file, where the section is the H1.
 function demoteHeading(line) {
-  return /^#{3,} /.test(line) ? line.slice(1) : line;
+  return SUBHEADING.test(line) ? line.slice(1) : line;
 }
 
 // A link this script wrote on an earlier run, marking the section as split.
@@ -114,6 +125,18 @@ function main(dir = 'build') {
     writeFileSync(target, content);
   }
   writeFileSync(rootPath, root);
+  for (const { path, content } of [
+    { path: 'llms.txt', content: root },
+    ...sections,
+  ]) {
+    if (content.length > SIZE_LIMIT) {
+      console.warn(
+        `[split-llms-txt] warning: ${path} is ${content.length} characters, ` +
+          `over the ${SIZE_LIMIT.toLocaleString('en-US')}-character limit ` +
+          'agents apply to llms.txt; split this section further',
+      );
+    }
+  }
   console.log(
     `[split-llms-txt] wrote ${sections.length} section indexes; ` +
       `root llms.txt is now ${root.length} characters`,

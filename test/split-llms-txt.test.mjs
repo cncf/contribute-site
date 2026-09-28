@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import { existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -145,6 +145,49 @@ A repo-specific skill for reviewing pull requests in contribute-site.
     assert.deepEqual(sections, []);
   });
 
+  it('keeps a leading subsection heading in the section file, not the root', () => {
+    const text = `${PREAMBLE}
+## Notes
+
+### alpha
+
+Alpha description
+
+- [Alpha](https://contribute.cncf.io/notes/alpha.md): One.
+
+### beta
+
+- [Beta](https://contribute.cncf.io/notes/beta.md): Two.
+`;
+    const { root, sections } = splitLlmsTxt(text);
+
+    assert.equal(
+      root,
+      `${PREAMBLE}
+## Notes
+
+- [Notes index](https://contribute.cncf.io/notes/llms.txt): Links to all 2 pages in this section.
+`,
+    );
+    assert.equal(
+      sections[0].content,
+      `# Notes
+
+> One.
+
+## alpha
+
+Alpha description
+
+- [Alpha](https://contribute.cncf.io/notes/alpha.md): One.
+
+## beta
+
+- [Beta](https://contribute.cncf.io/notes/beta.md): Two.
+`,
+    );
+  });
+
   describe('on plugin output', () => {
     const linkLines = (text) =>
       text.split('\n').filter((l) => l.startsWith('- ['));
@@ -240,6 +283,36 @@ describe('split-llms-txt CLI', () => {
     );
     assert.deepEqual(after, snapshot);
     assert.match(stdout, /0 section index(es)?/);
+  });
+
+  it('warns on stderr when a written index exceeds 50,000 characters', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'split-llms-'));
+    const links = Array.from(
+      { length: 700 },
+      (_, i) =>
+        `- [Page ${i}](https://contribute.cncf.io/big/page-${i}.md): ${'x'.repeat(60)}`,
+    );
+    writeFileSync(
+      join(dir, 'llms.txt'),
+      `${PREAMBLE}\n## Big\n\n${links.join('\n')}\n`,
+    );
+
+    const { status, stderr } = spawnSync(process.execPath, [SCRIPT, dir], {
+      encoding: 'utf8',
+    });
+
+    assert.equal(status, 0, 'oversized output is a warning, not a failure');
+    assert.match(stderr, /big\/llms\.txt is \d+ characters, over the 50,000/);
+  });
+
+  it('stays quiet on stderr when every index fits', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'split-llms-'));
+    writeFileSync(join(dir, 'llms.txt'), FIXTURE);
+    const { status, stderr } = spawnSync(process.execPath, [SCRIPT, dir], {
+      encoding: 'utf8',
+    });
+    assert.equal(status, 0);
+    assert.equal(stderr, '');
   });
 
   it('fails loudly when the root llms.txt is missing', () => {
