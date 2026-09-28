@@ -67,11 +67,19 @@ export function prefersMarkdown(accept) {
   const weights = parseAccept(accept);
   const markdown = weights.get('text/markdown');
   if (!markdown) return false;
-  const html = Math.max(
-    weights.get('text/html') ?? 0,
-    weights.get('application/xhtml+xml') ?? 0,
-  );
-  return markdown >= html;
+  return markdown >= htmlWeight(weights);
+}
+
+// Weight the client gives the HTML page: the most specific range that covers
+// text/html (RFC 9110 §12.5.1), or an explicit application/xhtml+xml entry,
+// whichever is higher.
+function htmlWeight(weights) {
+  const html =
+    weights.get('text/html') ??
+    weights.get('text/*') ??
+    weights.get('*/*') ??
+    0;
+  return Math.max(html, weights.get('application/xhtml+xml') ?? 0);
 }
 
 // Path of the Markdown twin for a page route. No guessing about file

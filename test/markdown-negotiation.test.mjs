@@ -92,6 +92,25 @@ describe('prefersMarkdown', () => {
     assert.equal(prefersMarkdown('text/markdown;q=0'), false);
     assert.equal(prefersMarkdown('text/markdown;q=0, text/html'), false);
   });
+
+  // RFC 9110 §12.5.1: the most specific matching range sets a type's weight.
+  it('weighs html through text/* and */* when it is not listed exactly', () => {
+    assert.equal(prefersMarkdown('text/markdown;q=0.5, text/*;q=0.9'), false);
+    assert.equal(prefersMarkdown('text/markdown;q=0.5, */*'), false);
+    assert.equal(prefersMarkdown('text/markdown, */*'), true);
+    assert.equal(prefersMarkdown('text/markdown;q=0.8, */*;q=0.8'), true);
+  });
+
+  it('lets an exact html weight override a broader wildcard', () => {
+    assert.equal(
+      prefersMarkdown('text/html;q=0.3, text/*;q=0.9, text/markdown;q=0.5'),
+      true,
+    );
+    assert.equal(
+      prefersMarkdown('text/html;q=0, */*, text/markdown;q=0.1'),
+      true,
+    );
+  });
 });
 
 describe('markdownPathFor', () => {
