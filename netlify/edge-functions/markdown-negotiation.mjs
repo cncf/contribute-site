@@ -74,15 +74,12 @@ export function prefersMarkdown(accept) {
 }
 
 // Weight the client gives the HTML page: the most specific range that covers
-// text/html (RFC 9110 §12.5.1), or an explicit application/xhtml+xml entry,
-// whichever is higher.
+// text/html (RFC 9110 §12.5.1). Only text/html and text/markdown are ever
+// served, so other explicit types such as application/xhtml+xml do not count.
 function htmlWeight(weights) {
-  const html =
-    weights.get('text/html') ??
-    weights.get('text/*') ??
-    weights.get('*/*') ??
-    0;
-  return Math.max(html, weights.get('application/xhtml+xml') ?? 0);
+  return (
+    weights.get('text/html') ?? weights.get('text/*') ?? weights.get('*/*') ?? 0
+  );
 }
 
 // Path of the Markdown twin for a page route. No guessing about file

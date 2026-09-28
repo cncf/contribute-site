@@ -82,8 +82,23 @@ describe('prefersMarkdown', () => {
   it('is false when markdown has lower weight than html', () => {
     assert.equal(prefersMarkdown('text/markdown;q=0.9, text/html'), false);
     assert.equal(prefersMarkdown('text/html, text/markdown; q=0.8'), false);
+  });
+
+  // The site serves text/html or text/markdown, never XHTML, so an
+  // application/xhtml+xml entry says nothing about the HTML page.
+  it('ignores application/xhtml+xml when weighing html', () => {
+    assert.equal(
+      prefersMarkdown(
+        'application/xhtml+xml, text/markdown;q=0.9, text/html;q=0.8',
+      ),
+      true,
+    );
     assert.equal(
       prefersMarkdown('text/markdown;q=0.5, application/xhtml+xml'),
+      true,
+    );
+    assert.equal(
+      prefersMarkdown('text/html, application/xhtml+xml, text/markdown;q=0.9'),
       false,
     );
   });
