@@ -358,9 +358,25 @@ const config = {
         depth: 2,
         content: {
           includeBlog: true,
-          includePages: false,
+          includePages: true,
           relativePaths: false,
           excludeRoutes: ['/404.html', ...NON_CONTENT_ROUTES],
+          // First selector to match wins, per page. The home page has no
+          // .theme-doc-markdown and its cards sit in separate columns, so the
+          // plugin defaults capture only the first card; the leading entry
+          // matches the home page alone (the only page with a hero) and takes
+          // the hero plus all cards. The rest is the plugin's default list
+          // (1.2.2 lib/constants.js DEFAULT_CONTENT_SELECTORS), which the
+          // package does not export.
+          contentSelectors: [
+            '.main-wrapper:has(> .hero)',
+            '.theme-doc-markdown',
+            'main .container .col',
+            'main .theme-doc-wrapper',
+            'article',
+            'main .container',
+            'main',
+          ],
           // Section headings in llms.txt; each matches its index page title.
           routeRules: [
             { route: '/blog/**', categoryName: 'Blog' },
