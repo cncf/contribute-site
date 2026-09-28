@@ -26,7 +26,8 @@ const NON_CONTENT_ROUTES = [
 
 // Agent readiness (https://afdocs.dev, cncf/contribute-site#426).
 // @signalwire/docusaurus-plugin-llms-txt emits /llms.txt and a Markdown twin
-// of every page at /<route>.md. The two helpers below point agents at them:
+// of every documentation page and blog post at /<route>.md (search, tag, and
+// blog listing pages have none). The two helpers below point agents at them:
 // a visually hidden block at the top of the HTML <body>, and a blockquote at
 // the top of each generated .md file. Wording adapted from Docsy v0.17.0
 // (Apache-2.0):
@@ -41,7 +42,7 @@ function llmsDirectiveHtml() {
             tagName: 'div',
             attributes: { class: 'llms-directive', 'aria-hidden': 'true' },
             innerHTML:
-              'For AI agents: a documentation index is available at /llms.txt. Every page has a Markdown version: remove any trailing slash from its URL and append .md (the home page is /index.md).',
+              'For AI agents: a documentation index is available at /llms.txt. Every documentation page and blog post has a Markdown version: remove any trailing slash from its URL and append .md (the home page is /index.md).',
           },
         ],
       };
@@ -63,7 +64,7 @@ function llmsDirectiveMarkdown() {
             text('For AI agents: the complete documentation index is at '),
             link(`${SITE_URL}/llms.txt`, 'llms.txt'),
             text(
-              '. Every page has a Markdown version: remove any trailing slash from its URL and append ',
+              '. Every documentation page and blog post has a Markdown version: remove any trailing slash from its URL and append ',
             ),
             { type: 'inlineCode', value: '.md' },
             text(' (the home page is '),
