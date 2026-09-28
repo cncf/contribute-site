@@ -46,7 +46,7 @@
     "serve": "npm run docus:serve",
     "start": "npm run docus:start --",
     "test": "npm run check",
-    "test:unit": "node --test \"test/**/*.test.mjs\"",
+    "test:unit": "node --test test/*.test.mjs",
     "typecheck": "tsc",
     "update:pkgs": "npx npm-check-updates -u"
   },
