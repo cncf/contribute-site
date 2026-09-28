@@ -24,7 +24,9 @@ export const config = {
     '/js/*',
     '/social/*',
   ],
-  method: ['GET', 'HEAD'],
+  // Netlify's manifest validator accepts only GET, POST, PUT, PATCH, DELETE,
+  // and OPTIONS here; HEAD requests are routed like GET at the CDN.
+  method: ['GET'],
   header: { accept: 'text/markdown' },
   // Progressive enhancement: on error, fall through to the HTML page.
   onError: 'bypass',

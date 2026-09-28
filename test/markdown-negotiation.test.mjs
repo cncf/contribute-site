@@ -8,9 +8,9 @@ import handler, {
 } from '../netlify/edge-functions/markdown-negotiation.mjs';
 
 describe('config', () => {
-  it('runs only for GET/HEAD requests that mention text/markdown', () => {
+  it('runs only for GET requests that mention text/markdown', () => {
     assert.equal(config.path, '/*');
-    assert.deepEqual(config.method, ['GET', 'HEAD']);
+    assert.deepEqual(config.method, ['GET']);
     assert.equal(config.header.accept, 'text/markdown');
   });
 
@@ -24,6 +24,16 @@ describe('config', () => {
 
   it('fails open so an error still serves the HTML page', () => {
     assert.equal(config.onError, 'bypass');
+  });
+
+  // LOCKED: regression for cncf/contribute-site#428 (Netlify deploy 6abad885):
+  // the Edge Functions manifest validator rejects any method outside this list,
+  // and `HEAD` failed the whole deploy.
+  it('lists only methods the Netlify manifest validator accepts', () => {
+    const allowed = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'];
+    for (const method of config.method) {
+      assert.ok(allowed.includes(method), `${method} is rejected by Netlify`);
+    }
   });
 });
 
