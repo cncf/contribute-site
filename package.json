@@ -3,7 +3,7 @@
   "version": "0.9.0",
   "description": "Resources provided by the CNCF Projects team.",
   "scripts": {
-    "_build": "npm run docus:build",
+    "_build": "npm run docus:build && node scripts/split-llms-txt.mjs build",
     "_check:format:any": "npx prettier --check --ignore-path ''",
     "_check:format:delta": "npm run _check:format:any -- $(npm run -s _list:git:delta)",
     "_check:format": "npx prettier --check .",
@@ -46,6 +46,7 @@
     "serve": "npm run docus:serve",
     "start": "npm run docus:start --",
     "test": "npm run check",
+    "test:unit": "node --test \"test/**/*.test.mjs\"",
     "typecheck": "tsc",
     "update:pkgs": "npx npm-check-updates -u"
   },
