@@ -227,4 +227,30 @@ describe('handler', () => {
     assert.equal(fetchMock.mock.calls[0].arguments[1].method, 'HEAD');
     assert.equal(response.status, 200);
   });
+
+  it('drops the query string when fetching the twin', async () => {
+    const fetchMock = stubFetch(200, '# Contributors\n');
+    await handler(request('/contributors/?utm_source=agent'));
+    assert.equal(
+      String(fetchMock.mock.calls[0].arguments[0]),
+      `${ORIGIN}/contributors.md`,
+    );
+  });
+
+  // LOCKED: regression for cncf/contribute-site#428 (review r4127994310): a
+  // path starting with // was resolved as a network-path URL, so the twin
+  // fetch left our origin and re-served third-party content as our own.
+  it('keeps the twin fetch on the request origin for double-slash paths', async () => {
+    for (const path of [
+      '//example.com/page',
+      '/\\example.com/page',
+      '//example.com/',
+    ]) {
+      const fetchMock = stubFetch(404);
+      assert.equal(await handler(request(path)), undefined);
+      const fetched = new URL(fetchMock.mock.calls[0].arguments[0]);
+      assert.equal(fetched.origin, ORIGIN, `${path} must stay on ${ORIGIN}`);
+      mock.restoreAll();
+    }
+  });
 });

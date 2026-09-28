@@ -42,10 +42,13 @@ const FORWARDED_HEADERS = ['cache-control', 'etag', 'last-modified'];
 export default async function handler(request) {
   if (!prefersMarkdown(request.headers.get('accept'))) return undefined;
 
-  const url = new URL(request.url);
-  const twin = await fetch(new URL(markdownPathFor(url.pathname), url.origin), {
-    method: request.method,
-  });
+  // Assigning `pathname` keeps the fetch on our origin. Resolving the path
+  // against the origin instead would read a `//host/...` request path as a
+  // network-path URL and fetch from that host.
+  const twinUrl = new URL(request.url);
+  twinUrl.pathname = markdownPathFor(twinUrl.pathname);
+  twinUrl.search = '';
+  const twin = await fetch(twinUrl, { method: request.method });
   if (!twin.ok) return undefined;
 
   const headers = new Headers({
