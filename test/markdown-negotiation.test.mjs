@@ -17,6 +17,7 @@ describe('config', () => {
   it('never runs for the twins themselves or static assets', () => {
     assert.ok(config.excludedPath.includes('/*.md'));
     assert.ok(config.excludedPath.includes('/*.txt'));
+    assert.ok(config.excludedPath.includes('/favicons/*'));
     for (const path of [config.path, ...config.excludedPath]) {
       assert.ok(path.startsWith('/'), `${path} must start with /`);
     }
@@ -90,11 +91,9 @@ describe('markdownPathFor', () => {
     );
   });
 
-  it('returns null for paths that already carry a file extension', () => {
-    assert.equal(markdownPathFor('/contributors.md'), null);
-    assert.equal(markdownPathFor('/llms.txt'), null);
-    assert.equal(markdownPathFor('/img/logo.svg'), null);
-    assert.equal(markdownPathFor('/sitemap.xml'), null);
+  it('maps a route whose slug contains a dot to its .md twin', () => {
+    assert.equal(markdownPathFor('/kubernetes-1.35'), '/kubernetes-1.35.md');
+    assert.equal(markdownPathFor('/releases/v1.2/'), '/releases/v1.2.md');
   });
 });
 
@@ -130,11 +129,14 @@ describe('handler', () => {
     assert.equal(fetchMock.mock.callCount(), 0);
   });
 
-  it('bypasses without fetching when the path names a file', async () => {
-    const fetchMock = stubFetch(200, '# Nope');
-    assert.equal(await handler(request('/llms.txt')), undefined);
-    assert.equal(await handler(request('/img/logo.svg')), undefined);
-    assert.equal(fetchMock.mock.callCount(), 0);
+  it('serves the twin for a route whose slug contains a dot', async () => {
+    const fetchMock = stubFetch(200, '# Kubernetes 1.35\n');
+    const response = await handler(request('/kubernetes-1.35/'));
+    assert.equal(
+      String(fetchMock.mock.calls[0].arguments[0]),
+      `${ORIGIN}/kubernetes-1.35.md`,
+    );
+    assert.equal(response.status, 200);
   });
 
   it('serves the markdown twin when it exists', async () => {

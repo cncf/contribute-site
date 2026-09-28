@@ -18,6 +18,7 @@ export const config = {
     '/*.txt',
     '/*.xml',
     '/assets/*',
+    '/favicons/*',
     '/fonts/*',
     '/images/*',
     '/img/*',
@@ -40,10 +41,7 @@ export default async function handler(request) {
   if (!prefersMarkdown(request.headers.get('accept'))) return undefined;
 
   const url = new URL(request.url);
-  const markdownPath = markdownPathFor(url.pathname);
-  if (!markdownPath) return undefined;
-
-  const twin = await fetch(new URL(markdownPath, url.origin), {
+  const twin = await fetch(new URL(markdownPathFor(url.pathname), url.origin), {
     method: request.method,
   });
   if (!twin.ok) return undefined;
@@ -74,13 +72,12 @@ export function prefersMarkdown(accept) {
   return markdown >= html;
 }
 
-// Path of the Markdown twin for a page route, or null when the path already
-// names a file (has an extension in its last segment) and so has no twin.
+// Path of the Markdown twin for a page route. No guessing about file
+// extensions here: `config.excludedPath` keeps known assets away from the
+// function, and any other path without a twin 404s and falls through.
 export function markdownPathFor(pathname) {
   const trimmed = pathname.replace(/\/+$/, '');
   if (trimmed === '') return '/index.md';
-  const lastSegment = trimmed.slice(trimmed.lastIndexOf('/') + 1);
-  if (lastSegment.includes('.')) return null;
   return `${trimmed}.md`;
 }
 
