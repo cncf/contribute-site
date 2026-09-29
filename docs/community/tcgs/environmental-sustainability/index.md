@@ -10,7 +10,7 @@ tags:
 
 # Environmental Sustainability Technical Community Group
 
-The Environmental Sustainability Technical Community Group (TCG) focuses on advancing environmental sustainability in cloud native computing. The group was formerly TAG Environmental Sustainability and transitioned to a TCG in late 2025 (the [cncf/tag-env-sustainability](https://github.com/cncf/tag-env-sustainability) repository was archived on 18 December 2025).
+The Environmental Sustainability Technical Community Group (TCG) advances environmental sustainability in cloud native computing. The group was formerly TAG Environmental Sustainability and transitioned to a TCG in late 2025 (the [cncf/tag-env-sustainability](https://github.com/cncf/tag-env-sustainability) repository was archived on 18 December 2025).
 
 ## Mission
 
