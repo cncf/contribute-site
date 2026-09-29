@@ -23,6 +23,8 @@ The Environmental Sustainability TCG serves as a community rallying point for di
 - **Energy and Carbon Metrics**: Quantifying the energy consumption and carbon footprint of cloud native workloads
 - **Measurement Tooling**: Supporting projects such as [Kepler](https://sustainable-computing.io/) for power and energy measurement
 - **Landscape Gaps**: Identifying gaps in environmental sustainability coverage across the CNCF landscape
+- 
+- **Green Reviews**: Supporting TAG Operational Resilience initiatives such as the [Green Reviews subproject](https://contribute.cncf.io/community/tags/operational-resilience/#green-reviews)
 
 ### Best Practices and Guidance
 
