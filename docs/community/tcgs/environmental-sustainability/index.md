@@ -31,9 +31,9 @@ The Environmental Sustainability TCG serves as a community rallying point for di
 
 ### Community and Advocacy
 
-- **Sustainability Advocacy**: Outreach, blogging, and awareness efforts across the community
-- **Cloud Native Sustainability Week**: Community-led events highlighting sustainability work
-- **External Collaboration**: Engagement with environmental and sustainability organizations outside CNCF
+- **Sustainability Advocacy**: Outreach and awareness efforts across the community through blog posts, podcast interviews, talks, and organizing events
+- **Cloud Native Sustainability Month**: Organizing the [annual global series of community-led events](https://www.cncf.io/blog/2025/10/24/cloud-native-sustainability-month-2025-a-global-community-movement-for-greener-tech/) that highlight environmental sustainability work, held annually since 2023
+- **External Collaboration**: Engagement with environmental and sustainability organizations outside CNCF, including the Green Software Foundation
 
 ## Getting Involved
 
