@@ -9,13 +9,13 @@ tags: [maintainers, events, projects]
 Deadlines, project benefits, and communications for maintainers.
 
 - [KubeCon + CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines](/blog/scholarships-and-travel-funding-deadlines-september-2026#kubecon--cloudnativecon-2026--scholarships--travel-funding-deadlines)
+- [KubeCon + CloudNativeCon Europe 2027 - Project Benefits now LIVE](/blog/scholarships-and-travel-funding-deadlines-september-2026#kubecon--cloudnativecon-europe-2027---project-benefits-now-live)
 - [Observability Summit Europe](/blog/scholarships-and-travel-funding-deadlines-september-2026#observability-summit-europe)
 - [PromCon EU 2026](/blog/scholarships-and-travel-funding-deadlines-september-2026#promcon-eu-2026)
 - [Maintainer Summit North America](/blog/scholarships-and-travel-funding-deadlines-september-2026#maintainer-summit-north-america)
 - [KubeCon + CloudNativeCon North America](/blog/scholarships-and-travel-funding-deadlines-september-2026#kubecon--cloudnativecon-north-america)
 - [gRPConf India 2026](/blog/scholarships-and-travel-funding-deadlines-september-2026#grpconf-india-2026)
 - [Maintainer Summit EU](/blog/scholarships-and-travel-funding-deadlines-september-2026#maintainer-summit-eu)
-- [KubeCon + CloudNativeCon Europe 2027 - Project Benefits now LIVE](/blog/scholarships-and-travel-funding-deadlines-september-2026#kubecon--cloudnativecon-europe-2027---project-benefits-now-live)
 - [Virtual Events](/blog/scholarships-and-travel-funding-deadlines-september-2026#virtual-events)
 
 <!-- truncate -->
@@ -23,6 +23,13 @@ Deadlines, project benefits, and communications for maintainers.
 ## KubeCon + CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines
 
 [Scholarships](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/attend/scholarships-travel-funding/#registration-scholarships): apply by October 4, 11:59 PM MT. Notifications October 12.
+
+## KubeCon + CloudNativeCon Europe 2027 - Project Benefits now LIVE
+
+CFPs and Interest Forms are now open for KubeCon + CloudNativeCon Europe! Don’t miss your chance to participate in Project Lightning Talks, Maintainer Track, Project Tables, and PR Support. Check out the link below for details about each opportunity and to submit.
+
+- [Submit a CFP](https://sessionize.com/kubecon-cloudnativecon-europe-2027/) — due Sunday, October 11, 23:59 CEST
+- [Project Opportunities form](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/project-opportunities/) — due Wednesday, December 2, 23:59 CEST
 
 ## Observability Summit Europe
 
@@ -56,13 +63,6 @@ Please keep an eye on your inbox for upcoming updates and action items. You can 
 The [Maintainer Summit Europe 2027 webpage is now live](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/maintainer-summit/)!
 
 The CFP and Sponsor Prospectus are officially open, and registration will launch in the coming weeks. [Learn more](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/maintainer-summit/) and start planning for Maintainer Summit Europe 2027.
-
-## KubeCon + CloudNativeCon Europe 2027 - Project Benefits now LIVE
-
-CFPs and Interest Forms are now open for KubeCon + CloudNativeCon Europe! Don’t miss your chance to participate in Project Lightning Talks, Maintainer Track, Project Tables, and PR Support. Check out the link below for details about each opportunity and to submit.
-
-- [Submit a CFP](https://sessionize.com/kubecon-cloudnativecon-europe-2027/) — due Sunday, October 11, 23:59 CEST
-- [Project Opportunities form](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/project-opportunities/) — due Wednesday, December 2, 23:59 CEST
 
 ## Virtual Events
 
