@@ -41,7 +41,7 @@ Join the Prometheus community at PromCon EU 2026, happening 7-8 October in Munic
 
 ## Maintainer Summit North America
 
-Don't miss the opportunity to connect with fellow maintainers on Sunday, November 8 for a day of collaboration, knowledge sharing, and community building. Before registering, please review the Maintainer Summit [eligibility requirements](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/#eligibility) to ensure you qualify to participate. Please note that attendance at the Maintainer Summit requires registration for KubeCon + CloudNativeCon North America. **[Register for the Maintainer Summit today](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/#registration)!**
+Don't miss the opportunity to connect with fellow maintainers on Sunday, November 8, for a day of collaboration, knowledge sharing, and community building. Before registering, please review the Maintainer Summit [eligibility requirements](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/#eligibility) to ensure you qualify. Please note that attendance at the Maintainer Summit requires registration for KubeCon + CloudNativeCon North America. **[Register for the Maintainer Summit today](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/#registration)!**
 
 ## KubeCon + CloudNativeCon North America
 
