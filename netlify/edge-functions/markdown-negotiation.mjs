@@ -95,8 +95,8 @@ export function markdownPathFor(pathname) {
 // written ("*/*", "text/*") so callers can ignore them by exact lookup.
 function parseAccept(accept) {
   const weights = new Map();
-  for (const entry of accept.split(',')) {
-    const [type, ...params] = entry.split(';');
+  for (const entry of splitOutsideQuotes(accept, ',')) {
+    const [type, ...params] = splitOutsideQuotes(entry, ';');
     const mediaType = type.trim().toLowerCase();
     if (!mediaType) continue;
     let q = 1;
@@ -110,4 +110,30 @@ function parseAccept(accept) {
     weights.set(mediaType, q);
   }
   return weights;
+}
+
+// Split on `separator` only outside double quotes. A parameter value may be a
+// quoted-string that contains delimiters and backslash-escaped characters
+// (RFC 9110 §5.6.4), so a plain String.split would cut entries short.
+function splitOutsideQuotes(value, separator) {
+  const parts = [];
+  let current = '';
+  let quoted = false;
+  for (let i = 0; i < value.length; i += 1) {
+    const char = value[i];
+    if (quoted && char === '\\' && i + 1 < value.length) {
+      current += char + value[i + 1];
+      i += 1;
+      continue;
+    }
+    if (char === '"') quoted = !quoted;
+    if (char === separator && !quoted) {
+      parts.push(current);
+      current = '';
+    } else {
+      current += char;
+    }
+  }
+  parts.push(current);
+  return parts;
 }

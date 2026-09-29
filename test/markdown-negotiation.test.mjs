@@ -126,6 +126,31 @@ describe('prefersMarkdown', () => {
       true,
     );
   });
+
+  // RFC 9110 §5.6.4: a quoted parameter value may contain the delimiters.
+  it('keeps quoted commas and semicolons inside a parameter value', () => {
+    assert.equal(
+      prefersMarkdown(
+        'text/markdown;profile="alpha,beta";q=0.1, text/html;q=0.9',
+      ),
+      false,
+    );
+    assert.equal(
+      prefersMarkdown('text/markdown;variant="a;b";q=0.1, text/html;q=0.9'),
+      false,
+    );
+    assert.equal(
+      prefersMarkdown('text/html;profile="a,b";q=0.1, text/markdown;q=0.9'),
+      true,
+    );
+  });
+
+  it('treats a backslash-escaped quote as part of the quoted value', () => {
+    assert.equal(
+      prefersMarkdown('text/markdown;variant="a\\",b";q=0.1, text/html;q=0.9'),
+      false,
+    );
+  });
 });
 
 describe('markdownPathFor', () => {
