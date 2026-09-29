@@ -26,7 +26,7 @@ The Environmental Sustainability TCG serves as a community rallying point for di
 
 ### Best Practices and Guidance
 
-- **Optimization Guidance**: Recommendations for reducing consumption in cloud native deployments
+- **Optimization Guidance**: Recommendations for reducing energy, carbon, and resource consumption in cloud native deployments
 - **Education**: Resources for end users, developers, and stakeholders on sustainable cloud native practices
 
 ### Community and Advocacy
