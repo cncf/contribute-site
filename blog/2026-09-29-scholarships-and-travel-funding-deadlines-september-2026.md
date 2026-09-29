@@ -8,15 +8,15 @@ tags: [maintainers, events, projects]
 
 Deadlines, project benefits, and communications for maintainers.
 
-- [KubeCon + CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines](/scholarships-and-travel-funding-deadlines-september-2026#kubecon--cloudnativecon-2026--scholarships--travel-funding-deadlines)
-- [Observability Summit Europe](/scholarships-and-travel-funding-deadlines-september-2026#observability-summit-europe)
-- [PromCon EU 2026](/scholarships-and-travel-funding-deadlines-september-2026#promcon-eu-2026)
-- [Maintainer Summit North America](/scholarships-and-travel-funding-deadlines-september-2026#maintainer-summit-north-america)
-- [KubeCon + CloudNativeCon North America](/scholarships-and-travel-funding-deadlines-september-2026#kubecon--cloudnativecon-north-america)
-- [gRPConf India 2026](/scholarships-and-travel-funding-deadlines-september-2026#grpconf-india-2026)
-- [Maintainer Summit EU](/scholarships-and-travel-funding-deadlines-september-2026#maintainer-summit-eu)
-- [KubeCon + CloudNativeCon Europe 2027 - Project Benefits now LIVE](/scholarships-and-travel-funding-deadlines-september-2026#kubecon--cloudnativecon-europe-2027---project-benefits-now-live)
-- [Virtual Events](/scholarships-and-travel-funding-deadlines-september-2026#virtual-events)
+- [KubeCon + CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines](/blog/scholarships-and-travel-funding-deadlines-september-2026#kubecon--cloudnativecon-2026--scholarships--travel-funding-deadlines)
+- [Observability Summit Europe](/blog/scholarships-and-travel-funding-deadlines-september-2026#observability-summit-europe)
+- [PromCon EU 2026](/blog/scholarships-and-travel-funding-deadlines-september-2026#promcon-eu-2026)
+- [Maintainer Summit North America](/blog/scholarships-and-travel-funding-deadlines-september-2026#maintainer-summit-north-america)
+- [KubeCon + CloudNativeCon North America](/blog/scholarships-and-travel-funding-deadlines-september-2026#kubecon--cloudnativecon-north-america)
+- [gRPConf India 2026](/blog/scholarships-and-travel-funding-deadlines-september-2026#grpconf-india-2026)
+- [Maintainer Summit EU](/blog/scholarships-and-travel-funding-deadlines-september-2026#maintainer-summit-eu)
+- [KubeCon + CloudNativeCon Europe 2027 - Project Benefits now LIVE](/blog/scholarships-and-travel-funding-deadlines-september-2026#kubecon--cloudnativecon-europe-2027---project-benefits-now-live)
+- [Virtual Events](/blog/scholarships-and-travel-funding-deadlines-september-2026#virtual-events)
 
 <!-- truncate -->
 
