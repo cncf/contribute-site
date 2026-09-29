@@ -14,7 +14,7 @@ The Environmental Sustainability Technical Community Group (TCG) advances enviro
 
 ## Mission
 
-The Environmental Sustainability TCG serves as a community rallying point for discussing environmental sustainability factors in the cloud native landscape and for advocating open source projects that help observe, measure, optimize, and reduce the carbon footprint of cloud native infrastructure.
+The Environmental Sustainability TCG serves as a community rallying point for discussing environmental sustainability in the cloud native landscape and for advocating open source projects that help observe, measure, optimize, and reduce the carbon footprint of cloud native infrastructure.
 
 The group aims to raise awareness of environmental sustainability as a key element of open source development and to support projects that foster an understanding of energy drivers in cloud native systems.
 
