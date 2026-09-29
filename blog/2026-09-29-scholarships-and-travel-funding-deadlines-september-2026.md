@@ -1,11 +1,23 @@
 ---
 title: "KubeCon + CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines - September 2026"
 date: 2026-09-29
-author: "CNCF Staff"
+author: [krook,jeefy,mrbobbytables]
 slug: "scholarships-and-travel-funding-deadlines-september-2026"
 ---
 
 Deadlines, project benefits, and communications for maintainers.
+
+- [KubeCon + CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines](#kubecon--cloudnativecon-2026--scholarships--travel-funding-deadlines)
+- [Observability Summit Europe](#observability-summit-europe)
+- [PromCon EU 2026](#promcon-eu-2026)
+- [Maintainer Summit North America](#maintainer-summit-north-america)
+- [KubeCon + CloudNativeCon North America](#kubecon--cloudnativecon-north-america)
+- [gRPConf India 2026](#grpconf-india-2026)
+- [Maintainer Summit EU](#maintainer-summit-eu)
+- [KubeCon + CloudNativeCon Europe 2027 - Project Benefits now LIVE](#kubecon--cloudnativecon-europe-2027---project-benefits-now-live)
+- [Virtual Events](#virtual-events)
+
+<!-- truncate -->
 
 ## KubeCon + CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines
 
@@ -58,4 +70,4 @@ CFPs and Interest Forms are now open for KubeCon + CloudNativeCon Europe! Don’
 - [EnvoyCon](https://community2.cncf.io/events/details/cncf-virtual-project-events-hosted-by-cncf-presents-virtual-envoycon-10-year-anniversary-edition/) — Wednesday, October 14, 7:00-11:00 AM PDT
 - [KubeVirt Summit](https://community2.cncf.io/events/details/cncf-virtual-project-events-hosted-by-cncf-presents-kubevirt-summit-2026/) — Thursday, October 15, 5:00-9:00 AM PDT
 
-For any other questions, reach out to <projectsatkubecon@linuxfoundation.org>.
+For any other questions, reach out to [projectsatkubecon@linuxfoundation.org](mailto:projectsatkubecon@linuxfoundation.org).
