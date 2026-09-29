@@ -1,8 +1,9 @@
 ---
 title: "KubeCon + CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines - September 2026"
 date: 2026-09-29
-author: [krook,jeefy,mrbobbytables]
+authors: [krook, jeefy, mrbobbytables]
 slug: "scholarships-and-travel-funding-deadlines-september-2026"
+tags: [maintainers, events, projects]
 ---
 
 Deadlines, project benefits, and communications for maintainers.
@@ -48,7 +49,7 @@ Please keep an eye on your inbox for upcoming updates and action items. You can 
 
 ## gRPConf India 2026
 
-[Schedule is live](https://events.linuxfoundation.org/grpconf-india/program/schedule/)! Connect with the gRPC community in Bengaluru, India! Spend the day learning from project leaders, contributors, and fellow users through technical talks, demos, case studies, and code labs focused on real-world gRPC use cases and best practices. [Explore the event and register today](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/maintainer-summit/)!
+[Schedule is live](https://events.linuxfoundation.org/grpconf-india/program/schedule/)! Connect with the gRPC community in Bengaluru, India! Spend the day learning from project leaders, contributors, and fellow users through technical talks, demos, case studies, and code labs focused on real-world gRPC use cases and best practices. [Explore the event and register today](https://events.linuxfoundation.org/grpconf-india/)!
 
 ## Maintainer Summit EU
 

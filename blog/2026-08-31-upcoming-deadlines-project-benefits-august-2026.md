@@ -1,8 +1,9 @@
 ---
 title: "Upcoming Deadlines and Project Benefits - August 2026"
 date: 2026-08-28
-author: "CNCF Staff"
+authors: [krook, jeefy, mrbobbytables]
 slug: "upcoming-deadlines-project-benefits-august-2026"
+tags: [maintainers, events, projects]
 ---
 
 Deadlines, project benefits, and communications for maintainers.
@@ -40,7 +41,7 @@ Book hotels now — [conference rates](https://events.linuxfoundation.org/kubeco
 
 ## gRPConf India 2026
 
-[Schedule is posted](https://events.linuxfoundation.org/grpconf-india/program/schedule/). Bangaluru, India. Talks, demos, case studies, and code labs on gRPC use cases. [Register](https://events.linuxfoundation.org/grpconf-india/).
+[Schedule is posted](https://events.linuxfoundation.org/grpconf-india/program/schedule/). Bengaluru, India. Talks, demos, case studies, and code labs on gRPC use cases. [Register](https://events.linuxfoundation.org/grpconf-india/).
 
 ## KubeCon + CloudNativeCon Europe 2027 - Project Benefits Open
 
