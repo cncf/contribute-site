@@ -22,7 +22,7 @@ Deadlines, project benefits, and communications for maintainers.
 
 ## KubeCon + CloudNativeCon 2026 – Scholarships & Travel Funding Deadlines
 
-[Scholarships](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/attend/scholarships-travel-funding/#registration-scholarships): apply by October 4, 11:59 PM MT. Notifications October 12.
+[Scholarships](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/attend/scholarships-travel-funding/#registration-scholarships): apply by October 4, 11:59 PM MT. Notifications: October 12.
 
 ## KubeCon + CloudNativeCon Europe 2027 - Project Benefits now LIVE
 
