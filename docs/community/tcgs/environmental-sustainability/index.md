@@ -42,7 +42,7 @@ The Environmental Sustainability TCG serves as a community rallying point for di
 ### Join the Community
 
 - **Open Community Groups**: Meetings can be found in [https://ocgroups.dev/cncf/group/env](https://ocgroups.dev/cncf/group/env)
-- **CNCF Slack**: Join [slack.cncf.io](https://slack.cncf.io) and look for `#tag-environmental-sustainability`
+- **CNCF Slack**: Join [slack.cncf.io](https://slack.cncf.io) and look for the Slack channel `#tcg-environmental-sustainability`
 - **Meetings**: Check the community group page for the current meeting schedule
 - **LinkedIn**: [CNCF Environmental Sustainability TCG](https://www.linkedin.com/company/cncf-environmental-sustainability-tcg)
 
