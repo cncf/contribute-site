@@ -11,7 +11,11 @@ tags:
 
 # Cloud Native Sustainability Landscape
 
-_This document was published on 23.06.2023. We are aware that this document
+**Version**: 1.0 **Created**: 4 Jul 2022 **Status**: Approved
+
+**Published**: Jun 2023 **Last Updated**: 29 Sep 2026
+
+_This document was published in June 2023. We are aware that this document
 contains gaps that will be addressed in future releases. Contributions are very
 welcome!_
 

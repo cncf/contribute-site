@@ -12,7 +12,11 @@ tags:
 
 # Ecosistema de Sostenibilidad Nativa en la Nube
 
-_Este documento fue publicado el 23.06.2023. Somos conscientes de que este
+**Versión**: 1.0 **Creado**: 4 jul 2022 **Estado**: Aprobado
+
+**Publicado**: jun 2023
+
+_Este documento fue publicado en junio de 2023. Somos conscientes de que este
 documento contiene vacios que se abordarán en futuras versiones. ¡Las
 contribuciones son muy bienvenidas!_
 

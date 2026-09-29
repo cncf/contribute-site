@@ -1,7 +1,7 @@
 ---
 title:
   클라우드 네이티브의 지속가능성 랜드스케이프(Cloud Native Sustainability
-  Landscape, v0.1)
+  Landscape, v1.0)
 sidebar_label: Korean
 description:
   클라우드 네이티브 환경 내에서 알려진 지속 가능성을 위한 노력을 알아보고
@@ -12,12 +12,16 @@ tags:
   - environmental-sustainability
 ---
 
-# 클라우드 네이티브의 지속가능성 랜드스케이프(Cloud Native Sustainability Landscape, v0.1)
+# 클라우드 네이티브의 지속가능성 랜드스케이프(Cloud Native Sustainability Landscape, v1.0)
+
+**버전**: 1.0 **작성일**: 2022년 7월 4일 **상태**: 승인됨
+
+**게시일**: 2023년 6월
 
 [Read the English translation of this document here](/community/tags/operational-resilience/publications/sustainability-landscape/).
 
 이 문서는 클라우드 네이티브 환경 내에서 알려진 지속 가능성 노력과 진행 중인
-노력을 파악하고 도전 과제를 설명합니다. 이 문서는 0.1 버전이며 향후 버전에서
+노력을 파악하고 도전 과제를 설명합니다. 이 문서는 1.0 버전이며 향후 버전에서
 해결될 미진한 부분이 포함되어 있습니다. 여러분의 의견을 환영합니다! 클라우드
 컴퓨팅은 데이터를 저장하고 처리하는 방식을 혁신적으로 변화시켜 조직의 민첩성,
 효율성, 확장성을 향상시켰습니다. 그러나 기업이 지속 가능성 요건을 충족하기 위해
