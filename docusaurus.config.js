@@ -14,13 +14,18 @@ const LOCAL_EDIT_BASE = 'https://github.com/cncf/contribute-site/edit/main/docs'
 const SITE_URL = 'https://contribute.cncf.io';
 
 // Routes with no standalone content (search, tag/author/archive listings,
-// blog pagination). Kept out of the sitemap and of the llms.txt output.
+// blog pagination). Kept out of the sitemap and of the llms.txt output. Index
+// routes are listed next to their `/**` globs to make the intent explicit,
+// although micromatch treats `/x/**` as matching `/x` as well.
 const NON_CONTENT_ROUTES = [
   '/search',
+  '/tags',
   '/tags/**',
   '/blog/archive',
+  '/blog/authors',
   '/blog/authors/**',
   '/blog/page/**',
+  '/blog/tags',
   '/blog/tags/**',
 ];
 
