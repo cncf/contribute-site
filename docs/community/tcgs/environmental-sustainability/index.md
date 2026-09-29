@@ -10,7 +10,7 @@ tags:
 
 # Environmental Sustainability Technical Community Group
 
-The Environmental Sustainability Technical Community Group (TCG) advocates for, develops, supports, and evaluates environmental sustainability initiatives in cloud native technologies and practices.
+The [Environmental Sustainability Technical Community Group (TCG)](https://ocgroups.dev/cncf/group/env) advocates for, develops, supports, and evaluates environmental sustainability initiatives in cloud native technologies and practices.
 
 ## Mission
 
