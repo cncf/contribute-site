@@ -5,6 +5,7 @@ tags:
   - environmental-sustainability
   - tcg
   - operational-resilience
+  - green-computing
 ---
 
 # Environmental Sustainability Technical Community Group
