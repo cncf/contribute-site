@@ -14,7 +14,7 @@ tags:
 
 **Versión**: 1.0 **Creado**: 4 jul 2022 **Estado**: Aprobado
 
-**Publicado**: jun 2023
+**Publicado**: jun 2023 **Última actualización**: 29 sep 2026
 
 _Este documento fue publicado en junio de 2023. Somos conscientes de que este
 documento contiene vacios que se abordarán en futuras versiones. ¡Las
@@ -111,7 +111,8 @@ repositorio y asegúrate de agregarte como colaborador a continuación.
 
 <!-- cspell:disable-next-line -->
 
-Huamin Chen, [Marlow Weston](https://github.com/catblade),
+[Huamin Chen](https://github.com/rootfs),
+[Marlow Weston](https://github.com/catblade),
 [Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
 [Chen Wang](https://github.com/wangchen615),
 [Chris Lloyd-Jones](https://github.com/Sealjay),

@@ -16,7 +16,7 @@ tags:
 
 **버전**: 1.0 **작성일**: 2022년 7월 4일 **상태**: 승인됨
 
-**게시일**: 2023년 6월
+**게시일**: 2023년 6월 **최종 수정일**: 2026년 9월 29일
 
 [Read the English translation of this document here](/community/tags/operational-resilience/publications/sustainability-landscape/).
 
@@ -64,7 +64,8 @@ tags:
 
 <!-- cspell:disable-next-line -->
 
-Huamin Chen, [Marlow Weston](https://github.com/catblade),
+[Huamin Chen](https://github.com/rootfs),
+[Marlow Weston](https://github.com/catblade),
 [Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
 [Chen Wang](https://github.com/wangchen615),
 [Chris Lloyd-Jones](https://github.com/Sealjay),

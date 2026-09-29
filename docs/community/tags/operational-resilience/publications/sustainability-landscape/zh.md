@@ -12,7 +12,7 @@ tags:
 
 **版本**：1.0 **创建日期**：2022年7月4日 **状态**：已批准
 
-**发布日期**：2023年6月
+**发布日期**：2023年6月 **最后更新**：2026年9月29日
 
 _这篇文档于23年6月发布，我们希望文中空白的领域将在不远的未来解决，欢迎贡献！_
 
@@ -73,7 +73,8 @@ _这篇文档于23年6月发布，我们希望文中空白的领域将在不远�
 
 <!-- cspell:disable-next-line -->
 
-Huamin Chen, [Marlow Weston](https://github.com/catblade),
+[Huamin Chen](https://github.com/rootfs),
+[Marlow Weston](https://github.com/catblade),
 [Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
 [Chen Wang](https://github.com/wangchen615),
 [Chris Lloyd-Jones](https://github.com/Sealjay),
