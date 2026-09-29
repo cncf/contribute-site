@@ -52,7 +52,7 @@ Don't miss the opportunity to connect with fellow maintainers on Sunday, Novembe
 
 If you haven’t booked your hotel yet, we recommend doing so soon to [take advantage of the conference rates](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/attend/venue-travel/#hotel-information) while rooms are still available.
 
-Please keep an eye on your inbox for upcoming updates and action items. You can also review the [Project Engagement FAQs](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/project-engagement/#faqs) for additional questions you may have.
+Please watch your inbox for upcoming updates and action items. You can also review the [Project Engagement FAQs](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/project-engagement/#faqs) for additional questions you may have.
 
 ## gRPConf India 2026
 
