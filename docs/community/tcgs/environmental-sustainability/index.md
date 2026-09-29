@@ -25,7 +25,7 @@ The scope reflects the topics carried over from TAG Environmental Sustainability
 ### Measuring Cloud Native Impact
 
 - Defining environmental sustainability factors for the cloud native landscape
-- Observing and measuring carbon footprint of cloud native infrastructure
+- Observing and measuring the carbon footprint of cloud native infrastructure
 - Promoting tooling such as [Kepler](https://github.com/sustainable-computing-io/kepler) for energy and carbon measurement
 
 ### Green Reviews
