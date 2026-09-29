@@ -67,7 +67,7 @@ Meeting registration and upcoming events are available on the group's Open Commu
 
 ## Organizers
 
-Technical Community Groups are led by community organizers who facilitate meetings and coordinate activities. Current organizers listed on the group's Open Community Groups page include:
+Community organizers lead Technical Community Groups and facilitate meetings and coordinate activities. Current organizers listed on the group's Open Community Groups page include:
 
 - Saiyam Pathak ([@saiyam1814](https://github.com/saiyam1814))
 - Niki Manoledaki ([@nikimanoledaki](https://github.com/nikimanoledaki))
