@@ -2,14 +2,14 @@
 title: Glosario de Sostenibilidad Ambiental
 sidebar_label: Spanish
 description:
-  El objetivo de este glosario es definir la redacción utilizada dentro de
-  nuestro Grupo de Asesoria Tecnica (GAT) para la sostenibilidad ambiental. No
-  pretende ser holísticamente completo y, por lo tanto, proporciona recursos
-  adicionales cuando sea necesario.
+  El objetivo de este glosario es definir la redacción utilizada en la
+  sostenibilidad ambiental nativa en la nube. No pretende ser holísticamente
+  completo y, por lo tanto, proporciona recursos adicionales cuando sea
+  necesario.
 sidebar_position: 4
 tags:
   - operational-resilience
-  - sustainability
+  - environmental-sustainability
 ---
 
 # Glosario de Sostenibilidad Ambiental

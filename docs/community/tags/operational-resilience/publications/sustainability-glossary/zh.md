@@ -1,11 +1,11 @@
 ---
 title: Environmental Sustainability 术语
 sidebar_label: Chinese
-description: 本术语表旨在定义我们的技术咨询小组（TAG）内用于环境可持续性的措辞。它并不声称是全面完整的，因此在需要的地方提供了额外的资源。
+description: 本术语表旨在定义云原生环境可持续性领域中使用的措辞。它并不声称是全面完整的，因此在需要的地方提供了额外的资源。
 sidebar_position: 5
 tags:
   - operational-resilience
-  - sustainability
+  - environmental-sustainability
 ---
 
 # Environmental Sustainability 术语

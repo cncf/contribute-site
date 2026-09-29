@@ -6,13 +6,14 @@ description:
 sidebar_position: 1
 tags:
   - operational-resilience
-  - sustainability
+  - environmental-sustainability
 ---
 
 # Cloud Native Sustainability Landscape
 
-_This document was published on 23.06. We are aware that this document contains
-gaps that will be addressed in future releases. Contributions are very welcome!_
+_This document was published on 23.06.2023. We are aware that this document
+contains gaps that will be addressed in future releases. Contributions are very
+welcome!_
 
 All relevant wordings can be found explained here in the
 [glossary](/community/tags/operational-resilience/publications/sustainability-glossary/).
@@ -49,6 +50,7 @@ industry.
 
 ## Table of Contents
 
+- [Summary](#summary)
 - [Table of Contents](#table-of-contents)
 - [Contributors](#contributors)
 - [Foundations of Sustainable Cloud Systems](#foundations-of-sustainable-cloud-systems)
@@ -100,7 +102,8 @@ you add yourself as a contributor below!
 
 <!-- cspell:disable-next-line -->
 
-Huamin Chen, [Marlow Weston](https://github.com/catblade),
+[Huamin Chen](https://github.com/rootfs),
+[Marlow Weston](https://github.com/catblade),
 [Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
 [Chen Wang](https://github.com/wangchen615),
 [Chris Lloyd-Jones](https://github.com/Sealjay),
@@ -212,10 +215,10 @@ not trivial for a number of reasons, not limited to the following:
 Quantifying embedded carbon emissions is also very challenging as manufacturing
 details (embodied emissions) are not being incorporated into information for
 holistic quantification by consumers of manufactured technology. This is out of
-the scope of this white paper, however this TAG encourages interested readers to
+the scope of this white paper, however interested readers are encouraged to
 suggest guidance, best practices, methods, and mechanisms to quantify these
-emissions by filing an issue or pull request on our
-[repository](https://github.com/cncf/tag-env-sustainability).
+emissions by reaching out to
+[TAG Operational Resilience](/community/tags/operational-resilience/).
 
 <!-- We may want to put some directions though // +1, would this be guidance/best practice on methods to quantify these emissions or guidance on methods to mitigate these emissions? -->
 

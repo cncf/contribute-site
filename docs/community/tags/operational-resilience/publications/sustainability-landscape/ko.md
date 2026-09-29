@@ -9,7 +9,7 @@ description:
 sidebar_position: 2
 tags:
   - operational-resilience
-  - sustainability
+  - environmental-sustainability
 ---
 
 # 클라우드 네이티브의 지속가능성 랜드스케이프(Cloud Native Sustainability Landscape, v0.1)
@@ -167,10 +167,10 @@ GHGP)입니다.
 
 제조 세부 정보('내재된 배출량')가 제조 기술 소비자의 전체적 정량화를 위한 정보에
 통합되지 않기 때문에 내재된 탄소 배출량을 정량화하는 것도 매우 어렵습니다. 이는
-이 백서의 범위를 벗어나는 것이지만, 관심 있는 독자는 이
-[TAG 저장소](https://github.com/cncf/tag-env-sustainability)에 이슈 또는 PR을
-제출하여 이러한 배출량을 정량화하기 위한 지침, 모범 사례, 방법, 메커니즘을
-제안해 주시기 바랍니다.
+이 백서의 범위를 벗어나는 것이지만, 관심 있는 독자는
+[TAG Operational Resilience](/community/tags/operational-resilience/)에 연락하여
+이러한 배출량을 정량화하기 위한 지침, 모범 사례, 방법, 메커니즘을 제안해 주시기
+바랍니다.
 
 <figure><img src="https://learn.greensoftware.foundation/assets/images/06_energy_proportionality_updated-a6941b6c0d261511e74dc2217062373c.png" alt="에너지 비례성(Energy Proportionality)" /><figcaption><p><a href="https://learn.greensoftware.foundation/energy-efficiency/#energy-proportionality">에너지 비례성(Energy Proportionality)</a></p></figcaption></figure>
 

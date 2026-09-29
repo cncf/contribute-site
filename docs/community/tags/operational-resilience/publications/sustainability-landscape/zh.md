@@ -5,7 +5,7 @@ description: 这里包含了已知的和正在进行的云原生可持续计算�
 sidebar_position: 4
 tags:
   - operational-resilience
-  - sustainability
+  - environmental-sustainability
 ---
 
 # Cloud Native Sustainability全景
@@ -131,7 +131,7 @@ Huamin Chen, [Marlow Weston](https://github.com/catblade),
 - AI/ML工作负载 – 使用人工智能（AI）/机器学习（ML）工作负载的急剧增加导致了对基于GPU的专用集群的强烈需求。这种工作负载的特性不同于传统工作负载，并且它们的功耗明显更高。
 - 机密工作负载 - 从VM用例发展为机密容器（SGX/SEV/TDX）、TEE（可信执行环境）以及反弹缓冲器/SWIOTLB的使用可能花费更多的能量。然而，由于安全问题，这部分可能会很难进行观测。
 
-量化嵌入的碳排放量也非常具有挑战性，因为制造细节（具体排放量）没有被纳入制造技术消费者进行整体量化的信息中。这不在本白皮书的范围内，但本TAG鼓励感兴趣的读者通过在我们的[Github仓库](https://github.com/cncf/tag-env-sustainability)上提交问题或合并请求，提出量化这些排放的指导、最佳实践、方法和机制。
+量化嵌入的碳排放量也非常具有挑战性，因为制造细节（具体排放量）没有被纳入制造技术消费者进行整体量化的信息中。这不在本白皮书的范围内，但我们鼓励感兴趣的读者通过联系[TAG Operational Resilience](/community/tags/operational-resilience/)，提出量化这些排放的指导、最佳实践、方法和机制。
 
 <!-- We may want to put some directions though // +1, would this be guidance/best practice on methods to quantify these emissions or guidance on methods to mitigate these emissions? -->
 

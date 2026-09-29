@@ -1,14 +1,13 @@
 ---
 title: Environmental Sustainability Glossary
 description:
-  This glossary aims to define the wording used within our Technical Advisory
-  Group (TAG) for environmental sustainability. It doesn't claim to be
-  holistically complete and therefore provides additional resources where
-  needed.
+  This glossary aims to define the wording used in cloud native environmental
+  sustainability. It doesn't claim to be holistically complete and therefore
+  provides additional resources where needed.
 sidebar_position: 1
 tags:
   - operational-resilience
-  - sustainability
+  - environmental-sustainability
 ---
 
 # Environmental Sustainability Glossary

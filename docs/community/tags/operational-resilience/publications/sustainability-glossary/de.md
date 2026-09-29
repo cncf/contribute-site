@@ -2,14 +2,13 @@
 title: Environmental Sustainability Glossar
 sidebar_label: German
 description:
-  Dieses Glossar soll die Begriffe definieren, die in unserer Technischen
-  Beratungsgruppe (TAG) für ökologische Nachhaltigkeit verwendet werden. Es
-  erhebt keinen Anspruch auf Vollständigkeit und bietet daher bei Bedarf
-  zusätzliche Ressourcen.
+  Dieses Glossar soll die Begriffe definieren, die im Bereich der cloud-nativen
+  ökologischen Nachhaltigkeit verwendet werden. Es erhebt keinen Anspruch auf
+  Vollständigkeit und bietet daher bei Bedarf zusätzliche Ressourcen.
 sidebar_position: 2
 tags:
   - operational-resilience
-  - sustainability
+  - environmental-sustainability
 ---
 
 # Environmental Sustainability Glossar

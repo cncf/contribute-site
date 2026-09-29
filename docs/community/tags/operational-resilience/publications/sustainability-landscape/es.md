@@ -7,14 +7,14 @@ description:
 sidebar_position: 3
 tags:
   - operational-resilience
-  - sustainability
+  - environmental-sustainability
 ---
 
 # Ecosistema de Sostenibilidad Nativa en la Nube
 
-_Este documento fue publicado el 23.06. Somos conscientes de que este documento
-contiene vacios que se abordarán en futuras versiones. ¡Las contribuciones son
-muy bienvenidas!_
+_Este documento fue publicado el 23.06.2023. Somos conscientes de que este
+documento contiene vacios que se abordarán en futuras versiones. ¡Las
+contribuciones son muy bienvenidas!_
 
 Todos los textos relevantes pueden encontrarse explicados aquí en el
 [glossary](/community/tags/operational-resilience/publications/sustainability-glossary/es/).
@@ -55,6 +55,7 @@ la industria de las telecomunicaciones.
 
 ## Tabla de Contenidos
 
+- [Resumen](#resumen)
 - [Tabla de Contenidos](#tabla-de-contenidos)
 - [Colaboradores](#colaboradores)
 - [Fundamentos de Sistemas de la Nube Sostenible](#fundamentos-de-sistemas-de-la-nube-sostenible)
@@ -62,7 +63,7 @@ la industria de las telecomunicaciones.
   - [Computación Ecológica](#computación-ecológica)
   - [Cuantificación de Carbono/Energía](#cuantificación-de-carbonoenergía)
 - [Desafíos de los Sistemas de Nube Sostenible](#desafíos-de-los-sistemas-de-nube-sostenible)
-- [Desafíos de la Cuantificación de Carbono/Energía](#desafíos-de-la-cuantificación-de-carbonoenergía)
+- [Desafíos de la cuantificación de Carbono/Energía](#desafíos-de-la-cuantificación-de-carbonoenergía)
   - [Cuantificación de Emisiones de Carbono Operativas](#cuantificación-de-emisiones-de-carbono-operativas)
   - [Nubes](#nubes)
     - [Desafíos en las Nubes Públicas](#desafíos-en-las-nubes-públicas)
@@ -82,7 +83,7 @@ la industria de las telecomunicaciones.
 - [Panorama Actual de la Informática en la Nube Sostenible](#panorama-actual-de-la-informática-en-la-nube-sostenible)
   - [Centros de Datos](#centros-de-datos)
     - [Centros de Datos Inteligentes](#centros-de-datos-inteligentes)
-    - [Refrigeración / BMC.](#refrigeración--bmc)
+    - [Refrigeración / BMC](#refrigeración--bmc)
   - [Metodologías](#metodologías)
     - [Metodologías de Medición](#metodologías-de-medición)
     - [Metodologías de Observabilidad](#metodologías-de-observabilidad)
@@ -230,11 +231,10 @@ Cuantificar las emisiones de carbono incorporadas también es muy desafiante ya
 que los detalles de fabricación (emisiones integradas) no se están incorporando
 en la información para una cuantificación holística por parte de los
 consumidores de tecnología fabricada. Esto está fuera del alcance de este
-documento técnico, sin embargo, este Grupo de Trabajo alienta a los lectores
-interesados a sugerir orientaciones, mejores prácticas, métodos y mecanismos
-para cuantificar estas emisiones presentando un problema o solicitud de
-extracción en nuestro.
-[repositorio](https://github.com/cncf/tag-env-sustainability).
+documento técnico, sin embargo, se anima a los lectores interesados a sugerir
+orientaciones, mejores prácticas, métodos y mecanismos para cuantificar estas
+emisiones contactando a
+[TAG Operational Resilience](/community/tags/operational-resilience/).
 
 <!-- Quisieramos proporcionar algunas indicaciones sin embargo // +1, ¿se trata de orientación/mejores prácticas sobre métodos para cuantificar estas emisiones o guía sobre métodos para mitigar estas emisiones? -->
 
