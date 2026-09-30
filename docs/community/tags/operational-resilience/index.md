@@ -175,6 +175,7 @@ Browse [active initiatives](https://github.com/cncf/toc/issues?q=state%3Aopen+la
 ## Resources
 
 - [Charter](charter.md)
+- [Publications](publications/index.md)
 - [TAG Governance](../../governance/tech-group-governance.md)
 - [CNCF TOC Repository](https://github.com/cncf/toc)
 - [All TAGs](../index.md)
