@@ -18,6 +18,23 @@ tags:
 
 **게시일**: 2023년 6월 **최종 수정일**: 2026년 9월 29일
 
+<!-- cspell:disable-next-line -->
+
+**버전 1 (2023년 6월)**
+
+- **기여자**: [Huamin Chen](https://github.com/rootfs),
+  [Marlow Warnicke](https://github.com/catblade),
+  [Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
+  [Chen Wang](https://github.com/wangchen615),
+  [Chris Lloyd-Jones](https://github.com/Sealjay),
+  [Parul Singh](https://github.com/husky-parul),
+  [Przemysław Perycz](https://github.com/pperycz),
+  [Christopher Cantalupo](https://github.com/cmcantalupo),
+  [Patricia Cahill](https://github.com/patricia-cahill),
+  [Jochen Joswig](https://github.com/by-d-sign),
+  [Emily Fox](https://github.com/thefoxatwork),
+  [Leonard Pahlke](https://github.com/leonardpahlke)
+
 [Read the English translation of this document here](/community/tags/operational-resilience/publications/sustainability-landscape/).
 
 이 문서는 클라우드 네이티브 환경 내에서 알려진 지속 가능성 노력과 진행 중인
@@ -45,7 +62,6 @@ tags:
 
 ## 목차
 
-- [기여자](#contributors)
 - [지속 가능한 클라우드 시스템의 기초](#foundations-of-sustainable-cloud-systems)
 - [지속 가능한 클라우드 시스템 구축의 과제](#challenges-of-sustainable-cloud-systems)
 - [탄소/에너지 회계의 어려움](#challenges-of-carbonenergy-accounting)
@@ -54,28 +70,7 @@ tags:
 - [현재 지속 가능한 클라우드 컴퓨팅 환경](#current-sustainable-cloud-computing-landscape)
 - [지속 가능성 관련 활동](#sustainability-initiatives)
 
-## 기여자 <a href="#contributors" id="contributors"></a>
-
 <!-- markdown-link-check-enable -->
-
-이 문서에 기여해주신 분들께 특별히 감사드립니다. 콘텐츠를 개선하고 강화하는 데
-관심이 있으신 분은 저장소에 PR을 제출하고 아래에서 자신을 기여자로 추가해
-주세요!
-
-<!-- cspell:disable-next-line -->
-
-[Huamin Chen](https://github.com/rootfs),
-[Marlow Warnicke](https://github.com/catblade),
-[Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
-[Chen Wang](https://github.com/wangchen615),
-[Chris Lloyd-Jones](https://github.com/Sealjay),
-[Parul Singh](https://github.com/husky-parul),
-[Przemysław Perycz](https://github.com/pperycz),
-[Christopher Cantalupo](https://github.com/cmcantalupo),
-[Patricia Cahill](https://github.com/patricia-cahill),
-[Jochen Joswig](https://github.com/by-d-sign),
-[Emily Fox](https://github.com/thefoxatwork),
-[Leonard Pahlke](https://github.com/leonardpahlke)
 
 <!-- markdown-link-check-disable-next-line -->
 

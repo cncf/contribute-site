@@ -14,6 +14,24 @@ tags:
 
 **发布日期**：2023年6月 **最后更新**：2026年9月29日
 
+<!-- cspell:disable-next-line -->
+
+**版本 1（2023年6月）**
+
+- **贡献者**：[Huamin Chen](https://github.com/rootfs),
+  [Marlow Warnicke](https://github.com/catblade),
+  [Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
+  [Chen Wang](https://github.com/wangchen615),
+  [Chris Lloyd-Jones](https://github.com/Sealjay),
+  [Parul Singh](https://github.com/husky-parul),
+  [Przemysław Perycz](https://github.com/pperycz),
+  [Christopher Cantalupo](https://github.com/cmcantalupo),
+  [Patricia Cahill](https://github.com/patricia-cahill),
+  [Jochen Joswig](https://github.com/by-d-sign),
+  [Emily Fox](https://github.com/thefoxatwork),
+  [Leonard Pahlke](https://github.com/leonardpahlke)
+- **中文译者**：[Yi Yuan](https://github.com/SamYuan1990)
+
 _这篇文档于23年6月发布，我们希望文中空白的领域将在不远的未来解决，欢迎贡献！_
 
 云计算彻底改变了我们存储和处理数据的方式，使组织能够更加敏捷、高效和可扩展。然而，随着公司转变其商业模式以满足可持续性要求，人们也开始关注云计算中的环境可持续性。云计算的碳足迹已经成为一个热议的话题，因为它的能源消耗间接导致了大量的排放。因此，量化和减少与云计算相关的碳排放以减轻对环境的影响已成为当务之急。
@@ -25,7 +43,6 @@ _这篇文档于23年6月发布，我们希望文中空白的领域将在不远�
 ## 目录
 
 - [目录](#目录)
-- [贡献者](#贡献者)
 - [可持续云计算基础](#可持续云计算基础)
   - [云的碳排放](#云的碳排放)
   - [绿色计算](#绿色计算)
@@ -66,29 +83,6 @@ _这篇文档于23年6月发布，我们希望文中空白的领域将在不远�
   - [碳排放报告](#碳排放报告)
   - [碳中和](#碳中和)
   - [程序设计语言效率分析](#程序设计语言效率分析)
-
-## 贡献者
-
-特别感谢本文件的撰稿人。如果您有兴趣改进和增强内容，请在回购上提交PR，并确保您在下面添加自己作为贡献者！
-
-<!-- cspell:disable-next-line -->
-
-[Huamin Chen](https://github.com/rootfs),
-[Marlow Warnicke](https://github.com/catblade),
-[Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
-[Chen Wang](https://github.com/wangchen615),
-[Chris Lloyd-Jones](https://github.com/Sealjay),
-[Parul Singh](https://github.com/husky-parul),
-[Przemysław Perycz](https://github.com/pperycz),
-[Christopher Cantalupo](https://github.com/cmcantalupo),
-[Patricia Cahill](https://github.com/patricia-cahill),
-[Jochen Joswig](https://github.com/by-d-sign),
-[Emily Fox](https://github.com/thefoxatwork),
-[Leonard Pahlke](https://github.com/leonardpahlke)
-
-<!-- cspell:disable-next-line -->
-
-中文译者:[Yi Yuan](https://github.com/SamYuan1990)
 
 ## 可持续云计算基础
 
