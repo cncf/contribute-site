@@ -15,6 +15,23 @@ tags:
 
 **Published**: Jun 2023 **Last Updated**: 29 Sep 2026
 
+<!-- cspell:disable-next-line -->
+
+**Version 1 (Jun 2023)**
+
+- **Contributors**: [Huamin Chen](https://github.com/rootfs),
+  [Marlow Warnicke](https://github.com/catblade),
+  [Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
+  [Chen Wang](https://github.com/wangchen615),
+  [Chris Lloyd-Jones](https://github.com/Sealjay),
+  [Parul Singh](https://github.com/husky-parul),
+  [Przemysław Perycz](https://github.com/pperycz),
+  [Christopher Cantalupo](https://github.com/cmcantalupo),
+  [Patricia Cahill](https://github.com/patricia-cahill),
+  [Jochen Joswig](https://github.com/by-d-sign),
+  [Emily Fox](https://github.com/thefoxatwork),
+  [Leonard Pahlke](https://github.com/leonardpahlke)
+
 _This document was published in June 2023. We are aware that this document
 contains gaps that will be addressed in future releases. Contributions are very
 welcome!_
@@ -56,7 +73,6 @@ industry.
 
 - [Summary](#summary)
 - [Table of Contents](#table-of-contents)
-- [Contributors](#contributors)
 - [Foundations of Sustainable Cloud Systems](#foundations-of-sustainable-cloud-systems)
   - [Carbon Emissions of the Cloud](#carbon-emissions-of-the-cloud)
   - [Green Computing](#green-computing)
@@ -97,27 +113,6 @@ industry.
   - [Carbon Emissions Reports](#carbon-emissions-reports)
   - [Net Zero / Carbon Neutrality](#net-zero--carbon-neutrality)
   - [Programming Language Efficiency Analysis](#programming-language-efficiency-analysis)
-
-## Contributors
-
-A special thank you to our contributors of this document. If you are interested
-in improving and enhancing the content, please file a PR on the repo and ensure
-you add yourself as a contributor below!
-
-<!-- cspell:disable-next-line -->
-
-[Huamin Chen](https://github.com/rootfs),
-[Marlow Warnicke](https://github.com/catblade),
-[Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
-[Chen Wang](https://github.com/wangchen615),
-[Chris Lloyd-Jones](https://github.com/Sealjay),
-[Parul Singh](https://github.com/husky-parul),
-[Przemysław Perycz](https://github.com/pperycz),
-[Christopher Cantalupo](https://github.com/cmcantalupo),
-[Patricia Cahill](https://github.com/patricia-cahill),
-[Jochen Joswig](https://github.com/by-d-sign),
-[Emily Fox](https://github.com/thefoxatwork),
-[Leonard Pahlke](https://github.com/leonardpahlke)
 
 ## Foundations of Sustainable Cloud Systems
 

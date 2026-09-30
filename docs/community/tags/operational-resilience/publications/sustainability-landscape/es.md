@@ -16,6 +16,23 @@ tags:
 
 **Publicado**: jun 2023 **Última actualización**: 29 sep 2026
 
+<!-- cspell:disable-next-line -->
+
+**Versión 1 (jun 2023)**
+
+- **Colaboradores**: [Huamin Chen](https://github.com/rootfs),
+  [Marlow Warnicke](https://github.com/catblade),
+  [Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
+  [Chen Wang](https://github.com/wangchen615),
+  [Chris Lloyd-Jones](https://github.com/Sealjay),
+  [Parul Singh](https://github.com/husky-parul),
+  [Przemysław Perycz](https://github.com/pperycz),
+  [Christopher Cantalupo](https://github.com/cmcantalupo),
+  [Patricia Cahill](https://github.com/patricia-cahill),
+  [Jochen Joswig](https://github.com/by-d-sign),
+  [Emily Fox](https://github.com/thefoxatwork),
+  [Leonard Pahlke](https://github.com/leonardpahlke)
+
 _Este documento fue publicado en junio de 2023. Somos conscientes de que este
 documento contiene vacios que se abordarán en futuras versiones. ¡Las
 contribuciones son muy bienvenidas!_
@@ -61,7 +78,6 @@ la industria de las telecomunicaciones.
 
 - [Resumen](#resumen)
 - [Tabla de Contenidos](#tabla-de-contenidos)
-- [Colaboradores](#colaboradores)
 - [Fundamentos de Sistemas de la Nube Sostenible](#fundamentos-de-sistemas-de-la-nube-sostenible)
   - [Emisiones de Carbono de la Nube](#emisiones-de-carbono-de-la-nube)
   - [Computación Ecológica](#computación-ecológica)
@@ -102,27 +118,6 @@ la industria de las telecomunicaciones.
   - [Informes de Emisiones de Carbono](#informes-de-emisiones-de-carbono)
   - [Neutralidad de Carbono / Cero Neto](#neutralidad-de-carbono--cero-neto)
   - [Análisis de Eficiencia de Lenguajes de Programación](#análisis-de-eficiencia-de-lenguajes-de-programación)
-
-## Colaboradores
-
-Un agradecimiento especial a nuestros colaboradores de este documento. Si estás
-interesado en mejorar y enriquecer el contenido, por favor presenta un PR en el
-repositorio y asegúrate de agregarte como colaborador a continuación.
-
-<!-- cspell:disable-next-line -->
-
-[Huamin Chen](https://github.com/rootfs),
-[Marlow Warnicke](https://github.com/catblade),
-[Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
-[Chen Wang](https://github.com/wangchen615),
-[Chris Lloyd-Jones](https://github.com/Sealjay),
-[Parul Singh](https://github.com/husky-parul),
-[Przemysław Perycz](https://github.com/pperycz),
-[Christopher Cantalupo](https://github.com/cmcantalupo),
-[Patricia Cahill](https://github.com/patricia-cahill),
-[Jochen Joswig](https://github.com/by-d-sign),
-[Emily Fox](https://github.com/thefoxatwork),
-[Leonard Pahlke](https://github.com/leonardpahlke)
 
 ## Fundamentos de Sistemas de la Nube Sostenible
 
