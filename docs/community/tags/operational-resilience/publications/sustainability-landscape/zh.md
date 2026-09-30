@@ -74,7 +74,7 @@ _这篇文档于23年6月发布，我们希望文中空白的领域将在不远�
 <!-- cspell:disable-next-line -->
 
 [Huamin Chen](https://github.com/rootfs),
-[Marlow Weston](https://github.com/catblade),
+[Marlow Warnicke](https://github.com/catblade),
 [Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
 [Chen Wang](https://github.com/wangchen615),
 [Chris Lloyd-Jones](https://github.com/Sealjay),
@@ -125,7 +125,7 @@ _这篇文档于23年6月发布，我们希望文中空白的领域将在不远�
 量化运营碳排放并非易事，原因有很多，但不限于以下几点：
 
 - 服务器中包含的多个硬件（HW）组件 - 需要对各种硬件组件（如CPU、内存、GPU、存储、I/O）进行功率建模，以进行准确的量化/估计。
-- 硬件由多个用户/帐户同时使用——每个不同用户（例如，多个软件线程）的功率建模是一个完全不同的建模问题。这里需要理解的一个重要问题是[能源比例](https://learn.greensoftware.foundation/energy-efficiency#energy-比例）。对于功率建模，应充分理解软件/硬件交互。
+- 硬件由多个用户/帐户同时使用——每个不同用户（例如，多个软件线程）的功率建模是一个完全不同的建模问题。这里需要理解的一个重要问题是[能源比例](https://learn.greensoftware.foundation/energy-efficiency#energy-proportionality)。对于功率建模，应充分理解软件/硬件交互。
 - 云基础设施中硬件的不同代/架构/供应商 - 不同代/体系结构/供应商需要功率建模，例如，Intel,AMD或ARM、Skylake或Sapphire
   Rapids,以及ConnectX-5或ConnectX-6。
 - 服务的依赖性 - 一个服务可能使用不同的服务。（例如，Kubernetes使用COS服务），应用程序可以分布在数据中心和云之间。
@@ -288,7 +288,7 @@ flowchart TB
     obs --> carbon_ql[Carbon QL]
     obs --> powertop[PowerTOP]
 
-    click g_profiler "https//docs.gprofiler.io/" "Source"
+    click g_profiler "https://docs.gprofiler.io/" "Source"
     click power_api "https://github.com/powerapi-ng/" "Source"
     click kepler "https://github.com/sustainable-computing-io/kepler" "Source"
     click scaphandre "https://github.com/hubblo-org/scaphandre" "Source"
@@ -470,7 +470,7 @@ Runtime具有用于在优化算法之间进行选择的插件架构。一些内�
   云碳足迹是一个开源工具，提供可见性和工具来测量、监测和减少云碳排放。我们使用最佳实践方法将云利用率转换为估计的能源使用量和碳排放量，生成可与员工、投资者和其他利益相关者共享的指标和碳节约估计。
 - 🐝
   [Open Compute Project](https://www.opencompute.org/projects/heat-reuse)<br />
-  处理器中使用的能量几乎100%转化为热量。直到最近，这一直是一个负担和挑战：需要去除大量的热量，这需要大量的额外能源支出。通过适当的设计，数据中心冷却系统可以转换为热源和热量管理机会，进而将热量从负债转换为资产。OCP热再利用小组探讨了这些挑战和机遇。其目标是提出解决方案，以实现旨在利用热量将成本转化为利润的技术。```
+  处理器中使用的能量几乎100%转化为热量。直到最近，这一直是一个负担和挑战：需要去除大量的热量，这需要大量的额外能源支出。通过适当的设计，数据中心冷却系统可以转换为热源和热量管理机会，进而将热量从负债转换为资产。OCP热再利用小组探讨了这些挑战和机遇。其目标是提出解决方案，以实现旨在利用热量将成本转化为利润的技术。
 
 ### 峰会学会
 

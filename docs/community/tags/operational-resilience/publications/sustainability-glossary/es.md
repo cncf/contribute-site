@@ -22,9 +22,9 @@ tags:
 ### **Carbon or Carbon Dioxide (CO2) (Carbono o Dióxido de Carbono)**
 
 El dióxido de carbono, comúnmente llamado simplemente carbono, es un gas
-incoloco e inodoro que se libera al quemar combustibles fósiles, como carbón,
+incoloro e inodoro que se libera al quemar combustibles fósiles, como carbón,
 petróleo y gas natural. Las emisiones de CO2 son fundamentalmente un proceso
-natural, pero se han visto exacerbadas oir ka qyena de recursos naturales para
+natural, pero se han visto exacerbadas por la quema de recursos naturales para
 la producción de energía o la logística hasta tal punto que ahora son un factor
 importante en el cambio climático. Dependiendo de cómo esté estructurada la
 cadena de suministro de producción/servicios de hardware (por ejemplo, chips de

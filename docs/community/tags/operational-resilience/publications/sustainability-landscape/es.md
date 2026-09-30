@@ -112,7 +112,7 @@ repositorio y asegúrate de agregarte como colaborador a continuación.
 <!-- cspell:disable-next-line -->
 
 [Huamin Chen](https://github.com/rootfs),
-[Marlow Weston](https://github.com/catblade),
+[Marlow Warnicke](https://github.com/catblade),
 [Niki Manoledaki](https://github.com/nikimanoledaki), Eun Kyung Lee,
 [Chen Wang](https://github.com/wangchen615),
 [Chris Lloyd-Jones](https://github.com/Sealjay),
@@ -511,7 +511,7 @@ flowchart TB
     obs --> carbon_ql[Carbon QL]
     obs --> powertop[PowerTOP]
 
-    click g_profiler "https//docs.gprofiler.io/" "Source"
+    click g_profiler "https://docs.gprofiler.io/" "Source"
     click power_api "https://github.com/powerapi-ng/" "Source"
     click kepler "https://github.com/sustainable-computing-io/kepler" "Source"
     click scaphandre "https://github.com/hubblo-org/scaphandre" "Source"
