@@ -82,7 +82,7 @@ Note: this affects **Service Desk only**. Mailing list membership still follows 
 4. If your project has an open `.project` PR from CNCF staff, please review and merge - it aligns the roster with your `MAINTAINERS` file.
 5. Consider whether a scoped `servicedesk` team makes sense for your project.
 
-For technical background, see Introducing `.project` for maintainers.
+For technical background, see [Introducing `.project` for maintainers](/blog/2026/04/22/introducing-dot-project-for-maintainers).
 
 ## New GitHub Features for Handling Low-Quality or Spam Contributions
 
