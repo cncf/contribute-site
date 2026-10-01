@@ -11,12 +11,12 @@ We hope you enjoyed KubeCon + CloudNativeCon China this month and we look forwar
 
 Please take a moment to complete the [2H 2026 Maintainer Survey](https://maintainers-survey.cncf.io). Your feedback helps us improve the tools, workflows, and support programs that directly affect how CNCF projects operate, scale, and onboard maintainers.
 
-* [`.project` Updates](/blog/cloud-native-project-monthly-september-2026#project-updates)
-* [New GitHub Features for Handling Low-Quality or Spam Contributions](/blog/cloud-native-project-monthly-september-2026#new-github-features-for-handling-low-quality-or-spam-contributions)
-* [KubeCon + CloudNativeCon 2026 and other Event CFPs, Scholarships, and Travel Funding Deadlines](/blog/cloud-native-project-monthly-september-2026#kubecon--cloudnativecon-2026-and-other-event-cfps-scholarships-and-travel-funding-deadlines)
-* [LFX MCP is Now Available to the Community - Connect Your AI Assistant to LFX Self Serve](/blog/cloud-native-project-monthly-september-2026#lfx-mcp-is-now-available-to-the-community---connect-your-ai-assistant-to-lfx-self-serve)
-* [Please Complete the 2H 2026 Maintainer Survey](/blog/cloud-native-project-monthly-september-2026#please-complete-the-2h-2026-maintainer-survey)
-* [See You Next Month](/blog/cloud-native-project-monthly-september-2026#see-you-next-month)
+* [`.project` Updates](/blog/2026/09/30/cloud-native-project-monthly-september-2026#project-updates)
+* [New GitHub Features for Handling Low-Quality or Spam Contributions](/blog/2026/09/30/cloud-native-project-monthly-september-2026#new-github-features-for-handling-low-quality-or-spam-contributions)
+* [KubeCon + CloudNativeCon 2026 and other Event CFPs, Scholarships, and Travel Funding Deadlines](/blog/2026/09/30/cloud-native-project-monthly-september-2026#kubecon--cloudnativecon-2026-and-other-event-cfps-scholarships-and-travel-funding-deadlines)
+* [LFX MCP is Now Available to the Community - Connect Your AI Assistant to LFX Self Serve](/blog/2026/09/30/cloud-native-project-monthly-september-2026#lfx-mcp-is-now-available-to-the-community---connect-your-ai-assistant-to-lfx-self-serve)
+* [Please Complete the 2H 2026 Maintainer Survey](/blog/2026/09/30/cloud-native-project-monthly-september-2026#please-complete-the-2h-2026-maintainer-survey)
+* [See You Next Month](/blog/2026/09/30/cloud-native-project-monthly-september-2026#see-you-next-month)
 
 <!-- truncate -->
 
