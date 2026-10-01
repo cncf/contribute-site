@@ -16,7 +16,6 @@ Please take a moment to complete the [2H 2026 Maintainer Survey](https://maintai
 * [KubeCon + CloudNativeCon 2026 and other Event CFPs, Scholarships, and Travel Funding Deadlines](/blog/2026/09/30/cloud-native-project-monthly-september-2026#kubecon--cloudnativecon-2026-and-other-event-cfps-scholarships-and-travel-funding-deadlines)
 * [LFX MCP is Now Available to the Community - Connect Your AI Assistant to LFX Self Serve](/blog/2026/09/30/cloud-native-project-monthly-september-2026#lfx-mcp-is-now-available-to-the-community---connect-your-ai-assistant-to-lfx-self-serve)
 * [Please Complete the 2H 2026 Maintainer Survey](/blog/2026/09/30/cloud-native-project-monthly-september-2026#please-complete-the-2h-2026-maintainer-survey)
-* [See You Next Month](/blog/2026/09/30/cloud-native-project-monthly-september-2026#see-you-next-month)
 
 <!-- truncate -->
 
