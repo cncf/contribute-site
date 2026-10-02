@@ -11,6 +11,97 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const TECHDOCS_EDIT_BASE = 'https://github.com/cncf/techdocs/edit/main/docs';
 const TECHDOCS_ANALYSES_EDIT_BASE = 'https://github.com/cncf/techdocs/edit/main/analyses';
 const LOCAL_EDIT_BASE = 'https://github.com/cncf/contribute-site/edit/main/docs';
+const SITE_URL = 'https://contribute.cncf.io';
+
+// Routes with no standalone content (search, tag/author/archive listings,
+// blog pagination). Kept out of the sitemap and of the llms.txt output. Index
+// routes are listed next to their `/**` globs to make the intent explicit,
+// although micromatch treats `/x/**` as matching `/x` as well.
+const NON_CONTENT_ROUTES = [
+  '/search',
+  '/tags',
+  '/tags/**',
+  '/blog/archive',
+  '/blog/authors',
+  '/blog/authors/**',
+  '/blog/page/**',
+  '/blog/tags',
+  '/blog/tags/**',
+];
+
+// Agent readiness (https://afdocs.dev, cncf/contribute-site#426).
+// @signalwire/docusaurus-plugin-llms-txt emits /llms.txt and a Markdown twin
+// of every documentation page and blog post at /<route>.md (search, tag, and
+// blog listing pages have none). The two helpers below point agents at them:
+// a visually hidden block at the top of the HTML <body>, and a blockquote at
+// the top of each generated .md file. Wording adapted from Docsy v0.17.0
+// (Apache-2.0):
+// https://github.com/google/docsy/blob/v0.17.0/theme/layouts/_partials/llms-directive.html
+function llmsDirectiveHtml() {
+  return {
+    name: 'llms-directive-html',
+    injectHtmlTags() {
+      return {
+        preBodyTags: [
+          {
+            tagName: 'div',
+            attributes: { class: 'llms-directive', 'aria-hidden': 'true' },
+            innerHTML:
+              'For AI agents: a documentation index is available at /llms.txt. Every documentation page and blog post has a Markdown version: remove any trailing slash from its URL and append .md (the home page is /index.md).',
+          },
+        ],
+      };
+    },
+  };
+}
+
+// remark plugin run by the llms-txt plugin on each generated .md file.
+function llmsDirectiveMarkdown() {
+  const text = (value) => ({ type: 'text', value });
+  const link = (url, label) => ({ type: 'link', url, children: [text(label)] });
+  return (tree) => {
+    tree.children.unshift({
+      type: 'blockquote',
+      children: [
+        {
+          type: 'paragraph',
+          children: [
+            text('For AI agents: the complete documentation index is at '),
+            link(`${SITE_URL}/llms.txt`, 'llms.txt'),
+            text(
+              '. Every documentation page and blog post has a Markdown version: remove any trailing slash from its URL and append ',
+            ),
+            { type: 'inlineCode', value: '.md' },
+            text(' (the home page is '),
+            link(`${SITE_URL}/index.md`, '/index.md'),
+            text(').'),
+          ],
+        },
+      ],
+    });
+  };
+}
+
+// Workaround for https://github.com/signalwire/docusaurus-plugins/issues/32:
+// links to index routes that carry a trailing slash (/community/tags/) are
+// rewritten to /community/tags/.md instead of /community/tags.md. Fixed
+// upstream in 6626e3d, which ships in the 2.x line (2.0.0-alpha.7 as of
+// 2026-10-01) but not in any 1.x release.
+// TODO: remove this function and its `remarkPlugins` entry below when
+// upgrading @signalwire/docusaurus-plugin-llms-txt to 2.x.
+// Runs on the Markdown AST, after the plugin's own link rewriting.
+function fixIndexMdLinks() {
+  const fix = (node) => {
+    if (node.type === 'link' && typeof node.url === 'string') {
+      node.url = node.url.replace(
+        /(^|[^/])(\/[^/]+)\/\.md(?=$|[#?])/,
+        '$1$2.md',
+      );
+    }
+    node.children?.forEach(fix);
+  };
+  return fix;
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -24,7 +115,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://contribute.cncf.io',
+  url: SITE_URL,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -124,6 +215,9 @@ const config = {
         },
         theme: {
           customCss: './src/css/custom.css',
+        },
+        sitemap: {
+          ignorePatterns: NON_CONTENT_ROUTES,
         },
         googleTagManager: {
           containerId: 'GTM-WJJ7VKZ',
@@ -267,6 +361,54 @@ const config = {
       require.resolve('docusaurus-lunr-search'),
       {
         highlightResult: true,
+      },
+    ],
+    llmsDirectiveHtml,
+    [
+      '@signalwire/docusaurus-plugin-llms-txt',
+      {
+        siteDescription:
+          'Guides for contributing to and maintaining CNCF projects: onboarding for new contributors, maintainer resources, project best practices, TAGs and community groups, events, and TechDocs.',
+        depth: 2,
+        content: {
+          includeBlog: true,
+          includePages: true,
+          relativePaths: false,
+          excludeRoutes: ['/404.html', ...NON_CONTENT_ROUTES],
+          // First selector to match wins, per page. The home page has no
+          // .theme-doc-markdown and its cards sit in separate columns, so the
+          // plugin defaults capture only the first card; the leading entry
+          // matches the home page alone (the only page with a hero) and takes
+          // the hero plus all cards. The rest is the plugin's default list
+          // (1.2.2 lib/constants.js DEFAULT_CONTENT_SELECTORS), which the
+          // package does not export.
+          contentSelectors: [
+            '.main-wrapper:has(> .hero)',
+            '.theme-doc-markdown',
+            'main .container .col',
+            'main .theme-doc-wrapper',
+            'article',
+            'main .container',
+            'main',
+          ],
+          // Section headings in llms.txt; each matches its index page title.
+          routeRules: [
+            { route: '/blog/**', categoryName: 'Blog' },
+            { route: '/community/**', categoryName: 'Community' },
+            { route: '/contributors/**', categoryName: 'New Contributors' },
+            { route: '/events/**', categoryName: 'Events' },
+            { route: '/maintainers/**', categoryName: 'Maintainers' },
+            { route: '/projects/**', categoryName: 'CNCF Projects' },
+            { route: '/resources/**', categoryName: 'Resources' },
+            {
+              route: '/security/**',
+              categoryName: 'Project Security Contacts',
+            },
+            { route: '/skills/**', categoryName: 'Agent skills' },
+            { route: '/techdocs/**', categoryName: 'CNCF TechDocs' },
+          ],
+          remarkPlugins: [fixIndexMdLinks, llmsDirectiveMarkdown],
+        },
       },
     ],
   ],
