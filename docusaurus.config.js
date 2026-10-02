@@ -85,7 +85,10 @@ function llmsDirectiveMarkdown() {
 // Workaround for https://github.com/signalwire/docusaurus-plugins/issues/32:
 // links to index routes that carry a trailing slash (/community/tags/) are
 // rewritten to /community/tags/.md instead of /community/tags.md. Fixed
-// upstream in 6626e3d but not released on the 1.x line; remove once it is.
+// upstream in 6626e3d, which ships in the 2.x line (2.0.0-alpha.7 as of
+// 2026-10-01) but not in any 1.x release.
+// TODO: remove this function and its `remarkPlugins` entry below when
+// upgrading @signalwire/docusaurus-plugin-llms-txt to 2.x.
 // Runs on the Markdown AST, after the plugin's own link rewriting.
 function fixIndexMdLinks() {
   const fix = (node) => {
