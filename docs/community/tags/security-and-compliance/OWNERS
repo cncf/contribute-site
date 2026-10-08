@@ -1,0 +1,34 @@
+# https://github.com/cncf/prow-github-actions/blob/main/docs/commands.md#owners
+# Teams are not supported in OWNERS files, so members are listed by username.
+# Regenerate with `gh api orgs/cncf/teams/<team>/members`.
+# Mirrors the .github/CODEOWNERS rule for this directory: @cncf/tag-security-compliance-leads.
+# Root OWNERS (CNCF staff) are inherited as well.
+approvers:
+  - arewm
+  - castrojo
+  - evankanderson
+  - jeefy
+  - jkjell
+  - JustinCappos
+  - krook
+  - mnm678
+  - mrbobbytables
+  - realshuting
+  - riaankleinhans
+  - sherine-k
+  - y-tabata
+
+reviewers:
+  - arewm
+  - castrojo
+  - evankanderson
+  - jeefy
+  - jkjell
+  - JustinCappos
+  - krook
+  - mnm678
+  - mrbobbytables
+  - realshuting
+  - riaankleinhans
+  - sherine-k
+  - y-tabata
