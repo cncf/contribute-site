@@ -4,4 +4,8 @@ sidebar_label: Supply Chain Security
 sidebar_position: 3
 ---
 
-info here
+This section contains best practices for securing your software supply chain.
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

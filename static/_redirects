@@ -88,6 +88,10 @@
 /maintainers/community/vendor-neutrality /projects/best-practices/community/vendor-neutrality/ 301
 /maintainers/community/vendor-neutrality/ /projects/best-practices/community/vendor-neutrality/ 301
 
+# Technical Leadership Principles moved from maintainers/community to maintainers/leadership
+/maintainers/community/leadership-principles /maintainers/leadership/technical-leadership-principles/ 301
+/maintainers/community/leadership-principles/ /maintainers/leadership/technical-leadership-principles/ 301
+
 /maintainers/governance /projects/best-practices/governance/ 301
 /maintainers/governance/ /projects/best-practices/governance/ 301
 /maintainers/governance/charter /projects/best-practices/governance/charter/ 301

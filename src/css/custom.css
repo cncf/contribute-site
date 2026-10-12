@@ -107,9 +107,111 @@
 
 .navbar__logo:not(#\#):not(#\#) {
   height: 2.5rem;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+/* Scale the logo down instead of letting it bleed under the navbar items
+   when horizontal space runs out (#202) */
+.navbar__logo img:not(#\#):not(#\#) {
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* Reduce navbar crowding at intermediate viewport sizes */
+@media (min-width: 1280px) and (max-width: 1399px) {
+  nav.navbar {
+    --ifm-navbar-item-padding-horizontal: 0.625rem;
+  }
+
+  .navbar__search-input {
+    width: 10rem;
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1279px) {
+  nav.navbar {
+    --ifm-navbar-padding-horizontal: 0.5rem;
+    --ifm-navbar-item-padding-horizontal: 0.5rem;
+  }
+
+  .navbar__link {
+    font-size: 0.875rem;
+  }
+
+  .navbar__logo:not(#\#):not(#\#) {
+    height: 1.75rem;
+  }
+
+  .navbar__search-input {
+    width: 7rem;
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1099px) {
+  nav.navbar {
+    --ifm-navbar-item-padding-horizontal: 0.4rem;
+  }
+
+  .navbar__link {
+    font-size: 0.8rem;
+  }
+
+  .navbar__logo:not(#\#):not(#\#) {
+    height: 1.5rem;
+  }
+
+  .navbar__search-input {
+    width: 6rem;
+  }
 }
 
 .controls-catalog-doc a[id^='crosswalk-'] {
     scroll-margin-top: 5rem;
 }
 
+/* Featured "Contacting the TOC" card on the Projects index (/projects) */
+a.card[href*='/projects/contact-the-toc'] {
+  position: relative;
+  border: 2px solid var(--ifm-color-primary);
+  background-color: color-mix(in srgb, var(--ifm-color-primary) 7%, var(--ifm-card-background-color));
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+a.card[href*='/projects/contact-the-toc']:hover {
+  border-color: var(--ifm-color-primary-dark);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+a.card[href*='/projects/contact-the-toc']::after {
+  content: 'Start here';
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+/* Agent directive injected first in <body> (see llmsDirectiveHtml in
+   docusaurus.config.js). Visually hidden but kept in the DOM so agents that
+   read the HTML find it; not display:none. Technique from Bootstrap v5.3.3
+   scss/mixins/_visually-hidden.scss (MIT):
+   https://github.com/twbs/bootstrap/blob/v5.3.3/scss/mixins/_visually-hidden.scss */
+.llms-directive {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

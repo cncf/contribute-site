@@ -1,0 +1,79 @@
+# CNCF Contributors
+
+> Guides for contributing to and maintaining CNCF projects: onboarding for new contributors, maintainer resources, project best practices, TAGs and community groups, events, and TechDocs.
+
+- [CNCF Contributors](https://contribute.cncf.io/index.md)
+
+## Blog
+
+Blog
+
+- [Blog](https://contribute.cncf.io/blog.md): Blog
+
+### 2023
+
+- [Cloud Native Project Monthly (CNPM) Jan 2023](https://contribute.cncf.io/blog/2023/01/24/ProjectNewsletter.md): Welcome into a new year!
+- [Cloud Native Project Monthly (CNPM) Feb 2023](https://contribute.cncf.io/blog/2023/02/22/ProjectNewsletter.md): Welcome into a new year!
+- [Cloud Native Project Monthly (CNPM) March 2023](https://contribute.cncf.io/blog/2023/03/22/ProjectNewsletter.md): Happy March!
+- [Cloud Native Project Monthly (CNPM) April 2023](https://contribute.cncf.io/blog/2023/04/26/ProjectNewsletter.md): Welcome back from Kubecon!
+- [Cloud Native Project Monthly (CNPM) May 2023](https://contribute.cncf.io/blog/2023/05/24/ProjectNewsletter.md): This is our Projects update, this will go out once a month letting CNCF maintainers know of upcoming deadlines, outreach or other useful things going on in the wider community of CNCF.
+- [Cloud Native Project Monthly (CNPM) June 2023](https://contribute.cncf.io/blog/2023/06/23/ProjectNewsletter.md): This is our Projects update, this will go out once a month letting CNCF maintainers know of upcoming deadlines, outreach or other useful things going on in the wider community of CNCF.
+- [Cloud Native Project Monthly (CNPM) July 2023](https://contribute.cncf.io/blog/2023/07/20/ProjectNewsletter.md): Mentoring
+- [Cloud Native Project Monthly (CNPM) August 2023](https://contribute.cncf.io/blog/2023/08/23/ProjectNewsletter.md): HashiCorp Licensing Charges
+- [Cloud Native Project Monthly (CNPM) September 2023](https://contribute.cncf.io/blog/2023/09/20/ProjectNewsletter.md): 📝Updates from the Blog
+- [Cloud Native Project Monthly (CNPM) October 2023](https://contribute.cncf.io/blog/2023/10/26/ProjectNewsletter.md): 🗺️A Maintainer’s Guide to KubeCon + CloudNativeCon!
+- [Cloud Native Project Monthly (CNPM) November 2023](https://contribute.cncf.io/blog/2023/11/23/ProjectNewsletter.md): 📈Maintainers Survey 2023 H2
+- [Cloud Native Project Monthly (CNPM) December 2023](https://contribute.cncf.io/blog/2023/12/20/ProjectNewsletter.md): 📌Project Opportunities at KubeCon + CloudNativeCon EU
+
+### 2024
+
+- [Cloud Native Project Monthly (CNPM) January 2024](https://contribute.cncf.io/blog/2024/01/26/ProjectNewsletter.md): 🏨KubeCon + CloudNativeCon EU Hotels Now Available
+- [Cloud Native Project Monthly (CNPM) February 2024](https://contribute.cncf.io/blog/2024/02/21/ProjectNewsletter.md): 📝Certification Expiration Changes
+- [Cloud Native Project Monthly (CNPM) March 2024 (KubeCon Edition)](https://contribute.cncf.io/blog/2024/03/14/ProjectNewsletter.md): KubeCon + CloudNativeCon, the Final Frontier
+- [Cloud Native Project Monthly (CNPM) April 2024 (KubeCon Edition)](https://contribute.cncf.io/blog/2024/04/25/ProjectNewsletter.md): 🗣️LFX Insights Beta Dashboard Feedback
+
+## Community
+
+The greater CNCF Community: TOC and TAGs
+
+- [Community](https://contribute.cncf.io/community.md): The greater CNCF Community: TOC and TAGs
+
+### awards
+
+Individuals and organizations that have made significant contributions to the cloud native ecosystem
+
+- [Community Awards](https://contribute.cncf.io/community/awards.md): Individuals and organizations that have made significant contributions to the cloud native ecosystem
+
+### governance
+
+The CNCF governance structure establishes the framework for how the foundation operates, makes decisions, and evolves its technical direction. This section provides comprehensive information about governance policies, processes, and principles that guide CNCF projects and community groups.
+
+- [CNCF Governance](https://contribute.cncf.io/community/governance.md): The CNCF governance structure establishes the framework for how the foundation operates, makes decisions, and evolves its technical direction. This section provides comprehensive information about governance policies, processes, and principles that guide CNCF projects and community groups.
+- [Governance Remediation Escalation](https://contribute.cncf.io/community/governance/gov-remediation-process.md): This governance remediation process is for cases where CNCF projects are either not practicing their governance as documented or the project is stuck in a circumstance that its current governance does not cover. As projects evolve over time, we expect projects to evolve their governance as well, the key being the documentation gets updated and reflects current practice(s) quickly before there is a crisis. For projects that would like help adding to or updating their governance, please consider opening a governance review issue.
+- [CNCF Technical Group Governance](https://contribute.cncf.io/community/governance/tech-group-governance.md): NOTE: This document is a starting point. It is expected to change and
+- [Technical Leadership Principles Enforcement Process](https://contribute.cncf.io/community/governance/tech-leadership-principles-guidance.md): This document serves as a guide for occasions where the Code of Conduct Committee or another entity informs the TOC of a technical leader who is allegedly infringing on or in violation of the technical leadership principles.
+
+## Project Security Contacts
+
+Security policies and vulnerability reporting channels for CNCF projects, in support of CRA Steward Reporting requirements.
+
+- [Project Security Contacts](https://contribute.cncf.io/security.md): Security policies and vulnerability reporting channels for CNCF projects, in support of CRA Steward Reporting requirements.
+
+## Agent skills
+
+Repository-specific skills for agentic workflows in contribute-site.
+
+- [Agent skills](https://contribute.cncf.io/skills.md): Repository-specific skills for agentic workflows in contribute-site.
+
+### pull-request-review
+
+A repo-specific skill for reviewing pull requests in contribute-site.
+
+- [Pull request review](https://contribute.cncf.io/skills/pull-request-review.md): A repo-specific skill for reviewing pull requests in contribute-site.
+
+### skill-improvement
+
+The skill-improvement mandate — every agent session must produce a skill file update alongside the work. Use when completing a task and deciding whether to write a skill update, or when creating or updating a skill file.
+
+- [Skill Improvement Mandate](https://contribute.cncf.io/skills/skill-improvement.md): The skill-improvement mandate — every agent session must produce a skill file update alongside the work. Use when completing a task and deciding whether to write a skill update, or when creating or updating a skill file.
+

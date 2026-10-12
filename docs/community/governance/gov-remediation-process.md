@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Governance Remediation Escalation 
 
-This governance remediation process is for cases where CNCF projects are either not practicing their governance as documented or the project is stuck in a circumstance that its current governance does not cover. As projects evolve over time, we expect projects to evolve their governance as well, the key being the documentation gets updated and reflects current practice(s) quickly before there is a crisis. For projects that would like help adding to or updating their governance, please consider opening a [governance review issue](https://github.com/cncf/toc/issues/new?template=gov-review.yml) with TAG Contributor Strategy.
+This governance remediation process is for cases where CNCF projects are either not practicing their governance as documented or the project is stuck in a circumstance that its current governance does not cover. As projects evolve over time, we expect projects to evolve their governance as well, the key being the documentation gets updated and reflects current practice(s) quickly before there is a crisis. For projects that would like help adding to or updating their governance, please consider opening a [governance review issue](https://github.com/cncf/toc/issues/new?template=gov-review.yml).
 
 ## Importance of clear governance documentation
 
@@ -31,7 +31,7 @@ _Ensure projects adhere to their documented governance._
 
 Non-practiced governance can either be someone willfully or inadvertently ignoring stated governance. Alternatively, occasions may arise where the defined governance _cannot_ be practiced as the project may be lacking people in a role to execute governance processes.
 
-When a governance conflict or unaccounted situation arises, and the project cannot reach a consensus to develop a path forward. The TOC will work with project stakeholders, TAG Contributor Strategy, the Code of Conduct Committee, and CNCF Staff to create a public remediation plan for the project.
+When a governance conflict or unaccounted situation arises, and the project cannot reach a consensus to develop a path forward. The TOC will work with project stakeholders, the Code of Conduct Committee, and CNCF Staff to create a public remediation plan for the project.
 
 This plan could involve changes to the written governance, removal of specific project leaders, or whatever other measures are required to restore the project to a state where it is following its own governance rules, and that governance is in accord with CNCF principles. Should there be no way to restore the project to community operation, the TOC can consider archiving the project.
 
@@ -59,13 +59,13 @@ In rare cases, governance failure may be accompanied by possible CoC violations 
 
 ### Roles
 
-* TAG Contributor Strategy: For missing governance the assignee will lead, consulting and informing with the assigned TOC member as needed. For non-practiced governance, they act as an advisor to the TOC
-* TOC member assignee(s): serves an oversight/informational function that the governance assignee can leverage as needed to impress upon the project the needed changes or leads the discussion with the project in the case of non-practiced governance
+* TOC member assignee(s): leads the assessment, working with CNCF Staff. For missing governance, guides the project in developing new governance policies. For non-practiced governance, leads the discussion with the project on how to get back on track.
+* CNCF Staff: supports the TOC member with logistics, scheduling, documentation, and project communications
 * Code of Conduct Committee: if a failure of governance coincides with CoC violations by one or more project leaders, the CoCC will coordinate with the assessment team.
 
 ### Missing Governance
 
-1. Assessment Team Formation: The TOC will assign one TAG Contributor Strategy assignee and one TOC member.
+1. Assessment Team Formation: The TOC will assign one TOC member and one CNCF Staff member.
 
 2. Investigation: The assessment team will Interview the reporter, project maintainers, and other relevant contributors to determine if the governance issue is valid and assess the project's ability to resolve it internally.
 
@@ -79,7 +79,7 @@ In rare cases, governance failure may be accompanied by possible CoC violations 
 
 1. Triage: The TOC will do an initial triage of the issue and assign a lead member and a supporting member to guide the process.
 
-2. Assessment Team Formation: The two TOC members will work with a member of [Governance WG](https://contribute.cncf.io/about/governance/) to form an assessment team.
+2. Assessment Team Formation: The two TOC members will work with CNCF Staff to form an assessment team.
 
 3. Investigation: The assessment team will Interview the reporter, project maintainers, and other relevant contributors to determine if the governance is not being practiced and assess the project's ability to resolve it internally. This may include attendance by the project’s leadership team to a private TOC meeting to discuss the issue more in depth.
 

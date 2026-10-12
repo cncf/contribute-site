@@ -66,8 +66,7 @@ complicated governance structure before you need it creates overhead and extra
 work for project members and maintainers whose time is often better spent on
 project development, rather than governance.
 
-We strongly recommend that you reach out to [TAG Contributor Strategy] with questions,
-assistance, or reviews before you implement this governance structure.
+We strongly recommend that you request a [governance review](https://github.com/cncf/toc/issues/new?template=gov-review.yml) from the [TOC Project Reviews subproject](https://github.com/cncf/toc/tree/main/toc_subprojects/project-reviews-subproject) before you implement this governance structure.
 
 ## Requirements
 
@@ -210,10 +209,6 @@ where the previous Committee left off if there is no formal overlap or handoff.
 
 ### Election Procedure
 
-Note: CNCF may soon have a better, GitOps-driven, online election tool
-available.  At that time, projects will want to revise portions of this
-procedure.
-
 The template contains recommended text for timelines, election officers, and
 eligibiity to vote. These sections are all relatively straightforward, and we
 recommend using the templated text, but you will need to determine the threshold
@@ -270,7 +265,6 @@ needs. Recommended text can be found in the template.
 [Kubernetes governance]: https://github.com/kubernetes/community/blob/master/governance.md
 [Knative governance]: https://github.com/knative/community/blob/main/GOVERNANCE.md
 [Maintainer Council]: https://contribute.cncf.io/maintainers/templates/governance-maintainer/
-[TAG Contributor Strategy]: https://github.com/cncf/tag-contributor-strategy
 [Contributor Ladder]: https://github.com/cncf/project-template/blob/main/CONTRIBUTOR_LADDER.md
 [Code of Conduct]: https://github.com/cncf/project-template/blob/main/CODE_OF_CONDUCT.md
 [security practices]: https://github.com/cncf/tag-security/tree/main/project-resources

@@ -62,7 +62,7 @@ TOC Alternates are non-voting members of the TOC who step in when a voting membe
 
 The TOC meets on the **1st and 3rd Tuesday of every month** at **8:00 AM PT** (USA Pacific Time).
 
-- **Time Zone Conversion**: [Convert to your local time](http://www.thetimezoneconverter.com/?t=8:00AM&tz=San%20Francisco)
+- **Time Zone Conversion**: [Convert to your local time](https://dateful.com/time-zone-converter?t=8:00AM&tz=San%20Francisco)
 - **Public Calendar**: [CNCF Events Calendar](https://zoom-lfx.platform.linuxfoundation.org/meetings/cncf?view=week)
 - **Website Calendar**: [CNCF Website Calendar](https://www.cncf.io/calendar/)
 
@@ -75,6 +75,8 @@ All meetings can be joined directly from the calendar. Meetings are open to the 
 - **Archive (2018-2024)**: [Meeting Working Doc](https://docs.google.com/document/d/1jpoKT12jf2jTf-2EJSAl4iTdA7Aoj_uiI19qIaECNFc/edit#)
 
 ## Communication Channels
+
+Projects looking for the right way to reach the TOC or raise an issue can start with [Contacting the TOC](/projects/contact-the-toc/).
 
 ### Mailing Lists
 
@@ -194,7 +196,6 @@ Share your perspectives through:
 - **[CNCF TOC Repository](https://github.com/cncf/toc)**: Primary location for TOC work
 - **[CNCF Principles](https://github.com/cncf/toc/blob/main/PRINCIPLES.md)**: Technical and operational principles
 - **[CNCF Charter](https://github.com/cncf/foundation/blob/main/charter.md)**: Foundation charter
-- **[Technical Vision](https://github.com/cncf/toc/blob/main/TECHNICAL-VISION.md)**: TOC's technical vision document
 
 ## Related Resources
 

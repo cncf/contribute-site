@@ -4,3 +4,12 @@ command = "npm run build:preview"
 
 [context.production]
 command = "npm run build:production"
+
+# Pages have a Markdown twin selected by the Accept header (see
+# netlify/edge-functions/), so caches must keep the two apart. Accept-Encoding
+# is repeated here so compression stays declared whether Netlify merges or
+# replaces this header.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Vary = "Accept-Encoding, Accept"
