@@ -2,108 +2,135 @@
 title: Regional and Linguistic Nuances
 description: >
   Guidance for event organizers and contributors on regional sign language differences,
-  non-English event terminology, and the current limitations of AI-based assistive tools.
+  cross-regional terminology, and the current limitations of AI-based assistive tools.
 ---
 
 # Regional and Linguistic Nuances
 
 Accessibility for Deaf and Hard of Hearing (DHH) individuals is not one-size-fits-all. Sign
-languages, terminology preferences, and available assistive technologies vary significantly by
-region. This page addresses the most common gaps when planning inclusive events or communications
-outside of a North American, English-language context.
+languages, terminology conventions, and the availability of assistive technologies vary significantly
+across countries and regions. This guide addresses critical considerations when organizing events,
+managing speaker lineups, and planning accessibility outside of an exclusively English-speaking or
+North American context.
+
+---
 
 ## Sign Languages Are Not Universal
 
-A widespread misconception is that there is one global sign language. There is not.
+A widespread misconception among event organizers is that sign language is universal. It is not.
 
-Sign languages are natural languages that evolved independently within Deaf communities around the
-world. They have distinct grammars, vocabularies, and regional dialects. Hiring a sign language
-interpreter without specifying the correct language is equivalent to hiring a Spanish interpreter
-for a French-speaking audience.
+Sign languages are independent, fully formed natural languages that evolved organically within Deaf
+communities worldwide. They possess distinct grammars, visual syntaxes, idioms, and regional
+dialects. Contracting an interpreter without verifying the specific national sign language of your
+attendees is equivalent to hiring a Spanish interpreter for an audience that speaks Japanese.
 
-Common sign languages and their primary regions:
+Latin America alone comprises more than a dozen distinct national sign languages, and cross-border
+intelligibility cannot be assumed.
 
-| Sign Language | Abbreviation | Primary Region |
+### Representative National and International Sign Languages
+
+| Language Name | Common Abbreviation | Primary Country / Region |
 |---|---|---|
-| American Sign Language | ASL | United States, English-speaking Canada |
-| Lengua de Señas Mexicana | LSM | Mexico |
-| Lengua de Señas Colombiana | LSC | Colombia |
-| British Sign Language | BSL | United Kingdom |
-| Langue des Signes Française | LSF | France, parts of Switzerland and Belgium |
-| International Sign | IS | Used at international conferences (e.g., KubeCon EU/NA); a contact variety, not a native language |
+| American Sign Language | **ASL** | United States, English-speaking Canada |
+| Lengua de Señas Mexicana | **LSM** | Mexico |
+| Lengua de Señas Colombiana | **LSC** | Colombia |
+| Lengua de Señas Argentina | **LSA** | Argentina |
+| Lengua de Señas Chilena | **LSCh** | Chile |
+| Lengua de Señas Peruana | **LSP** | Peru |
+| Lengua de Signos Española | **LSE** | Spain |
+| British Sign Language | **BSL** | United Kingdom |
+| Deutsche Gebärdensprache | **DGS** | Germany |
+| International Sign | **IS** | Global conferences (e.g., KubeCon, UN assemblies); a contact variety, not a native language |
 
-**Practical guidance for organizers:**
+### Operational Guidance for Organizers
 
-- Always specify the required sign language when booking interpreters — do not assume ASL.
-- For international events (e.g., KubeCon), ask DHH attendees in advance which sign language
-  they use and whether International Sign is acceptable.
-- Do not assume an ASL interpreter can interpret in LSM or LSC. These are different languages.
-- If your event spans multiple countries, you may need interpreters for multiple sign languages.
+- **Never assume ASL fits all:** In Latin America, Europe, and Asia, local attendees will expect
+  their national sign language, not ASL.
+- **Survey during registration:** Ask DHH attendees explicitly which national sign language they
+  require well before the event.
+- **Multinational and hybrid events:** If your event gathers attendees from across multiple countries
+  (e.g., a regional KCD or global summit), you may need interpreter pairs for more than one national
+  sign language or a qualified International Sign (IS) interpreter pair with advance attendee agreement.
 
-## Non-English Event Terminology
+---
 
-When running tech events in Spanish or communicating with Spanish-speaking communities, the
-following terminology choices make your event more welcoming to DHH attendees:
+## Non-English Event Terminology (Spanish-Speaking Communities Case Study)
 
-### Preferred Terms
+In many tech communities across Latin America and Spain, organizers adopt English technical jargon
+directly without considering how spoken-language terms inadvertently exclude non-verbal presenters.
+When hosting events in Spanish or writing call-for-proposals materials, the following neutral terms
+should be prioritized:
 
-| English Term | Preferred Spanish | Avoid |
-|---|---|---|
-| Speaker | **Ponente** or **Expositor/a** | "Speaker" (untranslated) |
-| Talk / Session | **Sesión** or **Presentación** | "Charla" (informal) |
-| Call for Speakers | **Convocatoria de Propuestas (CFP)** | "Call for Speakers" (excludes non-verbal presenters) |
-| Workshop | **Taller** | — |
-| Keynote | **Conferencia magistral** | "Keynote" (untranslated) |
+### Preferred Terms for Inclusive Event Communications
 
-"Call for Proposals (CFP)" is preferred over "Call for Speakers" in any language because it
-centers the contribution (the proposal) rather than the modality (speaking). This is especially
-relevant for DHH presenters who may present with an interpreter.
+| English Term | Preferred Spanish Equivalent | Term to Avoid | Rationale |
+|---|---|---|---|
+| Speaker | **Ponente / Expositor/a / Conferencista** | *Speaker* (untranslated) | Focuses on presenting and sharing technical knowledge, whether through vocal speech or sign language. |
+| Talk / Session | **Sesión técnica / Presentación / Ponencia** | *Charla* | Does not tie participation to vocal speech (*charlar* / chatting). |
+| Call for Speakers | **Convocatoria de Propuestas / Call for Proposals (CFP)** | *Call for Speakers* | Focuses on the merit of the technical proposal rather than the vocal delivery mode. |
+| Workshop | **Taller práctico** | — | Standard Spanish terminology. |
+| Keynote | **Conferencia magistral / Sesión plenaria** | *Keynote* (untranslated) | Formal standardized Spanish terminology. |
 
-### "Lengua" vs. "Lenguaje" in Spanish
+*(Note: Similar dynamics apply in other languages; for example, Brazilian Portuguese communities
+frequently prefer **Palestrante** over "Speaker" and **Chamada de Trabalhos (CFP)**).*
 
-This distinction carries cultural significance in Deaf communities:
+---
 
-- **"Lengua de Señas"** is the correct term. "Lengua" recognizes sign languages as natural,
-  complete human languages with their own grammar and syntax — the same as Spanish or English.
-  This framing is consistent with Mexico's Ley General para la Inclusión de las Personas con
-  Discapacidad (LGIPD), which recognizes Lengua de Señas Mexicana (LSM) as a national language.
+### "Lengua" vs. "Lenguaje" in Spanish-Speaking Jurisdictions
 
-- **"Lenguaje de Señas"** implies sign is merely a communication system or code — not a full
-  language. This framing is considered reductive by many in the Deaf community and should be
-  avoided in official communications.
+Across the Spanish-speaking world, there is an essential linguistic and cultural distinction between
+**Lengua de Señas** and **Lenguaje de señas**:
 
-Use **"Lengua de Señas"** in all Spanish-language event materials, social posts, and documentation.
+* **"Lengua de Señas" (Correct):** The term *Lengua* designates a complete, autonomous linguistic
+  system with its own grammar, phonology (parameters), and syntax. This aligns with **Article 2 of the
+  UN Convention on the Rights of Persons with Disabilities (CRPD)**, which explicitly defines:
+  *"Language includes spoken and signed languages and other forms of non spoken languages."*
+  It is also the official legal term codified across Latin America and Spain (e.g., Mexico's LGIPD,
+  Colombia's Ley 982/1618, Argentina's Ley 27.710, Spain's Ley 27/2007, Chile's Ley 21.303, and Peru's
+  Ley 29535).
+* **"Lenguaje de señas" (Avoid):** *Lenguaje* in Spanish refers to the universal human faculty of
+  communication, not a specific language system. Using "lenguaje" reduces a recognized natural language
+  to a simplistic code or gesture system. This mistake commonly arises from the literal translation of
+  the English phrase *"Sign Language"*.
+
+**Recommendation:** Event websites, CFP forms, marketing copy, and volunteer guidelines should
+consistently use **Lengua de Señas** (or *Língua de Sinais* in Portuguese).
+
+---
 
 ## AI and Automated Sign Language Tools: Current Limitations
 
-AI-powered sign language recognition tools are emerging but are not yet suitable as primary
-accessibility solutions at tech events. Organizers should understand the following before
-choosing automated tools over human interpreters:
+Emerging AI tools (such as experimental Sign-to-Text models or computer vision recognition) are
+frequently proposed by well-intentioned technologists as alternatives to human interpreters. While
+technologically promising, organizers must recognize that **these tools are not production-ready
+accessibility solutions for tech conferences**:
 
-### Limited Language Support
+### 1. Linguistic and Dataset Scarcity
+Real-time automated sign language recognition models (such as those piloted on specific consumer
+mobile operating systems) are trained almost exclusively on **American Sign Language (ASL)**.
+High-quality, annotated video datasets for LSM, LSC, LSA, and other regional sign languages are
+orders of magnitude smaller. An automated tool cannot reliably translate non-ASL sign languages.
 
-As of 2026, the most widely available AI sign language tools (e.g., the sign language recognition
-"sign-to-text" (SL2T) feature on certain Android devices) support **ASL only**. There is 
-no commercially available real-time AI recognition tool for LSM, LSC, BSL, or most other national 
-sign languages. This is a direct consequence of training data scarcity — ASL has significantly 
-more annotated video data than any other sign language.
+### 2. Specialized Technical Vocabulary
+Tech conferences discuss specialized infrastructure, cloud architecture, and development paradigms
+(e.g., *Kubernetes*, *eBPF*, *GitOps*, *microservices*). Generic AI models trained on everyday conversational
+data fail rapidly when encountering cloud-native terminology, producing severe hallucination or
+omission rates.
 
-### Regional Hardware Availability
+### 3. Hardware and Regional Availability Constraints
+Cutting-edge accessibility features on specific hardware platforms are often restricted by distribution
+geographies. In many countries across Latin America, Asia, and Africa, specialized devices are not
+officially sold, requiring import lead times of 60 days or more and navigating complex customs regulations.
+Organizers cannot assume attendees or staff have access to specific hardware ecosystems.
 
-Some AI sign language features are tied to specific hardware (e.g., a particular smartphone model)
-that may not be available in all regions. Import restrictions, carrier constraints, or distribution
-agreements can mean a device advertised as having sign language features is not obtainable in
-Latin America or other regions within the typical planning window for an event.
+### 4. Visual-Spatial and Non-Manual Signals
+Sign languages are four-dimensional: syntactic meaning relies heavily on non-manual markers (facial
+expressions, eyebrow raises, mouth morphemes, torso shifts) and spatial indexing. Automated 2D camera
+inputs struggle to capture these cues accurately in typical conference room lighting, visual noise, or
+angled seating.
 
-### Accuracy and Context
+### Summary Recommendation
 
-Even for ASL, current AI recognition accuracy degrades with:
-
-- Domain-specific vocabulary (cloud computing, Kubernetes, distributed systems)
-- Non-standard signing environments (lighting, camera angle, clothing contrast)
-- Regional dialects and signing variations
-
-**Recommendation:** AI sign language tools should be treated as experimental assistive technology,
-not as a substitute for a qualified human interpreter. Use them only as a supplementary fallback
-when a human interpreter is unavailable, and communicate this limitation transparently to DHH
-attendees in advance.
+Automated sign language recognition tools should be categorized as **experimental assistive technology**,
+never as a substitute for qualified human interpreter pairs. Event budgets must treat certified human
+interpreters as a core infrastructure requirement.
