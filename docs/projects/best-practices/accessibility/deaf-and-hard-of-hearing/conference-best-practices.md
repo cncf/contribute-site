@@ -244,3 +244,77 @@ Having the opportunity to network with hearing peers is important not only for t
 **Post-event survey**: Include accessibility question(s) on any feedback survey.
 
 Thank you for taking the time to review our best practice recommendations. We hope this was useful and that you'll be able to implement them at your next event. If your conference is accessible to our community, please be sure to add it to this [accessible tech conference list](https://docs.google.com/spreadsheets/d/1kQmhwQc45S6SC2fYsULue4our72TLH86kVD5KA0EC-4/edit#gid=0) so more people from our community find out about it.
+
+## Interpreter Practices
+
+### Why Two Interpreters Are Required
+
+For any event session lasting longer than 30 minutes, you must book two sign language
+interpreters who will work as a pair, rotating every 20–30 minutes.
+
+**Why rotation is mandatory, not optional:**
+
+Sign language interpreting is cognitively intensive. An interpreter simultaneously processes
+auditory input, translates linguistic and cultural meaning, and produces a physical output
+(signing) — all in real time. Research on interpreter fatigue documents measurable accuracy
+degradation after 20–30 minutes of continuous work. A solo interpreter covering a 60-minute
+keynote or a day-long conference will produce lower-quality interpretation in the second half
+of their assignment, directly reducing the accessibility of your event for DHH attendees.
+
+**Planning guidance:**
+
+- Book interpreters in pairs. The working interpreter signs while the support interpreter
+  monitors, provides feed-forward cues for upcoming content, and rests.
+- For tech events, schedule a 30-minute pre-event briefing with both interpreters. Provide:
+  - The event agenda
+  - Speaker slide decks (or at least titles and key terms)
+  - A glossary of domain-specific terminology (e.g., Kubernetes, container, orchestration)
+  - Proper nouns: project names, company names, speaker names
+- Assign a staff point-of-contact who can answer interpreter questions during the event.
+- Budget for interpreter pairs from the start of event planning, not as an afterthought.
+  Interpreter costs are a baseline accessibility expense, equivalent to A/V or venue costs.
+
+**For networking sessions and hallway track:**
+
+Interpreter support at networking events is often the highest-value accessibility investment
+at a conference. DHH attendees can follow structured talks with captions alone, but unstructured
+networking conversations are inaccessible without live interpretation. If budget requires
+prioritization, include at least one interpreter pair available for networking periods.
+
+### Human Interpreters vs. Automated Captions
+
+Live captions (CART — Communication Access Realtime Translation) and AI-generated captions
+(e.g., Google Meet's live captions, Otter.ai, Microsoft Teams transcription) are valuable
+accessibility tools, but they are not substitutes for sign language interpretation.
+
+**What captions do well:**
+
+- Provide access to spoken content for DHH individuals who are oral or use the spoken language
+  as their primary language
+- Create a written record of proceedings for post-event reference
+- Are cost-effective and easier to implement remotely
+
+**What captions cannot replace:**
+
+- **Sign language as a primary language.** For many Deaf individuals, their first language is
+  a sign language, not written English or Spanish. Reading captions in a second language
+  while processing fast-paced technical content creates significant cognitive load.
+- **Prosody, tone, and affect.** Captions are text. They do not convey a speaker's emphasis,
+  irony, humor, or uncertainty — all of which carry meaning in technical presentations.
+- **Real-time accuracy for domain-specific content.** Professional CART services achieve
+  95–98% accuracy for general speech. AI auto-captions average 85–92% accuracy, dropping
+  further with accents, technical jargon, acronyms, and proper nouns common in cloud native
+  talks. Errors compound: a single misheard term can make the surrounding sentences
+  unintelligible.
+
+**The correct framing:**
+
+Captions and sign language interpretation serve different accessibility needs. An event that
+offers only captions has made a choice — intentionally or not — to prioritize DHH individuals
+who are oral and literate in the spoken language over those whose primary language is a sign
+language. Offer both when possible.
+
+If you must choose one due to budget constraints:
+- If your DHH attendees primarily use sign language: prioritize interpreter pairs.
+- If your DHH attendees primarily use speech and lipreading: prioritize professional CART.
+- If you don't know: ask attendees directly during registration. Never assume.
