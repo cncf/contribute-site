@@ -2,7 +2,7 @@
 title:
   'KubeCon + CloudNativeCon North America 2026: From user to contributor to
   maintainer'
-date: 2026-10-20
+date: 2026-10-01
 authors: [eliza-power]
 tags: [kubecon, events, maintainers, community]
 ---
