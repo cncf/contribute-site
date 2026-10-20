@@ -5,7 +5,6 @@ import Head from '@docusaurus/Head';
 </Head>
 
 # KubeCon + CloudNativeCon North America 2026: From user to contributor to maintainer
-```suggestion
 
 **[Posted on October 1, 2026 by epower](https://www.cncf.io/blog/2026/10/01/kubecon-cloudnativecon-north-america-2026-from-user-to-contributor-to-maintainer/)**
 
