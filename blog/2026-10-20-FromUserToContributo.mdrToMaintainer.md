@@ -7,7 +7,7 @@ import Head from '@docusaurus/Head';
 # KubeCon + CloudNativeCon North America 2026: From user to contributor to maintainer
 ```suggestion
 
-**Posted on October 1, 2026 by epower**
+**[Posted on October 1, 2026 by epower](https://www.cncf.io/blog/2026/10/01/kubecon-cloudnativecon-north-america-2026-from-user-to-contributor-to-maintainer/)**
 
 You do not need “maintainer” in your job title to start following the maintainer journey at KubeCon + CloudNativeCon North America 2026.
 
