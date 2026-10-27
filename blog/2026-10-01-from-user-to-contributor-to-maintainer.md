@@ -37,7 +37,7 @@ technical challenges, and opportunities to collaborate across the ecosystem.
 
 For attendees who are not maintainers yet, the event provides multiple
 low-barrier ways to get closer to a project.
-[Maintainer Track](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/maintainer-track/)
+[Maintainer Track](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/)
 sessions,
 [ContribFests](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features/contribfest/),
 [Project Lightning Talks](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features/project-lightning-talks/),
@@ -91,7 +91,7 @@ to see what neighboring communities are working on.
 ## Tuesday through Thursday: Go behind the project
 
 The
-[Maintainer Track](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/maintainer-track/)
+[Maintainer Track](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/)
 is where attendees can hear directly from CNCF project maintainers about new
 developments, technical challenges, implementation considerations, community
 priorities, and project roadmaps. Sessions to consider include:
