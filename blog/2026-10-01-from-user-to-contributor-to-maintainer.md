@@ -37,12 +37,12 @@ technical challenges, and opportunities to collaborate across the ecosystem.
 
 For attendees who are not maintainers yet, the event provides multiple
 low-barrier ways to get closer to a project.
-[Maintainer Track](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/maintainer-track/)
+[Maintainer Track](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?all-sessions=maintainer-track)
 sessions,
-[ContribFests](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features/contribfest/),
-[Project Lightning Talks](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features/project-lightning-talks/),
+[ContribFests](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/project-engagement/#contribfest),
+[Project Lightning Talks](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/project-engagement/#project-lightning-talks),
 and the
-[Project Pavilion](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor-solutions-showcase/)
+[Project Pavilion](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/project-engagement/#project-pavilion)
 can help turn “I use this project” into “I know how to contribute to it.”
 
 ## Come with a community challenge or a curiosity
@@ -64,7 +64,7 @@ If you are newer to contribution, your questions may be simpler:
 ## Already a maintainer? Start Sunday
 
 For eligible CNCF project maintainers, the
-[CNCF Maintainer Summit](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features/cncf-maintainer-summit/)
+[CNCF Maintainer Summit](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit/)
 takes place on Sunday, November 8 before the main conference.
 
 The Summit provides a dedicated space for the people behind CNCF projects to
@@ -77,7 +77,7 @@ review those requirements ahead of time.
 ## Monday: See what projects are building
 
 On Monday,
-[Project Lightning Talks](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features/project-lightning-talks/)
+[Project Lightning Talks](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/project-engagement/#project-lightning-talks)
 give CNCF projects five minutes each to share recent updates, new features, and
 other highlights.
 
@@ -91,7 +91,7 @@ to see what neighboring communities are working on.
 ## Tuesday through Thursday: Go behind the project
 
 The
-[Maintainer Track](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/maintainer-track/)
+[Maintainer Track](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?all-sessions=maintainer-track)
 is where attendees can hear directly from CNCF project maintainers about new
 developments, technical challenges, implementation considerations, community
 priorities, and project roadmaps. Sessions to consider include:
@@ -108,7 +108,7 @@ hear from and talk with the people building it.
 
 ## Make your first contribution
 
-[ContribFests](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features/contribfest/)
+[ContribFests](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/project-engagement/#contribfest)
 turn that conversation into hands-on participation.
 
 Attendees can work alongside project maintainers and contributors to tackle real
@@ -133,7 +133,7 @@ curious is enough to start.
 ## Visit the Project Pavilion
 
 The
-[Project Pavilion](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/sponsor-solutions-showcase/)
+[Project Pavilion](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/project-engagement/#project-pavilion)
 is open during the main conference in the Solutions Showcase and provides
 another easy way to connect directly with project communities.
 
