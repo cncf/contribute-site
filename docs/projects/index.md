@@ -2,8 +2,8 @@
 title: CNCF Projects
 sidebar_position: 1
 ---
-import ProjectsDocCardList from '@site/src/components/ProjectsDocCardList';
+import FilteredDocCardList from '@site/src/components/FilteredDocCardList';
 
 The CNCF hosts many projects across different maturity levels. Browse projects below.
 
-<ProjectsDocCardList />
+<FilteredDocCardList />
