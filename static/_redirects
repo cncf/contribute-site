@@ -160,3 +160,7 @@
 /resources/project-services/outreach-events/ /resources/services/outreach-events/ 301
 /resources/project-services/technical-writing /resources/services/technical-writing/ 301
 /resources/project-services/technical-writing/ /resources/services/technical-writing/ 301
+
+# Maintainer resources stub removed; content lives in the resources section
+/maintainers/resources /resources/ 301
+/maintainers/resources/ /resources/ 301
