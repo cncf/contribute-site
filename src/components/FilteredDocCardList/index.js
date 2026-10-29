@@ -8,7 +8,11 @@ export default function FilteredDocCardList() {
   const {pathname} = useLocation();
 
   const filteredItems = items.filter(
-    (item) => !(item.type === 'link' && item.href === pathname),
+    (item) =>
+      !(
+        item.type === 'link' &&
+        item.href.replace(/\/+$/, '') === pathname.replace(/\/+$/, '')
+      ),
   );
 
   return <DocCardList items={filteredItems} />;
