@@ -345,6 +345,15 @@
     "requestUrl": "https://www.holopin.io/opensource"
   },
   {
+    "id": "cncf-notes",
+    "name": "CNCF Notes (CodiMD)",
+    "category": "community",
+    "description": "CNCF-hosted CodiMD instance: a multi-user Markdown editor that can commit directly to GitHub. Sign in with your LFX account.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://notes.cncf.io/"
+  },
+  {
     "id": "program-management",
     "name": "Program management and governance",
     "category": "program",
