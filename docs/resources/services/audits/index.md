@@ -4,6 +4,12 @@ weight: 3
 description: CNCF sponsored audits and code analysis tooling
 ---
 
+## Security Audits
+
+CNCF works with many independent third parties to provide security audits to projects (e.g., Kubernetes security audit). To request a such an audit, please file a ticket within ServiceDesk.
+
+We also support distributed systems safety research via independent third parties (e.g. https://jepsen.io/)
+
 ## Code analysis and fuzzing
 
 Fuzzing is a technique for dynamically testing applications to find reliability and security bugs. Several CNCF projects use fuzz testing to analyse their code such as [Envoy](https://github.com/envoyproxy/envoy/blob/main/docs/security/audit_fuzzer_adalogics_2021.pdf), [Fluent-bit](https://github.com/fluent/fluent-bit/blob/master/doc-reports/cncf-fuzzing-audit.pdf), [Vitess](https://github.com/vitessio/vitess/blob/main/doc/VIT-02-report-fuzzing-audit.pdf), [Linkerd2-proxy](https://github.com/linkerd/linkerd2-proxy/blob/main/docs/reports/linkerd2-proxy-fuzzing-report.pdf), [Prometheus](https://github.com/prometheus/prometheus/tree/main/promql), [Kubernetes](https://github.com/kubernetes/kubernetes/tree/master/test/fuzz), and more. The integration of fuzzing is often combined with [OSS-Fuzz](https://github.com/google/oss-fuzz) (all of the just-mentioned projects are integrated into OSS-Fuzz), which is a free online service that will run your fuzzer continuously. We highly recommend integrating fuzzing into your project, but the benefits of fuzzing varies from project to project.
@@ -25,9 +31,3 @@ The following list indicates some common software properties that means your cod
 - If a reliability or reliability issue occur then it can have significant consequences for systems
 - Is used as a library by other applications
 - Projects in memory unsafe languages should have a high priority for being fuzzed (but fuzzing is not exclusive to memory unsafe languages)
-
-## Security Audits
-
-CNCF works with many independent third parties to provide security audits to projects (e.g., Kubernetes security audit). To request a such an audit, please file a ticket within ServiceDesk.
-
-We also support distributed systems safety research via independent third parties (e.g. https://jepsen.io/)

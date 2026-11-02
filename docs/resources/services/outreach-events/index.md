@@ -7,18 +7,6 @@ aliases:
 
 ---
 
-## Open Opportunites and Deadlines
-
-Here are the current open opportunities available to projects:
-
-| **Event** | **CFP Deadline** | **Maintainer CFP Deadline** | **Scholarship Deadline** | **Project Pavilion Deadline** |
-| :-----: | :--: | :--: | :--: | :--: |
-| [KubeCon + CloudNativeCon North America](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/cfp/) | May 27 | TBD | TBD | TBD |
-| [KubeCon North America CNCF-hosted Co-located Events North America](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cfp-colocated-events/#submit-your-talk) | TBD | TBD | TBD | TBD |
-| KubeCon North America + CloudNativeCon North America Project Lightning Talk, Maintainer Track + ContribFest | TBD | TBD | TBD | TBD |  
-| Maintainer Summit North America | TBD | TBD | TBD | TBD |  
-| [Submit to Upcoming KCDs](https://sessionize.com/2026-kcd-open-call-for-proposals/) | | | | |
-
 ## Marketing
 
 Marketing services for projects are designed to assist with the awareness of the project, increase project adoption, and increase contributors. CNCF has marketing resources to support the projects in the following areas:
@@ -31,8 +19,6 @@ Events are central to CNCF's strategic approach, fostering community growth thro
 | :--------: | :--: | :-------: | :--------: | :---: | :-----: |
 | CNCF-hosted, Co-located Events, KubeCon + CloudNativeCon, and Open Source Summit Events | ✅ | ✅ | ✅ | - | - |
 | Virtual Only Events | ✅ | ✅ | ✅ | ✅ | ✅ |
-
-Learn more about eligibility and the parameters for [CNCF-Hosted Events here.](https://events.linuxfoundation.org/wp-content/uploads/2024/08/2025-CNCF-Project-Co-located-Event-Guidelines-8-22-24.pdf)
 
 #### KubeCon + CloudNativeCon Project Opportunities
 
@@ -49,10 +35,6 @@ We provide:
 * Integrated marketing and communication plan, including an event website, communications, and marketing of the event.
 * Obtaining sponsors for the event.
 * Media introductions.
-
-[Learn more about the guidelines here.](https://events.linuxfoundation.org/wp-content/uploads/2024/08/2025-CNCF-Project-Co-located-Event-Guidelines-8-22-24.pdf)
-
-[Submit an Event Request: 2025 CNCF Project + Co-located Event Proposal Form.](https://docs.google.com/forms/d/e/1FAIpQLSeuHhmKdOynPDCJanswRMNgC-zloP4oFpbR8-F9aIiK_R_Fkg/viewform)
 
 Additional ways projects and project maintainers can participate in events:
 
