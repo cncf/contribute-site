@@ -536,16 +536,6 @@
     "detailsUrl": "/resources/services/marketing"
   },
   {
-    "id": "newsletter",
-    "name": "CNCF newsletter",
-    "category": "marketing",
-    "description": "Monthly newsletter with project updates as a regular feature.",
-    "maturity": ["sandbox", "incubating", "graduated"],
-    "request": "service-desk",
-    "url": "https://lists.cncf.io/g/newsletter/messages",
-    "detailsUrl": "/resources/services/marketing"
-  },
-  {
     "id": "media-velocity",
     "name": "Media velocity reports",
     "category": "marketing",
