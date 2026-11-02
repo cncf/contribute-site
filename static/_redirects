@@ -160,3 +160,10 @@
 /resources/project-services/outreach-events/ /resources/services/outreach-events/ 301
 /resources/project-services/technical-writing /resources/services/technical-writing/ 301
 /resources/project-services/technical-writing/ /resources/services/technical-writing/ 301
+
+# ============================================================================
+# Short aliases
+# ============================================================================
+
+/cfp /events/cfp/ 301
+/cfp/ /events/cfp/ 301
