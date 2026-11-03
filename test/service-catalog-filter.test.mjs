@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 import {
   EMPTY_FILTERS,
@@ -116,6 +116,44 @@ describe('project-services.json', () => {
       assert.ok(methods.has(s.request), `${s.id}: request ${s.request}`);
       assert.ok(s.maturity.length > 0, `${s.id}: maturity`);
       assert.ok(s.url || s.detailsUrl, `${s.id}: url or detailsUrl`);
+    }
+  });
+
+  it('links internal detailsUrl values to existing pages and headings', () => {
+    const root = new URL('../', import.meta.url);
+    const resolve = (path) => {
+      const blog = path.match(/^\/blog\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)$/);
+      const candidates = blog
+        ? [`blog/${blog[1]}-${blog[2]}-${blog[3]}-${blog[4]}.md`]
+        : [`docs${path}.md`, `docs${path}/index.md`];
+      return candidates.map((c) => new URL(c, root)).find((u) => existsSync(u));
+    };
+    const slug = (text) =>
+      text
+        .trim()
+        .toLowerCase()
+        .replace(/[^\p{L}\p{N}\s_-]/gu, '')
+        .replace(/\s/g, '-');
+    const headingIds = (file) =>
+      readFileSync(file, 'utf8')
+        .split('\n')
+        .filter((line) => /^#{1,6}\s/.test(line))
+        .map((line) => {
+          const text = line.replace(/^#+\s+/, '');
+          const explicit = text.match(/\{#([^}]+)\}\s*$/);
+          return explicit ? explicit[1] : slug(text);
+        });
+
+    for (const s of data.filter((x) => x.detailsUrl?.startsWith('/'))) {
+      const [path, anchor] = s.detailsUrl.split('#');
+      const file = resolve(path);
+      assert.ok(file, `${s.id}: no page for ${path}`);
+      if (anchor) {
+        assert.ok(
+          headingIds(file).includes(anchor),
+          `${s.id}: no heading #${anchor} in ${path}`,
+        );
+      }
     }
   });
 });

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Link from '@docusaurus/Link';
 import { useHistory, useLocation } from '@docusaurus/router';
 import services from '@site/src/data/project-services.json';
@@ -76,22 +76,22 @@ export default function ServiceCatalog() {
   const history = useHistory();
   // Render the full list on the server; apply query-string filters after hydration.
   const [filters, setFilters] = useState(EMPTY_FILTERS);
-  const hydrated = useRef(false);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
     setFilters(filtersFromSearch(location.search));
-    hydrated.current = true;
+    setHydrated(true);
     // Only read the query string on first load.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
-    if (!hydrated.current) return;
+    if (!hydrated) return;
     const search = filtersToSearch(filters);
     if (search !== location.search) {
       history.replace({ search, hash: location.hash });
     }
-  }, [filters, history, location.hash, location.search]);
+  }, [hydrated, filters, history, location.hash, location.search]);
 
   const results = useMemo(() => filterServices(services, filters), [filters]);
   const rows = useMemo(

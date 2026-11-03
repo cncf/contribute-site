@@ -20,6 +20,53 @@ Events are central to CNCF's strategic approach, fostering community growth thro
 | CNCF-hosted, Co-located Events, KubeCon + CloudNativeCon, and Open Source Summit Events | ✅ | ✅ | ✅ | - | - |
 | Virtual Only Events | ✅ | ✅ | ✅ | ✅ | ✅ |
 
+#### 2027 event proposals
+
+CNCF-hosted co-located events take place alongside KubeCon + CloudNativeCon or
+Open Source Summit. Virtual events are half-day, single-track events open to all
+CNCF projects, TAGs, and SIGs.
+
+| Event                                                                         | Proposals due                                    | Notifications |
+| ----------------------------------------------------------------------------- | ------------------------------------------------ | ------------- |
+| KubeCon + CloudNativeCon Europe 2027 or Open Source Summit North America 2027 | Closed                                           | —             |
+| KubeCon + CloudNativeCon North America 2027 or Open Source Summit Europe 2027 | March 2027                                       | April 2027    |
+| Virtual project events                                                        | 6 or more months before the requested event date | Rolling       |
+
+**In-person co-located event requirements:**
+
+- A graduated or incubating project or TAG, an event that includes one or more
+  projects, or a relevant cloud native topic
+- At least three potential sponsors identified in the proposal
+- A diverse and active program committee
+
+**Virtual event requirements:**
+
+- A CNCF project, TAG, or SIG
+- A vendor-neutral program committee with at least three organizations and one
+  project maintainer
+- Complimentary to the community; sponsorships are not required
+
+**Prepare the following for the proposal form:**
+
+- Event name, and details if the event has been hosted before
+- Preferred location, ranked: virtual, or co-located at KubeCon +
+  CloudNativeCon or Open Source Summit
+- Event duration: full day or half day
+- At least three potential sponsors for co-located events
+- Estimated number of attendees
+- Event description and CFP topics
+- Program committee details: event program chairs and committee members
+- Website and branding needs (hex codes, hashtags, and so on)
+
+:::info
+
+- [2027 CNCF Project + Co-located Events Guidelines](https://events.linuxfoundation.org/cncf-project-colo-guidelines-2027/)
+- [Submit a 2027 co-located event proposal](https://forms.gle/oLdjrAzMXsjyQoP3A)
+- [CNCF-hosted co-located events overview and FAQ](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/cncf-hosted-co-located-events-overview/)
+- Questions: [cncfcolocatedevents@linuxfoundation.org](mailto:cncfcolocatedevents@linuxfoundation.org)
+
+:::
+
 #### KubeCon + CloudNativeCon Project Opportunities
 
 | Project Opportunity Type | TAGs | Graduated | Incubating | SIGs | Sandbox |

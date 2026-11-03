@@ -22,6 +22,15 @@ below to find a service and learn how to request it.
 
 ## Service catalog
 
+:::info
+
+Many services in this catalog come from the
+[Linux Foundation Open Source Partner Program](https://www.linuxfoundation.org/projects/partnerships),
+which lists partner tools and services available across all Linux Foundation
+projects. Where request steps differ, follow the CNCF guidance in this catalog.
+
+:::
+
 :::tip
 
 Filter by keyword, category, maturity level, or request method. The filters are
@@ -36,5 +45,4 @@ saved in the page URL, so you can share a filtered view.
 [graduated]: https://www.cncf.io/projects/
 [incubating]: https://www.cncf.io/projects/
 [sandbox]: https://www.cncf.io/sandbox-projects/
-[CNCF ServiceDesk]:
-  https://cncfservicedesk.atlassian.net/servicedesk/customer/portal/1
+[CNCF ServiceDesk]: https://servicedesk.cncf.io

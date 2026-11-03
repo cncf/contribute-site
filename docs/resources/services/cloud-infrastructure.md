@@ -3,7 +3,7 @@ title: Cloud Infrastructure
 description: Cloud hosting help and credits for CNCF projects
 ---
 
-CNCF staff is familiar with and can help projects with, hosting on AWS, GCP,
+CNCF staff is familiar with, and can help projects with, hosting on AWS, GCP,
 Oracle, Akamai/Linode, and Azure clouds. In some cases, we have free credits
 ([AWS](https://www.cncf.io/announcement/2019/11/19/cloud-native-computing-foundation-receives-200000-in-credits-from-amazon-web-services-aws/),
 [GCP](https://www.cncf.io/google-cloud-recommits-3m-to-kubernetes/),

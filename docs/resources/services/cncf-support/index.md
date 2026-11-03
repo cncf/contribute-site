@@ -20,7 +20,6 @@ CNCF offers graphic design resources for all projects, provided primarily by our
 
 All project logos and color schemes are readily available via the [CNCF artwork repo](https://github.com/cncf/artwork).
 
-
 ## Legal Services
 
 Legal services keep a project healthy and in compliance with licensing requirements, intellectual property regimes, and industry norms.
@@ -37,7 +36,6 @@ Specific legal-related support programs that CNCF counsel and tooling provides f
 - Defend trademarks against third-party challenges and inappropriate misuses
 - Assistance with open source licensing review and strategy as needed
 - Managing the license exception request process for CNCF, and coordinating Legal Committee and Governing Board reviews and approvals.
-
 
 ## Certification and Training Services
 

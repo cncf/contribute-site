@@ -6,7 +6,7 @@ description: CNCF sponsored audits and code analysis tooling
 
 ## Security Audits
 
-CNCF works with many independent third parties to provide security audits to projects (e.g., Kubernetes security audit). To request a such an audit, please file a ticket within ServiceDesk.
+CNCF works with many independent third parties to provide security audits to projects (e.g., Kubernetes security audit). To request such an audit, please file a ticket within ServiceDesk.
 
 We also support distributed systems safety research via independent third parties (e.g. https://jepsen.io/)
 

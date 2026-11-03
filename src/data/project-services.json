@@ -40,13 +40,13 @@
     "requestUrl": "https://sourcegraph.com/supporting-the-cncf"
   },
   {
-    "id": "gitpod",
-    "name": "Gitpod",
+    "id": "ona",
+    "name": "Ona (formerly Gitpod)",
     "category": "dev-tools",
-    "description": "On-demand cloud development environments, pre-configured with the tools, libraries, and dependencies required to be ready to code.",
+    "description": "AI-driven automation for GitHub and GitLab that helps manage pull requests and backlogs, plus pre-configured cloud development environments for contributors.",
     "maturity": ["sandbox", "incubating", "graduated"],
     "request": "service-desk",
-    "url": "https://www.gitpod.io/"
+    "url": "https://ona.com/open-source"
   },
   {
     "id": "ci-support",
@@ -105,6 +105,7 @@
     "description": "Cloud credits for hosting on Akamai/Linode.",
     "maturity": ["sandbox", "incubating", "graduated"],
     "request": "service-desk",
+    "url": "https://www.cncf.io/blog/2025/11/05/akamai-builds-cloud-native-resilience-cloud-credits-to-power-cncf-projects/",
     "detailsUrl": "/resources/services/cloud-infrastructure"
   },
   {
@@ -114,6 +115,7 @@
     "description": "Direct access to Docker's Sponsored Open Source (DSOS) program, including upgraded Docker Hub registry, Docker Hardened Images, security, and support services.",
     "maturity": ["sandbox", "incubating", "graduated"],
     "request": "service-desk",
+    "url": "https://www.cncf.io/announcements/2025/09/18/cncf-expands-infrastructure-support-for-project-maintainers-through-partnership-with-docker/",
     "detailsUrl": "https://www.docker.com/blog/docker-hardened-images-for-every-developer/"
   },
   {
@@ -139,11 +141,11 @@
     "id": "scarf",
     "name": "Scarf",
     "category": "ci-infra",
-    "description": "Analytics for container and artifact distribution, package installation, and web traffic to documentation.",
+    "description": "Analytics for container and artifact distribution, package installation, and documentation traffic. No per-seat cost; CNCF projects get 100 runs and 25 company unlocks per month on top of standard credits. Data retention follows Scarf's standard terms (currently three months).",
     "maturity": ["sandbox", "incubating", "graduated"],
-    "request": "vendor",
+    "request": "service-desk",
     "url": "https://scarf.sh",
-    "requestUrl": "https://docs.scarf.sh/quick-start/"
+    "detailsUrl": "https://docs.scarf.sh/quick-start/"
   },
   {
     "id": "domains",
@@ -619,8 +621,7 @@
     "description": "Event planning and logistics, integrated marketing, sponsorship, and media introductions for CNCF-hosted co-located events at KubeCon + CloudNativeCon and Open Source Summit. Also open to TAGs.",
     "maturity": ["incubating", "graduated"],
     "request": "form-email",
-    "requestUrl": "mailto:ProjectsAtKubeCon@linuxfoundation.org",
-    "detailsUrl": "/resources/services/outreach-events#event-management"
+    "detailsUrl": "/resources/services/outreach-events#2027-event-proposals"
   },
   {
     "id": "virtual-events",
@@ -631,7 +632,7 @@
     "request": "form-email",
     "url": "https://events.linuxfoundation.org/",
     "requestUrl": "mailto:ProjectsAtKubeCon@linuxfoundation.org",
-    "detailsUrl": "/resources/services/outreach-events#event-management"
+    "detailsUrl": "/resources/services/outreach-events#2027-event-proposals"
   },
   {
     "id": "project-pavilion",
