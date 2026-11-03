@@ -139,11 +139,11 @@
     "id": "scarf",
     "name": "Scarf",
     "category": "ci-infra",
-    "description": "Analytics for container and artifact distribution, package installation, and documentation traffic. No per-seat cost; CNCF projects get 100 runs and 25 company unlocks per month on top of standard credits. Data retention follows Scarf's standard terms (currently three months).",
+    "description": "Analytics for container and artifact distribution, package installation, and web traffic to documentation.",
     "maturity": ["sandbox", "incubating", "graduated"],
-    "request": "service-desk",
+    "request": "vendor",
     "url": "https://scarf.sh",
-    "detailsUrl": "https://docs.scarf.sh/quick-start/"
+    "requestUrl": "https://docs.scarf.sh/quick-start/"
   },
   {
     "id": "domains",
