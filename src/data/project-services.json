@@ -40,13 +40,13 @@
     "requestUrl": "https://sourcegraph.com/supporting-the-cncf"
   },
   {
-    "id": "ona",
-    "name": "Ona (formerly Gitpod)",
+    "id": "gitpod",
+    "name": "Gitpod",
     "category": "dev-tools",
-    "description": "AI-driven automation for GitHub and GitLab that helps manage pull requests and backlogs, plus pre-configured cloud development environments for contributors.",
+    "description": "On-demand cloud development environments, pre-configured with the tools, libraries, and dependencies required to be ready to code.",
     "maturity": ["sandbox", "incubating", "graduated"],
     "request": "service-desk",
-    "url": "https://ona.com/open-source"
+    "url": "https://www.gitpod.io/"
   },
   {
     "id": "ci-support",
