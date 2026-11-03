@@ -22,6 +22,15 @@ below to find a service and learn how to request it.
 
 ## Service catalog
 
+:::info
+
+Many services in this catalog come from the
+[Linux Foundation Open Source Partner Program](https://www.linuxfoundation.org/projects/partnerships),
+which lists partner tools and services available across all Linux Foundation
+projects. Where request steps differ, follow the CNCF guidance in this catalog.
+
+:::
+
 :::tip
 
 Filter by keyword, category, maturity level, or request method. The filters are
