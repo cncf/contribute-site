@@ -4,17 +4,45 @@ weight: 1
 description: A collection of services offered to CNCF projects.
 ---
 
-The CNCF offers a strong backbone of services to open source projects, built around the goal of sustaining most project needs outside of just code management and technical decisions. We offer an enhanced set of services via professional [staff] that cultivate the maturity and increased adoption of cloud native, open source projects. We take a data driven approach to working with our project and maintainer community; we actively [survey] to improve our services and community satisfaction.
+import ServiceCatalog from '@site/src/components/ServiceCatalog';
 
-These services are offered as part of community stability, but do not replace developers on the projects themselves and are never meant to be in the critical path of a project release or a full time resource. Our goal in providing these shared services is to cultivate CNCF’s graduating and incubating projects, and offer sandbox projects the space to grow into incubating projects.
+CNCF [staff] provide shared services to [graduated], [incubating], and [sandbox]
+projects to support needs beyond code and technical decisions. Use the catalog
+below to find a service and learn how to request it.
 
-CNCF hosts [graduated], [incubating], and [sandbox] projects. While we offer a shared set of services for all of our projects, we don’t provide substantial marketing services for sandbox projects as they are meant to be early stage projects that need a lightweight neutral home to grow naturally. Sandbox projects are prioritized lower for project services versus their incubating and graduated project peers.
+- Services support projects but don't replace project developers, and are never
+  in the critical path of a release.
+- Sandbox projects are prioritized lower and don't receive substantial marketing
+  services.
+- Services are shaped by regular maintainer [surveys][survey].
+- Projects may freely select their own tools. Staff can recommend tools or
+  provide access, and most services are requested through a Service Desk ticket.
+- This list isn't exhaustive. For anything else, ask staff through the [CNCF
+  ServiceDesk].
 
-Finally, this list isn’t meant to be an exhaustive list of services offered by the foundation. There may be things your project needs help with that isn’t listed here and it’s completely OK to reach out to [staff] via the [CNCF ServiceDesk] and ask for help. 
+## Service catalog
+
+:::info
+
+Many services in this catalog come from the
+[Linux Foundation Open Source Partner Program](https://www.linuxfoundation.org/projects/partnerships),
+which lists partner tools and services available across all Linux Foundation
+projects. Where request steps differ, follow the CNCF guidance in this catalog.
+
+:::
+
+:::tip
+
+Filter by keyword, category, maturity level, or request method. The filters are
+saved in the page URL, so you can share a filtered view.
+
+:::
+
+<ServiceCatalog />
 
 [staff]: https://www.cncf.io/people/staff/
 [survey]: https://github.com/cncf/surveys/tree/main/maintainer
 [graduated]: https://www.cncf.io/projects/
 [incubating]: https://www.cncf.io/projects/
 [sandbox]: https://www.cncf.io/sandbox-projects/
-[CNCF ServiceDesk]: https://cncfservicedesk.atlassian.net/servicedesk/customer/portal/1
+[CNCF ServiceDesk]: https://servicedesk.cncf.io

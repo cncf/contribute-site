@@ -150,8 +150,10 @@
 /resources/project-services/audits/ /resources/services/audits/ 301
 /resources/project-services/cncf-support /resources/services/cncf-support/ 301
 /resources/project-services/cncf-support/ /resources/services/cncf-support/ 301
-/resources/project-services/hosted-tools /resources/services/hosted-tools/ 301
-/resources/project-services/hosted-tools/ /resources/services/hosted-tools/ 301
+/resources/project-services/hosted-tools /resources/services/ 301
+/resources/project-services/hosted-tools/ /resources/services/ 301
+/resources/services/hosted-tools /resources/services/ 301
+/resources/services/hosted-tools/ /resources/services/ 301
 /resources/project-services/maturity-levels /resources/services/marketing/ 301
 /resources/project-services/maturity-levels/ /resources/services/marketing/ 301
 /resources/services/maturity-levels /resources/services/marketing/ 301

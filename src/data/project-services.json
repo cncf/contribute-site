@@ -1,0 +1,772 @@
+[
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "dev-tools",
+    "description": "Maintainers get access to Copilot Enterprise.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://docs.github.com/en/copilot",
+    "detailsUrl": "/blog/2025/12/16/github-copilot-enterprise-for-maintainers"
+  },
+  {
+    "id": "kapa-ai",
+    "name": "Kapa.ai",
+    "category": "dev-tools",
+    "description": "Handles community questions, reducing the volume of inbound support questions maintainers manage directly.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://www.kapa.ai/",
+    "detailsUrl": "/blog/2026/04/09/reducing-support-tax-cncf-kapa-ai"
+  },
+  {
+    "id": "dosu",
+    "name": "Dosu",
+    "category": "dev-tools",
+    "description": "AI teammate that lives in your GitHub repository, helping you respond to issues, triage bugs, and build better documentation. Early access program; mention CNCF when applying.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "vendor",
+    "url": "https://dosu.dev/",
+    "requestUrl": "https://dosu.dev/"
+  },
+  {
+    "id": "sourcegraph",
+    "name": "Sourcegraph",
+    "category": "dev-tools",
+    "description": "Complimentary AI and code search workspace licenses for eligible open source developers who actively maintain a CNCF project.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "vendor",
+    "url": "https://sourcegraph.com/supporting-the-cncf",
+    "requestUrl": "https://sourcegraph.com/supporting-the-cncf"
+  },
+  {
+    "id": "ona",
+    "name": "Ona (formerly Gitpod)",
+    "category": "dev-tools",
+    "description": "AI-driven automation for GitHub and GitLab that helps manage pull requests and backlogs, plus pre-configured cloud development environments for contributors.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://ona.com/open-source"
+  },
+  {
+    "id": "ci-support",
+    "name": "CI/CD support",
+    "category": "ci-infra",
+    "description": "CNCF covers CI needs for hosted projects, which select their own platforms, including GitHub Actions and Prow. Projects in the CNCF GitHub Enterprise account gain access to larger runners and runners hosted across environments using the GitHub Actions Runner Controller.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://github.com/features/actions",
+    "detailsUrl": "/resources/services/ci-cd"
+  },
+  {
+    "id": "prow-github-actions",
+    "name": "Prow GitHub Actions",
+    "category": "ci-infra",
+    "description": "Prow-style chat-ops, OWNERS-based reviewers, automatic merging, and label sync as a GitHub Actions workflow. Maintained by CNCF staff.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://github.com/cncf/prow-github-actions",
+    "detailsUrl": "/resources/services/ci-cd#prow-github-actions"
+  },
+  {
+    "id": "aws-credits",
+    "name": "AWS credits",
+    "category": "ci-infra",
+    "description": "Cloud credits for hosting on Amazon Web Services.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://www.cncf.io/announcement/2019/11/19/cloud-native-computing-foundation-receives-200000-in-credits-from-amazon-web-services-aws/",
+    "detailsUrl": "/resources/services/cloud-infrastructure"
+  },
+  {
+    "id": "gcp-credits",
+    "name": "Google Cloud credits",
+    "category": "ci-infra",
+    "description": "Cloud credits for hosting on Google Cloud.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://www.cncf.io/google-cloud-recommits-3m-to-kubernetes/",
+    "detailsUrl": "/resources/services/cloud-infrastructure"
+  },
+  {
+    "id": "oracle-credits",
+    "name": "Oracle Cloud (OCI) credits",
+    "category": "ci-infra",
+    "description": "Cloud credits for hosting on Oracle Cloud Infrastructure.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://www.cncf.io/blog/2024/02/02/oracle-oci-credits-are-now-available-to-cncf-projects-here-is-what-you-need-to-know/",
+    "detailsUrl": "/resources/services/cloud-infrastructure"
+  },
+  {
+    "id": "akamai-credits",
+    "name": "Akamai/Linode credits",
+    "category": "ci-infra",
+    "description": "Cloud credits for hosting on Akamai/Linode.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://www.cncf.io/blog/2025/11/05/akamai-builds-cloud-native-resilience-cloud-credits-to-power-cncf-projects/",
+    "detailsUrl": "/resources/services/cloud-infrastructure"
+  },
+  {
+    "id": "docker",
+    "name": "Docker Sponsored Open Source",
+    "category": "ci-infra",
+    "description": "Direct access to Docker's Sponsored Open Source (DSOS) program, including upgraded Docker Hub registry, Docker Hardened Images, security, and support services.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://www.cncf.io/announcements/2025/09/18/cncf-expands-infrastructure-support-for-project-maintainers-through-partnership-with-docker/",
+    "detailsUrl": "https://www.docker.com/blog/docker-hardened-images-for-every-developer/"
+  },
+  {
+    "id": "netlify",
+    "name": "Netlify",
+    "category": "ci-infra",
+    "description": "Website hosting, DNS management, and workflow automation for documentation and websites.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://netlify.com"
+  },
+  {
+    "id": "fastly",
+    "name": "Fastly",
+    "category": "ci-infra",
+    "description": "Fastly has committed to support CNCF and Linux Foundation projects. Apply for access directly with Fastly.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "vendor",
+    "url": "https://www.fastly.com/",
+    "requestUrl": "https://www.fastly.com/blog/fast-forward-were-here-for-the-maintainers/"
+  },
+  {
+    "id": "scarf",
+    "name": "Scarf",
+    "category": "ci-infra",
+    "description": "Analytics for container and artifact distribution, package installation, and documentation traffic. No per-seat cost; CNCF projects get 100 runs and 25 company unlocks per month on top of standard credits. Data retention follows Scarf's standard terms (currently three months).",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://scarf.sh",
+    "detailsUrl": "https://docs.scarf.sh/quick-start/"
+  },
+  {
+    "id": "domains",
+    "name": "Domain registration",
+    "category": "ci-infra",
+    "description": "CNCF neutrally registers and manages domains on behalf of projects. gTLDs such as .org, .net, .com, and .dev are preferred; new .io and premium domains are not registered.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "detailsUrl": "/resources/services/domains"
+  },
+  {
+    "id": "fossa",
+    "name": "CNCF FOSSA",
+    "category": "security",
+    "description": "Dedicated CNCF FOSSA instance that scans projects for third-party licenses not on the approved allowlist.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://fossa.io",
+    "detailsUrl": "https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md#approved-licenses-for-allowlist"
+  },
+  {
+    "id": "snyk",
+    "name": "CNCF Snyk",
+    "category": "security",
+    "description": "Dedicated CNCF Snyk tenancy that scans projects for third-party licenses not on the approved allowlist. Projects can use CNCF FOSSA, CNCF Snyk, or both.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://snyk.io",
+    "detailsUrl": "https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md#approved-licenses-for-allowlist"
+  },
+  {
+    "id": "lfx-security",
+    "name": "LFX Security",
+    "category": "security",
+    "description": "Source code security scanning and license compliance (white-labeled Snyk).",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://lfx.linuxfoundation.org/tools/security/"
+  },
+  {
+    "id": "kusari",
+    "name": "Kusari Inspector",
+    "category": "security",
+    "description": "Visibility into versions, licenses, and security risks for direct and transitive dependencies.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://docs.kusari.cloud/docs/Inspector/",
+    "detailsUrl": "/blog/2025/12/17/cloud-native-project-monthly-december-2025"
+  },
+  {
+    "id": "minder",
+    "name": "Minder",
+    "category": "security",
+    "description": "OpenSSF sandbox project that automates and maintains consistent repository security configurations, safeguarding supply chain assets.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://github.com/mindersec"
+  },
+  {
+    "id": "lift",
+    "name": "Sonatype Lift",
+    "category": "security",
+    "description": "Cloud native, collaborative code analysis platform built for developers.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://www.sonatype.com/products/sonatype-lift/"
+  },
+  {
+    "id": "hackerone",
+    "name": "HackerOne",
+    "category": "security",
+    "description": "Bug bounty programs.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://www.hackerone.com"
+  },
+  {
+    "id": "security-audits",
+    "name": "Security audits",
+    "category": "security",
+    "description": "Security audits from independent third parties (for example, the Kubernetes security audit).",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "detailsUrl": "/resources/services/audits#security-audits"
+  },
+  {
+    "id": "safety-research",
+    "name": "Distributed systems safety research",
+    "category": "security",
+    "description": "Distributed systems safety research through independent third parties, such as Jepsen.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://jepsen.io/",
+    "detailsUrl": "/resources/services/audits#security-audits"
+  },
+  {
+    "id": "fuzzing",
+    "name": "Fuzzing with OSS-Fuzz",
+    "category": "security",
+    "description": "Guidance on integrating fuzz testing, often combined with OSS-Fuzz, a free service that runs fuzzers continuously.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://github.com/google/oss-fuzz",
+    "detailsUrl": "/resources/services/audits#code-analysis-and-fuzzing"
+  },
+  {
+    "id": "1password",
+    "name": "1Password",
+    "category": "security",
+    "description": "Free Teams accounts for open source projects to manage shared secrets. Apply directly through the 1Password for Open Source program.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "vendor",
+    "url": "https://github.com/1Password/for-open-source",
+    "requestUrl": "https://github.com/1Password/for-open-source"
+  },
+  {
+    "id": "keybase",
+    "name": "Keybase",
+    "category": "security",
+    "description": "Manage access to shared secrets.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://keybase.io"
+  },
+  {
+    "id": "slack",
+    "name": "CNCF Slack",
+    "category": "community",
+    "description": "Communication for all projects in the Cloud Native Computing Foundation Slack, including migration of existing workspaces.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://slack.com",
+    "detailsUrl": "/community/slack-migration-runbook"
+  },
+  {
+    "id": "zoom",
+    "name": "Zoom",
+    "category": "community",
+    "description": "Zoom Pro accounts for video meetings, recordings, and scheduling.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://zoom.us/"
+  },
+  {
+    "id": "discourse",
+    "name": "Discourse",
+    "category": "community",
+    "description": "Community discussion forums (for example, discuss.kubernetes.io).",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://www.discourse.org/"
+  },
+  {
+    "id": "gitvote",
+    "name": "GitVote",
+    "category": "community",
+    "description": "GitHub application that allows voting in issues and pull requests.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://github.com/cncf/gitvote"
+  },
+  {
+    "id": "clowarden",
+    "name": "CLOWarden",
+    "category": "community",
+    "description": "GitOps-based access control service that controls and audits access to GitHub repositories for individuals and teams.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://clowarden.io"
+  },
+  {
+    "id": "clotributor",
+    "name": "CLOTributor",
+    "category": "community",
+    "description": "Search engine for people looking for opportunities to become cloud native contributors.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://clotributor.dev/"
+  },
+  {
+    "id": "credly",
+    "name": "Credly badges",
+    "category": "community",
+    "description": "Custom digital badges to recognize contributors (Maintainer, Contributor, Chop Wood Carry Water, Documentarian). Up to four badges per year for each graduated project.",
+    "maturity": ["graduated"],
+    "request": "form-email",
+    "url": "https://www.credly.com/",
+    "requestUrl": "https://form.asana.com/?k=Ufi_ZE31X3EAKMTiplIEcA&d=9283783873717",
+    "detailsUrl": "/resources/services/credly"
+  },
+  {
+    "id": "holopin",
+    "name": "Holopin",
+    "category": "community",
+    "description": "Lightweight digital badges that maintainers can use to recognize contributors. Not CNCF managed; apply directly to Holopin's open source program.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "vendor",
+    "url": "https://www.holopin.io/",
+    "requestUrl": "https://www.holopin.io/opensource"
+  },
+  {
+    "id": "cncf-notes",
+    "name": "CNCF Notes (CodiMD)",
+    "category": "community",
+    "description": "CNCF-hosted CodiMD instance: a multi-user Markdown editor that can commit directly to GitHub. Sign in with your LFX account.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://notes.cncf.io/"
+  },
+  {
+    "id": "program-management",
+    "name": "Program management and governance",
+    "category": "program",
+    "description": "CNCF staff assist with project governance creation and advice, and collaboration with LF Fellows and sister projects.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "detailsUrl": "/resources/services/cncf-support#program-management"
+  },
+  {
+    "id": "office-hours",
+    "name": "Project office hours",
+    "category": "program",
+    "description": "Monthly public office hours with CNCF staff, or private meetings on request.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "form-email",
+    "url": "https://tockify.com/cncf.public.events/monthly?search=Monthly%20CNCF%20Project%20Office%20Hours",
+    "requestUrl": "https://project-meetings.cncf.io/",
+    "detailsUrl": "/resources/services/cncf-support#program-management"
+  },
+  {
+    "id": "devstats",
+    "name": "DevStats",
+    "category": "program",
+    "description": "Project activity tracking and contribution reporting.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://devstats.cncf.io"
+  },
+  {
+    "id": "lfx-insights",
+    "name": "LFX Insights",
+    "category": "program",
+    "description": "Project activity tracking and contribution reporting.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://insights.lfx.linuxfoundation.org/"
+  },
+  {
+    "id": "clomonitor",
+    "name": "CLOMonitor",
+    "category": "program",
+    "description": "Scans repositories daily for adherence to best practices, helping assess the health of open source projects.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://clomonitor.io"
+  },
+  {
+    "id": "trademarks",
+    "name": "Trademarks and project assets",
+    "category": "legal",
+    "description": "Neutral home for project assets and trademarks, trademark registration across geographies, and defense against third-party challenges and misuse.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://github.com/cncf/artwork",
+    "detailsUrl": "/resources/services/cncf-support#legal-services"
+  },
+  {
+    "id": "cla-dco",
+    "name": "CLA and DCO verification",
+    "category": "legal",
+    "description": "Contributor License Agreement (CLA) signature and validation and Developer Certificate of Origin (DCO) sign-off verification systems that integrate with GitHub.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "detailsUrl": "/resources/services/cncf-support#legal-services"
+  },
+  {
+    "id": "licensing-review",
+    "name": "Licensing review and litigation support",
+    "category": "legal",
+    "description": "Assistance with open source licensing review and strategy, and support with threatened litigation against CNCF projects.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "detailsUrl": "/resources/services/cncf-support#legal-services"
+  },
+  {
+    "id": "license-exceptions",
+    "name": "License exception requests",
+    "category": "legal",
+    "description": "CNCF manages the license exception request process and coordinates Legal Committee and Governing Board reviews.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "form-email",
+    "url": "https://github.com/cncf/foundation/blob/main/policies-guidance/allowed-third-party-license-policy.md#process-for-applying-for-an-exception",
+    "requestUrl": "https://github.com/cncf/foundation/issues/new?template=license-exception-request.yaml",
+    "detailsUrl": "/resources/services/cncf-support#legal-services"
+  },
+  {
+    "id": "license-exceptions-dashboard",
+    "name": "License Exceptions Dashboard",
+    "category": "legal",
+    "description": "List of software components that have been granted license exceptions.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://cncf-license-exceptions.netlify.app/"
+  },
+  {
+    "id": "docs-analysis",
+    "name": "Documentation analysis",
+    "category": "docs-design",
+    "description": "Analysis to help projects understand where to improve their documentation. CNCF recommends requesting a docs assessment before other documentation services.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://github.com/cncf/techdocs/tree/main/analyses",
+    "detailsUrl": "/resources/services/technical-writing"
+  },
+  {
+    "id": "tech-writers",
+    "name": "Technical writers and contractors",
+    "category": "docs-design",
+    "description": "Technical writers and contractors for specific projects.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://github.com/cncf/techdocs/blob/main/docs/services.md",
+    "detailsUrl": "/resources/services/technical-writing"
+  },
+  {
+    "id": "techdocs-office-hours",
+    "name": "Tech docs office hours",
+    "category": "docs-design",
+    "description": "Monthly Q&A sessions with the CNCF technical writers.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://github.com/cncf/techdocs#techdocs-qa",
+    "detailsUrl": "/resources/services/technical-writing#office-hours"
+  },
+  {
+    "id": "design",
+    "name": "Design and logos",
+    "category": "docs-design",
+    "description": "Graphic design from the CNCF in-house design team, including new logos, website refreshes, and enhancements to an existing aesthetic.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "detailsUrl": "/resources/services/cncf-support#design-and-aesthetics"
+  },
+  {
+    "id": "artwork",
+    "name": "CNCF artwork repository",
+    "category": "docs-design",
+    "description": "Project logos and color schemes.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://github.com/cncf/artwork"
+  },
+  {
+    "id": "online-programs",
+    "name": "CNCF Online Programs",
+    "category": "marketing",
+    "description": "Webinars, videos, and livestreams to communicate release details or project updates.",
+    "maturity": ["incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://github.com/cncf/foundation/blob/main/policies-guidance/online-programs-guidelines.md",
+    "detailsUrl": "/resources/services/marketing"
+  },
+  {
+    "id": "blog",
+    "name": "CNCF and Kubernetes blogs",
+    "category": "marketing",
+    "description": "Submit technical content, how-tos, deployment stories, and use cases to the CNCF blog and the Kubernetes.io blog.",
+    "maturity": ["incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://github.com/cncf/foundation/blob/main/policies-guidance/blog-guidelines.md",
+    "detailsUrl": "/resources/services/marketing"
+  },
+  {
+    "id": "editorial",
+    "name": "Editorial support",
+    "category": "marketing",
+    "description": "CNCF manages the blog editorial calendar and provides writing, editing, and funding for freelancers to develop content.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "detailsUrl": "/resources/services/marketing"
+  },
+  {
+    "id": "case-studies",
+    "name": "Case studies",
+    "category": "marketing",
+    "description": "End user case studies featuring use cases and the impact of CNCF projects on end users' businesses.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://github.com/cncf/foundation/blob/main/policies-guidance/case-study-guidelines.md",
+    "detailsUrl": "/resources/services/marketing"
+  },
+  {
+    "id": "media-velocity",
+    "name": "Media velocity reports",
+    "category": "marketing",
+    "description": "Monthly press mentions and share-of-voice data for all projects, including social media mentions and key messaging.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "detailsUrl": "/resources/services/marketing"
+  },
+  {
+    "id": "phippy",
+    "name": "Fashion a Phippy",
+    "category": "marketing",
+    "description": "Graduated projects can donate a character to the Phippy and Friends program.",
+    "maturity": ["graduated"],
+    "request": "service-desk",
+    "url": "https://github.com/cncf/foundation/blob/main/policies-guidance/phippy-guidelines.md",
+    "detailsUrl": "/resources/services/marketing"
+  },
+  {
+    "id": "marketing-comms",
+    "name": "Media, analyst, and social outreach",
+    "category": "marketing",
+    "description": "Media and analyst coverage, briefings, publication and podcast placement, thought leadership reports, and social media channel management.",
+    "maturity": ["incubating", "graduated"],
+    "request": "service-desk",
+    "detailsUrl": "/resources/services/marketing#marketing-communications"
+  },
+  {
+    "id": "surveys",
+    "name": "Surveys",
+    "category": "marketing",
+    "description": "Help creating surveys to learn about adoption or other interests, including the annual Cloud Native Community Surveys.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://github.com/cncf/surveys",
+    "detailsUrl": "/resources/services/marketing#surveys"
+  },
+  {
+    "id": "graduation-announcement",
+    "name": "Graduation announcement",
+    "category": "marketing",
+    "description": "Press release, KubeCon + CloudNativeCon presentation slot, embargoed media pitch with CNCF PR-staffed interviews, and announcement-day social post.",
+    "maturity": ["graduated"],
+    "request": "none",
+    "url": "https://www.cncf.io/projects/",
+    "detailsUrl": "/resources/services/marketing#graduation"
+  },
+  {
+    "id": "incubation-announcement",
+    "name": "Incubation announcement",
+    "category": "marketing",
+    "description": "cncf.io blog post written with the project team, embargoed media pitch, and announcement-day social post.",
+    "maturity": ["incubating"],
+    "request": "none",
+    "url": "https://www.cncf.io/projects/",
+    "detailsUrl": "/resources/services/marketing#incubating"
+  },
+  {
+    "id": "sandbox-announcement",
+    "name": "Sandbox announcement",
+    "category": "marketing",
+    "description": "Announcement to the TOC mailing list on the day of acceptance, and introductions if media contact CNCF.",
+    "maturity": ["sandbox"],
+    "request": "none",
+    "url": "https://www.cncf.io/sandbox-projects/",
+    "detailsUrl": "/resources/services/marketing#sandbox"
+  },
+  {
+    "id": "release-support",
+    "name": "Release support",
+    "category": "marketing",
+    "description": "Project webinars (up to two per year), cncf.io release blog post, media pitch, and announcement-day social post. Graduated projects: major and minor releases. Incubating projects: major releases.",
+    "maturity": ["incubating", "graduated"],
+    "request": "service-desk",
+    "detailsUrl": "/resources/services/marketing#project-launches-and-new-release-support"
+  },
+  {
+    "id": "co-located-events",
+    "name": "CNCF-hosted co-located events",
+    "category": "events",
+    "description": "Event planning and logistics, integrated marketing, sponsorship, and media introductions for CNCF-hosted co-located events at KubeCon + CloudNativeCon and Open Source Summit. Also open to TAGs.",
+    "maturity": ["incubating", "graduated"],
+    "request": "form-email",
+    "detailsUrl": "/resources/services/outreach-events#2027-event-proposals"
+  },
+  {
+    "id": "virtual-events",
+    "name": "Virtual events",
+    "category": "events",
+    "description": "Virtual-only events, open to all projects, TAGs, and SIGs.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "form-email",
+    "url": "https://events.linuxfoundation.org/",
+    "requestUrl": "mailto:ProjectsAtKubeCon@linuxfoundation.org",
+    "detailsUrl": "/resources/services/outreach-events#2027-event-proposals"
+  },
+  {
+    "id": "project-pavilion",
+    "name": "Project Pavilion kiosk",
+    "category": "events",
+    "description": "In-person kiosk in the Project Pavilion at KubeCon + CloudNativeCon.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "form-email",
+    "url": "/events/project-pavilion",
+    "requestUrl": "mailto:ProjectsAtKubeCon@linuxfoundation.org",
+    "detailsUrl": "/resources/services/outreach-events#kubecon--cloudnativecon-project-opportunities"
+  },
+  {
+    "id": "project-meeting",
+    "name": "In-person project meeting",
+    "category": "events",
+    "description": "Meeting space for projects at KubeCon + CloudNativeCon.",
+    "maturity": ["incubating", "graduated"],
+    "request": "form-email",
+    "url": "https://events.linuxfoundation.org/",
+    "requestUrl": "mailto:ProjectsAtKubeCon@linuxfoundation.org",
+    "detailsUrl": "/resources/services/outreach-events#kubecon--cloudnativecon-project-opportunities"
+  },
+  {
+    "id": "maintainer-session",
+    "name": "Maintainer track session",
+    "category": "events",
+    "description": "Maintainer session at KubeCon + CloudNativeCon.",
+    "maturity": ["incubating", "graduated"],
+    "request": "form-email",
+    "url": "https://events.linuxfoundation.org/",
+    "requestUrl": "mailto:ProjectsAtKubeCon@linuxfoundation.org",
+    "detailsUrl": "/resources/services/outreach-events#kubecon--cloudnativecon-project-opportunities"
+  },
+  {
+    "id": "event-pr",
+    "name": "Event PR support",
+    "category": "events",
+    "description": "PR support at KubeCon + CloudNativeCon. Also open to TAGs and SIGs.",
+    "maturity": ["incubating", "graduated"],
+    "request": "form-email",
+    "url": "https://events.linuxfoundation.org/",
+    "requestUrl": "mailto:ProjectsAtKubeCon@linuxfoundation.org",
+    "detailsUrl": "/resources/services/outreach-events#kubecon--cloudnativecon-project-opportunities"
+  },
+  {
+    "id": "cncf-booth",
+    "name": "CNCF booth at industry events",
+    "category": "events",
+    "description": "CNCF sponsors industry and Linux Foundation events, often with a booth that maintainers can join and use as a home base.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "form-email",
+    "url": "https://events.linuxfoundation.org/",
+    "requestUrl": "mailto:ProjectsAtKubeCon@linuxfoundation.org",
+    "detailsUrl": "/resources/services/outreach-events#event-management"
+  },
+  {
+    "id": "community-groups",
+    "name": "Community groups and Ambassadors",
+    "category": "events",
+    "description": "Connect with the worldwide network of Cloud Native Community Groups and CNCF Ambassadors to raise awareness of your project.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://community.cncf.io/",
+    "detailsUrl": "/resources/services/outreach-events#event-management"
+  },
+  {
+    "id": "travel-funding",
+    "name": "Travel funding",
+    "category": "events",
+    "description": "Travel funding for non-corporate-backed developers. See each event's scholarship page for eligibility.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "form-email",
+    "url": "https://events.linuxfoundation.org/",
+    "detailsUrl": "/resources/services/outreach-events#event-management"
+  },
+  {
+    "id": "intro-kubernetes",
+    "name": "Introduction to Kubernetes (edX)",
+    "category": "training",
+    "description": "Free introductory Kubernetes course.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://www.edx.org/course/introduction-to-kubernetes",
+    "detailsUrl": "/resources/services/cncf-support#certification-and-training-services"
+  },
+  {
+    "id": "kcna",
+    "name": "Kubernetes and Cloud Native Associate (KCNA)",
+    "category": "training",
+    "description": "Certification exam.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://www.cncf.io/certification/kcna/",
+    "detailsUrl": "/resources/services/cncf-support#certification-and-training-services"
+  },
+  {
+    "id": "cka",
+    "name": "Certified Kubernetes Administrator (CKA)",
+    "category": "training",
+    "description": "Certification exam.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://www.cncf.io/certification/cka/",
+    "detailsUrl": "/resources/services/cncf-support#certification-and-training-services"
+  },
+  {
+    "id": "ckad",
+    "name": "Certified Kubernetes Application Developer (CKAD)",
+    "category": "training",
+    "description": "Certification exam.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://www.cncf.io/certification/ckad/",
+    "detailsUrl": "/resources/services/cncf-support#certification-and-training-services"
+  },
+  {
+    "id": "prometheus-course",
+    "name": "Monitoring Systems and Services with Prometheus",
+    "category": "training",
+    "description": "Linux Foundation training course (LFS241).",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "none",
+    "url": "https://training.linuxfoundation.org/training/monitoring-systems-and-services-with-prometheus-lfs241/",
+    "detailsUrl": "/resources/services/cncf-support#certification-and-training-services"
+  },
+  {
+    "id": "course-development",
+    "name": "Project training course development",
+    "category": "training",
+    "description": "Work with the Linux Foundation training team to develop self-paced online courses for a project.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://www.cncf.io/certification/training/",
+    "detailsUrl": "/resources/services/cncf-support#certification-and-training-services"
+  }
+]
