@@ -109,6 +109,11 @@ const config = {
   tagline: 'Learn, connect, and contribute—the CNCF way',
   favicon: 'img/favicon.ico',
 
+  customFields: {
+    // Server-rendered snapshot time for date-driven pages such as /events/cfp.
+    buildTime: Date.now(),
+  },
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     // v4: true, // Improve compatibility with the upcoming Docusaurus v4

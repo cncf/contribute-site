@@ -1,0 +1,75 @@
+[
+  {
+    "id": "kubecon-europe-2027",
+    "name": "KubeCon + CloudNativeCon Europe 2027",
+    "shortName": "KubeCon Europe 2027",
+    "start": "2027-03-15",
+    "end": "2027-03-18",
+    "location": "Barcelona, Spain",
+    "timeZone": "Europe/Madrid",
+    "site": {
+      "label": "KubeCon + CloudNativeCon Europe",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/"
+    },
+    "registrationUrl": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/register/",
+    "deadlines": [
+      {
+        "label": "CFP",
+        "closes": "2026-10-11T23:59:00+02:00",
+        "linkText": "CFP details",
+        "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/program/cfp/"
+      },
+      {
+        "label": "Registration scholarship",
+        "closes": "2027-02-05T23:59:00+01:00",
+        "linkText": "Scholarships + travel funding",
+        "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/attend/scholarships-travel-funding/"
+      },
+      {
+        "label": "Travel funding",
+        "closes": "2027-01-18T23:59:00+01:00",
+        "linkText": "Scholarships + travel funding",
+        "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/attend/scholarships-travel-funding/"
+      }
+    ],
+    "keyDates": [
+      { "label": "CFP notifications", "date": "2026-12-07" },
+      { "label": "Schedule announcement", "date": "2026-12-09" },
+      {
+        "label": "Registration scholarship notifications",
+        "date": "2027-02-12"
+      },
+      { "label": "Travel funding notifications", "date": "2027-02-01" }
+    ]
+  },
+  {
+    "id": "maintainer-summit-europe-2027",
+    "name": "Maintainer Summit Europe 2027",
+    "article": "the",
+    "start": "2027-03-14",
+    "end": "2027-03-14",
+    "location": "Barcelona, Spain",
+    "venue": "Fira Gran Via",
+    "timeZone": "Europe/Madrid",
+    "colocatedWith": "kubecon-europe-2027",
+    "note": "Attendance is limited to eligible maintainers and project org members. You must also be registered for KubeCon + CloudNativeCon Europe 2027.",
+    "cfpEligibility": "TOC representatives, graduated project maintainers or org members, TAG leads, and incubating project maintainers can submit.",
+    "site": {
+      "label": "Maintainer Summit Europe",
+      "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/maintainer-summit/"
+    },
+    "registrationUrl": "https://register.linuxfoundation.org/kccnc-eu-maintainer-summit-2027",
+    "deadlines": [
+      {
+        "label": "CFP",
+        "closes": "2026-12-01T23:59:00+01:00",
+        "linkText": "Submit to speak",
+        "url": "https://sessionize.com/maintainer-summit-eu-2027/"
+      }
+    ],
+    "keyDates": [
+      { "label": "CFP notifications", "date": "2027-01-05" },
+      { "label": "Schedule announcement", "date": "2027-01-06" }
+    ]
+  }
+]
