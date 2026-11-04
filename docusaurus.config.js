@@ -182,6 +182,42 @@ const config = {
           },
           routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: './sidebars.js',
+          sidebarItemsGenerator: ({
+            defaultSidebarItemsGenerator,
+            ...args
+          }) => {
+            const items = defaultSidebarItemsGenerator(args);
+            if (args.item.dirName !== 'resources') {
+              return items;
+            }
+
+            const projectServicesIndex = items.findIndex(
+              (item) =>
+                item.type === 'category' && item.label === 'Project Services',
+            );
+            const supportIndex = items.findIndex(
+              (item) => item.type === 'category' && item.label === 'Support',
+            );
+            if (
+              projectServicesIndex === -1 ||
+              supportIndex === -1 ||
+              supportIndex <= projectServicesIndex
+            ) {
+              throw new Error(
+                'The Resources sidebar must include Project Services before Support.',
+              );
+            }
+
+            return [
+              ...items.slice(0, supportIndex),
+              {
+                type: 'html',
+                value:
+                  '<a class="menu__link" href="https://gitjobs.dev/" target="_blank" rel="noopener noreferrer">Job Board</a>',
+              },
+              ...items.slice(supportIndex),
+            ];
+          },
           exclude: ['**/README.md'], // Exclude README.md files from being rendered as docs
         },
         blog: {
