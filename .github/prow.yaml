@@ -1,0 +1,138 @@
+# prow-github-actions configuration for cncf/contribute-site.
+# Reference: https://github.com/cncf/prow-github-actions/blob/main/docs/configuration.md
+#
+# The repository's existing labels are listed under `labels.labels` so `/label <name>`
+# and `/remove-label <name>` work; label-sync keeps their color and description in step.
+# No kind/*, priority/* or needs-* families are introduced. The built-in labels
+# (lgtm, approved, do-not-merge/hold, help wanted, good first issue, ok-to-test)
+# are created by the label-sync job.
+
+labels:
+  labels:
+    - name: bug
+      color: d73a4a
+      description: Something isn't working
+    - name: documentation
+      color: 0075ca
+      description: Improvements or additions to documentation
+    - name: duplicate
+      color: cfd3d7
+      description: This issue or pull request already exists
+    - name: enhancement
+      color: a2eeef
+      description: New feature or request
+    - name: invalid
+      color: e4e669
+      description: This doesn't seem right
+    - name: question
+      color: d876e3
+      description: Further information is requested
+    - name: wontfix
+      color: ffffff
+      description: This will not be worked on
+    - name: mvp
+      color: aaaaaa
+    - name: Blog
+      color: a28ef1
+      description: Issues dealing with contributor blog submissions.
+    - name: epic
+      color: 3E4B9E
+      description: Large body of work spanning multiple issues
+    - name: feature
+      color: 0E8A16
+      description: A distinct piece of functionality
+    - name: task
+      color: 1D76DB
+      description: A specific task to be completed
+    - name: content
+      color: FEF2C0
+      description: Content creation or editing
+    - name: contributors
+      color: C2E0C6
+      description: Related to contributors section
+    - name: maintainers
+      color: BFDADC
+      description: Related to maintainers section
+    - name: events
+      color: F9D0C4
+      description: Related to events section
+    - name: projects
+      color: D4C5F9
+      description: Related to projects section
+    - name: community
+      color: C5DEF5
+      description: Related to community section
+    - name: resources
+      color: FEF2C0
+      description: Related to resources section
+    - name: high-priority
+      color: D93F0B
+      description: High priority issue
+    - name: medium-priority
+      color: FBCA04
+      description: Medium priority issue
+    - name: low-priority
+      color: 0E8A16
+      description: Low priority issue
+    - name: broken-link
+      color: D73A4A
+      description: Contains broken or missing links
+    - name: security
+      color: EE0701
+      description: Security related
+    - name: sustainability
+      color: 0E8A16
+      description: Related to maintainer sustainability and burnout
+    - name: ux
+      color: D4C5F9
+      description: User experience improvements
+    - name: navigation
+      color: '5319E7'
+      description: Site navigation improvements
+    - name: maintenance
+      color: EDEDED
+      description: Maintenance and upkeep tasks
+    - name: localization
+      color: f766dc
+      description: Localizing site content
+    - name: design/style
+      color: c5def5
+      description: Front-end site design / styling
+    - name: CI/infra
+      color: '696969'
+      description: CI & infrastructure
+    - name: techdocs-upstream
+      color: 6f58a9
+    - name: fixed-link
+      color: 2ea44f
+      description: Automated broken link fix from link fixer workflow
+    - name: agentic-workflows
+      color: ededed
+
+  do-not-merge:
+    - name: hold
+      color: e11d21
+      description:
+        Indicates that a PR should not merge because someone has issued a /hold
+        command.
+    - name: work-in-progress
+      color: e11d21
+      description:
+        Indicates that a PR should not merge because it is a work in progress.
+
+tide:
+  labels: [lgtm, approved]
+  missing_labels: [do-not-merge/*, needs-rebase, hold]
+  merge_method: squash
+  merge_on_events: true
+
+hold:
+  label: do-not-merge/hold
+
+blunderbuss:
+  request_count: 2
+  ignore_drafts: true
+  ignore_authors: ['dependabot[bot]']
+
+lgtm:
+  bind_to_commit: true
