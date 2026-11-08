@@ -151,7 +151,7 @@ Feature availability depends on your project's onboarding and your role.
 [Projects that have moved their meetings to PCC](./2026-03-19-cloud-native-project-monthly-march-2026.md#pcc-adoption-gathers-momentum-streamline-your-projects-meetings)
 schedule meetings without opening Service Desk tickets.
 
-[new instructional video](https://www.youtube.com/watch?v=KOSRy4c4Yv8) covers
+A [new instructional video](https://www.youtube.com/watch?v=KOSRy4c4Yv8) covers
 linking PCC meetings to your project's YouTube channel for automatic uploads.
 
 ### LFX MCP Server
