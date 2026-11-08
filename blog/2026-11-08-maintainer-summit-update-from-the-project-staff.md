@@ -128,6 +128,32 @@ It supports `OWNERS` files with
 blunderbuss, built-in and custom slash commands, label management, and issue and
 PR lifecycle management.
 
+### LFX Insights
+
+[LFX Insights](https://insights.linuxfoundation.org/) added Health Score v2 and
+a **Healthiest** sorting option for project lists and collections. Active
+contributor badges now use the same rolling 365-day window as the dashboards.
+
+LFX is also working toward broader project data coverage and validation, along
+with Insights API access and future MCP and CLI integrations. The API is in
+closed alpha; wider access and delivery dates have not been confirmed.
+
+### LFX Self Serve
+
+[LFX Self Serve](https://app.lfx.dev/) added mobile ballots, participation
+progress, and vote-close summaries to project voting. Committee administrators
+can now edit committee details and open public committee profiles directly.
+
+Feature availability depends on your project's onboarding and your role.
+
+### LFX Project Control Center meetings
+
+[Projects that have moved their meetings to PCC](./2026-03-19-cloud-native-project-monthly-march-2026.md#pcc-adoption-gathers-momentum-streamline-your-projects-meetings)
+schedule meetings without opening Service Desk tickets.
+
+[new instructional video](https://www.youtube.com/watch?v=KOSRy4c4Yv8) covers
+linking PCC meetings to your project's YouTube channel for automatic uploads.
+
 ### LFX MCP Server
 
 The
@@ -137,14 +163,6 @@ Self Serve using your own LFID and existing permissions.
 
 Request access on the
 [lfx-mcp repo](https://github.com/linuxfoundation/lfx-mcp).
-
-### LFX Project Control Center meetings
-
-[Projects that have moved their meetings to PCC](./2026-03-19-cloud-native-project-monthly-march-2026.md#pcc-adoption-gathers-momentum-streamline-your-projects-meetings)
-schedule meetings without opening Service Desk tickets.
-
-[new instructional video](https://www.youtube.com/watch?v=KOSRy4c4Yv8) covers
-linking PCC meetings to your project's YouTube channel for automatic uploads.
 
 ### Agent-friendly docs and TechDocs support
 
@@ -162,7 +180,7 @@ the fourth Wednesday of each month, or ask in `#techdocs` on CNCF Slack.
 ### Open Community Groups
 
 [Cloud Native Community Groups have migrated from Bevy to Open Community Groups](./2026-05-29-cloud-native-project-monthly-may-2026.md#cloud-native-community-groups-migration),
-an open source platform with a built-in Call for Speakers workflow. 
+an open source platform with a built-in Call for Speakers workflow.
 
 You can
 [contribute to the platform](https://github.com/cncf/open-community-groups).
@@ -173,7 +191,7 @@ In October the CVE Program
 [added Akrites SIRT as a CVE Numbering Authority (CNA)](https://www.cve.org/Media/News/item/news/2026/10/27/Akrites-Added-as-CNA).
 
 Its scope covers projects directly attached to the Linux Foundation or any of
-its sub-foundations (including the CNCF), unless the project has a Supplier CNA of its own. 
+its sub-foundations (including the CNCF), unless the project has a Supplier CNA of its own.
 
 We have seen multiple projects having an issue getting CVE numbers so we will be rolling out a new ticket type in Service Desk where projects can request them.
 
@@ -208,7 +226,6 @@ Yes, another reminder 🙂. Please make sure to take the
 [maintainer survey](https://maintainers-survey.cncf.io)! This is your chance to
 tell us how we're doing, gauge your understanding of the benefits of hosting a
 project at the CNCF, and influence our priorities in 2027.
-
 
 See you at Maintainer Summit and have a great rest of your KubeCon +
 CloudNativeCon North America!
