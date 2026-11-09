@@ -22,3 +22,22 @@ Source for the project services catalog on
 links to `url`, or to `detailsUrl` when `url` is absent.
 
 To add a service, add an entry to the JSON file and run `npm run build`.
+
+## pavilion-kiosks.json
+
+Source for the KubeCon Project Pavilion kiosk map on
+[`/events/project-pavilion-map`](../../docs/events/project-pavilion-map.md),
+rendered by `src/components/PavilionMap`. Floor-plan positions are in
+`src/components/PavilionMap/layout.mjs`.
+
+- `event`: the event name, IANA `timeZone`, the kiosk directory link, the Google
+  Sheet ID behind the directory, and the showcase `days` (`id`, `weekday`,
+  `date`, `label`, and `open`/`close` as 24-hour `HH:MM` local times).
+- `rows`: a raw snapshot of the directory sheet (`project`, `schedule`,
+  `kiosk`), copied verbatim so the snapshot and the live sheet use one parser.
+- `syncedAt`: when the snapshot was taken.
+
+Refresh the snapshot with `npm run sync:pavilion`. The script warns about rows
+it can't parse and about kiosks booked by two projects at once. In the browser,
+the map also loads the live sheet and falls back to this snapshot if that fails.
+For a new event, update `event` and run the sync.

@@ -1,0 +1,315 @@
+/* Colours follow the official Project Pavilion map: navy kiosks, a magenta
+   frame, and peach lounge and stage areas. */
+.root {
+  --pm-frame: #d42c8f;
+  --pm-floor: #ffffff;
+  --pm-navy: #2b2a6b;
+  --pm-navy-text: #ffffff;
+  --pm-peach: #fccdb0;
+  --pm-peach-text: #2b2a6b;
+  --pm-between: #e4e3f1;
+  --pm-between-text: #2b2a6b;
+  --pm-idle: #f2f2f5;
+  --pm-idle-text: #6b6b80;
+  --pm-highlight: #ffd400;
+  --pm-number: #2b2a6b;
+}
+
+[data-theme='dark'] .root {
+  --pm-floor: #1c1b2e;
+  --pm-navy: #4a48b0;
+  --pm-peach: #6b4a38;
+  --pm-peach-text: #ffe4d4;
+  --pm-between: #2e2d4a;
+  --pm-between-text: #d6d5f0;
+  --pm-idle: #242436;
+  --pm-idle-text: #9a9ab0;
+  --pm-number: #d6d5f0;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Map, scaled to fit. The plan is laid out at a fixed width; the sizer takes
+   its scaled size so the page flows around it. On narrow screens the scale
+   stops at a readable minimum and the map scrolls sideways in its own box. */
+.fitWrap {
+  overflow-x: auto;
+}
+
+.sizer {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.frame {
+  padding: 14px;
+  border-radius: 8px;
+  background: var(--pm-frame);
+  transform-origin: top left;
+}
+
+.floor {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 22px 10px;
+  padding: 16px;
+  background: var(--pm-floor);
+}
+
+.stand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pair {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  width: 100%;
+}
+
+.kiosk {
+  display: flex;
+  flex-direction: column;
+  min-height: 64px;
+  padding: 3px 4px;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  font-size: 12.5px;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.side {
+  font-weight: var(--ifm-font-weight-bold);
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.project {
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.nextTime {
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.staffed,
+.conflict {
+  background: var(--pm-navy);
+  color: var(--pm-navy-text);
+}
+
+.conflict {
+  border-color: var(--ifm-color-danger);
+}
+
+.between {
+  background: var(--pm-between);
+  color: var(--pm-between-text);
+}
+
+.between .project {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.idle {
+  background: var(--pm-idle);
+  color: var(--pm-idle-text);
+}
+
+.highlighted {
+  border-color: var(--pm-highlight);
+  box-shadow: 0 0 0 3px var(--pm-highlight);
+}
+
+.number {
+  margin-top: 2px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--pm-number);
+}
+
+.landmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.staff {
+  align-self: center;
+  min-height: 64px;
+  background: var(--pm-navy);
+  color: var(--pm-navy-text);
+}
+
+.space,
+.stage {
+  background: var(--pm-peach);
+  color: var(--pm-peach-text);
+}
+
+.stage span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.05em;
+}
+
+.tablesNote {
+  margin: 8px 0 0;
+  font-size: 12px;
+  font-weight: var(--ifm-font-weight-bold);
+  color: #ffffff;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+/* Controls, under the map. */
+.controls {
+  padding-top: 0.6rem;
+}
+
+.controlRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+
+.days {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.dayButton,
+.nowButton {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.dayButton[aria-pressed='true'],
+.nowButton[aria-pressed='true'] {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+}
+
+.nowButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.slider {
+  flex: 1 1 10rem;
+  min-width: 8rem;
+  accent-color: var(--ifm-color-primary);
+}
+
+.timeValue {
+  min-width: 5.25rem;
+  font-weight: var(--ifm-font-weight-bold);
+  font-variant-numeric: tabular-nums;
+}
+
+.finder {
+  position: relative;
+  flex: 0 1 14rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+}
+
+/* Search results open upward over the map so the layout doesn't move. */
+.finderResults {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.4rem);
+  z-index: 10;
+  width: min(34rem, 90vw);
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--ifm-global-shadow-md);
+  font-size: 0.85rem;
+}
+
+.finderResults p,
+.finderResults ul {
+  margin: 0;
+}
+
+.finderResults ul {
+  padding-left: 1rem;
+}
+
+.onNow {
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-success-darkest);
+}
+
+[data-theme='dark'] .onNow {
+  color: var(--ifm-color-success-lightest);
+}
+
+.linkButton {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ifm-link-color);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.source {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Server-rendered fallback for visitors without JavaScript. */
+.table {
+  display: table;
+  width: 100%;
+}
+
+.table caption {
+  margin-bottom: 0.5rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  text-align: left;
+}
