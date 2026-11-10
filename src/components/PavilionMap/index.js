@@ -744,6 +744,43 @@ export default function PavilionMap({ day: dayProp, time: timeProp }) {
   const controlsRef = useRef(null);
   const fit = useFitScale(hydrated, wrapRef, planRef, controlsRef);
 
+  // When a search finds a kiosk that's scrolled out of the map's frame (on
+  // phones the map scrolls sideways), scroll the map to centre it. With
+  // several matches, the first in stand order is used.
+  const found = useMemo(
+    () =>
+      Array.from(highlight).sort(
+        (a, b) => parseInt(a, 10) - parseInt(b, 10) || a.localeCompare(b),
+      )[0] ?? null,
+    [highlight],
+  );
+  // Where a smooth scroll that's still running will end, so a search typed
+  // quickly is checked against that position, not one mid-scroll.
+  const scrollTarget = useRef(null);
+  useEffect(() => {
+    const wrap = wrapRef.current;
+    if (!found || !wrap || wrap.scrollWidth <= wrap.clientWidth) return;
+    const kiosk = wrap.querySelector(`[aria-label^="Kiosk ${found}:"]`);
+    if (!kiosk) return;
+    const view = wrap.getBoundingClientRect();
+    const box = kiosk.getBoundingClientRect();
+    const pending =
+      scrollTarget.current && Date.now() < scrollTarget.current.until
+        ? scrollTarget.current.left
+        : wrap.scrollLeft;
+    // The kiosk's position in the map's scrollable content.
+    const left = box.left - view.left + wrap.scrollLeft;
+    if (left >= pending && left + box.width <= pending + view.width) return;
+    const target = Math.round(
+      Math.min(
+        Math.max(left - (view.width - box.width) / 2, 0),
+        wrap.scrollWidth - wrap.clientWidth,
+      ),
+    );
+    scrollTarget.current = { left: target, until: Date.now() + 1000 };
+    wrap.scrollTo({ left: target, behavior: 'smooth' });
+  }, [found, fit.scale]);
+
   const staffed = Object.values(occupancy)
     .filter((s) => s.projects.length > 0)
     .sort((a, b) => a.stand - b.stand || a.side.localeCompare(b.side));
