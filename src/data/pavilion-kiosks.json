@@ -32,7 +32,23 @@
       }
     ]
   },
-  "syncedAt": "2026-11-09T22:20:45.268Z",
+  "repoLookup": {
+    "aliases": {
+      "Cadence": "Cadence Workflow",
+      "Cloud Native Buildpacks": "Buildpacks",
+      "Envoyproxy": "Envoy",
+      "Kueue / Workload Aware Scheduling (SIG Subproject)": "Kueue",
+      "LitmusChaos": "Litmus",
+      "Project Capsule": "Capsule",
+      "SIG-etcd": "etcd",
+      "Tekton Pipelines": "Tekton"
+    },
+    "repos": {
+      "Fluent Bit": "https://github.com/fluent/fluent-bit",
+      "Gateway API (SIG Subproject)": "https://github.com/kubernetes-sigs/gateway-api"
+    }
+  },
+  "syncedAt": "2026-11-10T05:41:19.234Z",
   "rows": [
     {
       "project": "Argo",
@@ -464,5 +480,404 @@
       "schedule": "Tuesday 3:00 PM – 7:30 PM, Wednesday 1:55 PM – 5:00 PM, Thursday 12:25 PM – 2:00 PM",
       "kiosk": "P-1A"
     }
-  ]
+  ],
+  "projects": {
+    "Argo": {
+      "repo": "https://github.com/argoproj/argo-cd",
+      "maturity": "graduated",
+      "description": "Kubernetes-native tools to run workflows, manage clusters, and do GitOps right."
+    },
+    "Armada": {
+      "repo": "https://github.com/armadaproject/armada",
+      "maturity": "sandbox",
+      "description": "Armada is a multi-Kubernetes cluster batch job scheduler"
+    },
+    "Backstage": {
+      "repo": "https://github.com/backstage/backstage",
+      "maturity": "incubating",
+      "description": "Backstage is an open platform for building developer portals"
+    },
+    "Cadence": {
+      "repo": "https://github.com/cadence-workflow/cadence",
+      "maturity": "sandbox",
+      "description": "Cadence is a distributed, scalable, durable, and highly available fault-oblivious stateful code platform."
+    },
+    "Cartography": {
+      "repo": "https://github.com/cartography-cncf/cartography",
+      "maturity": "sandbox",
+      "description": "Cartography is a Python tool that consolidates infrastructure assets and the relationships between them in an intuitive graph view."
+    },
+    "Cedar": {
+      "repo": "https://github.com/cedar-policy/cedar",
+      "maturity": "sandbox",
+      "description": "Cedar is an open source authorization policy language that enables developers to express fine-grained permissions as easy-to-understand policies enforced in their applications, and decouple access control from application logic. Cedar is designed to be ergonomic, fast, safe, and analyzable using automated reasoning. Cedar's simple and intuitive syntax supports common authorization use-cases with readable policies, naturally expressing concepts from role-based, attribute-based, and relation-based access control models. Cedar's policy structure enables authorization requests to be decided quickly. Its policy validator uses optional typing to help policy writers avoid mistakes, but not get in their way. Cedar's design has been finely balanced to allow for a sound, complete, and decidable logical encoding, which enables precise automated analysis of Cedar policies, e.g., to ensure that policy refactoring preserves existing permissions. Cedar's language specification has been formally verified using a theorem prover to satisfy key security properties like `deny trumps allow,` and its implementation in Rust undergoes rigorous differential random testing against its formal specification. By combining mathematical rigor with developer-friendly design, Cedar offers a practical approach to secure, maintainable authorization for modern applications."
+    },
+    "Cilium": {
+      "repo": "https://github.com/cilium/cilium",
+      "maturity": "graduated",
+      "description": "eBPF-based Networking, Observability, and Security"
+    },
+    "Cloud Native Buildpacks": {
+      "repo": "https://github.com/buildpacks/pack",
+      "maturity": "graduated",
+      "description": "Cloud Native Buildpacks transform your application source code into images that can run on any cloud"
+    },
+    "Confidential Containers": {
+      "repo": "https://github.com/confidential-containers/confidential-containers",
+      "maturity": "incubating",
+      "description": "Confidential Containers is an open source community working to enable cloud native confidential computing by leveraging Trusted Execution Environments to protect containers and data."
+    },
+    "Crossplane": {
+      "repo": "https://github.com/crossplane/crossplane",
+      "maturity": "graduated",
+      "description": "Crossplane is the cloud native control plane framework that allows you to build control planes without needing to write code. Crossplane has a highly extensible backend that enables you to orchestrate applications and infrastructure no matter where they run and a highly configurable frontend that lets you define the declarative API it offers."
+    },
+    "Dapr": {
+      "repo": "https://github.com/dapr/dapr",
+      "maturity": "graduated",
+      "description": "Dapr is a portable runtime for building distributed applications across cloud and edge, combining event-driven architecture with workflow orchestration."
+    },
+    "Drasi": {
+      "repo": "https://github.com/drasi-project/drasi-platform",
+      "maturity": "sandbox",
+      "description": "A data change processing platform to simplify change-driven systems that need to detect, evaluate, and react to data changes quickly and efficiently at scale."
+    },
+    "Envoyproxy": {
+      "repo": "https://github.com/envoyproxy/envoy",
+      "maturity": "graduated",
+      "description": "Envoy is an open source edge and service proxy, designed for cloud-native applications"
+    },
+    "Falco": {
+      "repo": "https://github.com/falcosecurity/falco",
+      "maturity": "graduated",
+      "description": "Falco, the cloud-native runtime security project, is the de facto Kubernetes threat detection engine"
+    },
+    "Flatcar Container Linux": {
+      "repo": "https://github.com/flatcar/Flatcar",
+      "maturity": "incubating",
+      "description": "A community Linux distribution designed for container workloads, with high security and low maintenance"
+    },
+    "Fluent Bit": {
+      "repo": "https://github.com/fluent/fluent-bit",
+      "description": "Fast and Lightweight Logs, Metrics and Traces processor for Linux, BSD, OSX and Windows"
+    },
+    "Flux": {
+      "repo": "https://github.com/fluxcd/flux2",
+      "maturity": "graduated",
+      "description": "Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit"
+    },
+    "Gateway API (SIG Subproject)": {
+      "repo": "https://github.com/kubernetes-sigs/gateway-api",
+      "description": "Repository for the next iteration of composite service (e.g. Ingress) and load balancing APIs."
+    },
+    "HAMi": {
+      "repo": "https://github.com/Project-HAMi/HAMi",
+      "maturity": "incubating",
+      "description": "Heterogeneous AI Computing Virtualization Middleware"
+    },
+    "Harbor": {
+      "repo": "https://github.com/goharbor/harbor",
+      "maturity": "graduated",
+      "description": "An open source trusted cloud native registry project that stores, signs, and scans content"
+    },
+    "Headlamp (SIG)": {
+      "repo": "https://github.com/kubernetes-sigs/headlamp",
+      "maturity": "sandbox",
+      "description": "Extensible open source multi-cluster Kubernetes user interface"
+    },
+    "Helm": {
+      "repo": "https://github.com/helm/helm",
+      "maturity": "graduated",
+      "description": "The Kubernetes Package Manager"
+    },
+    "Hive Commons": {
+      "repo": "https://github.com/hivecommons/hive",
+      "maturity": "sandbox",
+      "description": "Kubernetes-native orchestration for fleets of AI coding agents that autonomously maintain software repositories."
+    },
+    "Hyperlight": {
+      "repo": "https://github.com/hyperlight-dev/hyperlight",
+      "maturity": "sandbox",
+      "description": "A lightweight, secure container runtime solution designed for modern cloud-native workloads"
+    },
+    "Inspektor Gadget": {
+      "repo": "https://github.com/inspektor-gadget/inspektor-gadget",
+      "maturity": "sandbox",
+      "description": "Open source eBPF debugging and data collection tool for Kubernetes and Linux"
+    },
+    "Istio": {
+      "repo": "https://github.com/istio/istio",
+      "maturity": "graduated",
+      "description": "Simplify observability, traffic management, security, and policy with the Istio service mesh."
+    },
+    "Jaeger": {
+      "repo": "https://github.com/jaegertracing/jaeger",
+      "maturity": "graduated",
+      "description": "Jaeger: open source, end-to-end distributed tracing. Monitor and troubleshoot transactions in complex distributed systems"
+    },
+    "K3s": {
+      "repo": "https://github.com/k3s-io/k3s",
+      "maturity": "sandbox",
+      "description": "Lightweight Kubernetes"
+    },
+    "KAI Scheduler": {
+      "repo": "https://github.com/kai-scheduler/KAI-Scheduler",
+      "maturity": "sandbox",
+      "description": "KAI Scheduler is a robust, efficient, and scalable Kubernetes scheduler that optimizes GPU resource allocation for AI workloads in large-scale clusters."
+    },
+    "KEDA": {
+      "repo": "https://github.com/kedacore/keda",
+      "maturity": "graduated",
+      "description": "KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes"
+    },
+    "KServe": {
+      "repo": "https://github.com/kserve/kserve",
+      "maturity": "incubating",
+      "description": "Standardized Distributed Generative and Predictive AI Inference Platform for Scalable, Multi-Framework Deployment on Kubernetes"
+    },
+    "Kairos": {
+      "repo": "https://github.com/kairos-io/kairos",
+      "maturity": "sandbox",
+      "description": "The immutable Linux meta-distribution for edge Kubernetes"
+    },
+    "Karmada": {
+      "repo": "https://github.com/karmada-io/karmada",
+      "maturity": "graduated",
+      "description": "Open, Multi-Cloud, Multi-Cluster Kubernetes Orchestration"
+    },
+    "KitOps": {
+      "repo": "https://github.com/kitops-ml/kitops",
+      "maturity": "sandbox",
+      "description": "An open standard for packaging, managing, and deploying ML models and artifacts across different systems"
+    },
+    "Krkn": {
+      "repo": "https://github.com/krkn-chaos/krkn",
+      "maturity": "sandbox",
+      "description": "Chaos testing tool for Kubernetes to identify bottlenecks and improve resilience and performance under failure conditions."
+    },
+    "KubeVirt": {
+      "repo": "https://github.com/kubevirt/kubevirt",
+      "maturity": "graduated",
+      "description": "Kubernetes Virtualization API and runtime in order to define and manage virtual machines"
+    },
+    "Kubescape": {
+      "repo": "https://github.com/kubescape/kubescape",
+      "maturity": "incubating",
+      "description": "Kubescape is an open source security and compliance platform that scans clusters, Kubernetes manifest files (YAML files, and Helm charts), code repositories, container registries and images. It detects misconfigurations according to frameworks such as the NSA-CISA, MITRE ATT&CK® and CIS, as well as software vulnerabilities, and calculates risk scores."
+    },
+    "Kubevela": {
+      "repo": "https://github.com/kubevela/kubevela",
+      "maturity": "incubating",
+      "description": "Make shipping applications more enjoyable"
+    },
+    "Kueue / Workload Aware Scheduling (SIG Subproject)": {
+      "repo": "https://github.com/kubernetes-sigs/kueue",
+      "description": "Cloud-native job queueing system for batch, HPC, AI/ML, and similar applications in a Kubernetes cluster."
+    },
+    "Kyverno": {
+      "repo": "https://github.com/kyverno/kyverno",
+      "maturity": "graduated",
+      "description": "Unified Policy as Code"
+    },
+    "Lima": {
+      "repo": "https://github.com/lima-vm/lima",
+      "maturity": "incubating",
+      "description": "Linux virtual machines, typically on macOS, for running containerd"
+    },
+    "Linkerd": {
+      "repo": "https://github.com/linkerd/linkerd2",
+      "maturity": "graduated",
+      "description": "Ultra light, ultra simple, ultra powerful. Linkerd adds security, observability, and reliability to Kubernetes, without the complexity."
+    },
+    "LitmusChaos": {
+      "repo": "https://github.com/litmuschaos/litmus",
+      "maturity": "incubating",
+      "description": "Litmus is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way"
+    },
+    "Longhorn": {
+      "repo": "https://github.com/longhorn/longhorn",
+      "maturity": "incubating",
+      "description": "Cloud-native distributed storage for Kubernetes"
+    },
+    "Meshery": {
+      "repo": "https://github.com/meshery/meshery",
+      "maturity": "incubating",
+      "description": "Meshery, the cloud native manager"
+    },
+    "Metal3.io": {
+      "repo": "https://github.com/metal3-io/baremetal-operator",
+      "maturity": "incubating",
+      "description": "Bare metal host provisioning integration for Kubernetes"
+    },
+    "Microcks": {
+      "repo": "https://github.com/microcks/microcks",
+      "maturity": "incubating",
+      "description": "The open source, cloud native tool for API Mocking and Testing"
+    },
+    "ORAS": {
+      "repo": "https://github.com/oras-project/oras",
+      "maturity": "sandbox",
+      "description": "ORAS is the tool for working with OCI Artifacts"
+    },
+    "OSCAL Compass": {
+      "repo": "https://github.com/oscal-compass/compliance-trestle",
+      "maturity": "sandbox",
+      "description": "The OSCAL COMPASS project is set of tools that enable the creation, validation, and governance of documentation artifacts for compliance needs. It leverages NIST's OSCAL (Open Security Controls Assessment Language) as a standard data format for interchange between tools and people, and provides an opinionated approach to OSCAL SDK and adoption by policy engines."
+    },
+    "OVN-Kubernetes": {
+      "repo": "https://github.com/ovn-kubernetes/ovn-kubernetes",
+      "maturity": "sandbox",
+      "description": "A robust Kubernetes networking platform"
+    },
+    "Open Cluster Management": {
+      "repo": "https://github.com/open-cluster-management-io/ocm",
+      "maturity": "incubating",
+      "description": "A lightweight, open standard for multi-cluster Kubernetes management built on a hub-spoke architecture."
+    },
+    "Open Policy Agent": {
+      "repo": "https://github.com/open-policy-agent/opa",
+      "maturity": "graduated",
+      "description": "An open source, general-purpose policy engine"
+    },
+    "OpenChoreo": {
+      "repo": "https://github.com/openchoreo/openchoreo",
+      "maturity": "sandbox",
+      "description": "A developer platform for Kubernetes that delivers higher-level abstractions with a Backstage-powered portal, CI/CD, GitOps, and built-in observability."
+    },
+    "OpenCost": {
+      "repo": "https://github.com/opencost/opencost",
+      "maturity": "incubating",
+      "description": "OpenCost provides visibility into current and historical Kubernetes spend and resource allocation."
+    },
+    "OpenEverest": {
+      "repo": "https://github.com/openeverest/openeverest",
+      "maturity": "sandbox",
+      "description": "The open-source platform for automated database provisioning and management. It supports multiple database technologies and can be hosted on any Kubernetes infrastructure, in the cloud or on-premises."
+    },
+    "OpenFeature": {
+      "repo": "https://github.com/open-feature/spec",
+      "maturity": "incubating",
+      "description": "Standardizing Feature Flagging for Everyone"
+    },
+    "OpenTelemetry": {
+      "repo": "https://github.com/open-telemetry/community",
+      "maturity": "graduated",
+      "description": "High-quality, ubiquitous, and portable telemetry to enable effective observability"
+    },
+    "OpenTofu": {
+      "repo": "https://github.com/opentofu/opentofu",
+      "maturity": "sandbox",
+      "description": "OpenTofu is an open source infrastructure as code tool that enables users to safely and predictably provision and manage cloud and on-prem infrastructure. It's a community-driven fork of Terraform that maintains backward compatibility while offering enhanced features, stability."
+    },
+    "Perses": {
+      "repo": "https://github.com/perses/perses",
+      "maturity": "sandbox",
+      "description": "Perses is a dashboard tool to visualize observability data from Prometheus/Thanos/Jaeger."
+    },
+    "Podman Container Tools": {
+      "repo": "https://github.com/podman-container-tools/podman",
+      "maturity": "sandbox",
+      "description": "A set of tools providing full management of container lifecycle, including Podman, Buildah, and Skopeo, which manage containers and images without requiring a daemon or root privileges."
+    },
+    "Project Capsule": {
+      "repo": "https://github.com/projectcapsule/capsule",
+      "maturity": "sandbox",
+      "description": "Capsule implements a multi-tenant and policy-based environment in your Kubernetes cluster. It is designed as a micro-services-based ecosystem with the minimalist approach, leveraging only on upstream Kubernetes."
+    },
+    "Radius": {
+      "repo": "https://github.com/radius-project/radius",
+      "maturity": "sandbox",
+      "description": "Radius is a cloud-native application platform that enables developers and the platform engineers that support them to collaborate on delivering and managing cloud-native applications that follow organizational best practices for cost, operations and security, by default."
+    },
+    "Rook": {
+      "repo": "https://github.com/rook/rook",
+      "maturity": "graduated",
+      "description": "Storage Orchestration for Kubernetes"
+    },
+    "SIG-etcd": {
+      "repo": "https://github.com/etcd-io/etcd",
+      "maturity": "graduated",
+      "description": "Distributed reliable key-value store for the most critical data of a distributed system"
+    },
+    "SPIFFE": {
+      "repo": "https://github.com/spiffe/spiffe",
+      "maturity": "graduated",
+      "description": "A universal identity control plane for distributed systems"
+    },
+    "Score": {
+      "repo": "https://github.com/score-spec/spec",
+      "maturity": "sandbox",
+      "description": "Score is an open-source workload specification designed to simplify development for cloud-native developers."
+    },
+    "Spin": {
+      "repo": "https://github.com/spinframework/spin",
+      "maturity": "sandbox",
+      "description": "Spin is a framework for building serverless applications in WebAssembly."
+    },
+    "Tekton Pipelines": {
+      "repo": "https://github.com/tektoncd/pipeline",
+      "maturity": "incubating",
+      "description": "A powerful and flexible open source framework for creating continuous integration and delivery (CI/CD) systems that allow developers to build, test, and deploy across multiple cloud providers and on-premises systems by abstracting away the underlying implementation details."
+    },
+    "Velero": {
+      "repo": "https://github.com/velero-io/velero",
+      "maturity": "sandbox",
+      "description": "Backup and migrate Kubernetes applications and their persistent volumes"
+    },
+    "Vitess": {
+      "repo": "https://github.com/vitessio/vitess",
+      "maturity": "graduated",
+      "description": "MySQL-compatible, horizontally scalable, cloud-native database solution."
+    },
+    "bootc": {
+      "repo": "https://github.com/bootc-dev/bootc",
+      "maturity": "sandbox",
+      "description": "The bootc project provides transactional, in-place operating system images and updates using OCI/Docker container images. This project applies the Docker container layering model to bootable host systems, using standard OCI/Docker containers as a transport and delivery format for base operating system updates."
+    },
+    "containerd": {
+      "repo": "https://github.com/containerd/containerd",
+      "maturity": "graduated",
+      "description": "An open and reliable container runtime"
+    },
+    "external-secrets": {
+      "repo": "https://github.com/external-secrets/external-secrets",
+      "maturity": "sandbox",
+      "description": "External Secrets Operator reads information from a third-party service like AWS Secrets Manager and automatically injects the values as Kubernetes Secrets."
+    },
+    "k0s": {
+      "repo": "https://github.com/k0sproject/k0s",
+      "maturity": "sandbox",
+      "description": "k0s is a CNCF-certified lightweight, Kubernetes distribution with zero dependencies and zero opinion."
+    },
+    "k8gb": {
+      "repo": "https://github.com/k8gb-io/k8gb",
+      "maturity": "incubating",
+      "description": "A cloud native Kubernetes Global Balancer"
+    },
+    "kagent": {
+      "repo": "https://github.com/kagent-dev/kagent",
+      "maturity": "sandbox",
+      "description": "Kagent is an open source programming framework designed for DevOps and platform engineers to run AI agents in Kubernetes"
+    },
+    "kgateway": {
+      "repo": "https://github.com/kgateway-dev/kgateway",
+      "maturity": "sandbox",
+      "description": "An Envoy-powered, Kubernetes-native API Gateway that integrates Kubernetes Gateway API with a control plane for API connectivity in any cloud environment."
+    },
+    "kpt": {
+      "repo": "https://github.com/kptdev/kpt",
+      "maturity": "sandbox",
+      "description": "Automate Kubernetes Configuration Editing"
+    },
+    "kube-burner": {
+      "repo": "https://github.com/kube-burner/kube-burner",
+      "maturity": "sandbox",
+      "description": "Kubernetes performance and scale test orchestration framework written in golang"
+    },
+    "kubeflow": {
+      "repo": "https://github.com/kubeflow/kubeflow",
+      "maturity": "graduated",
+      "description": "Kubeflow is the foundation of tools for AI Platforms on Kubernetes."
+    }
+  }
 }

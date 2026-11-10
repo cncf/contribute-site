@@ -32,6 +32,10 @@ import {
 import styles from './styles.module.css';
 
 const { event } = data;
+// Each project's main repository, maturity and description, from the CNCF
+// landscape (npm run sync:pavilion). Projects without one aren't linked.
+const PROJECTS = data.projects ?? {};
+const repoOf = (name) => PROJECTS[name]?.repo ?? null;
 const SNAPSHOT = buildDirectory(data.rows, event);
 const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${event.sheetId}/gviz/tq?tqx=out:csv`;
 const REFRESH_MS = 15 * 60 * 1000;
@@ -180,17 +184,60 @@ function useFitScale(enabled, wrapRef, planRef, controlsRef) {
   return fit;
 }
 
-// "(SIG Subproject)" is shown on the map as a footnote mark, with the
-// footnote under the plan. Labels and the kiosk table keep the full name.
+// On the map, "(SIG Subproject)" is left off kiosk names: SIG Subproject
+// kiosks have their own colour, and the summary line under the plan says
+// what each project is. Labels and the kiosk table keep the full name.
 const SIG_SUBPROJECT = /\s*\(SIG Subproject\)/gi;
+const isSigSubproject = (name) => /\(SIG Subproject\)/i.test(name);
+const displayName = (name) => name.replace(SIG_SUBPROJECT, '');
 
-function withFootnotes(text) {
-  return text.split(SIG_SUBPROJECT).map((part, i) => (
-    <React.Fragment key={i}>
-      {i > 0 && <sup className={styles.footnoteMark}>*</sup>}
-      {part}
-    </React.Fragment>
-  ));
+// "SIG Subproject" or "CNCF Graduated project", or null when unknown.
+function projectKind(name) {
+  if (isSigSubproject(name)) return 'SIG Subproject';
+  const maturity = PROJECTS[name]?.maturity;
+  return maturity
+    ? `CNCF ${maturity[0].toUpperCase()}${maturity.slice(1)} project`
+    : null;
+}
+
+// One line under the plan about the kiosk the pointer or focus is on: the
+// project's name, what kind of project it is, and its landscape description.
+function ProjectSummary({ name, hasSigSubprojects }) {
+  if (!name) {
+    return (
+      <p className={`${styles.summary} ${styles.summaryHint}`}>
+        Point at a kiosk for a summary of the project; click it to open the
+        project's repository.
+        {hasSigSubprojects && (
+          <>
+            {' '}
+            <span className={styles.swatch} aria-hidden="true" /> Blue kiosks
+            are SIG Subprojects.
+          </>
+        )}
+      </p>
+    );
+  }
+  const kind = projectKind(name);
+  const description = PROJECTS[name]?.description;
+  return (
+    <p
+      className={styles.summary}
+      title={[displayName(name), kind, description].filter(Boolean).join(' · ')}
+    >
+      <strong>{displayName(name)}</strong>
+      {kind && (
+        <span
+          className={`${styles.kind} ${
+            isSigSubproject(name) ? styles.kindSig : ''
+          }`}
+        >
+          {kind}
+        </span>
+      )}
+      {description && <span>{description}</span>}
+    </p>
+  );
 }
 
 // What a kiosk shows: its text and the description used for its label.
@@ -215,7 +262,7 @@ function kioskText(status, projects, next) {
 function KioskBody({ status, text, next }) {
   return (
     <span className={styles.project} aria-hidden="true">
-      {withFootnotes(text)}
+      {displayName(text)}
       {status === 'between' && next && (
         <span className={styles.nextTime}> {formatTime(next.start)}</span>
       )}
@@ -223,22 +270,42 @@ function KioskBody({ status, text, next }) {
   );
 }
 
-function Kiosk({ stand, side, slot, next, highlighted }) {
+// "https://github.com/cilium/cilium" -> "github.com/cilium/cilium"
+const shortUrl = (url) => url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+
+// A kiosk links to the repository of the project it shows: the project on
+// shift, or the next one between shifts. Double bookings aren't linked.
+function Kiosk({ stand, side, slot, next, highlighted, onActivate }) {
   const status = slot?.status ?? 'idle';
-  const { text, description } = kioskText(status, slot?.projects ?? [], next);
-  return (
-    <div
-      className={[
-        styles.kiosk,
-        side === 'A' ? styles.kioskA : styles.kioskB,
-        styles[status],
-        highlighted ? styles.highlighted : '',
-      ].join(' ')}
-      title={`Kiosk ${stand}${side}: ${description}`}
-      aria-label={`Kiosk ${stand}${side}: ${description}`}
-    >
-      <KioskBody status={status} text={text} next={next} />
-    </div>
+  const projects = slot?.projects ?? [];
+  const { text, description } = kioskText(status, projects, next);
+  const shown =
+    status === 'staffed' ? projects[0] : status === 'between' && next?.project;
+  const repo = shown ? repoOf(shown) : null;
+  const label = `Kiosk ${stand}${side}: ${description}`;
+  const props = {
+    className: [
+      styles.kiosk,
+      side === 'A' ? styles.kioskA : styles.kioskB,
+      styles[status],
+      status === 'staffed' && isSigSubproject(projects[0])
+        ? styles.sigSubproject
+        : '',
+      highlighted ? styles.highlighted : '',
+      repo ? styles.link : '',
+    ].join(' '),
+    title: repo ? `${label}\n${shortUrl(repo)}` : label,
+    'aria-label': repo ? `${label} (opens repository)` : label,
+    onMouseEnter: () => onActivate(shown || null),
+    onFocus: () => onActivate(shown || null),
+  };
+  const body = <KioskBody status={status} text={text} next={next} />;
+  return repo ? (
+    <a {...props} href={repo} target="_blank" rel="noopener noreferrer">
+      {body}
+    </a>
+  ) : (
+    <div {...props}>{body}</div>
   );
 }
 
@@ -283,9 +350,9 @@ const FloorPlan = React.forwardRef(function FloorPlan(
   const floorRef = useRef(null);
   const probeRef = useRef(null);
   const kioskHeight = useKioskHeight(floorRef, probeRef, states);
-  const hasSigSubprojects = entries.some((e) =>
-    /\(SIG Subproject\)/i.test(e.project),
-  );
+  const hasSigSubprojects = entries.some((e) => isSigSubproject(e.project));
+  // The project whose summary is shown under the plan.
+  const [active, setActive] = useState(null);
   return (
     <div ref={ref} className={styles.frame} style={style}>
       <div ref={probeRef} className={styles.probe} aria-hidden="true">
@@ -305,6 +372,10 @@ const FloorPlan = React.forwardRef(function FloorPlan(
       <div
         ref={floorRef}
         className={styles.floor}
+        onMouseLeave={() => setActive(null)}
+        onBlur={(e) => {
+          if (!e.currentTarget.contains(e.relatedTarget)) setActive(null);
+        }}
         style={{
           gridTemplateColumns: GRID_COLUMNS,
           '--pm-kiosk-height': kioskHeight ? `${kioskHeight}px` : undefined,
@@ -332,6 +403,7 @@ const FloorPlan = React.forwardRef(function FloorPlan(
                     slot={slot}
                     next={next}
                     highlighted={highlight.has(key)}
+                    onActivate={setActive}
                   />
                 );
               })}
@@ -353,10 +425,8 @@ const FloorPlan = React.forwardRef(function FloorPlan(
           </div>
         ))}
       </div>
-      <div className={styles.frameNotes}>
-        {hasSigSubprojects && (
-          <p className={styles.footnote}>* SIG Subproject</p>
-        )}
+      <div className={styles.frameNotes} aria-live="polite">
+        <ProjectSummary name={active} hasSigSubprojects={hasSigSubprojects} />
       </div>
     </div>
   );
@@ -661,7 +731,14 @@ export default function PavilionMap({ day: dayProp, time: timeProp }) {
             {staffed.map((s) => (
               <tr key={s.kiosk}>
                 <td>{s.kiosk}</td>
-                <td>{s.projects.join(', ')}</td>
+                <td>
+                  {s.projects.map((name, i) => (
+                    <React.Fragment key={name}>
+                      {i > 0 && ', '}
+                      {repoOf(name) ? <a href={repoOf(name)}>{name}</a> : name}
+                    </React.Fragment>
+                  ))}
+                </td>
               </tr>
             ))}
           </tbody>

@@ -20,6 +20,11 @@ import {
   rowsFromCsv,
 } from '../src/components/PavilionMap/schedule.mjs';
 import { STANDS } from '../src/components/PavilionMap/layout.mjs';
+import {
+  githubRepo,
+  landscapeItems,
+  matchProjects,
+} from '../src/components/PavilionMap/repos.mjs';
 
 const data = JSON.parse(
   readFileSync(
@@ -343,5 +348,90 @@ describe('kioskStates', () => {
       JSON.stringify([s.status, s.projects, s.next]),
     );
     assert.equal(new Set(keys).size, keys.length);
+  });
+});
+
+describe('matchProjects', () => {
+  const items = landscapeItems({
+    landscape: [
+      {
+        subcategories: [
+          {
+            items: [
+              {
+                name: 'Envoy',
+                project: 'graduated',
+                repo_url: 'u:envoy',
+                description: '  Edge and\n service proxy ',
+              },
+              { name: 'Headlamp', project: 'sandbox', repo_url: 'u:headlamp' },
+              { name: 'Kueue', repo_url: 'u:kueue', description: 'Queues' },
+              { name: 'Helm Inc', repo_url: 'u:not-a-project' },
+            ],
+          },
+        ],
+      },
+    ],
+  });
+
+  it('matches CNCF projects by normalized name', () => {
+    const { projects } = matchProjects(['Headlamp (SIG)', 'Kueue'], items);
+    assert.deepEqual(projects, {
+      'Headlamp (SIG)': {
+        repo: 'u:headlamp',
+        maturity: 'sandbox',
+        description: undefined,
+      },
+    });
+  });
+
+  it('uses aliases and direct repositories', () => {
+    const { projects, missing } = matchProjects(
+      ['Envoyproxy', 'Kueue (SIG Subproject)', 'Fluent Bit', 'TAG X'],
+      items,
+      {
+        aliases: { Envoyproxy: 'Envoy', 'Kueue (SIG Subproject)': 'Kueue' },
+        repos: { 'Fluent Bit': 'u:fluent-bit' },
+      },
+    );
+    assert.deepEqual(projects, {
+      Envoyproxy: {
+        repo: 'u:envoy',
+        maturity: 'graduated',
+        description: 'Edge and service proxy',
+      },
+      'Kueue (SIG Subproject)': {
+        repo: 'u:kueue',
+        maturity: undefined,
+        description: 'Queues',
+      },
+      'Fluent Bit': { repo: 'u:fluent-bit' },
+    });
+    assert.deepEqual(missing, ['TAG X']);
+  });
+
+  it('reads GitHub repository names from URLs', () => {
+    assert.equal(githubRepo('https://github.com/helm/helm'), 'helm/helm');
+    assert.equal(githubRepo('https://github.com/a/b.git'), 'a/b');
+    assert.equal(githubRepo('https://gitlab.com/a/b'), null);
+  });
+
+  it('has details for every snapshot project in the landscape', () => {
+    const { entries } = buildDirectory(data.rows, event);
+    const without = Array.from(new Set(entries.map((e) => e.project))).filter(
+      (name) => !data.projects[name],
+    );
+    assert.deepEqual(without.sort(), [
+      'Cloud Native Community Groups/KCDs',
+      'Dynamic Resource Allocation (SIG Subproject)',
+      'TAG Developer Experience',
+      'TAG Infrastructure',
+      'TAG Operational Resilience',
+      'Technical Community Group',
+    ]);
+    for (const p of Object.values(data.projects)) {
+      assert.match(p.repo, /^https:\/\//);
+      assert.ok(p.description, p.repo);
+    }
   });
 });

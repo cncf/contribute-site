@@ -17,6 +17,8 @@
   --pm-period-changeover: #c4c2e3;
   --pm-period-afternoon: #d42c8f;
   --pm-period-all: #2b2a6b;
+  --pm-sig: #326ce5;
+  --pm-sig-text: #ffffff;
 }
 
 [data-theme='dark'] .root {
@@ -128,17 +130,24 @@
   white-space: nowrap;
 }
 
-.staffed,
-.conflict {
+/* Status colours use .kiosk too, so they outrank the site's link colours
+   on kiosks that are links. */
+.kiosk.staffed,
+.kiosk.conflict {
   background: var(--pm-navy);
   color: var(--pm-navy-text);
+}
+
+.kiosk.sigSubproject {
+  background: var(--pm-sig);
+  color: var(--pm-sig-text);
 }
 
 .conflict {
   border-color: var(--ifm-color-danger);
 }
 
-.between {
+.kiosk.between {
   background: var(--pm-between);
   color: var(--pm-between-text);
 }
@@ -148,9 +157,25 @@
   font-style: italic;
 }
 
-.idle {
+.kiosk.idle {
   background: var(--pm-idle);
   color: var(--pm-idle-text);
+}
+
+/* Kiosks that open the project's repository. */
+.link {
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: none;
+  outline: 2px solid var(--pm-frame);
+  outline-offset: 1px;
+}
+
+.link:focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 1px;
 }
 
 .highlighted {
@@ -223,14 +248,66 @@
   text-transform: uppercase;
 }
 
-.footnote {
+/* One line under the plan: a summary of the project at the kiosk the
+   pointer or focus is on, or a hint. It never wraps, so the plan's height
+   doesn't change. */
+.summary {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
   margin: 0;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 22px;
+  text-transform: none;
+  white-space: nowrap;
 }
 
-.footnoteMark {
-  margin-left: 1px;
-  font-size: 0.8em;
-  line-height: 0;
+.summary > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summary strong {
+  flex: none;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.summaryHint {
+  display: block;
+  text-overflow: ellipsis;
+  opacity: 0.9;
+}
+
+.kind {
+  flex: none;
+  padding: 0 8px;
+  border-radius: 11px;
+  background: var(--pm-navy);
+  color: var(--pm-navy-text);
+  font-size: 12px;
+  font-weight: var(--ifm-font-weight-bold);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.kindSig {
+  background: var(--pm-sig);
+  color: var(--pm-sig-text);
+}
+
+.swatch {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  background: var(--pm-sig);
+  vertical-align: -2px;
 }
 
 /* Controls, under the map. */
