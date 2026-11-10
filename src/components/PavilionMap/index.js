@@ -532,6 +532,29 @@ function ProjectFinder({ entries, query, setQuery, onJump, dayId, minutes }) {
     q.length < 2
       ? []
       : entries.filter((e) => e.project.toLowerCase().includes(q));
+  const open = q.length >= 2;
+
+  // Keep the results on screen: shift them sideways if either edge would be
+  // outside the window, leaving a 16px margin (the page's gutter on phones).
+  const resultsRef = useRef(null);
+  useIsomorphicLayoutEffect(() => {
+    const el = resultsRef.current;
+    if (!open || !el) return undefined;
+    const place = () => {
+      el.style.transform = '';
+      const { left, right } = el.getBoundingClientRect();
+      const margin = 16;
+      const viewport = document.documentElement.clientWidth;
+      let shift = 0;
+      if (left < margin) shift = margin - left;
+      else if (right > viewport - margin) shift = viewport - margin - right;
+      if (shift) el.style.transform = `translateX(${Math.round(shift)}px)`;
+    };
+    place();
+    window.addEventListener('resize', place);
+    return () => window.removeEventListener('resize', place);
+  }, [open]);
+
   return (
     <div className={styles.finder}>
       <label className={styles.srOnly} htmlFor="pavilion-project">
@@ -568,9 +591,8 @@ function ProjectFinder({ entries, query, setQuery, onJump, dayId, minutes }) {
           <option key={n} value={n} />
         ))}
       </datalist>
-      {q.length >= 2 && (
-        // Opens upward over the map, so typing doesn't resize the layout.
-        <div className={styles.finderResults} role="status">
+      {open && (
+        <div ref={resultsRef} className={styles.finderResults} role="status">
           {matches.length === 0 ? (
             <p>No matching project.</p>
           ) : (
