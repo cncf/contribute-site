@@ -5,7 +5,9 @@ import { readFileSync } from 'node:fs';
 import {
   buildDirectory,
   clampToDay,
+  dayPeriods,
   findConflicts,
+  kioskStates,
   liveSelection,
   nextAtKiosk,
   nowInZone,
@@ -13,6 +15,7 @@ import {
   parseCsv,
   parseKiosk,
   parseSchedule,
+  periodAt,
   resolveInitial,
   rowsFromCsv,
 } from '../src/components/PavilionMap/schedule.mjs';
@@ -269,5 +272,76 @@ describe('resolveInitial', () => {
       resolveInitial({ now: new Date('2026-11-09T19:00:00Z'), event }),
       { day: 'tue', minutes: t(10, 45), live: false },
     );
+  });
+});
+
+describe('dayPeriods', () => {
+  const { entries } = buildDirectory(data.rows, event);
+  const day = (id) => days.find((d) => d.id === id);
+  const span = (periods) => periods.map((p) => [p.kind, p.start, p.end]);
+
+  it('finds the morning, changeover and afternoon on each day', () => {
+    assert.deepEqual(span(dayPeriods(entries, day('tue'))), [
+      ['morning', t(10, 45), t(14, 30)],
+      ['changeover', t(14, 30), t(15)],
+      ['afternoon', t(15), t(19)],
+    ]);
+    assert.deepEqual(span(dayPeriods(entries, day('wed'))), [
+      ['morning', t(10, 30), t(13, 25)],
+      ['changeover', t(13, 25), t(13, 55)],
+      ['afternoon', t(13, 55), t(17)],
+    ]);
+    assert.deepEqual(span(dayPeriods(entries, day('thu'))), [
+      ['morning', t(10, 30), t(11, 55)],
+      ['changeover', t(11, 55), t(12, 25)],
+      ['afternoon', t(12, 25), t(14)],
+    ]);
+  });
+
+  it('ignores an odd shift that ends at a different time', () => {
+    const odd = { shifts: [{ day: 'wed', start: t(10, 30), end: t(12) }] };
+    assert.equal(dayPeriods([...entries, odd], day('wed'))[0].end, t(13, 25));
+  });
+
+  it('is one period when every shift spans the day', () => {
+    const full = [{ shifts: [{ day: 'thu', start: t(10, 15), end: t(14) }] }];
+    assert.deepEqual(span(dayPeriods(full, day('thu'))), [
+      ['all', t(10, 30), t(14)],
+    ]);
+  });
+
+  it('places a time in its period, with end times exclusive', () => {
+    const periods = dayPeriods(entries, day('tue'));
+    assert.equal(periodAt(periods, t(14, 25)).kind, 'morning');
+    assert.equal(periodAt(periods, t(14, 30)).kind, 'changeover');
+    assert.equal(periodAt(periods, t(15)).kind, 'afternoon');
+    assert.equal(periodAt(periods, t(19)), null);
+  });
+});
+
+describe('kioskStates', () => {
+  const { entries } = buildDirectory(data.rows, event);
+  const states = kioskStates(entries, days);
+  const has = (status, project) =>
+    states.some((s) =>
+      status === 'between'
+        ? s.status === status && s.next?.project === project
+        : s.status === status && s.projects.includes(project),
+    );
+
+  it('includes every project, staffed', () => {
+    for (const e of entries) assert.ok(has('staffed', e.project), e.project);
+  });
+
+  it('includes changeover and double-booking states', () => {
+    assert.ok(has('between', 'Cloud Native Buildpacks'));
+    assert.ok(has('conflict', 'KEDA'));
+  });
+
+  it('lists each state once', () => {
+    const keys = states.map((s) =>
+      JSON.stringify([s.status, s.projects, s.next]),
+    );
+    assert.equal(new Set(keys).size, keys.length);
   });
 });

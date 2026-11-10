@@ -13,6 +13,10 @@
   --pm-idle-text: #6b6b80;
   --pm-highlight: #ffd400;
   --pm-number: #2b2a6b;
+  --pm-period-morning: #2b2a6b;
+  --pm-period-changeover: #c4c2e3;
+  --pm-period-afternoon: #d42c8f;
+  --pm-period-all: #2b2a6b;
 }
 
 [data-theme='dark'] .root {
@@ -25,6 +29,10 @@
   --pm-idle: #242436;
   --pm-idle-text: #9a9ab0;
   --pm-number: #d6d5f0;
+  --pm-period-morning: #7a78e0;
+  --pm-period-changeover: #4a4970;
+  --pm-period-afternoon: #e0559f;
+  --pm-period-all: #7a78e0;
 }
 
 .srOnly {
@@ -49,7 +57,7 @@
 }
 
 .frame {
-  padding: 14px;
+  padding: 8px;
   border-radius: 8px;
   background: var(--pm-frame);
   transform-origin: top left;
@@ -58,9 +66,17 @@
 .floor {
   display: grid;
   grid-template-rows: repeat(4, auto);
-  gap: 22px 10px;
-  padding: 16px;
+  gap: 22px 6px;
+  padding: 8px;
   background: var(--pm-floor);
+}
+
+/* Hidden copies of every kiosk text, measured to size the kiosks. */
+.probe {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .stand {
@@ -72,7 +88,7 @@
 .pair {
   flex: 1 1 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 3px;
   width: 100%;
 }
@@ -80,24 +96,31 @@
 .kiosk {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  min-width: 0;
   min-height: 64px;
-  padding: 3px 4px;
+  height: var(--pm-kiosk-height, auto);
+  padding: 1.5px 2px;
   border: 2px solid transparent;
   border-radius: 2px;
-  font-size: 12.5px;
+  font-size: 11px;
   line-height: 1.2;
   overflow-wrap: break-word;
   hyphens: auto;
 }
 
-.side {
-  font-weight: var(--ifm-font-weight-bold);
-  font-size: 12px;
-  opacity: 0.8;
-}
-
 .project {
   font-weight: var(--ifm-font-weight-semibold);
+  text-transform: uppercase;
+}
+
+/* Names sit against the aisle between a stand's two kiosks. */
+.kioskA {
+  text-align: right;
+}
+
+.kioskB {
+  text-align: left;
 }
 
 .nextTime {
@@ -135,20 +158,35 @@
   box-shadow: 0 0 0 3px var(--pm-highlight);
 }
 
-.number {
+/* Under each stand: the stand number between its A and B labels. */
+.label {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: baseline;
+  width: 100%;
   margin-top: 2px;
+  color: var(--pm-number);
+}
+
+.side {
+  font-size: 13px;
+  font-weight: var(--ifm-font-weight-bold);
+  text-align: center;
+  opacity: 0.75;
+}
+
+.number {
   font-size: 22px;
   font-weight: 800;
   line-height: 1.1;
-  color: var(--pm-number);
 }
 
 .landmark {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
-  font-size: 17px;
+  padding: 6px;
+  font-size: 14px;
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
@@ -174,13 +212,25 @@
   letter-spacing: 0.05em;
 }
 
-.tablesNote {
-  margin: 8px 0 0;
+/* Footnotes on the frame under the plan. */
+.frameNotes {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  color: #ffffff;
   font-size: 12px;
   font-weight: var(--ifm-font-weight-bold);
-  color: #ffffff;
-  text-align: right;
   text-transform: uppercase;
+}
+
+.footnote {
+  margin: 0;
+}
+
+.footnoteMark {
+  margin-left: 1px;
+  font-size: 0.8em;
+  line-height: 0;
 }
 
 /* Controls, under the map. */
@@ -224,16 +274,103 @@
   opacity: 0.5;
 }
 
-.slider {
-  flex: 1 1 10rem;
-  min-width: 8rem;
-  accent-color: var(--ifm-color-primary);
+/* Time slider. The track is drawn in the day's periods (--pm-track, set
+   inline), with a gap at each boundary and a notch and time label under it.
+   Gradient stops and notches use the thumb's travel, which is the track
+   width less one thumb. */
+.timeline {
+  --pm-thumb: 18px;
+  flex: 1 1 14rem;
+  min-width: 14rem;
 }
 
-.timeValue {
-  min-width: 5.25rem;
-  font-weight: var(--ifm-font-weight-bold);
+.slider {
+  display: block;
+  width: 100%;
+  height: var(--pm-thumb);
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 10px;
+  border-radius: 5px;
+  background: var(--pm-track);
+}
+
+.slider::-moz-range-track {
+  height: 10px;
+  border-radius: 5px;
+  background: var(--pm-track);
+}
+
+/* The handle is invisible but keeps its size, so it can still be dragged;
+   clicking the track jumps to that time. */
+.slider::-webkit-slider-thumb {
+  width: var(--pm-thumb);
+  height: var(--pm-thumb);
+  margin-top: -4px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-moz-range-thumb {
+  box-sizing: border-box;
+  width: var(--pm-thumb);
+  height: var(--pm-thumb);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.ticks {
+  position: relative;
+  height: 1.2rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.7rem;
+  line-height: 1;
+  white-space: nowrap;
   font-variant-numeric: tabular-nums;
+}
+
+.notch {
+  position: absolute;
+  top: 1px;
+  width: 2px;
+  height: 5px;
+  margin-left: -1px;
+  background: var(--ifm-color-emphasis-600);
+}
+
+.tickStart,
+.tickMiddle,
+.tickEnd {
+  position: absolute;
+  top: 8px;
+}
+
+.tickStart {
+  left: 0;
+}
+
+.tickMiddle {
+  transform: translateX(-50%);
+}
+
+.tickEnd {
+  right: 0;
 }
 
 .finder {

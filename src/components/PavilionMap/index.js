@@ -14,15 +14,18 @@ import {
   STEP_MINUTES,
   buildDirectory,
   clampToDay,
+  dayPeriods,
   dayRange,
   findDayParam,
   formatTime,
   hhmmToMinutes,
   isOnShift,
+  kioskStates,
   liveSelection,
   minutesToHhmm,
   nextAtKiosk,
   occupancyAt,
+  periodAt,
   resolveInitial,
   rowsFromCsv,
 } from './schedule.mjs';
@@ -34,8 +37,15 @@ const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${event.sheetId}/g
 const REFRESH_MS = 15 * 60 * 1000;
 const TICK_MS = 60 * 1000;
 
-// The floor plan is laid out at this width and then scaled to fit the window.
+// The floor plan is laid out at least this wide and then scaled to fit the
+// window. When the window's height limits the scale, the layout widens to use
+// the spare width, up to MAX_WIDTH; the extra goes to the stand columns.
 const DESIGN_WIDTH = 1200;
+const MAX_WIDTH = 1800;
+// Columns 1-5 hold stands and share any extra width; the staff-area and
+// stage columns have fixed widths.
+const STAND_COLUMNS = GRID.columns - 2;
+const GRID_COLUMNS = `repeat(${STAND_COLUMNS}, minmax(0, 1fr)) 96px 34px`;
 // Below this scale the text is unreadable, so the map scrolls sideways instead.
 const MIN_SCALE = 0.55;
 const MAX_SCALE = 1.5;
@@ -120,7 +130,11 @@ function useDirectory() {
 // window without scrolling. Recomputes when the window, the content width,
 // the controls, or the plan itself change size.
 function useFitScale(enabled, wrapRef, planRef, controlsRef) {
-  const [fit, setFit] = useState({ scale: 1, height: 0 });
+  const [fit, setFit] = useState({
+    scale: 1,
+    height: 0,
+    width: DESIGN_WIDTH,
+  });
   const measure = useCallback(() => {
     const wrap = wrapRef.current;
     const plan = planRef.current;
@@ -135,10 +149,17 @@ function useFitScale(enabled, wrapRef, planRef, controlsRef) {
       MAX_SCALE,
       Math.max(MIN_SCALE, Math.min(byWidth, byHeight)),
     );
+    // The plan's height doesn't depend on its width (kiosks are sized for the
+    // narrowest layout), so widening it can't change the scale.
+    const width = Math.round(
+      Math.min(MAX_WIDTH, Math.max(DESIGN_WIDTH, wrap.clientWidth / scale)),
+    );
     setFit((prev) =>
-      Math.abs(prev.scale - scale) < 0.001 && prev.height === naturalHeight
+      Math.abs(prev.scale - scale) < 0.001 &&
+      prev.height === naturalHeight &&
+      prev.width === width
         ? prev
-        : { scale, height: naturalHeight },
+        : { scale, height: naturalHeight, width },
     );
   }, [wrapRef, planRef, controlsRef]);
 
@@ -159,53 +180,134 @@ function useFitScale(enabled, wrapRef, planRef, controlsRef) {
   return fit;
 }
 
+// "(SIG Subproject)" is shown on the map as a footnote mark, with the
+// footnote under the plan. Labels and the kiosk table keep the full name.
+const SIG_SUBPROJECT = /\s*\(SIG Subproject\)/gi;
+
+function withFootnotes(text) {
+  return text.split(SIG_SUBPROJECT).map((part, i) => (
+    <React.Fragment key={i}>
+      {i > 0 && <sup className={styles.footnoteMark}>*</sup>}
+      {part}
+    </React.Fragment>
+  ));
+}
+
+// What a kiosk shows: its text and the description used for its label.
+function kioskText(status, projects, next) {
+  if (status === 'staffed' || status === 'conflict') {
+    const names = projects.join(' / ');
+    return { text: names, description: names };
+  }
+  if (status === 'between') {
+    return next
+      ? {
+          text: `Next: ${next.project}`,
+          description: `between shifts, ${next.project} from ${formatTime(
+            next.start,
+          )}`,
+        }
+      : { text: 'Between shifts', description: 'between shifts' };
+  }
+  return { text: '—', description: 'no project scheduled' };
+}
+
+function KioskBody({ status, text, next }) {
+  return (
+    <span className={styles.project} aria-hidden="true">
+      {withFootnotes(text)}
+      {status === 'between' && next && (
+        <span className={styles.nextTime}> {formatTime(next.start)}</span>
+      )}
+    </span>
+  );
+}
+
 function Kiosk({ stand, side, slot, next, highlighted }) {
   const status = slot?.status ?? 'idle';
-  const projects = slot?.projects ?? [];
-  let text = '—';
-  let description = 'no project scheduled';
-  if (status === 'staffed' || status === 'conflict') {
-    text = projects.join(' / ');
-    description = text;
-  } else if (status === 'between') {
-    text = next ? `Next: ${next.project}` : 'Between shifts';
-    description = next
-      ? `between shifts, ${next.project} from ${formatTime(next.start)}`
-      : 'between shifts';
-  }
+  const { text, description } = kioskText(status, slot?.projects ?? [], next);
   return (
     <div
       className={[
         styles.kiosk,
+        side === 'A' ? styles.kioskA : styles.kioskB,
         styles[status],
         highlighted ? styles.highlighted : '',
       ].join(' ')}
       title={`Kiosk ${stand}${side}: ${description}`}
       aria-label={`Kiosk ${stand}${side}: ${description}`}
     >
-      <span className={styles.side} aria-hidden="true">
-        {side}
-      </span>
-      <span className={styles.project} aria-hidden="true">
-        {text}
-        {status === 'between' && next && (
-          <span className={styles.nextTime}> {formatTime(next.start)}</span>
-        )}
-      </span>
+      <KioskBody status={status} text={text} next={next} />
     </div>
   );
 }
 
+// Every kiosk is as tall as the tallest text any kiosk can show during the
+// showcase, so kiosks don't change size as the time changes. The texts are
+// laid out, hidden, at the width a kiosk has in the narrowest layout
+// (DESIGN_WIDTH), and the tallest is used.
+function useKioskHeight(floorRef, probeRef, states) {
+  const [height, setHeight] = useState(null);
+  useIsomorphicLayoutEffect(() => {
+    const floor = floorRef.current;
+    const probe = probeRef.current;
+    if (!floor || !probe) return undefined;
+    let cancelled = false;
+    const measure = () => {
+      const kiosk = floor.querySelector(`.${styles.kiosk}`);
+      if (cancelled || !kiosk) return;
+      // Extra layout width is shared by the stand columns, two kiosks each.
+      const extra = floor.parentElement.offsetWidth - DESIGN_WIDTH;
+      const width = kiosk.offsetWidth - extra / (2 * STAND_COLUMNS);
+      probe.style.width = `${Math.floor(width)}px`;
+      let tallest = 0;
+      for (const el of probe.children) {
+        tallest = Math.max(tallest, el.offsetHeight);
+      }
+      setHeight(tallest || null);
+    };
+    measure();
+    document.fonts?.ready.then(measure);
+    return () => {
+      cancelled = true;
+    };
+  }, [floorRef, probeRef, states]);
+  return height;
+}
+
 const FloorPlan = React.forwardRef(function FloorPlan(
-  { occupancy, entries, dayId, minutes, highlight, style },
+  { occupancy, entries, days, dayId, minutes, highlight, style },
   ref,
 ) {
+  const states = useMemo(() => kioskStates(entries, days), [entries, days]);
+  const floorRef = useRef(null);
+  const probeRef = useRef(null);
+  const kioskHeight = useKioskHeight(floorRef, probeRef, states);
+  const hasSigSubprojects = entries.some((e) =>
+    /\(SIG Subproject\)/i.test(e.project),
+  );
   return (
     <div ref={ref} className={styles.frame} style={style}>
+      <div ref={probeRef} className={styles.probe} aria-hidden="true">
+        {states.map((st, i) => (
+          <div
+            key={i}
+            className={`${styles.kiosk} ${styles.kioskA} ${styles[st.status]}`}
+          >
+            <KioskBody
+              status={st.status}
+              text={kioskText(st.status, st.projects, st.next).text}
+              next={st.next}
+            />
+          </div>
+        ))}
+      </div>
       <div
+        ref={floorRef}
         className={styles.floor}
         style={{
-          gridTemplateColumns: `repeat(${GRID.columns - 2}, minmax(0, 1fr)) minmax(0, 0.7fr) 44px`,
+          gridTemplateColumns: GRID_COLUMNS,
+          '--pm-kiosk-height': kioskHeight ? `${kioskHeight}px` : undefined,
         }}
       >
         {STANDS.map(({ stand, row, col }) => (
@@ -234,7 +336,11 @@ const FloorPlan = React.forwardRef(function FloorPlan(
                 );
               })}
             </div>
-            <div className={styles.number}>{stand}</div>
+            <div className={styles.label} aria-hidden="true">
+              <span className={styles.side}>A</span>
+              <span className={styles.number}>{stand}</span>
+              <span className={styles.side}>B</span>
+            </div>
           </div>
         ))}
         {LANDMARKS.map((l) => (
@@ -247,12 +353,97 @@ const FloorPlan = React.forwardRef(function FloorPlan(
           </div>
         ))}
       </div>
-      <p className={styles.tablesNote}>
-        Project meeting tables and Project Pavilion activities ↓
-      </p>
+      <div className={styles.frameNotes}>
+        {hasSigSubprojects && (
+          <p className={styles.footnote}>* SIG Subproject</p>
+        )}
+      </div>
     </div>
   );
 });
+
+const PERIOD_NAMES = {
+  morning: 'Morning shift',
+  changeover: 'Changeover',
+  afternoon: 'Afternoon shift',
+  all: 'Showcase hours',
+};
+
+// "2:30–3:00 PM", or "11:55 AM–12:25 PM" across noon.
+function formatSpan(start, end) {
+  const a = formatTime(start);
+  const b = formatTime(end);
+  return a.slice(-2) === b.slice(-2) ? `${a.slice(0, -3)}–${b}` : `${a}–${b}`;
+}
+
+// The time slider. Its track is drawn in the day's periods (morning shift,
+// changeover, afternoon shift) with notches and times at the boundaries.
+function TimeSlider({ day, periods, minutes, onChange }) {
+  const range = dayRange(day);
+  const close = hhmmToMinutes(day.close);
+  // Position along the track, as a fraction of the thumb's travel.
+  const at = (m) =>
+    Math.min(Math.max((m - range.min) / (range.max - range.min), 0), 1);
+  const stop = (m) =>
+    `calc(var(--pm-thumb) / 2 + (100% - var(--pm-thumb)) * ${at(m).toFixed(4)})`;
+  const colour = (kind) => `var(--pm-period-${kind})`;
+  // Each period is a band, with a 2px gap cut at every boundary.
+  const track = periods
+    .map((p, i) => {
+      const from = i === 0 ? '0%' : `calc(${stop(p.start)} + 1px)`;
+      const to =
+        i === periods.length - 1 ? '100%' : `calc(${stop(p.end)} - 1px)`;
+      const gap =
+        i === periods.length - 1
+          ? ''
+          : `, transparent ${to} calc(${stop(p.end)} + 1px)`;
+      return `${colour(p.kind)} ${from} ${to}${gap}`;
+    })
+    .join(', ');
+  const current = periodAt(periods, minutes);
+  const changeover = periods.find((p) => p.kind === 'changeover');
+  const notches = periods.slice(1).map((p) => p.start);
+
+  return (
+    <div className={styles.timeline}>
+      <label className={styles.srOnly} htmlFor="pavilion-time">
+        Time
+      </label>
+      <input
+        id="pavilion-time"
+        className={styles.slider}
+        type="range"
+        min={range.min}
+        max={range.max}
+        step={STEP_MINUTES}
+        value={minutes}
+        style={{ '--pm-track': `linear-gradient(to right, ${track})` }}
+        aria-valuetext={`${formatTime(minutes)}${
+          current ? `, ${PERIOD_NAMES[current.kind].toLowerCase()}` : ''
+        }`}
+        title={periods
+          .map((p) => `${PERIOD_NAMES[p.kind]}: ${formatSpan(p.start, p.end)}`)
+          .join('\n')}
+        onChange={(e) => onChange(Number(e.target.value))}
+      />
+      <div className={styles.ticks} aria-hidden="true">
+        {notches.map((m) => (
+          <span key={m} className={styles.notch} style={{ left: stop(m) }} />
+        ))}
+        <span className={styles.tickStart}>{formatTime(range.min)}</span>
+        {changeover && (
+          <span
+            className={styles.tickMiddle}
+            style={{ left: stop((changeover.start + changeover.end) / 2) }}
+          >
+            {formatSpan(changeover.start, changeover.end)}
+          </span>
+        )}
+        <span className={styles.tickEnd}>{formatTime(close)}</span>
+      </div>
+    </div>
+  );
+}
 
 function ProjectFinder({ entries, query, setQuery, onJump, dayId, minutes }) {
   const names = useMemo(
@@ -407,7 +598,7 @@ export default function PavilionMap({ day: dayProp, time: timeProp }) {
   }, [hydrated, touched, selection, history, location.hash, location.search]);
 
   const day = dayById[selection.day];
-  const range = dayRange(day);
+  const periods = useMemo(() => dayPeriods(entries, day), [entries, day]);
   const occupancy = useMemo(
     () => occupancyAt(entries, selection.day, selection.minutes),
     [entries, selection.day, selection.minutes],
@@ -485,7 +676,7 @@ export default function PavilionMap({ day: dayProp, time: timeProp }) {
         <div
           className={styles.sizer}
           style={{
-            width: DESIGN_WIDTH * fit.scale,
+            width: fit.width * fit.scale,
             height: fit.height * fit.scale,
           }}
         >
@@ -493,11 +684,12 @@ export default function PavilionMap({ day: dayProp, time: timeProp }) {
             ref={planRef}
             occupancy={occupancy}
             entries={entries}
+            days={event.days}
             dayId={selection.day}
             minutes={selection.minutes}
             highlight={highlight}
             style={{
-              width: DESIGN_WIDTH,
+              width: fit.width,
               transform: `scale(${fit.scale})`,
             }}
           />
@@ -520,30 +712,12 @@ export default function PavilionMap({ day: dayProp, time: timeProp }) {
               </button>
             ))}
           </div>
-          <label className={styles.srOnly} htmlFor="pavilion-time">
-            Time
-          </label>
-          <input
-            id="pavilion-time"
-            className={styles.slider}
-            type="range"
-            min={range.min}
-            max={range.max}
-            step={STEP_MINUTES}
-            value={selection.minutes}
-            aria-valuetext={formatTime(selection.minutes)}
-            title={`Showcase hours ${formatTime(range.min)} – ${formatTime(
-              hhmmToMinutes(day.close),
-            )}`}
-            onChange={(e) => choose({ minutes: Number(e.target.value) })}
+          <TimeSlider
+            day={day}
+            periods={periods}
+            minutes={selection.minutes}
+            onChange={(minutes) => choose({ minutes })}
           />
-          <output
-            className={styles.timeValue}
-            htmlFor="pavilion-time"
-            aria-live="polite"
-          >
-            {formatTime(selection.minutes)}
-          </output>
           <button
             type="button"
             className={styles.nowButton}

@@ -272,6 +272,58 @@ export function dayRange(day) {
   return { min: open, max: close - STEP_MINUTES };
 }
 
+// The most common value; ties go to the smallest.
+function mode(values) {
+  const counts = new Map();
+  for (const v of values) counts.set(v, (counts.get(v) ?? 0) + 1);
+  let best = null;
+  for (const [v, n] of counts) {
+    if (
+      best === null ||
+      n > counts.get(best) ||
+      (n === counts.get(best) && v < best)
+    ) {
+      best = v;
+    }
+  }
+  return best;
+}
+
+// Splits a showcase day into the periods its shifts create: a morning shift,
+// a changeover, and an afternoon shift. The changeover runs from the usual
+// end of the morning shifts to the usual start of the afternoon shifts;
+// shifts that span the whole day are ignored. A day with no changeover is
+// one period, 'all'.
+export function dayPeriods(entries, day) {
+  const { open, close } = dayBounds(day);
+  const ends = [];
+  const starts = [];
+  for (const entry of entries) {
+    for (const s of entry.shifts) {
+      if (s.day !== day.id) continue;
+      const start = Math.max(s.start, open);
+      const end = Math.min(s.end, close);
+      if (start >= end || (start === open && end === close)) continue;
+      if (end < close) ends.push(end);
+      if (start > open) starts.push(start);
+    }
+  }
+  const from = mode(ends);
+  const to = mode(starts);
+  if (from === null || to === null || to < from) {
+    return [{ kind: 'all', start: open, end: close }];
+  }
+  return [
+    { kind: 'morning', start: open, end: from },
+    { kind: 'changeover', start: from, end: to },
+    { kind: 'afternoon', start: to, end: close },
+  ].filter((p) => p.end > p.start);
+}
+
+export function periodAt(periods, minutes) {
+  return periods.find((p) => p.start <= minutes && minutes < p.end) ?? null;
+}
+
 export function clampToDay(day, minutes) {
   const { min, max } = dayRange(day);
   return Math.min(Math.max(minutes, min), max);
@@ -334,6 +386,31 @@ export function nextAtKiosk(entries, kiosk, dayId, minutes) {
     }
   }
   return next;
+}
+
+// Every distinct thing a kiosk can show across the whole showcase, checked
+// in time-slider steps: { status, projects, next }. Used to size the kiosks
+// for their longest text.
+export function kioskStates(entries, days) {
+  const seen = new Map();
+  for (const day of days) {
+    const { min, max } = dayRange(day);
+    for (let m = min; m <= max; m += STEP_MINUTES) {
+      for (const slot of Object.values(occupancyAt(entries, day.id, m))) {
+        const next =
+          slot.status === 'between'
+            ? nextAtKiosk(entries, slot.kiosk, day.id, m)
+            : null;
+        const key = [slot.status, next?.project, next?.start]
+          .concat(slot.projects)
+          .join('|');
+        if (!seen.has(key)) {
+          seen.set(key, { status: slot.status, projects: slot.projects, next });
+        }
+      }
+    }
+  }
+  return Array.from(seen.values());
 }
 
 // Pairs of shifts that put two projects at the same kiosk at the same time.
