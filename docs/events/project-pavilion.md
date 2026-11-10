@@ -5,6 +5,9 @@ description: Observe the wellspring of innovation
 
 The CNCF Project Pavilion is the dedicated space on the show floor for CNCF Projects.
 
+To see which projects are at each kiosk during KubeCon + CloudNativeCon North
+America 2026, use the [Project Pavilion map](./project-pavilion-map.md).
+
 ![stefan](https://github.com/user-attachments/assets/f53f48d0-cdaf-4478-bf41-a87866931524)
 
 ## Intent and Purpose

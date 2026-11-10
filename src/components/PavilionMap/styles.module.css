@@ -1,0 +1,531 @@
+/* Colours follow the official Project Pavilion map: navy kiosks, a magenta
+   frame, and peach lounge and stage areas. */
+.root {
+  --pm-frame: #d42c8f;
+  --pm-floor: #ffffff;
+  --pm-navy: #2b2a6b;
+  --pm-navy-text: #ffffff;
+  --pm-peach: #fccdb0;
+  --pm-peach-text: #2b2a6b;
+  --pm-between: #e4e3f1;
+  --pm-between-text: #2b2a6b;
+  --pm-idle: #f2f2f5;
+  --pm-idle-text: #6b6b80;
+  --pm-highlight: #ffd400;
+  --pm-number: #2b2a6b;
+  --pm-period-morning: #2b2a6b;
+  --pm-period-changeover: #c4c2e3;
+  --pm-period-afternoon: #d42c8f;
+  --pm-period-all: #2b2a6b;
+  --pm-sig: #326ce5;
+  --pm-sig-text: #ffffff;
+}
+
+[data-theme='dark'] .root {
+  --pm-floor: #1c1b2e;
+  --pm-navy: #4a48b0;
+  --pm-peach: #6b4a38;
+  --pm-peach-text: #ffe4d4;
+  --pm-between: #2e2d4a;
+  --pm-between-text: #d6d5f0;
+  --pm-idle: #242436;
+  --pm-idle-text: #9a9ab0;
+  --pm-number: #d6d5f0;
+  --pm-period-morning: #7a78e0;
+  --pm-period-changeover: #4a4970;
+  --pm-period-afternoon: #e0559f;
+  --pm-period-all: #7a78e0;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Map, scaled to fit. The plan is laid out at a fixed width; the sizer takes
+   its scaled size so the page flows around it. On narrow screens the scale
+   stops at a readable minimum and the map scrolls sideways in its own box. */
+.fitWrap {
+  overflow-x: auto;
+}
+
+.sizer {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.frame {
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--pm-frame);
+  transform-origin: top left;
+}
+
+.floor {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 22px 6px;
+  padding: 8px;
+  background: var(--pm-floor);
+}
+
+/* Hidden copies of every kiosk text, measured to size the kiosks. */
+.probe {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.stand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pair {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3px;
+  width: 100%;
+}
+
+.kiosk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  min-height: 64px;
+  height: var(--pm-kiosk-height, auto);
+  padding: 1.5px 2px;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  font-size: 11px;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.project {
+  font-weight: var(--ifm-font-weight-semibold);
+  text-transform: uppercase;
+}
+
+/* Names sit against the aisle between a stand's two kiosks. */
+.kioskA {
+  text-align: right;
+}
+
+.kioskB {
+  text-align: left;
+}
+
+.nextTime {
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+/* Status colours use .kiosk too, so they outrank the site's link colours
+   on kiosks that are links. */
+.kiosk.staffed,
+.kiosk.conflict {
+  background: var(--pm-navy);
+  color: var(--pm-navy-text);
+}
+
+.kiosk.sigSubproject {
+  background: var(--pm-sig);
+  color: var(--pm-sig-text);
+}
+
+.conflict {
+  border-color: var(--ifm-color-danger);
+}
+
+.kiosk.between {
+  background: var(--pm-between);
+  color: var(--pm-between-text);
+}
+
+.between .project {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.kiosk.idle {
+  background: var(--pm-idle);
+  color: var(--pm-idle-text);
+}
+
+/* Kiosks that open the project's repository. */
+.link {
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: none;
+  outline: 2px solid var(--pm-frame);
+  outline-offset: 1px;
+}
+
+.link:focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 1px;
+}
+
+.highlighted {
+  border-color: var(--pm-highlight);
+  box-shadow: 0 0 0 3px var(--pm-highlight);
+}
+
+/* Under each stand: the stand number between its A and B labels. */
+.label {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: baseline;
+  width: 100%;
+  margin-top: 2px;
+  color: var(--pm-number);
+}
+
+.side {
+  font-size: 13px;
+  font-weight: var(--ifm-font-weight-bold);
+  text-align: center;
+  opacity: 0.75;
+}
+
+.number {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.landmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.staff {
+  align-self: center;
+  min-height: 64px;
+  background: var(--pm-navy);
+  color: var(--pm-navy-text);
+}
+
+.space,
+.stage {
+  background: var(--pm-peach);
+  color: var(--pm-peach-text);
+}
+
+.stage span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.05em;
+}
+
+/* Footnotes on the frame under the plan. */
+.frameNotes {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: var(--ifm-font-weight-bold);
+  text-transform: uppercase;
+}
+
+/* One line under the plan: a summary of the project at the kiosk the
+   pointer or focus is on, or a hint. It never wraps, so the plan's height
+   doesn't change. */
+.summary {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 22px;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.summary > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summary strong {
+  flex: none;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.summaryHint {
+  display: block;
+  text-overflow: ellipsis;
+  opacity: 0.9;
+}
+
+.kind {
+  flex: none;
+  padding: 0 8px;
+  border-radius: 11px;
+  background: var(--pm-navy);
+  color: var(--pm-navy-text);
+  font-size: 12px;
+  font-weight: var(--ifm-font-weight-bold);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.kindSig {
+  background: var(--pm-sig);
+  color: var(--pm-sig-text);
+}
+
+.swatch {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  background: var(--pm-sig);
+  vertical-align: -2px;
+}
+
+/* Controls, under the map. */
+.controls {
+  padding-top: 0.6rem;
+}
+
+.controlRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+
+.days {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.dayButton,
+.nowButton {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.dayButton[aria-pressed='true'],
+.nowButton[aria-pressed='true'] {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+}
+
+.nowButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Time slider. The track is drawn in the day's periods (--pm-track, set
+   inline), with a gap at each boundary and a notch and time label under it.
+   Gradient stops and notches use the thumb's travel, which is the track
+   width less one thumb. */
+.timeline {
+  --pm-thumb: 18px;
+  flex: 1 1 14rem;
+  min-width: 14rem;
+}
+
+.slider {
+  display: block;
+  width: 100%;
+  height: var(--pm-thumb);
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 10px;
+  border-radius: 5px;
+  background: var(--pm-track);
+}
+
+.slider::-moz-range-track {
+  height: 10px;
+  border-radius: 5px;
+  background: var(--pm-track);
+}
+
+/* The handle is invisible but keeps its size, so it can still be dragged;
+   clicking the track jumps to that time. */
+.slider::-webkit-slider-thumb {
+  width: var(--pm-thumb);
+  height: var(--pm-thumb);
+  margin-top: -4px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-moz-range-thumb {
+  box-sizing: border-box;
+  width: var(--pm-thumb);
+  height: var(--pm-thumb);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.ticks {
+  position: relative;
+  height: 1.2rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.7rem;
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.notch {
+  position: absolute;
+  top: 1px;
+  width: 2px;
+  height: 5px;
+  margin-left: -1px;
+  background: var(--ifm-color-emphasis-600);
+}
+
+.tickStart,
+.tickMiddle,
+.tickEnd {
+  position: absolute;
+  top: 8px;
+}
+
+.tickStart {
+  left: 0;
+}
+
+.tickMiddle {
+  transform: translateX(-50%);
+}
+
+.tickEnd {
+  right: 0;
+}
+
+.finder {
+  position: relative;
+  flex: 0 1 14rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+}
+
+/* Search results open below the search field, over the page, so the layout
+   doesn't move. They're anchored to the field's right edge and kept on
+   screen (see ProjectFinder), with a 1rem margin each side. */
+.finderResults {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  z-index: 10;
+  width: min(34rem, calc(100vw - 2rem));
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--ifm-global-shadow-md);
+  font-size: 0.85rem;
+}
+
+.finderResults p,
+.finderResults ul {
+  margin: 0;
+}
+
+.finderResults ul {
+  padding-left: 1rem;
+}
+
+.onNow {
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-success-darkest);
+}
+
+[data-theme='dark'] .onNow {
+  color: var(--ifm-color-success-lightest);
+}
+
+.linkButton {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ifm-link-color);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.source {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Server-rendered fallback for visitors without JavaScript. */
+.table {
+  display: table;
+  width: 100%;
+}
+
+.table caption {
+  margin-bottom: 0.5rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  text-align: left;
+}

@@ -42,6 +42,7 @@
     "precheck:links": "npm run build",
     "prestart": "bash -c '[ -d docs/techdocs ] && echo \"docs/techdocs already present; skipping sync (run \\\"npm run sync:techdocs\\\" to force re-sync)\" || bash scripts/sync-techdocs-docs.sh'",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
+    "sync:pavilion": "node scripts/sync-pavilion-kiosks.mjs",
     "sync:techdocs": "bash scripts/sync-techdocs-docs.sh",
     "serve": "npm run docus:serve",
     "start": "npm run docus:start --",
