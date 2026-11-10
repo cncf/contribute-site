@@ -373,6 +373,46 @@ export function resolveInitial({ day, time, now, event }) {
   return { day: days[0].id, minutes: hhmmToMinutes(days[0].open), live: false };
 }
 
+// The project a search names, or null: the project whose name equals the
+// query (ignoring case), or the only project whose name contains it.
+// Queries shorter than two characters name nothing.
+export function findProject(entries, query) {
+  const q = String(query ?? '')
+    .trim()
+    .toLowerCase();
+  if (q.length < 2) return null;
+  const names = new Set(
+    entries.map((e) => e.project).filter((n) => n.toLowerCase().includes(q)),
+  );
+  for (const name of names) if (name.toLowerCase() === q) return name;
+  return names.size === 1 ? Array.from(names)[0] : null;
+}
+
+// Where to take the map to show a project: null if it's on shift at the
+// selected day and time, otherwise { day, minutes } for the start of its next
+// shift (or, after its last shift, its first), clamped to showcase hours.
+export function shiftToShow(entries, project, days, dayId, minutes) {
+  const order = new Map(days.map((d, i) => [d.id, i]));
+  const shifts = entries
+    .filter((e) => e.project === project)
+    .flatMap((e) => e.shifts)
+    .filter((s) => order.has(s.day))
+    .sort((a, b) => order.get(a.day) - order.get(b.day) || a.start - b.start);
+  if (shifts.length === 0) return null;
+  if (
+    shifts.some((s) => s.day === dayId && s.start <= minutes && minutes < s.end)
+  ) {
+    return null;
+  }
+  const now = order.get(dayId) ?? 0;
+  const next =
+    shifts.find(
+      (s) => order.get(s.day) > now || (s.day === dayId && s.start > minutes),
+    ) ?? shifts[0];
+  const day = days[order.get(next.day)];
+  return { day: next.day, minutes: clampToDay(day, next.start) };
+}
+
 // The next shift to start at a kiosk later the same day, or null.
 export function nextAtKiosk(entries, kiosk, dayId, minutes) {
   let next = null;

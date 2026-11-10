@@ -7,6 +7,7 @@ import {
   clampToDay,
   dayPeriods,
   findConflicts,
+  findProject,
   kioskStates,
   liveSelection,
   nextAtKiosk,
@@ -18,6 +19,7 @@ import {
   periodAt,
   resolveInitial,
   rowsFromCsv,
+  shiftToShow,
 } from '../src/components/PavilionMap/schedule.mjs';
 import { STANDS } from '../src/components/PavilionMap/layout.mjs';
 import {
@@ -433,5 +435,47 @@ describe('matchProjects', () => {
       assert.match(p.repo, /^https:\/\//);
       assert.ok(p.description, p.repo);
     }
+  });
+});
+
+describe('search', () => {
+  const { entries } = buildDirectory(data.rows, event);
+
+  it('names a project by full name or a unique match', () => {
+    assert.equal(findProject(entries, 'argo'), 'Argo');
+    assert.equal(findProject(entries, ' Cilium '), 'Cilium');
+    assert.equal(findProject(entries, 'tag dev'), 'TAG Developer Experience');
+    assert.equal(findProject(entries, 'kube'), null);
+    assert.equal(findProject(entries, 'c'), null);
+  });
+
+  it('jumps to the next shift when the project is not on now', () => {
+    // Cilium: Tue 3:00–7:30 PM, Wed 1:55–5:00 PM, Thu 12:25–2:00 PM.
+    assert.deepEqual(shiftToShow(entries, 'Cilium', days, 'tue', t(10, 45)), {
+      day: 'tue',
+      minutes: t(15),
+    });
+    assert.deepEqual(shiftToShow(entries, 'Cilium', days, 'wed', t(11)), {
+      day: 'wed',
+      minutes: t(13, 55),
+    });
+  });
+
+  it('stays put when the project is on now', () => {
+    assert.equal(shiftToShow(entries, 'Cilium', days, 'wed', t(14)), null);
+    assert.equal(shiftToShow(entries, 'Argo', days, 'tue', t(11)), null);
+  });
+
+  it('clamps an early start to opening time and wraps after the last shift', () => {
+    // Microcks: Thu 10:15–11:55 AM; the showcase opens at 10:30.
+    const first = { day: 'thu', minutes: t(10, 30) };
+    assert.deepEqual(
+      shiftToShow(entries, 'Microcks', days, 'tue', t(11)),
+      first,
+    );
+    assert.deepEqual(
+      shiftToShow(entries, 'Microcks', days, 'thu', t(13)),
+      first,
+    );
   });
 });

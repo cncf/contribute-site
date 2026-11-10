@@ -17,6 +17,7 @@ import {
   dayPeriods,
   dayRange,
   findDayParam,
+  findProject,
   formatTime,
   hhmmToMinutes,
   isOnShift,
@@ -28,6 +29,7 @@ import {
   periodAt,
   resolveInitial,
   rowsFromCsv,
+  shiftToShow,
 } from './schedule.mjs';
 import styles from './styles.module.css';
 
@@ -542,7 +544,23 @@ function ProjectFinder({ entries, query, setQuery, onJump, dayId, minutes }) {
         list="pavilion-project-names"
         placeholder="Find a project"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e) => {
+          const value = e.target.value;
+          setQuery(value);
+          // When the search names a new project that isn't on shift at the
+          // selected time, jump to its next shift. Only on a change of
+          // project, so the slider can still be moved while searching.
+          const project = findProject(entries, value);
+          if (!project || project === findProject(entries, query)) return;
+          const target = shiftToShow(
+            entries,
+            project,
+            event.days,
+            dayId,
+            minutes,
+          );
+          if (target) onJump(target.day, target.minutes);
+        }}
         onKeyDown={(e) => e.key === 'Escape' && setQuery('')}
       />
       <datalist id="pavilion-project-names">
