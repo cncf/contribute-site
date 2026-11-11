@@ -1,5 +1,7 @@
 import React, {
+  createContext,
   useCallback,
+  useContext,
   useEffect,
   useLayoutEffect,
   useMemo,
@@ -8,8 +10,8 @@ import React, {
 } from 'react';
 import Link from '@docusaurus/Link';
 import { useHistory, useLocation } from '@docusaurus/router';
-import data from '@site/src/data/pavilion-kiosks.json';
-import { GRID, LANDMARKS, STANDS } from './layout.mjs';
+import { EVENTS } from '@site/src/data/pavilion';
+import { floorLayout } from './layout.mjs';
 import {
   STEP_MINUTES,
   buildDirectory,
@@ -20,8 +22,10 @@ import {
   findProject,
   formatTime,
   hhmmToMinutes,
+  isArchived,
   isOnShift,
   kioskStates,
+  latestEvent,
   liveSelection,
   minutesToHhmm,
   nextAtKiosk,
@@ -33,25 +37,46 @@ import {
 } from './schedule.mjs';
 import styles from './styles.module.css';
 
-const { event } = data;
-// Each project's main repository, maturity and description, from the CNCF
-// landscape (npm run sync:pavilion). Projects without one aren't linked.
-const PROJECTS = data.projects ?? {};
-const repoOf = (name) => PROJECTS[name]?.repo ?? null;
-const SNAPSHOT = buildDirectory(data.rows, event);
-const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${event.sheetId}/gviz/tq?tqx=out:csv`;
+const CURRENT_EVENT = latestEvent(EVENTS);
 const REFRESH_MS = 15 * 60 * 1000;
 const TICK_MS = 60 * 1000;
+
+// Everything the map derives from one event's data file
+// (src/data/pavilion/<slug>.json), built once per event.
+const eventCache = new Map();
+function eventData(slug) {
+  if (!eventCache.has(slug)) {
+    const data = EVENTS[slug];
+    const { event } = data;
+    // Each project's main repository, maturity and description, from the
+    // CNCF landscape (npm run sync:pavilion). Projects without one aren't
+    // linked.
+    const projects = data.projects ?? {};
+    eventCache.set(slug, {
+      slug,
+      event,
+      syncedAt: data.syncedAt,
+      projects,
+      repoOf: (name) => projects[name]?.repo ?? null,
+      snapshot: buildDirectory(data.rows, event),
+      sheetUrl: event.sheetId
+        ? `https://docs.google.com/spreadsheets/d/${event.sheetId}/gviz/tq?tqx=out:csv`
+        : null,
+      dayById: Object.fromEntries(event.days.map((d) => [d.id, d])),
+      layout: floorLayout(data.floor),
+    });
+  }
+  return eventCache.get(slug);
+}
+
+const EventContext = createContext(null);
+const useEventData = () => useContext(EventContext);
 
 // The floor plan is laid out at least this wide and then scaled to fit the
 // window. When the window's height limits the scale, the layout widens to use
 // the spare width, up to MAX_WIDTH; the extra goes to the stand columns.
 const DESIGN_WIDTH = 1200;
 const MAX_WIDTH = 1800;
-// Columns 1-5 hold stands and share any extra width; the staff-area and
-// stage columns have fixed widths.
-const STAND_COLUMNS = GRID.columns - 2;
-const GRID_COLUMNS = `repeat(${STAND_COLUMNS}, minmax(0, 1fr)) 96px 34px`;
 // Below this scale the text is unreadable, so the map scrolls sideways instead.
 const MIN_SCALE = 0.55;
 const MAX_SCALE = 1.5;
@@ -61,8 +86,6 @@ const BOTTOM_GAP = 12;
 // useLayoutEffect warns during the server render, where it can't run anyway.
 const useIsomorphicLayoutEffect =
   typeof window === 'undefined' ? useEffect : useLayoutEffect;
-
-const dayById = Object.fromEntries(event.days.map((d) => [d.id, d]));
 
 // "Tue, Nov 10". The date is formatted as UTC noon so it can't shift a day.
 function shortDay(day) {
@@ -74,10 +97,10 @@ function shortDay(day) {
   });
 }
 
-function formatSynced(iso) {
+function formatSynced(iso, timeZone) {
   if (!iso) return 'bundled snapshot';
   return new Date(iso).toLocaleString('en-US', {
-    timeZone: event.timeZone,
+    timeZone,
     month: 'short',
     day: 'numeric',
     hour: 'numeric',
@@ -85,13 +108,13 @@ function formatSynced(iso) {
   });
 }
 
-function shiftLabel(shift) {
+function shiftLabel(shift, dayById) {
   const day = dayById[shift.day];
   return `${day.weekday.slice(0, 3)} ${formatTime(shift.start)} – ${formatTime(shift.end)}`;
 }
 
 // Reads ?day=wed&time=14:00 from the URL, if present.
-function selectionFromSearch(search) {
+function selectionFromSearch(search, event) {
   const params = new URLSearchParams(search);
   const day = params.get('day');
   const time = params.get('time');
@@ -101,19 +124,23 @@ function selectionFromSearch(search) {
   return resolveInitial({ day, time, now: null, event });
 }
 
-function useDirectory() {
+// The kiosk directory: the bundled snapshot, replaced by the live sheet when
+// it loads. An archived event (its last day is over) never loads the sheet,
+// so its map keeps the final schedule even if the sheet is later reused.
+function useDirectory({ event, snapshot, sheetUrl }) {
   const [state, setState] = useState({
-    directory: SNAPSHOT,
+    directory: snapshot,
     source: 'snapshot',
     fetchedAt: null,
   });
   useEffect(() => {
+    if (!sheetUrl || isArchived(event, new Date())) return undefined;
     let cancelled = false;
     async function refresh() {
       try {
-        const response = await fetch(SHEET_CSV_URL, { cache: 'no-store' });
+        const response = await fetch(sheetUrl, { cache: 'no-store' });
         if (!response.ok) return;
-        const rows = rowsFromCsv(await response.text());
+        const rows = rowsFromCsv(await response.text(), event.columns);
         if (!rows || rows.length === 0) return;
         const directory = buildDirectory(rows, event);
         if (directory.entries.length === 0 || cancelled) return;
@@ -128,7 +155,7 @@ function useDirectory() {
       cancelled = true;
       clearInterval(id);
     };
-  }, []);
+  }, [event, sheetUrl]);
   return state;
 }
 
@@ -194,9 +221,9 @@ const isSigSubproject = (name) => /\(SIG Subproject\)/i.test(name);
 const displayName = (name) => name.replace(SIG_SUBPROJECT, '');
 
 // "SIG Subproject" or "CNCF Graduated project", or null when unknown.
-function projectKind(name) {
+function projectKind(name, projects) {
   if (isSigSubproject(name)) return 'SIG Subproject';
-  const maturity = PROJECTS[name]?.maturity;
+  const maturity = projects[name]?.maturity;
   return maturity
     ? `CNCF ${maturity[0].toUpperCase()}${maturity.slice(1)} project`
     : null;
@@ -205,6 +232,7 @@ function projectKind(name) {
 // One line under the plan about the kiosk the pointer or focus is on: the
 // project's name, what kind of project it is, and its landscape description.
 function ProjectSummary({ name, hasSigSubprojects }) {
+  const { projects } = useEventData();
   if (!name) {
     return (
       <p className={`${styles.summary} ${styles.summaryHint}`}>
@@ -220,8 +248,8 @@ function ProjectSummary({ name, hasSigSubprojects }) {
       </p>
     );
   }
-  const kind = projectKind(name);
-  const description = PROJECTS[name]?.description;
+  const kind = projectKind(name, projects);
+  const description = projects[name]?.description;
   return (
     <p
       className={styles.summary}
@@ -278,6 +306,7 @@ const shortUrl = (url) => url.replace(/^https?:\/\//, '').replace(/\/$/, '');
 // A kiosk links to the repository of the project it shows: the project on
 // shift, or the next one between shifts. Double bookings aren't linked.
 function Kiosk({ stand, side, slot, next, highlighted, onActivate }) {
+  const { repoOf } = useEventData();
   const status = slot?.status ?? 'idle';
   const projects = slot?.projects ?? [];
   const { text, description } = kioskText(status, projects, next);
@@ -315,7 +344,7 @@ function Kiosk({ stand, side, slot, next, highlighted, onActivate }) {
 // showcase, so kiosks don't change size as the time changes. The texts are
 // laid out, hidden, at the width a kiosk has in the narrowest layout
 // (DESIGN_WIDTH), and the tallest is used.
-function useKioskHeight(floorRef, probeRef, states) {
+function useKioskHeight(floorRef, probeRef, states, standColumns) {
   const [height, setHeight] = useState(null);
   useIsomorphicLayoutEffect(() => {
     const floor = floorRef.current;
@@ -327,7 +356,7 @@ function useKioskHeight(floorRef, probeRef, states) {
       if (cancelled || !kiosk) return;
       // Extra layout width is shared by the stand columns, two kiosks each.
       const extra = floor.parentElement.offsetWidth - DESIGN_WIDTH;
-      const width = kiosk.offsetWidth - extra / (2 * STAND_COLUMNS);
+      const width = kiosk.offsetWidth - extra / (2 * standColumns);
       probe.style.width = `${Math.floor(width)}px`;
       let tallest = 0;
       for (const el of probe.children) {
@@ -340,7 +369,7 @@ function useKioskHeight(floorRef, probeRef, states) {
     return () => {
       cancelled = true;
     };
-  }, [floorRef, probeRef, states]);
+  }, [floorRef, probeRef, states, standColumns]);
   return height;
 }
 
@@ -348,10 +377,16 @@ const FloorPlan = React.forwardRef(function FloorPlan(
   { occupancy, entries, days, dayId, minutes, highlight, style },
   ref,
 ) {
+  const { layout } = useEventData();
   const states = useMemo(() => kioskStates(entries, days), [entries, days]);
   const floorRef = useRef(null);
   const probeRef = useRef(null);
-  const kioskHeight = useKioskHeight(floorRef, probeRef, states);
+  const kioskHeight = useKioskHeight(
+    floorRef,
+    probeRef,
+    states,
+    layout.standColumns,
+  );
   const hasSigSubprojects = entries.some((e) => isSigSubproject(e.project));
   // The project whose summary is shown under the plan.
   const [active, setActive] = useState(null);
@@ -379,11 +414,11 @@ const FloorPlan = React.forwardRef(function FloorPlan(
           if (!e.currentTarget.contains(e.relatedTarget)) setActive(null);
         }}
         style={{
-          gridTemplateColumns: GRID_COLUMNS,
+          gridTemplateColumns: layout.gridColumns,
           '--pm-kiosk-height': kioskHeight ? `${kioskHeight}px` : undefined,
         }}
       >
-        {STANDS.map(({ stand, row, col }) => (
+        {layout.stands.map(({ stand, row, col }) => (
           <div
             key={stand}
             className={styles.stand}
@@ -417,7 +452,7 @@ const FloorPlan = React.forwardRef(function FloorPlan(
             </div>
           </div>
         ))}
-        {LANDMARKS.map((l) => (
+        {layout.landmarks.map((l) => (
           <div
             key={l.id}
             className={`${styles.landmark} ${styles[l.kind]}`}
@@ -518,6 +553,7 @@ function TimeSlider({ day, periods, minutes, onChange }) {
 }
 
 function ProjectFinder({ entries, query, setQuery, onJump, dayId, minutes }) {
+  const { event, dayById } = useEventData();
   const names = useMemo(
     () =>
       // Array.from, not [...set]: the site's Babel config compiles spreads in
@@ -614,7 +650,7 @@ function ProjectFinder({ entries, query, setQuery, onJump, dayId, minutes }) {
                         className={styles.linkButton}
                         onClick={() => onJump(s.day, s.start)}
                       >
-                        {shiftLabel(s)}
+                        {shiftLabel(s, dayById)}
                       </button>
                     </React.Fragment>
                   ))}
@@ -629,26 +665,56 @@ function ProjectFinder({ entries, query, setQuery, onJump, dayId, minutes }) {
   );
 }
 
-function SourceNote({ source, fetchedAt }) {
+// The event's name and where the schedule comes from. An archived event shows
+// its final saved schedule.
+function SourceNote({ source, fetchedAt, archived }) {
+  const { event, syncedAt } = useEventData();
+  let when;
+  if (source === 'live') {
+    when = ` (live, ${fetchedAt.toLocaleTimeString('en-US', {
+      timeZone: event.timeZone,
+      hour: 'numeric',
+      minute: '2-digit',
+    })})`;
+  } else if (archived) {
+    when = ` (final schedule, saved ${formatSynced(syncedAt, event.timeZone)})`;
+  } else {
+    when = ` (as of ${formatSynced(syncedAt, event.timeZone)})`;
+  }
   return (
     <>
+      <strong>{event.name}</strong>
+      {' · '}
       Source:{' '}
       <Link to={event.directoryUrl}>Project Pavilion Kiosk Directory</Link>
-      {source === 'live'
-        ? ` (live, ${fetchedAt.toLocaleTimeString('en-US', {
-            timeZone: event.timeZone,
-            hour: 'numeric',
-            minute: '2-digit',
-          })})`
-        : ` (as of ${formatSynced(data.syncedAt)})`}
+      {when}
     </>
   );
 }
 
-export default function PavilionMap({ day: dayProp, time: timeProp }) {
+// <PavilionMap /> shows the current event (the one whose last day is
+// latest); <PavilionMap event="kubecon-na-2026" /> shows a given event. The
+// events are listed in src/data/pavilion/index.js.
+export default function PavilionMap({ event: slug, day, time }) {
+  const key = slug ?? CURRENT_EVENT;
+  if (!EVENTS[key]) {
+    throw new Error(
+      `PavilionMap: unknown event "${key}". Add it to src/data/pavilion/index.js.`,
+    );
+  }
+  return (
+    <EventContext.Provider value={eventData(key)}>
+      <PavilionMapView key={key} day={day} time={time} />
+    </EventContext.Provider>
+  );
+}
+
+function PavilionMapView({ day: dayProp, time: timeProp }) {
+  const eventInfo = useEventData();
+  const { event, dayById, repoOf } = eventInfo;
   const location = useLocation();
   const history = useHistory();
-  const { directory, source, fetchedAt } = useDirectory();
+  const { directory, source, fetchedAt } = useDirectory(eventInfo);
   const { entries, warnings } = directory;
 
   // The server render and first client render use only the props so that
@@ -660,15 +726,19 @@ export default function PavilionMap({ day: dayProp, time: timeProp }) {
   const [touched, setTouched] = useState(false);
   const [liveNow, setLiveNow] = useState(null);
   const [query, setQuery] = useState('');
+  // Known only on the client, so the server render doesn't depend on when
+  // the site was built.
+  const [archived, setArchived] = useState(false);
 
   useEffect(() => {
-    const fromUrl = selectionFromSearch(location.search);
+    const fromUrl = selectionFromSearch(location.search, event);
     if (fromUrl) {
       setSelection(fromUrl);
     } else if (dayProp == null && timeProp == null) {
       setSelection(resolveInitial({ now: new Date(), event }));
     }
     setLiveNow(liveSelection(event, new Date()));
+    setArchived(isArchived(event, new Date()));
     setHydrated(true);
     // Only read the query string and props on first load.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -872,20 +942,22 @@ export default function PavilionMap({ day: dayProp, time: timeProp }) {
             minutes={selection.minutes}
             onChange={(minutes) => choose({ minutes })}
           />
-          <button
-            type="button"
-            className={styles.nowButton}
-            aria-pressed={!!selection.live}
-            disabled={!liveNow}
-            title={
-              liveNow
-                ? 'Follow the current time'
-                : 'The Project Pavilion is closed right now'
-            }
-            onClick={goLive}
-          >
-            {selection.live ? '● Live' : 'Now'}
-          </button>
+          {!archived && (
+            <button
+              type="button"
+              className={styles.nowButton}
+              aria-pressed={!!selection.live}
+              disabled={!liveNow}
+              title={
+                liveNow
+                  ? 'Follow the current time'
+                  : 'The Project Pavilion is closed right now'
+              }
+              onClick={goLive}
+            >
+              {selection.live ? '● Live' : 'Now'}
+            </button>
+          )}
           <ProjectFinder
             entries={entries}
             query={query}
@@ -896,7 +968,11 @@ export default function PavilionMap({ day: dayProp, time: timeProp }) {
           />
         </div>
         <p className={styles.source}>
-          <SourceNote source={source} fetchedAt={fetchedAt} />
+          <SourceNote
+            source={source}
+            fetchedAt={fetchedAt}
+            archived={archived}
+          />
           {' · '}
           {event.timeZoneLabel}
           {warnings.length > 0 && (

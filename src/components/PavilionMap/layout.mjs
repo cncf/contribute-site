@@ -1,49 +1,43 @@
-// Floor plan of the Project Pavilion, mirroring the official static map.
-// Grid: columns 1-5 hold stands, column 6 holds staff areas, column 7 holds the
-// stage. Rows run top to bottom. Each stand has an A and a B kiosk.
+// Turns an event's `floor` block (src/data/pavilion/<event>.json) into the
+// grid the map draws. The floor is a CSS grid: the first columns hold stands,
+// one stand per cell, and each stand has an A and a B kiosk. `rows` lists the
+// stand numbers in each row, left to right. Any `extraColumns` (CSS widths)
+// follow the stand columns, for staff areas or a stage. `landmarks` are
+// labelled areas placed with CSS grid-row / grid-column values, so they can
+// span several rows or columns.
+//
+// Example:
+//   {
+//     "rows": [[1, 2, 3], [4, 5, 6]],
+//     "extraColumns": ["96px"],
+//     "landmarks": [
+//       { "id": "stage", "label": "Stage", "row": "1 / 3", "col": "4",
+//         "kind": "stage" }
+//     ]
+//   }
+//
+// Landmark `kind` is one of `staff`, `space` or `stage`; it sets the colour.
 
-export const GRID = { columns: 7, rows: 4 };
+export const LANDMARK_KINDS = ['staff', 'space', 'stage'];
 
-const ROWS = [
-  [1, 2, 3, 4, 5],
-  [6, 7, 8, 9],
-  [10, 11, 12, 13],
-  [14, 15, 16, 17, 18],
-];
+export function floorLayout(floor) {
+  const rows = floor?.rows ?? [];
+  const standColumns = Math.max(1, ...rows.map((r) => r.length));
+  const extraColumns = floor?.extraColumns ?? [];
+  return {
+    standColumns,
+    gridColumns: [
+      `repeat(${standColumns}, minmax(0, 1fr))`,
+      ...extraColumns,
+    ].join(' '),
+    stands: rows.flatMap((stands, r) =>
+      stands.map((stand, c) => ({ stand, row: r + 1, col: c + 1 })),
+    ),
+    landmarks: floor?.landmarks ?? [],
+  };
+}
 
-export const STANDS = ROWS.flatMap((stands, r) =>
-  stands.map((stand, c) => ({ stand, row: r + 1, col: c + 1 })),
-);
-
-// Grid placement uses CSS grid-row / grid-column shorthand values.
-export const LANDMARKS = [
-  { id: 'job-board', label: 'Job Board', row: '1', col: '6', kind: 'staff' },
-  {
-    id: 'lounge',
-    label: 'Project Pavilion Lounge',
-    row: '2 / 4',
-    col: '5',
-    kind: 'space',
-  },
-  {
-    id: 'projects-team',
-    label: 'CNCF Projects Team',
-    row: '2 / 4',
-    col: '6',
-    kind: 'staff',
-  },
-  {
-    id: 'sticker-wall',
-    label: 'Sticker Wall',
-    row: '4',
-    col: '6',
-    kind: 'staff',
-  },
-  {
-    id: 'stage',
-    label: 'Project Pavilion Stage',
-    row: '1 / 5',
-    col: '7',
-    kind: 'stage',
-  },
-];
+// Every stand number on the floor.
+export function floorStands(floor) {
+  return new Set((floor?.rows ?? []).flat());
+}

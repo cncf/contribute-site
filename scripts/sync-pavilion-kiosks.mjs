@@ -1,16 +1,21 @@
 #!/usr/bin/env node
-// Refresh the Project Pavilion kiosk snapshot in src/data/pavilion-kiosks.json
-// from the kiosk directory Google Sheet embedded on the KubeCon event page,
+// Refresh an event's Project Pavilion kiosk snapshot in
+// src/data/pavilion/<event>.json from the kiosk directory Google Sheet
+// embedded on the KubeCon event page,
 // and each project's repository, maturity and description from the CNCF
 // landscape. A project the landscape has no description for gets its GitHub
 // repository's description (set GITHUB_TOKEN to avoid GitHub's rate limit).
-// Keeps the `event` and `repoLookup` blocks; replaces `rows`, `syncedAt` and
-// `projects`. If the landscape can't be fetched, the previous `projects` are
-// kept.
+// Keeps the `event`, `floor` and `repoLookup` blocks; replaces `rows`,
+// `syncedAt` and `projects`. If the landscape can't be fetched, the previous
+// `projects` are kept.
 //
-// Usage: npm run sync:pavilion
+// Usage: npm run sync:pavilion -- [event] [--force]
+//
+// With no event, syncs the event whose last day is latest. An event whose
+// last day is over is archived: its snapshot is the final schedule, so it is
+// only synced with --force.
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
@@ -19,8 +24,11 @@ import {
   buildDirectory,
   findConflicts,
   formatTime,
+  isArchived,
+  latestEvent,
   rowsFromCsv,
 } from '../src/components/PavilionMap/schedule.mjs';
+import { floorStands } from '../src/components/PavilionMap/layout.mjs';
 import {
   githubRepo,
   landscapeItems,
@@ -30,10 +38,38 @@ import {
 const LANDSCAPE_URL =
   'https://raw.githubusercontent.com/cncf/landscape/master/landscape.yml';
 
-const dataFile = fileURLToPath(
-  new URL('../src/data/pavilion-kiosks.json', import.meta.url),
+const dataDir = new URL('../src/data/pavilion/', import.meta.url);
+const events = Object.fromEntries(
+  readdirSync(dataDir)
+    .filter((name) => name.endsWith('.json'))
+    .map((name) => [
+      name.slice(0, -'.json'.length),
+      JSON.parse(readFileSync(new URL(name, dataDir), 'utf8')),
+    ]),
 );
-const data = JSON.parse(readFileSync(dataFile, 'utf8'));
+
+const args = process.argv.slice(2);
+const force = args.includes('--force');
+const slug = args.find((a) => !a.startsWith('--')) ?? latestEvent(events);
+if (!events[slug]) {
+  console.error(
+    `No event ${JSON.stringify(slug)}. Events: ${Object.keys(events).join(', ')}`,
+  );
+  process.exit(1);
+}
+const dataFile = fileURLToPath(new URL(`${slug}.json`, dataDir));
+const data = events[slug];
+if (isArchived(data.event) && !force) {
+  console.error(
+    `${data.event.name} is over, so its snapshot is the final schedule. Run with --force to sync it anyway.`,
+  );
+  process.exit(1);
+}
+if (!data.event.sheetId) {
+  console.error(`${slug} has no event.sheetId to sync from.`);
+  process.exit(1);
+}
+console.log(`Syncing ${data.event.name} (${slug})`);
 const url = `https://docs.google.com/spreadsheets/d/${data.event.sheetId}/gviz/tq?tqx=out:csv`;
 
 const response = await fetch(url);
@@ -41,7 +77,7 @@ if (!response.ok) {
   console.error(`Fetching ${url} failed: HTTP ${response.status}`);
   process.exit(1);
 }
-const rows = rowsFromCsv(await response.text());
+const rows = rowsFromCsv(await response.text(), data.event.columns);
 if (!rows || rows.length === 0) {
   console.error(
     'The sheet is missing the expected columns or has no rows; snapshot not updated.',
@@ -52,6 +88,13 @@ if (!rows || rows.length === 0) {
 const { entries, warnings } = buildDirectory(rows, data.event);
 for (const w of warnings) {
   console.warn(`warning: ${w.project}: ${w.reason}: ${JSON.stringify(w.text)}`);
+}
+const stands = floorStands(data.floor);
+const offFloor = entries.filter((e) => !stands.has(e.stand));
+for (const e of offFloor) {
+  console.warn(
+    `warning: ${e.project}: kiosk ${e.kiosk} is not on the floor plan; add stand ${e.stand} to floor.rows`,
+  );
 }
 const conflicts = findConflicts(entries);
 for (const c of conflicts) {
