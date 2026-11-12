@@ -46,7 +46,7 @@ Anthropic also requires that you:
 - **End:** If you're on the Free plan, your account returns to Free after six
   months. If you currently pay for a different Claude plan, there are a few
   extra steps. We'll send the full details with your code. See the
-  [Claude Ultra FAQ](/projects/claude-ultra-faq).
+  [Claude Ultra FAQ](/resources/services/claude-ultra-faq).
 
 ## How to request a code
 

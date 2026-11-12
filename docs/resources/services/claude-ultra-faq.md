@@ -3,7 +3,6 @@ title: Claude Ultra for CNCF Maintainers FAQ
 description:
   What happens when you redeem a Claude Ultra code and already have a Claude
   plan
-sidebar_position: 11
 ---
 
 Anthropic is giving CNCF project maintainers six months of Claude Ultra at no
