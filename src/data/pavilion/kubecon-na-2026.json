@@ -94,7 +94,7 @@
       "Gateway API (SIG Subproject)": "https://github.com/kubernetes-sigs/gateway-api"
     }
   },
-  "syncedAt": "2026-11-10T05:41:19.234Z",
+  "syncedAt": "2026-11-13T04:16:16.829Z",
   "rows": [
     {
       "project": "Argo",
@@ -388,7 +388,7 @@
     },
     {
       "project": "Microcks",
-      "schedule": "Thursday 10:15 AM - 11:55 AM",
+      "schedule": "Tuesday 3:00 PM - 7:30 PM\nThursday 10:15 AM - 11:55 AM",
       "kiosk": "P-4B"
     },
     {

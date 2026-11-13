@@ -587,15 +587,14 @@ describe('search', () => {
   });
 
   it('clamps an early start to opening time and wraps after the last shift', () => {
-    // Microcks: Thu 10:15–11:55 AM; the showcase opens at 10:30.
-    const first = { day: 'thu', minutes: t(10, 30) };
-    assert.deepEqual(
-      shiftToShow(entries, 'Microcks', days, 'tue', t(11)),
-      first,
-    );
-    assert.deepEqual(
-      shiftToShow(entries, 'Microcks', days, 'thu', t(13)),
-      first,
-    );
+    // Microcks: Tue 3:00–7:30 PM, Thu 10:15–11:55 AM; Thursday opens at 10:30.
+    assert.deepEqual(shiftToShow(entries, 'Microcks', days, 'wed', t(11)), {
+      day: 'thu',
+      minutes: t(10, 30),
+    });
+    assert.deepEqual(shiftToShow(entries, 'Microcks', days, 'thu', t(13)), {
+      day: 'tue',
+      minutes: t(15),
+    });
   });
 });
