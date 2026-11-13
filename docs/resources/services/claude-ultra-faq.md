@@ -87,3 +87,10 @@ shows Free before you redeem.
 ## I'm on a Team or Enterprise plan. Can I redeem?
 
 No. The code is refused on Team and Enterprise accounts, and it stays valid.
+
+## I'm still not sure what to do. What's the safest option?
+
+Create a new Free account with a different email address, and redeem the code
+there. Your existing account and its plan stay exactly as they are.
+
+After six months, the new account returns to Free and you are not billed.
