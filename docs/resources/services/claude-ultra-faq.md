@@ -94,3 +94,6 @@ Create a new Free account with a different email address, and redeem the code
 there. Your existing account and its plan stay exactly as they are.
 
 After six months, the new account returns to Free and you are not billed.
+
+A code works only once, and we can't issue a replacement. Before you redeem,
+check that you are signed in to the account you want to use.
