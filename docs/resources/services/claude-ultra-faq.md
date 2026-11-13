@@ -13,6 +13,9 @@ who's eligible and how to request a code.
 This page covers what happens when you redeem a code, depending on the Claude
 plan you have today.
 
+A code works only once, and we can't issue a replacement. Before you redeem,
+check that you are signed in to the account you want to use.
+
 ## I'm on the Free plan. What happens?
 
 Ultra starts when you redeem. After six months, your account returns to Free and
