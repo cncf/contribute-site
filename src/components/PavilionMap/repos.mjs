@@ -2,7 +2,7 @@
 // (https://github.com/cncf/landscape, landscape.yml): its main repository
 // (`repo_url`), maturity (`project`: graduated, incubating, sandbox) and
 // description. Used by scripts/sync-pavilion-kiosks.mjs; the result is saved
-// in src/data/pavilion-kiosks.json so the browser doesn't fetch the landscape.
+// in src/data/pavilion/<event>.json so the browser doesn't fetch the landscape.
 
 // Every item in a parsed landscape.yml.
 export function landscapeItems(landscape) {

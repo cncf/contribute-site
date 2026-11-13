@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 
 import {
   buildDirectory,
@@ -8,7 +8,9 @@ import {
   dayPeriods,
   findConflicts,
   findProject,
+  isArchived,
   kioskStates,
+  latestEvent,
   liveSelection,
   nextAtKiosk,
   nowInZone,
@@ -21,19 +23,29 @@ import {
   rowsFromCsv,
   shiftToShow,
 } from '../src/components/PavilionMap/schedule.mjs';
-import { STANDS } from '../src/components/PavilionMap/layout.mjs';
+import {
+  LANDMARK_KINDS,
+  floorLayout,
+  floorStands,
+} from '../src/components/PavilionMap/layout.mjs';
 import {
   githubRepo,
   landscapeItems,
   matchProjects,
 } from '../src/components/PavilionMap/repos.mjs';
 
-const data = JSON.parse(
-  readFileSync(
-    new URL('../src/data/pavilion-kiosks.json', import.meta.url),
-    'utf8',
-  ),
+// Every event's data file, keyed by slug. KubeCon NA 2026 is also the
+// fixture for the tests below that need real data: past events don't change.
+const dataDir = new URL('../src/data/pavilion/', import.meta.url);
+const EVENTS = Object.fromEntries(
+  readdirSync(dataDir)
+    .filter((name) => name.endsWith('.json'))
+    .map((name) => [
+      name.slice(0, -'.json'.length),
+      JSON.parse(readFileSync(new URL(name, dataDir), 'utf8')),
+    ]),
 );
+const data = EVENTS['kubecon-na-2026'];
 const { event } = data;
 const { days } = event;
 const t = (h, m = 0) => h * 60 + m;
@@ -62,6 +74,25 @@ describe('rowsFromCsv', () => {
         kiosk: 'P-9A',
       },
     ]);
+  });
+
+  it('accepts renamed columns', () => {
+    const csv = 'Project,Shifts,Kiosk\nCilium,Tuesday 3:00 PM - 7:30 PM,P-9A\n';
+    assert.equal(rowsFromCsv(csv), null);
+    assert.deepEqual(
+      rowsFromCsv(csv, {
+        project: 'Project',
+        schedule: 'Shifts',
+        kiosk: 'Kiosk',
+      }),
+      [
+        {
+          project: 'Cilium',
+          schedule: 'Tuesday 3:00 PM - 7:30 PM',
+          kiosk: 'P-9A',
+        },
+      ],
+    );
   });
 
   it('returns null when a required column is missing', () => {
@@ -138,11 +169,6 @@ describe('snapshot', () => {
     assert.ok(entries.every((e) => e.shifts.length > 0));
   });
 
-  it('only uses stands that are on the floor plan', () => {
-    const stands = new Set(STANDS.map((s) => s.stand));
-    assert.ok(entries.every((e) => stands.has(e.stand)));
-  });
-
   it('places projects by day and time', () => {
     const wed2pm = occupancyAt(entries, 'wed', t(14));
     assert.deepEqual(wed2pm['9A'].projects, ['Cilium']);
@@ -170,6 +196,100 @@ describe('snapshot', () => {
       occupancyAt(entries, 'tue', t(14, 30))['18B'].projects,
       [],
     );
+  });
+});
+
+describe('every event data file', () => {
+  for (const [slug, d] of Object.entries(EVENTS)) {
+    describe(slug, () => {
+      const { entries, warnings } = buildDirectory(d.rows, d.event);
+
+      it('has an event with days in order', () => {
+        assert.ok(d.event.name && d.event.timeZone, 'name and timeZone');
+        const dates = d.event.days.map((day) => day.date);
+        assert.ok(dates.length > 0);
+        assert.deepEqual(dates, [...dates].sort());
+      });
+
+      it('parses every row without warnings', () => {
+        assert.deepEqual(warnings, []);
+      });
+
+      it('only uses stands that are on its floor plan', () => {
+        const stands = floorStands(d.floor);
+        const off = entries.filter((e) => !stands.has(e.stand));
+        assert.deepEqual(
+          off.map((e) => `${e.project}: ${e.kiosk}`),
+          [],
+        );
+      });
+
+      it('lists each stand on the floor once', () => {
+        const all = d.floor.rows.flat();
+        assert.equal(new Set(all).size, all.length);
+      });
+
+      it('uses known landmark kinds', () => {
+        for (const l of d.floor.landmarks ?? []) {
+          assert.ok(LANDMARK_KINDS.includes(l.kind), `${l.id}: ${l.kind}`);
+        }
+      });
+    });
+  }
+
+  it('are all listed in src/data/pavilion/index.js', () => {
+    const registry = readFileSync(new URL('index.js', dataDir), 'utf8');
+    for (const slug of Object.keys(EVENTS)) {
+      assert.ok(registry.includes(`'./${slug}.json'`), slug);
+    }
+  });
+});
+
+describe('floorLayout', () => {
+  it('places stands by row and adds the extra columns', () => {
+    const layout = floorLayout({
+      rows: [[1, 2, 3], [4]],
+      extraColumns: ['96px', '34px'],
+      landmarks: [{ id: 'x', label: 'X', row: '1', col: '4', kind: 'staff' }],
+    });
+    assert.equal(layout.standColumns, 3);
+    assert.equal(layout.gridColumns, 'repeat(3, minmax(0, 1fr)) 96px 34px');
+    assert.deepEqual(layout.stands, [
+      { stand: 1, row: 1, col: 1 },
+      { stand: 2, row: 1, col: 2 },
+      { stand: 3, row: 1, col: 3 },
+      { stand: 4, row: 2, col: 1 },
+    ]);
+    assert.equal(layout.landmarks.length, 1);
+  });
+
+  it('matches the NA 2026 floor', () => {
+    const layout = floorLayout(data.floor);
+    assert.equal(layout.stands.length, 18);
+    assert.equal(layout.gridColumns, 'repeat(5, minmax(0, 1fr)) 96px 34px');
+  });
+});
+
+describe('events over time', () => {
+  it('archives an event once its last day is over in its time zone', () => {
+    // Thursday Nov 12, 23:30 MST is still the last day.
+    assert.equal(isArchived(event, new Date('2026-11-13T06:30:00Z')), false);
+    // Friday Nov 13, 00:30 MST.
+    assert.equal(isArchived(event, new Date('2026-11-13T07:30:00Z')), true);
+    assert.equal(isArchived(event, new Date('2026-11-10T18:00:00Z')), false);
+  });
+
+  it('picks the event with the latest last day as current', () => {
+    const at = (date) => ({ event: { days: [{ date }] } });
+    assert.equal(
+      latestEvent({
+        'kubecon-na-2026': at('2026-11-12'),
+        'kubecon-eu-2027': at('2027-03-25'),
+        'kubecon-eu-2026': at('2026-03-26'),
+      }),
+      'kubecon-eu-2027',
+    );
+    assert.equal(latestEvent({}), null);
   });
 });
 
@@ -467,15 +587,14 @@ describe('search', () => {
   });
 
   it('clamps an early start to opening time and wraps after the last shift', () => {
-    // Microcks: Thu 10:15–11:55 AM; the showcase opens at 10:30.
-    const first = { day: 'thu', minutes: t(10, 30) };
-    assert.deepEqual(
-      shiftToShow(entries, 'Microcks', days, 'tue', t(11)),
-      first,
-    );
-    assert.deepEqual(
-      shiftToShow(entries, 'Microcks', days, 'thu', t(13)),
-      first,
-    );
+    // Microcks: Tue 3:00–7:30 PM, Thu 10:15–11:55 AM; Thursday opens at 10:30.
+    assert.deepEqual(shiftToShow(entries, 'Microcks', days, 'wed', t(11)), {
+      day: 'thu',
+      minutes: t(10, 30),
+    });
+    assert.deepEqual(shiftToShow(entries, 'Microcks', days, 'thu', t(13)), {
+      day: 'tue',
+      minutes: t(15),
+    });
   });
 });

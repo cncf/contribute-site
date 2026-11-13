@@ -32,6 +32,52 @@
       }
     ]
   },
+  "floor": {
+    "rows": [
+      [1, 2, 3, 4, 5],
+      [6, 7, 8, 9],
+      [10, 11, 12, 13],
+      [14, 15, 16, 17, 18]
+    ],
+    "extraColumns": ["96px", "34px"],
+    "landmarks": [
+      {
+        "id": "job-board",
+        "label": "Job Board",
+        "row": "1",
+        "col": "6",
+        "kind": "staff"
+      },
+      {
+        "id": "lounge",
+        "label": "Project Pavilion Lounge",
+        "row": "2 / 4",
+        "col": "5",
+        "kind": "space"
+      },
+      {
+        "id": "projects-team",
+        "label": "CNCF Projects Team",
+        "row": "2 / 4",
+        "col": "6",
+        "kind": "staff"
+      },
+      {
+        "id": "sticker-wall",
+        "label": "Sticker Wall",
+        "row": "4",
+        "col": "6",
+        "kind": "staff"
+      },
+      {
+        "id": "stage",
+        "label": "Project Pavilion Stage",
+        "row": "1 / 5",
+        "col": "7",
+        "kind": "stage"
+      }
+    ]
+  },
   "repoLookup": {
     "aliases": {
       "Cadence": "Cadence Workflow",
@@ -48,7 +94,7 @@
       "Gateway API (SIG Subproject)": "https://github.com/kubernetes-sigs/gateway-api"
     }
   },
-  "syncedAt": "2026-11-10T05:41:19.234Z",
+  "syncedAt": "2026-11-13T04:16:16.829Z",
   "rows": [
     {
       "project": "Argo",
@@ -342,7 +388,7 @@
     },
     {
       "project": "Microcks",
-      "schedule": "Thursday 10:15 AM - 11:55 AM",
+      "schedule": "Tuesday 3:00 PM - 7:30 PM\nThursday 10:15 AM - 11:55 AM",
       "kiosk": "P-4B"
     },
     {

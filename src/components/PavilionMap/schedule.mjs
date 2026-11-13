@@ -59,13 +59,14 @@ export function parseCsv(text) {
 }
 
 // Map sheet rows to { project, schedule, kiosk } by header name. Returns null
-// when a required column is missing.
-export function rowsFromCsv(text) {
+// when a required column is missing. An event can rename the headers with
+// `event.columns` (any of project, schedule, kiosk); the rest keep COLUMNS.
+export function rowsFromCsv(text, columns = COLUMNS) {
   const [header, ...body] = parseCsv(text.replace(/^﻿/, ''));
   if (!header) return null;
   const names = header.map((h) => h.trim());
   const index = {};
-  for (const [key, name] of Object.entries(COLUMNS)) {
+  for (const [key, name] of Object.entries({ ...COLUMNS, ...columns })) {
     index[key] = names.indexOf(name);
     if (index[key] === -1) return null;
   }
@@ -351,6 +352,25 @@ export function liveSelection(event, now) {
   const { open, close } = dayBounds(day);
   if (minutes < open || minutes >= close) return null;
   return { day: day.id, minutes };
+}
+
+// True once the event's last showcase day is over in the event's time zone.
+// An archived event's map shows its saved snapshot only: the directory sheet
+// may be edited or reused after the event.
+export function isArchived(event, now = new Date()) {
+  const last = event.days[event.days.length - 1];
+  return nowInZone(event.timeZone, now).date > last.date;
+}
+
+// The key of the event whose last showcase day is latest, from
+// { key: { event } }: the event the main map page shows.
+export function latestEvent(events) {
+  let best = null;
+  for (const [key, data] of Object.entries(events)) {
+    const last = data.event.days[data.event.days.length - 1].date;
+    if (best === null || last > best.last) best = { key, last };
+  }
+  return best?.key ?? null;
 }
 
 // Choose the initial selection. Explicit day/time (URL query or component
