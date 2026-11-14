@@ -32,7 +32,8 @@ Projects should define the inactivity window in governance documents.
 1. Open a transparent discussion in the project communication channel.
 2. Confirm status change with the maintainer when possible.
 3. Record the decision in project governance and maintainer-list docs.
-4. Update CNCF maintainer records when required.
+4. Update CNCF maintainer records in the project's `.project/maintainers.yaml`
+   file.
 5. Announce the transition and thank the maintainer publicly.
 
 ## Recognition and Continuity
@@ -53,8 +54,8 @@ defined for appointing active maintainers and document the transition.
 Projects can adapt this language:
 
 "Maintainers who step back from active responsibilities may be listed as
-Emeritus Maintainers. Emeritus Maintainers are recognized for prior service,
-are not expected to perform routine maintainer duties, and may return to active
+Emeritus Maintainers. Emeritus Maintainers are recognized for prior service, are
+not expected to perform routine maintainer duties, and may return to active
 status through the documented maintainer appointment process."
 
 ## Related Guidance
@@ -66,5 +67,6 @@ status through the documented maintainer appointment process."
 
 ## External CNCF References
 
-- [CNCF Project Maintainers List](https://github.com/cncf/foundation/blob/main/project-maintainers.csv)
+- [CNCF .project Maintainers List](https://github.com/cncf/foundation/blob/main/project-maintainers-.project.csv)
+- [CNCF legacy project maintainer list](https://github.com/cncf/foundation/blob/main/project-maintainers.csv)
 - [CNCF TOC Repository](https://github.com/cncf/toc)
