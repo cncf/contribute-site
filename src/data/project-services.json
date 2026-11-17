@@ -10,6 +10,16 @@
     "detailsUrl": "/blog/2025/12/16/github-copilot-enterprise-for-maintainers"
   },
   {
+    "id": "claude-ultra",
+    "name": "Claude Ultra",
+    "category": "dev-tools",
+    "description": "Six months of Anthropic's Claude Ultra plan at no cost for maintainers listed in their project's .project repository.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "service-desk",
+    "url": "https://support.claude.com/en/articles/17728952-what-is-the-ultra-plan",
+    "detailsUrl": "/resources/services/claude-ultra-faq"
+  },
+  {
     "id": "kapa-ai",
     "name": "Kapa.ai",
     "category": "dev-tools",
