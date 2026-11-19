@@ -12,7 +12,6 @@ CNCF provides a full portfolio of marketing services and programs to support com
 - [CNCF Online Programs](https://github.com/cncf/foundation/blob/main/policies-guidance/online-programs-guidelines.md): Graduated and incubating projects can participate in Online Programs like webinars, videos, and livestream. They can communicate release launch details or provide a project update. The exception is Kubernetes, which holds a webinar approximately 30 days after a release.
 - [CNCF Blog](https://github.com/cncf/foundation/blob/main/policies-guidance/blog-guidelines.md) and [Kubernetes.io Blog](https://kubernetes.io/docs/contribute/new-content/blogs-case-studies/): Graduated and incubating projects can submit blog posts. Share technical content and how-to's, stories about cloud native and project deployments, and use cases and success stories. Blog posts should not be vendor pitches. They must contain content that applies broadly to the Kubernetes and cloud native community. The Kubernetes blog receives over 1.5M visits a week.
 - [Case Studies](https://github.com/cncf/foundation/blob/main/policies-guidance/case-study-guidelines.md): End-user case studies help elevate the technical conversations to business objectives and challenges. This program features use cases and the impact CNCF project and cloud native technologies are having on end users' businesses. The case studies build narratives around specific metrics that reflect the positive as a resource for companies considering adopting cloud native technologies.
-- [Newsletter](https://lists.cncf.io/g/newsletter/messages): The CNCF newsletter is published monthly. Project updates are a regular feature in the newsletter.
 - CNCF manages the blog editorial calendar for balanced content shared with the community. We also provide writing, editing, and funding freelancers to develop content.
 - Project media velocity reports: Monthly, CNCF pulls press mentions and share of voice data for all projects including mentions in social media and key messaging.
 - [Fashion a Phippy](https://github.com/cncf/foundation/blob/main/policies-guidance/phippy-guidelines.md): Graduated projects can donate a character to the [Phippy and Friends](https://www.cncf.io/phippy/) program, to help others better understand the concepts of cloud native computing, and increase the marketing and engagement opportunities for their project.
@@ -32,7 +31,7 @@ The goal of marketing communications is to generate awareness for the project an
 
 ### Surveys
 
-The CNCF marketing team can help create surveys for your project to help ascertain adoption or other interests. A prominent example is our annual [Cloud Native Community Surveys](https://github.com/cncf/surveys). For smaller, more targeted surveys, we can assist. Submit a request via the [CNCF Service Desk](https://cncfservicedesk.atlassian.net/servicedesk/customer/portal/1).
+The CNCF marketing team can help create surveys for your project to help ascertain adoption or other interests. A prominent example is our annual [Cloud Native Community Surveys](https://github.com/cncf/surveys). For smaller, more targeted surveys, we can assist. Submit a request via the [CNCF Service Desk](https://servicedesk.cncf.io).
 
 ## Marketing Maturity Milestones for Projects
 

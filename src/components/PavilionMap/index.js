@@ -1,0 +1,991 @@
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
+import Link from '@docusaurus/Link';
+import { useHistory, useLocation } from '@docusaurus/router';
+import { EVENTS } from '@site/src/data/pavilion';
+import { floorLayout } from './layout.mjs';
+import {
+  STEP_MINUTES,
+  buildDirectory,
+  clampToDay,
+  dayPeriods,
+  dayRange,
+  findDayParam,
+  findProject,
+  formatTime,
+  hhmmToMinutes,
+  isArchived,
+  isOnShift,
+  kioskStates,
+  latestEvent,
+  liveSelection,
+  minutesToHhmm,
+  nextAtKiosk,
+  occupancyAt,
+  periodAt,
+  resolveInitial,
+  rowsFromCsv,
+  shiftToShow,
+} from './schedule.mjs';
+import styles from './styles.module.css';
+
+const CURRENT_EVENT = latestEvent(EVENTS);
+const REFRESH_MS = 15 * 60 * 1000;
+const TICK_MS = 60 * 1000;
+
+// Everything the map derives from one event's data file
+// (src/data/pavilion/<slug>.json), built once per event.
+const eventCache = new Map();
+function eventData(slug) {
+  if (!eventCache.has(slug)) {
+    const data = EVENTS[slug];
+    const { event } = data;
+    // Each project's main repository, maturity and description, from the
+    // CNCF landscape (npm run sync:pavilion). Projects without one aren't
+    // linked.
+    const projects = data.projects ?? {};
+    eventCache.set(slug, {
+      slug,
+      event,
+      syncedAt: data.syncedAt,
+      projects,
+      repoOf: (name) => projects[name]?.repo ?? null,
+      snapshot: buildDirectory(data.rows, event),
+      sheetUrl: event.sheetId
+        ? `https://docs.google.com/spreadsheets/d/${event.sheetId}/gviz/tq?tqx=out:csv`
+        : null,
+      dayById: Object.fromEntries(event.days.map((d) => [d.id, d])),
+      layout: floorLayout(data.floor),
+    });
+  }
+  return eventCache.get(slug);
+}
+
+const EventContext = createContext(null);
+const useEventData = () => useContext(EventContext);
+
+// The floor plan is laid out at least this wide and then scaled to fit the
+// window. When the window's height limits the scale, the layout widens to use
+// the spare width, up to MAX_WIDTH; the extra goes to the stand columns.
+const DESIGN_WIDTH = 1200;
+const MAX_WIDTH = 1800;
+// Below this scale the text is unreadable, so the map scrolls sideways instead.
+const MIN_SCALE = 0.55;
+const MAX_SCALE = 1.5;
+// Space left free under the controls at the bottom of the window.
+const BOTTOM_GAP = 12;
+
+// useLayoutEffect warns during the server render, where it can't run anyway.
+const useIsomorphicLayoutEffect =
+  typeof window === 'undefined' ? useEffect : useLayoutEffect;
+
+// "Tue, Nov 10". The date is formatted as UTC noon so it can't shift a day.
+function shortDay(day) {
+  return new Date(`${day.date}T12:00:00Z`).toLocaleDateString('en-US', {
+    timeZone: 'UTC',
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric',
+  });
+}
+
+function formatSynced(iso, timeZone) {
+  if (!iso) return 'bundled snapshot';
+  return new Date(iso).toLocaleString('en-US', {
+    timeZone,
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  });
+}
+
+function shiftLabel(shift, dayById) {
+  const day = dayById[shift.day];
+  return `${day.weekday.slice(0, 3)} ${formatTime(shift.start)} – ${formatTime(shift.end)}`;
+}
+
+// Reads ?day=wed&time=14:00 from the URL, if present.
+function selectionFromSearch(search, event) {
+  const params = new URLSearchParams(search);
+  const day = params.get('day');
+  const time = params.get('time');
+  if (!findDayParam(event.days, day) && hhmmToMinutes(time ?? '') == null) {
+    return null;
+  }
+  return resolveInitial({ day, time, now: null, event });
+}
+
+// The kiosk directory: the bundled snapshot, replaced by the live sheet when
+// it loads. An archived event (its last day is over) never loads the sheet,
+// so its map keeps the final schedule even if the sheet is later reused.
+function useDirectory({ event, snapshot, sheetUrl }) {
+  const [state, setState] = useState({
+    directory: snapshot,
+    source: 'snapshot',
+    fetchedAt: null,
+  });
+  useEffect(() => {
+    if (!sheetUrl || isArchived(event, new Date())) return undefined;
+    let cancelled = false;
+    async function refresh() {
+      try {
+        const response = await fetch(sheetUrl, { cache: 'no-store' });
+        if (!response.ok) return;
+        const rows = rowsFromCsv(await response.text(), event.columns);
+        if (!rows || rows.length === 0) return;
+        const directory = buildDirectory(rows, event);
+        if (directory.entries.length === 0 || cancelled) return;
+        setState({ directory, source: 'live', fetchedAt: new Date() });
+      } catch {
+        // Keep the current data; the snapshot is always a usable fallback.
+      }
+    }
+    refresh();
+    const id = setInterval(refresh, REFRESH_MS);
+    return () => {
+      cancelled = true;
+      clearInterval(id);
+    };
+  }, [event, sheetUrl]);
+  return state;
+}
+
+// Scales the floor plan so the map and the controls under it fit in the
+// window without scrolling. Recomputes when the window, the content width,
+// the controls, or the plan itself change size.
+function useFitScale(enabled, wrapRef, planRef, controlsRef) {
+  const [fit, setFit] = useState({
+    scale: 1,
+    height: 0,
+    width: DESIGN_WIDTH,
+  });
+  const measure = useCallback(() => {
+    const wrap = wrapRef.current;
+    const plan = planRef.current;
+    if (!wrap || !plan) return;
+    const naturalHeight = plan.offsetHeight;
+    const top = wrap.getBoundingClientRect().top + window.scrollY;
+    const controls = controlsRef.current?.offsetHeight ?? 0;
+    const availableHeight = window.innerHeight - top - controls - BOTTOM_GAP;
+    const byWidth = wrap.clientWidth / DESIGN_WIDTH;
+    const byHeight = availableHeight / naturalHeight;
+    const scale = Math.min(
+      MAX_SCALE,
+      Math.max(MIN_SCALE, Math.min(byWidth, byHeight)),
+    );
+    // The plan's height doesn't depend on its width (kiosks are sized for the
+    // narrowest layout), so widening it can't change the scale.
+    const width = Math.round(
+      Math.min(MAX_WIDTH, Math.max(DESIGN_WIDTH, wrap.clientWidth / scale)),
+    );
+    setFit((prev) =>
+      Math.abs(prev.scale - scale) < 0.001 &&
+      prev.height === naturalHeight &&
+      prev.width === width
+        ? prev
+        : { scale, height: naturalHeight, width },
+    );
+  }, [wrapRef, planRef, controlsRef]);
+
+  useIsomorphicLayoutEffect(() => {
+    if (!enabled) return undefined;
+    measure();
+    const observer = new ResizeObserver(measure);
+    for (const ref of [wrapRef, planRef, controlsRef]) {
+      if (ref.current) observer.observe(ref.current);
+    }
+    window.addEventListener('resize', measure);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', measure);
+    };
+  }, [enabled, measure, wrapRef, planRef, controlsRef]);
+
+  return fit;
+}
+
+// On the map, "(SIG Subproject)" is left off kiosk names: SIG Subproject
+// kiosks have their own colour, and the summary line under the plan says
+// what each project is. Labels and the kiosk table keep the full name.
+const SIG_SUBPROJECT = /\s*\(SIG Subproject\)/gi;
+const isSigSubproject = (name) => /\(SIG Subproject\)/i.test(name);
+const displayName = (name) => name.replace(SIG_SUBPROJECT, '');
+
+// "SIG Subproject" or "CNCF Graduated project", or null when unknown.
+function projectKind(name, projects) {
+  if (isSigSubproject(name)) return 'SIG Subproject';
+  const maturity = projects[name]?.maturity;
+  return maturity
+    ? `CNCF ${maturity[0].toUpperCase()}${maturity.slice(1)} project`
+    : null;
+}
+
+// One line under the plan about the kiosk the pointer or focus is on: the
+// project's name, what kind of project it is, and its landscape description.
+function ProjectSummary({ name, hasSigSubprojects }) {
+  const { projects } = useEventData();
+  if (!name) {
+    return (
+      <p className={`${styles.summary} ${styles.summaryHint}`}>
+        Point at a kiosk for a summary of the project; click it to open the
+        project's repository.
+        {hasSigSubprojects && (
+          <>
+            {' '}
+            <span className={styles.swatch} aria-hidden="true" /> Blue kiosks
+            are SIG Subprojects.
+          </>
+        )}
+      </p>
+    );
+  }
+  const kind = projectKind(name, projects);
+  const description = projects[name]?.description;
+  return (
+    <p
+      className={styles.summary}
+      title={[displayName(name), kind, description].filter(Boolean).join(' · ')}
+    >
+      <strong>{displayName(name)}</strong>
+      {kind && (
+        <span
+          className={`${styles.kind} ${
+            isSigSubproject(name) ? styles.kindSig : ''
+          }`}
+        >
+          {kind}
+        </span>
+      )}
+      {description && <span>{description}</span>}
+    </p>
+  );
+}
+
+// What a kiosk shows: its text and the description used for its label.
+function kioskText(status, projects, next) {
+  if (status === 'staffed' || status === 'conflict') {
+    const names = projects.join(' / ');
+    return { text: names, description: names };
+  }
+  if (status === 'between') {
+    return next
+      ? {
+          text: `Next: ${next.project}`,
+          description: `between shifts, ${next.project} from ${formatTime(
+            next.start,
+          )}`,
+        }
+      : { text: 'Between shifts', description: 'between shifts' };
+  }
+  return { text: '—', description: 'no project scheduled' };
+}
+
+function KioskBody({ status, text, next }) {
+  return (
+    <span className={styles.project} aria-hidden="true">
+      {displayName(text)}
+      {status === 'between' && next && (
+        <span className={styles.nextTime}> {formatTime(next.start)}</span>
+      )}
+    </span>
+  );
+}
+
+// "https://github.com/cilium/cilium" -> "github.com/cilium/cilium"
+const shortUrl = (url) => url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+
+// A kiosk links to the repository of the project it shows: the project on
+// shift, or the next one between shifts. Double bookings aren't linked.
+function Kiosk({ stand, side, slot, next, highlighted, onActivate }) {
+  const { repoOf } = useEventData();
+  const status = slot?.status ?? 'idle';
+  const projects = slot?.projects ?? [];
+  const { text, description } = kioskText(status, projects, next);
+  const shown =
+    status === 'staffed' ? projects[0] : status === 'between' && next?.project;
+  const repo = shown ? repoOf(shown) : null;
+  const label = `Kiosk ${stand}${side}: ${description}`;
+  const props = {
+    className: [
+      styles.kiosk,
+      side === 'A' ? styles.kioskA : styles.kioskB,
+      styles[status],
+      status === 'staffed' && isSigSubproject(projects[0])
+        ? styles.sigSubproject
+        : '',
+      highlighted ? styles.highlighted : '',
+      repo ? styles.link : '',
+    ].join(' '),
+    title: repo ? `${label}\n${shortUrl(repo)}` : label,
+    'aria-label': repo ? `${label} (opens repository)` : label,
+    onMouseEnter: () => onActivate(shown || null),
+    onFocus: () => onActivate(shown || null),
+  };
+  const body = <KioskBody status={status} text={text} next={next} />;
+  return repo ? (
+    <a {...props} href={repo} target="_blank" rel="noopener noreferrer">
+      {body}
+    </a>
+  ) : (
+    <div {...props}>{body}</div>
+  );
+}
+
+// Every kiosk is as tall as the tallest text any kiosk can show during the
+// showcase, so kiosks don't change size as the time changes. The texts are
+// laid out, hidden, at the width a kiosk has in the narrowest layout
+// (DESIGN_WIDTH), and the tallest is used.
+function useKioskHeight(floorRef, probeRef, states, standColumns) {
+  const [height, setHeight] = useState(null);
+  useIsomorphicLayoutEffect(() => {
+    const floor = floorRef.current;
+    const probe = probeRef.current;
+    if (!floor || !probe) return undefined;
+    let cancelled = false;
+    const measure = () => {
+      const kiosk = floor.querySelector(`.${styles.kiosk}`);
+      if (cancelled || !kiosk) return;
+      // Extra layout width is shared by the stand columns, two kiosks each.
+      const extra = floor.parentElement.offsetWidth - DESIGN_WIDTH;
+      const width = kiosk.offsetWidth - extra / (2 * standColumns);
+      probe.style.width = `${Math.floor(width)}px`;
+      let tallest = 0;
+      for (const el of probe.children) {
+        tallest = Math.max(tallest, el.offsetHeight);
+      }
+      setHeight(tallest || null);
+    };
+    measure();
+    document.fonts?.ready.then(measure);
+    return () => {
+      cancelled = true;
+    };
+  }, [floorRef, probeRef, states, standColumns]);
+  return height;
+}
+
+const FloorPlan = React.forwardRef(function FloorPlan(
+  { occupancy, entries, days, dayId, minutes, highlight, style },
+  ref,
+) {
+  const { layout } = useEventData();
+  const states = useMemo(() => kioskStates(entries, days), [entries, days]);
+  const floorRef = useRef(null);
+  const probeRef = useRef(null);
+  const kioskHeight = useKioskHeight(
+    floorRef,
+    probeRef,
+    states,
+    layout.standColumns,
+  );
+  const hasSigSubprojects = entries.some((e) => isSigSubproject(e.project));
+  // The project whose summary is shown under the plan.
+  const [active, setActive] = useState(null);
+  return (
+    <div ref={ref} className={styles.frame} style={style}>
+      <div ref={probeRef} className={styles.probe} aria-hidden="true">
+        {states.map((st, i) => (
+          <div
+            key={i}
+            className={`${styles.kiosk} ${styles.kioskA} ${styles[st.status]}`}
+          >
+            <KioskBody
+              status={st.status}
+              text={kioskText(st.status, st.projects, st.next).text}
+              next={st.next}
+            />
+          </div>
+        ))}
+      </div>
+      <div
+        ref={floorRef}
+        className={styles.floor}
+        onMouseLeave={() => setActive(null)}
+        onBlur={(e) => {
+          if (!e.currentTarget.contains(e.relatedTarget)) setActive(null);
+        }}
+        style={{
+          gridTemplateColumns: layout.gridColumns,
+          '--pm-kiosk-height': kioskHeight ? `${kioskHeight}px` : undefined,
+        }}
+      >
+        {layout.stands.map(({ stand, row, col }) => (
+          <div
+            key={stand}
+            className={styles.stand}
+            style={{ gridRow: row, gridColumn: col }}
+          >
+            <div className={styles.pair}>
+              {['A', 'B'].map((side) => {
+                const key = `${stand}${side}`;
+                const slot = occupancy[key];
+                const next =
+                  slot?.status === 'between'
+                    ? nextAtKiosk(entries, key, dayId, minutes)
+                    : null;
+                return (
+                  <Kiosk
+                    key={side}
+                    stand={stand}
+                    side={side}
+                    slot={slot}
+                    next={next}
+                    highlighted={highlight.has(key)}
+                    onActivate={setActive}
+                  />
+                );
+              })}
+            </div>
+            <div className={styles.label} aria-hidden="true">
+              <span className={styles.side}>A</span>
+              <span className={styles.number}>{stand}</span>
+              <span className={styles.side}>B</span>
+            </div>
+          </div>
+        ))}
+        {layout.landmarks.map((l) => (
+          <div
+            key={l.id}
+            className={`${styles.landmark} ${styles[l.kind]}`}
+            style={{ gridRow: l.row, gridColumn: l.col }}
+          >
+            <span>{l.label}</span>
+          </div>
+        ))}
+      </div>
+      <div className={styles.frameNotes} aria-live="polite">
+        <ProjectSummary name={active} hasSigSubprojects={hasSigSubprojects} />
+      </div>
+    </div>
+  );
+});
+
+const PERIOD_NAMES = {
+  morning: 'Morning shift',
+  changeover: 'Changeover',
+  afternoon: 'Afternoon shift',
+  all: 'Showcase hours',
+};
+
+// "2:30–3:00 PM", or "11:55 AM–12:25 PM" across noon.
+function formatSpan(start, end) {
+  const a = formatTime(start);
+  const b = formatTime(end);
+  return a.slice(-2) === b.slice(-2) ? `${a.slice(0, -3)}–${b}` : `${a}–${b}`;
+}
+
+// The time slider. Its track is drawn in the day's periods (morning shift,
+// changeover, afternoon shift) with notches and times at the boundaries.
+function TimeSlider({ day, periods, minutes, onChange }) {
+  const range = dayRange(day);
+  const close = hhmmToMinutes(day.close);
+  // Position along the track, as a fraction of the thumb's travel.
+  const at = (m) =>
+    Math.min(Math.max((m - range.min) / (range.max - range.min), 0), 1);
+  const stop = (m) =>
+    `calc(var(--pm-thumb) / 2 + (100% - var(--pm-thumb)) * ${at(m).toFixed(4)})`;
+  const colour = (kind) => `var(--pm-period-${kind})`;
+  // Each period is a band, with a 2px gap cut at every boundary.
+  const track = periods
+    .map((p, i) => {
+      const from = i === 0 ? '0%' : `calc(${stop(p.start)} + 1px)`;
+      const to =
+        i === periods.length - 1 ? '100%' : `calc(${stop(p.end)} - 1px)`;
+      const gap =
+        i === periods.length - 1
+          ? ''
+          : `, transparent ${to} calc(${stop(p.end)} + 1px)`;
+      return `${colour(p.kind)} ${from} ${to}${gap}`;
+    })
+    .join(', ');
+  const current = periodAt(periods, minutes);
+  const changeover = periods.find((p) => p.kind === 'changeover');
+  const notches = periods.slice(1).map((p) => p.start);
+
+  return (
+    <div className={styles.timeline}>
+      <label className={styles.srOnly} htmlFor="pavilion-time">
+        Time
+      </label>
+      <input
+        id="pavilion-time"
+        className={styles.slider}
+        type="range"
+        min={range.min}
+        max={range.max}
+        step={STEP_MINUTES}
+        value={minutes}
+        style={{ '--pm-track': `linear-gradient(to right, ${track})` }}
+        aria-valuetext={`${formatTime(minutes)}${
+          current ? `, ${PERIOD_NAMES[current.kind].toLowerCase()}` : ''
+        }`}
+        title={periods
+          .map((p) => `${PERIOD_NAMES[p.kind]}: ${formatSpan(p.start, p.end)}`)
+          .join('\n')}
+        onChange={(e) => onChange(Number(e.target.value))}
+      />
+      <div className={styles.ticks} aria-hidden="true">
+        {notches.map((m) => (
+          <span key={m} className={styles.notch} style={{ left: stop(m) }} />
+        ))}
+        <span className={styles.tickStart}>{formatTime(range.min)}</span>
+        {changeover && (
+          <span
+            className={styles.tickMiddle}
+            style={{ left: stop((changeover.start + changeover.end) / 2) }}
+          >
+            {formatSpan(changeover.start, changeover.end)}
+          </span>
+        )}
+        <span className={styles.tickEnd}>{formatTime(close)}</span>
+      </div>
+    </div>
+  );
+}
+
+function ProjectFinder({ entries, query, setQuery, onJump, dayId, minutes }) {
+  const { event, dayById } = useEventData();
+  const names = useMemo(
+    () =>
+      // Array.from, not [...set]: the site's Babel config compiles spreads in
+      // loose mode, which turns [...set] into [set].
+      Array.from(new Set(entries.map((e) => e.project))).sort((a, b) =>
+        a.localeCompare(b, 'en', { sensitivity: 'base' }),
+      ),
+    [entries],
+  );
+  const q = query.trim().toLowerCase();
+  const matches =
+    q.length < 2
+      ? []
+      : entries.filter((e) => e.project.toLowerCase().includes(q));
+  const open = q.length >= 2;
+
+  // Keep the results on screen: shift them sideways if either edge would be
+  // outside the window, leaving a 16px margin (the page's gutter on phones).
+  const resultsRef = useRef(null);
+  useIsomorphicLayoutEffect(() => {
+    const el = resultsRef.current;
+    if (!open || !el) return undefined;
+    const place = () => {
+      el.style.transform = '';
+      const { left, right } = el.getBoundingClientRect();
+      const margin = 16;
+      const viewport = document.documentElement.clientWidth;
+      let shift = 0;
+      if (left < margin) shift = margin - left;
+      else if (right > viewport - margin) shift = viewport - margin - right;
+      if (shift) el.style.transform = `translateX(${Math.round(shift)}px)`;
+    };
+    place();
+    window.addEventListener('resize', place);
+    return () => window.removeEventListener('resize', place);
+  }, [open]);
+
+  return (
+    <div className={styles.finder}>
+      <label className={styles.srOnly} htmlFor="pavilion-project">
+        Find a project
+      </label>
+      <input
+        id="pavilion-project"
+        className={styles.input}
+        type="search"
+        list="pavilion-project-names"
+        placeholder="Find a project"
+        value={query}
+        onChange={(e) => {
+          const value = e.target.value;
+          setQuery(value);
+          // When the search names a new project that isn't on shift at the
+          // selected time, jump to its next shift. Only on a change of
+          // project, so the slider can still be moved while searching.
+          const project = findProject(entries, value);
+          if (!project || project === findProject(entries, query)) return;
+          const target = shiftToShow(
+            entries,
+            project,
+            event.days,
+            dayId,
+            minutes,
+          );
+          if (target) onJump(target.day, target.minutes);
+        }}
+        onKeyDown={(e) => e.key === 'Escape' && setQuery('')}
+      />
+      <datalist id="pavilion-project-names">
+        {names.map((n) => (
+          <option key={n} value={n} />
+        ))}
+      </datalist>
+      {open && (
+        <div ref={resultsRef} className={styles.finderResults} role="status">
+          {matches.length === 0 ? (
+            <p>No matching project.</p>
+          ) : (
+            <ul>
+              {matches.slice(0, 6).map((e) => (
+                <li key={`${e.project}-${e.kiosk}`}>
+                  <strong>{e.project}</strong>: kiosk {e.kiosk},{' '}
+                  {isOnShift(e, dayId, minutes) ? (
+                    <span className={styles.onNow}>here now</span>
+                  ) : (
+                    'not here now'
+                  )}
+                  {e.shifts.length > 0 && ' · '}
+                  {e.shifts.map((s, i) => (
+                    <React.Fragment key={i}>
+                      {i > 0 && ', '}
+                      <button
+                        type="button"
+                        className={styles.linkButton}
+                        onClick={() => onJump(s.day, s.start)}
+                      >
+                        {shiftLabel(s, dayById)}
+                      </button>
+                    </React.Fragment>
+                  ))}
+                </li>
+              ))}
+              {matches.length > 6 && <li>…and {matches.length - 6} more</li>}
+            </ul>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// The event's name and where the schedule comes from. An archived event shows
+// its final saved schedule.
+function SourceNote({ source, fetchedAt, archived }) {
+  const { event, syncedAt } = useEventData();
+  let when;
+  if (source === 'live') {
+    when = ` (live, ${fetchedAt.toLocaleTimeString('en-US', {
+      timeZone: event.timeZone,
+      hour: 'numeric',
+      minute: '2-digit',
+    })})`;
+  } else if (archived) {
+    when = ` (final schedule, saved ${formatSynced(syncedAt, event.timeZone)})`;
+  } else {
+    when = ` (as of ${formatSynced(syncedAt, event.timeZone)})`;
+  }
+  return (
+    <>
+      <strong>{event.name}</strong>
+      {' · '}
+      Source:{' '}
+      <Link to={event.directoryUrl}>Project Pavilion Kiosk Directory</Link>
+      {when}
+    </>
+  );
+}
+
+// <PavilionMap /> shows the current event (the one whose last day is
+// latest); <PavilionMap event="kubecon-na-2026" /> shows a given event. The
+// events are listed in src/data/pavilion/index.js.
+export default function PavilionMap({ event: slug, day, time }) {
+  const key = slug ?? CURRENT_EVENT;
+  if (!EVENTS[key]) {
+    throw new Error(
+      `PavilionMap: unknown event "${key}". Add it to src/data/pavilion/index.js.`,
+    );
+  }
+  return (
+    <EventContext.Provider value={eventData(key)}>
+      <PavilionMapView key={key} day={day} time={time} />
+    </EventContext.Provider>
+  );
+}
+
+function PavilionMapView({ day: dayProp, time: timeProp }) {
+  const eventInfo = useEventData();
+  const { event, dayById, repoOf } = eventInfo;
+  const location = useLocation();
+  const history = useHistory();
+  const { directory, source, fetchedAt } = useDirectory(eventInfo);
+  const { entries, warnings } = directory;
+
+  // The server render and first client render use only the props so that
+  // hydration matches. The URL query and the live clock apply after mount.
+  const [selection, setSelection] = useState(() =>
+    resolveInitial({ day: dayProp, time: timeProp, now: null, event }),
+  );
+  const [hydrated, setHydrated] = useState(false);
+  const [touched, setTouched] = useState(false);
+  const [liveNow, setLiveNow] = useState(null);
+  const [query, setQuery] = useState('');
+  // Known only on the client, so the server render doesn't depend on when
+  // the site was built.
+  const [archived, setArchived] = useState(false);
+
+  useEffect(() => {
+    const fromUrl = selectionFromSearch(location.search, event);
+    if (fromUrl) {
+      setSelection(fromUrl);
+    } else if (dayProp == null && timeProp == null) {
+      setSelection(resolveInitial({ now: new Date(), event }));
+    }
+    setLiveNow(liveSelection(event, new Date()));
+    setArchived(isArchived(event, new Date()));
+    setHydrated(true);
+    // Only read the query string and props on first load.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Track the real time so the Now button knows whether the showcase is open,
+  // and keep the map moving while it follows the clock.
+  useEffect(() => {
+    const id = setInterval(() => {
+      const live = liveSelection(event, new Date());
+      setLiveNow(live);
+      setSelection((prev) =>
+        prev.live
+          ? live
+            ? { ...live, live: true }
+            : { ...prev, live: false }
+          : prev,
+      );
+    }, TICK_MS);
+    return () => clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated || !touched) return;
+    const params = new URLSearchParams(location.search);
+    if (selection.live) {
+      params.delete('day');
+      params.delete('time');
+    } else {
+      params.set('day', selection.day);
+      params.set('time', minutesToHhmm(selection.minutes));
+    }
+    const search = params.toString() ? `?${params}` : '';
+    if (search !== location.search) {
+      history.replace({ search, hash: location.hash });
+    }
+  }, [hydrated, touched, selection, history, location.hash, location.search]);
+
+  const day = dayById[selection.day];
+  const periods = useMemo(() => dayPeriods(entries, day), [entries, day]);
+  const occupancy = useMemo(
+    () => occupancyAt(entries, selection.day, selection.minutes),
+    [entries, selection.day, selection.minutes],
+  );
+
+  const q = query.trim().toLowerCase();
+  const highlight = useMemo(
+    () =>
+      new Set(
+        q.length < 2
+          ? []
+          : entries
+              .filter((e) => e.project.toLowerCase().includes(q))
+              .map((e) => e.kiosk),
+      ),
+    [entries, q],
+  );
+
+  const choose = (patch) => {
+    setTouched(true);
+    setSelection((prev) => ({ ...prev, ...patch, live: false }));
+  };
+  const chooseAt = (id, minutes) =>
+    choose({ day: id, minutes: clampToDay(dayById[id], minutes) });
+  const goLive = () => {
+    if (!liveNow) return;
+    setTouched(true);
+    setSelection({ ...liveNow, live: true });
+  };
+
+  const wrapRef = useRef(null);
+  const planRef = useRef(null);
+  const controlsRef = useRef(null);
+  const fit = useFitScale(hydrated, wrapRef, planRef, controlsRef);
+
+  // When a search finds a kiosk that's scrolled out of the map's frame (on
+  // phones the map scrolls sideways), scroll the map to centre it. With
+  // several matches, the first in stand order is used.
+  const found = useMemo(
+    () =>
+      Array.from(highlight).sort(
+        (a, b) => parseInt(a, 10) - parseInt(b, 10) || a.localeCompare(b),
+      )[0] ?? null,
+    [highlight],
+  );
+  // Where a smooth scroll that's still running will end, so a search typed
+  // quickly is checked against that position, not one mid-scroll.
+  const scrollTarget = useRef(null);
+  useEffect(() => {
+    const wrap = wrapRef.current;
+    if (!found || !wrap || wrap.scrollWidth <= wrap.clientWidth) return;
+    const kiosk = wrap.querySelector(`[aria-label^="Kiosk ${found}:"]`);
+    if (!kiosk) return;
+    const view = wrap.getBoundingClientRect();
+    const box = kiosk.getBoundingClientRect();
+    const pending =
+      scrollTarget.current && Date.now() < scrollTarget.current.until
+        ? scrollTarget.current.left
+        : wrap.scrollLeft;
+    // The kiosk's position in the map's scrollable content.
+    const left = box.left - view.left + wrap.scrollLeft;
+    if (left >= pending && left + box.width <= pending + view.width) return;
+    const target = Math.round(
+      Math.min(
+        Math.max(left - (view.width - box.width) / 2, 0),
+        wrap.scrollWidth - wrap.clientWidth,
+      ),
+    );
+    scrollTarget.current = { left: target, until: Date.now() + 1000 };
+    wrap.scrollTo({ left: target, behavior: 'smooth' });
+  }, [found, fit.scale]);
+
+  const staffed = Object.values(occupancy)
+    .filter((s) => s.projects.length > 0)
+    .sort((a, b) => a.stand - b.stand || a.side.localeCompare(b.side));
+
+  // The map and controls need JavaScript, so they render after hydration.
+  // The server render (and the page's Markdown twin) is a plain kiosk table.
+  if (!hydrated) {
+    return (
+      <div className={styles.root}>
+        <p className={styles.source}>
+          <SourceNote source="snapshot" />
+        </p>
+        <table className={styles.table}>
+          <caption>
+            Projects at the Project Pavilion on {day.label} at{' '}
+            {formatTime(selection.minutes)}
+          </caption>
+          <thead>
+            <tr>
+              <th>Kiosk</th>
+              <th>Project</th>
+            </tr>
+          </thead>
+          <tbody>
+            {staffed.map((s) => (
+              <tr key={s.kiosk}>
+                <td>{s.kiosk}</td>
+                <td>
+                  {s.projects.map((name, i) => (
+                    <React.Fragment key={name}>
+                      {i > 0 && ', '}
+                      {repoOf(name) ? <a href={repoOf(name)}>{name}</a> : name}
+                    </React.Fragment>
+                  ))}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.root}>
+      <div ref={wrapRef} className={styles.fitWrap}>
+        <div
+          className={styles.sizer}
+          style={{
+            width: fit.width * fit.scale,
+            height: fit.height * fit.scale,
+          }}
+        >
+          <FloorPlan
+            ref={planRef}
+            occupancy={occupancy}
+            entries={entries}
+            days={event.days}
+            dayId={selection.day}
+            minutes={selection.minutes}
+            highlight={highlight}
+            style={{
+              width: fit.width,
+              transform: `scale(${fit.scale})`,
+            }}
+          />
+        </div>
+      </div>
+
+      <div ref={controlsRef} className={styles.controls}>
+        <div className={styles.controlRow}>
+          <div className={styles.days} role="group" aria-label="Showcase day">
+            {event.days.map((d) => (
+              <button
+                key={d.id}
+                type="button"
+                className={styles.dayButton}
+                aria-pressed={d.id === selection.day}
+                title={d.label}
+                onClick={() => chooseAt(d.id, selection.minutes)}
+              >
+                {shortDay(d)}
+              </button>
+            ))}
+          </div>
+          <TimeSlider
+            day={day}
+            periods={periods}
+            minutes={selection.minutes}
+            onChange={(minutes) => choose({ minutes })}
+          />
+          {!archived && (
+            <button
+              type="button"
+              className={styles.nowButton}
+              aria-pressed={!!selection.live}
+              disabled={!liveNow}
+              title={
+                liveNow
+                  ? 'Follow the current time'
+                  : 'The Project Pavilion is closed right now'
+              }
+              onClick={goLive}
+            >
+              {selection.live ? '● Live' : 'Now'}
+            </button>
+          )}
+          <ProjectFinder
+            entries={entries}
+            query={query}
+            setQuery={setQuery}
+            dayId={selection.day}
+            minutes={selection.minutes}
+            onJump={chooseAt}
+          />
+        </div>
+        <p className={styles.source}>
+          <SourceNote
+            source={source}
+            fetchedAt={fetchedAt}
+            archived={archived}
+          />
+          {' · '}
+          {event.timeZoneLabel}
+          {warnings.length > 0 && (
+            <span
+              title={warnings.map((w) => `${w.project}: ${w.text}`).join('\n')}
+            >
+              {' · '}
+              {warnings.length} directory{' '}
+              {warnings.length === 1 ? 'entry' : 'entries'} not shown
+            </span>
+          )}
+        </p>
+      </div>
+    </div>
+  );
+}

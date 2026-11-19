@@ -19,7 +19,7 @@ Join the Security Slam, a 30-day challenge to boost your software supply chain s
 Exciting success metrics and awards await at the kickoff webinar. 
 Don't forget, it all leads to a hybrid award ceremony where your achievements will shine. Enhance security, connect with the CNCF community, and be part of this unmissable event! 
 
-Learn More Now: [Link](https://community.cncf.io/cloud-native-security-slam/)
+Learn More Now: [Link](https://web.archive.org/web/20231210005716/https://community.cncf.io/cloud-native-security-slam/)
 
 ## 📆 Project Marketing Feedback Session
 Join us on September 26th at 8pm PST for the APAC session or on September 27th at 8 am PST for our NA/EMEA session.

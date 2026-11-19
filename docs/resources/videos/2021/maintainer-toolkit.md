@@ -26,5 +26,5 @@ There is no need to reinvent the wheel. Whatever challenge you are facing today,
 * [Contributor Growth Framework](/projects/best-practices/community/contributor-growth/)
 * [Project Governance](/projects/best-practices/governance/)
 * [Project Templates](/projects/best-practices/templates/)
-* [Maintainer's Circle](https://www.cncf.io/people/maintainers-circle/)
+* [Maintainer's Circle](https://web.archive.org/web/20231031085503/https://contribute.cncf.io/about/maintainers-circle/)
 * [TAG Contributor Strategy](https://cncf.io/contributor-strategy)

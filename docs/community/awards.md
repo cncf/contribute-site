@@ -8,7 +8,7 @@ CNCF Community Awards will reward the community members, developers and advocate
 
 We traditionally have the following awards, rewarded at different times of each calendar year:
 
-- **Top Ambassador**: A champion for the cloud native space, this individual helps spread awareness of the CNCF and its projects. The CNCF Ambassador leverages multiple platforms, both online as well as speaking engagements, driving interest and excitement around the ecosystem.
+- **Lifetime Achievement**: This Award is presented to longtime contributors who have significantly influenced cloud native technologies and demonstrated sustained commitment to the ecosystem. This award honors individuals whose efforts over the past decade have been instrumental in shaping and supporting the CNCF communities.
 - **Top Committer**: This award recognizes excellence in technical contributions to CNCF and its hosted projects. The CNCF Top Committer has made key commits to projects and, more importantly, contributes in a way that benefits the project as a whole.
 - **Top End User**: The special award for the [CNCF End User Community](https://www.cncf.io/enduser/) representatives in recognition of major contributions to the cloud native ecosystem. All end users can be nominated, but end user members can not win two consecutive years in a row.
 - **Lorem Ipsum** (Previously Top Documentarian, since 2021): This award recognizes excellence in documentation contributions to CNCF and its projects. Excellent technical documentation is one of the best ways projects can lower the barrier to contribution.
@@ -352,7 +352,7 @@ Nancy Chauhan ([Nancy-Chauhan](https://github.com/Nancy-Chauhan))
 #### 2018 Top End User
 
 - [Bloomberg](https://www.cncf.io/announcement/2018/05/02/cloud-native-computing-foundation-announces-bloomberg-as-winner-of-top-end-user-award/)
-- [JD.com](https://www.cncf.io/announcement/2018/11/14/jd-wins-top-end-user-award/)
+- [JD.com](https://web.archive.org/web/20191208055312/https://www.cncf.io/announcement/2018/11/14/jd-wins-top-end-user-award/)
 
 ### 2017
 

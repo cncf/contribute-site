@@ -113,7 +113,7 @@ While the details of the process are described in detail further for Incubating 
 *Who: Project*
 
 - Projects seeking to move to incubation should submit the Incubation Application issue and detail how they meet the incubation level criteria with links to evidence of implementation, existing incubating projects seeking to move to graduation should submit the Graduation Application issue and detail how they meet the graduation level criteria with links to evidence of implementation.
-- **Project must complete the [Adopter Interview Form with 5-7 adopters willing to be interviewed](https://docs.google.com/forms/d/1n1oLC6IKj5-7S_xeEjIdEjbtS9SWniuAo7IIOyLFuK8/)**.
+- **Project must complete the [Adopter Interview Form with 5-7 adopters willing to be interviewed](https://docs.google.com/forms/d/1n1oLC6IKj5-7S_xeEjIdEjbtS9SWniuAo7IIOyLFuK8/)**. Submitting adopters with the application remains a requirement; the following clarifies the forms of validated adoption evidence that may satisfy it. A project's inclusion in a published [TAB Reference Architecture](https://github.com/cncf/tab/blob/main/process/reference-architectures.md) or a published [CNCF Case Study](https://github.com/cncf/foundation/blob/main/policies-guidance/case-study-guidelines.md) may serve as a replacement for an individual adopter interview, at the TOC member's discretion who is leading the Due Diligence for Moving Levels.
 - As prior applications are closed, the TOC selects the next project from the "ready for assignment" column of the [TOC project board](https://github.com/orgs/cncf/projects/27/views/9)'s **Applications to Move levels** tab.
 
 #### The TOC triages project applications for completeness
@@ -248,6 +248,8 @@ A: Projects are strongly encouraged to meet with their TAG to receive feedback o
 ### Project resources and guide posts
 
 The TOC, with support from the [Technical Advisory Groups](/community/tags/), have a wide variety of resources available to assist projects.  Current and aspiring maintainers of cloud native projects can find a lot of information and templates on [contribute.cncf.io/maintainers](/maintainers/). The TOC also maintains [project Guide Posts](https://github.com/cncf/toc/blob/main/resources/project_guideposts.md) - a collection of guiding points that have assisted cloud native projects as they grow and mature in the ecosystem. These are not requirements for moving levels, those may be found in the respective application issue templates ([Incubation](https://github.com/cncf/toc/blob/main/.github/ISSUE_TEMPLATE/template-incubation-application.md), [Graduation](https://github.com/cncf/toc/blob/main/.github/ISSUE_TEMPLATE/template-graduation-application.md)). The [Guide Posts](https://github.com/cncf/toc/blob/main/resources/project_guideposts.md) are resources for projects to leverage that are beneficial in meeting or exceeding the criteria defined.
+
+Projects that are adding, documenting or archiving subprojects can find answers to common questions in the [Subprojects in CNCF Projects FAQ](./subprojects.md).
 
 Additionally, projects interested in preparing to apply to move levels are encouraged to pursue the following activities as the resulting artifacts can and often are leveraged in the TOC's completion of the Due Diligence in lieu of certain sections of the DD.
 

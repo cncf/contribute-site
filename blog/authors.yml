@@ -126,3 +126,20 @@ thisisobate:
   socials:
     github: thisisobate
     linkedin: thisisobate
+angellk:
+  name: Karena Angell
+  page: true
+  title: CNCF TOC Chair
+  url: https://github.com/angellk
+  image_url: https://github.com/angellk.png
+  socials:
+    github: angellk
+    linkedin: karenaangell
+eliza-power:
+  name: Eliza Power
+  page: true
+  title: Senior Manager of Marketing Communications
+  image_url: https://raw.githubusercontent.com/cncf/people/main/images/eliza-power.jpg
+  socials:
+    github: eliza-power
+    linkedin: eliza-power-413809219
