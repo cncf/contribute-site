@@ -53,7 +53,13 @@ Anthropic also requires that you:
 1. **Visit the Service Desk:** Navigate to
    [https://servicedesk.cncf.io/](https://servicedesk.cncf.io/).
 2. **Submit a request:** Select the **Program Management** category.
-3. **Provide details:** In your ticket, include your GitHub handle.
+3. **Provide details:** In your ticket, include your GitHub handle and the
+   personal Claude plan you're on today: None/Free, Pro, Max, or Ultra. If
+   it's paid, say whether you pay on the web or through the App Store or
+   Google Play. The gift works differently for each plan, so this helps us
+   send the right instructions with your code. If you're unsure how the gift
+   applies to your plan, check the
+   [Claude Ultra FAQ](/resources/services/claude-ultra-faq).
 
 ## Questions and more info
 
