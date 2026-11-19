@@ -58,10 +58,9 @@ guidelines:
   - CNSWP-v1.0
   - CNSWP-v2.0
   recommendations:
-  - Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on
+  - Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on the system.
   see-also:
   - CNSC-22
-    the system.
 - id: CNSC-28
   objective: Minimize administrative access to the control plane
   title: Least Privilege

@@ -750,14 +750,14 @@ The hardware root of trust is based in a Trusted Platform Module (TPM) or virtua
 
 **Recommendations**
 
-- Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on
+- Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on the system.
 
 
 **NIST SP 800-53:** [CNSC to NIST SP 800-53 Mapping (`CNSC-27`) →](./cnsc-nist-800-53-mapping)
 
 **See Also**
 
-- [`CNSC-22 the system.`](#cnsc-22 the system.)
+- [`CNSC-22`](#cnsc-22)
 
 
 
