@@ -57,7 +57,9 @@ Anthropic also requires that you:
    personal Claude plan you're on today: None/Free, Pro, Max, or Ultra. If
    it's paid, say whether you pay on the web or through the App Store or
    Google Play. The gift works differently for each plan, so this helps us
-   send the right instructions with your code.
+   send the right instructions with your code. If you're unsure how the gift
+   applies to your plan, check the
+   [Claude Ultra FAQ](/resources/services/claude-ultra-faq).
 
 ## Questions and more info
 
