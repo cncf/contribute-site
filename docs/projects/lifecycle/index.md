@@ -212,10 +212,13 @@ For KubeCon + CloudNativeCon's (KCCN) Europe and North America — the following
 - No project announcements
   - Even if a project has passed a vote, if they have not announced and officially moved levels, they will not be included as an incubating or graduated project.
 
+**1st week following the event**
+
+- The week immediately following KCCN is commonly reserved as a recovery and digest period for attendees, event staff, community members, and TOC.
+
 **2nd week following the event**
 
 - Voting for projects who completed public comment may open and commence.
-- The week immediately following KCCN is commonly reserved as a recovery and digest period for attendees, event staff, community members, and TOC.
 
 The above freeze only applies to KCCN NA and EU. Other events will be subject to the TOC members' availability who are expected to regularly check in with the projects. TOC members may choose to continue working with projects on due diligence within the weeks before and after KCCN subject to their and others' availability. Projects should take all of this into account when planning completion of their due diligence. We ask projects to be understanding and considerate of our availability constraints around KCCN and remind everyone that the TOC is not a full-time body, we have primary work commitments in addition to our involvement on the TOC and any projects, TAGs, or community groups we are involved in.
 
