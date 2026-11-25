@@ -35,8 +35,6 @@ Session categories:
 
 Notifications go out Tuesday, Jan 5. Please keep proposals free of product or vendor pitches.
 
-Questions? Reply here or start a conversation in [#maintainer-summit](https://cloud-native.slack.com/archives/C07TLBDRHNJ).  
-
 Thanks,  
 Nate
 
