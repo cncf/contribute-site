@@ -778,5 +778,15 @@
     "request": "service-desk",
     "url": "https://www.cncf.io/certification/training/",
     "detailsUrl": "/resources/services/cncf-support#certification-and-training-services"
+  },
+  {
+    "id": "mend-renovate",
+    "name": "Mend Renovate Cloud",
+    "category": "dev-tools",
+    "description": "Improve your dependency updates further, where CNCF projects are eligible to receive additional resource limits, concurrency and access to previously Enterprise-only Merge Confidence Workflows on Mend-hosted Renovate.",
+    "maturity": ["sandbox", "incubating", "graduated"],
+    "request": "vendor",
+    "url": "https://www.mend.io/blog/renovate-community-oss-plan-upgrades/",
+    "requestUrl": "https://github.com/renovatebot/renovate/discussions/33617"
   }
 ]
