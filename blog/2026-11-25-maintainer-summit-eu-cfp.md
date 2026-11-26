@@ -5,8 +5,6 @@ authors: [nate-double-u, krook, idvoretskyi]
 tags: [cfp, maintainers, events]
 ---
 
-Hi all,
-
 The Maintainer Summit EU CFP closes **Tuesday, Dec 1 at 23:59 CET (UTC+01:00)**.
 Submit here:
 [https://sessionize.com/maintainer-summit-eu-2027/](https://sessionize.com/maintainer-summit-eu-2027/).
@@ -34,7 +32,4 @@ Session categories:
 - Project Meetings
 
 Notifications go out Tuesday, Jan 5. Please keep proposals free of product or vendor pitches.
-
-Thanks,  
-Nate
 
