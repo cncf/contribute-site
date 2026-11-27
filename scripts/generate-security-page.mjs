@@ -258,7 +258,7 @@ function fallbackReporting(p) {
 }
 
 function mdEscape(text) {
-  return String(text).replace(/\|/g, '\\|');
+  return String(text).replace(/\\/g, '\\\\').replace(/\|/g, '\\|');
 }
 
 function reportingCell(reporting) {
