@@ -4,8 +4,8 @@ description: Guidelines for professional development of maintainers
 ---
 
 Maintainers are technical leaders, community operators, and governance stewards.
-This page provides a practical development path for maintainers who want to
-grow impact while reducing burnout risk.
+This page provides a practical development path for maintainers who want to grow
+impact while reducing burnout risk.
 
 ## Development Areas
 
@@ -78,6 +78,7 @@ For project-level health criteria and signals, see:
 
 ## External CNCF References
 
-- [CNCF Project Maintainers List](https://github.com/cncf/foundation/blob/main/project-maintainers.csv)
+- [CNCF .project Maintainers List](https://github.com/cncf/foundation/blob/main/project-maintainers-.project.csv)
+- [CNCF legacy project maintainer list](https://github.com/cncf/foundation/blob/main/project-maintainers.csv)
 - [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md)
 - [CNCF TOC Repository](https://github.com/cncf/toc)
